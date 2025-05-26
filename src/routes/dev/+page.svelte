@@ -71,7 +71,6 @@
 						Conecta PaxaPOS con sistemas externos para potenciar las capacidades de tu negocio.
 					</p>
 				</div>
-
 				<div class="py-8 space-y-12">
 					{#each html_content_list as content}
 					  	<section id={content.fileName.replace('.md', '')} class="markdown-body markdown-paxapos">
