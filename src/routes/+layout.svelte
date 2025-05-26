@@ -10,12 +10,8 @@
 
 	const navigation = [
 		{ name: 'Inicio', href: '/' },
-		{ name: 'API Reference', href: '/api' },
-		{ name: 'Manual de Usuario', href: '/user-guide' },
-		{ name: 'Guía de Administrador', href: '/admin-guide' },
-		{ name: 'Integraciones', href: '/integration' },
-		{ name: 'SDKs', href: '/sdk' },
-		{ name: 'Troubleshooting', href: '/troubleshooting' }
+		{ name: 'Dev documentation', href: '/dev-docs' },
+		{ name: 'Manual de Usuario', href: '/user-guide' }
 	];
 
 	// Simple search functionality
@@ -63,15 +59,15 @@
 	}
 </script>
 
-<div class="min-h-screen bg-gray-50">
+<div class="min-h-screen dark:bg-gray-800 dark:text-white">
 	<!-- Navigation -->
-	<nav class="bg-white shadow-sm border-b sticky top-0 z-50">
+	<nav class="shadow-sm border-b top-0 z-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between h-16">
 				<!-- Logo and primary nav -->
 				<div class="flex">
 					<div class="flex-shrink-0 flex items-center">
-						<a href="/" class="text-xl font-bold text-gray-900">PaxaPOS Docs</a>
+						<a href="/" class="text-xl font-bold">PaxaPOS Docs</a>
 					</div>
 					<!-- Desktop navigation -->
 					<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -80,8 +76,8 @@
 								href={item.href}
 								class={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200 ${
 									$page.url.pathname === item.href
-										? 'border-blue-500 text-gray-900'
-										: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+										? 'border-blue-500'
+										: 'border-transparent hover:border-gray-300 hover:text-gray-700'
 								}`}
 							>
 								{item.name}
@@ -97,32 +93,32 @@
 						<input
 							type="text"
 							placeholder="Buscar documentación..."
-							class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
 							bind:value={searchQuery}
 							oninput={handleSearch}
 							onfocus={() => showSearchResults = searchQuery.length > 2}
 							onblur={() => setTimeout(() => showSearchResults = false, 200)}
 						/>
 						<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-							<svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 							</svg>
 						</div>
 						
 						<!-- Search Results Dropdown -->
 						{#if showSearchResults}
-							<div class="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto">
+							<div class="absolute top-full left-0 right-0 mt-1 border border-gray-200 rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto">
 								{#each getFilteredResults() as result}
 									<button
 										type="button"
 										class="w-full text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0"
 										onclick={() => selectSearchResult(result.href)}
 									>
-										<div class="font-medium text-gray-900">{result.title}</div>
-										<div class="text-sm text-gray-500">{result.type}</div>
+										<div class="font-medium">{result.title}</div>
+										<div class="text-sm">{result.type}</div>
 									</button>
 								{:else}
-									<div class="px-4 py-3 text-gray-500">No se encontraron resultados</div>
+									<div class="px-4 py-3">No se encontraron resultados</div>
 								{/each}
 							</div>
 						{/if}
@@ -133,7 +129,7 @@
 					<div class="sm:hidden">
 						<button
 							type="button"
-							class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+							class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
 							onclick={() => mobileMenuOpen = !mobileMenuOpen}
 						>
 							<span class="sr-only">Abrir menú principal</span>
@@ -156,7 +152,7 @@
 							class={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-200 ${
 								$page.url.pathname === item.href
 									? 'bg-blue-50 border-blue-500 text-blue-700'
-									: 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+									: 'border-transparent hover:bg-gray-50 hover:border-gray-300'
 							}`}
 							onclick={() => mobileMenuOpen = false}
 						>
@@ -170,7 +166,7 @@
 						<input
 							type="text"
 							placeholder="Buscar documentación..."
-							class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
 						/>
 					</div>
 				</div>
