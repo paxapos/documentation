@@ -6,9 +6,9 @@
   	let htmlContent_two = '';
   	let htmlContent_svelte = '';
   	onMount(async () => {
-  	  	const res_one = await fetch('/src/routes/dev-docs/one.md');
-  	  	const res_two = await fetch('/src/routes/dev-docs/two.md');
-  	  	const res_svelte = await fetch('/src/routes/dev-docs/svelte-mdtest.md');
+  	  	const res_one = await fetch('/src/routes/dev/docs/one.md');
+  	  	const res_two = await fetch('/src/routes/dev/docs/two.md');
+  	  	const res_svelte = await fetch('/src/routes/dev/docs/svelte-mdtest.md');
   	  	
 		const text_one = await res_one.text();
 		const text_two = await res_two.text();
