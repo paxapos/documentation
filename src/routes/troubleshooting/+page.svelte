@@ -69,18 +69,18 @@ npm install @paxapos/sdk --legacy-peer-deps</code></pre>
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Configurar proxy en vite.config.js
+							<pre class="text-sm text-gray-800"><code>{`// Configurar proxy en vite.config.js
 export default {
   server: {
     proxy: {
       '/api': {
         target: 'https://api.paxapos.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\\/api/, '')
       }
     }
   }
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 				</div>
@@ -104,7 +104,7 @@ export default {
 						</ul>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Verificar configuración
+							<pre class="text-sm text-gray-800"><code>{`// Verificar configuración
 const client = new PaxaPOS({
   apiKey: process.env.PAXAPOS_API_KEY, // Verificar que existe
   tenant: process.env.PAXAPOS_TENANT,   // Verificar que coincide
@@ -113,7 +113,7 @@ const client = new PaxaPOS({
 
 // Verificar headers
 console.log('API Key:', client.config.apiKey.substring(0, 8) + '...');
-console.log('Tenant:', client.config.tenant);</code></pre>
+console.log('Tenant:', client.config.tenant);`}</code></pre>
 						</div>
 					</div>
 
@@ -125,7 +125,7 @@ console.log('Tenant:', client.config.tenant);</code></pre>
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Configurar refresh automático
+							<pre class="text-sm text-gray-800"><code>{`// Configurar refresh automático
 const client = new PaxaPOS({
   apiKey: 'tu-api-key',
   tenant: 'tu-tenant',
@@ -134,7 +134,7 @@ const client = new PaxaPOS({
     // Guardar nuevo token si es necesario
     localStorage.setItem('paxapos_token', newToken);
   }
-});</code></pre>
+});`}</code></pre>
 						</div>
 					</div>
 				</div>
@@ -152,7 +152,7 @@ const client = new PaxaPOS({
 							<strong>Causa:</strong> Datos de entrada inválidos o campos requeridos faltantes
 						</p>
 						<div class="bg-gray-50 rounded-lg p-4 mb-3">
-							<pre class="text-sm text-red-600"><code>{
+							<pre class="text-sm text-red-600"><code>{`{
   "error": "VALIDATION_ERROR",
   "message": "Validation failed",
   "details": [
@@ -161,11 +161,11 @@ const client = new PaxaPOS({
       "message": "Price must be a positive number"
     }
   ]
-}</code></pre>
+}`}</code></pre>
 						</div>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Validar datos antes de enviar
+							<pre class="text-sm text-gray-800"><code>{`// Validar datos antes de enviar
 const productData = {
   name: 'Producto', // Requerido
   price: 10.50,     // Debe ser positivo
@@ -179,7 +179,7 @@ try {
   if (error.status === 400) {
     console.log('Errores de validación:', error.details);
   }
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 
@@ -191,7 +191,7 @@ try {
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Implementar retry con backoff
+							<pre class="text-sm text-gray-800"><code>{`// Implementar retry con backoff
 async function makeRequestWithRetry(fn, maxRetries = 3) {
   for (let i = 0; i < maxRetries; i++) {
     try {
@@ -205,7 +205,7 @@ async function makeRequestWithRetry(fn, maxRetries = 3) {
       throw error;
     }
   }
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 				</div>
@@ -229,7 +229,7 @@ async function makeRequestWithRetry(fn, maxRetries = 3) {
 						</ul>
 						<p class="text-gray-600 mb-3"><strong>Diagnóstico:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Verificar estado del pago
+							<pre class="text-sm text-gray-800"><code>{`// Verificar estado del pago
 const payment = await client.payments.get(paymentId);
 console.log('Estado:', payment.status);
 console.log('Código de error:', payment.error_code);
@@ -237,7 +237,7 @@ console.log('Mensaje:', payment.error_message);
 
 // Verificar configuración del gateway
 const config = await client.settings.getPaymentConfig();
-console.log('Gateways activos:', config.enabled_gateways);</code></pre>
+console.log('Gateways activos:', config.enabled_gateways);`}</code></pre>
 						</div>
 					</div>
 
@@ -275,7 +275,7 @@ console.log('Gateways activos:', config.enabled_gateways);</code></pre>
 							<li>✓ Configuración en PaxaPOS correcta</li>
 						</ul>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Probar impresión desde código
+							<pre class="text-sm text-gray-800"><code>{`// Probar impresión desde código
 try {
   const result = await client.printer.test({
     printerId: 'main-printer',
@@ -284,7 +284,7 @@ try {
   console.log('Resultado:', result);
 } catch (error) {
   console.log('Error de impresión:', error.message);
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 
@@ -296,13 +296,13 @@ try {
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Configurar impresora correctamente
+							<pre class="text-sm text-gray-800"><code>{`// Configurar impresora correctamente
 await client.printer.configure({
   printerId: 'main-printer',
   paperWidth: 80, // 80mm para la mayoría de impresoras térmicas
   template: 'receipt_standard',
   encoding: 'utf8'
-});</code></pre>
+});`}</code></pre>
 						</div>
 					</div>
 				</div>
@@ -324,7 +324,7 @@ await client.printer.configure({
 							<li>Optimizar imágenes de productos</li>
 						</ul>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Ejemplo de paginación
+							<pre class="text-sm text-gray-800"><code>{`// Ejemplo de paginación
 const products = await client.products.list({
   page: 1,
   limit: 50,
@@ -332,7 +332,7 @@ const products = await client.products.list({
 });
 
 // Lazy loading de componentes
-const ProductModal = lazy(() => import('./ProductModal'));</code></pre>
+const ProductModal = lazy(() => import('./ProductModal'));`}</code></pre>
 						</div>
 					</div>
 
@@ -344,7 +344,7 @@ const ProductModal = lazy(() => import('./ProductModal'));</code></pre>
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Limpiar datos periódicamente
+							<pre class="text-sm text-gray-800"><code>{`// Limpiar datos periódicamente
 setInterval(() => {
   client.cache.clear('products');
   client.cache.clear('customers');
@@ -356,7 +356,7 @@ useEffect(() => {
     // Cleanup al desmontar componente
     client.cancelRequests();
   };
-}, []);</code></pre>
+}, []);`}</code></pre>
 						</div>
 					</div>
 				</div>
@@ -375,7 +375,7 @@ useEffect(() => {
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Forzar sincronización completa
+							<pre class="text-sm text-gray-800"><code>{`// Forzar sincronización completa
 await client.sync.force({
   entities: ['products', 'customers', 'orders'],
   strategy: 'server_wins' // Servidor tiene prioridad
@@ -384,7 +384,7 @@ await client.sync.force({
 // Verificar estado de sincronización
 const status = await client.sync.getStatus();
 console.log('Última sync:', status.lastSync);
-console.log('Pendientes:', status.pendingChanges);</code></pre>
+console.log('Pendientes:', status.pendingChanges);`}</code></pre>
 						</div>
 					</div>
 
@@ -396,7 +396,7 @@ console.log('Pendientes:', status.pendingChanges);</code></pre>
 						</p>
 						<p class="text-gray-600 mb-3"><strong>Solución:</strong></p>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>// Configurar almacenamiento offline robusto
+							<pre class="text-sm text-gray-800"><code>{`// Configurar almacenamiento offline robusto
 const client = new PaxaPOS({
   apiKey: 'tu-api-key',
   tenant: 'tu-tenant',
@@ -411,7 +411,7 @@ const client = new PaxaPOS({
 client.on('online', async () => {
   console.log('Conexión recuperada, sincronizando...');
   await client.sync.uploadPending();
-});</code></pre>
+});`}</code></pre>
 						</div>
 					</div>
 				</div>

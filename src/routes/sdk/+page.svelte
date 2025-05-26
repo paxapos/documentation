@@ -50,7 +50,7 @@ pnpm add @paxapos/sdk</code></pre>
 				<div class="mb-6">
 					<h3 class="text-lg font-semibold text-gray-900 mb-3">Inicio Rápido</h3>
 					<div class="bg-gray-50 rounded-lg p-4">
-						<pre class="text-sm text-gray-800"><code>import { PaxaPOS } from '@paxapos/sdk';
+						<pre class="text-sm text-gray-800"><code>{`import { PaxaPOS } from '@paxapos/sdk';
 
 // Inicializar el cliente
 const paxapos = new PaxaPOS({
@@ -73,7 +73,7 @@ const sale = await paxapos.sales.create({
   ],
   paymentMethod: 'cash',
   customerId: 'customer-123'
-});</code></pre>
+});`}</code></pre>
 					</div>
 				</div>
 
@@ -114,7 +114,7 @@ poetry add paxapos-sdk</code></pre>
 				<div class="mb-6">
 					<h3 class="text-lg font-semibold text-gray-900 mb-3">Inicio Rápido</h3>
 					<div class="bg-gray-50 rounded-lg p-4">
-						<pre class="text-sm text-gray-800"><code>from paxapos import PaxaPOS
+						<pre class="text-sm text-gray-800"><code>{`from paxapos import PaxaPOS
 
 # Inicializar el cliente
 client = PaxaPOS(
@@ -137,7 +137,7 @@ sale = client.sales.create({
     ],
     'payment_method': 'cash',
     'customer_id': 'customer-123'
-})</code></pre>
+})`}</code></pre>
 					</div>
 				</div>
 			</section>
@@ -161,9 +161,9 @@ sale = client.sales.create({
 				<div class="mb-6">
 					<h3 class="text-lg font-semibold text-gray-900 mb-3">Inicio Rápido</h3>
 					<div class="bg-gray-50 rounded-lg p-4">
-						<pre class="text-sm text-gray-800"><code>&lt;?php
+						<pre class="text-sm text-gray-800"><code>{`<?php
 
-use PaxaPOS\Client;
+use PaxaPOS\\Client;
 
 // Inicializar el cliente
 $client = new Client([
@@ -186,7 +186,7 @@ $sale = $client->sales()->create([
     ],
     'payment_method' => 'cash',
     'customer_id' => 'customer-123'
-]);</code></pre>
+]);`}</code></pre>
 					</div>
 				</div>
 			</section>
@@ -210,7 +210,7 @@ pod 'PaxaPOSSDK'
 .package(url: "https://github.com/paxapos/ios-sdk", from: "1.0.0")</code></pre>
 						</div>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>import PaxaPOSSDK
+							<pre class="text-sm text-gray-800"><code>{`import PaxaPOSSDK
 
 let client = PaxaPOS(
     apiKey: "tu-api-key",
@@ -221,11 +221,11 @@ let client = PaxaPOS(
 client.sales.create(saleData) { result in
     switch result {
     case .success(let sale):
-        print("Venta creada: \(sale.id)")
+        print("Venta creada: \\(sale.id)")
     case .failure(let error):
-        print("Error: \(error)")
+        print("Error: \\(error)")
     }
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 
@@ -237,7 +237,7 @@ client.sales.create(saleData) { result in
 implementation 'com.paxapos:android-sdk:1.0.0'</code></pre>
 						</div>
 						<div class="bg-gray-50 rounded-lg p-4">
-							<pre class="text-sm text-gray-800"><code>import com.paxapos.sdk.PaxaPOS
+							<pre class="text-sm text-gray-800"><code>{`import com.paxapos.sdk.PaxaPOS
 
 val client = PaxaPOS.Builder()
     .apiKey("tu-api-key")
@@ -247,11 +247,11 @@ val client = PaxaPOS.Builder()
 // Crear venta
 client.sales.create(saleData) { result ->
     result.onSuccess { sale ->
-        println("Venta creada: ${sale.id}")
+        println("Venta creada: \${sale.id}")
     }.onFailure { error ->
         println("Error: $error")
     }
-}</code></pre>
+}`}</code></pre>
 						</div>
 					</div>
 				</div>

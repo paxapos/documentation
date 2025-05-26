@@ -198,28 +198,28 @@
 								<h4 class="font-semibold text-gray-900 mb-4">Campos Requeridos</h4>
 								<div class="grid md:grid-cols-2 gap-4 text-sm">
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">Nombre de la Tienda</label>
-										<input type="text" placeholder="Mi Negocio S.A." class="w-full border border-gray-300 rounded px-3 py-2" readonly>
+										<label for="store-name" class="block text-gray-700 font-medium mb-1">Nombre de la Tienda</label>
+										<input id="store-name" type="text" placeholder="Mi Negocio S.A." class="w-full border border-gray-300 rounded px-3 py-2" readonly>
 									</div>
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">RUC/NIT</label>
-										<input type="text" placeholder="20123456789" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
+										<label for="ruc-nit" class="block text-gray-700 font-medium mb-1">RUC/NIT</label>
+										<input id="ruc-nit" type="text" placeholder="20123456789" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
 									</div>
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">Dirección</label>
-										<input type="text" placeholder="Av. Principal 123" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
+										<label for="address" class="block text-gray-700 font-medium mb-1">Dirección</label>
+										<input id="address" type="text" placeholder="Av. Principal 123" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
 									</div>
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">Teléfono</label>
-										<input type="text" placeholder="+51 999 888 777" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
+										<label for="phone" class="block text-gray-700 font-medium mb-1">Teléfono</label>
+										<input id="phone" type="text" placeholder="+51 999 888 777" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
 									</div>
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">Email</label>
-										<input type="email" placeholder="contacto@minegocio.com" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
+										<label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+										<input id="email" type="email" placeholder="contacto@minegocio.com" class="w-full border border-gray-300 rounded px-3 py-2" readonly>
 									</div>
 									<div>
-										<label class="block text-gray-700 font-medium mb-1">Moneda</label>
-										<select class="w-full border border-gray-300 rounded px-3 py-2" disabled>
+										<label for="currency" class="block text-gray-700 font-medium mb-1">Moneda</label>
+										<select id="currency" class="w-full border border-gray-300 rounded px-3 py-2" disabled>
 											<option>PEN - Sol Peruano</option>
 											<option>USD - Dólar Americano</option>
 											<option>EUR - Euro</option>
