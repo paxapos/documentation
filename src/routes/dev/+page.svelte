@@ -2,24 +2,29 @@
 	import { onMount } from 'svelte';
   	import { marked } from 'marked';
 
-  	let htmlContent_one = '';
-  	let htmlContent_two = '';
-  	let htmlContent_svelte = '';
+	/**
+	 * @type {any[]}
+	 */
+	let html_content_list = []
   	onMount(async () => {
-  	  	const res_one = await fetch('/src/routes/dev/docs/one.md');
-  	  	const res_two = await fetch('/src/routes/dev/docs/two.md');
-  	  	const res_svelte = await fetch('/src/routes/dev/docs/svelte-mdtest.md');
-  	  	
-		const text_one = await res_one.text();
-		const text_two = await res_two.text();
-		const text_svelte = await res_svelte.text();
-  	  	
-		// @ts-ignore
-  	  	htmlContent_one = marked(text_one);
-  	  	// @ts-ignore
-  	  	htmlContent_two = marked(text_two);
-  	  	// @ts-ignore
-		htmlContent_svelte = marked(text_svelte);
+		try {
+      		const modules = import.meta.glob('/src/routes/dev/docs/*.md', { query: '?raw', import: 'default' });
+      		const files = Object.entries(modules);
+      		// @ts-ignore
+      		const htmlPromises = files.map(async ([path, loader]) => {
+        		const markdownText = await loader();
+				const fileName = path.split('/').pop();
+        		return {
+        		  	fileName,
+        		  	// @ts-ignore
+        		  	html: marked(markdownText)
+        		};
+      		});
+
+    	  	html_content_list = await Promise.all(htmlPromises);
+    	} catch (error) {
+    	  console.error('Failed to load markdown files:', error);
+    	}
   	});
 </script>
 
@@ -47,8 +52,11 @@
 			<div class="rounded-lg border p-6 sticky top-24">
 				<h3 class="font-semibold mb-4">Integraciones</h3>
 				<nav class="space-y-2">
-					<a href="#overview" class="block text-sm text-blue-600 hover:text-blue-800">Introducción</a>
-					<a href="#payment-gateways" class="block text-sm hover:text-blue-600">Pasarelas de Pago</a>
+				  	{#each html_content_list as item}
+				  	  	<a href="#{item.fileName.replace('.md', '')}" class="block text-sm hover:text-blue-800">
+				  	  	  	{item.fileName.replace('.md', '').replace(/-/g, ' ')}
+				  	  	</a>
+				  	{/each}
 				</nav>
 			</div>
 		</aside>
@@ -65,34 +73,12 @@
 				</div>
 
 				<div class="py-8 space-y-12">
-					<!-- Overview -->
-					<section id="overview">
-						<div class="markdown-body markdown-paxapos">
-							{@html htmlContent_one}
-						</div>
-					</section>
-
-					<section>
-						<div class="markdown-body markdown-paxapos">
-							{@html htmlContent_svelte}
-						</div>
-					</section>
-
-					<section class="p-6 border">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</section>
-
-					<section class="p-6 border">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</section>
-
-					<!-- Payment Gateways -->
-					<section id="payment-gateways">
-						<div class="markdown-body markdown-paxapos">
-							{@html htmlContent_two}
-						</div>
-					</section>
-				</div>
+					{#each html_content_list as content}
+					  	<section id={content.fileName.replace('.md', '')} class="markdown-body markdown-paxapos">
+					    	{@html content.html}
+					  	</section>
+					{/each}
+				</div> 
 			</div>
 		</main>
 	</div>
