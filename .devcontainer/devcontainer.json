@@ -1,0 +1,59 @@
+{
+  "name": "Paxapos Documentation Dev Container",
+  // Use the Dockerfile located in the 'packages/documentation' directory
+  "dockerFile": "../Dockerfile",
+  // Set the build context to the root of the monorepo
+  "context": "../..",
+
+  // The VS Code workspace will be mounted at /workspaces/${localWorkspaceFolderBasename}.
+  // Set the default folder for new terminals to the 'documentation' package.
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/packages/documentation",
+
+  "features": {
+    // Installs Node.js and pnpm into the container
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts", // Use Long Term Support version of Node.js
+      "pnpm": "latest"  // Install the latest version of pnpm
+    }
+  },
+
+  "forwardPorts": [
+    5173, // Default SvelteKit/Vite development server port
+    3000  // Default SvelteKit preview/production port (if running the built app in the dev container)
+  ],
+
+  // Run commands after the container is created.
+  // This installs all dependencies for the monorepo from the root.
+  "postCreateCommand": "cd /workspaces/${localWorkspaceFolderBasename} && pnpm install",
+
+  // Optional: To automatically start the SvelteKit dev server for 'documentation' when the container attaches:
+  // "postAttachCommand": "pnpm dev", // This will run in the 'workspaceFolder' (packages/documentation)
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",         // Svelte language support
+        "dbaeumer.vscode-eslint",       // ESLint integration
+        "esbenp.prettier-vscode",       // Prettier code formatter
+        "ms-azuretools.vscode-docker",  // Docker tools
+        "GitHub.copilot"                // GitHub Copilot (if you use it)
+      ],
+      "settings": {
+        // Set default shell in the container if needed (bash is common)
+        // "terminal.integrated.defaultProfile.linux": "bash",
+
+        // Configure ESLint to work correctly with the 'documentation' package
+        "eslint.workingDirectories": [
+          // Assumes your ESLint config can handle being run from this directory,
+          // or that paths are resolved correctly from the monorepo root.
+          { "pattern": "packages/documentation/*" }
+        ],
+        "files.eol": "\n", // Ensure consistent line endings (Linux/macOS style)
+        "editor.tabSize": 2 // Example: set tab size to 2 spaces
+      }
+    }
+  },
+
+  // Run as the non-root 'node' user (common for Node.js dev containers for security)
+  "remoteUser": "node"
+}
