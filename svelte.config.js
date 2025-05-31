@@ -9,10 +9,13 @@ const config = {
             // default options are fine for most cases
             pages: 'build', // Directorio de salida
             assets: 'build', // Directorio de salida
-            fallback: undefined, // o 'index.html' o '404.html' si necesitas un fallback SPA
+            fallback: undefined, // No fallback - fully prerendered static site
             precompress: false,
-            strict: true
+            strict: true // Be strict about prerendering
         }),
+        prerender: {
+            handleMissingId: 'warn' // Only warn about missing IDs instead of failing
+        },
         // Asegúrate que el path base sea correcto si tu sitio no está en la raíz del dominio de GitHub Pages
         // paths: {
         //   base: process.env.NODE_ENV === 'production' ? '/tu-repositorio' : '',
