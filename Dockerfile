@@ -1,44 +1,33 @@
 # syntax=docker/dockerfile:1
 
-# ---- Base Node image ----
+# Base image with Node.js and Alpine Linux
 FROM node:20-alpine AS base
-LABEL maintainer="alevilar"
 WORKDIR /app
-# Install pnpm globally
 RUN npm install -g pnpm
 
-# ---- Dependencies ----
-# This stage is to leverage Docker cache for dependencies.
-# It copies only package.json and related files to install dependencies.
+# Dependencies stage: Install only the dependencies needed for the documentation package
 FROM base AS deps
-# Copy root monorepo configurations
+# Copy workspace configuration files
 COPY pnpm-workspace.yaml ./
 COPY package.json ./package.json
 COPY pnpm-lock.yaml ./pnpm-lock.yaml
-# Copy any root tsconfig files if they are extended by the package's tsconfig
-# Ensure these files exist at the root or remove these COPY lines if not.
 COPY tsconfig.base.json ./tsconfig.base.json
 COPY tsconfig.json ./tsconfig.json
 
-# Copy the specific package's package.json.
-# This helps pnpm understand the workspace structure for fetching.
+# Copy the documentation package.json to understand its dependencies
 COPY packages/documentation/package.json ./packages/documentation/package.json
 
-# If your 'documentation' package depends on other local packages in your monorepo (e.g., from 'libs/types'),
-# you should also copy their package.json files here. For example:
-# COPY libs/types/package.json ./libs/types/package.json
-
-# Install dependencies only for the 'documentation' package and its workspace dependencies.
-# The `...` after documentation ensures its dependencies are also included.
+# Install dependencies for the documentation package and its dependencies within the monorepo
+# This will install dependencies for 'documentation' and any local packages it depends on
 RUN pnpm install --filter documentation... --frozen-lockfile
 
-# ---- Builder ----
-# This stage builds the SvelteKit application.
+# Builder stage: Copy source code and build the documentation package
 FROM base AS builder
 WORKDIR /app
 
-# Copy all necessary files from the 'deps' stage, including node_modules.
+# Copy dependencies from the deps stage
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/packages/documentation/node_modules ./packages/documentation/node_modules
 COPY --from=deps /app/pnpm-workspace.yaml ./
 COPY --from=deps /app/package.json ./package.json
 COPY --from=deps /app/pnpm-lock.yaml ./pnpm-lock.yaml
@@ -46,33 +35,45 @@ COPY --from=deps /app/tsconfig.base.json ./tsconfig.base.json
 COPY --from=deps /app/tsconfig.json ./tsconfig.json
 COPY --from=deps /app/packages/documentation/package.json ./packages/documentation/package.json
 
-# Copy source code for the documentation package
+# Copy the source code for the documentation package
 COPY packages/documentation ./packages/documentation
 
-# If your 'documentation' package depends on other local packages (e.g., from 'libs/types'),
-# copy their source code here. For example:
-# COPY libs/types ./libs/types
+# If your documentation package depends on other local packages (e.g., libs/types), 
+# uncomment and adjust the following lines:
+# COPY libs ./libs
+# COPY packages/other-dependency ./packages/other-dependency
 
 # Build the documentation package
 # Ensure the 'build' script is correctly defined in 'packages/documentation/package.json'
 RUN pnpm --filter documentation run build
 # The build output is expected to be in /app/packages/documentation/build
 
-# ---- Runner ----
-# This stage creates the final image that will run the application.
-FROM node:20-alpine AS runner
+# Production stage: Set up the runtime environment
+FROM base AS production
 WORKDIR /app
 
+# Copy the built application from the builder stage
+COPY --from=builder /app/packages/documentation/build ./build
+COPY --from=builder /app/packages/documentation/package.json ./package.json
+
+# Install only production dependencies for the built application
+# This step might not be necessary if you're using adapter-static, 
+# but it's included for adapter-node compatibility
+RUN pnpm install --prod --frozen-lockfile || echo "No production dependencies to install"
+
+# Create a non-root user for security
+RUN addgroup -g 1001 -S nodejs && adduser -S sveltekit -u 1001
+USER sveltekit
+
+# Expose the port that the application will run on
+EXPOSE 3000
+
+# Set environment variables
 ENV NODE_ENV=production
-# Default SvelteKit port with adapter-node. You can change this.
 ENV PORT=3000
 ENV HOST=0.0.0.0
 
-EXPOSE ${PORT}
-
-# Copy the built application from the builder stage.
-# SvelteKit adapter-node output in the 'build' directory is typically self-contained.
-COPY --from=builder /app/packages/documentation/build ./
-
-# The SvelteKit adapter-node output usually includes an 'index.js' to start the server.
+# Command to start the application
+# This assumes you're using @sveltejs/adapter-node and the build output includes an index.js file
+# If using @sveltejs/adapter-static, you'd typically serve the static files with a web server like nginx
 CMD ["node", "index.js"]
