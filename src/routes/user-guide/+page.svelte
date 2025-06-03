@@ -1,476 +1,371 @@
 <!-- Integration Guide Page -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 	<!-- Breadcrumb -->
-	<nav class="flex mb-8" aria-label="Breadcrumb">
+	<nav class="mb-8 flex" aria-label="Breadcrumb">
 		<ol class="inline-flex items-center space-x-1 md:space-x-3">
 			<li class="inline-flex items-center">
 				<a href="/" class="text-gray-700 hover:text-blue-600">Inicio</a>
 			</li>
 			<li>
 				<div class="flex items-center">
-					<svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+					<svg class="h-6 w-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path
+							fill-rule="evenodd"
+							d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+							clip-rule="evenodd"
+						></path>
 					</svg>
-					<span class="ml-1 text-gray-500 md:ml-2">Guías de Integración</span>
+					<span class="ml-1 text-gray-500 md:ml-2">Manual de usuario</span>
 				</div>
 			</li>
 		</ol>
 	</nav>
 
-	<div class="flex flex-col lg:flex-row gap-8">
+	<div class="flex flex-col gap-8 lg:flex-row">
 		<!-- Sidebar Navigation -->
-		<aside class="lg:w-64 flex-shrink-0">
-			<div class="bg-white rounded-lg shadow-sm border p-6 sticky top-24">
-				<h3 class="font-semibold text-gray-900 mb-4">Integraciones</h3>
+		<aside class="flex-shrink-0 lg:w-64">
+			<div class="sticky top-24 rounded-lg border bg-white p-6 shadow-sm">
+				<h3 class="mb-4 font-bold text-gray-900">📘 Introducción al Manual</h3>
 				<nav class="space-y-2">
-					<a href="#overview" class="block text-sm text-blue-600 hover:text-blue-800">Introducción</a>
-					<a href="#payment-gateways" class="block text-sm text-gray-600 hover:text-blue-600">Pasarelas de Pago</a>
+					<a
+						href="#paxapos"
+						class="block text-sm font-semibold text-gray-600 hover:text-blue-800"
+					>
+						🔹 ¿Qué es PaxaPOS?
+					</a>
+					<a href="#login" class="block text-sm font-semibold text-gray-600 hover:text-blue-800">
+						🔐 Cómo Iniciar Sesión
+					</a>
+					<!-- Configuración del comercio -->
+					<a
+						href="#configuracion-comercio"
+						class="block text-sm font-semibold text-gray-600 hover:text-blue-600"
+					>
+						⚙️ Configuración del Comercio
+					</a>
 					<div class="ml-4 space-y-1">
-						<a href="#stripe" class="block text-sm text-gray-500 hover:text-blue-600">Stripe</a>
-						<a href="#paypal" class="block text-sm text-gray-500 hover:text-blue-600">PayPal</a>
-						<a href="#mercadopago" class="block text-sm text-gray-500 hover:text-blue-600">MercadoPago</a>
+						<a href="#usuarios" class="block text-sm text-gray-500 hover:text-blue-600"
+							>👥 Usuarios y Roles</a
+						>
+						<a href="#mozos" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🧑‍🍳 Mozos y Personal</a
+						>
+						<a href="#tipos" class="block text-sm text-gray-500 hover:text-blue-600"
+							>💳 Tipos de Pago</a
+						>
+						<a href="#productos" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🍔 Menús y Productos</a
+						>
 					</div>
-					<a href="#accounting" class="block text-sm text-gray-600 hover:text-blue-600">Sistemas Contables</a>
-					<a href="#ecommerce" class="block text-sm text-gray-600 hover:text-blue-600">E-commerce</a>
-					<a href="#inventory" class="block text-sm text-gray-600 hover:text-blue-600">Gestión de Inventario</a>
-					<a href="#loyalty" class="block text-sm text-gray-600 hover:text-blue-600">Programas de Lealtad</a>
-					<a href="#webhooks" class="block text-sm text-gray-600 hover:text-blue-600">Webhooks</a>
+					<!-- Módulos principales -->
+					<a
+						href="#modulos-operativos"
+						class="block text-sm font-semibold text-gray-600 hover:text-blue-600"
+					>
+						🧩 Módulos Operativos
+					</a>
+					<div class="ml-4 space-y-1">
+						<a href="#salon" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🍽️ Salón y Mesas</a
+						>
+						<a href="#kds" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🖥️ KDS (Cocina)</a
+						>
+						<a href="#contabilidad" class="block text-sm text-gray-500 hover:text-blue-600"
+							>📒 Contabilidad</a
+						>
+						<a href="#arqueos" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🧾 Arqueos y Cierres</a
+						>
+					</div>
+					<!-- Compras y stock -->
+					<a href="#compras" class="block text-sm font-semibold text-gray-600 hover:text-blue-600">
+						📦 Compras y Stock
+					</a>
+					<a href="#afip" class="block text-sm font-semibold text-gray-600 hover:text-blue-600">
+						🧾 AFIP y Facturación
+					</a>
+					<!-- Estadísticas -->
+					<a
+						href="#estadisticas"
+						class="block text-sm font-semibold text-gray-600 hover:text-blue-600"
+					>
+						📊 Estadísticas y Reportes
+					</a>
+					<!-- Extras -->
+					<a href="#extra" class="block text-sm font-semibold text-gray-600 hover:text-blue-600">
+						🧠 Funcionalidades Extra
+					</a>
+					<div class="ml-4 space-y-1">
+						<a href="#buchon" class="block text-sm text-gray-500 hover:text-blue-600"
+							>🤖 Buchón Bot</a
+						>
+						<a href="#propina" class="block text-sm text-gray-500 hover:text-blue-600"
+							>💸 Gestión de Propinas</a
+						>
+					</div>
 				</nav>
 			</div>
 		</aside>
 
 		<!-- Main Content -->
-		<main class="flex-1 min-w-0">
-			<div class="bg-white rounded-lg shadow-sm border">
+		<main class="min-w-0 flex-1">
+			<div class="rounded-lg border bg-white shadow-sm">
 				<!-- Header -->
-				<div class="px-6 py-8 border-b border-gray-200">
-					<h1 class="text-3xl font-bold text-gray-900 mb-4">Guías de Integración</h1>
+				<div class="border-b border-gray-200 px-6 py-8">
+					<h1 class="mb-4 text-3xl font-bold text-gray-900">PaxaPOS Documentation</h1>
 					<p class="text-lg text-gray-600">
-						Conecta PaxaPOS con sistemas externos para potenciar las capacidades de tu negocio.
+						Documentación oficial para PaxaPOS - Sistema gastronomico completo.
 					</p>
 				</div>
 
-				<div class="px-6 py-8 space-y-12">
+				<div class="space-y-12 px-6 py-8">
 					<!-- Overview -->
-					<section id="overview">
-						<h2 class="text-2xl font-bold text-gray-900 mb-6">Introducción a las Integraciones</h2>
-						
+					<section id="paxapos">
 						<div class="prose max-w-none">
-							<p class="text-gray-700 mb-6">
-								PaxaPOS está diseñado para integrarse fácilmente con una amplia variedad de servicios y sistemas externos. 
-								Estas integraciones te permiten sincronizar datos, automatizar procesos y expandir las funcionalidades de tu punto de venta.
-							</p>
+							<p class="mb-6 text-gray-700"></p>
+							<div
+								class="space-y-4 rounded-lg bg-white p-6 leading-relaxed text-gray-800 shadow-md"
+							>
+								<h1 class="text-2xl font-bold text-blue-700">📘 Bienvenido a PaxaPOS</h1>
 
-							<h3 class="text-xl font-semibold text-gray-900 mb-4">Tipos de Integración Disponibles</h3>
-							<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-								<div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-									<div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">Pasarelas de Pago</h4>
-									<p class="text-sm text-gray-600">Acepta pagos con tarjeta, digitales y transferencias bancarias.</p>
-								</div>
+								<p>
+									<strong>PaxaPOS</strong> es mucho más que un sistema de gestión:<br />
+									es el corazón digital de tu negocio gastronómico.
+								</p>
 
-								<div class="bg-green-50 border border-green-200 rounded-lg p-4">
-									<div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">Sistemas Contables</h4>
-									<p class="text-sm text-gray-600">Sincroniza automáticamente con tu software de contabilidad.</p>
-								</div>
+								<p>
+									Diseñado para que puedas controlar <strong
+										>todo tu restaurante desde un solo lugar</strong
+									>, PaxaPOS te permite tomar comandas, gestionar tu stock, analizar tus ventas,
+									controlar al personal y mucho más, de forma rápida, simple y eficiente.
+								</p>
 
-								<div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-									<div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">E-commerce</h4>
-									<p class="text-sm text-gray-600">Conecta con tiendas online para sincronizar inventario y ventas.</p>
-								</div>
+								<p>
+									Olvidate del papel, los errores y el desorden.<br />
+									Con PaxaPOS tenés una herramienta moderna, visual e intuitiva que te acompaña en cada
+									momento del día: desde el primer café de la mañana hasta el cierre de caja por la noche.
+								</p>
 
-								<div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
-									<div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">Gestión de Inventario</h4>
-									<p class="text-sm text-gray-600">Integra con sistemas de gestión de almacenes y proveedores.</p>
-								</div>
+								<h2 class="mt-6 text-xl font-semibold text-gray-700">
+									¿Qué podés hacer con PaxaPOS?
+								</h2>
 
-								<div class="bg-red-50 border border-red-200 rounded-lg p-4">
-									<div class="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">Programas de Lealtad</h4>
-									<p class="text-sm text-gray-600">Implementa sistemas de puntos y recompensas para clientes.</p>
-								</div>
-
-								<div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
-									<div class="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-										<svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-										</svg>
-									</div>
-									<h4 class="font-semibold text-gray-900 mb-2">Notificaciones</h4>
-									<p class="text-sm text-gray-600">Integra con servicios de SMS, email y notificaciones push.</p>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					<!-- Payment Gateways -->
-					<section id="payment-gateways">
-						<h2 class="text-2xl font-bold text-gray-900 mb-6">Pasarelas de Pago</h2>
-						
-						<div class="prose max-w-none">
-							<p class="text-gray-700 mb-6">
-								Acepta pagos con tarjeta de crédito, débito y métodos digitales integrando con las principales pasarelas de pago.
-							</p>
-
-							<!-- Stripe Integration -->
-							<div id="stripe" class="mb-8">
-								<h3 class="text-xl font-semibold text-gray-900 mb-4">Integración con Stripe</h3>
-								<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-									<div class="flex items-start">
-										<div class="flex-shrink-0">
-											<div class="bg-blue-100 rounded-lg p-2">
-												<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-												</svg>
-											</div>
-										</div>
-										<div class="ml-4">
-											<h4 class="text-lg font-semibold text-blue-900">Configuración de Stripe</h4>
-											<p class="text-blue-700 mb-4">
-												Stripe es una de las pasarelas de pago más populares y confiables del mundo.
-											</p>
-											<div class="space-y-3">
-												<div>
-													<h5 class="font-medium text-blue-900">Paso 1: Crear cuenta en Stripe</h5>
-													<p class="text-sm text-blue-700">Ve a <a href="https://stripe.com" class="underline">stripe.com</a> y crea una cuenta empresarial</p>
-												</div>
-												<div>
-													<h5 class="font-medium text-blue-900">Paso 2: Obtener las API Keys</h5>
-													<p class="text-sm text-blue-700">En el dashboard de Stripe, ve a Developers → API Keys</p>
-												</div>
-												<div>
-													<h5 class="font-medium text-blue-900">Paso 3: Configurar en PaxaPOS</h5>
-													<p class="text-sm text-blue-700">Configuración → Métodos de Pago → Stripe</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<h4 class="font-semibold text-gray-900 mb-3">Configuración Técnica</h4>
-								<div class="bg-gray-100 rounded-lg p-4 mb-4">
-									<pre class="text-sm"><code>{`{
-  "stripe": {
-    "publishable_key": "pk_live_xxxxxxxxxxxx",
-    "secret_key": "sk_live_xxxxxxxxxxxx",
-    "webhook_secret": "whsec_xxxxxxxxxxxx",
-    "currency": "usd",
-    "capture_method": "automatic"
-  }
-}`}</code></pre>
-								</div>
-
-								<h4 class="font-semibold text-gray-900 mb-3">Funcionalidades Disponibles</h4>
-								<ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
-									<li>Pagos con tarjeta de crédito y débito</li>
-									<li>Pagos con Apple Pay y Google Pay</li>
-									<li>Reembolsos parciales y completos</li>
-									<li>Suscripciones recurrentes</li>
-									<li>Protección contra fraude</li>
+								<ul class="list-disc pl-6">
+									<li>✅ Gestion de salon y mozos</li>
+									<li>✅ Tomar pedidos desde salon</li>
+									<li>✅ Facturar con AFIP de forma automática</li>
+									<li>✅ Estadisticas y reportes</li>
+									<li>✅ Control de stock</li>
+									<li>✅ Gestionar delivery, propinas, reservas y más</li>
 								</ul>
+
+								<p class="mt-4">
+									Este manual te va a guiar paso a paso para que puedas aprovechar al máximo cada
+									módulo. No necesitás ser técnico ni experto:
+									<strong>PaxaPOS está hecho para vos</strong>.
+								</p>
 							</div>
+							<br />
+							<section id="login" class="mb-8 rounded-lg bg-white p-6 text-gray-800 shadow-md">
+								<h2 class="mb-4 text-2xl font-semibold text-blue-700">🔐 Cómo iniciar sesión</h2>
 
-							<!-- PayPal Integration -->
-							<div id="paypal" class="mb-8">
-								<h3 class="text-xl font-semibold text-gray-900 mb-4">Integración con PayPal</h3>
-								<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-									<div class="flex items-start">
-										<div class="flex-shrink-0">
-											<div class="bg-yellow-100 rounded-lg p-2">
-												<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-												</svg>
-											</div>
-										</div>
-										<div class="ml-4">
-											<h4 class="text-lg font-semibold text-yellow-900">Configuración de PayPal</h4>
-											<p class="text-yellow-700 mb-4">
-												PayPal permite a tus clientes pagar con su cuenta PayPal o tarjetas de crédito.
-											</p>
-											<div class="space-y-2">
-												<div class="bg-yellow-100 rounded p-3">
-													<h5 class="font-medium text-yellow-900">Credenciales Requeridas</h5>
-													<ul class="text-sm text-yellow-800 mt-1">
-														<li>• Client ID de PayPal</li>
-														<li>• Client Secret</li>
-														<li>• Webhook ID (opcional)</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+								<p class="mb-4">Para ingresar a tu cuenta en PaxaPOS, seguí estos pasos:</p>
 
-							<!-- MercadoPago Integration -->
-							<div id="mercadopago" class="mb-8">
-								<h3 class="text-xl font-semibold text-gray-900 mb-4">Integración con MercadoPago</h3>
-								<div class="bg-cyan-50 border border-cyan-200 rounded-lg p-6">
-									<div class="flex items-start">
-										<div class="flex-shrink-0">
-											<div class="bg-cyan-100 rounded-lg p-2">
-												<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-												</svg>
-											</div>
-										</div>
-										<div class="ml-4">
-											<h4 class="text-lg font-semibold text-cyan-900">MercadoPago para Latinoamérica</h4>
-											<p class="text-cyan-700 mb-4">
-												Ideal para negocios en Argentina, Brasil, Chile, Colombia, México, Perú y Uruguay.
-											</p>
-											<div class="bg-cyan-100 rounded p-3">
-												<h5 class="font-medium text-cyan-900">Métodos de Pago Disponibles</h5>
-												<ul class="text-sm text-cyan-800 mt-1">
-													<li>• Tarjetas de crédito y débito</li>
-													<li>• Transferencias bancarias</li>
-													<li>• Efectivo en puntos de pago</li>
-													<li>• Dinero en cuenta de MercadoPago</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+								<ol class="list-decimal space-y-2 pl-5">
+									<li>
+										Ingresá a <a
+											href="https://app.paxapos.com"
+											target="_blank"
+											class="text-blue-600 underline">https://app.paxapos.com</a
+										>
+									</li>
+									<li>Escribí tu <strong>usuario</strong> y <strong>contraseña</strong></li>
+									<li>Presioná el botón <strong>"Iniciar sesión"</strong></li>
+								</ol>
 
-					<!-- Accounting Systems -->
-					<section id="accounting">
-						<h2 class="text-2xl font-bold text-gray-900 mb-6">Sistemas Contables</h2>
-						
-						<div class="prose max-w-none">
-							<p class="text-gray-700 mb-6">
-								Mantén tu contabilidad actualizada automáticamente sincronizando PaxaPOS con tu software contable.
-							</p>
+								<p class="mt-6">
+									Si tus datos son correctos, ingresarás al panel principal del sistema donde podrás
+									operar según tus permisos.
+								</p>
 
-							<div class="grid md:grid-cols-2 gap-6 mb-8">
-								<div class="border border-gray-200 rounded-lg p-6">
-									<h4 class="font-semibold text-gray-900 mb-3 flex items-center">
-										<span class="bg-green-100 text-green-600 p-1 rounded mr-2">📊</span>
-										QuickBooks
-									</h4>
-									<p class="text-sm text-gray-600 mb-4">
-										Sincronización automática de ventas, productos e inventario con QuickBooks Online.
-									</p>
-									<div class="space-y-2">
-										<div class="text-xs text-gray-500">
-											<strong>Sincroniza:</strong> Ventas diarias, productos nuevos, niveles de inventario
-										</div>
-										<div class="text-xs text-gray-500">
-											<strong>Frecuencia:</strong> Tiempo real o programada
-										</div>
-									</div>
-								</div>
+								<hr class="my-6 border-gray-300" />
 
-								<div class="border border-gray-200 rounded-lg p-6">
-									<h4 class="font-semibold text-gray-900 mb-3 flex items-center">
-										<span class="bg-blue-100 text-blue-600 p-1 rounded mr-2">💼</span>
-										Xero
-									</h4>
-									<p class="text-sm text-gray-600 mb-4">
-										Integración completa con Xero para pequeñas y medianas empresas.
-									</p>
-									<div class="space-y-2">
-										<div class="text-xs text-gray-500">
-											<strong>Sincroniza:</strong> Facturas, pagos, informes financieros
-										</div>
-										<div class="text-xs text-gray-500">
-											<strong>Frecuencia:</strong> Diaria automática
-										</div>
-									</div>
-								</div>
+								<h3 class="mb-2 text-xl font-medium text-gray-700">🔁 ¿Olvidaste tu contraseña?</h3>
+								<p class="mb-3">Si no recordás tu contraseña, podés recuperarla fácilmente:</p>
 
-								<div class="border border-gray-200 rounded-lg p-6">
-									<h4 class="font-semibold text-gray-900 mb-3 flex items-center">
-										<span class="bg-purple-100 text-purple-600 p-1 rounded mr-2">🧾</span>
-										SAP Business One
-									</h4>
-									<p class="text-sm text-gray-600 mb-4">
-										Integración empresarial con SAP para grandes volúmenes de transacciones.
-									</p>
-									<div class="space-y-2">
-										<div class="text-xs text-gray-500">
-											<strong>Sincroniza:</strong> ERP completo, inventario, finanzas
-										</div>
-										<div class="text-xs text-gray-500">
-											<strong>Frecuencia:</strong> Tiempo real
-										</div>
-									</div>
-								</div>
+								<ol class="list-decimal space-y-2 pl-5">
+									<li>
+										En la pantalla de inicio de sesión, hacé clic en <strong
+											>"¿Olvidaste tu contraseña?"</strong
+										>
+									</li>
+									<li>Ingresá tu dirección de correo electrónico</li>
+									<li>
+										Revisá tu bandeja de entrada y seguí las instrucciones del correo para
+										restablecerla
+									</li>
+								</ol>
 
-								<div class="border border-gray-200 rounded-lg p-6">
-									<h4 class="font-semibold text-gray-900 mb-3 flex items-center">
-										<span class="bg-orange-100 text-orange-600 p-1 rounded mr-2">📈</span>
-										Sage 50cloud
-									</h4>
-									<p class="text-sm text-gray-600 mb-4">
-										Conecta con Sage para gestión contable y financiera avanzada.
-									</p>
-									<div class="space-y-2">
-										<div class="text-xs text-gray-500">
-											<strong>Sincroniza:</strong> Contabilidad, nómina, inventario
-										</div>
-										<div class="text-xs text-gray-500">
-											<strong>Frecuencia:</strong> Programable
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+								<p class="mt-4">
+									Si no recibís el correo, recordá revisar tu carpeta de <em>spam</em> o contactá a tu
+									administrador para asistencia.
+								</p>
+							</section>
+							<!-- Configuracion del comercio-->
+							<section
+								id="configuracion-comercio"
+								class="mb-8 rounded-lg bg-white p-6 text-gray-800 shadow-md"
+							>
+								<h2 class="mb-4 text-2xl font-semibold text-blue-700">
+									⚙️ Configuración del Comercio
+								</h2>
 
-					<!-- E-commerce Integration -->
-					<section id="ecommerce">
-						<h2 class="text-2xl font-bold text-gray-900 mb-6">Integración con E-commerce</h2>
-						
-						<div class="prose max-w-none">
-							<p class="text-gray-700 mb-6">
-								Sincroniza tu inventario y ventas entre tu tienda física y tu tienda online.
-							</p>
+								<p class="mb-6">
+									En esta sección vas a poder configurar todos los aspectos fundamentales de tu
+									comercio para que el sistema funcione de acuerdo a tu operación diaria. A
+									continuación se listan los módulos principales que podés personalizar.
+								</p>
 
-							<div class="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6 mb-8">
-								<h3 class="text-lg font-semibold text-gray-900 mb-4">Plataformas E-commerce Compatibles</h3>
-								<div class="grid md:grid-cols-3 gap-4">
-									<div class="bg-white rounded-lg p-4 shadow-sm">
-										<h4 class="font-semibold text-gray-900 mb-2">Shopify</h4>
-										<p class="text-sm text-gray-600">Sincronización bidireccional de productos, inventario y órdenes.</p>
-									</div>
-									<div class="bg-white rounded-lg p-4 shadow-sm">
-										<h4 class="font-semibold text-gray-900 mb-2">WooCommerce</h4>
-										<p class="text-sm text-gray-600">Plugin dedicado para WordPress/WooCommerce.</p>
-									</div>
-									<div class="bg-white rounded-lg p-4 shadow-sm">
-										<h4 class="font-semibold text-gray-900 mb-2">Magento</h4>
-										<p class="text-sm text-gray-600">Extensión para Magento 2.x con funcionalidades avanzadas.</p>
-									</div>
-								</div>
-							</div>
+								<h3 id="usuarios" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									👥 Usuarios y Roles
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Escribí aquí cómo agregar usuarios, asignar roles como mozo, cajero, supervisor, etc. -->
+								</p>
 
-							<h3 class="text-xl font-semibold text-gray-900 mb-4">Configuración de Shopify</h3>
-							<div class="space-y-4">
-								<div class="bg-green-50 border border-green-200 rounded-lg p-4">
-									<h4 class="font-semibold text-green-900 mb-2">Paso a Paso</h4>
-									<ol class="list-decimal list-inside space-y-2 text-green-800 text-sm">
-										<li>Instala la app "PaxaPOS Connector" desde Shopify App Store</li>
-										<li>Conecta tu cuenta PaxaPOS con tu tienda Shopify</li>
-										<li>Configura las reglas de sincronización</li>
-										<li>Realiza la sincronización inicial</li>
-										<li>Activa la sincronización automática</li>
-									</ol>
-								</div>
+								<h3 id="mozos" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									🧑‍🍳 Mozos y Personal
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Describí cómo crear mozos, vincularlos con el mapa del salón o asignarlos a sectores. -->
+								</p>
 
-								<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-									<h4 class="font-semibold text-yellow-900 mb-2">⚠️ Consideraciones Importantes</h4>
-									<ul class="list-disc list-inside space-y-1 text-yellow-800 text-sm">
-										<li>La sincronización inicial puede tomar tiempo dependiendo del número de productos</li>
-										<li>Se recomienda hacer una copia de seguridad antes de la primera sincronización</li>
-										<li>Configura correctamente las categorías para evitar duplicados</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
+								<h3 id="tipos" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									💳 Tipos de Pago
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Agregá la explicación sobre métodos de pago aceptados (efectivo, QR, tarjeta, transferencia). -->
+								</p>
 
-					<!-- Webhooks -->
-					<section id="webhooks">
-						<h2 class="text-2xl font-bold text-gray-900 mb-6">Webhooks</h2>
-						
-						<div class="prose max-w-none">
-							<p class="text-gray-700 mb-6">
-								Los webhooks permiten que PaxaPOS notifique a sistemas externos cuando ocurren eventos específicos.
-							</p>
+								<h3 id="productos" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									🍔 Productos, Menús y Recetas
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Instrucciones para cargar productos, menús por categoría y configurar recetas con ingredientes. -->
+								</p>
 
-							<h3 class="text-xl font-semibold text-gray-900 mb-4">Eventos Disponibles</h3>
-							<div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
-								<table class="min-w-full divide-y divide-gray-200">
-									<thead class="bg-gray-50">
-										<tr>
-											<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Evento</th>
-											<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
-											<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payload</th>
-										</tr>
-									</thead>
-									<tbody class="bg-white divide-y divide-gray-200">
-										<tr>
-											<td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">sale.created</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Nueva venta realizada</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Datos completos de la venta</td>
-										</tr>
-										<tr>
-											<td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">sale.cancelled</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Venta anulada</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ID de venta y motivo</td>
-										</tr>
-										<tr>
-											<td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">product.updated</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Producto modificado</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Datos del producto</td>
-										</tr>
-										<tr>
-											<td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">inventory.low</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Stock bajo</td>
-											<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Producto y nivel actual</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+								<!--<h3 class="mb-2 mt-6 text-xl font-medium text-gray-700">📂 Categorías e IVA</h3>
+								<p class="mb-4 text-gray-600">
+									Explicá cómo configurar iva y categorias
+								</p>
 
-							<h3 class="text-xl font-semibold text-gray-900 mb-4">Configuración de Webhook</h3>
-							<div class="bg-gray-100 rounded-lg p-4 mb-4">
-								<pre class="text-sm"><code>{`POST /webhooks
-{
-  "url": "https://tu-servidor.com/webhook/paxapos",
-  "events": ["sale.created", "sale.cancelled"],
-  "secret": "tu_secreto_webhook",
-  "active": true
-}`}</code></pre>
-							</div>
+								<h3 class="mb-2 mt-6 text-xl font-medium text-gray-700">📅 Turnos y Horarios</h3>
+								<p class="mb-4 text-gray-600">
+									 Explicá cómo configurar turnos de trabajo, franjas horarias, horarios de apertura/cierre. 
+								</p>
 
-							<h3 class="text-xl font-semibold text-gray-900 mb-4">Ejemplo de Payload</h3>
-							<div class="bg-gray-100 rounded-lg p-4">
-								<pre class="text-sm"><code>{`{
-  "event": "sale.created",
-  "timestamp": "2025-05-26T15:30:00Z",
-  "data": {
-    "sale_id": "sale_12345",
-    "amount": 15.50,
-    "currency": "USD",
-    "items": [
-      {
-        "product_id": "prod_789",
-        "quantity": 2,
-        "unit_price": 7.75
-      }
-    ],
-    "payment_method": "credit_card",
-    "customer_id": "cust_456"
-  }
-}`}</code></pre>
-							</div>
+								<h3 class="mb-2 mt-6 text-xl font-medium text-gray-700">🔄 Reseteo y Backup</h3>
+								<p class="mb-4 text-gray-600">
+									 Información sobre cómo resetear datos de prueba, realizar respaldos o limpiar configuraciones. 
+								</p>
+								-->
+							</section>
+							<!--modulos operativos-->
+							<section
+								id="modulos-operativos"
+								class="mb-8 rounded-lg bg-white p-6 text-gray-800 shadow-md"
+							>
+								<h2 class="mb-4 text-2xl font-semibold text-blue-700">🧩 Módulos Operativos</h2>
+
+								<p class="mb-6">
+									Estos módulos incluyen todas las funciones necesarias para el trabajo diario del
+									restaurante, desde atender a los clientes hasta organizar las tareas internas.
+									Ayudan a que el equipo trabaje mejor y los clientes tengan una buena experiencia.
+								</p>
+
+								<h3 id="salon" class=" salon mb-2 mt-6 text-xl font-medium text-gray-700">
+									🍽️ Salón y Mesas
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Escribí aquí cómo agregar usuarios, asignar roles como mozo, cajero, supervisor, etc. -->
+								</p>
+
+								<h3 id="kds" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									🖥️ KDS (Cocina)
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Describí cómo crear mozos, vincularlos con el mapa del salón o asignarlos a sectores. -->
+								</p>
+
+								<h3 id="contabilidad" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									📒 Contabilidad
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Agregá la explicación sobre métodos de pago aceptados (efectivo, QR, tarjeta, transferencia). -->
+								</p>
+
+								<h3 id="arqueos" class="mb-2 mt-6 text-xl font-medium text-gray-700">
+									🧾 Arqueos y Cierres
+								</h3>
+								<p class="mb-4 text-gray-600">
+									<!-- Instrucciones para cargar productos, menús por categoría y configurar recetas con ingredientes. -->
+								</p>
+							</section>
+
+							<!-- Módulo: Compras y Stock -->
+							<section class="mb-6 rounded-lg bg-white p-6 shadow">
+								<h2 id="compras" class="mb-4 text-2xl font-semibold text-blue-700">
+									📦 Compras y Stock
+								</h2>
+								<p class="text-gray-600">
+									<!-- Detalles sobre control de inventario, ingreso de mercadería, stock mínimo y pedidos a proveedores. -->
+								</p>
+							</section>
+
+							<!-- Módulo: AFIP y Facturación -->
+							<section class="mb-6 rounded-lg bg-white p-6 shadow">
+								<h2 id="afip" class="mb-4 text-2xl font-semibold text-blue-700">
+									🧾 AFIP y Facturación
+								</h2>
+								<p class="text-gray-600">
+									<!-- Cómo configurar CUIT, puntos de venta, conexión con AFIP y tipos de comprobantes habilitados. -->
+								</p>
+							</section>
+
+							<!-- Módulo: Estadísticas y Reportes -->
+							<section class="mb-6 rounded-lg bg-white p-6 shadow">
+								<h2 id="estadisticas" class="mb-4 text-2xl font-semibold text-blue-700">
+									📊 Estadísticas y Reportes
+								</h2>
+								<p class="text-gray-600">
+									<!-- Visualización de ventas por producto, rendimiento por mozo, horarios pico y reportes contables. -->
+								</p>
+							</section>
+
+							<!-- Módulo: Funcionalidades Extra -->
+							<section class="mb-6 rounded-lg bg-white p-6 shadow">
+								<h2 id="extra" class="mb-4 text-2xl font-semibold text-blue-700">
+									🧠 Funcionalidades Extra
+								</h2>
+								<p class="mb-4 text-gray-600">
+									<!-- Funciones adicionales que potencian el uso del sistema. -->
+								</p>
+
+								<h3 id="buchon" class="mb-2 ml-2 mt-4 text-xl font-medium text-gray-700">
+									🤖 Buchón Bot
+								</h3>
+								<p class="mb-4 ml-2 text-gray-600">
+									<!-- Asistente virtual para responder preguntas frecuentes del negocio o enviar alertas. -->
+								</p>
+
+								<h3 id="propina" class="mb-2 ml-2 mt-4 text-xl font-medium text-gray-700">
+									💸 Gestión de Propinas
+								</h3>
+								<p class="ml-2 text-gray-600">
+									<!-- Reparto automático de propinas por turno, rol o porcentaje según configuración del local. -->
+								</p>
+							</section>
 						</div>
 					</section>
 				</div>
