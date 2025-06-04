@@ -2,7 +2,7 @@
 
 Para ingresar a tu cuenta en PaxaPOS, seguí estos pasos:
 
-1. Ingresá a [https://app.paxapos.com](https://app.paxapos.com)
+1. Ingresá a [https://beta.paxapos.com](https://beta.paxapos.com)
 2. Escribí tu **usuario** y **contraseña**
 3. Presioná el botón **"Iniciar sesión"**
 

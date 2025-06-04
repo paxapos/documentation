@@ -1,1 +1,0 @@
-### 💳 Tipos de Pago

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import 'github-markdown-css/github-markdown.css';
+	import 'github-markdown-css/github-markdown-light.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	let { children } = $props();
 </script>
@@ -15,3 +15,7 @@
 		{@render children()}
 	</main>
 </div>
+
+<style>
+	@import 'github-markdown-css/github-markdown-light.css';
+</style>
