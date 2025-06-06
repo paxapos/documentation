@@ -43,45 +43,72 @@
 			console.error('Failed to load markdown files:', error);
 		}
 	});
+	function descargarTodoComoTxt() {
+		let textoCompleto = '';
+
+		for (const grupo of grouped_content) {
+			textoCompleto += `## ${grupo.folder}\n\n`;
+			for (const item of grupo.items) {
+				textoCompleto += `### ${item.title}\n\n`;
+				// Convertimos el HTML de nuevo a texto plano simple (opcionalmente)
+				const textoPlano = item.html.replace(/<[^>]*>/g, ''); // remove HTML tags
+				textoCompleto += `${textoPlano}\n\n`;
+			}
+		}
+
+		const blob = new Blob([textoCompleto], { type: 'text/plain' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = 'Manual-de-Usuario.txt';
+		a.click();
+		URL.revokeObjectURL(url);
+	}
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
 	<!-- Breadcrumb (vacío, podés usarlo o eliminarlo) -->
-	<nav class="space-y-4">
-	</nav>
+	<nav class="space-y-4"></nav>
 
 	<div class="flex flex-col gap-8 lg:flex-row">
 		<!-- Sidebar Navigation -->
-		<aside class="flex-shrink-0 lg:w-65 max-h-[calc(115vh-10rem)]">
+		<aside class="max-h-[calc(115vh-10rem)] flex-shrink-0 lg:w-65">
 			<div class="sticky top-24 rounded-lg border p-6">
 				<h3 class="mb-4 font-semibold">Manual de usuario</h3>
 				<nav class="space-y-0.5">
 					{#each grouped_content as group}
 						<div>
-							<h4 class="mb-2 font-semibold s">{group.folder}</h4>
+							<h4 class="s mb-2 font-semibold">{group.folder}</h4>
 							<nav class="space-y-0.5 pl-4">
 								{#each group.items as item}
 									<a href="#{item.id}" class="block text-sm hover:text-blue-800">
 										{item.title}
 									</a>
-								{/each}
-							</nav>
+									{/each}
+								</nav>
 						</div>
-					{/each}
+						{/each}
 				</nav>
 			</div>
 		</aside>
-
+		
 		<!-- Main Content -->
 		<main class="min-w-0 flex-1">
 			<div class="rounded-lg border">
 				<!-- Header -->
-				<div class="border-b border-gray-200 bg-white px-6 py-8 dark:border-gray-700 dark:bg-gray-800">
+				<div
+				class="border-b border-gray-200 bg-white px-6 py-8 dark:border-gray-700 dark:bg-gray-800"
+				>
 					<h1 class="mb-4 text-3xl font-bold">PaxaPOS Documentation</h1>
-					<p class="text-lg">
-						Documentación oficial para PaxaPOS - Sistema gastronomico completo.
-					</p>
+					<p class="text-lg">Documentación oficial para PaxaPOS - Sistema gastronomico completo.</p>
+					
+					<button
+						on:click={descargarTodoComoTxt}
+						class="mt-1 inline-block rounded bg-gray-600 px-2 py-2 text-white hover:bg-gray-800">
+							Descargar Manual de Usuario
+					</button>
 				</div>
+
 				<div class="space-y-12 py-8">
 					{#each grouped_content as group}
 						{#each group.items as content}
@@ -93,5 +120,6 @@
 				</div>
 			</div>
 		</main>
+		
 	</div>
 </div>
