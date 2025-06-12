@@ -2,7 +2,6 @@
 
 Esta sección te guiará en el proceso de incorporar nuevos ítems a tu inventario, desde la creación de una *mercadería* (lo que compras a tus proveedores) hasta su transformación en un *producto* (lo que vendes a tus clientes), asegurando que el stock se registre correctamente en ambas instancias.
 
----
 
 ## 1. Creación de Nueva Mercadería
 
@@ -18,7 +17,6 @@ Antes de poder registrar cualquier entrada de stock, primero debes definir la me
         * *Consideración:* Si la unidad de compra es la misma que la unidad de venta (ej. compras "UNIDAD" y vendes "UNIDAD"), ingresa 1.
 4.  Haz clic en *"Guardar"* (o el botón correspondiente) para crear la nueva mercadería.
 
----
 
 ## 2. Alta de Mercadería como Producto (Maestro de Productos)
 
@@ -32,3 +30,5 @@ Una vez que has creado la mercadería, el siguiente paso es "darla de alta" como
     * *Consideración:* Esto te permite flexibilidad. Puedes comprar cajas y vender unidades, o comprar unidades y vender unidades. El sistema está diseñado para manejar ambas situaciones.
 5.  Asegúrate de que la unidad de medida de stock del producto refleje cómo el usuario final comprará el ítem.
 6.  Haz clic en *"Guardar"* (o el botón correspondiente) para confirmar los cambios y dar de alta el producto.
+
+---

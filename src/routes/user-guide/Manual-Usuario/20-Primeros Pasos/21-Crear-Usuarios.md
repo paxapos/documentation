@@ -11,7 +11,6 @@ Al ingresar al sistema por primera vez, es fundamental realizar algunas configur
 1.  Una vez dentro del sistema, busca y haz clic en la *"P" roja"*.
 2.  Se abrirá una ventana con varias opciones de configuración. Aquí encontrarás los módulos para crear usuarios, definir tipos de pago y agregar a tu equipo de trabajo (mozos).
 
----
 
 ## 1. Crear Usuarios
 
@@ -23,5 +22,3 @@ Este módulo te permite dar de alta a las personas que utilizarán el sistema, a
     * *Mail:* La dirección de correo electrónico del usuario, que puede servir como identificador de acceso.
     * *Contraseña:* Una contraseña segura para el acceso del usuario al sistema.
     * *Rol:* Asigna un rol al usuario (ej., Administrador, Vendedor, Mozo, Cajero). El rol determinará las funcionalidades a las que el usuario tendrá acceso.
-
----

@@ -1,3 +1,4 @@
+---
 ## 🍔 Productos, Menús y Recetas
 
 ### 🛒 Productos
@@ -16,7 +17,6 @@ Cada producto puede tener:
 - Código SKU o interno
 - Receta o insumos asociados (opcional)
 
----
 
 ### 📋 Menús / Combos
 
@@ -27,7 +27,6 @@ Conjunto de productos que se venden juntos con un precio promocional.
 
 Permite **agilizar la carga** de pedidos y aumentar ventas.
 
----
 
 ### 🍳 Recetas / Producción
 
@@ -42,3 +41,5 @@ Cada producto puede tener una **receta técnica** que indica qué ingredientes l
 Esto sirve para descontar automáticamente insumos del inventario en cada venta.
 
 > ✅ *Activa el control de stock por receta para llevar un inventario más preciso.*
+
+---
