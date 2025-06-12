@@ -1,9 +1,9 @@
-### 🍽️ Salón y Mesas
+# 🍽️ Salón y Mesas
 
 El módulo de **Salón** es esencial para la gestión eficiente de su espacio de atención al cliente. Permite supervisar y organizar las **mesas** de su establecimiento, optimizando el flujo de trabajo y mejorando la experiencia del cliente.
 
 
-### 1. Gestión de Mesas y Asignación a Mozos
+## 1. Gestión de Mesas y Asignación a Mozos
 
 Al ingresar al módulo de **Salón**, visualizará una lista de todos los **mozos** registrados en el sistema. Esta característica le permite asignar mesas directamente a cada miembro de su equipo de servicio, facilitando la organización de las operaciones diarias.
 
@@ -16,7 +16,7 @@ Al ingresar al módulo de **Salón**, visualizará una lista de todos los **mozo
 5.  Una vez completados los campos, haga clic en **"Guardar"** para crear y asociar la mesa al mozo seleccionado.
 
 
-### 2. Operaciones de Mesa
+## 2. Operaciones de Mesa
 
 Una vez que la mesa ha sido guardada y está activa, el sistema le ofrecerá diversas funcionalidades para su gestión:
 

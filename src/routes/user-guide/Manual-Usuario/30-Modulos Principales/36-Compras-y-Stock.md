@@ -1,4 +1,4 @@
-### 📦 Compras y Stock
+# 📦 Compras y Stock
 
 Esta sección te guiará en el proceso de incorporar nuevos ítems a tu inventario, desde la creación de una *mercadería* (lo que compras a tus proveedores) hasta su transformación en un *producto* (lo que vendes a tus clientes), asegurando que el stock se registre correctamente en ambas instancias.
 
