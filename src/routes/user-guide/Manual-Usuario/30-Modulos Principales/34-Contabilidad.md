@@ -1,6 +1,6 @@
 # 📒 Contabilidad
 
-Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores, los **impuestos* y las *clasificaciones* de gastos.
+Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores*, los *impuestos* y las *clasificaciones* de gastos.
 
 ## Acceso a la Configuración de Contabilidad
 
@@ -12,7 +12,7 @@ Antes de registrar cualquier factura o gasto en tu sistema, es esencial que real
 
 Este módulo te permite definir los diferentes tipos de impuestos que aplicarán a tus transacciones.
 
-1.  Dentro del apartado de la *"P" roja, selecciona el **"Módulo Impuestos"*.
+1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo Impuestos"*.
 2.  Haz clic en el botón *"Crear Tipo de Impuesto"*.
 3.  Se abrirá una ventana donde deberás ingresar la siguiente información:
     * *Nombre de Impuesto:* Asigna un nombre claro al impuesto (ej., "IVA 21%", "IVA 10.5%").
@@ -28,7 +28,7 @@ Este módulo te permite definir los diferentes tipos de impuestos que aplicarán
 
 Las clasificaciones te ayudarán a organizar tus gastos y facturas por categorías, facilitando el análisis y la generación de reportes contables.
 
-1.  Dentro del apartado de la *"P" roja, selecciona el **"Módulo de Listado de Clasificaciones"*.
+1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo de Listado de Clasificaciones"*.
 2.  Aquí podrás crear las categorías para tus facturas. Ejemplos comunes incluyen:
     * *Mano de Obra*
     * *Gasto Operativo*
@@ -42,7 +42,7 @@ Las clasificaciones te ayudarán a organizar tus gastos y facturas por categorí
 
 Es fundamental registrar a tus proveedores para poder asociar las facturas de gasto con la entidad correcta y llevar un seguimiento de tus deudas.
 
-1.  Dentro del apartado de la *"P" roja, selecciona el **"Módulo Proveedores"*.
+1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo Proveedores"*.
 2.  Haz clic en el botón *"Crear Proveedores"*.
 3.  Se abrirá una ventana en la cual deberás cargar la información de tu proveedor:
     * *Nombre:* Nombre o razón social del proveedor.
@@ -58,7 +58,7 @@ Es fundamental registrar a tus proveedores para poder asociar las facturas de ga
 
 Una vez que hayas configurado los impuestos, clasificaciones y proveedores, ya puedes comenzar a cargar tus facturas y gastos.
 
-1.  Desde el módulo de *"Contabilidad", dirígete a la pestaña **"Resumen de Deuda"*.
+1.  Desde el módulo de *"Contabilidad"*, dirígete a la pestaña *"Resumen de Deuda"*.
 2.  Haz clic en el botón *"Nuevo Gasto"*.
 3.  Se abrirá una pestaña o ventana donde deberás ingresar los detalles del gasto:
     * *Proveedor:* Selecciona el proveedor de la lista que configuraste previamente.
