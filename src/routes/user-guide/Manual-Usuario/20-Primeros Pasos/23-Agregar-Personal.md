@@ -1,4 +1,4 @@
-## 3. Agregar a tu Equipo / Mozos
+## Agregar a tu Equipo / Mozos
 
 Si tu comercio maneja personal de atención (como mozos o vendedores), esta sección te permite registrarlos y organizar su visualización de puntos de venta.
 

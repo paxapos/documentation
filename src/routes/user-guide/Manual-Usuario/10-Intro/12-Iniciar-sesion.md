@@ -1,4 +1,4 @@
-## 🔐 Cómo iniciar sesión
+##  Cómo iniciar sesión
 
 Para ingresar a tu cuenta en PaxaPOS, seguí estos pasos:
 
@@ -9,7 +9,7 @@ Para ingresar a tu cuenta en PaxaPOS, seguí estos pasos:
 Si tus datos son correctos, ingresarás al panel principal del sistema donde podrás operar según tus permisos.
 
 
-### 🔁 ¿Olvidaste tu contraseña?
+###  ¿Olvidaste tu contraseña?
 
 Si no recordás tu contraseña, podés recuperarla fácilmente:
 

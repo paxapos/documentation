@@ -1,7 +1,7 @@
-# 🛠️ Primeros pasos para configurar tu sistema PaxaPOS
+#  Primeros pasos para configurar tu sistema PaxaPOS
 Al ingresar al sistema por primera vez, es fundamental realizar algunas configuraciones básicas para sentar las bases de su operación. Estos ajustes te permitirán personalizar el sistema a las necesidades de tu comercio y empezar a trabajar de manera efectiva.
 
-> 💡 **TIP IMPORTANTE:**  
+>  **TIP IMPORTANTE:**  
 > En muchos módulos del sistema, algunas opciones de configuración o carga adicional no se muestran de forma directa.  
 > Para acceder a estas funciones extras (como proveedores, rubros, impuestos, entre otras), haz clic en el ícono de la **“P” roja** que se encuentra en la parte superior.  
 > Este acceso te muestra configuraciones complementarias específicas del módulo en el que estás trabajando.

@@ -1,4 +1,4 @@
-# 📒 Contabilidad
+#  Contabilidad
 
 Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores*, los *impuestos* y las *clasificaciones* de gastos.
 

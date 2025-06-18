@@ -1,6 +1,6 @@
 # Introducción a PaxaPOS
 
-## 📘 Bienvenido a PaxaPOS
+##  Bienvenido a PaxaPOS
 
 **PaxaPOS** es un sistema de gestión integral pensado para adaptarse a las necesidades de tu comercio.
 
@@ -10,12 +10,12 @@ Con una interfaz moderna e intuitiva, PaxaPOS acompaña el trabajo diario, ayuda
 
 ## ¿Qué podés hacer con PaxaPOS?
 
-* ✅ Gestion de salon y mozos
-* ✅ Tomar pedidos desde salon
-* ✅ Facturar con AFIP de forma automática
-* ✅ Estadisticas y reportes
-* ✅ Control de stock
-* ✅ Gestionar delivery, propinas, reservas y más
+*  Gestion de salon y mozos
+*  Tomar pedidos desde salon
+*  Facturar con AFIP de forma automática
+*  Estadisticas y reportes
+*  Control de stock
+*  Gestionar delivery, propinas, reservas y más
 
 Este manual te va a guiar paso a paso para que puedas aprovechar al máximo cada módulo.
 

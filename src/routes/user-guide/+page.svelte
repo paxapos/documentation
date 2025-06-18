@@ -2,9 +2,6 @@
 	import { onMount } from 'svelte';
 	import { marked } from 'marked';
 
-	/** @typedef {{ id: string, title: string, html: string }} MarkdownItem */
-	/** @typedef {{ folder: string, items: MarkdownItem[] }} MarkdownGroup */
-
 	let grouped_content = [];
 
 	onMount(async () => {
@@ -20,7 +17,7 @@
 			for (const [path, loader] of files) {
 				const markdownText = await loader();
 				const fileName = path.split('/').pop();
-				const folderName = path.split('/').slice(-2, -1)[0]; // nombre de carpeta
+				const folderName = path.split('/').slice(-2, -1)[0]; 
 				const cleanTitle = fileName.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ');
 				const id = fileName.replace('.md', '');
 
@@ -31,47 +28,41 @@
 				contentMap[folderName].push({
 					id,
 					title: cleanTitle,
-					html: marked(markdownText)
+					html: marked(markdownText),
+					rawMarkdown: markdownText 
 				});
 			}
 
+			Object.values(contentMap).forEach(items => {
+				items.sort((a, b) => {
+					const numA = parseInt(a.id.split('-')[0]);
+					const numB = parseInt(b.id.split('-')[0]);
+					return numA - numB;
+				});
+			});
+
+	
 			grouped_content = Object.entries(contentMap).map(([folder, items]) => ({
 				folder: folder.replace(/^\d+-/, '').replace(/-/g, ' '),
 				items
-			}));
+			})).sort((a, b) => {
+				const numA = parseInt(a.folder.split(' ')[0]);
+				const numB = parseInt(b.folder.split(' ')[0]);
+				return numA - numB;
+			});
+
 		} catch (error) {
 			console.error('Failed to load markdown files:', error);
 		}
 	});
-	function descargarTodoComoTxt() {
-		let textoCompleto = '';
 
-		for (const grupo of grouped_content) {
-			textoCompleto += `## ${grupo.folder}\n\n`;
-			for (const item of grupo.items) {
-				textoCompleto += `### ${item.title}\n\n`;
-				// Convertimos el HTML de nuevo a texto plano simple (opcionalmente)
-				const textoPlano = item.html.replace(/<[^>]*>/g, ''); // remove HTML tags
-				textoCompleto += `${textoPlano}\n\n`;
-			}
-		}
 
-		const blob = new Blob([textoCompleto], { type: 'text/plain' });
-		const url = URL.createObjectURL(blob);
-		const a = document.createElement('a');
-		a.href = url;
-		a.download = 'Manual-de-Usuario.txt';
-		a.click();
-		URL.revokeObjectURL(url);
-	}
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
-	<!-- Breadcrumb (vacío, podés usarlo o eliminarlo) -->
 	<nav class="space-y-4"></nav>
 
 	<div class="flex flex-col gap-8 lg:flex-row">
-		<!-- Sidebar Navigation -->
 		<aside class="max-h-[calc(115vh-10rem)] flex-shrink-0 lg:w-65">
 			<div class="sticky top-24 rounded-lg border p-6">
 				<h3 class="mb-4 font-semibold">Manual de usuario</h3>
@@ -84,30 +75,16 @@
 									<a href="#{item.id}" class="block text-sm hover:text-blue-800">
 										{item.title}
 									</a>
-									{/each}
-								</nav>
+								{/each}
+							</nav>
 						</div>
-						{/each}
+					{/each}
 				</nav>
 			</div>
 		</aside>
-		
-		<!-- Main Content -->
+
 		<main class="min-w-0 flex-1">
 			<div class="rounded-lg border">
-				<!-- Header -->
-				<div
-				class="border-b border-gray-200 bg-white px-6 py-8 dark:border-gray-700 dark:bg-gray-800"
-				>
-					<h1 class="mb-4 text-3xl font-bold">PaxaPOS Documentation</h1>
-					<p class="text-lg">Documentación oficial para PaxaPOS - Sistema gastronomico completo.</p>
-					
-					<button
-						on:click={descargarTodoComoTxt}
-						class="mt-1 inline-block rounded bg-gray-600 px-2 py-2 text-white hover:bg-gray-800">
-							Descargar Manual de Usuario
-					</button>
-				</div>
 
 				<div class="space-y-12 py-8">
 					{#each grouped_content as group}
@@ -120,6 +97,6 @@
 				</div>
 			</div>
 		</main>
-		
+
 	</div>
 </div>
