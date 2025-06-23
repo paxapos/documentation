@@ -60,17 +60,15 @@
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
-	<nav class="space-y-4"></nav>
-
 	<div class="flex flex-col gap-8 lg:flex-row">
-		<aside class="max-h-[calc(115vh-10rem)] flex-shrink-0 lg:w-65">
-			<div class="sticky top-24 rounded-lg border p-6">
-				<h3 class="mb-4 font-semibold">Manual de usuario</h3>
-				<nav class="space-y-0.5">
+		<aside class="lg:w-64 flex-shrink-0">
+			<div class="sticky top-17 rounded-lg border p-4">
+				<h3 class="mb-3 font-semibold">Manual de usuario</h3>
+				<nav>
 					{#each grouped_content as group}
 						<div>
 							<h4 class="s mb-2 font-semibold">{group.folder}</h4>
-							<nav class="space-y-0.5 pl-4">
+							<nav class="space-y-0.4 pl-4">
 								{#each group.items as item}
 									<a href="#{item.id}" class="block text-sm hover:text-blue-800">
 										{item.title}
