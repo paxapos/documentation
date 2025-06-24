@@ -1,4 +1,3 @@
-#  Compras y Stock
 
 Esta sección te guiará en el proceso de incorporar nuevos ítems a tu inventario, desde la creación de una *mercadería* (lo que compras a tus proveedores) hasta su transformación en un *producto* (lo que vendes a tus clientes), asegurando que el stock se registre correctamente en ambas instancias.
 
@@ -10,12 +9,12 @@ Antes de poder registrar cualquier entrada de stock, primero debes definir la me
 1.  Dirígete a la sección de *"Stock de Mercadería"*.
 2.  Haz clic en el botón *"Nueva Mercadería"*.
 3.  Se abrirá una nueva ventana (o pestaña) donde deberás completar los siguientes campos:
-    * *Nombre de la Mercadería:* Ingresa un nombre claro y descriptivo para el ítem que estás comprando. Ejemplo: "Vino Malbec Caja", "Paquete de Galletas x 12 uni".
-    * *Unidad de Medida de Compra:* Selecciona la unidad en la que sueles adquirir este ítem de tu proveedor. Ejemplo: "CAJA", "PACK", "BOLSA", "UNIDAD".
-    * *Cantidad que Suma en Stock:* Este campo es crucial. Define cuántas unidades de venta individuales contiene tu "unidad de medida de compra".
-        * *Ejemplo práctico:* Si compras 1 *CAJA* de Vino Malbec y esa caja contiene *6 BOTELLAS* de vino, deberás ingresar 6. De esta forma, al cargar una caja, tu stock sumará 6 botellas.
-        * *Consideración:* Si la unidad de compra es la misma que la unidad de venta (ej. compras "UNIDAD" y vendes "UNIDAD"), ingresa 1.
-4.  Haz clic en *"Guardar"* (o el botón correspondiente) para crear la nueva mercadería.
+    * **Nombre de la Mercadería:** Ingresa un nombre claro y descriptivo para el ítem que estás comprando. Ejemplo: "Vino Malbec Caja", "Paquete de Galletas x 12 uni".
+    * **Unidad de Medida de Compra:** Selecciona la unidad en la que sueles adquirir este ítem de tu proveedor. Ejemplo: "CAJA", "PACK", "BOLSA", "UNIDAD".
+    * **Cantidad que Suma en Stock:** Este campo es crucial. Define cuántas unidades de venta individuales contiene tu "unidad de medida de compra".
+        * **Ejemplo práctico:** Si compras 1 *CAJA* de Vino Malbec y esa caja contiene *6 BOTELLAS* de vino, deberás ingresar 6. De esta forma, al cargar una caja, tu stock sumará 6 botellas.
+        * **Consideración:** Si la unidad de compra es la misma que la unidad de venta (ej. compras "UNIDAD" y vendes "UNIDAD"), ingresa 1.
+4.  Haz clic en **"Guardar"** (o el botón correspondiente) para crear la nueva mercadería.
 
 
 ## 2. Alta de Mercadería como Producto (Maestro de Productos)
@@ -31,4 +30,3 @@ Una vez que has creado la mercadería, el siguiente paso es "darla de alta" como
 5.  Asegúrate de que la unidad de medida de stock del producto refleje cómo el usuario final comprará el ítem.
 6.  Haz clic en *"Guardar"* (o el botón correspondiente) para confirmar los cambios y dar de alta el producto.
 
----

@@ -1,4 +1,3 @@
-# Configuracion de impresoras o FiscalBerry 
 
 Este módulo te permite gestionar y configurar todas las impresoras asociadas a tu comercio, incluyendo impresoras de tickets, comanda, remitos y la integración con equipos fiscales a través de Fiscalberry. Una configuración correcta asegura un flujo de trabajo eficiente en la emisión de comprobantes y pedidos.
 

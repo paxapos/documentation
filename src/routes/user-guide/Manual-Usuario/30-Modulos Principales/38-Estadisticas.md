@@ -1,4 +1,3 @@
-#  Estadísticas y Reportes
 
 El módulo de **Estadísticas y Reportes** te permite visualizar de forma clara e intuitiva todos los movimientos económicos de tu comercio. Aquí encontrarás herramientas poderosas para analizar tus ventas, ingresos, egresos y el desempeño de tu equipo, lo que facilitará la toma de decisiones estratégicas para tu negocio.
 
@@ -50,4 +49,3 @@ Aquí podrás **analizar la distribución de tus ventas según el método de pag
 * **Exportación de Datos:** Para un análisis más profundo o para compartir información, podés exportar tus reportes a formatos como *PDF*, *Excel* o *CSV*, si el sistema lo permite.
 * **Interpretación de Gráficos:** Para los gráficos que puedan ser complejos, consultá la sección de ayuda interactiva dentro del sistema. Esta guía te ayudará a comprender mejor la lectura e interpretación de los datos visuales.
 
----

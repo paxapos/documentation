@@ -18,7 +18,7 @@ Este módulo te permite dar de alta a las personas que utilizarán el sistema, a
 
 1.  Dentro de la ventana de configuración, selecciona el módulo *"Crear Usuarios"*.
 2.  Deberás completar los siguientes campos para cada nuevo usuario:
-    * *Nombre:* El nombre completo del usuario.
-    * *Mail:* La dirección de correo electrónico del usuario, que puede servir como identificador de acceso.
-    * *Contraseña:* Una contraseña segura para el acceso del usuario al sistema.
-    * *Rol:* Asigna un rol al usuario (ej., Administrador, Vendedor, Mozo, Cajero). El rol determinará las funcionalidades a las que el usuario tendrá acceso.
+    * **Nombre:** El nombre completo del usuario.
+    * **Mail:** La dirección de correo electrónico del usuario, que puede servir como identificador de acceso.
+    * **Contraseña:** Una contraseña segura para el acceso del usuario al sistema.
+    * **Rol:** Asigna un rol al usuario (ej., Administrador, Vendedor, Mozo, Cajero). El rol determinará las funcionalidades a las que el usuario tendrá acceso.

@@ -1,4 +1,3 @@
-#  Contabilidad
 
 Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores*, los *impuestos* y las *clasificaciones* de gastos.
 
@@ -70,4 +69,3 @@ Una vez que hayas configurado los impuestos, clasificaciones y proveedores, ya p
     * *Guardar como Pagada:* Selecciona esta opción si el gasto ya fue abonado. El sistema generará el registro del gasto y aplicará el pago automáticamente.
     * *Continuar sin Pagar:* Elige esta opción si el gasto aún no ha sido abonado. La factura quedará registrada como una deuda pendiente en tu "Resumen de Deuda", y podrás registrar su pago o método de pago más adelante.
 
----

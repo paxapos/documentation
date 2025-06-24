@@ -1,4 +1,3 @@
-# Menú
 
 El módulo "Menú" es el corazón de tu sistema PaxaPOS, donde podrás crear, organizar y gestionar todos los productos y servicios que ofrece tu comercio. Una correcta configuración del menú es fundamental para agilizar la toma de pedidos, la facturación y el control de inventario.
 
@@ -49,3 +48,4 @@ Las categorías te ayudan a organizar tus productos de forma lógica y a facilit
 
 **5. Productos Duplicados**
 Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
+

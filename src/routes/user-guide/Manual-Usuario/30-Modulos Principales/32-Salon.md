@@ -1,4 +1,3 @@
-#  Salón y Mesas
 
 El módulo de **Salón** es esencial para la gestión eficiente de su espacio de atención al cliente. Permite supervisar y organizar las **mesas** de su establecimiento, optimizando el flujo de trabajo y mejorando la experiencia del cliente.
 

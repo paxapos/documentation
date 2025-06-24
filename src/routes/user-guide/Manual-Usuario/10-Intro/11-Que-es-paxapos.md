@@ -1,4 +1,3 @@
-# Introducción a PaxaPOS
 
 ##  Bienvenido a PaxaPOS
 

@@ -1,4 +1,3 @@
-#  KDS (Kitchen Display System)
 
 El módulo **KDS (Kitchen Display System)** es una herramienta digital que optimiza la gestión de pedidos en la cocina de tu comercio gastronómico. Reemplaza las comandas impresas en papel por **pantallas digitales**, centralizando y organizando los pedidos en tiempo real.
 
@@ -12,4 +11,3 @@ El módulo **KDS (Kitchen Display System)** es una herramienta digital que optim
 
 El KDS es esencial para una cocina organizada, eficiente y productiva, impactando directamente en la calidad del servicio y la satisfacción del cliente.
 
----

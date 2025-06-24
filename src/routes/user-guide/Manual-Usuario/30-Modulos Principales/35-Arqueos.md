@@ -1,8 +1,6 @@
-##  Arqueos y Cierres
 
 Este módulo le permite gestionar y visualizar todas las **aperturas y cierres de caja** de su sistema. La información se presenta de forma organizada por **día y hora**, brindando una vista detallada del movimiento de efectivo y transacciones.
 
----
 
 ### Funcionalidades Principales
 
@@ -18,7 +16,7 @@ Al acceder al módulo de arqueos, usted podrá visualizar la siguiente informaci
 
 Además, el sistema le permitirá visualizar el **arqueo abierto** correspondiente al día actual. Este arqueo mostrará el **dinero inicial** con el que se abrió la caja y el **total cobrado** hasta el momento.
 
----
+
 
 ### Descarga de Arqueos Cerrados
 
@@ -28,7 +26,7 @@ Para facilitar la auditoría y el análisis, el sistema ofrece la funcionalidad 
 * **Usuario Creador:** Filtre los arqueos por el usuario que realizó la apertura y cierre.
 * **Fecha de Inicio y Fin:** Defina un rango de fechas para acotar su búsqueda.
 
----
+
 
 ### Apartados Específicos
 
