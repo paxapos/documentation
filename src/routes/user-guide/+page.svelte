@@ -1,13 +1,13 @@
 <script>
     import { onMount } from 'svelte';
     import { marked } from 'marked';
-    import { fade } from 'svelte/transition'; // Asegúrate de que Svelte está bien instalado para esto
+
 
     let grouped_content = [];
     let selectedModuleId = null;
     let selectedModuleName = '';
     let selectedModuleHtml = '';
-    let selectedModuleRawMarkdown = ''; // <-- AÑADIDO: Nuevo estado para el Markdown sin procesar
+    let selectedModuleRawMarkdown = '';
 
     onMount(async () => {
         try {
@@ -34,7 +34,7 @@
                     id,
                     title: cleanTitle,
                     html: marked(markdownText),
-                    rawMarkdown: markdownText // <-- AÑADIDO: Guardar el rawMarkdown aquí
+                    rawMarkdown: markdownText 
                 });
             }
 
@@ -57,7 +57,6 @@
 
             // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
             if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                // <-- MODIFICADO: Pasa también el rawMarkdown al seleccionar el módulo inicial
                 selectModule(
                     grouped_content[0].items[0].id,
                     grouped_content[0].items[0].title,
@@ -67,40 +66,22 @@
             }
 
         } catch (error) {
-            console.error('Failed to load markdown files:', error);
+            console.error('Error al cargar los módulos:', error);
         }
     });
 
-    // <-- MODIFICADO: Función para cambiar el módulo seleccionado (ahora acepta rawMarkdown) -->
+
     function selectModule(id, title, htmlContent, rawMarkdown) {
         selectedModuleId = id;
         selectedModuleName = title;
         selectedModuleHtml = htmlContent;
-        selectedModuleRawMarkdown = rawMarkdown; // <-- AÑADIDO: Asigna el rawMarkdown
+        selectedModuleRawMarkdown = rawMarkdown; 
     }
 
     function isSelected(id) {
         return selectedModuleId === id;
     }
 
-    // <-- AÑADIDO: Nueva función para descargar el TXT -->
-    function downloadTxt() {
-        if (!selectedModuleRawMarkdown || !selectedModuleName) {
-            console.warn("No hay contenido o nombre para descargar.");
-            return;
-        }
-
-        const blob = new Blob([selectedModuleRawMarkdown], { type: 'text/plain;charset=utf-8' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = `${selectedModuleName.replace(/ /g, '-')}.txt`;
-        
-        document.body.appendChild(link);
-        link.click();
-        
-        document.body.removeChild(link);
-        URL.revokeObjectURL(link.href);
-    }
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
