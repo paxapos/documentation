@@ -1,4 +1,5 @@
 {
+    "extends": "../../.prettierrc",
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "none",
