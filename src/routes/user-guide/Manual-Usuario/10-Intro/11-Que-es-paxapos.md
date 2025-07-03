@@ -9,12 +9,10 @@ Con una interfaz moderna e intuitiva, PaxaPOS acompaña el trabajo diario, ayuda
 
 ## ¿Qué podés hacer con PaxaPOS?
 
-*  Gestion de salon y mozos
-*  Tomar pedidos desde salon
-*  Facturar con AFIP de forma automática
-*  Estadisticas y reportes
-*  Control de stock
-*  Gestionar delivery, propinas, reservas y más
-
-Este manual te va a guiar paso a paso para que puedas aprovechar al máximo cada módulo.
-
+* ✔️ Optimiza la gestión de ventas y operaciones. 
+* ✔️ Controla el inventario y minimiza pérdidas. 
+* ✔️ Administra eficientemente al personal y sus roles. 
+* ✔️ Accede a estadísticas clave para la toma de decisiones. 
+* ✔️ Gestiona tu cartera de clientes de forma efectiva. 
+* ✔️ Personaliza la plataforma según tus necesidades operativas. 
+* ✔️ Monitorea y opera tu negocio de forma remota. 
