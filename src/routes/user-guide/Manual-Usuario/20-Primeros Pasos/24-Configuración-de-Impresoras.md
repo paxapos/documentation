@@ -24,6 +24,6 @@ Fiscalberry es un **servicio intermedio** que actúa como un puente de comunicac
 **Instalación del Servicio Fiscalberry:**
 Para instalar el servicio de Fiscalberry, sigue las instrucciones específicas que se mostrarán en pantalla o consulta el manual de instalación detallado de Fiscalberry, ya que puede requerir pasos adicionales en tu equipo local.
 
-**Recomendaciones Adicionales:**
-* **Prueba de Impresión:** Una vez configuradas, realiza una prueba de impresión desde el sistema para asegurarte de que todas las impresoras funcionan correctamente.
-* **Múltiples Impresoras:** Si utilizas múltiples impresoras de comanda (ej., una para fríos, otra para calientes), asegúrate de configurar las reglas de ruteo de productos en el módulo de Menú o Cocina para que los ítems se impriman en la impresora correcta.
+> **Recomendaciones Adicionales:**
+> * **Prueba de Impresión:** Una vez configuradas, realiza una prueba de impresión desde el sistema para asegurarte de que todas las impresoras funcionan correctamente.
+> * **Múltiples Impresoras:** Si utilizas múltiples impresoras de comanda (ej., una para fríos, otra para calientes), asegúrate de configurar las reglas de ruteo de productos en el módulo de Menú o Cocina para que los ítems se impriman en la impresora correcta.
