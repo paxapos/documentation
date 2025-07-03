@@ -1,84 +1,128 @@
 <script>
-	import { onMount } from 'svelte';
-  	import { marked } from 'marked';
+    import { onMount } from 'svelte';
+    import { marked } from 'marked';
 
-	/**
-	 * @type {any[]}
-	 */
-	let html_content_list = []
-  	onMount(async () => {
-		try {
-      		const modules = import.meta.glob('/src/routes/dev/docs/*.md', { query: '?raw', import: 'default' });
-      		const files = Object.entries(modules);
-      		// @ts-ignore
-      		const htmlPromises = files.map(async ([path, loader]) => {
-        		const markdownText = await loader();
-				const fileName = path.split('/').pop();
-        		return {
-        		  	fileName,
-        		  	// @ts-ignore
-        		  	html: marked(markdownText)
-        		};
-      		});
 
-    	  	html_content_list = await Promise.all(htmlPromises);
-    	} catch (error) {
-    	  console.error('Failed to load markdown files:', error);
-    	}
-  	});
+    let grouped_content = [];
+    let selectedModuleId = null;
+    let selectedModuleName = '';
+    let selectedModuleHtml = '';
+    let selectedModuleRawMarkdown = '';
+
+    onMount(async () => {
+        try {
+            const modules = import.meta.glob('/src/routes/dev/docs/**/*.md', {
+                query: '?raw',
+                import: 'default'
+            });
+            const files = Object.entries(modules);
+
+            const contentMap = {};
+
+            for (const [path, loader] of files) {
+                const markdownText = await loader();
+                const fileName = path.split('/').pop();
+                const folderName = path.split('/').slice(-2, -1)[0]; 
+                const cleanTitle = fileName.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ');
+                const id = fileName.replace('.md', '');
+
+                if (!contentMap[folderName]) {
+                    contentMap[folderName] = [];
+                }
+
+                contentMap[folderName].push({
+                    id,
+                    title: cleanTitle,
+                    html: marked(markdownText),
+                    rawMarkdown: markdownText 
+                });
+            }
+
+            Object.values(contentMap).forEach(items => {
+                items.sort((a, b) => {
+                    const numA = parseInt(a.id.split('-')[0]);
+                    const numB = parseInt(b.id.split('-')[0]);
+                    return numA - numB;
+                });
+            });
+
+            grouped_content = Object.entries(contentMap).map(([folder, items]) => ({
+                folder: folder.replace(/^\d+-/, '').replace(/-/g, ' '),
+                items
+            })).sort((a, b) => {
+                const numA = parseInt(a.folder.split('-')[0]);
+                const numB = parseInt(b.folder.split('-')[0]);
+                return numA - numB;
+            });
+
+            // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
+            if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
+                selectModule(
+                    grouped_content[0].items[0].id,
+                    grouped_content[0].items[0].title,
+                    grouped_content[0].items[0].html,
+                    grouped_content[0].items[0].rawMarkdown
+                );
+            }
+
+        } catch (error) {
+            console.error('Error al cargar los módulos:', error);
+        }
+    });
+
+
+    function selectModule(id, title, htmlContent, rawMarkdown) {
+        selectedModuleId = id;
+        selectedModuleName = title;
+        selectedModuleHtml = htmlContent;
+        selectedModuleRawMarkdown = rawMarkdown; 
+    }
+
+    function isSelected(id) {
+        return selectedModuleId === id;
+    }
+
 </script>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 dark:bg-gray-800 dark:text-white">
-	<!-- Breadcrumb --> 
-	<nav class="flex mb-8" aria-label="Breadcrumb">
-		<ol class="inline-flex items-center space-x-1 md:space-x-3">
-			<li class="inline-flex items-center">
-				<a href="/" class="hover:text-blue-600">Inicio</a>
-			</li>
-			<li>
-				<div class="flex items-center">
-					<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-					</svg>
-					<span class="ml-1 md:ml-2">Guías de Integración</span>
-				</div>
-			</li>
-		</ol>
-	</nav>
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
+    <div class="flex flex-col gap-8 lg:flex-row">
+        <aside class="lg:w-64 flex-shrink-0">
+            <div class="rounded-lg border p-4">
+                <h3 class="mb-3 font-bold">Manual de usuario</h3>
+                <nav>
+                    {#each grouped_content as group}
+                        <div>
+                            <h4 class="mb-2 font-semibold">{group.folder}</h4>
+                            <nav class="space-y-0.4 pl-4">
+                                {#each group.items as item}
+                                    <button
+                                        on:click={() => selectModule(item.id, item.title, item.html)}
+                                        class="block w-full text-left text-sm p-1 rounded-md hover:text-blue-800 cursor-pointer
+                                        {isSelected(item.id) ? '' : ''}"
+                                    >
+                                        {item.title}
+                                    </button>
+                                {/each}
+                            </nav>
+                        </div>
+                    {/each}
+                </nav>
+            </div>
+        </aside>
 
-	<div class="flex flex-col lg:flex-row gap-8">
-		<!-- Sidebar Navigation -->
-		<aside class="lg:w-64 flex-shrink-0">
-			<div class="rounded-lg border p-6 sticky top-24">
-				<h3 class="font-semibold mb-4">Integraciones</h3>
-				<nav class="space-y-2">
-				  	{#each html_content_list as item}
-				  	  	<a href="#{item.fileName.replace('.md', '')}" class="block text-sm hover:text-blue-800">
-				  	  	  	{item.fileName.replace('.md', '').replace(/-/g, ' ')}
-				  	  	</a>
-				  	{/each}
-				</nav>
-			</div>
-		</aside>
+        <main class="min-w-0 flex-1">
+            <div class="rounded-lg border p-4"> {#if selectedModuleName}
+                    <h1 class="text-4xl font-bold mb-6">{selectedModuleName}</h1>
+                {/if}
 
-		<!-- Main Content -->
-		<main class="flex-1 min-w-0">
-			<div class="rounded-lg border">
-				<!-- Header -->
-				<div class="px-6 py-8 border-b border-gray-200">
-					<h1 class="text-3xl font-bold mb-4">Guías de Integración</h1>
-					<p class="text-lg">
-						Conecta PaxaPOS con sistemas externos para potenciar las capacidades de tu negocio.
-					</p>
-				</div>
-				<div class="py-8 space-y-12">
-					{#each html_content_list as content}
-					  	<section id={content.fileName.replace('.md', '')} class="markdown-body markdown-paxapos">
-					    	{@html content.html}
-					  	</section>
-					{/each}
-				</div> 
-			</div>
-		</main>
-	</div>
+                {#if selectedModuleHtml}
+                    <section class="markdown-body markdown-paxapos" transition:fade={{ duration: 150 }}>
+                        {@html selectedModuleHtml}
+                    </section>
+                {:else}
+                    <p>Selecciona un módulo del menú lateral.</p>
+                {/if}
+            </div>
+        </main>
+    </div>
 </div>
