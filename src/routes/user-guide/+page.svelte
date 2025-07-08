@@ -86,7 +86,7 @@
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
     <div class="flex flex-col gap-8 lg:flex-row">
-        <aside class="lg:w-64 flex-shrink-0">
+        <aside class="lg:w-64  flex-shrink-0">
             <div class="rounded-lg border p-4">
                 <h3 class="mb-3 font-bold">Manual de usuario</h3>
                 <nav>
