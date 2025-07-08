@@ -29,20 +29,22 @@
 		<!-- Documentation Categories -->
 		<div class="grid md:grid-cols-2 gap-8 mb-16 ">
 			<!-- Developer Documentation -->
-			<div class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-				<div class="p-8">
-					<div class="flex items-center mb-4">
-						<div class="bg-blue-100 p-3 rounded-lg">
-							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-							</svg>
+			<div class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 hover:cursor-pointer">
+				<a href="/dev" class="block">
+					<div class="p-8">
+						<div class="flex items-center mb-4">
+							<div class="bg-blue-100 p-3 rounded-lg">
+								<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold ml-4">Documentación para Desarrolladores</h3>
 						</div>
-						<h3 class="text-2xl font-bold ml-4">Documentación para Desarrolladores</h3>
-					</div>
-					<p class="mb-6">
+						<p class="mb-6">
 						APIs, guías de integración, SDKs y recursos técnicos para desarrolladores.
-					</p>
-				</div>
+						</p>
+					</div>
+				</a>	
 			</div>
 			<!-- User Documentation -->
 			<a href="/user-guide" class="block">

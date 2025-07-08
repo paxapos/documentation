@@ -4,29 +4,29 @@
 	import { goto } from '$app/navigation';
 	import { searchableContent, navigation } from '$lib/helpers/constants';
 
-    let mobileMenuOpen = $state(false);
-	let searchQuery = $state('');
-	let showSearchResults = $state(false);
+	let mobileMenuOpen = false;
+	let searchQuery = '';
+	let showSearchResults = false;
 
     const handleSearch = (event: Event) => {
-		const target = event.target as HTMLInputElement;
-		searchQuery = target.value;
-		showSearchResults = searchQuery.length > 2;
-	}
+	const target = event.target as HTMLInputElement;
+	searchQuery = target.value;
+	showSearchResults = searchQuery.length > 2;
+};
 
-	const getFilteredResults = () => {
-		if (searchQuery.length < 3) return [];
-		return searchableContent.filter(item => 
-			item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-			item.type.toLowerCase().includes(searchQuery.toLowerCase())
-		).slice(0, 8);
-	}
+const getFilteredResults = () => {
+	if (searchQuery.length < 3) return [];
+	return searchableContent.filter(item =>
+		item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+		item.type.toLowerCase().includes(searchQuery.toLowerCase())
+	).slice(0, 8);
+};
 
-	const selectSearchResult = (href: string) => {
-		searchQuery = '';
-		showSearchResults = false;
-		goto(href);
-	}
+const selectSearchResult = (href: string) => {
+	searchQuery = '';
+	showSearchResults = false;
+	goto(href);
+};
 </script>
 
 <!-- Navigation -->

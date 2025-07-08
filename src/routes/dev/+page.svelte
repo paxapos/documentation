@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import { marked } from 'marked';
 
-
+    let searchQuery = '';
     let grouped_content = [];
     let selectedModuleId = null;
     let selectedModuleName = '';
@@ -55,6 +55,26 @@
                 return numA - numB;
             });
 
+            function getFilteredContent() {
+	if (searchQuery.trim().length < 3) return grouped_content;
+
+	const lowerQuery = searchQuery.toLowerCase();
+
+	return grouped_content
+		.map(group => {
+			const filteredItems = group.items.filter(item =>
+				item.rawMarkdown.toLowerCase().includes(lowerQuery) ||
+				item.title.toLowerCase().includes(lowerQuery)
+			);
+
+			return filteredItems.length > 0
+				? { folder: group.folder, items: filteredItems }
+				: null;
+		})
+		.filter(Boolean);
+}
+
+
             // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
             if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                 selectModule(
@@ -90,7 +110,7 @@
             <div class="rounded-lg border p-4">
                 <h3 class="mb-3 font-bold">Manual de usuario</h3>
                 <nav>
-                    {#each grouped_content as group}
+                    {#each getFilteredContent() as group}
                         <div>
                             <h4 class="mb-2 font-semibold">{group.folder}</h4>
                             <nav class="space-y-0.4 pl-4">
