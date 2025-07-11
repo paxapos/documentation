@@ -1,13 +1,25 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
     import { marked } from 'marked';
+    import { fade } from 'svelte/transition';
 
-    let searchQuery = '';
-    let grouped_content = [];
-    let selectedModuleId = null;
-    let selectedModuleName = '';
-    let selectedModuleHtml = '';
-    let selectedModuleRawMarkdown = '';
+    interface ContentItem {
+        id: string;
+        title: string;
+        html: string;
+        rawMarkdown: string;
+    }
+
+    interface GroupedContent {
+        folder: string;
+        items: ContentItem[];
+    }
+
+    let grouped_content: GroupedContent[] = [];
+    let selectedModuleId: string | null = null;
+    let selectedModuleName: string = '';
+    let selectedModuleHtml: string = '';
+    let selectedModuleRawMarkdown: string = '';
 
     onMount(async () => {
         try {
@@ -17,12 +29,15 @@
             });
             const files = Object.entries(modules);
 
-            const contentMap = {};
+            const contentMap: Record<string, ContentItem[]> = {};
 
             for (const [path, loader] of files) {
-                const markdownText = await loader();
+                const markdownText = await loader() as string;
                 const fileName = path.split('/').pop();
                 const folderName = path.split('/').slice(-2, -1)[0]; 
+                
+                if (!fileName) continue; // Skip if fileName is undefined
+                
                 const cleanTitle = fileName.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ');
                 const id = fileName.replace('.md', '');
 
@@ -33,13 +48,13 @@
                 contentMap[folderName].push({
                     id,
                     title: cleanTitle,
-                    html: marked(markdownText),
+                    html: await marked(markdownText),
                     rawMarkdown: markdownText 
                 });
             }
 
             Object.values(contentMap).forEach(items => {
-                items.sort((a, b) => {
+                items.sort((a: ContentItem, b: ContentItem) => {
                     const numA = parseInt(a.id.split('-')[0]);
                     const numB = parseInt(b.id.split('-')[0]);
                     return numA - numB;
@@ -54,26 +69,6 @@
                 const numB = parseInt(b.folder.split('-')[0]);
                 return numA - numB;
             });
-
-            function getFilteredContent() {
-	if (searchQuery.trim().length < 3) return grouped_content;
-
-	const lowerQuery = searchQuery.toLowerCase();
-
-	return grouped_content
-		.map(group => {
-			const filteredItems = group.items.filter(item =>
-				item.rawMarkdown.toLowerCase().includes(lowerQuery) ||
-				item.title.toLowerCase().includes(lowerQuery)
-			);
-
-			return filteredItems.length > 0
-				? { folder: group.folder, items: filteredItems }
-				: null;
-		})
-		.filter(Boolean);
-}
-
 
             // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
             if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
@@ -91,32 +86,67 @@
     });
 
 
-    function selectModule(id, title, htmlContent, rawMarkdown) {
+    function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string) {
         selectedModuleId = id;
         selectedModuleName = title;
         selectedModuleHtml = htmlContent;
-        selectedModuleRawMarkdown = rawMarkdown; 
+        selectedModuleRawMarkdown = rawMarkdown || ''; 
     }
 
-    function isSelected(id) {
+    function isSelected(id: string) {
         return selectedModuleId === id;
+    }
+
+    function handleLLMIntegration(moduleId: string, moduleName: string) {
+        // Encontrar el contenido markdown del módulo actual
+        let markdownContent = '';
+        for (const group of grouped_content) {
+            const foundItem = group.items.find(item => item.id === moduleId);
+            if (foundItem) {
+                markdownContent = foundItem.rawMarkdown;
+                break;
+            }
+        }
+        
+        if (!markdownContent) {
+            alert('No se pudo encontrar el contenido del módulo');
+            return;
+        }
+        
+        // Usar el contenido markdown original sin conversión
+        const txtContent = markdownContent;
+        
+        // Crear un blob con el contenido markdown como texto
+        const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        
+        // Abrir en nueva pestaña
+        const newWindow = window.open(url, '_blank');
+        if (newWindow) {
+            newWindow.document.title = `${moduleName}.txt`;
+        }
+        
+        // Limpiar la URL después de un tiempo para liberar memoria
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        
+        console.log('Opening markdown content as txt for:', moduleName);
     }
 
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
     <div class="flex flex-col gap-8 lg:flex-row">
-        <aside class="lg:w-64 flex-shrink-0">
+        <aside class="lg:w-64  flex-shrink-0">
             <div class="rounded-lg border p-4">
                 <h3 class="mb-3 font-bold">Manual de usuario</h3>
                 <nav>
-                    {#each getFilteredContent() as group}
+                    {#each grouped_content as group}
                         <div>
                             <h4 class="mb-2 font-semibold">{group.folder}</h4>
                             <nav class="space-y-0.4 pl-4">
                                 {#each group.items as item}
                                     <button
-                                        on:click={() => selectModule(item.id, item.title, item.html)}
+                                        on:click={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                         class="block w-full text-left text-sm p-1 rounded-md hover:text-blue-800 cursor-pointer
                                         {isSelected(item.id) ? '' : ''}"
                                     >
@@ -139,6 +169,21 @@
                     <section class="markdown-body markdown-paxapos" transition:fade={{ duration: 150 }}>
                         {@html selectedModuleHtml}
                     </section>
+                    
+                    <!-- Botón LLM Integration en el pie de la sección -->
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex justify-end">
+                            <button
+                                on:click={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            >
+                                <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                                Ver archivo LLM
+                            </button>
+                        </div>
+                    </div>
                 {:else}
                     <p>Selecciona un módulo del menú lateral.</p>
                 {/if}
