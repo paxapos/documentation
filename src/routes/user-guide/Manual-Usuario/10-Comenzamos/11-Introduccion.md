@@ -1,5 +1,4 @@
-
-##  Bienvenido a PaxaPOS
+# Bienvenido a PaxaPOS
 
 **PaxaPOS** es un sistema de gestión integral pensado para adaptarse a las necesidades de tu comercio.
 

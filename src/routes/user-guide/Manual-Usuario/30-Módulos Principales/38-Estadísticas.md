@@ -1,3 +1,4 @@
+# Estadísticas y Reportes
 
 El módulo de **Estadísticas y Reportes** te permite visualizar de forma clara e intuitiva todos los movimientos económicos de tu comercio. Aquí encontrarás herramientas poderosas para analizar tus ventas, ingresos, egresos y el desempeño de tu equipo, lo que facilitará la toma de decisiones estratégicas para tu negocio.
 

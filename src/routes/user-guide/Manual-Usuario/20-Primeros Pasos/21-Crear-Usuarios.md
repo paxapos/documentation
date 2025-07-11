@@ -1,4 +1,4 @@
-#  Primeros pasos para configurar tu sistema PaxaPOS
+# Primeros pasos para configurar tu sistema
 Al ingresar al sistema por primera vez, es fundamental realizar algunas configuraciones básicas para sentar las bases de su operación. Estos ajustes te permitirán personalizar el sistema a las necesidades de tu comercio y empezar a trabajar de manera efectiva.
 
 >  **TIP IMPORTANTE:**  

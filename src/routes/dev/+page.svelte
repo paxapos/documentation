@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
+    import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
 
     interface ContentItem {
         id: string;
@@ -70,6 +71,9 @@
                 return numA - numB;
             });
 
+            // Aplicar reemplazo de texto automáticamente
+            grouped_content = processGroupedContent(grouped_content);
+
             // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
             if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                 selectModule(
@@ -113,8 +117,8 @@
             return;
         }
         
-        // Usar el contenido markdown original sin conversión
-        const txtContent = markdownContent;
+        // Aplicar reemplazo antes de exportar
+        const txtContent = prepareForExport(markdownContent);
         
         // Crear un blob con el contenido markdown como texto
         const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
@@ -175,7 +179,7 @@
                         <div class="flex justify-end">
                             <button
                                 on:click={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
-                                class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium rounded-md transition-colors duration-200"
                             >
                                 <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>

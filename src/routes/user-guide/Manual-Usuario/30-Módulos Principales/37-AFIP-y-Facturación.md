@@ -1,3 +1,5 @@
+# AFIP y Facturación Electrónica
+
 Para poder comenzar a facturar con PaxaPos necesitamos que nos conectes con AFIP.  
 Seguí estos pasos una única vez y ya queda configurado en el sistema.  
 > Recordá que para realizar este trámite debés poseer clave fiscal de nivel 3 en AFIP.

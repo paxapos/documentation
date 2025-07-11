@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
+    import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
 
     interface ContentItem {
         id: string;
@@ -70,6 +71,9 @@
                 return numA - numB;
             });
 
+            // Aplicar reemplazo de texto automáticamente
+            grouped_content = processGroupedContent(grouped_content);
+
             // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
             if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                 selectModule(
@@ -113,8 +117,8 @@
             return;
         }
         
-        // Usar el contenido markdown original sin conversión
-        const txtContent = markdownContent;
+        // Aplicar reemplazo antes de exportar
+        const txtContent = prepareForExport(markdownContent);
         
         // Crear un blob con el contenido markdown como texto
         const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
@@ -161,10 +165,7 @@
         </aside>
 
         <main class="min-w-0 flex-1">
-            <div class="rounded-lg border p-4"> {#if selectedModuleName}
-                    <h1 class="text-4xl font-bold mb-6">{selectedModuleName}</h1>
-                {/if}
-
+            <div class="rounded-lg border p-4">
                 {#if selectedModuleHtml}
                     <section class="markdown-body markdown-paxapos" transition:fade={{ duration: 150 }}>
                         {@html selectedModuleHtml}

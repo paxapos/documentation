@@ -1,3 +1,4 @@
+# Módulo de Arqueos
 
 Este módulo le permite gestionar y visualizar todas las **aperturas y cierres de caja** de su sistema. La información se presenta de forma organizada por **día y hora**, brindando una vista detallada del movimiento de efectivo y transacciones.
 

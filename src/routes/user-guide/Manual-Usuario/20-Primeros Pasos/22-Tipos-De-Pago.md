@@ -1,3 +1,4 @@
+# Configuración de Tipos de Pago
 
 Define los métodos de pago que aceptarás en tu comercio, desde efectivo hasta diferentes tipos de tarjetas.
 
