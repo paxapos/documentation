@@ -16,10 +16,10 @@ const config = {
         prerender: {
             handleMissingId: 'warn' // Only warn about missing IDs instead of failing
         },
-        // Asegúrate que el path base sea correcto si tu sitio no está en la raíz del dominio de GitHub Pages
-        // paths: {
-        //   base: process.env.NODE_ENV === 'production' ? '/tu-repositorio' : '',
-        // }
+        // Path base para GitHub Pages
+        paths: {
+            base: process.env.NODE_ENV === 'production' ? '/documentation' : '',
+        }
     }
 };
 
