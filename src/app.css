@@ -1,12 +1,243 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-@custom-variant dark (&:where(.dark, .dark *));
 
+/* Configuración global para modo oscuro/claro automático */
+:root {
+  color-scheme: light dark;
+}
+
+/* Estilos base para modo claro */
 .markdown-paxapos {
     padding: 25px;
     margin-top: 30px;
     margin-bottom: 30px;
-    background: #fff;
-    color: #222;
+    background: transparent; /* Fondo transparente para heredar del contenedor */
+    color: rgb(34 34 34); /* gray-800 para modo claro */
+    border-radius: 8px;
+    /* Sin sombra por defecto para integración más suave */
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+.markdown-paxapos h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+}
+
+.markdown-paxapos h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+}
+
+.markdown-paxapos h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.markdown-paxapos h4,
+.markdown-paxapos h5,
+.markdown-paxapos h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.markdown-paxapos h1,
+.markdown-paxapos h2,
+.markdown-paxapos h3,
+.markdown-paxapos h4,
+.markdown-paxapos h5,
+.markdown-paxapos h6 {
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+.markdown-paxapos p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown-paxapos ul,
+.markdown-paxapos ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2rem;
+}
+
+.markdown-paxapos li {
+    margin-top: 0.25rem;
+}
+
+.markdown-paxapos li + li {
+    margin-top: 0.25rem;
+}
+
+.markdown-paxapos p,
+.markdown-paxapos li {
+  color: rgb(75 85 99); /* gray-600 */
+}
+
+.markdown-paxapos strong {
+    font-weight: 600;
+}
+
+.markdown-paxapos em {
+    font-style: italic;
+}
+
+.markdown-paxapos a {
+  color: rgb(37 99 235); /* blue-600 */
+}
+
+.markdown-paxapos a:hover {
+  color: rgb(29 78 216); /* blue-700 */
+}
+
+.markdown-paxapos code {
+  background: rgb(243 244 246); /* gray-100 */
+  color: rgb(17 24 39); /* gray-900 */
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgb(209 213 219); /* gray-300 */
+}
+
+.markdown-paxapos pre {
+  background: rgb(249 250 251); /* gray-50 */
+  border: 1px solid rgb(209 213 219); /* gray-300 */
+  border-radius: 6px;
+}
+
+.markdown-paxapos pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.markdown-paxapos blockquote {
+  border-left: 4px solid rgb(156 163 175); /* gray-400 */
+  background: rgb(243 244 246 / 0.5); /* gray-100 con transparencia */
+  margin: 16px 0;
+  padding: 12px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.markdown-paxapos table {
+  border-collapse: collapse;
+  border: 1px solid rgb(209 213 219); /* gray-300 */
+}
+
+.markdown-paxapos th,
+.markdown-paxapos td {
+  border: 1px solid rgb(209 213 219); /* gray-300 */
+  padding: 8px 12px;
+}
+
+.markdown-paxapos th {
+  background: rgb(243 244 246); /* gray-100 */
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+.markdown-paxapos hr {
+  border-color: rgb(209 213 219); /* gray-300 */
+}
+
+/* Modo oscuro para markdown */
+@media (prefers-color-scheme: dark) {
+  .markdown-paxapos {
+    background: transparent; /* Sin fondo para integración completa */
+    color: rgb(255 255 255); /* Texto blanco */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+  }
+  
+  .markdown-paxapos h1 {
+    border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+  }
+  
+  .markdown-paxapos h2 {
+    border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+  }
+  
+  .markdown-paxapos h1,
+  .markdown-paxapos h2,
+  .markdown-paxapos h3,
+  .markdown-paxapos h4,
+  .markdown-paxapos h5,
+  .markdown-paxapos h6 {
+    color: rgb(255 255 255); /* Títulos blancos */
+  }
+  
+  .markdown-paxapos p,
+  .markdown-paxapos li {
+    color: rgb(229 231 235); /* gray-200 - Texto claro */
+  }
+  
+  .markdown-paxapos a {
+    color: rgb(96 165 250); /* blue-400 - Enlaces azules claros */
+  }
+  
+  .markdown-paxapos a:hover {
+    color: rgb(147 197 253); /* blue-300 - Hover más claro */
+  }
+  
+  .markdown-paxapos code {
+    background: rgb(55 65 81 / 0.4); /* gray-700 con transparencia */
+    color: rgb(243 244 246); /* gray-100 - Texto claro */
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: none; /* Sin borde */
+  }
+  
+  .markdown-paxapos pre {
+    background: rgb(17 24 39 / 0.4); /* gray-900 con transparencia */
+    border: none; /* Sin borde */
+    border-radius: 6px;
+  }
+  
+  .markdown-paxapos pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .markdown-paxapos blockquote {
+    border-left: 4px solid rgb(75 85 99); /* gray-600 */
+    background: rgb(55 65 81 / 0.2); /* gray-700 con poca transparencia */
+    margin: 16px 0;
+    padding: 12px 20px;
+    border-radius: 0 6px 6px 0;
+  }
+  
+  .markdown-paxapos table {
+    border-collapse: collapse;
+    border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+  }
+  
+  .markdown-paxapos th,
+  .markdown-paxapos td {
+    border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+    padding: 8px 12px;
+  }
+  
+  .markdown-paxapos th {
+    background: rgb(55 65 81 / 0.3); /* gray-700 con transparencia */
+    color: rgb(255 255 255); /* Texto blanco en headers */
+  }
+  
+  .markdown-paxapos hr {
+    border-color: rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+  }
 }

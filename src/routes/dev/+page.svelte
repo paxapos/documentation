@@ -3,6 +3,7 @@
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
     import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
+    import { page } from '$app/stores';
 
     interface ContentItem {
         id: string;
@@ -21,10 +22,52 @@
     let selectedModuleName: string = '';
     let selectedModuleHtml: string = '';
     let selectedModuleRawMarkdown: string = '';
+    let contentLoaded = false;
+
+    // Función para seleccionar módulo específico
+    function selectModuleById(moduleId: string) {
+        console.log('Buscando módulo con ID:', moduleId);
+        console.log('Contenido disponible:', grouped_content.map(g => g.items.map(i => i.id)).flat());
+        
+        for (const group of grouped_content) {
+            const foundItem = group.items.find(item => item.id === moduleId);
+            if (foundItem) {
+                console.log('Módulo encontrado:', foundItem);
+                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
+                return true;
+            }
+        }
+        console.warn('Módulo no encontrado:', moduleId);
+        return false;
+    }
+
+    // Reactividad a cambios en la URL
+    $: if (contentLoaded && $page.url.search) {
+        const urlParams = new URLSearchParams($page.url.search);
+        const moduleParam = urlParams.get('module');
+        
+        console.log('URL cambió:', $page.url.search, 'Módulo:', moduleParam);
+        
+        if (moduleParam && moduleParam !== selectedModuleId) {
+            console.log('Intentando seleccionar módulo:', moduleParam);
+            if (!selectModuleById(moduleParam)) {
+                console.warn(`Módulo no encontrado: ${moduleParam}`);
+                // Si no encuentra el módulo, ir al primero por defecto
+                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
+                    selectModule(
+                        grouped_content[0].items[0].id,
+                        grouped_content[0].items[0].title,
+                        grouped_content[0].items[0].html,
+                        grouped_content[0].items[0].rawMarkdown
+                    );
+                }
+            }
+        }
+    }
 
     onMount(async () => {
         try {
-            const modules = import.meta.glob('/src/routes/dev/docs/**/*.md', {
+            const modules = import.meta.glob('/src/routes/dev/Docs/**/*.md', {
                 query: '?raw',
                 import: 'default'
             });
@@ -73,21 +116,43 @@
 
             // Aplicar reemplazo de texto automáticamente
             grouped_content = processGroupedContent(grouped_content);
+            contentLoaded = true;
 
-            // Una vez que se carga todo el contenido, selecciona el primer módulo por defecto
-            if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                selectModule(
-                    grouped_content[0].items[0].id,
-                    grouped_content[0].items[0].title,
-                    grouped_content[0].items[0].html,
-                    grouped_content[0].items[0].rawMarkdown
-                );
+            // Verificar si hay un módulo específico en la URL después de cargar
+            const urlParams = new URLSearchParams($page.url.search);
+            const moduleParam = urlParams.get('module');
+            
+            if (moduleParam) {
+                if (!selectModuleById(moduleParam)) {
+                    console.warn(`Módulo no encontrado: ${moduleParam}`);
+                    // Fallback al primer módulo
+                    if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
+                        selectModule(
+                            grouped_content[0].items[0].id,
+                            grouped_content[0].items[0].title,
+                            grouped_content[0].items[0].html,
+                            grouped_content[0].items[0].rawMarkdown
+                        );
+                    }
+                }
+            } else {
+                // Si no hay módulo específico, selecciona el primer módulo por defecto
+                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
+                    selectModule(
+                        grouped_content[0].items[0].id,
+                        grouped_content[0].items[0].title,
+                        grouped_content[0].items[0].html,
+                        grouped_content[0].items[0].rawMarkdown
+                    );
+                }
             }
 
         } catch (error) {
             console.error('Error al cargar los módulos:', error);
         }
     });
+
+    // ...existing code...
 
 
     function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string) {
@@ -138,21 +203,23 @@
 
 </script>
 
-<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 dark:bg-gray-800 dark:text-white">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
     <div class="flex flex-col gap-8 lg:flex-row">
-        <aside class="lg:w-64  flex-shrink-0">
-            <div class="rounded-lg border p-4">
-                <h3 class="mb-3 font-bold">Manual de usuario</h3>
+        <aside class="lg:w-64 flex-shrink-0">
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 shadow-sm">
+                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-m">Manual de usuario</h3>
                 <nav>
                     {#each grouped_content as group}
-                        <div>
-                            <h4 class="mb-2 font-semibold">{group.folder}</h4>
-                            <nav class="space-y-0.4 pl-4">
+                        <div class="mb-2">
+                            <h4 class="mb-4' font-semibold text-gray-800 dark:text-gray-200 text-sm">{group.folder}</h4>
+                            <nav class="space-y-1 pl-3">
                                 {#each group.items as item}
                                     <button
                                         on:click={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
-                                        class="block w-full text-left text-sm p-1 rounded-md hover:text-blue-800 cursor-pointer
-                                        {isSelected(item.id) ? '' : ''}"
+                                        class="block w-full text-left text-sm p-1.5 rounded-md transition-colors duration-200 cursor-pointer leading-tight
+                                        {isSelected(item.id) 
+                                            ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
+                                            : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
                                     >
                                         {item.title}
                                     </button>
@@ -164,13 +231,11 @@
             </div>
         </aside>
 
-        <main class="min-w-0 flex-1">
-            <div class="rounded-lg border p-4"> {#if selectedModuleName}
-                    <h1 class="text-4xl font-bold mb-6">{selectedModuleName}</h1>
-                {/if}
 
+        <main class="min-w-0 flex-1">
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm">
                 {#if selectedModuleHtml}
-                    <section class="markdown-body markdown-paxapos" transition:fade={{ duration: 150 }}>
+                    <section class="markdown-paxapos" transition:fade={{ duration: 150 }}>
                         {@html selectedModuleHtml}
                     </section>
                     
@@ -179,7 +244,7 @@
                         <div class="flex justify-end">
                             <button
                                 on:click={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
-                                class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium rounded-md transition-colors duration-200"
+                                class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer text-white text-sm font-medium rounded-md transition-colors duration-200 shadow-sm"
                             >
                                 <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -189,7 +254,7 @@
                         </div>
                     </div>
                 {:else}
-                    <p>Selecciona un módulo del menú lateral.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Selecciona un módulo del menú lateral.</p>
                 {/if}
             </div>
         </main>
