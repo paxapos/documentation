@@ -14,12 +14,14 @@ const config = {
             strict: true // Be strict about prerendering
         }),
         prerender: {
-            handleMissingId: 'warn' // Only warn about missing IDs instead of failing
+            handleMissingId: 'warn', // Only warn about missing IDs instead of failing
+            handleHttpError: 'warn' // Only warn about HTTP errors instead of failing
         },
         // Path base para GitHub Pages
         paths: {
             base: process.env.NODE_ENV === 'production' ? '/documentation' : '',
-        }
+        },
+        trailingSlash: 'always'
     }
 };
 
