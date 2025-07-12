@@ -16,6 +16,10 @@ const config = {
         prerender: {
             handleMissingId: 'warn', // Only warn about missing IDs instead of failing
             handleHttpError: 'warn' // Only warn about HTTP errors instead of failing
+        },
+        // Path base para GitHub Pages
+        paths: {
+            base: '/documentation'
         }
     }
 };
