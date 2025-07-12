@@ -20,8 +20,7 @@ const config = {
         // Path base para GitHub Pages
         paths: {
             base: process.env.NODE_ENV === 'production' ? '/documentation' : '',
-        },
-        trailingSlash: 'always'
+        }
     }
 };
 
