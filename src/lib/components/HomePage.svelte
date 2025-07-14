@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import { FEATURE_FLAGS } from '$lib/helpers/constants';
 </script>
 
 <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
@@ -21,18 +22,19 @@
 	<!-- Main Content -->
 	<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<!-- Hero Section -->
-		<section class="text-center mb-16">
-			<h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+		<section class="text-center {FEATURE_FLAGS.showDevDocumentation ? 'mb-16' : 'mb-20'}">
+			<h2 class="{FEATURE_FLAGS.showDevDocumentation ? 'text-4xl' : 'text-5xl'} font-bold text-gray-900 dark:text-white mb-4">
 				Centro de Documentación PaxaPOS
 			</h2>
-			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+			<p class="{FEATURE_FLAGS.showDevDocumentation ? 'text-xl' : 'text-2xl'} text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? 'max-w-2xl' : 'max-w-3xl'} mx-auto">
 				Encuentra toda la información necesaria para desarrolladores y usuarios del sistema de punto de venta más completo.
 			</p>
 		</section>
 
 		<!-- Documentation Categories -->
-		<div class="grid md:grid-cols-2 gap-8 mb-16">
-			<!-- Developer Documentation -->
+		<div class="grid {FEATURE_FLAGS.showDevDocumentation ? 'md:grid-cols-2' : 'md:grid-cols-1 max-w-2xl mx-auto'} gap-8 mb-16">
+			<!-- Developer Documentation - Solo visible si está habilitado -->
+			{#if FEATURE_FLAGS.showDevDocumentation}
 			<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
 				<a href="{base}/dev" class="block">
 					<div class="p-8">
@@ -50,13 +52,14 @@
 					</div>
 				</a>	
 			</div>
+			{/if}
 			<!-- User Documentation -->
 			<a href="{base}/user-guide" class="block">
 				<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
-					<div class="p-8">
-						<div class="mb-4 flex items-center">
-							<div class="rounded-lg bg-green-100 dark:bg-green-900/50 p-3">
-								<svg class="h-6 w-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<div class="{FEATURE_FLAGS.showDevDocumentation ? 'p-8' : 'p-12'}">
+						<div class="mb-4 flex {FEATURE_FLAGS.showDevDocumentation ? 'items-center' : 'flex-col items-center text-center'}">
+							<div class="rounded-lg bg-green-100 dark:bg-green-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'p-3' : 'p-4'}">
+								<svg class="{FEATURE_FLAGS.showDevDocumentation ? 'h-6 w-6' : 'h-8 w-8'} text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -65,9 +68,9 @@
 									/>
 								</svg>
 							</div>
-							<h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">Manual de Usuario</h3>
+							<h3 class="{FEATURE_FLAGS.showDevDocumentation ? 'ml-4' : 'mt-4'} {FEATURE_FLAGS.showDevDocumentation ? 'text-2xl' : 'text-3xl'} font-bold text-gray-900 dark:text-white">Manual de Usuario</h3>
 						</div>
-						<p class="mb-6 text-gray-600 dark:text-gray-300">
+						<p class="mb-6 text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center text-lg'}">
 							Guías paso a paso para usuarios finales y administradores del sistema.
 						</p>
 					</div>
@@ -76,29 +79,29 @@
 		</div>
 
 		<!-- Quick Start Section -->
-		<section class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg p-8 mb-16 border border-gray-200/50 dark:border-gray-700/50">
-			<h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Inicio Rápido</h3>
-			<div class="grid md:grid-cols-3 gap-6">
+		<section class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg {FEATURE_FLAGS.showDevDocumentation ? 'p-8' : 'p-12'} mb-16 border border-gray-200/50 dark:border-gray-700/50 {FEATURE_FLAGS.showDevDocumentation ? '' : 'max-w-4xl mx-auto'}">
+			<h3 class="{FEATURE_FLAGS.showDevDocumentation ? 'text-2xl' : 'text-3xl'} font-bold mb-6 text-gray-900 dark:text-white {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center'}">Inicio Rápido</h3>
+			<div class="grid md:grid-cols-3 {FEATURE_FLAGS.showDevDocumentation ? 'gap-6' : 'gap-8'}">
 				<div class="text-center">
-					<div class="bg-blue-100 dark:bg-blue-900/50 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-						<span class="text-blue-600 dark:text-blue-400 font-bold text-lg">1</span>
+					<div class="bg-blue-100 dark:bg-blue-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'w-12 h-12' : 'w-16 h-16'} rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-blue-600 dark:text-blue-400 font-bold {FEATURE_FLAGS.showDevDocumentation ? 'text-lg' : 'text-xl'}">1</span>
 					</div>
-					<h4 class="font-semibold text-gray-900 dark:text-white mb-2">Explora las APIs</h4>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Comienza explorando nuestra documentación de APIs REST y GraphQL</p>
+					<h4 class="font-semibold text-gray-900 dark:text-white {FEATURE_FLAGS.showDevDocumentation ? 'mb-2' : 'mb-3 text-lg'}">Explora las APIs</h4>
+					<p class="{FEATURE_FLAGS.showDevDocumentation ? 'text-sm' : 'text-base'} text-gray-600 dark:text-gray-300">Comienza explorando nuestra documentación de APIs REST y GraphQL</p>
 				</div>
 				<div class="text-center">
-					<div class="bg-green-100 dark:bg-green-900/50 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-						<span class="text-green-600 dark:text-green-400 font-bold text-lg">2</span>
+					<div class="bg-green-100 dark:bg-green-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'w-12 h-12' : 'w-16 h-16'} rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-green-600 dark:text-green-400 font-bold {FEATURE_FLAGS.showDevDocumentation ? 'text-lg' : 'text-xl'}">2</span>
 					</div>
-					<h4 class="font-semibold text-gray-900 dark:text-white mb-2">Prueba el Sistema</h4>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS</p>
+					<h4 class="font-semibold text-gray-900 dark:text-white {FEATURE_FLAGS.showDevDocumentation ? 'mb-2' : 'mb-3 text-lg'}">Prueba el Sistema</h4>
+					<p class="{FEATURE_FLAGS.showDevDocumentation ? 'text-sm' : 'text-base'} text-gray-600 dark:text-gray-300">Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS</p>
 				</div>
 				<div class="text-center">
-					<div class="bg-purple-100 dark:bg-purple-900/50 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-						<span class="text-purple-600 dark:text-purple-400 font-bold text-lg">3</span>
+					<div class="bg-purple-100 dark:bg-purple-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'w-12 h-12' : 'w-16 h-16'} rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-purple-600 dark:text-purple-400 font-bold {FEATURE_FLAGS.showDevDocumentation ? 'text-lg' : 'text-xl'}">3</span>
 					</div>
-					<h4 class="font-semibold text-gray-900 dark:text-white mb-2">Implementa</h4>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Sigue nuestras guías de implementación para poner en marcha tu sistema</p>
+					<h4 class="font-semibold text-gray-900 dark:text-white {FEATURE_FLAGS.showDevDocumentation ? 'mb-2' : 'mb-3 text-lg'}">Implementa</h4>
+					<p class="{FEATURE_FLAGS.showDevDocumentation ? 'text-sm' : 'text-base'} text-gray-600 dark:text-gray-300">Sigue nuestras guías de implementación para poner en marcha tu sistema</p>
 				</div>
 			</div>
 		</section>

@@ -1,4 +1,9 @@
 
+// Configuración de visibilidad de características
+export const FEATURE_FLAGS = {
+	showDevDocumentation: false, // Cambiar a true para mostrar la documentación de desarrolladores
+};
+
 // Datos estáticos para búsqueda de fallback
 export const searchableContent = [
 	{ title: 'Introduccion', href: '/user-guide', type: 'Manual de Usuario', id: '11-Introduccion' },
@@ -26,7 +31,7 @@ export const searchableContent = [
 
 export const navigation = [
 	{ name: 'Inicio', href: '/' },
-	{ name: 'Dev documentation', href: '/dev' },
+	...(FEATURE_FLAGS.showDevDocumentation ? [{ name: 'Dev documentation', href: '/dev' }] : []),
 	{ name: 'Manual de Usuario', href: '/user-guide' }
 ];
 
@@ -45,8 +50,16 @@ export async function searchContent(query: string, limit: number = 8): Promise<S
 	
 	const searchTerm = query.toLowerCase();
 	
-	// Buscar en contenido estático
-	const results = searchableContent.filter(item => {
+	// Filtrar contenido basado en feature flags
+	const filteredContent = searchableContent.filter(item => {
+		if (!FEATURE_FLAGS.showDevDocumentation && item.type === 'Documentación Desarrolladores') {
+			return false;
+		}
+		return true;
+	});
+	
+	// Buscar en contenido estático filtrado
+	const results = filteredContent.filter(item => {
 		const titleMatch = item.title.toLowerCase().includes(searchTerm);
 		const typeMatch = item.type.toLowerCase().includes(searchTerm);
 		
