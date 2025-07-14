@@ -1,4 +1,6 @@
 
+import { replacePaxaPOS } from './textReplacer';
+
 // Configuración de visibilidad de características
 export const FEATURE_FLAGS = {
 	showDevDocumentation: false, // Cambiar a true para mostrar la documentación de desarrolladores
@@ -44,7 +46,7 @@ export interface SearchableItem {
 	id?: string;
 }
 
-// Función de búsqueda simplificada pero efectiva
+// Función de búsqueda simplificada pero efectiva con reemplazo automático
 export async function searchContent(query: string, limit: number = 8): Promise<SearchableItem[]> {
 	if (query.length < 2) return [];
 	
@@ -58,13 +60,17 @@ export async function searchContent(query: string, limit: number = 8): Promise<S
 		return true;
 	});
 	
-	// Buscar en contenido estático filtrado
+	// Buscar en contenido estático filtrado con reemplazo automático
 	const results = filteredContent.filter(item => {
-		const titleMatch = item.title.toLowerCase().includes(searchTerm);
-		const typeMatch = item.type.toLowerCase().includes(searchTerm);
+		const titleMatch = replacePaxaPOS(item.title).toLowerCase().includes(searchTerm);
+		const typeMatch = replacePaxaPOS(item.type).toLowerCase().includes(searchTerm);
 		
 		return titleMatch || typeMatch;
-	});
+	}).map(item => ({
+		...item,
+		title: replacePaxaPOS(item.title),
+		type: replacePaxaPOS(item.type)
+	}));
 	
 	// Ordenar por relevancia (título primero)
 	results.sort((a, b) => {
