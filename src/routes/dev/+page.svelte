@@ -207,7 +207,7 @@
     <div class="flex flex-col gap-8 lg:flex-row">
         <aside class="lg:w-64 flex-shrink-0">
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 shadow-sm">
-                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-m">Manual de usuario</h3>
+                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-m">Documentación para Desarrolladores</h3>
                 <nav>
                     {#each grouped_content as group}
                         <div class="mb-2">

@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
 	<!-- Header -->
 	<header class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-sm border-b border-gray-200/20 dark:border-gray-700/20">
@@ -30,7 +34,7 @@
 		<div class="grid md:grid-cols-2 gap-8 mb-16">
 			<!-- Developer Documentation -->
 			<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
-				<a href="/dev" class="block">
+				<a href="{base}/dev" class="block">
 					<div class="p-8">
 						<div class="flex items-center mb-4">
 							<div class="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-lg">
@@ -47,7 +51,7 @@
 				</a>	
 			</div>
 			<!-- User Documentation -->
-			<a href="/user-guide" class="block">
+			<a href="{base}/user-guide" class="block">
 				<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
 					<div class="p-8">
 						<div class="mb-4 flex items-center">

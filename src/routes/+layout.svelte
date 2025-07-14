@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import 'github-markdown-css/github-markdown-light.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	let { children } = $props();
 </script>
@@ -16,10 +15,14 @@
 </div>
 
 <style>
-	@import 'github-markdown-css/github-markdown-light.css';
+	/* Estilos básicos sin dependencias externas problemáticas */
+	:global(.markdown-content) {
+		line-height: 1.6;
+		color: rgb(55 65 81); /* gray-700 */
+	}
 	
-	/* Estilo para modo oscuro en markdown */
-	@media (prefers-color-scheme: dark) {
-		@import 'github-markdown-css/github-markdown-dark.css';
+	/* Modo oscuro */
+	:global(.dark .markdown-content) {
+		color: rgb(209 213 219); /* gray-300 */
 	}
 </style>

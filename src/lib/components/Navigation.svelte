@@ -1,7 +1,7 @@
 <script lang='ts'>
-	import '../../app.css';
     import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { searchContent, navigation, type SearchableItem } from '$lib/helpers/constants';
 
 	let mobileMenuOpen = false;
@@ -42,11 +42,11 @@
 		
 		// Si tiene ID específico y es de documentación, navegar con parámetro
 		if (item.id && (item.href === '/user-guide' || item.href === '/dev')) {
-			const url = `${item.href}?module=${item.id}`;
+			const url = `${base}${item.href}?module=${item.id}`;
 			console.log('URL generada:', url);
 			goto(url);
 		} else {
-			goto(item.href);
+			goto(`${base}${item.href}`);
 		}
 	};
 
@@ -71,13 +71,13 @@
 			<!-- Logo and primary nav -->
 			<div class="flex">
 				<div class="flex-shrink-0 flex items-center">
-					<a href="/" class="text-xl font-bold text-gray-900 dark:text-white">PaxaPOS Docs</a>
+					<a href="{base}/" class="text-xl font-bold text-gray-900 dark:text-white">PaxaPOS Docs</a>
 				</div>
 				<!-- Desktop navigation -->
 				<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
 					{#each navigation as item}
 						<a
-							href={item.href}
+							href="{base}{item.href}"
 							class={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200 ${
 								$page.url.pathname === item.href
 									? 'border-blue-500 text-blue-600 dark:text-blue-400'
@@ -167,7 +167,7 @@
 			<div class="pt-2 pb-3 space-y-1">
 				{#each navigation as item}
 					<a
-						href={item.href}
+						href="{base}{item.href}"
 						class={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-200 ${
 							$page.url.pathname === item.href
 								? 'bg-blue-50 dark:bg-blue-900/50 border-blue-500 text-blue-700 dark:text-blue-300'
