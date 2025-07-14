@@ -4,21 +4,6 @@
 </script>
 
 <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
-	<!-- Header -->
-	<header class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-sm border-b border-gray-200/20 dark:border-gray-700/20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex justify-between items-center py-6">
-				<div class="flex items-center">
-					<h1 class="text-3xl font-bold text-gray-900 dark:text-white">PaxaPOS</h1>
-					<span class="ml-2 text-lg text-gray-600 dark:text-gray-300">Documentación</span>
-				</div>
-				<div class="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
-					v2.0
-				</div>
-			</div>
-		</div>
-	</header>
-
 	<!-- Main Content -->
 	<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<!-- Hero Section -->
