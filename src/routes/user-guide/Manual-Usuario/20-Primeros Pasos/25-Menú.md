@@ -1,12 +1,17 @@
-# Configuración del Menú
+# Configuración del menú en PaxaPOS
+
+## Sistema de gestión de productos
 
 El módulo "Menú" es el corazón de tu sistema PaxaPOS, donde podrás crear, organizar y gestionar todos los productos y servicios que ofrece tu comercio. Una correcta configuración del menú es fundamental para agilizar la toma de pedidos, la facturación y el control de inventario.
 
-## Acceso al Módulo
+### Acceso al módulo de menú
+
 Para acceder a la configuración del menú, dirígete al icono de la "P" roja en la interfaz principal y selecciona el apartado "Productos".
 
-## 1. Productos en Venta
+### Productos en venta
 Esta es la pestaña principal donde podrás construir y visualizar tu menú de productos activos.
+
+#### Crear y gestionar menús
 
 * **Crear un Nuevo Menú:**
     * Haz clic en el botón "+ Crear Nuevo".
@@ -24,7 +29,7 @@ Esta es la pestaña principal donde podrás construir y visualizar tu menú de p
     * **Nombre en Ticket/Remito:** Opcionalmente, puedes definir un nombre abreviado o diferente para el producto que aparecerá en el ticket o remito.
     * **Pertenencia a una Variante:** Indica si este producto es parte de una variante (ver sección "Variantes" más adelante).
 
-## 2. Recetas
+### Recetas
 
 En este apartado, podrás gestionar las recetas de tus productos para un control más detallado del stock y los costos.
 
@@ -33,7 +38,7 @@ En este apartado, podrás gestionar las recetas de tus productos para un control
 * **Gestión de Stock:** Controla el inventario de materias primas de manera precisa
 * **Actualizaciones Automáticas:** Los cambios en precios de ingredientes se reflejan automáticamente en el costo final
 
-## 3. Variantes
+### Variantes
 Las variantes te permiten ofrecer opciones o "subproductos" que acompañan a un producto principal, sin necesidad de crear un producto nuevo para cada combinación.
 
 * **Definición:** Una variante es una especie de subproducto que acompaña a un producto principal. Por ejemplo, en una "Milanesa Napolitana", la variante podría ser su acompañamiento (papas fritas, puré de papa o ensalada).
@@ -46,12 +51,12 @@ Las variantes te permiten ofrecer opciones o "subproductos" que acompañan a un 
     * Busca la opción para "Asignar Variante" y selecciona la variante que creaste (ej. "Acompañamiento de Milanesa").
     * Al vender el producto principal, el sistema te permitirá elegir la opción de la variante.
 
-## 4. Categorías
+### Categorías
 Las categorías te ayudan a organizar tus productos de forma lógica y a facilitar la navegación tanto para el personal como para los clientes (en caso de usar una carta digital).
 
 * **Funcionalidad:** Puedes crear distintas categorías para agrupar tus productos (por ejemplo: "Postres", "Vinos", "Bebidas sin Alcohol", "Entradas", "Platos Principales").
 * **Gestión:** Dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.
 
-## 5. Productos Duplicados
+### Productos duplicados
 Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
 
