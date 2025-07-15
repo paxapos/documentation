@@ -1,10 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import { autoReplaceBrand } from '$lib/helpers/textReplacer';
 	let { children } = $props();
 </script>
 
-<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200" use:autoReplaceBrand>
 	<!-- Navigation -->
 	<Navigation/>
 
