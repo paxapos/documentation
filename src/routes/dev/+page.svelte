@@ -160,10 +160,6 @@
         selectedModuleRawMarkdown = rawMarkdown || ''; 
     }
 
-    function isSelected(id: string) {
-        return selectedModuleId === id;
-    }
-
     function handleLLMIntegration(moduleId: string, moduleName: string) {
         // Encontrar el contenido markdown del módulo actual
         let markdownContent = '';
@@ -253,7 +249,7 @@
                                     <button
                                         onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                         class="block w-full text-left text-sm p-1.5 rounded-md transition-colors duration-200 cursor-pointer leading-tight
-                                        {isSelected(item.id) 
+                                        {selectedModuleId === item.id
                                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
                                             : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
                                     >
