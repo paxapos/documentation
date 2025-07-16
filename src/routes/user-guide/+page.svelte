@@ -162,32 +162,6 @@
         selectedModuleRawMarkdown = rawMarkdown || ''; 
     }
 
-    // Función para manejar cambios en el select móvil
-    function handleMobileSelect(event: Event) {
-        const target = event.target as HTMLSelectElement;
-        const selectedId = target.value;
-        
-        if (selectedId) {
-            selectModuleById(selectedId);
-        }
-    }
-
-    // Función para crear opciones planas del select
-    function getFlatOptions() {
-        const options: Array<{id: string, title: string}> = [];
-        
-        grouped_content.forEach(group => {
-            group.items.forEach(item => {
-                options.push({
-                    id: item.id,
-                    title: item.title
-                });
-            });
-        });
-        
-        return options;
-    }
-
     function isSelected(id: string) {
         return selectedModuleId === id;
     }
@@ -231,43 +205,7 @@
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
     <div class="flex flex-col gap-8 lg:flex-row">
-        <!-- Mobile dropdown selector - only visible on mobile -->
-        <div class="lg:hidden mb-6">
-            <div class="mobile-select-container relative">
-                <label for="mobile-manual-select" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                    Manual de Usuario
-                </label>
-                <div class="relative">
-                    <select 
-                        id="mobile-manual-select"
-                        on:change={handleMobileSelect}
-                        value={selectedModuleId || ''}
-                        class="mobile-select w-full px-4 py-3 pr-10 border-2 border-gray-200 dark:border-gray-600 rounded-lg shadow-sm 
-                               focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
-                               bg-white dark:bg-gray-800 text-gray-900 dark:text-white
-                               appearance-none cursor-pointer text-sm font-medium"
-                    >
-                        <option value="" class="text-gray-500">Selecciona una sección...</option>
-                        {#each getFlatOptions() as option}
-                            <option value={option.id} class="py-2 font-normal">
-                                {option.title}
-                            </option>
-                        {/each}
-                    </select>
-                    <!-- Custom dropdown arrow -->
-                    <div class="select-arrow absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-400 dark:text-gray-500 transition-transform duration-300 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </div>
-                </div>
-                <!-- Subtle gradient background -->
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg -z-10 opacity-30"></div>
-            </div>
-        </div>
-
-        <!-- Desktop sidebar - only visible on desktop -->
-        <aside class="hidden lg:block lg:w-64 flex-shrink-0">
+        <aside class="lg:w-64 flex-shrink-0">
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 shadow-sm">
                 <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-m">Manual de usuario</h3>
                 <nav>

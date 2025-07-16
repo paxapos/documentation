@@ -1,15 +1,12 @@
-# Configuración de impresoras en PaxaPOS
-
-## Sistema de gestión de impresoras
+# Configuración de Impresoras
 
 Este módulo te permite gestionar y configurar todas las impresoras asociadas a tu comercio, incluyendo impresoras de tickets, comanda, remitos y la integración con equipos fiscales a través de Fiscalberry. Una configuración correcta asegura un flujo de trabajo eficiente en la emisión de comprobantes y pedidos.
 
-### Acceso al módulo de impresoras
-
+## Acceso al Módulo
 Para acceder a la configuración de impresoras, dirígete al módulo "Impresoras" en la barra de navegación principal.
 Aquí visualizarás un listado de todas las impresoras ya adheridas y configuradas en tu comercio.
 
-### Opciones de configuración general
+## Opciones de Configuración General
 Dentro de este módulo, encontrarás las siguientes opciones clave para personalizar el comportamiento de tus impresoras:
 
 * **Impresora Fiscal por Defecto:** Selecciona cuál será tu impresora fiscal principal para la emisión de comprobantes de venta con validez legal.
@@ -19,15 +16,13 @@ Dentro de este módulo, encontrarás las siguientes opciones clave para personal
 * **Impresora de Cajón de Dinero:** Configura cuál impresora tiene la capacidad de abrir el cajón de dinero. Esto es útil para automatizar la apertura del cajón al finalizar una transacción en efectivo.
 * **Impresora de Comandas/Pedidos:** Establece la impresora donde saldrán las comandas o pedidos, generalmente ubicada en la cocina o barra, para optimizar la comunicación entre salón y producción.
 
-### Configuración y servicio de Fiscalberry
-
+## Configuración y Servicio de Fiscalberry
 Además de las opciones de impresoras estándar, en este módulo podrás instalar y configurar el servicio de Fiscalberry.
 
-#### ¿Qué es Fiscalberry?
+### ¿Qué es Fiscalberry?
 Fiscalberry es un **servicio intermedio** que actúa como un puente de comunicación entre tu sistema PaxaPOS y tu impresora fiscal. Es una herramienta esencial que **simplifica la integración y el cumplimiento de la normativa fiscal**, ya que se encarga de traducir los comandos del sistema a un lenguaje que la impresora fiscal entiende, gestionando la comunicación de manera robusta y segura. Permite que tu software interactúe sin problemas con diversos modelos de impresoras fiscales, garantizando que todas tus operaciones de facturación se registren correctamente.
 
-#### Instalación del servicio Fiscalberry
-
+### Instalación del Servicio Fiscalberry
 Para instalar el servicio de Fiscalberry, sigue las instrucciones específicas que se mostrarán en pantalla o consulta el manual de instalación detallado de Fiscalberry, ya que puede requerir pasos adicionales en tu equipo local.
 
 > **Recomendaciones Adicionales:**
