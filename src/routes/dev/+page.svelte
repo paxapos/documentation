@@ -225,10 +225,9 @@
                 <div class="block lg:hidden mb-4">
                     <select 
                         class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                        value={selectedModuleId || ''}
+                        value={selectedModuleId || (grouped_content.length > 0 && grouped_content[0].items.length > 0 ? grouped_content[0].items[0].id : '')}
                         onchange={handleModuleSelect}
                     >
-                        <option value="">Selecciona un módulo...</option>
                         {#each grouped_content as group}
                             <optgroup label={group.folder}>
                                 {#each group.items as item}
