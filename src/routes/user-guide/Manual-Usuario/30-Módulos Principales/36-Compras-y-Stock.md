@@ -1,9 +1,10 @@
-# Compras y Gestión de Stock
+# Compras y gestión de stock en PaxaPOS
+
+## Sistema de inventarios y mercadería
 
 Esta sección te guiará en el proceso de incorporar nuevos ítems a tu inventario, desde la creación de una *mercadería* (lo que compras a tus proveedores) hasta su transformación en un *producto* (lo que vendes a tus clientes), asegurando que el stock se registre correctamente en ambas instancias.
 
-
-## 1. Creación de Nueva Mercadería
+### Creación de nueva mercadería
 
 Antes de poder registrar cualquier entrada de stock, primero debes definir la mercadería que estás comprando.
 
@@ -18,7 +19,7 @@ Antes de poder registrar cualquier entrada de stock, primero debes definir la me
 4.  Haz clic en **"Guardar"** (o el botón correspondiente) para crear la nueva mercadería.
 
 
-## 2. Alta de Mercadería como Producto (Maestro de Productos)
+### Alta de mercadería como producto
 
 Una vez que has creado la mercadería, el siguiente paso es "darla de alta" como un producto vendible en tu *"Maestro de Productos"*. Esto permite que el ítem aparezca en tu listado de productos disponibles para la venta y que su stock sea gestionado correctamente desde esta perspectiva.
 

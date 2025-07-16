@@ -1,14 +1,16 @@
-# Módulo de Contabilidad
+# Módulo de contabilidad PaxaPOS
+
+## Sistema contable integral
 
 Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores*, los *impuestos* y las *clasificaciones* de gastos.
 
-## Acceso a la Configuración de Contabilidad
+### Acceso a la configuración de contabilidad
 
 1.  Una vez dentro del sistema, dirígete a la sección de *"Contabilidad"*.
 2.  Dentro del módulo de Contabilidad, busca y haz clic en la *"P" roja*. Este ícono te llevará a las opciones de configuración de los apartados necesarios: Impuestos, Clasificaciones y Proveedores.
 
 
-## 1. Configuración de Impuestos
+### Configuración de impuestos
 
 Este módulo te permite definir los diferentes tipos de impuestos que aplicarán a tus transacciones.
 
