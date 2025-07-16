@@ -199,21 +199,59 @@
         console.log('Opening markdown content as txt for:', moduleName);
     }
 
+    // Función para manejar el selector dropdown (móvil)
+    function handleModuleSelect(event: Event) {
+        const target = event.target as HTMLSelectElement;
+        const selectedValue = target.value;
+        
+        if (!selectedValue) return;
+        
+        // Encontrar el módulo seleccionado
+        for (const group of grouped_content) {
+            const foundItem = group.items.find(item => item.id === selectedValue);
+            if (foundItem) {
+                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
+                break;
+            }
+        }
+    }
+
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
     <div class="flex flex-col gap-8 lg:flex-row">
+        <!-- Sidebar responsivo -->
         <aside class="lg:w-64 flex-shrink-0">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 shadow-sm">
-                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-m">Documentación para Desarrolladores</h3>
-                <nav>
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
+                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-base">Documentación para Desarrolladores</h3>
+                
+                <!-- Dropdown para móvil (visible solo en pantallas pequeñas) -->
+                <div class="block lg:hidden mb-4">
+                    <select 
+                        class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                        value={selectedModuleId || ''}
+                        onchange={handleModuleSelect}
+                    >
+                        <option value="">Selecciona un módulo...</option>
+                        {#each grouped_content as group}
+                            <optgroup label={group.folder}>
+                                {#each group.items as item}
+                                    <option value={item.id}>{item.title}</option>
+                                {/each}
+                            </optgroup>
+                        {/each}
+                    </select>
+                </div>
+
+                <!-- Sidebar tradicional para desktop (visible solo en pantallas grandes) -->
+                <nav class="hidden lg:block">
                     {#each grouped_content as group}
-                        <div class="mb-2">
-                            <h4 class="mb-4' font-semibold text-gray-800 dark:text-gray-200 text-sm">{group.folder}</h4>
+                        <div class="mb-3">
+                            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200 text-sm">{group.folder}</h4>
                             <nav class="space-y-1 pl-3">
                                 {#each group.items as item}
                                     <button
-                                        on:click={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
+                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                         class="block w-full text-left text-sm p-1.5 rounded-md transition-colors duration-200 cursor-pointer leading-tight
                                         {isSelected(item.id) 
                                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
@@ -241,7 +279,7 @@
                     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex justify-end">
                             <button
-                                on:click={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
+                                onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
                                 class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer text-white text-sm font-medium rounded-md transition-colors duration-200 shadow-sm"
                             >
                                 <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
