@@ -53,7 +53,6 @@
 				"Facturación integrada",
 				"Monitoreo remoto"
 			],
-			"screenshot": "https://docs.paxapos.com/screenshot.png",
 			"softwareVersion": "1.0",
 			"datePublished": "2024-01-01",
 			"dateModified": "2025-01-15"
