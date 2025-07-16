@@ -1,10 +1,9 @@
-# Módulo de arqueos PaxaPOS
-
-## Control de caja y movimientos
+# Módulo de Arqueos
 
 Este módulo le permite gestionar y visualizar todas las **aperturas y cierres de caja** de su sistema. La información se presenta de forma organizada por **día y hora**, brindando una vista detallada del movimiento de efectivo y transacciones.
 
-### Funcionalidades principales
+
+### Funcionalidades Principales
 
 Al acceder al módulo de arqueos, usted podrá visualizar la siguiente información para cada registro de caja:
 
@@ -20,7 +19,7 @@ Además, el sistema le permitirá visualizar el **arqueo abierto** correspondien
 
 
 
-### Descarga de arqueos cerrados
+### Descarga de Arqueos Cerrados
 
 Para facilitar la auditoría y el análisis, el sistema ofrece la funcionalidad de **descargar en formato Excel** los arqueos que ya han sido cerrados. Esta opción le permite filtrar la información para una búsqueda específica, utilizando los siguientes criterios:
 
@@ -30,7 +29,7 @@ Para facilitar la auditoría y el análisis, el sistema ofrece la funcionalidad 
 
 
 
-### Apartados específicos
+### Apartados Específicos
 
 Dentro del módulo de Arqueos, encontrará secciones dedicadas que le brindarán información detallada sobre distintos tipos de movimientos:
 

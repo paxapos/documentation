@@ -1,14 +1,11 @@
-# Módulo de Salón PaxaPOS
-
-## Gestión eficiente de su espacio de atención
+# Módulo de Salón
 
 El módulo de **Salón** es esencial para la gestión eficiente de su espacio de atención al cliente. Permite supervisar y organizar las **mesas** de su establecimiento, optimizando el flujo de trabajo y mejorando la experiencia del cliente.
 
-### Gestión de Mesas y Asignación a Mozos
+
+## 1. Gestión de Mesas y Asignación a Mozos
 
 Al ingresar al módulo de **Salón**, visualizará una lista de todos los **mozos** registrados en el sistema. Esta característica le permite asignar mesas directamente a cada miembro de su equipo de servicio, facilitando la organización de las operaciones diarias.
-
-#### Proceso de asignación
 
 1.  Diríjase a la sección **"Salón"** en la barra de navegación principal.
 2.  La pantalla presentará un listado de los mozos disponibles.
@@ -18,11 +15,10 @@ Al ingresar al módulo de **Salón**, visualizará una lista de todos los **mozo
     * **Cantidad de Cubiertos:** Especifique el número de comensales que ocuparán la mesa.
 5.  Una vez completados los campos, haga clic en **"Guardar"** para crear y asociar la mesa al mozo seleccionado.
 
-### Operaciones de Mesa
+
+## 2. Operaciones de Mesa
 
 Una vez que la mesa ha sido guardada y está activa, el sistema le ofrecerá diversas funcionalidades para su gestión:
-
-#### Funcionalidades disponibles
 
 1.  **Agregar Productos:** Podrá acceder al sistema de punto de venta (POS) para tomar el pedido de los clientes y añadir productos a la mesa.
 2.  **Cobrar la Mesa:** Al finalizar el consumo, podrá procesar el pago de la cuenta de la mesa.

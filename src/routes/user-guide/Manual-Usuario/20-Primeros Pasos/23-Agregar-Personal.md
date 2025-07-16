@@ -1,6 +1,4 @@
-# Agregar personal y mozos en PaxaPOS
-
-## Gestión de equipo de trabajo
+# Agregar Personal (Mozos)
 
 Si tu comercio maneja personal de atención (como mozos o vendedores), esta sección te permite registrarlos y organizar su visualización de puntos de venta.
 
