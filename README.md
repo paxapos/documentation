@@ -1,127 +1,124 @@
 # PaxaPOS Documentation
 
-Documentación oficial para PaxaPOS - Sistema de Punto de Venta completo.
+Sitio web de documentación oficial para PaxaPOS, construido con SvelteKit y Tailwind CSS.
 
 ## Descripción
 
-Este proyecto contiene la documentación completa para PaxaPOS, incluyendo:
+Este proyecto contiene la documentación completa de PaxaPOS, incluyendo:
 
-- **Documentación de API**: Guías para desarrolladores que integran con nuestra API
-- **Manual de Usuario**: Guía completa para usar el sistema POS
-- **Guía de Administrador**: Configuración y gestión del sistema
-- **SDK**: Documentación de librerías para diferentes lenguajes
-- **Guía de Integración**: Ejemplos y casos de uso comunes
-- **Resolución de Problemas**: Soluciones a problemas frecuentes
+- **API Reference**: Documentación de todas las APIs y endpoints
+- **Manual de Usuario**: Guías paso a paso para usuarios finales
+- **Guía de Administrador**: Configuración y administración del sistema
+- **Guías de Integración**: Conexiones con servicios externos
+- **SDKs**: Librerías y herramientas para desarrolladores
+- **Troubleshooting**: Solución de problemas comunes
 
-## Tecnologías
+## Características
 
-- **SvelteKit**: Framework principal para la documentación
-- **Tailwind CSS**: Para estilos y diseño responsive
-- **TypeScript**: Para tipado estático
-- **Vite**: Build tool y servidor de desarrollo
-
-## Instalación
-
-### Prerrequisitos
-
-- Node.js 20.12.2 o superior
-- pnpm (recomendado) o npm
-
-### Configuración
-
-1. Instalar dependencias:
-```bash
-pnpm install
-```
-
-2. Ejecutar en modo desarrollo:
-```bash
-pnpm dev
-```
-
-3. Abrir en el navegador: `http://localhost:5173`
+- ✅ Navegación responsive con menú móvil
+- ✅ Búsqueda en tiempo real
+- ✅ Diseño moderno con Tailwind CSS
+- ✅ Estructura modular y escalable
+- ✅ Optimizado para SEO
 
 ## Desarrollo
 
-### Comandos Disponibles
+Para ejecutar el servidor de desarrollo:
 
-- `pnpm dev`: Servidor de desarrollo
-- `pnpm build`: Build para producción
-- `pnpm preview`: Preview del build de producción
-- `pnpm check`: Verificar tipado TypeScript
-- `pnpm check:watch`: Verificar tipado en modo watch
+```bash
+# Instalar dependencias (requiere Node.js 20+)
+pnpm install
 
-### Estructura del Proyecto
+# Ejecutar servidor de desarrollo
+pnpm dev
 
+# Con host expuesto para acceso desde red
+pnpm dev --host
 ```
+
+El servidor estará disponible en `http://localhost:5173` (o el puerto disponible).
+
+## Estructura del Proyecto
+
+```txt
 src/
 ├── routes/
 │   ├── +layout.svelte          # Layout principal con navegación
 │   ├── +page.svelte            # Página de inicio
-│   ├── api/                    # Documentación de API
-│   ├── user-guide/             # Manual de usuario
-│   ├── admin-guide/            # Guía de administrador
-│   ├── sdk/                    # Documentación de SDK
-│   ├── integration/            # Guía de integración
-│   └── troubleshooting/        # Resolución de problemas
-├── lib/                        # Componentes reutilizables
+│   ├── api/+page.svelte        # Documentación de API
+│   ├── user-guide/+page.svelte # Manual de usuario
+│   ├── admin-guide/+page.svelte # Guía de administrador
+│   ├── integration/+page.svelte # Guías de integración
+│   ├── sdk/+page.svelte        # SDKs y librerías
+│   └── troubleshooting/+page.svelte # Solución de problemas
+├── app.css                     # Estilos globales
 └── app.html                    # Template HTML base
 ```
 
-### Agregar Nueva Documentación
+## Funcionalidades
 
-1. Crear nueva ruta en `src/routes/`
-2. Agregar el enlace en el layout principal (`+layout.svelte`)
-3. Seguir la estructura y estilos existentes
+### Búsqueda
+- Búsqueda en tiempo real mientras escribes
+- Filtrado por tipo de contenido (API, Usuario, Admin, etc.)
+- Navegación directa a secciones específicas
 
-## Despliegue
+### Navegación
+- Menú principal responsive
+- Navegación lateral en páginas de documentación
+- Breadcrumbs en páginas secundarias
+- Enlaces de ancla para secciones
 
-### Build de Producción
+### Responsive Design
+- Optimizado para móviles, tablets y escritorio
+- Menú hamburguesa en dispositivos móviles
+- Búsqueda adaptativa
+
+## Compilación
+
+Para crear una versión de producción:
 
 ```bash
 pnpm build
 ```
 
-Los archivos generados estarán en la carpeta `build/`.
+Esto generará los archivos estáticos en el directorio `build/`.
 
-### Configuración del Servidor
+Para previsualizar la compilación de producción:
 
-El proyecto está configurado como una Single Page Application (SPA) usando el adaptador `@sveltejs/adapter-static`.
+```bash
+pnpm preview
+```
 
-Para desplegar:
+## Tasks de VS Code
 
-1. Subir los archivos de `build/` a tu servidor web
-2. Configurar el servidor para servir `index.html` para todas las rutas no encontradas
-3. Opcional: Configurar HTTPS y compresión gzip
+Se incluyen las siguientes tasks configuradas:
 
-### Variables de Entorno
-
-El proyecto no requiere variables de entorno específicas para funcionar.
+- **DEV Documentation Site**: Ejecuta el servidor de desarrollo
+- Usa `Ctrl+Shift+P` → `Tasks: Run Task` para ejecutarlas
 
 ## Contribuir
 
-1. Fork del repositorio
-2. Crear una rama para tu feature (`git checkout -b feature/nueva-documentacion`)
-3. Commit de tus cambios (`git commit -am 'Agregar nueva documentación'`)
-4. Push a la rama (`git push origin feature/nueva-documentacion`)
-5. Crear un Pull Request
+1. Las páginas están en `src/routes/`
+2. Cada página es un componente Svelte independiente
+3. Se usa Tailwind CSS para estilos
+4. La navegación se configura en `+layout.svelte`
+5. Los contenidos de búsqueda en `searchableContent` del layout
 
-## Características
+## Tecnologías
 
-- ✅ Diseño responsive para móviles y desktop
-- ✅ Navegación intuitiva con búsqueda
-- ✅ Código de ejemplo para múltiples lenguajes
-- ✅ Guías paso a paso con screenshots
-- ✅ Documentación de API completa
-- ✅ Ejemplos de integración listos para usar
-- ✅ Resolución de problemas comunes
+- **SvelteKit**: Framework principal
+- **Tailwind CSS**: Estilos y diseño
+- **TypeScript**: Tipado estático
+- **Vite**: Build tool y dev server
+- **pnpm**: Package manager
 
-## Enlaces Útiles
+## Despliegue
 
-- [PaxaPOS API](https://api.paxapos.com)
-- [Panel de Administración](https://admin.paxapos.com)
-- [Soporte Técnico](mailto:soporte@paxapos.com)
+El sitio puede desplegarse en cualquier plataforma que soporte sitios estáticos:
 
-## Licencia
+- Vercel
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
 
-© 2024 PaxaPOS. Todos los derechos reservados.
+Simplemente ejecuta `pnpm build` y despliega el contenido del directorio `build/`.
