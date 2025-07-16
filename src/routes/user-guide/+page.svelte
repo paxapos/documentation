@@ -52,7 +52,7 @@
             console.log('Intentando seleccionar módulo:', moduleParam);
             if (!selectModuleById(moduleParam)) {
                 console.warn(`Módulo no encontrado: ${moduleParam}`);
-                // Si no encuentra el módulo, ir al primero por defecto
+                // Si no encuentra el módulo, mostrar el primero y seleccionarlo
                 if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                     selectModule(
                         grouped_content[0].items[0].id,
@@ -125,7 +125,7 @@
             if (moduleParam) {
                 if (!selectModuleById(moduleParam)) {
                     console.warn(`Módulo no encontrado: ${moduleParam}`);
-                    // Fallback al primer módulo
+                    // Fallback al primer módulo y seleccionarlo
                     if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                         selectModule(
                             grouped_content[0].items[0].id,
@@ -136,7 +136,7 @@
                     }
                 }
             } else {
-                // Si no hay módulo específico, selecciona el primer módulo por defecto
+                // Si no hay módulo específico, mostrar el primer módulo por defecto y seleccionarlo
                 if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                     selectModule(
                         grouped_content[0].items[0].id,
@@ -160,10 +160,7 @@
         selectedModuleName = title;
         selectedModuleHtml = htmlContent;
         selectedModuleRawMarkdown = rawMarkdown || ''; 
-    }
-
-    function isSelected(id: string) {
-        return selectedModuleId === id;
+        console.log('Módulo seleccionado:', id, title);
     }
 
     function handleLLMIntegration(moduleId: string, moduleName: string) {
@@ -255,7 +252,7 @@
                                     <button
                                         onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                         class="block w-full text-left text-sm p-1.5 rounded-md transition-colors duration-200 cursor-pointer leading-tight
-                                        {isSelected(item.id) 
+                                        {selectedModuleId === item.id
                                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
                                             : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
                                     >
