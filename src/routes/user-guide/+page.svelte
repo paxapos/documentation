@@ -217,17 +217,17 @@
 
 </script>
 
-<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
-    <div class="flex flex-col gap-8 lg:flex-row">
+<div class="mx-auto max-w-7xl px-3 py-4 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+    <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:flex-row">
         <!-- Sidebar responsivo -->
         <aside class="lg:w-64 flex-shrink-0">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
-                <h3 class="mb-4 font-bold text-gray-900 dark:text-white text-base">Manual de usuario</h3>
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 sm:p-4 md:p-5 shadow-sm">
+                <h3 class="mb-3 sm:mb-4 font-bold text-gray-900 dark:text-white text-sm sm:text-base md:text-lg">Manual de usuario</h3>
                 
                 <!-- Dropdown para móvil (visible solo en pantallas pequeñas) -->
-                <div class="block lg:hidden mb-4">
+                <div class="block lg:hidden mb-3 sm:mb-4">
                     <select 
-                        class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                        class="w-full p-2.5 sm:p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all duration-200 min-h-[44px] touch-manipulation"
                         value={selectedModuleId || ''}
                         onchange={handleModuleSelect}
                     >
@@ -245,13 +245,13 @@
                 <!-- Sidebar tradicional para desktop (visible solo en pantallas grandes) -->
                 <nav class="hidden lg:block">
                     {#each grouped_content as group}
-                        <div class="mb-3">
-                            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200 text-sm">{group.folder}</h4>
-                            <nav class="space-y-1 pl-3">
+                        <div class="mb-3 sm:mb-4">
+                            <h4 class="mb-2 sm:mb-3 font-semibold text-gray-800 dark:text-gray-200 text-xs sm:text-sm md:text-base">{group.folder}</h4>
+                            <nav class="space-y-1 sm:space-y-1.5 pl-2 sm:pl-3">
                                 {#each group.items as item}
                                     <button
                                         onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
-                                        class="block w-full text-left text-sm p-1.5 rounded-md transition-colors duration-200 cursor-pointer leading-tight
+                                        class="block w-full text-left text-xs sm:text-sm md:text-base p-1.5 sm:p-2 md:p-2.5 rounded-md transition-colors duration-200 cursor-pointer leading-relaxed min-h-[44px] touch-manipulation
                                         {selectedModuleId === item.id
                                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
                                             : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
@@ -267,28 +267,30 @@
         </aside>
 
         <main class="min-w-0 flex-1">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm">
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm">
                 {#if selectedModuleHtml}
-                    <section class="markdown-paxapos" transition:fade={{ duration: 150 }}>
+                    <section class="markdown-paxapos prose prose-sm sm:prose md:prose-lg xl:prose-xl max-w-none" transition:fade={{ duration: 150 }}>
                         {@html selectedModuleHtml}
                     </section>
                     
                     <!-- Botón LLM Integration en el pie de la sección -->
-                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex justify-end">
+                    <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex justify-center sm:justify-end">
                             <button
                                 onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
-                                class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer text-white text-sm font-medium rounded-md transition-colors duration-200 shadow-sm"
+                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
                             >
-                                <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
-                                Ver archivo LLM
+                                <span class="whitespace-nowrap">Ver archivo LLM</span>
                             </button>
                         </div>
                     </div>
                 {:else}
-                    <p class="text-gray-600 dark:text-gray-300">Selecciona un módulo del menú lateral.</p>
+                    <div class="flex items-center justify-center py-12 sm:py-16 md:py-20">
+                        <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center">Selecciona un módulo del menú lateral.</p>
+                    </div>
                 {/if}
             </div>
         </main>
