@@ -7,9 +7,9 @@
 
 /* Estilos base para modo claro */
 .markdown-paxapos {
-    padding: 25px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: clamp(1rem, 4vw, 1.5rem);
+    margin-top: clamp(1rem, 3vw, 1.875rem);
+    margin-bottom: clamp(1rem, 3vw, 1.875rem);
     background: transparent; /* Fondo transparente para heredar del contenedor */
     color: rgb(34 34 34); /* gray-800 para modo claro */
     border-radius: 8px;
@@ -19,40 +19,40 @@
 }
 
 .markdown-paxapos h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
     line-height: 1.25;
     padding-bottom: 0.3em;
     border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
 }
 
 .markdown-paxapos h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
     font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
     line-height: 1.25;
     padding-bottom: 0.3em;
     border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
 }
 
 .markdown-paxapos h3 {
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
     font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
     line-height: 1.25;
 }
 
 .markdown-paxapos h4,
 .markdown-paxapos h5,
 .markdown-paxapos h6 {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1rem);
     font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
     line-height: 1.25;
 }
 
@@ -67,18 +67,20 @@
 
 .markdown-paxapos p {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .markdown-paxapos ul,
 .markdown-paxapos ol {
     margin-top: 0;
-    margin-bottom: 16px;
-    padding-left: 2rem;
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    padding-left: clamp(1.5rem, 3vw, 2rem);
 }
 
 .markdown-paxapos li {
     margin-top: 0.25rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .markdown-paxapos li + li {

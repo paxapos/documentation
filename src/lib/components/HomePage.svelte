@@ -23,15 +23,15 @@
 			<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
 				<a href="{base}/dev" class="block">
 					<div class="p-8">
-						<div class="flex items-center mb-4">
-							<div class="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-lg">
-								<svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<div class="flex items-center mb-3 sm:mb-4">
+							<div class="bg-blue-100 dark:bg-blue-900/50 p-2.5 sm:p-3 rounded-lg">
+								<svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
 								</svg>
 							</div>
-							<h3 class="text-2xl font-bold ml-4 text-gray-900 dark:text-white">Documentación para Desarrolladores</h3>
+							<h3 class="text-xl sm:text-2xl font-bold ml-3 sm:ml-4 text-gray-900 dark:text-white">Documentación para Desarrolladores</h3>
 						</div>
-						<p class="mb-6 text-gray-600 dark:text-gray-300">
+						<p class="mb-4 sm:mb-6 text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
 						APIs, guías de integración, SDKs y recursos técnicos para desarrolladores.
 						</p>
 					</div>
@@ -41,10 +41,10 @@
 			<!-- User Documentation -->
 			<a href="{base}/user-guide" class="block">
 				<div class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
-					<div class="{FEATURE_FLAGS.showDevDocumentation ? 'p-8' : 'p-12'}">
-						<div class="mb-4 flex {FEATURE_FLAGS.showDevDocumentation ? 'items-center' : 'flex-col items-center text-center'}">
-							<div class="rounded-lg bg-green-100 dark:bg-green-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'p-3' : 'p-4'}">
-								<svg class="{FEATURE_FLAGS.showDevDocumentation ? 'h-6 w-6' : 'h-8 w-8'} text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<div class="{FEATURE_FLAGS.showDevDocumentation ? 'p-6 sm:p-8' : 'p-8 sm:p-12'}">
+						<div class="mb-3 sm:mb-4 flex {FEATURE_FLAGS.showDevDocumentation ? 'items-center' : 'flex-col items-center text-center'}">
+							<div class="rounded-lg bg-green-100 dark:bg-green-900/50 {FEATURE_FLAGS.showDevDocumentation ? 'p-2.5 sm:p-3' : 'p-3 sm:p-4'}">
+								<svg class="{FEATURE_FLAGS.showDevDocumentation ? 'h-5 w-5 sm:h-6 sm:w-6' : 'h-6 w-6 sm:h-8 sm:w-8'} text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -53,9 +53,9 @@
 									/>
 								</svg>
 							</div>
-							<h3 class="{FEATURE_FLAGS.showDevDocumentation ? 'ml-4' : 'mt-4'} {FEATURE_FLAGS.showDevDocumentation ? 'text-2xl' : 'text-3xl'} font-bold text-gray-900 dark:text-white">Manual de Usuario</h3>
+							<h3 class="{FEATURE_FLAGS.showDevDocumentation ? 'ml-3 sm:ml-4' : 'mt-3 sm:mt-4'} {FEATURE_FLAGS.showDevDocumentation ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'} font-bold text-gray-900 dark:text-white">Manual de Usuario</h3>
 						</div>
-						<p class="mb-6 text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center text-lg'}">
+						<p class="mb-4 sm:mb-6 text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? 'text-sm sm:text-base' : 'text-base sm:text-lg'} {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center'} leading-relaxed">
 							Guías paso a paso para usuarios finales y administradores del sistema.
 						</p>
 					</div>
