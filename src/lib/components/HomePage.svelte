@@ -55,7 +55,7 @@
 							</div>
 							<h3 class="{FEATURE_FLAGS.showDevDocumentation ? 'ml-3 sm:ml-4' : 'mt-3 sm:mt-4'} {FEATURE_FLAGS.showDevDocumentation ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'} font-bold text-gray-900 dark:text-white">Manual de Usuario</h3>
 						</div>
-						<p class="mb-4 sm:mb-6 text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? 'text-sm sm:text-base' : 'text-base sm:text-lg'} {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center'} leading-relaxed">">
+						<p class="mb-4 sm:mb-6 text-gray-600 dark:text-gray-300 {FEATURE_FLAGS.showDevDocumentation ? 'text-sm sm:text-base' : 'text-base sm:text-lg'} {FEATURE_FLAGS.showDevDocumentation ? '' : 'text-center'} leading-relaxed">
 							Guías paso a paso para usuarios finales y administradores del sistema.
 						</p>
 					</div>
