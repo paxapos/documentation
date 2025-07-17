@@ -286,7 +286,7 @@
                                 <span class="whitespace-nowrap">Ver archivo LLM</span>
                             </button>
                         </div>
-                    </div>
+                    </div>  
                 {:else}
                     <div class="flex items-center justify-center py-12 sm:py-16 md:py-20">
                         <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center">Selecciona un módulo del menú lateral.</p>
