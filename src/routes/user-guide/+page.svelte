@@ -245,8 +245,8 @@
                 <!-- Sidebar tradicional para desktop (visible solo en pantallas grandes) -->
                 <nav class="hidden lg:block">
                     {#each grouped_content as group}
-                        <div class="mb-3 sm:mb-4">
-                            <h4 class="mb-2 sm:mb-3 font-semibold text-gray-800 dark:text-gray-200 text-xs sm:text-sm md:text-base">{group.folder}</h4>
+                        <div class="mb-3 sm:mb-2.5">
+                            <h4 class="mb-2 sm:mb-1 font-semibold text-gray-800 dark:text-gray-200 text-xs sm:text-sm md:text-base">{group.folder}</h4>
                             <nav class="space-y-1 sm:space-y-1.5 pl-2 sm:pl-3">
                                 {#each group.items as item}
                                     <button
