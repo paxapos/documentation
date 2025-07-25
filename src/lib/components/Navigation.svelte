@@ -35,6 +35,7 @@
 
 	const selectSearchResult = (item: SearchableItem) => {
 		console.log('Navegando a:', item);
+		const currentSearchQuery = searchQuery; // Guardar antes de limpiar
 		searchQuery = '';
 		showSearchResults = false;
 		searchResults = [];
@@ -42,11 +43,11 @@
 		
 		// Si tiene ID específico y es de documentación, navegar con parámetro
 		if (item.id && (item.href === '/user-guide' || item.href === '/dev')) {
-			const url = `${base}${item.href}?module=${item.id}`;
+			const url = `${base}${item.href}?module=${item.id}&highlight=${encodeURIComponent(currentSearchQuery)}`;
 			console.log('URL generada:', url);
 			goto(url);
 		} else {
-			goto(`${base}${item.href}`);
+			goto(`${base}${item.href}?highlight=${encodeURIComponent(currentSearchQuery)}`);
 		}
 	};
 
@@ -136,6 +137,9 @@
 									>
 										<div class="font-medium text-gray-900 dark:text-white">{result.title}</div>
 										<div class="text-sm text-gray-500 dark:text-gray-400">{result.type}</div>
+										{#if result.preview}
+											<div class="text-xs text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">{result.preview}</div>
+										{/if}
 									</button>
 								{/each}
 							{:else}
@@ -206,6 +210,9 @@
 								>
 									<div class="font-medium text-gray-900 dark:text-white">{result.title}</div>
 									<div class="text-xs text-gray-500 dark:text-gray-400">{result.type}</div>
+									{#if result.preview}
+										<div class="text-xs text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">{result.preview}</div>
+									{/if}
 								</button>
 							{/each}
 						{:else}

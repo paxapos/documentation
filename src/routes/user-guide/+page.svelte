@@ -45,8 +45,9 @@
     $: if (contentLoaded && $page.url.search) {
         const urlParams = new URLSearchParams($page.url.search);
         const moduleParam = urlParams.get('module');
+        const highlightParam = urlParams.get('highlight');
         
-        console.log('URL cambió:', $page.url.search, 'Módulo:', moduleParam);
+        console.log('URL cambió:', $page.url.search, 'Módulo:', moduleParam, 'Resaltar:', highlightParam);
         
         if (moduleParam && moduleParam !== selectedModuleId) {
             console.log('Intentando seleccionar módulo:', moduleParam);
@@ -156,9 +157,43 @@
     function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string) {
         selectedModuleId = id;
         selectedModuleName = title;
-        selectedModuleHtml = htmlContent;
+        
+        // Verificar si hay término de resaltado en la URL
+        const urlParams = new URLSearchParams($page.url.search);
+        const highlightParam = urlParams.get('highlight');
+        
+        if (highlightParam) {
+            // Aplicar resaltado al contenido HTML
+            selectedModuleHtml = highlightTextInHtml(htmlContent, highlightParam);
+        } else {
+            selectedModuleHtml = htmlContent;
+        }
+        
         selectedModuleRawMarkdown = rawMarkdown || ''; 
         console.log('Módulo seleccionado:', id, title);
+    }
+
+    // Función para resaltar texto en HTML de manera más elegante
+    function highlightTextInHtml(html: string, searchTerm: string): string {
+        if (!searchTerm || !html) return html;
+        
+        // Escapar caracteres especiales del término de búsqueda
+        const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        
+        // Crear regex con flag global para encontrar todas las coincidencias
+        const regex = new RegExp(`(${escapedTerm})`, 'gi');
+        
+        // Limitar a máximo 4 resaltados para evitar sobrecarga visual
+        let matchCount = 0;
+        const maxMatches = 4;
+        
+        return html.replace(regex, (match) => {
+            if (matchCount >= maxMatches) {
+                return match; // Devolver sin resaltar si ya llegamos al límite
+            }
+            matchCount++;
+            return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
+        });
     }
 
     function handleLLMIntegration(moduleId: string, moduleName: string) {
