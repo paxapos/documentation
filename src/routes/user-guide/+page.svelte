@@ -152,8 +152,6 @@
         }
     });
 
-    // ...existing code...
-
 
     function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string) {
         selectedModuleId = id;
