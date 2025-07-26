@@ -163,8 +163,8 @@ export const searchableContentWithContent = [
 	}
 ];
 
-// Función de búsqueda de texto completo mejorada
-export async function searchContent(query: string, limit: number = 8): Promise<SearchableItem[]> {
+// Función de búsqueda de texto completo optimizada
+export async function searchContent(query: string, limit: number = 4): Promise<SearchableItem[]> {
 	if (query.length < 2) return [];
 	
 	const searchTerm = query.toLowerCase();
