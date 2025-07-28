@@ -212,8 +212,42 @@
         });
     }
 
-    function handleLLMIntegration(moduleId: string, moduleName: string) {
-        // Encontrar el contenido markdown del módulo actual
+    function handleLLMIntegration(moduleId: string, moduleName: string, mode: 'single' | 'all' = 'single') {
+        if (mode === 'all') {
+            // Exportar todo el manual como un solo archivo
+            let allContent = '';
+            grouped_content.forEach(group => {
+                allContent += `\n\n# ${group.folder}\n\n`;
+                group.items.forEach(item => {
+                    allContent += `## ${item.title}\n\n`;
+                    allContent += prepareForExport(item.rawMarkdown);
+                    allContent += '\n\n---\n\n';
+                });
+            });
+            
+            // Crear blob con todo el contenido
+            const blob = new Blob([allContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            
+            // Abrir en nueva pestaña
+            const newWindow = window.open(url, '_blank');
+            if (newWindow) {
+                newWindow.document.title = 'Manual-Completo-Desarrolladores.txt';
+            }
+            
+            // Copiar automáticamente al portapapeles para IA
+            navigator.clipboard.writeText(allContent).then(() => {
+                console.log('📋 Manual completo copiado al portapapeles para IA');
+            }).catch(err => {
+                console.error('Error al copiar al portapapeles:', err);
+            });
+            
+            setTimeout(() => URL.revokeObjectURL(url), 2000);
+            console.log('📚 Manual completo exportado para IA');
+            return;
+        }
+        
+        // Modo single: exportar solo el módulo actual
         let markdownContent = '';
         for (const group of grouped_content) {
             const foundItem = group.items.find(item => item.id === moduleId);
@@ -241,10 +275,49 @@
             newWindow.document.title = `${moduleName}.txt`;
         }
         
-        // Limpiar la URL después de un tiempo para liberar memoria
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        // Copiar automáticamente al portapapeles para IA
+        navigator.clipboard.writeText(txtContent).then(() => {
+            console.log(`📋 Módulo "${moduleName}" copiado al portapapeles para IA`);
+        }).catch(err => {
+            console.error('Error al copiar al portapapeles:', err);
+        });
         
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
         console.log('Opening markdown content as txt for:', moduleName);
+    }
+    
+    // Función para generar índice automático para IA
+    function generateAIIndex() {
+        let index = '# ÍNDICE AUTOMÁTICO PARA IA - DOCUMENTACIÓN DESARROLLADORES\n\n';
+        index += '## Estructura del Manual:\n\n';
+        
+        grouped_content.forEach((group, groupIndex) => {
+            index += `### ${groupIndex + 1}. ${group.folder}\n`;
+            group.items.forEach((item, itemIndex) => {
+                index += `   ${groupIndex + 1}.${itemIndex + 1} ${item.title} (ID: ${item.id})\n`;
+            });
+            index += '\n';
+        });
+        
+        index += '\n## Instrucciones para IA:\n';
+        index += '- Cada sección está identificada con un ID único\n';
+        index += '- El contenido está en formato markdown limpio\n';
+        index += '- Use este índice para navegar y referenciar secciones específicas\n';
+        index += '- Para obtener contenido específico, solicite por ID de módulo\n\n';
+        
+        // Copiar al portapapeles
+        navigator.clipboard.writeText(index).then(() => {
+            console.log('📑 Índice para IA generado y copiado al portapapeles');
+        });
+        
+        // También mostrar en nueva pestaña
+        const blob = new Blob([index], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const newWindow = window.open(url, '_blank');
+        if (newWindow) {
+            newWindow.document.title = 'Indice-IA-Desarrolladores.txt';
+        }
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
     }
 
     // Función para manejar el selector dropdown (móvil)
@@ -322,17 +395,40 @@
                         {@html selectedModuleHtml}
                     </section>
                     
-                    <!-- Botón LLM Integration en el pie de la sección -->
+                    <!-- Botones LLM Integration mejorados -->
                     <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex justify-center sm:justify-end">
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center sm:justify-end">
+                            <!-- Botón módulo individual -->
                             <button
-                                onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName)}
-                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
+                                onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName, 'single')}
+                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
                             >
                                 <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                 </svg>
-                                <span class="whitespace-nowrap">Ver archivo LLM</span>
+                                <span class="whitespace-nowrap">Módulo para IA</span>
+                            </button>
+                            
+                            <!-- Botón manual completo -->
+                            <button
+                                onclick={() => handleLLMIntegration('', 'Manual-Completo', 'all')}
+                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
+                            >
+                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <span class="whitespace-nowrap">Todo para IA</span>
+                            </button>
+                            
+                            <!-- Botón índice para IA -->
+                            <button
+                                onclick={() => generateAIIndex()}
+                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
+                            >
+                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                                </svg>
+                                <span class="whitespace-nowrap">Índice IA</span>
                             </button>
                         </div>
                     </div>

@@ -322,7 +322,7 @@
                         {@html selectedModuleHtml}
                     </section>
                     
-                    <!-- Botón LLM Integration en el pie de la sección -->
+                    <!-- Botón LLM Integration original -->
                     <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex justify-center sm:justify-end">
                             <button
