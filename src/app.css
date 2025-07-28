@@ -5,6 +5,23 @@
   color-scheme: light dark;
 }
 
+/* Fallback para navegadores que no soportan prefers-color-scheme */
+html {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+  background-color: rgb(17 24 39);
+  color: white;
+}
+
+/* Transiciones suaves para todos los elementos que cambian con el tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 /* Estilos base para modo claro */
 .markdown-paxapos {
     padding: clamp(1rem, 4vw, 1.5rem);
@@ -157,20 +174,126 @@
 }
 
 /* Modo oscuro para markdown */
+.dark .markdown-paxapos {
+  background: transparent; /* Sin fondo para integración completa */
+  color: rgb(255 255 255); /* Texto blanco */
+  border: none; /* Sin borde */
+  box-shadow: none; /* Sin sombra */
+}
+
+.dark .markdown-paxapos h1 {
+  border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+}
+
+.dark .markdown-paxapos h2 {
+  border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+}
+
+.dark .markdown-paxapos h1,
+.dark .markdown-paxapos h2,
+.dark .markdown-paxapos h3,
+.dark .markdown-paxapos h4,
+.dark .markdown-paxapos h5,
+.dark .markdown-paxapos h6 {
+  color: rgb(255 255 255); /* Títulos blancos */
+}
+
+.dark .markdown-paxapos p,
+.dark .markdown-paxapos li {
+  color: rgb(229 231 235); /* gray-200 - Texto claro */
+}
+
+.dark .markdown-paxapos a {
+  color: rgb(96 165 250); /* blue-400 - Enlaces azules claros */
+}
+
+.dark .markdown-paxapos a:hover {
+  color: rgb(147 197 253); /* blue-300 - Hover más claro */
+}
+
+.dark .markdown-paxapos code {
+  background: rgb(55 65 81 / 0.4); /* gray-700 con transparencia */
+  color: rgb(243 244 246); /* gray-100 - Texto claro */
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none; /* Sin borde */
+}
+
+.dark .markdown-paxapos pre {
+  background: rgb(17 24 39 / 0.4); /* gray-900 con transparencia */
+  border: none; /* Sin borde */
+  border-radius: 6px;
+}
+
+.dark .markdown-paxapos pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.dark .markdown-paxapos blockquote {
+  border-left: 4px solid rgb(75 85 99); /* gray-600 */
+  background: rgb(55 65 81 / 0.2); /* gray-700 con poca transparencia */
+  margin: 16px 0;
+  padding: 12px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.dark .markdown-paxapos table {
+  border-collapse: collapse;
+  border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+}
+
+.dark .markdown-paxapos th,
+.dark .markdown-paxapos td {
+  border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+  padding: 8px 12px;
+}
+
+.dark .markdown-paxapos th {
+  background: rgb(55 65 81 / 0.3); /* gray-700 con transparencia */
+  color: rgb(255 255 255); /* Texto blanco en headers */
+}
+
+.dark .markdown-paxapos hr {
+  border-color: rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+}
+
+/* Garantizar que las transiciones funcionen en todos los navegadores */
+@supports (color-scheme: dark) {
+  :root {
+    color-scheme: light dark;
+  }
+}
+
+/* Fallback para navegadores muy antiguos */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html.dark {
+    background-color: #111827 !important;
+    color: white !important;
+  }
+  
+  html:not(.dark) {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+/* Fallback para navegadores que no soportan prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   .markdown-paxapos {
-    background: transparent; /* Sin fondo para integración completa */
-    color: rgb(255 255 255); /* Texto blanco */
-    border: none; /* Sin borde */
-    box-shadow: none; /* Sin sombra */
+    background: transparent;
+    color: rgb(255 255 255);
+    border: none;
+    box-shadow: none;
   }
   
   .markdown-paxapos h1 {
-    border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+    border-bottom-color: rgb(75 85 99);
   }
   
   .markdown-paxapos h2 {
-    border-bottom-color: rgb(75 85 99); /* gray-600 para bordes de headers */
+    border-bottom-color: rgb(75 85 99);
   }
   
   .markdown-paxapos h1,
@@ -179,33 +302,33 @@
   .markdown-paxapos h4,
   .markdown-paxapos h5,
   .markdown-paxapos h6 {
-    color: rgb(255 255 255); /* Títulos blancos */
+    color: rgb(255 255 255);
   }
   
   .markdown-paxapos p,
   .markdown-paxapos li {
-    color: rgb(229 231 235); /* gray-200 - Texto claro */
+    color: rgb(229 231 235);
   }
   
   .markdown-paxapos a {
-    color: rgb(96 165 250); /* blue-400 - Enlaces azules claros */
+    color: rgb(96 165 250);
   }
   
   .markdown-paxapos a:hover {
-    color: rgb(147 197 253); /* blue-300 - Hover más claro */
+    color: rgb(147 197 253);
   }
   
   .markdown-paxapos code {
-    background: rgb(55 65 81 / 0.4); /* gray-700 con transparencia */
-    color: rgb(243 244 246); /* gray-100 - Texto claro */
+    background: rgb(55 65 81 / 0.4);
+    color: rgb(243 244 246);
     padding: 2px 6px;
     border-radius: 4px;
-    border: none; /* Sin borde */
+    border: none;
   }
   
   .markdown-paxapos pre {
-    background: rgb(17 24 39 / 0.4); /* gray-900 con transparencia */
-    border: none; /* Sin borde */
+    background: rgb(17 24 39 / 0.4);
+    border: none;
     border-radius: 6px;
   }
   
@@ -216,8 +339,8 @@
   }
   
   .markdown-paxapos blockquote {
-    border-left: 4px solid rgb(75 85 99); /* gray-600 */
-    background: rgb(55 65 81 / 0.2); /* gray-700 con poca transparencia */
+    border-left: 4px solid rgb(75 85 99);
+    background: rgb(55 65 81 / 0.2);
     margin: 16px 0;
     padding: 12px 20px;
     border-radius: 0 6px 6px 0;
@@ -225,21 +348,21 @@
   
   .markdown-paxapos table {
     border-collapse: collapse;
-    border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+    border: 1px solid rgb(75 85 99 / 0.4);
   }
   
   .markdown-paxapos th,
   .markdown-paxapos td {
-    border: 1px solid rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+    border: 1px solid rgb(75 85 99 / 0.4);
     padding: 8px 12px;
   }
   
   .markdown-paxapos th {
-    background: rgb(55 65 81 / 0.3); /* gray-700 con transparencia */
-    color: rgb(255 255 255); /* Texto blanco en headers */
+    background: rgb(55 65 81 / 0.3);
+    color: rgb(255 255 255);
   }
   
   .markdown-paxapos hr {
-    border-color: rgb(75 85 99 / 0.4); /* gray-600 con transparencia */
+    border-color: rgb(75 85 99 / 0.4);
   }
 }

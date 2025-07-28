@@ -1,9 +1,7 @@
 import { writable, derived, get } from 'svelte/store';
 
-// 🎛️ CONFIGURACIÓN GLOBAL - Solo cambiar aquí
 const REPLACEMENT_WORD = "PaxaPOS"; // 👈 CAMBIAR ESTA PALABRA para toda la app
 
-// Store para cambios automáticos en toda la página
 export const brandName = writable(REPLACEMENT_WORD);
 
 const PAXAPOS_REGEX = /\b(?:pax[aá][\s\-_]*pos|paxa[\s\-_]*pos|pax[aá]pos|paxapos|PaxaPos)\b/gi;

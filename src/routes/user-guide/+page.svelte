@@ -25,43 +25,52 @@
     let contentLoaded = false;
 
     // Función para seleccionar módulo específico
-    function selectModuleById(moduleId: string) {
-        console.log('Buscando módulo con ID:', moduleId);
-        console.log('Contenido disponible:', grouped_content.map(g => g.items.map(i => i.id)).flat());
-        
+    function selectModuleById(moduleId: string, fromUrlNavigation: boolean = false) {
         for (const group of grouped_content) {
             const foundItem = group.items.find(item => item.id === moduleId);
             if (foundItem) {
-                console.log('Módulo encontrado:', foundItem);
-                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
+                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown, fromUrlNavigation);
                 return true;
             }
         }
-        console.warn('Módulo no encontrado:', moduleId);
         return false;
     }
 
+    // Variable para controlar si estamos procesando una búsqueda desde URL
+    let isProcessingUrlSearch = false;
+    let lastProcessedUrl = '';
+
     // Reactividad a cambios en la URL
-    $: if (contentLoaded && $page.url.search) {
+    $: if (contentLoaded && $page.url.search !== lastProcessedUrl) {
         const urlParams = new URLSearchParams($page.url.search);
         const moduleParam = urlParams.get('module');
+        const highlightParam = urlParams.get('highlight');
         
-        console.log('URL cambió:', $page.url.search, 'Módulo:', moduleParam);
-        
+        // Si hay parámetros de módulo en la URL
         if (moduleParam && moduleParam !== selectedModuleId) {
-            console.log('Intentando seleccionar módulo:', moduleParam);
-            if (!selectModuleById(moduleParam)) {
-                console.warn(`Módulo no encontrado: ${moduleParam}`);
+            lastProcessedUrl = $page.url.search;
+            isProcessingUrlSearch = true;
+            
+            if (!selectModuleById(moduleParam, true)) {
                 // Si no encuentra el módulo, mostrar el primero y seleccionarlo
                 if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                     selectModule(
                         grouped_content[0].items[0].id,
                         grouped_content[0].items[0].title,
                         grouped_content[0].items[0].html,
-                        grouped_content[0].items[0].rawMarkdown
+                        grouped_content[0].items[0].rawMarkdown,
+                        true
                     );
                 }
             }
+            
+            // Resetear el flag después de un breve delay
+            setTimeout(() => {
+                isProcessingUrlSearch = false;
+            }, 100);
+        } else if (!$page.url.search) {
+            // Si no hay parámetros, resetear lastProcessedUrl
+            lastProcessedUrl = '';
         }
     }
 
@@ -123,15 +132,15 @@
             const moduleParam = urlParams.get('module');
             
             if (moduleParam) {
-                if (!selectModuleById(moduleParam)) {
-                    console.warn(`Módulo no encontrado: ${moduleParam}`);
+                if (!selectModuleById(moduleParam, true)) {
                     // Fallback al primer módulo y seleccionarlo
                     if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                         selectModule(
                             grouped_content[0].items[0].id,
                             grouped_content[0].items[0].title,
                             grouped_content[0].items[0].html,
-                            grouped_content[0].items[0].rawMarkdown
+                            grouped_content[0].items[0].rawMarkdown,
+                            true
                         );
                     }
                 }
@@ -142,7 +151,8 @@
                         grouped_content[0].items[0].id,
                         grouped_content[0].items[0].title,
                         grouped_content[0].items[0].html,
-                        grouped_content[0].items[0].rawMarkdown
+                        grouped_content[0].items[0].rawMarkdown,
+                        false
                     );
                 }
             }
@@ -152,15 +162,54 @@
         }
     });
 
-    // ...existing code...
 
-
-    function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string) {
+    function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string, fromUrlNavigation: boolean = false) {
         selectedModuleId = id;
         selectedModuleName = title;
-        selectedModuleHtml = htmlContent;
-        selectedModuleRawMarkdown = rawMarkdown || ''; 
-        console.log('Módulo seleccionado:', id, title);
+        
+        // Verificar si hay término de resaltado en la URL
+        const urlParams = new URLSearchParams($page.url.search);
+        const highlightParam = urlParams.get('highlight');
+        
+        if (highlightParam && fromUrlNavigation) {
+            // Si viene de navegación por URL (búsqueda), aplicar resaltado
+            selectedModuleHtml = highlightTextInHtml(htmlContent, highlightParam);
+        } else {
+            // Si es selección manual del usuario, limpiar la URL y mostrar sin resaltado
+            if ($page.url.search && !fromUrlNavigation) {
+                const newUrl = new URL(window.location.href);
+                newUrl.searchParams.delete('module');
+                newUrl.searchParams.delete('highlight');
+                window.history.replaceState({}, '', newUrl.pathname);
+                lastProcessedUrl = '';
+            }
+            selectedModuleHtml = htmlContent;
+        }
+        
+        selectedModuleRawMarkdown = rawMarkdown || '';
+    }
+
+    // Función para resaltar texto en HTML de manera más elegante
+    function highlightTextInHtml(html: string, searchTerm: string): string {
+        if (!searchTerm || !html) return html;
+        
+        // Escapar caracteres especiales del término de búsqueda
+        const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        
+        // Crear regex con flag global para encontrar todas las coincidencias
+        const regex = new RegExp(`(${escapedTerm})`, 'gi');
+        
+        // Limitar a máximo 4 resaltados para evitar sobrecarga visual
+        let matchCount = 0;
+        const maxMatches = 4;
+        
+        return html.replace(regex, (match) => {
+            if (matchCount >= maxMatches) {
+                return match; // Devolver sin resaltar si ya llegamos al límite
+            }
+            matchCount++;
+            return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
+        });
     }
 
     function handleLLMIntegration(moduleId: string, moduleName: string) {
@@ -209,7 +258,7 @@
         for (const group of grouped_content) {
             const foundItem = group.items.find(item => item.id === selectedValue);
             if (foundItem) {
-                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
+                selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown, false);
                 break;
             }
         }
@@ -250,7 +299,7 @@
                             <nav class="space-y-1 sm:space-y-1.5 pl-2 sm:pl-3">
                                 {#each group.items as item}
                                     <button
-                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
+                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown, false)}
                                         class="block w-full text-left text-xs sm:text-sm md:text-base p-1.5 sm:p-2 md:p-2.5 rounded-md transition-colors duration-200 cursor-pointer leading-relaxed min-h-[44px] touch-manipulation
                                         {selectedModuleId === item.id
                                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
