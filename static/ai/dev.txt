@@ -1,0 +1,91 @@
+# General - Documentation one
+
+# Introduccion a las Integraciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+# General - Sample two
+
+# Pasarelas de Pago
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+# General - svelte mdtest
+
+# Welcome to the Svelte Markdown Test
+
+This Markdown file is designed to help you test how different elements render in your Svelte application.
+
+---
+
+## 🌄 Hero Section
+
+![Sunset Over Mountains](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60)
+
+> *"Nature always wears the colors of the spirit."* — Ralph Waldo Emerson
+
+---
+
+## 📋 Features List
+
+### 🚀 Benefits of Using Svelte
+
+- Fast and lightweight
+- Reactive by design
+- No virtual DOM
+- Great developer experience
+- Small bundle sizes
+
+### ✅ What This Markdown Tests
+
+1. Headings and subheadings
+2. Ordered and unordered lists
+3. Embedded images
+4. Blockquotes and emphasis
+5. Inline `code` and code blocks
+6. Tables and links
+
+---
+
+## 🔧 Code Example
+
+Here’s a quick Svelte component snippet in Markdown:
+
+```svelte
+<script>
+  let count = 0;
+</script>
+
+<button on:click={() => count++}>
+  Count is {count}
+</button>
+
+
+---
+
+# General - Webhooks
+
+# Webhooks en Integraciones
+
+Los webhooks son una herramienta poderosa para integrar sistemas en tiempo real. Permiten que una aplicación envíe datos a otra tan pronto como ocurre un evento.
+
+## 🧩 ¿Cómo funcionan?
+
+Un sistema emisor realiza una solicitud HTTP (generalmente POST) a una URL del sistema receptor. Este último debe estar preparado para manejar dicha solicitud.
+
+```json
+{
+  "evento": "nuevo_registro",
+  "datos": {
+    "id": 123,
+    "nombre": "Juan Pérez"
+  }
+}
+
+
+---
+
