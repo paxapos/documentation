@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
-	import ChatBotIntelligent from '$lib/components/ChatBotIntelligent.svelte';
+	import ChatBotSimple from '$lib/components/ChatBotSimple.svelte';
 	import { autoReplaceBrand } from '$lib/helpers/textReplacer';
 	import { onMount } from 'svelte';
 	import { initThemeStore } from '$lib/stores/theme';
@@ -26,8 +26,8 @@
 		{@render children()}
 	</main>
 
-	<!-- ChatBot inteligente flotante -->
-	<ChatBotIntelligent />
+	<!-- ChatBot simple y optimizado -->
+	<ChatBotSimple />
 </div>
 
 <style>

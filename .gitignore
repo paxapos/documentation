@@ -10,7 +10,8 @@ node_modules
 
 # Evitar archivos duplicados del ChatBot
 **/ChatBot.svelte
-!**/ChatBotIntelligent.svelte
+**/ChatBotIntelligent*.svelte
+!**/ChatBotSimple.svelte
 
 # Archivos temporales y backups
 **/*.bak
