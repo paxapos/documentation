@@ -8,6 +8,16 @@ node_modules
 /.svelte-kit
 /build
 
+# Evitar archivos duplicados del ChatBot
+**/ChatBot.svelte
+!**/ChatBotIntelligent.svelte
+
+# Archivos temporales y backups
+**/*.bak
+**/*.tmp
+**/*.temp
+**/~*
+
 # OS
 .DS_Store
 Thumbs.db

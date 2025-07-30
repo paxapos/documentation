@@ -1,40 +1,13 @@
 import { writable, derived, get } from 'svelte/store';
 
-const REPLACEMENT_WORD = "PaxaPOS"; // 👈 CAMBIAR ESTA PALABRA para toda la app
+const REPLACEMENT_WORD = "PaxaPOS";
 
 export const brandName = writable(REPLACEMENT_WORD);
 
 const PAXAPOS_REGEX = /\b(?:pax[aá][\s\-_]*pos|paxa[\s\-_]*pos|pax[aá]pos|paxapos|PaxaPos)\b/gi;
 
-// Store derivado que reacciona a cambios
-export const brandReplacer = derived(brandName, ($brandName) => ({
-    replace: (content: string): string => {
-        if (!content || !$brandName.trim()) return content;
-        
-        return content.replace(PAXAPOS_REGEX, (match) => {
-            let separator = '';
-            if (match.includes(' ')) separator = ' ';
-            else if (match.includes('-')) separator = '-';
-            else if (match.includes('_')) separator = '_';
-            
-            let replacement = $brandName.trim();
-            
-            if (separator && match.toLowerCase().includes('pos')) {
-                replacement = replacement + separator + 'POS';
-            }
-            
-            if (match === match.toUpperCase()) {
-                return replacement.toUpperCase();
-            } else if (match[0] === match[0].toUpperCase()) {
-                return replacement.charAt(0).toUpperCase() + replacement.slice(1);
-            } else {
-                return replacement.toLowerCase();
-            }
-        });
-    }
-}));
-
-export function replacePaxaPOS(content: string, newWord: string = REPLACEMENT_WORD): string {
+// Función principal de reemplazo
+function replaceText(content: string, newWord: string): string {
     if (!content || !newWord.trim()) return content;
     
     return content.replace(PAXAPOS_REGEX, (match) => {
@@ -49,6 +22,7 @@ export function replacePaxaPOS(content: string, newWord: string = REPLACEMENT_WO
             replacement = replacement + separator + 'POS';
         }
         
+        // Mantener el caso original
         if (match === match.toUpperCase()) {
             return replacement.toUpperCase();
         } else if (match[0] === match[0].toUpperCase()) {
@@ -59,6 +33,16 @@ export function replacePaxaPOS(content: string, newWord: string = REPLACEMENT_WO
     });
 }
 
+// Store derivado que reacciona a cambios
+export const brandReplacer = derived(brandName, ($brandName) => ({
+    replace: (content: string): string => replaceText(content, $brandName)
+}));
+
+export function replacePaxaPOS(content: string, newWord: string = REPLACEMENT_WORD): string {
+    return replaceText(content, newWord);
+}
+
+// Función para procesar contenido agrupado
 export function processGroupedContent(groupedContent: any[], newWord: string = REPLACEMENT_WORD): any[] {
     return groupedContent.map(group => ({
         ...group,
@@ -72,11 +56,12 @@ export function processGroupedContent(groupedContent: any[], newWord: string = R
     }));
 }
 
+// Función para preparar contenido para exportación
 export function prepareForExport(markdownContent: string, newWord: string = REPLACEMENT_WORD): string {
     return replacePaxaPOS(markdownContent, newWord);
 }
 
-// 🔄 NUEVA FUNCIÓN para cambiar la marca globalmente
+// Funciones de utilidad
 export function setBrandGlobally(newBrand: string) {
     brandName.set(newBrand);
 }
@@ -85,7 +70,7 @@ export function getBrandName(): string {
     return get(brandName);
 }
 
-// 🤖 ACTION para reemplazar automáticamente en toda la página
+// Action para reemplazar automáticamente en toda la página
 export function autoReplaceBrand(node: HTMLElement) {
     let unsubscribe: (() => void) | null = null;
     
