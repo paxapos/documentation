@@ -25,7 +25,8 @@
 Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** "Stock de Mercadería"
+1. **Entrá a:** "Productos"
+2. **clic en:** "Mercaderias"
 2. **Clic en:** "Nueva Mercadería"
 3. **Completá la ficha:**
 

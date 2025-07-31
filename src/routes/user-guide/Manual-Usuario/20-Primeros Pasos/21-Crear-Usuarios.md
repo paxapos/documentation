@@ -59,12 +59,6 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ---
 
-## ✅ **¿Ya creaste a todo tu equipo?**
-
-**Próximo paso importante:** [Configurar Tipos de Pago →](./22-Tipos-De-Pago.md)
-
----
-
 ## �� **Consejos importantes para no tener problemas**
 - ✅ **Creá usuarios solo para personas que realmente van a usar el sistema**
 - ✅ **Usá contraseñas diferentes para cada usuario** (nunca la misma para todos)

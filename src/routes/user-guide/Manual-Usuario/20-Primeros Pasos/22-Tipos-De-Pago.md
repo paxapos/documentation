@@ -66,12 +66,6 @@ Completá estos campos según el tipo de pago que estés agregando:
 
 ---
 
-## ✅ **¿Ya configuraste todos tus métodos de pago?**
-
-**Próximo paso importante:** [Agregar Personal →](./23-Agregar-Personal.md)
-
----
-
 ## 💡 **Consejos importantes**
 - ✅ **Configurá SIEMPRE el efectivo primero** (es el más básico)
 - ✅ **Verificá las comisiones con tu banco** (pueden cambiar)

@@ -28,13 +28,5 @@ Con una interfaz moderna e intuitiva, PaxaPOS acompaña el trabajo diario, ayuda
 | ✔️ **Personalización total** | Adaptalo 100% a tu negocio | Configurar menús, precios, promociones |
 | ✔️ **Control remoto** | Monitoreá desde cualquier lugar | Ver tu negocio desde casa o vacaciones |
 
-## 🚀 **Tus próximos pasos**
-Seguí estos pasos en orden para empezar:
-
-1. 🔑 **[Iniciar sesión →](./12-Iniciar-sesión.md)** - Ingresá al sistema
-2. 👥 **[Crear usuarios →](../20-Primeros%20Pasos/21-Crear-Usuarios.md)** - Agregá a tu equipo  
-3. 💳 **[Configurar pagos →](../20-Primeros%20Pasos/22-Tipos-De-Pago.md)** - Habilitá formas de pago
-4. 🍽️ **[Cargar menú →](../20-Primeros%20Pasos/25-Menú.md)** - Agregá tus productos
-
 ---
 💡 **¿Necesitás ayuda?** Nuestro ChatBot está disponible 24/7 en la esquina inferior derecha. 

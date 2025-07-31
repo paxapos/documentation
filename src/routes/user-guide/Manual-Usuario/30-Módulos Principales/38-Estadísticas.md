@@ -95,27 +95,6 @@ Para saber quién vende más y premiar a los mejores empleados (o ayudar a los q
 ### **🎯 ¿Para qué sirve?**
 Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 
-### **📊 Distribución típica:**
-
-| Tipo de Pago | Ejemplo de monto | % del total |
-|--------------|------------------|-------------|
-| **Efectivo** | $45.000 | 60% |
-| **Tarjeta Débito** | $18.000 | 24% |
-| **Tarjeta Crédito** | $9.000 | 12% |
-| **MercadoPago** | $3.000 | 4% |
-
-### **💡 Decisiones que podés tomar:**
-
-#### **🏪 Gestión de caja:**
-- **Más efectivo = Más cambio necesario**
-- **Más tarjeta = Menos efectivo para gastos**
-- **Comisiones de tarjeta = Calcular costos**
-
-#### **🎯 Estrategias comerciales:**
-- **Promociones con efectivo** (para aumentar %)
-- **Descuentos con tarjeta** (para reducir manejo de efectivo)
-- **QR/MercadoPago** (para clientes jóvenes)
-
 ---
 
 ## 🔄 **¿Cómo usar las estadísticas en el día a día?**
@@ -152,22 +131,6 @@ Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 - **Socio:** Todos los reportes principales
 - **Gerente:** Reportes por mozo y ventas diarias
 - **Banco:** Reportes anuales (para créditos)
-
----
-
-## 💡 **Consejos para sacar el máximo provecho**
-
-### **🎯 Para tomar decisiones:**
-- ✅ **No te guíes solo por un día** → Mirá tendencias de semanas
-- ✅ **Compará siempre** → Mismo período año anterior
-- ✅ **Mirá patrones** → ¿Qué días vendés más?
-- ✅ **Identifica problemas** → ¿Por qué bajaron las ventas?
-
-### **📊 Para el crecimiento:**
-- ✅ **Premiá a los mejores mozos** → Motivación del equipo
-- ✅ **Optimizá formas de pago** → Según preferencias clientes
-- ✅ **Controlá gastos** → Para aumentar ganancias
-- ✅ **Planificá stock** → Según patrones de venta
 
 ---
 

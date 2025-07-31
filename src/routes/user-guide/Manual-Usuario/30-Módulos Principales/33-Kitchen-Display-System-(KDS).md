@@ -20,45 +20,10 @@
 
 ---
 
-## 🍽️ **¿Cómo funciona el KDS paso a paso?**
-
-### **🔄 Flujo completo:**
-
-```
-1. 📱 Mozo toma pedido en mesa
-   ↓
-2. 🖥️ Pedido aparece AUTOMÁTICAMENTE en pantalla KDS
-   ↓
-3. 👨‍🍳 Cocinero ve el pedido y empieza a cocinar
-   ↓
-4. ⏰ Sistema muestra tiempo transcurrido
-   ↓
-5. ✅ Cocinero marca "LISTO" cuando termina
-   ↓
-6. 🔔 Mozo recibe notificación que está listo
-   ↓
-7. 🍽️ Mozo retira y lleva a la mesa
-```
-
----
-
-## 🎨 **Estados de los pedidos en KDS**
-
-Los pedidos cambian de color según su estado:
-
-| Color | Estado | Qué significa | Qué hacer |
-|-------|--------|---------------|-----------|
-| **🟢 Verde** | Nuevo pedido | Recién llegó | Empezar a cocinar |
-| **🟡 Amarillo** | En preparación | Se está cocinando | Continuar cocinando |
-| **🔴 Rojo** | Demora | Pasó mucho tiempo | ¡URGENTE! Terminar YA |
-| **🔵 Azul** | Listo | Plato terminado | Esperar que lo retiren |
-
----
-
 ## 📊 **Organización inteligente de pedidos**
 
 ### **🏷️ Ruteo automático por estación:**
-El sistema puede separar automáticamente los pedidos:
+El sistema puede separar los pedidos:
 
 | Estación | Qué aparece | Ejemplo de productos |
 |----------|-------------|---------------------|
@@ -70,7 +35,6 @@ El sistema puede separar automáticamente los pedidos:
 ### **⏰ Orden por tiempo:**
 - Los pedidos más antiguos aparecen **ARRIBA**
 - Los más nuevos aparecen **ABAJO**
-- **Colores de alerta** cuando pasa mucho tiempo
 
 ---
 
@@ -79,7 +43,6 @@ El sistema puede separar automáticamente los pedidos:
 ### **👨‍🍳 Para los cocineros:**
 - ✅ **Ven todos los pedidos** de un vistazo
 - ✅ **No se pierden comandas** nunca más
-- ✅ **Saben qué es urgente** por los colores
 - ✅ **Mejor organización** del trabajo
 - ✅ **Menos estrés** al tener todo claro
 
@@ -87,9 +50,6 @@ El sistema puede separar automáticamente los pedidos:
 - ✅ **Servicio más rápido** = clientes más felices
 - ✅ **Menos errores** = menos comida desperdiciada
 - ✅ **Mejor comunicación** entre salón y cocina
-- ✅ **Control de tiempos** = mejor gestión
-- ✅ **Imagen más profesional**
-
 ---
 
 ## 🔧 **¿Cómo configurar el KDS?**
@@ -97,15 +57,14 @@ El sistema puede separar automáticamente los pedidos:
 ### **📋 Requisitos básicos:**
 1. **Pantalla o tablet** para la cocina
 2. **Conexión a internet** estable
-3. **Navegador web** (Chrome recomendado)
+3. **Navegador web**
 4. **Mozos configurados** en el sistema
 
 ### **⚙️ Pasos para activar:**
 1. Acceder al módulo **"KDS"** desde el menú principal
-2. Configurar las **estaciones de cocina** (fríos, calientes, etc.)
-3. Asignar **productos** a cada estación
-4. Configurar **tiempos de alerta** (ej: 15 minutos = rojo)
-5. **Probar** con pedidos de prueba
+2. Configurar los **Puestos de cocina** (barra, cocina, parrilla.)
+3. Asignar **productos** a cada puesto
+4. **Probar** con pedidos de prueba
 
 ---
 
@@ -128,13 +87,11 @@ El sistema puede separar automáticamente los pedidos:
 ## 💡 **Consejos para usar el KDS eficientemente**
 - ✅ **Capacitá a todos los cocineros** en el sistema
 - ✅ **Marcá "listo"** apenas termines cada plato
-- ✅ **Mirá los colores** para priorizar urgencias
 - ✅ **Mantené la pantalla limpia** y visible
-- ✅ **Configurá bien los tiempos** de alerta
 
 ## 🚨 **¿Problemas comunes?**
 - **"No aparecen pedidos"** → Verificá la conexión a internet
 - **"Pantalla muy lenta"** → Reiniciá el navegador
 - **"No se marcan como listos"** → Verificá que funcione el touch
-- **"Colores confusos"** → Ajustá los tiempos de alerta
+
 
