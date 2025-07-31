@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-07-31T18:19:34.836Z",
+  "features": {
+    "documentation": true,
+    "search": true,
+    "navigation": true
+  }
+}

@@ -289,8 +289,8 @@ Administra accesos al sistema:
 
 		// 2. Si no encuentra en el manual, usar FAQ como fallback
 		const keyword = detectKeyword(question);
-		if (keyword && faqResponses[keyword]) {
-			return faqResponses[keyword];
+		if (keyword && keyword in faqResponses) {
+			return faqResponses[keyword as keyof typeof faqResponses];
 		}
 
 		// 3. Respuesta por defecto con sugerencias
