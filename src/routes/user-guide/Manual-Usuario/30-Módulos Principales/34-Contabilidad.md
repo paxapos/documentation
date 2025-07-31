@@ -1,72 +1,181 @@
-# Módulo de Contabilidad
+# 📊 Módulo de Contabilidad
 
-Antes de registrar cualquier factura o gasto en tu sistema, es esencial que realices una configuración inicial. Esta preparación asegura que todas tus transacciones se registren correctamente y cumplan con los requisitos fiscales y contables. Deberás configurar los *proveedores*, los *impuestos* y las *clasificaciones* de gastos.
+> 🎯 **¿Para qué sirve esto?**  
+> Acá manejás todos los gastos de tu negocio: registrás las facturas de proveedores, controlás qué debés, pagás las cuentas, y todo queda ordenado para fin de mes y la contabilidad.
 
-## Acceso a la Configuración de Contabilidad
+---
 
-1.  Una vez dentro del sistema, dirígete a la sección de *"Contabilidad"*.
-2.  Dentro del módulo de Contabilidad, busca y haz clic en la *"P" roja*. Este ícono te llevará a las opciones de configuración de los apartados necesarios: Impuestos, Clasificaciones y Proveedores.
+## ⚠️ **SÚPER IMPORTANTE: Configurá antes de empezar**
 
+Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos básicos:
 
-## 1. Configuración de Impuestos
+```
+🏗️ ORDEN DE CONFIGURACIÓN:
+1️⃣ Impuestos (IVA, etc.)
+   ↓
+2️⃣ Clasificaciones (tipos de gastos)
+   ↓
+3️⃣ Proveedores (quién te vende)
+   ↓
+✅ Recién ahí podés cargar facturas
+```
 
-Este módulo te permite definir los diferentes tipos de impuestos que aplicarán a tus transacciones.
+### **🔴 ¿Dónde está la configuración?**
+1. **Entrá a "Contabilidad"**
+2. **Buscá la "P roja"** 🔴 (es el ícono de configuración)
+3. **Hacé clic** y se abren todas las opciones
 
-1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo Impuestos"*.
-2.  Haz clic en el botón *"Crear Tipo de Impuesto"*.
-3.  Se abrirá una ventana donde deberás ingresar la siguiente información:
-    * *Nombre de Impuesto:* Asigna un nombre claro al impuesto (ej., "IVA 21%", "IVA 10.5%").
-    * *Porcentaje de Impuesto:* Ingresa el valor porcentual del impuesto (ej., 21, 10.5).
-    * *Código de AFIP:* Introduce el código oficial de la Administración Federal de Ingresos Públicos (AFIP) correspondiente a este impuesto.
-    * Marca las opciones correspondientes:
-        * *Tiene Neto:* Selecciona si este impuesto aplica sobre una base imponible neta.
-        * *Tiene Impuesto:* Selecciona si este impuesto se calcula sobre un monto que ya incluye otro impuesto.
-4.  Haz clic en *"Guardar"* para crear el tipo de impuesto.
+---
 
+## 🧾 **1. Configurar Impuestos**
 
-## 2. Configuración de Clasificaciones de Factura
+### **🚀 Paso a paso:**
+1. **Entrá a:** P roja → "Módulo Impuestos"
+2. **Clic en:** "Crear Tipo de Impuesto"
+3. **Completá los datos:**
 
-Las clasificaciones te ayudarán a organizar tus gastos y facturas por categorías, facilitando el análisis y la generación de reportes contables.
+| Campo | Qué poner | Ejemplo |
+|-------|-----------|---------|
+| **Nombre de Impuesto** | Nombre claro | "IVA 21%" |
+| **Porcentaje** | Número sin el % | 21 |
+| **Código AFIP** | Código oficial | 0005 |
+| **Tiene Neto** | ☑️ Si aplica sobre base neta | ✅ |
+| **Tiene Impuesto** | ☑️ Si se calcula sobre impuesto | ❌ |
 
-1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo de Listado de Clasificaciones"*.
-2.  Aquí podrás crear las categorías para tus facturas. Ejemplos comunes incluyen:
-    * *Mano de Obra*
-    * *Gasto Operativo*
-    * *Mercadería*
-    * *Servicios Públicos*
-    * *Alquileres*
-3.  Asegúrate de agregar todas las clasificaciones relevantes para tu comercio.
+### **💡 Impuestos comunes que vas a necesitar:**
+- **IVA 21%** (productos normales)
+- **IVA 10.5%** (alimentos básicos)
+- **IVA 27%** (servicios especiales)
+- **Exento** (sin IVA)
 
+### **🔄 Después de crear:**
+4. **Clic en "Guardar"**
+5. **Repetir** para cada tipo de impuesto que uses
 
-## 3. Configuración de Proveedores
+---
 
-Es fundamental registrar a tus proveedores para poder asociar las facturas de gasto con la entidad correcta y llevar un seguimiento de tus deudas.
+## 📂 **2. Configurar Clasificaciones**
 
-1.  Dentro del apartado de la *"P" roja*, selecciona el *"Módulo Proveedores"*.
-2.  Haz clic en el botón *"Crear Proveedores"*.
-3.  Se abrirá una ventana en la cual deberás cargar la información de tu proveedor:
-    * *Nombre:* Nombre o razón social del proveedor.
-    * *Tipo de Impuesto:* Selecciona el tipo de impuesto al que está sujeto este proveedor (ej., "IVA Responsable Inscripto", "Monotributista").
-    * *Teléfono:* Número de contacto del proveedor.
-    * *Documento:* Tipo de documento de identificación (ej., "CUIT", "DNI").
-    * *Número de Documento:* Número correspondiente al tipo de documento seleccionado.
-    * *(Cualquier otro campo adicional como dirección, email, etc.)*
-4.  Haz clic en *"Guardar"* para registrar al proveedor.
+### **🎯 ¿Para qué sirve?**
+Para ordenar tus gastos en categorías y después poder hacer reportes (ej: "¿cuánto gasté en mercadería este mes?")
 
+### **🚀 Paso a paso:**
+1. **Entrá a:** P roja → "Módulo de Listado de Clasificaciones"
+2. **Creá estas categorías básicas:**
 
-## Carga de Facturas de Gasto
+| Clasificación | Para qué gastos | Ejemplos |
+|---------------|-----------------|----------|
+| **Mercadería** | Productos para vender | Verduras, carnes, bebidas |
+| **Mano de Obra** | Personal y sueldos | Sueldos, jornales, extras |
+| **Servicios Públicos** | Luz, gas, agua | Edenor, Metrogas, AySA |
+| **Gasto Operativo** | Gastos del día a día | Limpieza, bolsas, servilletas |
+| **Alquileres** | Local, depósito | Alquiler local, cochera |
 
-Una vez que hayas configurado los impuestos, clasificaciones y proveedores, ya puedes comenzar a cargar tus facturas y gastos.
+### **💡 Tip:** Agregá las que necesites para tu tipo de negocio
 
-1.  Desde el módulo de *"Contabilidad"*, dirígete a la pestaña *"Resumen de Deuda"*.
-2.  Haz clic en el botón *"Nuevo Gasto"*.
-3.  Se abrirá una pestaña o ventana donde deberás ingresar los detalles del gasto:
-    * *Proveedor:* Selecciona el proveedor de la lista que configuraste previamente.
-    * *Tipo de Factura:* Elige el tipo de comprobante (ej., "Factura A", "Factura B", "Ticket").
-    * *Datos de la Factura:* Ingresa el número de factura, fecha, monto total, etc.
-    * *Clasificación:* Selecciona la clasificación que corresponda a este gasto (ej., "Mercadería", "Gasto Operativo").
-    * *Observación (Opcional):* Puedes agregar una nota o detalle relevante sobre el gasto.
-4.  Una vez completados los campos, tendrás dos opciones de guardado:
-    * *Guardar como Pagada:* Selecciona esta opción si el gasto ya fue abonado. El sistema generará el registro del gasto y aplicará el pago automáticamente.
-    * *Continuar sin Pagar:* Elige esta opción si el gasto aún no ha sido abonado. La factura quedará registrada como una deuda pendiente en tu "Resumen de Deuda", y podrás registrar su pago o método de pago más adelante.
+---
 
+## 🏪 **3. Configurar Proveedores**
+
+### **🎯 ¿Para qué sirve?**
+Para registrar quién te vende qué, y llevar control de lo que debés a cada uno.
+
+### **🚀 Paso a paso:**
+1. **Entrá a:** P roja → "Módulo Proveedores"
+2. **Clic en:** "Crear Proveedores"
+3. **Completá la ficha:**
+
+| Campo | Qué poner | Ejemplo |
+|-------|-----------|---------|
+| **Nombre** | Nombre o razón social | "Verdulería Don José" |
+| **Tipo de Impuesto** | Cómo factura | "IVA Responsable Inscripto" |
+| **Teléfono** | Número de contacto | 011-4567-8910 |
+| **Documento** | Tipo de documento | CUIT |
+| **Número de Documento** | Número del documento | 20-12345678-9 |
+
+### **🔄 Después de crear:**
+4. **Clic en "Guardar"**
+5. **Repetir** para cada proveedor que tengas
+
+---
+
+## 💰 **Cargar Facturas de Gasto**
+
+### **✅ Una vez que tengas todo configurado, podés empezar a cargar gastos:**
+
+### **🚀 Paso a paso:**
+1. **Desde Contabilidad** → Pestaña "Resumen de Deuda"
+2. **Clic en:** "Nuevo Gasto"
+3. **Completá los datos de la factura:**
+
+| Campo | Qué poner | Ejemplo |
+|-------|-----------|---------|
+| **Proveedor** | Elegir de la lista | Verdulería Don José |
+| **Tipo de Factura** | Tipo de comprobante | Factura B |
+| **Número de Factura** | Número del comprobante | 0001-00001234 |
+| **Fecha** | Fecha de la factura | 15/01/2024 |
+| **Monto Total** | Total a pagar | $25.000 |
+| **Clasificación** | Tipo de gasto | Mercadería |
+| **Observación** | Nota opcional | "Compra verduras enero" |
+
+### **🎯 Al final tenés 2 opciones:**
+
+#### **💳 Opción 1: "Guardar como Pagada"**
+- **Cuándo usar:** Ya pagaste la factura
+- **Qué pasa:** Se registra el gasto Y el pago automáticamente
+- **Resultado:** Queda todo cerrado ✅
+
+#### **📋 Opción 2: "Continuar sin Pagar"**
+- **Cuándo usar:** Todavía no pagaste (quedás debiendo)
+- **Qué pasa:** Se registra solo el gasto, queda pendiente de pago
+- **Resultado:** Aparece en "Resumen de Deuda" para pagar después
+
+---
+
+## 📈 **¿Cómo funciona el flujo completo?**
+
+```
+📝 Llega factura del proveedor
+   ↓
+💾 La cargás en el sistema
+   ↓
+🤔 ¿Ya la pagaste?
+   ↓
+✅ SÍ → "Guardar como Pagada" → Listo ✅
+❌ NO → "Continuar sin Pagar" → Queda en deudas
+   ↓
+💰 Después la pagás desde "Resumen de Deuda"
+   ↓
+✅ Todo cerrado y ordenado
+```
+
+---
+
+## 💡 **Consejos para un uso perfecto**
+
+### **📋 Organización:**
+- ✅ **Cargá las facturas** apenas las recibís
+- ✅ **Revisá el "Resumen de Deuda"** todas las semanas
+- ✅ **Pagá a tiempo** para evitar recargos
+- ✅ **Usá buenas clasificaciones** para hacer reportes después
+
+### **📊 Para contabilidad:**
+- ✅ **Exportá reportes** mensualmente
+- ✅ **Guardá los comprobantes** físicos
+- ✅ **Verificá que coincidan** los totales
+- ✅ **Consultá con tu contador** sobre clasificaciones
+
+---
+
+## 🚨 **¿Problemas comunes?**
+
+| Problema | Solución |
+|----------|----------|
+| **"No puedo cargar la factura"** | Verificá que tengas creado el proveedor |
+| **"No aparece el impuesto"** | Creá el tipo de impuesto primero |
+| **"No sé qué clasificación usar"** | Consultá con tu contador |
+| **"Se cargó mal un gasto"** | Podés editarlo desde el listado |
+| **"No coinciden los totales"** | Revisá que todos los impuestos estén bien configurados |
+
+### **📞 ¿Seguís con dudas?**
+Consultá con tu contador o administrador del sistema.
