@@ -331,15 +331,15 @@ Administra accesos al sistema:
 	}
 
 	function formatBotMessage(text: string): string {
-		return text
-			.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-			// Enlaces con emoji y formato bold: 🔗 **[texto](url)**
-			.replace(/🔗 \*\*\[([^\]]+)\]\(([^)]+)\)\*\*/g, '<a href="$2" class="inline-block mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors" target="_blank">$1</a>')
-			// Enlaces simples: [texto](url)
-			.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:text-blue-700 underline font-medium" target="_blank">$1</a>')
-			// Bullet points con •
-			.replace(/• /g, '<span class="text-blue-600">•</span> ');
-	}
+        return text
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Enlaces con emoji y formato bold: 🔗 **[texto](url)** - SIN target="_blank"
+            .replace(/🔗 \*\*\[([^\]]+)\]\(([^)]+)\)\*\*/g, '<a href="$2" class="inline-block mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">$1</a>')
+            // Enlaces simples: [texto](url) - SIN target="_blank"
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:text-blue-700 underline font-medium">$1</a>')
+            // Bullet points con •
+            .replace(/• /g, '<span class="text-blue-600">•</span> ');
+    }
 
 	function handleKeyDown(event: KeyboardEvent) {
 		if (event.key === 'Enter' && !event.shiftKey) {
