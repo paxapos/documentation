@@ -109,13 +109,6 @@ Antes de cargar productos, creá las categorías:
 - **Ganancia:** $510
 
 ---
-
-## ✅ **¿Ya cargaste tu menú básico?**
-
-**Próximo paso:** [Configurar Salón →](../30-Módulos%20Principales/32-Salón.md)
-
----
-
 ## 💡 **Consejos para un menú perfecto**
 - ✅ **Empezá con lo básico** (5-10 productos más vendidos)
 - ✅ **Usá nombres claros** (evitá nombres rebuscados)

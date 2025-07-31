@@ -88,12 +88,6 @@ Vas a ver estas opciones importantes. Te explico qué hace cada una:
 
 ---
 
-## ✅ **¿Ya configuraste todas las impresoras?**
-
-**Próximo paso:** [Configurar Menú →](./25-Menú.md)
-
----
-
 ## 💡 **Consejos importantes**
 - ✅ **Probá SIEMPRE** cada impresora después de configurarla
 - ✅ **Tené papel suficiente** en todas las impresoras

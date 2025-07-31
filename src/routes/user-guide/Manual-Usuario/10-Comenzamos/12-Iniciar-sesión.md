@@ -61,7 +61,3 @@ Si los datos son correctos, vas a ingresar al **panel principal** de PaxaPOS don
 - O escribí al **soporte técnico**
 
 ---
-
-## 🎯 **Próximo paso**
-Una vez que ingreses exitosamente, seguí con: **[Crear Usuarios →](../20-Primeros%20Pasos/21-Crear-Usuarios.md)**
-

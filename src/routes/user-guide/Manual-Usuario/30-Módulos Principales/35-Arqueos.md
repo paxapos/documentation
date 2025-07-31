@@ -29,7 +29,6 @@ Cuando entres al módulo, vas a ver todos los **cierres de caja** organizados po
 - **💵 Dinero inicial:** Con cuánto empezaste el día
 - **💰 Total cobrado:** Cuánto llevás vendido hasta ahora
 - **⏰ Tiempo abierto:** Hace cuánto está abierta la caja
-- **📈 Ventas en tiempo real:** Se actualiza automáticamente
 
 ### **🔄 Cómo funciona:**
 ```

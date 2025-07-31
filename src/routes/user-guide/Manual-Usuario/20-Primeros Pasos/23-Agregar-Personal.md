@@ -70,13 +70,6 @@ En **Rol de Dicho Mozo** elegí:
 - ✅ Menos confusión
 
 ---
-
-## ✅ **¿Ya agregaste a todo tu personal?**
-
-**Próximo paso:** [Configurar Impresoras →](./24-Configuración-de-Impresoras.md)
-
----
-
 ## 💡 **Consejos importantes**
 - ✅ **Usá alias cortos y fáciles** (Juancho en vez de Juan Carlos)
 - ✅ **Agregá fotos si podés** (facilita identificar quién es quién)
