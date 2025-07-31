@@ -1,52 +1,188 @@
-# Estadísticas y Reportes
+# 📊 Estadísticas y Reportes
 
-El módulo de **Estadísticas y Reportes** te permite visualizar de forma clara e intuitiva todos los movimientos económicos de tu comercio. Aquí encontrarás herramientas poderosas para analizar tus ventas, ingresos, egresos y el desempeño de tu equipo, lo que facilitará la toma de decisiones estratégicas para tu negocio.
+> 🎯 **¿Para qué sirve esto?**  
+> Acá ves TODO lo que pasa con tu plata: cuánto vendiste, cuánto gastaste, quién vende más, qué formas de pago prefieren los clientes. Es tu "radiografía del negocio".
 
+---
 
-## Acceso al Módulo
+## 🔍 **¿Dónde encuentro las estadísticas?**
+1. **Clic en:** "Estadísticas y Reportes" (en el menú principal)
+2. **Se abre:** Un submenú con todas las opciones de reportes
+3. **Elegí:** El tipo de reporte que necesitás
 
-Para acceder a las estadísticas y reportes, sigue estos pasos:
+---
 
-1.  Hacé clic en la opción **"Estadísticas y Reportes"** en el menú principal.
-2.  Se desplegará un submenú con las diferentes opciones de reportes disponibles.
+## 💰 **1. Ventas Totales**
 
+### **🎯 ¿Para qué sirve?**
+Para saber si ganás o perdés plata, y ver cómo va tu negocio día a día.
 
-## 1. Ventas Totales
+### **📈 Lo que vas a ver:**
 
-Esta sección te ofrece un **resumen completo de los ingresos y egresos** de tu comercio. Es ideal para tener una visión general del rendimiento financiero en un período determinado y comprender la salud económica de tu negocio.
+| Información | Qué te dice | Ejemplo |
+|-------------|-------------|---------|
+| **Ingresos** | Cuánto vendiste | $150.000 |
+| **Egresos** | Cuánto gastaste | $80.000 |
+| **Ganancia** | Lo que te quedó | $70.000 |
 
-* **Resumen de Ingresos y Egresos:** Visualizá rápidamente la diferencia entre lo que ingresó y lo que se gastó.
-* **Filtro por Fechas:** Personalizá los reportes seleccionando rangos de fechas específicos (día, semana, mes, año o un período personalizado), permitiendo un análisis detallado según tus necesidades.
-* **Gasto por Día:** Presentado en un *gráfico o tabla*, muestra los egresos diarios, lo que te permite identificar tendencias de gastos y picos de consumo.
-* **Ventas por Día:** Presentado en un *gráfico o tabla*, ilustra los ingresos diarios, ideal para monitorear el rendimiento de las ventas y la efectividad de tus estrategias.
+### **🔧 Filtros útiles:**
+- **📅 Por fecha:** Hoy, esta semana, este mes, año completo
+- **📊 Gráficos:** Ventas por día (para ver tendencias)
+- **💸 Gastos diarios:** Para controlar en qué se va la plata
 
+### **💡 Consejos de uso:**
+- ✅ **Mirá diariamente:** Para detectar problemas rápido
+- ✅ **Compará meses:** Para ver si crecés o bajás
+- ✅ **Días de la semana:** Para saber cuándo vendés más
 
-## 2. Reporte Anual
+---
 
-El Reporte Anual proporciona una **visión global del desempeño económico de tu comercio a lo largo de todo el año.** Este informe es crucial para la planificación a largo plazo y para evaluar el crecimiento anual.
+## 📅 **2. Reporte Anual**
 
-* **Resumen Económico:** Detalle de todos los ingresos y gastos anuales, brindando una perspectiva completa de las operaciones.
-* **Resumen Financiero:** Análisis de la situación financiera general, incluyendo flujos de efectivo y balances, esencial para la gestión de la liquidez.
+### **🎯 ¿Para qué sirve?**
+Para ver cómo te fue en todo el año y planificar el año que viene.
 
+### **📊 Información completa:**
 
-## 3. Ventas por Mozo
+| Sección | Qué incluye | Para qué sirve |
+|---------|-------------|----------------|
+| **Resumen Económico** | Ingresos y gastos del año | Declaración de impuestos |
+| **Resumen Financiero** | Flujo de efectivo | Pedidos de crédito al banco |
+| **Comparativo** | Este año vs año anterior | Ver si mejoraste |
 
-Este reporte es fundamental para **evaluar el rendimiento individual de cada mozo o vendedor**, permitiendo identificar a los colaboradores más efectivos y áreas de mejora.
+### **💼 Para qué lo vas a usar:**
+- ✅ **Contabilidad anual**
+- ✅ **Declaración de ganancias**
+- ✅ **Préstamos bancarios**
+- ✅ **Planificación del próximo año**
 
-* **Cantidad de Ventas:** Muestra el número total de ventas realizadas por cada mozo durante el período seleccionado.
-* **Valor en Pesos:** Detalla el monto total en dinero generado por las ventas de cada mozo, lo que facilita el reconocimiento de los de mayor rendimiento y la asignación de incentivos.
+---
 
+## 👨‍💼 **3. Ventas por Mozo**
 
-## 4. Ventas por Tipo de Cobro
+### **🎯 ¿Para qué sirve?**
+Para saber quién vende más y premiar a los mejores empleados (o ayudar a los que menos venden).
 
-Aquí podrás **analizar la distribución de tus ventas según el método de pago utilizado.** Esto te ayuda a entender las preferencias de tus clientes y la composición de tus ingresos, optimizando tus opciones de cobro.
+### **📋 Lo que ves de cada mozo:**
 
-* **Detalle por Tipo de Cobro:** Muestra el monto total en pesos para cada tipo de cobro registrado (por ejemplo: "efectivo", "tarjeta de crédito", "tarjeta de débito", "transferencia", etc.).
-    * **Ejemplo:** Si un día tuviste $72.000 en ventas pagadas en *efectivo*, este reporte te mostrará esa cifra claramente, permitiéndote ver la proporción de tus ingresos por cada método.
+| Dato | Qué significa | Ejemplo |
+|------|---------------|---------|
+| **Cantidad de ventas** | Cuántas mesas/órdenes atendió | 45 ventas |
+| **Valor en pesos** | Cuánta plata generó | $85.000 |
+| **Promedio por venta** | Cuánto vende por mesa | $1.888 |
 
+### **💡 Usos prácticos:**
 
-## Consejos Adicionales
+#### **🏆 Para premiar:**
+- **Mozo del mes** (el que más vende)
+- **Bonificaciones** por objetivos
+- **Reconocimiento público**
 
-* **Exportación de Datos:** Para un análisis más profundo o para compartir información, podés exportar tus reportes a formatos como *PDF*, *Excel* o *CSV*, si el sistema lo permite.
-* **Interpretación de Gráficos:** Para los gráficos que puedan ser complejos, consultá la sección de ayuda interactiva dentro del sistema. Esta guía te ayudará a comprender mejor la lectura e interpretación de los datos visuales.
+#### **📚 Para mejorar:**
+- **Training** para mozos que venden poco
+- **Técnicas de venta** para subir promedios
+- **Redistribución** de sectores/mesas
 
+### **🔍 Filtros útiles:**
+- **📅 Por período:** Día, semana, mes
+- **👥 Por mozo:** Individual o comparativo
+- **💰 Por monto:** Ordenar de mayor a menor
+
+---
+
+## 💳 **4. Ventas por Tipo de Cobro**
+
+### **🎯 ¿Para qué sirve?**
+Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
+
+### **📊 Distribución típica:**
+
+| Tipo de Pago | Ejemplo de monto | % del total |
+|--------------|------------------|-------------|
+| **Efectivo** | $45.000 | 60% |
+| **Tarjeta Débito** | $18.000 | 24% |
+| **Tarjeta Crédito** | $9.000 | 12% |
+| **MercadoPago** | $3.000 | 4% |
+
+### **💡 Decisiones que podés tomar:**
+
+#### **🏪 Gestión de caja:**
+- **Más efectivo = Más cambio necesario**
+- **Más tarjeta = Menos efectivo para gastos**
+- **Comisiones de tarjeta = Calcular costos**
+
+#### **🎯 Estrategias comerciales:**
+- **Promociones con efectivo** (para aumentar %)
+- **Descuentos con tarjeta** (para reducir manejo de efectivo)
+- **QR/MercadoPago** (para clientes jóvenes)
+
+---
+
+## 🔄 **¿Cómo usar las estadísticas en el día a día?**
+
+### **🌅 Rutina diaria (5 minutos):**
+1. **Ventas de ayer:** ¿Cumplimos objetivo?
+2. **Comparar con mismo día semana pasada**
+3. **Ver qué mozo vendió más**
+4. **Revisar tipos de pago**
+
+### **📊 Rutina semanal (15 minutos):**
+1. **Reporte de la semana completa**
+2. **Comparar con semana anterior**
+3. **Premiar al mejor mozo**
+4. **Planificar compras según ventas**
+
+### **📈 Rutina mensual (30 minutos):**
+1. **Reporte mensual completo**
+2. **Analizar gastos vs ingresos**
+3. **Ajustar precios si es necesario**
+4. **Planificar próximo mes**
+
+---
+
+## 📤 **Exportar y compartir reportes**
+
+### **💾 Formatos disponibles:**
+- **PDF:** Para imprimir o compartir
+- **Excel:** Para análisis profundo
+- **CSV:** Para contadores
+
+### **📧 ¿Con quién compartir?**
+- **Contador:** Reporte anual y mensual
+- **Socio:** Todos los reportes principales
+- **Gerente:** Reportes por mozo y ventas diarias
+- **Banco:** Reportes anuales (para créditos)
+
+---
+
+## 💡 **Consejos para sacar el máximo provecho**
+
+### **🎯 Para tomar decisiones:**
+- ✅ **No te guíes solo por un día** → Mirá tendencias de semanas
+- ✅ **Compará siempre** → Mismo período año anterior
+- ✅ **Mirá patrones** → ¿Qué días vendés más?
+- ✅ **Identifica problemas** → ¿Por qué bajaron las ventas?
+
+### **📊 Para el crecimiento:**
+- ✅ **Premiá a los mejores mozos** → Motivación del equipo
+- ✅ **Optimizá formas de pago** → Según preferencias clientes
+- ✅ **Controlá gastos** → Para aumentar ganancias
+- ✅ **Planificá stock** → Según patrones de venta
+
+---
+
+## 🚨 **¿Problemas comunes?**
+
+| Problema | Solución |
+|----------|----------|
+| **"Los números no coinciden"** | Verificá que estén cargadas todas las ventas y gastos |
+| **"Un mozo aparece con cero ventas"** | Revisá si está usando su usuario correcto |
+| **"No aparecen algunos tipos de pago"** | Verificá la configuración de métodos de cobro |
+| **"No puedo exportar a Excel"** | Probá con períodos más cortos o contactá soporte |
+| **"Los gráficos no se ven"** | Actualizá el navegador o probá en otro |
+
+### **📞 ¿Para qué más sirven las estadísticas?**
+- **Préstamos bancarios** (mostrar crecimiento)
+- **Venta del negocio** (historial de ventas)
+- **Nuevos socios** (transparencia financiera)
+- **Franquicias** (replicar modelo exitoso)
