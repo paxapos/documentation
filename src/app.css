@@ -196,22 +196,21 @@ html.dark {
   white-space: nowrap;
 }
 
-/* Contenedor responsive para tablas en móviles */
+/* Tablas responsive simples */
 @media (max-width: 768px) {
   .markdown-paxapos table {
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem;
     display: block;
     overflow-x: auto;
     white-space: nowrap;
     border: 1px solid rgb(209 213 219);
+    border-radius: 8px;
   }
   
-  .markdown-paxapos thead,
-  .markdown-paxapos tbody,
-  .markdown-paxapos tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  .markdown-paxapos th,
+  .markdown-paxapos td {
+    padding: 8px 12px;
+    min-width: 100px;
   }
 }
 
@@ -342,22 +341,21 @@ html.dark {
   white-space: nowrap;
 }
 
-/* Responsive para tablas en modo oscuro y móviles */
+/* Tablas responsive modo oscuro */
 @media (max-width: 768px) {
   .dark .markdown-paxapos table {
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem;
     display: block;
     overflow-x: auto;
     white-space: nowrap;
     border: 1px solid rgb(75 85 99 / 0.4);
+    border-radius: 8px;
   }
   
-  .dark .markdown-paxapos thead,
-  .dark .markdown-paxapos tbody,
-  .dark .markdown-paxapos tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  .dark .markdown-paxapos th,
+  .dark .markdown-paxapos td {
+    padding: 8px 12px;
+    min-width: 100px;
   }
 }
 
@@ -400,90 +398,4 @@ html.dark {
   }
 }
 
-/* Fallback para navegadores que no soportan prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-  .markdown-paxapos {
-    background: transparent;
-    color: rgb(255 255 255);
-    border: none;
-    box-shadow: none;
-  }
-  
-  .markdown-paxapos h1 {
-    border-bottom-color: rgb(75 85 99);
-  }
-  
-  .markdown-paxapos h2 {
-    border-bottom-color: rgb(75 85 99);
-  }
-  
-  .markdown-paxapos h1,
-  .markdown-paxapos h2,
-  .markdown-paxapos h3,
-  .markdown-paxapos h4,
-  .markdown-paxapos h5,
-  .markdown-paxapos h6 {
-    color: rgb(255 255 255);
-  }
-  
-  .markdown-paxapos p,
-  .markdown-paxapos li {
-    color: rgb(229 231 235);
-  }
-  
-  .markdown-paxapos a {
-    color: rgb(96 165 250);
-  }
-  
-  .markdown-paxapos a:hover {
-    color: rgb(147 197 253);
-  }
-  
-  .markdown-paxapos code {
-    background: rgb(55 65 81 / 0.4);
-    color: rgb(243 244 246);
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  .markdown-paxapos pre {
-    background: rgb(17 24 39 / 0.4);
-    border: none;
-    border-radius: 6px;
-  }
-  
-  .markdown-paxapos pre code {
-    background: transparent;
-    border: none;
-    padding: 0;
-  }
-  
-  .markdown-paxapos blockquote {
-    border-left: 4px solid rgb(75 85 99);
-    background: rgb(55 65 81 / 0.2);
-    margin: 16px 0;
-    padding: 12px 20px;
-    border-radius: 0 6px 6px 0;
-  }
-  
-  .markdown-paxapos table {
-    border-collapse: collapse;
-    border: 1px solid rgb(75 85 99 / 0.4);
-  }
-  
-  .markdown-paxapos th,
-  .markdown-paxapos td {
-    border: 1px solid rgb(75 85 99 / 0.4);
-    padding: 8px 12px;
-  }
-  
-  .markdown-paxapos th {
-    background: rgb(55 65 81 / 0.3);
-    color: rgb(255 255 255);
-  }
-  
-  .markdown-paxapos hr {
-    border-color: rgb(75 85 99 / 0.4);
-  }
-}
+
