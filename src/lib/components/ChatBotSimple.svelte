@@ -333,10 +333,10 @@ Administra accesos al sistema:
 	function formatBotMessage(text: string): string {
         return text
             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            // Enlaces con emoji y formato bold: 🔗 **[texto](url)** - SIN target="_blank"
-            .replace(/🔗 \*\*\[([^\]]+)\]\(([^)]+)\)\*\*/g, '<a href="$2" class="inline-block mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">$1</a>')
+            // Enlaces con emoji y formato bold: 🔗 **[texto](url)** - SIN target="_blank" - RESPONSIVE
+            .replace(/🔗 \*\*\[([^\]]+)\]\(([^)]+)\)\*\*/g, '<a href="$2" class="inline-block mt-2 px-3 py-2 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors text-sm">$1</a>')
             // Enlaces simples: [texto](url) - SIN target="_blank"
-            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:text-blue-700 underline font-medium">$1</a>')
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:text-blue-700 underline font-medium text-sm">$1</a>')
             // Bullet points con •
             .replace(/• /g, '<span class="text-blue-600">•</span> ');
     }
@@ -357,29 +357,29 @@ Administra accesos al sistema:
 {#if !isOpen}
 	<button
 		on:click={toggleChat}
-		class="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 z-50 group"
+		class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-3 md:p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 z-50 group"
 		aria-label="Abrir ChatBot de soporte"
 	>
-		<svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+		<svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
 			<path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm2.07-7.75l-.9.92C11.45 10.9 11 11.5 11 13h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H6c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
 		</svg>
-		<div class="absolute -top-2 -right-2 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+		<div class="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-400 rounded-full animate-pulse"></div>
 	</button>
 {/if}
 
 <!-- Ventana del chat -->
 {#if isOpen}
-	<div class="fixed bottom-6 right-6 w-96 h-[600px] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-600 z-50 flex flex-col overflow-hidden">
+	<div class="fixed inset-4 md:bottom-6 md:right-6 md:inset-auto md:w-96 md:h-[600px] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-600 z-50 flex flex-col overflow-hidden">
 		<!-- Header -->
-		<div class="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 text-white">
-			<div class="flex items-center space-x-3">
-				<div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-					<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+		<div class="flex items-center justify-between p-3 md:p-4 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 text-white">
+			<div class="flex items-center space-x-2 md:space-x-3">
+				<div class="w-7 h-7 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center">
+					<svg class="w-3.5 h-3.5 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
 					</svg>
 				</div>
 				<div>
-					<span class="font-semibold text-sm">Asistente PaxaPOS</span>
+					<span class="font-semibold text-sm md:text-base">Asistente PaxaPOS</span>
 					<div class="flex items-center space-x-1 text-xs opacity-90">
 						<div class="w-2 h-2 bg-green-400 rounded-full"></div>
 						<span>En línea</span>
@@ -388,10 +388,10 @@ Administra accesos al sistema:
 			</div>
 			<button 
 				on:click={toggleChat}
-				class="hover:bg-white/20 p-2 rounded-lg transition-colors"
+				class="hover:bg-white/20 p-1.5 md:p-2 rounded-lg transition-colors"
 				aria-label="Cerrar ChatBot"
 			>
-				<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+				<svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
 					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
 				</svg>
 			</button>
@@ -400,18 +400,18 @@ Administra accesos al sistema:
 		<!-- Mensajes -->
 		<div 
 			bind:this={chatContainer}
-			class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50/50 dark:bg-gray-700/50"
+			class="flex-1 overflow-y-auto p-3 md:p-4 space-y-3 md:space-y-4 bg-gray-50/50 dark:bg-gray-700/50"
 		>
 			{#each messages as message}
 				<div class="flex {message.isUser ? 'justify-end' : 'justify-start'}">
 					{#if !message.isUser}
-						<div class="flex items-start space-x-2 max-w-[85%]">
-							<div class="w-7 h-7 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-								<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+						<div class="flex items-start space-x-2 max-w-[90%] md:max-w-[85%]">
+							<div class="w-6 h-6 md:w-7 md:h-7 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+								<svg class="w-2.5 h-2.5 md:w-3 md:h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
 									<path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
 								</svg>
 							</div>
-							<div class="bg-white dark:bg-gray-700 rounded-xl rounded-tl-md p-4 shadow-sm border border-gray-100 dark:border-gray-600">
+							<div class="bg-white dark:bg-gray-700 rounded-xl rounded-tl-md p-3 md:p-4 shadow-sm border border-gray-100 dark:border-gray-600">
 								<div class="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
 									{@html formatBotMessage(message.text)}
 								</div>
@@ -421,7 +421,7 @@ Administra accesos al sistema:
 							</div>
 						</div>
 					{:else}
-						<div class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 text-white rounded-xl rounded-tr-md p-4 max-w-[85%] shadow-sm">
+						<div class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 text-white rounded-xl rounded-tr-md p-3 md:p-4 max-w-[90%] md:max-w-[85%] shadow-sm">
 							<p class="text-sm leading-relaxed">{message.text}</p>
 							<p class="text-xs opacity-90 mt-2 text-right">
 								{message.timestamp.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })}
@@ -455,14 +455,14 @@ Administra accesos al sistema:
 		</div>
 
 		<!-- Input -->
-		<div class="p-4 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-600">
-			<div class="flex space-x-3">
+		<div class="p-3 md:p-4 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-600">
+			<div class="flex space-x-2 md:space-x-3">
 				<div class="flex-1 relative">
 					<textarea
 						bind:value={currentMessage}
 						on:keydown={handleKeyDown}
 						placeholder="Pregúntame sobre PaxaPOS..."
-						class="w-full border border-gray-200 dark:border-gray-600 rounded-xl px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 focus:bg-white dark:focus:bg-gray-600 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-all"
+						class="w-full border border-gray-200 dark:border-gray-600 rounded-xl px-3 py-2 md:px-4 md:py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 focus:bg-white dark:focus:bg-gray-600 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-all"
 						rows="1"
 						disabled={isLoading}
 					></textarea>
@@ -470,7 +470,7 @@ Administra accesos al sistema:
 				<button
 					on:click={sendMessage}
 					disabled={!currentMessage.trim() || isLoading}
-					class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 hover:from-blue-700 hover:to-blue-800 dark:hover:from-blue-800 dark:hover:to-blue-900 disabled:from-gray-300 disabled:to-gray-300 dark:disabled:from-gray-600 dark:disabled:to-gray-600 disabled:cursor-not-allowed text-white px-4 py-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md"
+					class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 hover:from-blue-700 hover:to-blue-800 dark:hover:from-blue-800 dark:hover:to-blue-900 disabled:from-gray-300 disabled:to-gray-300 dark:disabled:from-gray-600 dark:disabled:to-gray-600 disabled:cursor-not-allowed text-white px-3 py-2 md:px-4 md:py-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md"
 				>
 					{#if isLoading}
 						<svg class="w-4 h-4 animate-spin" fill="currentColor" viewBox="0 0 24 24">
