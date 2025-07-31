@@ -66,7 +66,59 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 - ✅ **Anotá los usuarios y contraseñas** en un lugar seguro
 - ✅ **Probá que cada usuario pueda entrar** antes de cerrar
 
-## 🚨 **¿Problemas comunes?**
+---
+
+## � **Método alternativo - Usuario con PIN (Recomendado para mozos)**
+
+> 💡 **¿Para qué sirve esto?**  
+> Es un método más rápido para que los mozos accedan al sistema sin tener que recordar usuario y contraseña. Todos usan el mismo PIN (ejemplo: 1111).
+
+### **¿Cuándo usar este método?**
+- ✅ **Para mozos que cambian de turno frecuentemente**
+- ✅ **Cuando tenés muchos mozos temporales**  
+- ✅ **Para agilizar el cambio de turno**
+- ❌ **NO para administradores o cajeros** (ellos necesitan usuario personal)
+
+### **Paso a paso - Configurar usuario con PIN**
+
+#### **Paso 1: Crear el usuario genérico primero**
+1. **IMPORTANTE:** Primero tenés que crear un usuario normal (como explicamos arriba)
+2. Este usuario va a ser la "base" del usuario con PIN
+3. Asigná el rol **"Mozo"** a este usuario
+
+#### **Paso 2: Configurar el PIN**
+4. Hacé clic en la **"P" roja** 🔴
+5. Buscá la opción **"Usuarios con PIN"**
+6. Hacé clic en **"Usuarios con PIN"**
+7. Hacé clic en **"Crear Usuario"** o **"Nuevo"**
+
+#### **Paso 3: Completar la configuración del PIN**
+
+| Campo | Qué escribir | Ejemplo |
+|-------|-------------|---------|
+| **Nombre del Usuario Genérico** | Un nombre que identifique el grupo | "Mozos"|
+| **Rol** | seleccionar "Mozo" o el rol que quieras que tenga este usuario con pin | Mozo, Encargado, Dueño |
+| **PIN** | Un número fácil de recordar (4 dígitos) | 1111 |
+
+8. Hacé clic en **"Guardar"**
+
+### **¿Cómo van a ingresar los mozos?**
+Una vez configurado, los mozos van a poder:
+1. En la pantalla de login, elegir **"Ingresar con PIN"**
+2. Escribir el PIN (ejemplo: **1111**)
+3. ¡Listo! Ya están dentro del sistema
+
+### **💡 Consejos para el PIN**
+- ✅ **Usá un PIN fácil de recordar** pero no obvio (evitá 0000 o 1234)
+- ✅ **Comunicá el PIN solo a los mozos** autorizados
+- ✅ **Cambiá el PIN periódicamente** si tenés mucha rotación de personal
+- ✅ **Combiná ambos métodos:** PIN para mozos, usuario personal para administradores
+
+---
+
+## �🚨 **¿Problemas comunes?**
 - **"No encuentro la P roja"** → Mirá bien la parte superior, está siempre visible
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
 - **"El email ya existe"** → Usá un email diferente para cada usuario
+- **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
+- **"El PIN no funciona"** → Asegurate que el usuario base tenga el rol "Mozo"

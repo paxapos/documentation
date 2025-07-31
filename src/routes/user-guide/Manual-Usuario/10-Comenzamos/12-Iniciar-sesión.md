@@ -37,6 +37,26 @@ Si los datos son correctos, vas a ingresar al **panel principal** de PaxaPOS don
 
 ---
 
+## 📱 **Método alternativo - Ingreso con PIN (Para mozos)**
+
+> 💡 **¿Sabías que hay otra forma de ingresar?**  
+> Si tu administrador configuró un **usuario con PIN**, los mozos pueden ingresar de forma más rápida sin recordar usuario y contraseña.
+
+### **¿Cómo funciona?**
+1. En la pantalla de login, visualiza la opción **"Ingresar con PIN"**
+2. Escribí el **PIN** que te dió tu administrador (ejemplo: 1111)
+3. ¡Listo! Ya estás dentro del sistema
+
+### **¿Para quién está pensado esto?**
+- ✅ **Mozos** que cambian de turno frecuentemente
+- ✅ **Personal temporal** que necesita acceso rápido
+- ✅ **Equipos grandes** donde es difícil recordar credenciales
+
+> 🔗 **¿Querés saber cómo configurar esto?**  
+> Revisá la sección **"Método alternativo - Usuario con PIN"** en [📋 Crear Usuarios](/user-guide?module=21-Crear-Usuarios)
+
+---
+
 ## 🚨 **¿Tenés problemas para ingresar?**
 
 ### 🔒 **¿Olvidaste tu contraseña?**

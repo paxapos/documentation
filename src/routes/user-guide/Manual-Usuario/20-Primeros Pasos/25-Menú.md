@@ -93,7 +93,21 @@ Antes de cargar productos, creá las categorías:
 3. Seleccioná "Acompañamiento"
 4. Guardá
 
-**¡Ahora cuando vendas la milanesa, el sistema te va a preguntar qué acompañamiento quiere el cliente!**
+### **Ejemplos:**
+1. 
+- **Producto:** Bife de chorizo
+- **Nombre Variante:** Punto de la carne
+- **Opciones Variante:** Cocido / A Punto / Jugoso
+
+2. 
+- **Producto:** Pastas
+- **Nombre Variante:** Salsas
+- **Opciones Variante:** Blanca $0 / Fileto $ +500 / Mixta $ +200 / Bolognesa $1500
+
+3.
+- **Producto:** Ensaladas
+- **Nombre Variante:** Tipos Ensaladas
+- **Opciones Variante:** Mixta / Lechuga y Tomate / Zanahoria y Huevo
 
 ---
 
@@ -121,6 +135,7 @@ Antes de cargar productos, creá las categorías:
 - **"No me deja guardar"** → Verificá que tengas nombre, categoría y precio
 - **"No aparece en la venta"** → Verificá que esté en el menú correcto
 - **"Sale en la impresora equivocada"** → Configurá la impresora predeterminada
+- **"no sale impreso en la comanda"** → Asignale una impresora 
 
 * **Funcionalidad:** Puedes crear distintas categorías para agrupar tus productos (por ejemplo: "Postres", "Vinos", "Bebidas sin Alcohol", "Entradas", "Platos Principales").
 * **Gestión:** Dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.
