@@ -133,7 +133,7 @@ Administra accesos al sistema:
 		// Cargar todo el manual usando la misma lógica que user-guide
 		await loadManualContent();
 		
-		addMessage('¡Hola! 👋 Soy el asistente de PaxaPOS.\n\n**Puedo ayudarte con:**\n• Buscar información específica en el manual\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y mucho más!\n\n**Pregúntame algo específico:** "¿cómo configurar impresoras?" o "crear mozo"', false);
+		addMessage('¡Hola! 👋 Soy el asistente de PaxaPOS con **Gemini AI**.\n\n**Tengo acceso completo al manual** y puedo ayudarte con:\n• Respuestas inteligentes usando IA\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y todo lo que esté en el manual!\n\n**Pregúntame lo que necesites:** "¿cómo configurar impresoras?" o "explicame el sistema de arqueos"', false);
 	});
 
 	async function loadManualContent() {
@@ -266,49 +266,39 @@ Administra accesos al sistema:
 	}
 
 	async function generateResponse(question: string): Promise<string> {
-		// 1. Primero intentar búsqueda en tiempo real en el manual
+		try {
+			// Intentar con Gemini AI primero
+			const response = await fetch('/documentation/api/chat', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ message: question, platform: 'web' })
+			});
+
+			const data = await response.json();
+			if (data.success) return data.response;
+			
+		} catch (error) {
+			console.warn('Gemini falló, usando búsqueda local:', error);
+		}
+
+		// Fallback: usar la lógica existente
 		const manualResults = searchInManual(question);
 		
 		if (manualResults && manualResults.length > 0) {
 			const bestResult = manualResults[0];
-			
 			let response = `**${bestResult.title}** (${bestResult.folder})\n\n`;
 			response += bestResult.relevantText;
 			response += `\n\n🔗 **[Ver guía completa: ${bestResult.title}](${base}/user-guide?module=${bestResult.id})**`;
-			
-			// Si hay más resultados, mencionarlos
-			if (manualResults.length > 1) {
-				response += `\n\n**También podrías revisar:**`;
-				manualResults.slice(1).forEach(result => {
-					response += `\n• [${result.title}](${base}/user-guide?module=${result.id})`;
-				});
-			}
-			
 			return response;
 		}
 
-		// 2. Si no encuentra en el manual, usar FAQ como fallback
+		// FAQ como último recurso
 		const keyword = detectKeyword(question);
 		if (keyword && keyword in faqResponses) {
 			return faqResponses[keyword as keyof typeof faqResponses];
 		}
 
-		// 3. Respuesta por defecto con sugerencias
-		return `No encontré información específica sobre "${question}".
-
-**Puedo ayudarte con:**
-• **"mozo"** - Crear y gestionar personal
-• **"impresora"** - Configurar impresión
-• **"salón"** - Administrar mesas
-• **"cocina"** - Sistema KDS
-• **"pago"** - Métodos de pago
-• **"menú"** - Gestionar productos
-• **"arqueo"** - Control de caja
-• **"facturación"** - AFIP y comprobantes
-
-**Intenta ser más específico:** "¿cómo configurar impresoras?" o "crear usuario mozo"
-
-🔗 **[Ver Manual Completo](${base}/user-guide)**`;
+		return `No encontré información específica sobre "${question}".\n\n**Puedo ayudarte con:**\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Y mucho más!\n\n🔗 **[Ver Manual Completo](${base}/user-guide)**`;
 	}
 
 	async function sendMessage() {
@@ -441,7 +431,7 @@ Administra accesos al sistema:
 						</div>
 						<div class="bg-white dark:bg-gray-700 rounded-xl rounded-tl-md p-4 shadow-sm border border-gray-100 dark:border-gray-600">
 							<div class="flex items-center space-x-1">
-								<span class="text-sm text-gray-600 dark:text-gray-300">Buscando en manual</span>
+								<span class="text-sm text-gray-600 dark:text-gray-300">Consultando con Gemini AI</span>
 								<div class="flex space-x-1">
 									<div class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce"></div>
 									<div class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
