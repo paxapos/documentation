@@ -11,15 +11,13 @@ Cuando entres al módulo, vas a ver todos los **cierres de caja** organizados po
 
 ### **📊 Información que muestra cada arqueo:**
 
-| Dato | Qué significa | Ejemplo |
-|------|---------------|---------|
-| **Importe Final** | Con cuánto terminó la caja | $50.000 |
-| **Saldo Arqueo Anterior** | Cuánto quedó del día anterior | $5.000 |
-| **Saldo de Caja** | Cuánto hay ahora en caja | $48.000 |
-| **Cobros** | Cuánto cobraste hoy | $80.000 |
-| **Pagos** | Cuánto pagaste hoy | $15.000 |
-| **Ingresos** | Dinero que entró | $85.000 |
-| **Egresos** | Dinero que salió | $20.000 |
+🔹 **Importe Final** | Con cuánto terminó la caja  
+🔹 **Saldo Arqueo Anterior** | Cuánto quedó del día anterior  
+🔹 **Saldo de Caja** | Cuánto hay ahora en caja  
+🔹 **Cobros** | Cuánto cobraste hoy  
+🔹 **Pagos** | Cuánto pagaste hoy  
+🔹 **Ingresos** | Dinero que entró  
+🔹 **Egresos** | Dinero que salió
 
 ---
 
@@ -48,12 +46,10 @@ Cuando entres al módulo, vas a ver todos los **cierres de caja** organizados po
 ### **📋 Para análisis y auditoría:**
 Podés descargar un reporte completo en Excel con estos filtros:
 
-| Filtro | Para qué sirve | Ejemplo |
-|--------|----------------|---------|
-| **Caja** | Si tenés varias cajas | Caja Principal, Caja Delivery |
-| **Usuario** | Quién hizo el arqueo | Juan (cajero), María (encargada) |
-| **Fecha Inicio** | Desde cuándo | 01/01/2024 |
-| **Fecha Fin** | Hasta cuándo | 31/01/2024 |
+🔹 **Caja** | Si tenés varias cajas  
+🔹 **Usuario** | Quién hizo el arqueo  
+🔹 **Fecha Inicio** | Desde cuándo  
+🔹 **Fecha Fin** | Hasta cuándo
 
 ### **💡 Cuándo usar esto:**
 - ✅ **Análisis mensual** de ventas

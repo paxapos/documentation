@@ -18,15 +18,13 @@ Con una interfaz moderna e intuitiva, PaxaPOS acompaña el trabajo diario, ayuda
 
 ## ✅ ¿Qué podés hacer con PaxaPOS?
 
-| Función | Beneficio | Para qué sirve |
-|---------|-----------|----------------|
-| ✔️ **Gestión de ventas** | Cobra más rápido, sin errores | Procesar pedidos y pagos al instante |
-| ✔️ **Control de inventario** | Nunca te quedés sin stock | Saber qué productos faltan automáticamente |
-| ✔️ **Administración de personal** | Controlá quién vende qué | Manejar permisos y roles de empleados |
-| ✔️ **Estadísticas en tiempo real** | Tomá decisiones con datos reales | Ver ventas, productos top, horarios pico |
-| ✔️ **Gestión de clientes** | Conocé mejor a tus clientes | Histórico de compras y preferencias |
-| ✔️ **Personalización total** | Adaptalo 100% a tu negocio | Configurar menús, precios, promociones |
-| ✔️ **Control remoto** | Monitoreá desde cualquier lugar | Ver tu negocio desde casa o vacaciones |
+🔹 **Gestión de ventas** | Cobra más rápido, sin errores  
+🔹 **Control de inventario** | Nunca te quedés sin stock  
+🔹 **Administración de personal** | Controlá quién vende qué  
+🔹 **Estadísticas en tiempo real** | Tomá decisiones con datos reales  
+🔹 **Gestión de clientes** | Conocé mejor a tus clientes  
+🔹 **Personalización total** | Adaptalo 100% a tu negocio  
+🔹 **Control remoto** | Monitoreá desde cualquier lugar
 
 ---
 💡 **¿Necesitás ayuda?** Nuestro ChatBot está disponible 24/7 en la esquina inferior derecha. 

@@ -34,12 +34,12 @@ En **TODOS** los módulos de PaxaPOS, vas a ver un ícono de **"P" roja** 🔴 e
 ### **Paso 3: Completar los datos del nuevo usuario**
 Ahora vas a completar la información de la persona que va a usar el sistema:
 
-| Campo que vas a ver | Qué tenés que escribir | Ejemplo |
-|-------------------|----------------------|---------|
-| **Nombre** | Nombre y apellido completo | Juan Pérez |
-| **Mail** | Email de la persona | juan@turestaurante.com |
-| **Contraseña** | Una contraseña segura | MiClaveSegura123 |
-| **Rol** | Qué puede hacer en el sistema | Mozo / Cajero / Administrador |
+**📝 Datos del usuario:**
+
+🔹 **Nombre** | Nombre y apellido completo  
+🔹 **Mail** | Email de la persona  
+🔹 **Contraseña** | Una contraseña segura  
+🔹 **Rol** | Qué puede hacer en el sistema
 
 ### **Paso 4: Guardar el usuario**
 7. Verificá que todos los datos estén correctos
@@ -50,12 +50,10 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ## 🎭 **¿Qué rol tiene que elegir cada persona?**
 
-| Rol | Qué puede hacer | Ideal para | Ejemplo |
-|-----|----------------|------------|---------|
-| **Administrador** | TODO - Control total del sistema | Dueño, gerente, encargado | El dueño del restaurante |
-| **Cajero** | Cobrar, facturar, manejar dinero | Personal de caja | La persona que cobra |
-| **Mozo** | Tomar pedidos, manejar mesas | Meseros, vendedores | Los que atienden mesas |
-| **Cocinero** | Ver pedidos de cocina solamente | Personal de cocina | Chef, ayudantes de cocina |
+🔹 **Administrador** | TODO - Control total del sistema (Dueño, gerente, encargado)  
+🔹 **Cajero** | Cobrar, facturar, manejar dinero (Personal de caja)  
+🔹 **Mozo** | Tomar pedidos, manejar mesas (Meseros, vendedores)  
+🔹 **Cocinero** | Ver pedidos de cocina solamente (Chef, ayudantes de cocina)
 
 ---
 
@@ -94,11 +92,9 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 #### **Paso 3: Completar la configuración del PIN**
 
-| Campo | Qué escribir | Ejemplo |
-|-------|-------------|---------|
-| **Nombre del Usuario Genérico** | Un nombre que identifique el grupo | "Mozos"|
-| **Rol** | seleccionar "Mozo" o el rol que quieras que tenga este usuario con pin | Mozo, Encargado, Dueño |
-| **PIN** | Un número fácil de recordar (4 dígitos) | 1111 |
+🔹 **Nombre del Usuario Genérico** | Un nombre que identifique el grupo  
+🔹 **Rol** | seleccionar "Mozo" o el rol que quieras que tenga este usuario con pin  
+🔹 **PIN** | Un número fácil de recordar (4 dígitos)
 
 8. Hacé clic en **"Guardar"**
 

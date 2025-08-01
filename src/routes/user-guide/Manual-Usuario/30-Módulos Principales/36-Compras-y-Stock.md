@@ -1,7 +1,13 @@
 # 📦 Compras y Gestión de Stock
 
 > 🎯 **¿Para qué sirve esto?**  
-> Acá manejás todo lo que COMPRÁS (mercadería) y lo convertís en lo que VENDÉS (productos). Es el corazón del control de stock: sabés qué tenés, cuánto gastás y cuándo se te acaba algo.
+> Acá manejás todo lo que COMPRÁS (mercadería) y lo convertís en lo que VENDÉS (productos). Es el corazón del control de stock: sabés qué tenés, c## 🚨 **¿Problemas comunes?**
+
+🔹 **"No puedo crear la mercadería"** | Verificá que no exista ya con ese nombre  
+🔹 **"No aparece en productos"** | Fijate si completaste el paso 2  
+🔹 **"Stock negativo"** | Revisá la "Cantidad que suma"  
+🔹 **"No sé qué unidad usar"** | Usá la más simple: UNIDAD, GRAMO, LITRO  
+🔹 **"Se mezcla el stock"** | Cada mercadería debe tener nombre únicotás y cuándo se te acaba algo.
 
 ---
 
@@ -30,23 +36,19 @@ Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 2. **Clic en:** "Nueva Mercadería"
 3. **Completá la ficha:**
 
-| Campo | Qué significa | Ejemplo |
-|-------|---------------|---------|
-| **Nombre de la Mercadería** | Cómo viene del proveedor | "Caja Coca-Cola x12" |
-| **Unidad de Medida de Compra** | En qué unidad lo comprás | "CAJA" |
-| **Cantidad que Suma en Stock** | Cuántas unidades individuales trae | 12 |
+🔹 **Nombre de la Mercadería** | Cómo viene del proveedor  
+🔹 **Unidad de Medida de Compra** | En qué unidad lo comprás  
+🔹 **Cantidad que Suma en Stock** | Cuántas unidades individuales trae
 
 ### **🧮 Cálculo súper importante:**
 **"Cantidad que Suma en Stock"** = Cuántas unidades de venta tiene tu compra
 
 #### **📋 Ejemplos comunes:**
 
-| Lo que comprás | Unidad de compra | Cantidad que suma | Por qué |
-|----------------|------------------|-------------------|---------|
-| Caja de vinos x6 | CAJA | 6 | Cada caja trae 6 botellas |
-| Pack galletas x12 | PACK | 12 | Cada pack trae 12 paquetes |
-| Bolsa papas x50 | BOLSA | 50 | Cada bolsa trae 50 papas |
-| Botella de aceite | UNIDAD | 1 | Comprás y vendés de a 1 |
+🔹 **Caja de vinos x6** | CAJA → 6 unidades (Cada caja trae 6 botellas)  
+🔹 **Pack galletas x12** | PACK → 12 unidades (Cada pack trae 12 paquetes)  
+🔹 **Bolsa papas x50** | BOLSA → 50 unidades (Cada bolsa trae 50 papas)  
+🔹 **Botella de aceite** | UNIDAD → 1 unidad (Comprás y vendés de a 1)
 
 ### **✅ Al final:**
 4. **Clic en "Guardar"**
@@ -64,10 +66,8 @@ Para que lo que compraste aparezca en el menú y lo puedas vender a los clientes
 3. **Clic en:** Ícono de editar ✏️
 4. **Editá la unidad de venta:**
 
-| Campo | Qué poner | Ejemplo |
-|-------|-----------|---------|
-| **Nombre del Producto** | Cómo lo vas a vender | "Coca-Cola 500ml" |
-| **Unidad de Stock** | Unidad de venta individual | "UNIDAD" |
+🔹 **Nombre del Producto** | Cómo lo vas a vender  
+🔹 **Unidad de Stock** | Unidad de venta individual
 
 ### **🔄 Relación automática:**
 ```
@@ -104,25 +104,22 @@ Vendés: 1 Coca-Cola → Stock baja 1 unidad
 ## 💡 **Ejemplos prácticos por tipo de negocio**
 
 ### **🍕 Pizzería:**
-| Mercadería | Unidad compra | Cantidad suma | Producto final |
-|------------|---------------|---------------|----------------|
-| Queso x5kg | BARRA | 5000 | Gramos de queso (se vende por gramos) |
-| Caja tomates x10kg | CAJA | 10000 | Gramos de tomate |
-| Paquete muzzarella | PACK | 1 | Paquete muzzarella |
+
+🔹 **Queso x5kg** | BARRA → 5000g (se vende por gramos)  
+🔹 **Caja tomates x10kg** | CAJA → 10000g (gramos de tomate)  
+🔹 **Paquete muzzarella** | PACK → 1 (paquete muzzarella)
 
 ### **🍺 Bar/Restó:**
-| Mercadería | Unidad compra | Cantidad suma | Producto final |
-|------------|---------------|---------------|----------------|
-| Caja Quilmes x24 | CAJA | 24 | Quilmes botella |
-| Botella Fernet | UNIDAD | 1 | Fernet (se vende por copa) |
-| Pack servilletas x500 | PACK | 500 | Servilletas |
+
+🔹 **Caja Quilmes x24** | CAJA → 24 (Quilmes botella)  
+🔹 **Botella Fernet** | UNIDAD → 1 (se vende por copa)  
+🔹 **Pack servilletas x500** | PACK → 500 (servilletas)
 
 ### **🥪 Cafetería:**
-| Mercadería | Unidad compra | Cantidad suma | Producto final |
-|------------|---------------|---------------|----------------|
-| Café x1kg | BOLSA | 1000 | Gramos de café |
-| Leche x12 litros | PACK | 12 | Litros de leche |
-| Pan x50 unidades | BOLSA | 50 | Pan individual |
+
+🔹 **Café x1kg** | BOLSA → 1000g (gramos de café)  
+🔹 **Leche x12 litros** | PACK → 12L (litros de leche)  
+🔹 **Pan x50 unidades** | BOLSA → 50 (pan individual)
 
 ---
 

@@ -9,14 +9,21 @@
 
 ### **🆚 Antes vs Ahora:**
 
-| 📄 **Antes (con papel)** | 💻 **Ahora (con KDS)** |
-|-------------------------|------------------------|
-| ❌ Papeles se pierden | ✅ Todo en pantalla, no se pierde |
-| ❌ Se manchan con aceite/agua | ✅ Pantalla resistente |
-| ❌ Difícil de leer | ✅ Letras grandes y claras |
-| ❌ Desorganizado | ✅ Ordenado por tiempo y prioridad |
-| ❌ No sabés cuánto falta | ✅ Tiempos en pantalla |
-| ❌ Comunicación confusa | ✅ Estados claros (listo/preparando) |
+**🔹 Antes (con papel)**  
+❌ Papeles se pierden  
+❌ Se manchan con aceite/agua  
+❌ Difícil de leer  
+❌ Desorganizado  
+❌ No sabés cuánto falta  
+❌ Comunicación confusa  
+
+**🔹 Ahora (con KDS)**  
+✅ Todo en pantalla, no se pierde  
+✅ Pantalla resistente  
+✅ Letras grandes y claras  
+✅ Ordenado por tiempo y prioridad  
+✅ Tiempos en pantalla  
+✅ Estados claros (listo/preparando)
 
 ---
 
@@ -25,12 +32,23 @@
 ### **🏷️ Ruteo automático por estación:**
 El sistema puede separar los pedidos:
 
-| Estación | Qué aparece | Ejemplo de productos |
-|----------|-------------|---------------------|
-| **🥗 Fríos** | Ensaladas, postres fríos | Ensalada César, tiramisu |
-| **🔥 Calientes** | Platos cocinados | Milanesas, pastas, parrilla |  
-| **🍰 Postres** | Solo postres | Flan, helado, tortas |
-| **🍹 Bar** | Bebidas y tragos | Cocteles, licuados |
+**🏭 Estaciones de trabajo:**
+
+**🔹 Fríos**  
+🍽️ *Qué aparece:* Ensaladas, postres fríos  
+📋 *Ejemplo de productos:* Ensalada César, tiramisu
+
+**� Calientes**  
+🍽️ *Qué aparece:* Platos cocinados  
+📋 *Ejemplo de productos:* Milanesas, pastas, parrilla
+
+**🔹 Postres**  
+🍽️ *Qué aparece:* Solo postres  
+📋 *Ejemplo de productos:* Flan, helado, tortas
+
+**🔹 Bar**  
+🍽️ *Qué aparece:* Bebidas y tragos  
+📋 *Ejemplo de productos:* Cocteles, licuados
 
 ### **⏰ Orden por tiempo:**
 - Los pedidos más antiguos aparecen **ARRIBA**

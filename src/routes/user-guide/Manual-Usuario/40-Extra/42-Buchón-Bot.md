@@ -27,11 +27,20 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 ## 🔍 **¿Qué tipo de cosas te avisa?**
 
 ### **📦 Alertas de Stock:**
-| Situación | Ejemplo de mensaje | Por qué es importante |
-|-----------|-------------------|---------------------|
-| **Stock crítico** | "⚠️ Quedan solo 2 Coca-Colas" | Para comprar antes de quedarte sin nada |
-| **Stock agotado** | "🚨 Se acabó el Asado!" | Para avisar a los mozos que no lo ofrezcan |
-| **Movimiento raro** | "👀 Se descontaron 50 empanadas sin venta" | Posible error o irregularidad |
+
+**📋 Situaciones que detecta:**
+
+**🔹 Stock crítico**  
+📨 *Ejemplo de mensaje:* "⚠️ Quedan solo 2 Coca-Colas"  
+💡 *Por qué es importante:* Para comprar antes de quedarte sin nada
+
+**🔹 Stock agotado**  
+📨 *Ejemplo de mensaje:* "🚨 Se acabó el Asado!"  
+💡 *Por qué es importante:* Para avisar a los mozos que no lo ofrezcan
+
+**🔹 Movimiento raro**  
+📨 *Ejemplo de mensaje:* "👀 Se descontaron 50 empanadas sin venta"  
+💡 *Por qué es importante:* Posible error o irregularidad
 
 ---
 
@@ -49,19 +58,39 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 3. **Pegar tu Chat ID** de Telegram
 4. **Elegir qué alertas querés:**
 
-| Tipo de Alerta | Recomendación | Por qué |
-|----------------|---------------|---------|
-| **Stock bajo** | ✅ Activar | Evitás quedarte sin productos |
-| **Ventas grandes** | ✅ Activar | Control de caja |
-| **Anulaciones** | ✅ Activar | Detectar irregularidades |
-| **Accesos fuera de hora** | ⚠️ Opcional | Si tenés personal de confianza |
+**⚙️ Tipos de alertas recomendadas:**
+
+**🔹 Stock bajo**  
+💡 *Recomendación:* ✅ Activar  
+❓ *Por qué:* Evitás quedarte sin productos
+
+**🔹 Ventas grandes**  
+💡 *Recomendación:* ✅ Activar  
+❓ *Por qué:* Control de caja
+
+**🔹 Anulaciones**  
+💡 *Recomendación:* ✅ Activar  
+❓ *Por qué:* Detectar irregularidades
+
+**🔹 Accesos fuera de hora**  
+💡 *Recomendación:* ⚠️ Opcional  
+❓ *Por qué:* Si tenés personal de confianza
 
 ### **🎯 Paso 3: Ajustar umbrales**
-| Configuración | Qué significa | Ejemplo |
-|---------------|---------------|---------|
-| **Stock mínimo** | Cuando avisar que se acaba | 5 unidades |
-| **Descuento máximo** | % máximo sin alerta | 50% |
-| **Horario permitido** | Cuándo puede haber movimiento | 8 AM a 12 AM |
+
+**⚙️ Configuraciones importantes:**
+
+**🔹 Stock mínimo**  
+📝 *Qué significa:* Cuando avisar que se acaba  
+📋 *Ejemplo:* 5 unidades
+
+**🔹 Descuento máximo**  
+📝 *Qué significa:* % máximo sin alerta  
+📋 *Ejemplo:* 50%
+
+**🔹 Horario permitido**  
+📝 *Qué significa:* Cuándo puede haber movimiento  
+📋 *Ejemplo:* 8 AM a 12 AM
 
 ---
 
@@ -84,12 +113,19 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ## 🔧 **¿Problemas comunes?**
 
-| Problema | Solución |
-|----------|----------|
-| **"No me llegan mensajes"** | Verificá el Chat ID y que el bot esté activo |
-| **"Llegan demasiados mensajes"** | Ajustá los umbrales y filtros |
-| **"Alertas falsas de stock"** | Revisá que el inventario esté bien configurado |
-| **"No funciona fuera del horario"** | Verificá la configuración de horarios permitidos |
+**🚨 Soluciones a problemas frecuentes:**
+
+**🔹 "No me llegan mensajes"**  
+🔧 *Solución:* Verificá el Chat ID y que el bot esté activo
+
+**🔹 "Llegan demasiados mensajes"**  
+🔧 *Solución:* Ajustá los umbrales y filtros
+
+**🔹 "Alertas falsas de stock"**  
+🔧 *Solución:* Revisá que el inventario esté bien configurado
+
+**🔹 "No funciona fuera del horario"**  
+🔧 *Solución:* Verificá la configuración de horarios permitidos
 
 ### **📞 ¿Necesitás ayuda?**
 Contactá a soporte técnico - ellos te ayudan a configurar todo perfectamente según tu tipo de negocio.

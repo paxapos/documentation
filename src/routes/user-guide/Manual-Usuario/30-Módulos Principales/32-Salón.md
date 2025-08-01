@@ -17,10 +17,10 @@
 5. Se va a abrir una ventana para crear la mesa
 6. Completá estos datos:
 
-| Campo | Qué escribir | Ejemplo |
-|-------|-------------|---------|
-| **Nombre de la Mesa** | Identificador claro | "Mesa 5", "Terraza A", "Barra 2" |
-| **Cantidad de Cubiertos** | Cuántas personas | 4 personas |
+**📝 Datos de la mesa:**
+
+🔹 **Nombre de la Mesa** | Identificador claro  
+🔹 **Cantidad de Cubiertos** | Cuántas personas
 
 7. Hacé clic en **"Guardar"**
 8. ¡Listo! La mesa está abierta y asignada al mozo

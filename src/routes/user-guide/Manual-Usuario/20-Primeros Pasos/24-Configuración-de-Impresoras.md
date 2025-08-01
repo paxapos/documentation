@@ -20,14 +20,31 @@ Recordá buscar la **"P" roja** 🔴 para acceder a configuraciones avanzadas si
 
 Vas a ver estas opciones importantes. Te explico qué hace cada una:
 
-| Opción | Qué hace | Cuándo activarla |
-|--------|----------|------------------|
-| **Impresora Fiscal por Defecto** | Cuál imprime las facturas legales | Seleccioná tu impresora fiscal |
-| **Imprimir Fiscal al Hacer Checkout** | Imprime automático al cerrar mesa | ✅ Activar si querés automático |
-| **Remito o Fiscal al Cerrar Mesa** | Qué tipo de comprobante imprimir | Fiscal para facturas, Remito para pedidos |
-| **Impresora de Remitos por Defecto** | Dónde salen los tickets simples | La impresora de caja |
-| **Impresora de Cajón de Dinero** | Cuál abre el cajón | La que está conectada al cajón |
-| **Impresora de Comandas/Pedidos** | Dónde salen los pedidos para cocina | La impresora de cocina |
+**📋 Opciones de configuración de impresoras:**
+
+**🔹 Impresora Fiscal por Defecto**  
+🎯 *Qué hace:* Cuál imprime las facturas legales  
+💡 *Cuándo activarla:* Seleccioná tu impresora fiscal
+
+**🔹 Imprimir Fiscal al Hacer Checkout**  
+🎯 *Qué hace:* Imprime automático al cerrar mesa  
+💡 *Cuándo activarla:* ✅ Activar si querés automático
+
+**🔹 Remito o Fiscal al Cerrar Mesa**  
+🎯 *Qué hace:* Qué tipo de comprobante imprimir  
+💡 *Cuándo activarla:* Fiscal para facturas, Remito para pedidos
+
+**🔹 Impresora de Remitos por Defecto**  
+🎯 *Qué hace:* Dónde salen los tickets simples  
+💡 *Cuándo activarla:* La impresora de caja
+
+**🔹 Impresora de Cajón de Dinero**  
+🎯 *Qué hace:* Cuál abre el cajón  
+💡 *Cuándo activarla:* La que está conectada al cajón
+
+**🔹 Impresora de Comandas/Pedidos**  
+🎯 *Qué hace:* Dónde salen los pedidos para cocina  
+💡 *Cuándo activarla:* La impresora de cocina
 
 ---
 
@@ -35,12 +52,27 @@ Vas a ver estas opciones importantes. Te explico qué hace cada una:
 
 ### **📍 Setup recomendado:**
 
-| Impresora | Ubicación | Para qué | Configuración |
-|-----------|-----------|----------|---------------|
-| **Fiscal** | Caja/mostrador | Facturas legales | Impresora Fiscal por Defecto |
-| **Tickets** | Caja/mostrador | Tickets simples | Impresora de Remitos |
-| **Comandas** | Cocina | Pedidos para cocinar | Impresora de Comandas |
-| **Cajón** | Caja | Abrir cajón de dinero | Impresora de Cajón |
+**🏪 Configuración típica de impresoras:**
+
+**🖨️ Impresora Fiscal**  
+📍 *Ubicación:* Caja/mostrador  
+🎯 *Para qué:* Facturas legales  
+⚙️ *Configuración:* Impresora Fiscal por Defecto
+
+**🖨️ Impresora de Tickets**  
+📍 *Ubicación:* Caja/mostrador  
+🎯 *Para qué:* Tickets simples  
+⚙️ *Configuración:* Impresora de Remitos
+
+**🖨️ Impresora de Comandas**  
+📍 *Ubicación:* Cocina  
+🎯 *Para qué:* Pedidos para cocinar  
+⚙️ *Configuración:* Impresora de Comandas
+
+**🖨️ Impresora de Cajón**  
+📍 *Ubicación:* Caja  
+🎯 *Para qué:* Abrir cajón de dinero  
+⚙️ *Configuración:* Impresora de Cajón
 
 ---
 
