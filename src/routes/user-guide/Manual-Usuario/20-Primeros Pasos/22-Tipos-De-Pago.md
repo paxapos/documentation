@@ -27,21 +27,24 @@ Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las 
 ### **Paso 3: Completar la información**
 Completá estos campos según el tipo de pago que estés agregando:
 
-| Campo | Qué escribir | Ejemplo |
-|-------|-------------|---------|
-| **Nombre del Tipo de Pago** | Nombre claro del método | "Efectivo", "Visa Crédito", "MercadoPago" |
-| **Foto/Imagen** | Una imagen del método (opcional) | Logo de Visa, ícono de efectivo |
-| **Días para acreditarse** | Cuánto tarda en llegar la plata | Efectivo: 0 días, Tarjeta: 7 días |
-| **Porcentaje de Comisión** | Cuánto te cobra el banco/procesador | Efectivo: 0%, Tarjeta: 2.5% |
+**📝 Campos a completar:**
+
+🔹 **Nombre del Tipo de Pago** | Nombre claro del método  
+🔹 **Foto/Imagen** | Una imagen del método (opcional)  
+🔹 **Días para acreditarse** | Cuánto tarda en llegar la plata  
+🔹 **Porcentaje de Comisión** | Cuánto te cobra el banco/procesador
 
 ### **Paso 4: Marcar las opciones correctas**
 **MUY IMPORTANTE:** Marcá las casillas según para qué vas a usar este método:
 
-| Opción | Cuándo marcarla | Ejemplo |
-|--------|----------------|---------|
-| ✅ **Para Cobros** | Si los clientes te van a pagar así | Efectivo, tarjetas, MercadoPago |
-| ✅ **Para Pagos** | Si vos vas a pagar a proveedores así | Transferencia, efectivo |
-| ✅ **Para Propina** | Si se puede dar propina con este método | Efectivo, tarjeta |
+**☑️ Opciones de uso:**
+
+🔹 **Para Cobros** | Si los clientes te van a pagar así  
+🔹 **Para Pagos** | Si vos vas a pagar a proveedores así
+
+**🔹 Para Propina**  
+📌 *Cuándo marcarla:* Si se puede dar propina con este método  
+📋 *Ejemplo:* Efectivo, tarjeta
 
 ### **Paso 5: Guardar**
 6. Verificá que todo esté bien
@@ -54,15 +57,42 @@ Completá estos campos según el tipo de pago que estés agregando:
 
 ### **📄 Para restaurantes típicos, configurá estos:**
 
-| Método | Comisión típica | Días acreditación | Para Cobros | Para Pagos | Para Propina |
-|--------|----------------|-------------------|-------------|------------|--------------|
-| **Efectivo** | 0% | 0 días | ✅ | ✅ | ✅ |
-| **Visa Débito** | 1.5% | 1 día | ✅ | ❌ | ✅ |
-| **Visa Crédito** | 2.8% | 7 días | ✅ | ❌ | ✅ |
-| **Mastercard Débito** | 1.5% | 1 día | ✅ | ❌ | ✅ |
-| **Mastercard Crédito** | 2.8% | 7 días | ✅ | ❌ | ✅ |
-| **MercadoPago** | 2.99% | 14 días | ✅ | ❌ | ❌ |
-| **Transferencia** | 0% | 0 días | ✅ | ✅ | ❌ |
+**💳 Métodos de pago recomendados:**
+
+**🔹 Efectivo**  
+💰 *Comisión típica:* 0%  
+⏰ *Días acreditación:* 0 días  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ✅ | *Para Propina:* ✅
+
+**🔹 Visa Débito**  
+💰 *Comisión típica:* 1.5%  
+⏰ *Días acreditación:* 1 día  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
+
+**🔹 Visa Crédito**  
+💰 *Comisión típica:* 2.8%  
+⏰ *Días acreditación:* 7 días  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
+
+**🔹 Mastercard Débito**  
+💰 *Comisión típica:* 1.5%  
+⏰ *Días acreditación:* 1 día  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
+
+**🔹 Mastercard Crédito**  
+💰 *Comisión típica:* 2.8%  
+⏰ *Días acreditación:* 7 días  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
+
+**🔹 MercadoPago**  
+💰 *Comisión típica:* 2.99%  
+⏰ *Días acreditación:* 14 días  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ❌
+
+**🔹 Transferencia**  
+💰 *Comisión típica:* 0%  
+⏰ *Días acreditación:* 0 días  
+✅ *Para Cobros:* ✅ | *Para Pagos:* ✅ | *Para Propina:* ❌
 
 ---
 

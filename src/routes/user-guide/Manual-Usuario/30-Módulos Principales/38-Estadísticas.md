@@ -19,11 +19,9 @@ Para saber si ganás o perdés plata, y ver cómo va tu negocio día a día.
 
 ### **📈 Lo que vas a ver:**
 
-| Información | Qué te dice | Ejemplo |
-|-------------|-------------|---------|
-| **Ingresos** | Cuánto vendiste | $150.000 |
-| **Egresos** | Cuánto gastaste | $80.000 |
-| **Ganancia** | Lo que te quedó | $70.000 |
+🔹 **Ingresos** | Cuánto vendiste  
+🔹 **Egresos** | Cuánto gastaste  
+🔹 **Ganancia** | Lo que te quedó
 
 ### **🔧 Filtros útiles:**
 - **📅 Por fecha:** Hoy, esta semana, este mes, año completo
@@ -44,11 +42,9 @@ Para ver cómo te fue en todo el año y planificar el año que viene.
 
 ### **📊 Información completa:**
 
-| Sección | Qué incluye | Para qué sirve |
-|---------|-------------|----------------|
-| **Resumen Económico** | Ingresos y gastos del año | Declaración de impuestos |
-| **Resumen Financiero** | Flujo de efectivo | Pedidos de crédito al banco |
-| **Comparativo** | Este año vs año anterior | Ver si mejoraste |
+🔹 **Resumen Económico** | Ingresos y gastos del año (Para declaración de impuestos)  
+🔹 **Resumen Financiero** | Flujo de efectivo (Para pedidos de crédito al banco)  
+🔹 **Comparativo** | Este año vs año anterior (Para ver si mejoraste)
 
 ### **💼 Para qué lo vas a usar:**
 - ✅ **Contabilidad anual**
@@ -65,11 +61,9 @@ Para saber quién vende más y premiar a los mejores empleados (o ayudar a los q
 
 ### **📋 Lo que ves de cada mozo:**
 
-| Dato | Qué significa | Ejemplo |
-|------|---------------|---------|
-| **Cantidad de ventas** | Cuántas mesas/órdenes atendió | 45 ventas |
-| **Valor en pesos** | Cuánta plata generó | $85.000 |
-| **Promedio por venta** | Cuánto vende por mesa | $1.888 |
+🔹 **Cantidad de ventas** | Cuántas mesas/órdenes atendió  
+🔹 **Valor en pesos** | Cuánta plata generó  
+🔹 **Promedio por venta** | Cuánto vende por mesa
 
 ### **💡 Usos prácticos:**
 
@@ -136,13 +130,11 @@ Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 
 ## 🚨 **¿Problemas comunes?**
 
-| Problema | Solución |
-|----------|----------|
-| **"Los números no coinciden"** | Verificá que estén cargadas todas las ventas y gastos |
-| **"Un mozo aparece con cero ventas"** | Revisá si está usando su usuario correcto |
-| **"No aparecen algunos tipos de pago"** | Verificá la configuración de métodos de cobro |
-| **"No puedo exportar a Excel"** | Probá con períodos más cortos o contactá soporte |
-| **"Los gráficos no se ven"** | Actualizá el navegador o probá en otro |
+🔹 **"Los números no coinciden"** | Verificá que estén cargadas todas las ventas y gastos  
+🔹 **"Un mozo aparece con cero ventas"** | Revisá si está usando su usuario correcto  
+🔹 **"No aparecen algunos tipos de pago"** | Verificá la configuración de métodos de cobro  
+🔹 **"No puedo exportar a Excel"** | Probá con períodos más cortos o contactá soporte  
+🔹 **"Los gráficos no se ven"** | Actualizá el navegador o probá en otro
 
 ### **📞 ¿Para qué más sirven las estadísticas?**
 - **Préstamos bancarios** (mostrar crecimiento)

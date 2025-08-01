@@ -31,15 +31,15 @@ Para configurar el menú, **SIEMPRE** necesitás usar la **"P" roja** 🔴 y lue
 7. Dentro del menú que creaste, hacé clic en **"Nuevo Producto"**
 8. Completá la información del producto:
 
-| Campo | Qué escribir | Ejemplo | ¿Es obligatorio? |
-|-------|-------------|---------|------------------|
-| **Nombre** | Nombre del producto | Milanesa Napolitana | ✅ SÍ |
-| **Categoría** | Tipo de producto | Platos Principales | ✅ SÍ |
-| **Precio** | Precio de venta | 2500 | ✅ SÍ |
-| **Moneda Local** | Peso argentino | ARS | ✅ SÍ |
-| **Impuestos** | IVA que corresponde | 21% | ✅ SÍ |
-| **Impresora** | Dónde se imprime | Cocina | ❌ NO |
-| **Nombre en Ticket** | Nombre corto | Mila Napo | ❌ NO |
+🔹 **Nombre** | Nombre del producto (Obligatorio)  
+🔹 **Categoría** | Tipo de producto (Obligatorio)  
+🔹 **Precio** | Precio de venta (Obligatorio)  
+🔹 **Moneda Local** | Peso argentino (Obligatorio)  
+🔹 **Impuestos** | IVA que corresponde (Obligatorio)  
+🔹 **Impresora** | Dónde se imprime (Opcional)  
+🔹 **Nombre en Ticket** | Nombre corto (Opcional)  
+📋 *Ejemplo:* Mila Napo  
+📌 *¿Es obligatorio?* ❌ NO
 
 ### **Paso 4: Guardar el producto**
 9. Verificá que todos los datos estén correctos
@@ -53,13 +53,11 @@ Para configurar el menú, **SIEMPRE** necesitás usar la **"P" roja** 🔴 y lue
 ### **📝 Crear categorías primero**
 Antes de cargar productos, creá las categorías:
 
-| Categoría | Para qué productos | Ejemplos |
-|-----------|-------------------|----------|
-| **Entradas** | Platos para empezar | Empanadas, tabla de fiambres |
-| **Platos Principales** | Comida principal | Milanesas, pastas, parrilla |
-| **Bebidas con Alcohol** | Cervezas, vinos, tragos | Cerveza, vino tinto, fernet |
-| **Bebidas sin Alcohol** | Gaseosas, jugos, agua | Coca-Cola, agua, jugo de naranja |
-| **Postres** | Dulces y postres | Flan, helado, torta |
+🔹 **Entradas** | Platos para empezar  
+🔹 **Platos Principales** | Comida principal  
+🔹 **Bebidas con Alcohol** | Cervezas, vinos, tragos  
+🔹 **Bebidas sin Alcohol** | Gaseosas, jugos, agua  
+🔹 **Postres** | Dulces y postres
 
 ### **🔧 Para crear categorías:**
 1. Dentro de Productos, buscá **"Categorías"**

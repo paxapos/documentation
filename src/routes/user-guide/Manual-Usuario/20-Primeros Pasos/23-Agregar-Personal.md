@@ -23,32 +23,45 @@ No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
 
 ### **Paso 3: Completar información del empleado**
 
-| Campo | Qué escribir | Ejemplo | ¿Es obligatorio? |
-|-------|-------------|---------|------------------|
-| **Alias** | Nombre corto para el sistema | Juancho, Caro, Fede | ✅ SÍ |
-| **Nombre** | Nombre real del empleado | Juan | ✅ SÍ |
-| **Apellido** | Apellido del empleado | González | ✅ SÍ |
-| **Foto** | Foto del empleado (opcional) | Foto 3x4 | ❌ NO |
-| **Punto de Venta** | En qué sector trabaja | Salón Principal, Terraza | ❌ NO |
+**📝 Datos del empleado:**
+
+🔹 **Alias** | Nombre corto para el sistema (Obligatorio)  
+🔹 **Nombre** | Nombre real del empleado (Obligatorio)  
+🔹 **Apellido** | Apellido del empleado (Obligatorio)  
+🔹 **Foto** | Foto del empleado (Opcional)  
+� **Punto de Venta** | En qué sector trabaja (Opcional)
 
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
 
 **Seleccionar Qué Usuarios Puede Ver tu Mozo**
 
-| Opción | Cuándo usarla | Ejemplo |
-|--------|---------------|---------|
-| **Ver todas las mesas** | Todos los mozos pueden atender cualquier mesa | Restaurante pequeño, todos ayudan |
-| **Solo sus mesas asignadas** | Cada mozo ve solo sus mesas | Restaurante grande, mozos por sector |
+**👀 Opciones de visibilidad:**
+
+**🔹 Ver todas las mesas**  
+📌 *Cuándo usarla:* Todos los mozos pueden atender cualquier mesa  
+📋 *Ejemplo:* Restaurante pequeño, todos ayudan
+
+**🔹 Solo sus mesas asignadas**  
+📌 *Cuándo usarla:* Cada mozo ve solo sus mesas  
+📋 *Ejemplo:* Restaurante grande, mozos por sector
 
 ### **Paso 5: Asignar rol**
 En **Rol de Dicho Mozo** elegí:
 
-| Rol | Para quién | Qué puede hacer |
-|-----|------------|----------------|
-| **Mozo** | Meseros principales | Tomar pedidos, cobrar mesas |
-| **Vendedor** | Personal de mostrador | Vender productos, cobrar |
-| **Atención al Cliente** | Personal de recepción | Recibir clientes, tomar reservas |
+**👥 Roles disponibles:**
+
+**🔹 Mozo**  
+👤 *Para quién:* Meseros principales  
+🎯 *Qué puede hacer:* Tomar pedidos, cobrar mesas
+
+**🔹 Vendedor**  
+👤 *Para quién:* Personal de mostrador  
+🎯 *Qué puede hacer:* Vender productos, cobrar
+
+**🔹 Atención al Cliente**  
+👤 *Para quién:* Personal de recepción  
+🎯 *Qué puede hacer:* Recibir clientes, tomar reservas
 
 ### **Paso 6: Guardar**
 6. Verificá que todos los datos estén correctos

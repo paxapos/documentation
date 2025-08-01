@@ -12,7 +12,9 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"generate:ai": "node scripts/generate-ai-files.mjs"
+		"generate:ai": "node scripts/generate-ai-files.mjs",
+		"whatsapp:install": "npm install whatsapp-web.js qrcode-terminal",
+		"whatsapp:start": "node scripts/whatsapp-bot.js"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
