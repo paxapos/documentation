@@ -1,11 +1,12 @@
-import { GEMINI_API_KEY } from '$env/static/private';
+import { GEMINI_API_KEY, GEMINI_MODEL, GEMINI_API_URL, GEMINI_MAX_TOKENS_WEB, GEMINI_MAX_TOKENS_WHATSAPP, GEMINI_TEMPERATURE } from '$env/static/private';
 import { json } from '@sveltejs/kit';
 import { prepareForExport } from '$lib/helpers/textReplacer';
 
 export const POST = async ({ request }) => {
 	try {
 		console.log('🔍 API Key disponible:', !!GEMINI_API_KEY);
-		console.log('🔍 Longitud API Key:', GEMINI_API_KEY?.length || 0);
+		console.log('🔍 Modelo Gemini:', GEMINI_MODEL || 'gemini-1.5-flash');
+		console.log('🔍 Configuración cargada desde .env');
 		
 		const { message, platform = 'web' } = await request.json();
 
@@ -21,15 +22,22 @@ export const POST = async ({ request }) => {
 			? getWhatsAppPrompt(manualContext)
 			: getWebPrompt(manualContext);
 
-		// Llamada a Gemini
-		const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+		// Llamada a Gemini con configuración desde variables de entorno
+		const model = GEMINI_MODEL || 'gemini-1.5-flash';
+		const apiUrl = GEMINI_API_URL || 'https://generativelanguage.googleapis.com/v1beta';
+		const maxTokens = platform === 'whatsapp' 
+			? parseInt(GEMINI_MAX_TOKENS_WHATSAPP || '400')
+			: parseInt(GEMINI_MAX_TOKENS_WEB || '600');
+		const temperature = parseFloat(GEMINI_TEMPERATURE || '0.3');
+
+		const response = await fetch(`${apiUrl}/models/${model}:generateContent?key=${GEMINI_API_KEY}`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				contents: [{ parts: [{ text: `${systemPrompt}\n\nPregunta: ${message}` }] }],
 				generationConfig: {
-					temperature: 0.3,
-					maxOutputTokens: platform === 'whatsapp' ? 400 : 600,
+					temperature,
+					maxOutputTokens: maxTokens,
 					topP: 0.8,
 					topK: 20
 				}
