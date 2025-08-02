@@ -41,6 +41,12 @@ jobs:
         run: pnpm run build
         env:
           NODE_ENV: production
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          GEMINI_API_URL: ${{ secrets.GEMINI_API_URL }}
+          GEMINI_MAX_TOKENS_WEB: ${{ secrets.GEMINI_MAX_TOKENS_WEB }}
+          GEMINI_MAX_TOKENS_WHATSAPP: ${{ secrets.GEMINI_MAX_TOKENS_WHATSAPP }}
+          GEMINI_TEMPERATURE: ${{ secrets.GEMINI_TEMPERATURE }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
