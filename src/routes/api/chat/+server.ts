@@ -1,16 +1,33 @@
-import { GEMINI_API_KEY, GEMINI_MODEL, GEMINI_API_URL, GEMINI_MAX_TOKENS_WEB, GEMINI_MAX_TOKENS_WHATSAPP, GEMINI_TEMPERATURE } from '$env/static/private';
 import { json } from '@sveltejs/kit';
 import { prepareForExport } from '$lib/helpers/textReplacer';
 
+// Import environment variables with fallbacks
+import { 
+	GEMINI_API_KEY, 
+	GEMINI_MODEL, 
+	GEMINI_API_URL, 
+	GEMINI_MAX_TOKENS_WEB, 
+	GEMINI_MAX_TOKENS_WHATSAPP, 
+	GEMINI_TEMPERATURE 
+} from '$env/static/private';
+
+// Configuration with defaults
+const API_KEY = GEMINI_API_KEY || '';
+const MODEL = GEMINI_MODEL || 'gemini-1.5-flash';
+const API_URL = GEMINI_API_URL || 'https://generativelanguage.googleapis.com/v1beta';
+const MAX_TOKENS_WEB = parseInt(GEMINI_MAX_TOKENS_WEB || '600');
+const MAX_TOKENS_WHATSAPP = parseInt(GEMINI_MAX_TOKENS_WHATSAPP || '400');
+const TEMPERATURE = parseFloat(GEMINI_TEMPERATURE || '0.3');
+
 export const POST = async ({ request }) => {
 	try {
-		console.log('🔍 API Key disponible:', !!GEMINI_API_KEY);
-		console.log('🔍 Modelo Gemini:', GEMINI_MODEL || 'gemini-1.5-flash');
+		console.log('🔍 API Key disponible:', !!API_KEY);
+		console.log('🔍 Modelo Gemini:', MODEL);
 		console.log('🔍 Configuración cargada desde .env');
 		
 		const { message, platform = 'web' } = await request.json();
 
-		if (!GEMINI_API_KEY) {
+		if (!API_KEY) {
 			return json({ success: false, error: 'API Key no configurada' }, { status: 500 });
 		}
 
@@ -23,20 +40,15 @@ export const POST = async ({ request }) => {
 			: getWebPrompt(manualContext);
 
 		// Llamada a Gemini con configuración desde variables de entorno
-		const model = GEMINI_MODEL || 'gemini-1.5-flash';
-		const apiUrl = GEMINI_API_URL || 'https://generativelanguage.googleapis.com/v1beta';
-		const maxTokens = platform === 'whatsapp' 
-			? parseInt(GEMINI_MAX_TOKENS_WHATSAPP || '400')
-			: parseInt(GEMINI_MAX_TOKENS_WEB || '600');
-		const temperature = parseFloat(GEMINI_TEMPERATURE || '0.3');
+		const maxTokens = platform === 'whatsapp' ? MAX_TOKENS_WHATSAPP : MAX_TOKENS_WEB;
 
-		const response = await fetch(`${apiUrl}/models/${model}:generateContent?key=${GEMINI_API_KEY}`, {
+		const response = await fetch(`${API_URL}/models/${MODEL}:generateContent?key=${API_KEY}`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				contents: [{ parts: [{ text: `${systemPrompt}\n\nPregunta: ${message}` }] }],
 				generationConfig: {
-					temperature,
+					temperature: TEMPERATURE,
 					maxOutputTokens: maxTokens,
 					topP: 0.8,
 					topK: 20
