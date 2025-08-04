@@ -4,6 +4,9 @@
 	import { prepareForExport } from '$lib/helpers/textReplacer';
 	import { base } from '$app/paths';
 	
+	// Configuración de la API - Cambia esta URL cuando despliegues en Vercel
+	const API_ENDPOINT = 'https://your-vercel-app.vercel.app/api/chat'; // Cambiar por tu URL de Vercel
+	
 	let isOpen = false;
 	let messages: Array<{text: string, isUser: boolean, timestamp: Date}> = [];
 	let currentMessage = '';
@@ -267,8 +270,8 @@ Administra accesos al sistema:
 
 	async function generateResponse(question: string): Promise<string> {
 		try {
-			// Intentar con Gemini AI primero
-			const response = await fetch('/documentation/api/chat', {
+			// Intentar con Gemini AI usando Vercel API
+			const response = await fetch(API_ENDPOINT, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ message: question, platform: 'web' })
