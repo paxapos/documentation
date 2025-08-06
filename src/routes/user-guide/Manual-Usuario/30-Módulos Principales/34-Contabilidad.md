@@ -38,7 +38,7 @@ Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos 
 |-------|-----------|---------|
 | **Nombre de Impuesto** | Nombre claro | "IVA 21%" |
 | **Porcentaje** | Número sin el % | 21 |
-| **Código AFIP** | Código oficial | 0005 |
+| **Código ARCA** | Código oficial | 0005 |
 | **Tiene Neto** | ☑️ Si aplica sobre base neta | ✅ |
 | **Tiene Impuesto** | ☑️ Si se calcula sobre impuesto | ❌ |
 
