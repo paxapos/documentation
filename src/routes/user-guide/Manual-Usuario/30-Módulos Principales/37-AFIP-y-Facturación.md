@@ -144,12 +144,12 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 1:** **Para que este nuevo servicio quede habilitado** deberás salir del sitio de ARCA e ingresar nuevamente en www.afip.gob.ar y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
-   ![Reingresar ARCA](/documentation/images/afip/9-Administrar-relaciones.jpg)
+   ![Reingresar ARCA](/documentation/images/afip/1-Inicio-sesion.jpg)
    *Reingreso necesario para activar el nuevo servicio*
 
 **🔹 PASO 2:** **En el buscador**, ingresar la opción "Administración de puntos de venta y domicilios"
 
-   ![Servicios Habilitados](/documentation/images/afip/20-servicios-habilitados.png)
+   ![Servicios Habilitados](/documentation/images/afip/9-Administrar-relaciones.jpg)
    *Lista de servicios habilitados mostrando la nueva opción*
 
 **🔹 PASO 3:** **Seleccionar la empresa** e ingresar a "A/B/M de Puntos de Venta"
