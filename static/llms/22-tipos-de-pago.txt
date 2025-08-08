@@ -1,0 +1,52 @@
+# PaxaPOS - Manual de Usuario
+# Módulo: 22-Tipos-De-Pago
+# Generado automáticamente para LLMs/IA
+# URL: https://paxapos.github.io/documentation/llms/22-tipos-de-pago.txt
+
+💳 Configuración de Tipos de Pago
+> 🎯 ¿Para qué sirve esto?
+> Vas a configurar cómo pueden pagar tus clientes: efectivo, tarjeta de crédito, débito, Mercado Pago, etc. Sin esto configurado, no vas a poder cobrar.
+🔴 RECORDATORIO - La "P" roja
+Acordate de buscar la "P" roja 🔴 en la parte superior para acceder a las configuraciones.
+[Código]
+💡 Métodos de pago más comunes para configurar
+📄 Para restaurantes típicos, configurá estos:
+💳 Métodos de pago recomendados:
+🔹 Efectivo
+💰 Comisión típica: 0%
+⏰ Días acreditación: 0 días
+✅ Para Cobros: ✅  Para Propina: ✅
+🔹 Visa Débito
+💰 Comisión típica: 1.5%
+⏰ Días acreditación: 1 día
+✅ Para Cobros: ✅  Para Propina: ✅
+🔹 Visa Crédito
+💰 Comisión típica: 2.8%
+⏰ Días acreditación: 7 días
+✅ Para Cobros: ✅  Para Propina: ✅
+🔹 Mastercard Débito
+💰 Comisión típica: 1.5%
+⏰ Días acreditación: 1 día
+✅ Para Cobros: ✅  Para Propina: ✅
+🔹 Mastercard Crédito
+💰 Comisión típica: 2.8%
+⏰ Días acreditación: 7 días
+✅ Para Cobros: ✅  Para Propina: ✅
+🔹 MercadoPago
+💰 Comisión típica: 2.99%
+⏰ Días acreditación: 14 días
+✅ Para Cobros: ✅  Para Propina: ❌
+🔹 Transferencia
+💰 Comisión típica: 0%
+⏰ Días acreditación: 0 días
+✅ Para Cobros: ✅  Para Propina: ❌
+---
+💡 Consejos importantes
+• ✅ Configurá SIEMPRE el efectivo primero (es el más básico)
+• ✅ Verificá las comisiones con tu banco (pueden cambiar)
+• ✅ No olvides marcar las casillas correctas (Para Cobros, etc.)
+• ✅ Agregá métodos populares como MercadoPago, Ualá, etc.
+🚨 ¿Problemas comunes?
+• "No me deja guardar" → Verificá que hayas puesto un nombre
+• "No aparece en el cobro" → Verificá que hayas marcado "Para Cobros"
+• "No sé qué comisión poner" → Consultá con tu banco o procesador de pagos

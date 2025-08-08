@@ -1,0 +1,29 @@
+# PaxaPOS - Índice de Módulos para LLMs/IA
+
+Este directorio contiene todos los módulos de documentación de PaxaPOS convertidos a texto plano para facilitar el procesamiento por parte de LLMs e IA.
+
+## Módulos disponibles:
+
+- 11-introduccion.txt (1KB) - Basado en: 10-Comenzamos/11-Introduccion.md
+- 12-iniciar-sesin.txt (2KB) - Basado en: 10-Comenzamos/12-Iniciar-sesión.md
+- 21-crear-usuarios.txt (3KB) - Basado en: 20-Primeros Pasos/21-Crear-Usuarios.md
+- 22-tipos-de-pago.txt (2KB) - Basado en: 20-Primeros Pasos/22-Tipos-De-Pago.md
+- 23-agregar-personal.txt (1KB) - Basado en: 20-Primeros Pasos/23-Agregar-Personal.md
+- 24-configuracin-de-impresoras.txt (3KB) - Basado en: 20-Primeros Pasos/24-Configuración-de-Impresoras.md
+- 25-men.txt (3KB) - Basado en: 20-Primeros Pasos/25-Menú.md
+- 32-saln.txt (2KB) - Basado en: 30-Módulos Principales/32-Salón.md
+- 33-kitchen-display-system-kds.txt (3KB) - Basado en: 30-Módulos Principales/33-Kitchen-Display-System-(KDS).md
+- 34-contabilidad.txt (3KB) - Basado en: 30-Módulos Principales/34-Contabilidad.md
+- 35-arqueos.txt (3KB) - Basado en: 30-Módulos Principales/35-Arqueos.md
+- 36-compras-y-stock.txt (4KB) - Basado en: 30-Módulos Principales/36-Compras-y-Stock.md
+- 37-arca-y-facturacin.txt (6KB) - Basado en: 30-Módulos Principales/37-ARCA-y-Facturación.md
+- 38-estadsticas.txt (4KB) - Basado en: 30-Módulos Principales/38-Estadísticas.md
+- 42-buchn-bot.txt (3KB) - Basado en: 40-Extra/42-Buchón-Bot.md
+
+## Información:
+- Total de módulos: 15
+- Generado: 8/8/2025, 12:13:01
+- Base URL: https://paxapos.github.io/documentation/llms/
+
+## Uso para LLMs:
+Estos archivos están optimizados para ser procesados por sistemas de IA y permiten entrenar o consultar información específica sobre el sistema PaxaPOS.

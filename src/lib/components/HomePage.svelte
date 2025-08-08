@@ -164,14 +164,14 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Explora las APIs
+							Configura tu Negocio
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Comienza explorando nuestra documentación de APIs REST y GraphQL
+							Carga los datos de tu empresa, crea usuarios y asigna roles. Configura impresoras, mesas y métodos de pago desde el panel de administración.
 					</p>
 				</div>
 				<div class="text-center">
@@ -191,14 +191,14 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Prueba el Sistema
+							Gestiona y Opera
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS
+							Administra el salón, toma pedidos, controla la cocina (KDS), realiza arqueos y gestiona ventas y stock en tiempo real.
 					</p>
 				</div>
 				<div class="text-center">
@@ -218,14 +218,14 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Implementa
+							Analiza y Optimiza
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Sigue nuestras guías de implementación para poner en marcha tu sistema
+							Consulta reportes, estadísticas y usa el chatbot con IA para resolver dudas y mejorar la gestión de tu restaurante.
 					</p>
 				</div>
 			</div>

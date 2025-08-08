@@ -1,0 +1,29 @@
+# PaxaPOS - Manual de Usuario
+# Módulo: 23-Agregar-Personal
+# Generado automáticamente para LLMs/IA
+# URL: https://paxapos.github.io/documentation/llms/23-agregar-personal.txt
+
+👨‍💼 Agregar Personal (Mozos)
+> 🎯 ¿Para qué sirve esto?
+> Vas a registrar a tus mozos, meseros y vendedores en el sistema. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
+🔴 RECORDATORIO - La P roja
+No olvides buscar la P roja 🔴 para acceder a configuraciones.
+👥 ¿Cómo organizar tu equipo?
+🏪 Restaurante pequeño (1-15 mesas)
+• ✅ Todos los mozos ven todas las mesas
+• ✅ Se ayudan entre todos
+• ✅ Más flexibilidad
+🏢 Restaurante grande (16+ mesas)
+• ✅ Cada mozo ve solo su sector
+• ✅ Mejor control individual
+• ✅ Menos confusión
+---
+💡 Consejos importantes
+• ✅ Usá alias cortos y fáciles (Juancho en vez de Juan Carlos)
+• ✅ Agregá fotos si podés (facilita identificar quién es quién)
+• ✅ Asigná bien los roles (no todos necesitan ser mozos)
+• ✅ Probá la visibilidad antes de abrir el restaurante
+🚨 ¿Problemas comunes?
+• No veo las mesas → Verificá la configuración de visibilidad
+• Aparece en todos lados → Revisá si tiene el rol correcto
+• No puedo tomar pedidos → Verificá que tenga permisos de mozo

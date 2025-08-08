@@ -1,0 +1,80 @@
+# PaxaPOS - Manual de Usuario
+# Módulo: 25-Menú
+# Generado automáticamente para LLMs/IA
+# URL: https://paxapos.github.io/documentation/llms/25-men.txt
+
+🍽️ Configuración del Menú
+> 🎯 ¿Para qué sirve esto?
+> Vas a cargar todos los productos que vendés: comidas, bebidas, postres, etc. Sin el menú cargado, no vas a poder tomar pedidos ni vender nada.
+🔴 MUY IMPORTANTE - La "P" roja
+Para configurar el menú, SIEMPRE necesitás usar la "P" roja 🔴 y luego ir a "Productos".
+[Código]
+🏷️ Cómo organizar tu menú con Categorías
+📝 Crear categorías primero
+Antes de cargar productos, creá las categorías:
+🔹 Entradas | Platos para empezar
+🔹 Platos Principales | Comida principal
+🔹 Bebidas con Alcohol | Cervezas, vinos, tragos
+🔹 Bebidas sin Alcohol | Gaseosas, jugos, agua
+🔹 Postres | Dulces y postres
+🔧 Para crear categorías:
+Dentro de Productos, buscá "Categorías"
+Hacé clic en "+ Nueva Categoría"
+Escribí el nombre (ej: "Platos Principales")
+Guardá
+---
+🔄 ¿Qué son las Variantes? (Para productos con opciones)
+💡 Ejemplo práctico:
+• Producto: Milanesa Napolitana
+• Variante: Acompañamiento
+• Opciones: Papas fritas (+$0), Puré (+$100), Ensalada (+$150)
+📋 Cómo crear variantes:
+Paso 1: Crear la variante
+Dentro de Productos, buscá "Variantes"
+Hacé clic en "+ Nueva Variante"
+Nombre: "Acompañamiento"
+Agregá las opciones:
+• Papas fritas - $0
+• Puré de papa - $100
+• Ensalada mixta - $150
+Paso 2: Asignar variante al producto
+Editá tu producto (ej: Milanesa)
+Buscá "Asignar Variante"
+Seleccioná "Acompañamiento"
+Guardá
+Ejemplos:
+• Producto: Bife de chorizo
+• Nombre Variante: Punto de la carne
+• Opciones Variante: Cocido / A Punto / Jugoso
+• Producto: Pastas
+• Nombre Variante: Salsas
+• Opciones Variante: Blanca $0 / Fileto $ +500 / Mixta $ +200 / Bolognesa $1500
+• Producto: Ensaladas
+• Nombre Variante: Tipos Ensaladas
+• Opciones Variante: Mixta / Lechuga y Tomate / Zanahoria y Huevo
+---
+🧾 ¿Qué son las Recetas? (Control de costos)
+> 💡 Opcional pero muy útil: Las recetas te ayudan a saber cuánto te cuesta hacer cada plato.
+Ejemplo:
+• Producto: Pizza Muzzarella
+• Ingredientes: Masa ($50), Salsa ($30), Muzzarella ($200), Gas ($10)
+• Costo total: $290
+• Precio de venta: $800
+• Ganancia: $510
+---
+💡 Consejos para un menú perfecto
+• ✅ Empezá con lo básico (5-10 productos más vendidos)
+• ✅ Usá nombres claros (evitá nombres rebuscados)
+• ✅ Organizá por categorías (facilita encontrar productos)
+• ✅ Configurá bien las impresoras (cocina, bar, etc.)
+• ✅ Probá vender cada producto después de cargarlo
+🚨 ¿Problemas comunes?
+• "No encuentro Productos" → Buscá la "P" roja primero
+• "No me deja guardar" → Verificá que tengas nombre, categoría y precio
+• "No aparece en la venta" → Verificá que esté en el menú correcto
+• "Sale en la impresora equivocada" → Configurá la impresora predeterminada
+• "no sale impreso en la comanda" → Asignale una impresora
+• Funcionalidad: Puedes crear distintas categorías para agrupar tus productos (por ejemplo: "Postres", "Vinos", "Bebidas sin Alcohol", "Entradas", "Platos Principales").
+• Gestión: Dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.
+Productos Duplicados
+Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
