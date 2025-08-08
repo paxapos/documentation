@@ -1,4 +1,5 @@
 # 💳 Configuración de Tipos de Pago
+<div id="tipos-pago"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar cómo pueden pagar tus clientes: efectivo, tarjeta de crédito, débito, Mercado Pago, etc. Sin esto configurado, no vas a poder cobrar.

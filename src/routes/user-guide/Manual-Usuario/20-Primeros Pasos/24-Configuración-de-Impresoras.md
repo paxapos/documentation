@@ -1,4 +1,5 @@
 # 🖨️ Configuración de Impresoras
+<div id="configurar-impresoras"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar tus impresoras para que salgan los tickets de clientes, las comandas de cocina y las facturas. Sin esto configurado, no vas a poder imprimir nada.

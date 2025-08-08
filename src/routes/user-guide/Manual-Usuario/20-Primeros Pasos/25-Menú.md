@@ -1,4 +1,5 @@
 # 🍽️ Configuración del Menú
+<div id="configurar-menu"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a cargar todos los productos que vendés: comidas, bebidas, postres, etc. Sin el menú cargado, no vas a poder tomar pedidos ni vender nada.
@@ -75,6 +76,7 @@ Antes de cargar productos, creá las categorías:
 - **Opciones:** Papas fritas (+$0), Puré (+$100), Ensalada (+$150)
 
 ### **📋 Cómo crear variantes:**
+<div id="variantes"></div>
 
 **Paso 1: Crear la variante**
 1. Dentro de Productos, buscá **"Variantes"**

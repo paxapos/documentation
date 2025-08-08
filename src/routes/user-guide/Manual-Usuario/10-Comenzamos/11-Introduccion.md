@@ -1,4 +1,5 @@
 # 🚀 Bienvenido a PaxaPOS
+<div id="introduccion"></div>
 
 **PaxaPOS** es tu sistema de gestión integral pensado para adaptarse a las necesidades de tu comercio gastronómico.
 

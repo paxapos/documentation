@@ -1,4 +1,5 @@
 # 🔑 Cómo iniciar sesión en PaxaPOS
+<div id="iniciar-sesion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de PaxaPOS.
@@ -38,6 +39,7 @@ Si los datos son correctos, vas a ingresar al **panel principal** de PaxaPOS don
 ---
 
 ## 📱 **Método alternativo - Ingreso con PIN (Para mozos)**
+<div id="Usuario-pin"></div>
 
 > 💡 **¿Sabías que hay otra forma de ingresar?**  
 > Si tu administrador configuró un **usuario con PIN**, los mozos pueden ingresar de forma más rápida sin recordar usuario y contraseña.

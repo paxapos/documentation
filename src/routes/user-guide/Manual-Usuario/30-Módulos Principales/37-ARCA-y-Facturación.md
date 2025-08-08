@@ -1,4 +1,5 @@
 # 🏛️ ARCA y Facturación Electrónica
+<div id="arca-facturacion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Para poder comenzar a facturar con PaxaPos necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado en el sistema.
@@ -103,6 +104,8 @@
 ---
 
 ## 🏪 **2. Crear un nuevo punto de venta electrónico**
+<div id="Alta-pvd"></div>
+
 
 ### **🎯 Objetivo:**
 Habilitar la opción "Administración de puntos de venta y domicilios".

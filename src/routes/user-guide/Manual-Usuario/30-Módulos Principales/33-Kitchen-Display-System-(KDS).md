@@ -1,4 +1,8 @@
 # 👨‍🍳 Kitchen Display System (KDS)
+<div id="kds"></div>
+
+> 🎯 **¿Para qué sirve esto?**  
+> El KDS es una pantalla digital para la cocina que reemplaza los papeles. Los pedidos aparecen automáticamente en pantalla y los cocineros pueden marcar cuándo están listos. ¡Adiós al papel en la cocina!
 
 > 🎯 **¿Para qué sirve esto?**  
 > El KDS es una pantalla digital para la cocina que reemplaza los papeles. Los pedidos aparecen automáticamente en pantalla y los cocineros pueden marcar cuándo están listos. ¡Adiós al papel en la cocina!

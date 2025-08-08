@@ -1,4 +1,5 @@
 # 📊 Estadísticas y Reportes
+<div id="estadisticas"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Acá ves TODO lo que pasa con tu plata: cuánto vendiste, cuánto gastaste, quién vende más, qué formas de pago prefieren los clientes. Es tu "radiografía del negocio".

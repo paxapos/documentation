@@ -1,5 +1,6 @@
 ﻿
 # 👥 Configuración Inicial - Crear Usuarios
+<div id="crear-usuarios"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a crear las cuentas para que tu equipo (mozos, cajeros, cocineros) pueda usar el sistema. Cada persona tendrá su usuario y contraseña personal.

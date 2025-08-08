@@ -1,4 +1,5 @@
 # 📊 Módulo de Contabilidad
+<div id="contabilidad"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Acá manejás todos los gastos de tu negocio: registrás las facturas de proveedores, controlás qué debés, pagás las cuentas, y todo queda ordenado para fin de mes y la contabilidad.

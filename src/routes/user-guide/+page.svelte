@@ -64,6 +64,9 @@
 
     onMount(async () => {
         try {
+            // Hacer funciones accesibles globalmente para onClick en HTML
+            (window as any).copyLinkToSection = copyLinkToSection;
+            
             const modules = import.meta.glob('/src/routes/user-guide/Manual-Usuario/**/*.md', {
                 query: '?raw',
                 import: 'default'
@@ -162,15 +165,102 @@
         const urlParams = new URLSearchParams($page.url.search);
         const highlightParam = urlParams.get('highlight');
         
+        let processedHtml = htmlContent;
+        
         if (highlightParam) {
             // Aplicar resaltado al contenido HTML
-            selectedModuleHtml = highlightTextInHtml(htmlContent, highlightParam);
-        } else {
-            selectedModuleHtml = htmlContent;
+            processedHtml = highlightTextInHtml(htmlContent, highlightParam);
         }
         
+        // Agregar íconos de enlace a los títulos H1
+        processedHtml = addLinkIconsToHeaders(processedHtml);
+        
+        selectedModuleHtml = processedHtml;
         selectedModuleRawMarkdown = rawMarkdown || '';
         console.log('Módulo seleccionado:', id, title);
+        
+        // Esperar un tick para que el DOM se actualice, luego verificar hash
+        setTimeout(() => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetId = hash.substring(1); // Quitar el '#'
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        }, 100);
+    }
+
+    // Función para agregar íconos de enlace a los títulos H1
+    function addLinkIconsToHeaders(html: string): string {
+        // Buscar títulos H1 seguidos de un div con id
+        const h1WithIdRegex = /<h1>([^<]+)<\/h1>\s*<div id="([^"]+)"><\/div>/g;
+        
+        return html.replace(h1WithIdRegex, (match, titleText, idValue) => {
+            return `<h1 class="relative">
+                ${titleText}
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-700 transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded cursor-pointer"
+                    onclick="copyLinkToSection('${idValue}')"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h1>
+            <div id="${idValue}"></div>`;
+        });
+    }
+
+    // Función para copiar el enlace de una sección específica
+    function copyLinkToSection(sectionId: string) {
+        const currentUrl = window.location.href.split('#')[0]; // URL sin hash
+        const linkWithHash = `${currentUrl}#${sectionId}`;
+        
+        navigator.clipboard.writeText(linkWithHash).then(() => {
+            // Mostrar mensaje de confirmación temporal
+            showCopyConfirmation();
+        }).catch(err => {
+            console.error('Error al copiar enlace:', err);
+            // Fallback para navegadores que no soportan clipboard API
+            fallbackCopyToClipboard(linkWithHash);
+        });
+    }
+
+    // Función fallback para copiar al portapapeles
+    function fallbackCopyToClipboard(text: string) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            showCopyConfirmation();
+        } catch (err) {
+            console.error('Error al copiar:', err);
+        } finally {
+            document.body.removeChild(textArea);
+        }
+    }
+
+    // Variable para el mensaje de confirmación
+    let showCopyMessage = false;
+
+    // Función para mostrar confirmación de copia
+    function showCopyConfirmation() {
+        showCopyMessage = true;
+        setTimeout(() => {
+            showCopyMessage = false;
+        }, 2000);
     }
 
     // Función para resaltar texto en HTML de manera más elegante
@@ -327,5 +417,18 @@
                 {/if}
             </div>
         </main>
+
+        <!-- Mensaje de confirmación para copiar enlace -->
+        {#if showCopyMessage}
+            <div 
+                class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg z-50 flex items-center"
+                transition:fade={{ duration: 200 }}
+            >
+                <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                ¡Enlace copiado al portapapeles!
+            </div>
+        {/if}
     </div>
 </div>

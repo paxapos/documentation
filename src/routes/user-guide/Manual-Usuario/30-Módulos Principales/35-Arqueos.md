@@ -1,4 +1,5 @@
 # 💰 Módulo de Arqueos
+<div id="arqueos"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Acá controlás el dinero de tu caja: cuánto abriste, cuánto vendiste, cuánto pagaste y cuánto tenés que tener al final del día. Es súper importante para que no te falte (o sobre) plata.

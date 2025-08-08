@@ -1,4 +1,5 @@
 # 🤖 Buchón Bot
+<div id="buchon-bot"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Es tu "espía digital" que te avisa por Telegram cuando pasa algo raro en tu negocio. Desde que se acaba el stock hasta si alguien hace movimientos sospechosos. ¡Tus ojos cuando no estás!

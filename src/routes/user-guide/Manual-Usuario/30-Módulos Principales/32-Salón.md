@@ -1,4 +1,5 @@
 # 🏪 Módulo de Salón
+<div id="salon"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Acá vas a manejar todas las mesas de tu restaurante: abrir mesas, tomar pedidos, cobrar y cerrar. Es donde pasa toda la acción de tu salón.
