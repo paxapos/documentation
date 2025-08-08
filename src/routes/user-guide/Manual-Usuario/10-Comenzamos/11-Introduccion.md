@@ -8,7 +8,7 @@ Imagínate tener todo tu restaurante, bar o café controlado desde una sola pant
 Desde un solo lugar, permite administrar:
 - 📋 **Toma de pedidos** - Registrá órdenes rápido y sin errores
 - 📦 **Control de stock** - Sabé siempre qué tenés disponible  
-- 🧾 **Facturación** - Cumplí con AFIP automáticamente
+- 🧾 **Facturación** - Cumplí con ARCA automáticamente
 - 📊 **Seguimiento de ventas** - Conocé tus números en tiempo real
 - 👥 **Gestión del personal** - Controlá quién hace qué
 

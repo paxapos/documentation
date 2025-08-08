@@ -83,7 +83,7 @@ Vas a ver estas opciones importantes. Te explico qué hace cada una:
 ### **¿Para qué sirve?**
 - 🔗 **Hace de traductor** entre PaxaPOS y la impresora fiscal
 - ✅ **Garantiza que las facturas salgan bien**
-- 🛡️ **Cumple con todas las normas de AFIP**
+- 🛡️ **Cumple con todas las normas de ARCA**
 - 🔧 **Funciona con cualquier marca de impresora fiscal**
 
 ### **¿Cómo instalar Fiscalberry?**

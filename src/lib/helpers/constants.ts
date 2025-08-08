@@ -20,7 +20,7 @@ export const searchableContent = [
 	{ title: 'Contabilidad', href: '/user-guide', type: 'Manual de Usuario', id: '34-Contabilidad' },
 	{ title: 'Arqueos', href: '/user-guide', type: 'Manual de Usuario', id: '35-Arqueos' },
 	{ title: 'Compras y Stock', href: '/user-guide', type: 'Manual de Usuario', id: '36-Compras-y-Stock' },
-	{ title: 'AFIP y Facturación', href: '/user-guide', type: 'Manual de Usuario', id: '37-AFIP-y-Facturación' },
+	{ title: 'ARCA y Facturación', href: '/user-guide', type: 'Manual de Usuario', id: '37-AFIP-y-Facturación' },
 	{ title: 'Estadísticas', href: '/user-guide', type: 'Manual de Usuario', id: '38-Estadísticas' },
 	{ title: 'Buchón Bot', href: '/user-guide', type: 'Manual de Usuario', id: '42-Buchón-Bot' },
 	{ title: 'Propina', href: '/user-guide', type: 'Manual de Usuario', id: '43-Propina' },
@@ -134,11 +134,11 @@ export const searchableContentWithContent = [
 		content: 'Gestiona tu inventario de manera inteligente con el módulo de compras y stock. Controla niveles de inventario, genera órdenes de compra automáticas, gestiona proveedores, y rastrea costos. El sistema te alerta cuando los productos están por agotarse y te ayuda a optimizar las compras para minimizar desperdicios y maximizar rentabilidad.'
 	},
 	{ 
-		title: 'AFIP y Facturación', 
+		title: 'ARCA y Facturación', 
 		href: '/user-guide', 
 		type: 'Manual de Usuario', 
 		id: '37-AFIP-y-Facturación',
-		content: 'Mantente al día con las obligaciones fiscales a través del módulo de AFIP y facturación. Genera facturas electrónicas automáticamente, cumple con las normativas vigentes, maneja diferentes tipos de comprobantes y mantén tu situación fiscal en orden. El sistema se integra directamente con los servicios de AFIP para mayor comodidad y precisión.'
+		content: 'Mantente al día con las obligaciones fiscales a través del módulo de ARCA y facturación. Genera facturas electrónicas automáticamente, cumple con las normativas vigentes, maneja diferentes tipos de comprobantes y mantén tu situación fiscal en orden. El sistema se integra directamente con los servicios de ARCA para mayor comodidad y precisión.'
 	},
 	{ 
 		title: 'Estadísticas', 

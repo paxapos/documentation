@@ -104,17 +104,17 @@ Controla el dinero diariamente:
 
 🔗 **[Ver Guía Completa: Arqueos](${base}/user-guide?module=35-Arqueos)**`,
 
-		'facturacion': `**Facturación y AFIP** 📄
+		'facturacion': `**Facturación y ARCA** 📄
 
 Cumple normativas fiscales:
 
 **Comprobantes:**
 • Tickets fiscales
 • Facturas A, B, C
-• Integración con AFIP
+• Integración con ARCA
 • Reportes automáticos
 
-🔗 **[Ver Guía Completa: AFIP y Facturación](${base}/user-guide?module=37-AFIP-y-Facturación)**`,
+🔗 **[Ver Guía Completa: ARCA y Facturación](${base}/user-guide?module=37-AFIP-y-Facturación)**`,
 
 		'usuario': `**Gestión de Usuarios** 👥
 
@@ -136,7 +136,7 @@ Administra accesos al sistema:
 		// Cargar todo el manual usando la misma lógica que user-guide
 		await loadManualContent();
 		
-		addMessage('¡Hola! 👋 Soy el asistente de PaxaPOS con **Gemini AI**.\n\n**Tengo acceso completo al manual** y puedo ayudarte con:\n• Respuestas inteligentes usando IA\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y todo lo que esté en el manual!\n\n**Pregúntame lo que necesites:** "¿cómo configurar impresoras?" o "explicame el sistema de arqueos"', false);
+		addMessage('¡Hola! 👋 Soy el asistente de PaxaPOS con **Gemini AI**.\n\n**Tengo acceso completo al manual** y puedo ayudarte con:\n• Respuestas inteligentes usando IA\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y ARCA\n• ¡Y todo lo que esté en el manual!\n\n**Pregúntame lo que necesites:** "¿cómo configurar impresoras?" o "explicame el sistema de arqueos"', false);
 	});
 
 	async function loadManualContent() {
@@ -198,7 +198,7 @@ Administra accesos al sistema:
 		if (q.includes('pago') || q.includes('cobrar') || q.includes('tarjeta')) return 'pago';
 		if (q.includes('menú') || q.includes('menu') || q.includes('producto')) return 'menu';
 		if (q.includes('arqueo') || q.includes('caja') || q.includes('cierre')) return 'arqueo';
-		if (q.includes('factura') || q.includes('afip') || q.includes('fiscal')) return 'facturacion';
+		if (q.includes('factura') || q.includes('arca') || q.includes('fiscal')) return 'facturacion';
 		if (q.includes('usuario') && (q.includes('crear') || q.includes('agregar'))) return 'usuario';
 		
 		return null;
