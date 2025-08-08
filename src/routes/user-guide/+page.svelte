@@ -120,6 +120,22 @@
             grouped_content = processGroupedContent(grouped_content);
             contentLoaded = true;
 
+            // Verificar si hay un hash en la URL para buscar la sección específica
+            const hash = window.location.hash;
+            if (hash) {
+                const targetId = hash.substring(1); // Quitar el '#'
+                const moduleWithSection = findModuleWithSection(targetId);
+                if (moduleWithSection) {
+                    selectModule(
+                        moduleWithSection.id,
+                        moduleWithSection.title,
+                        moduleWithSection.html,
+                        moduleWithSection.rawMarkdown
+                    );
+                    return; // Salir temprano si encontramos el módulo
+                }
+            }
+
             // Verificar si hay un módulo específico en la URL después de cargar
             const urlParams = new URLSearchParams($page.url.search);
             const moduleParam = urlParams.get('module');
@@ -195,23 +211,24 @@
         }, 100);
     }
 
-    // Función para agregar íconos de enlace a los títulos H1
+    // Función para agregar íconos de enlace a los títulos H1, H2, H3, etc.
     function addLinkIconsToHeaders(html: string): string {
-        // Buscar títulos H1 seguidos de un div con id
-        const h1WithIdRegex = /<h1>([^<]+)<\/h1>\s*<div id="([^"]+)"><\/div>/g;
+        // Buscar títulos H1, H2, H3, H4, H5, H6 seguidos de un div con id
+        // El contenido del título puede incluir HTML como <strong>, <em>, etc.
+        const headerWithIdRegex = /<(h[1-6])>([^<>]*(?:<[^>]+>[^<>]*<\/[^>]+>)*[^<>]*)<\/(h[1-6])>\s*<div id="([^"]+)"><\/div>/g;
         
-        return html.replace(h1WithIdRegex, (match, titleText, idValue) => {
-            return `<h1 class="relative">
-                ${titleText}
+        return html.replace(headerWithIdRegex, (match, headerTag, titleContent, closingTag, idValue) => {
+            return `<${headerTag} class="relative">
+                ${titleContent}
                 <button 
-                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-700 transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded cursor-pointer"
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
                     onclick="copyLinkToSection('${idValue}')"
                     title="Copiar enlace a esta sección"
                     aria-label="Copiar enlace a esta sección"
                 >
                     🔗
                 </button>
-            </h1>
+            </${headerTag}>
             <div id="${idValue}"></div>`;
         });
     }
@@ -261,6 +278,19 @@
         setTimeout(() => {
             showCopyMessage = false;
         }, 2000);
+    }
+
+    // Función para buscar en qué módulo está una sección específica
+    function findModuleWithSection(sectionId: string): ContentItem | null {
+        for (const group of grouped_content) {
+            for (const item of group.items) {
+                // Buscar el ID en el HTML del módulo
+                if (item.html && item.html.includes(`id="${sectionId}"`)) {
+                    return item;
+                }
+            }
+        }
+        return null;
     }
 
     // Función para resaltar texto en HTML de manera más elegante
