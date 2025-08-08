@@ -30,7 +30,7 @@ No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
 🔹 **Nombre** | Nombre real del empleado (Obligatorio)  
 🔹 **Apellido** | Apellido del empleado (Obligatorio)  
 🔹 **Foto** | Foto del empleado (Opcional)  
-� **Punto de Venta** | En qué sector trabaja (Opcional)
+🔹 **Punto de Venta** | En qué sector trabaja (Opcional)
 
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
@@ -53,16 +53,10 @@ En **Rol de Dicho Mozo** elegí:
 **👥 Roles disponibles:**
 
 **🔹 Mozo**  
-👤 *Para quién:* Meseros principales  
-🎯 *Qué puede hacer:* Tomar pedidos, cobrar mesas
-
 **🔹 Vendedor**  
-👤 *Para quién:* Personal de mostrador  
-🎯 *Qué puede hacer:* Vender productos, cobrar
-
-**🔹 Atención al Cliente**  
-👤 *Para quién:* Personal de recepción  
-🎯 *Qué puede hacer:* Recibir clientes, tomar reservas
+**🔹 Encargado**  
+**🔹 Auditor**  
+**🔹 Dueño**  
 
 ### **Paso 6: Guardar**
 6. Verificá que todos los datos estén correctos

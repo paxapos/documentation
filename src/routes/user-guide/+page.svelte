@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
     import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
@@ -36,18 +36,14 @@
         return false;
     }
 
-    // Reactividad a cambios en la URL
+    // Reactividad a cambios en la URL (parámetros de consulta)
     $: if (contentLoaded && $page.url.search) {
         const urlParams = new URLSearchParams($page.url.search);
         const moduleParam = urlParams.get('module');
         const highlightParam = urlParams.get('highlight');
         
-        console.log('URL cambió:', $page.url.search, 'Módulo:', moduleParam, 'Resaltar:', highlightParam);
-        
         if (moduleParam && moduleParam !== selectedModuleId) {
-            console.log('Intentando seleccionar módulo:', moduleParam);
             if (!selectModuleById(moduleParam)) {
-                console.warn(`Módulo no encontrado: ${moduleParam}`);
                 // Si no encuentra el módulo, mostrar el primero y seleccionarlo
                 if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
                     const firstItem = grouped_content[0].items[0];
@@ -83,7 +79,7 @@
                 if (!fileName) continue; // Skip if fileName is undefined
                 
                 const cleanTitle = fileName.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ');
-                const id = fileName.replace('.md', '');
+                const id = fileName.replace('.md', '').trim(); // Añadir trim() para limpiar espacios/saltos de línea
 
                 if (!contentMap[folderName]) {
                     contentMap[folderName] = [];
@@ -120,20 +116,11 @@
             grouped_content = processGroupedContent(grouped_content);
             contentLoaded = true;
 
-            // Verificar si hay un hash en la URL para buscar la sección específica
+            // Verificar si hay un hash en la URL para buscar la sección específica o módulo
             const hash = window.location.hash;
             if (hash) {
-                const targetId = hash.substring(1); // Quitar el '#'
-                const moduleWithSection = findModuleWithSection(targetId);
-                if (moduleWithSection) {
-                    selectModule(
-                        moduleWithSection.id,
-                        moduleWithSection.title,
-                        moduleWithSection.html,
-                        moduleWithSection.rawMarkdown
-                    );
-                    return; // Salir temprano si encontramos el módulo
-                }
+                handleHashNavigation(hash);
+                return; // Salir temprano si encontramos módulo o sección por hash
             }
 
             // Verificar si hay un módulo específico en la URL después de cargar
@@ -170,6 +157,26 @@
         } catch (error) {
             console.error('Error al cargar los módulos:', error);
         }
+        
+        // Listener para cambios de hash después de la carga inicial
+        const handleHashChange = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                // Procesar inmediatamente sin esperar reactividad
+                handleHashNavigation(hash);
+            }
+        };
+        
+        // Establecer hash inicial si existe
+        // Ya no necesitamos variable de estado para esto
+        
+        // Agregar listener para cambios de hash
+        window.addEventListener('hashchange', handleHashChange);
+        
+        // Cleanup: remover listener cuando el componente se destruye
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
     });
 
 
@@ -193,7 +200,6 @@
         
         selectedModuleHtml = processedHtml;
         selectedModuleRawMarkdown = rawMarkdown || '';
-        console.log('Módulo seleccionado:', id, title);
         
         // Esperar un tick para que el DOM se actualice, luego verificar hash
         setTimeout(() => {
@@ -291,6 +297,44 @@
             }
         }
         return null;
+    }
+
+    // Función para manejar navegación con hash
+    function handleHashNavigation(hash: string) {
+        if (!hash) return;
+        
+        const rawTargetId = hash.startsWith('#') ? hash.substring(1) : hash;
+        const targetId = decodeURIComponent(rawTargetId).trim(); // Decodificar y limpiar espacios/saltos de línea
+        
+        // Primero intentar buscar como módulo completo
+        const moduleFound = selectModuleById(targetId);
+        
+        if (moduleFound) {
+            return; // Encontramos el módulo completo
+        }
+        
+        // Si no es un módulo completo, buscar como sección dentro de un módulo
+        const moduleWithSection = findModuleWithSection(targetId);
+        
+        if (moduleWithSection) {
+            selectModule(
+                moduleWithSection.id,
+                moduleWithSection.title,
+                moduleWithSection.html,
+                moduleWithSection.rawMarkdown
+            );
+            
+            // Después de seleccionar el módulo, scroll a la sección específica
+            setTimeout(() => {
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 100);
+        }
     }
 
     // Función para resaltar texto en HTML de manera más elegante
