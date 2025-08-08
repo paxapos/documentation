@@ -1,0 +1,43 @@
+{
+  "system_name": "PaxaPOS",
+  "system_type": "Restaurant Management Software",
+  "documentation_language": "es-AR",
+  "target_region": "Argentina",
+  "ai_training_consent": true,
+  "content_license": "Educational Use",
+  "last_updated": "2025-08-08T23:49:50.522Z",
+  "indexing_instructions": {
+    "focus_areas": [
+      "Restaurant management",
+      "Point of sale systems",
+      "AFIP billing Argentina",
+      "Inventory control",
+      "Kitchen display systems",
+      "Staff management"
+    ],
+    "key_concepts": [
+      "PaxaPOS como sistema integral para restaurantes",
+      "Facturación electrónica AFIP en Argentina",
+      "Control de stock y inventario automático",
+      "Kitchen Display System (KDS) para cocinas",
+      "Gestión de personal y empleados",
+      "Métodos de pago múltiples",
+      "Reportes y estadísticas de ventas"
+    ],
+    "common_user_questions": [
+      "¿Cómo empezar con PaxaPOS?",
+      "¿Cómo configurar métodos de pago?",
+      "¿Cómo funciona la facturación AFIP?",
+      "¿Qué es el KDS?",
+      "¿Cómo controlar el stock?",
+      "¿Cómo crear usuarios?",
+      "¿Cómo conectar impresoras?"
+    ]
+  },
+  "content_statistics": {
+    "total_modules": 19,
+    "user_guide_modules": 15,
+    "developer_modules": 4,
+    "estimated_reading_time_minutes": 95
+  }
+}

@@ -4,6 +4,7 @@
     import { fade } from 'svelte/transition';
     import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
+    import SEOHead from '$lib/components/SEOHead.svelte';
 
     interface ContentItem {
         id: string;
@@ -23,6 +24,80 @@
     let selectedModuleHtml: string = '';
     let selectedModuleRawMarkdown: string = '';
     let contentLoaded = false;
+
+    // Función para generar SEO específico del módulo actual
+    function getCurrentModuleSEO() {
+        if (!selectedModuleId) {
+            return {
+                title: 'Manual de Usuario PaxaPOS',
+                description: 'Manual completo de PaxaPOS para usuarios finales. Aprende paso a paso cómo usar todas las funciones del sistema.',
+                keywords: 'manual usuario paxapos, guía completa, tutorial sistema restaurante'
+            };
+        }
+        
+        // Mapeo de módulos específicos para mejor SEO
+        const moduleDescriptions: Record<string, {title: string, description: string, keywords: string}> = {
+            '11-Introduccion': {
+                title: 'Introducción a PaxaPOS - Primeros Pasos',
+                description: 'Aprende los conceptos básicos de PaxaPOS y cómo dar tus primeros pasos en el sistema de gestión para restaurantes más completo de Argentina.',
+                keywords: 'introducción paxapos, primeros pasos, tutorial básico, sistema restaurante'
+            },
+            '12-Iniciar-sesión': {
+                title: 'Cómo Iniciar Sesión en PaxaPOS',
+                description: 'Guía paso a paso para acceder a tu cuenta de PaxaPOS, recuperar contraseñas y configurar el acceso seguro a tu sistema.',
+                keywords: 'login paxapos, iniciar sesión, acceso sistema, contraseña'
+            },
+            '21-Crear-Usuarios': {
+                title: 'Crear y Gestionar Usuarios en PaxaPOS',
+                description: 'Aprende a crear usuarios, asignar roles y permisos, gestionar personal y configurar accesos seguros en tu restaurante.',
+                keywords: 'crear usuarios paxapos, gestión personal, roles permisos, administración usuarios'
+            },
+            '22-Tipos-De-Pago': {
+                title: 'Configurar Métodos de Pago en PaxaPOS',
+                description: 'Configura todos los métodos de pago: efectivo, tarjetas, transferencias, QR. Aprende a gestionar comisiones y tiempos de acreditación.',
+                keywords: 'métodos pago paxapos, tarjetas crédito débito, efectivo, transferencias, mercadopago'
+            },
+            '25-Menú': {
+                title: 'Configuración del Menú en PaxaPOS',
+                description: 'Carga productos, crea categorías, gestiona precios y organiza tu menú digital. Guía completa para configurar tu carta.',
+                keywords: 'configurar menú paxapos, cargar productos, categorías, precios, carta digital'
+            },
+            '32-Salón': {
+                title: 'Módulo de Salón PaxaPOS - Gestión de Mesas',
+                description: 'Aprende a gestionar mesas, tomar pedidos, asignar mozos y optimizar el servicio en tu salón con PaxaPOS.',
+                keywords: 'salón paxapos, gestión mesas, tomar pedidos, mozos, servicio restaurante'
+            },
+            '33-Kitchen-Display-System-(KDS)': {
+                title: 'KDS - Sistema de Pantalla de Cocina PaxaPOS',
+                description: 'Configura y usa el Kitchen Display System para mejorar la comunicación entre salón y cocina, reducir tiempos y optimizar pedidos.',
+                keywords: 'KDS paxapos, pantalla cocina, kitchen display system, gestión pedidos, comunicación cocina'
+            },
+            '34-Contabilidad': {
+                title: 'Contabilidad y Reportes en PaxaPOS',
+                description: 'Gestiona la contabilidad de tu restaurante: arqueos, reportes de ventas, control de caja y análisis financiero completo.',
+                keywords: 'contabilidad paxapos, arqueos, reportes ventas, control caja, análisis financiero'
+            },
+            '37-ARCA-y-Facturación': {
+                title: 'Facturación AFIP en PaxaPOS',
+                description: 'Configura la facturación electrónica con AFIP, emite comprobantes fiscales y cumple todas las normativas argentinas.',
+                keywords: 'facturación AFIP paxapos, facturación electrónica argentina, comprobantes fiscales, normativas AFIP'
+            }
+        };
+        
+        if (selectedModuleId && moduleDescriptions[selectedModuleId]) {
+            return moduleDescriptions[selectedModuleId];
+        }
+        
+        // SEO por defecto para módulos no mapeados
+        return {
+            title: `${selectedModuleName} - Manual PaxaPOS`,
+            description: `Aprende a usar ${selectedModuleName} en PaxaPOS. Guía detallada paso a paso con ejemplos prácticos.`,
+            keywords: `${selectedModuleName} paxapos, tutorial, guía, manual usuario`
+        };
+    }
+
+    // Variable reactiva para el SEO actual
+    $: currentSEO = getCurrentModuleSEO();
 
     // Función para seleccionar módulo específico
     function selectModuleById(moduleId: string) {
@@ -157,7 +232,9 @@
         } catch (error) {
             console.error('Error al cargar los módulos:', error);
         }
-        
+    });
+
+    onMount(() => {
         // Listener para cambios de hash después de la carga inicial
         const handleHashChange = () => {
             const hash = window.location.hash;
@@ -167,16 +244,13 @@
             }
         };
         
-        // Establecer hash inicial si existe
-        // Ya no necesitamos variable de estado para esto
-        
         // Agregar listener para cambios de hash
         window.addEventListener('hashchange', handleHashChange);
         
-        // Cleanup: remover listener cuando el componente se destruye
-        return () => {
+        // Cleanup usando onDestroy en lugar de return
+        onDestroy(() => {
             window.removeEventListener('hashchange', handleHashChange);
-        };
+        });
     });
 
 
@@ -413,6 +487,16 @@
     }
 
 </script>
+
+<!-- SEO dinámico por módulo -->
+<SEOHead
+    title={currentSEO.title}
+    description={currentSEO.description}
+    keywords={currentSEO.keywords}
+    url="/user-guide"
+    type="article"
+    section="Manual de Usuario"
+/>
 
 <div class="mx-auto max-w-7xl px-3 py-4 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
     <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:flex-row">
