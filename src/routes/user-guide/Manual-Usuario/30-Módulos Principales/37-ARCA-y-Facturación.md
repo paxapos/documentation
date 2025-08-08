@@ -144,23 +144,17 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 1:** **Para que este nuevo servicio quede habilitado** deberás salir del sitio de ARCA e ingresar nuevamente en www.afip.gob.ar y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
-   ![Reingresar ARCA](/documentation/images/afip/9-Administrar-relaciones.jpg)
+   ![Reingresar ARCA](/documentation/images/afip/1-Inicio-sesion.jpg)
    *Reingreso necesario para activar el nuevo servicio*
 
 **🔹 PASO 2:** **En el buscador**, ingresar la opción "Administración de puntos de venta y domicilios"
 
-   ![Servicios Habilitados](/documentation/images/afip/20-servicios-habilitados.png)
+   ![Servicios Habilitados](/documentation/images/afip/9-Administrar-relaciones.jpg)
    *Lista de servicios habilitados mostrando la nueva opción*
 
 **🔹 PASO 3:** **Seleccionar la empresa** e ingresar a "A/B/M de Puntos de Venta"
 
-   ![ABM Puntos Venta](/documentation/images/afip/21-abm-puntos-venta.png)
-   *Acceso al módulo de alta/baja/modificación de puntos de venta*
-
-**🔹 PASO 4:** **Si se presenta el siguiente mensaje**, presionar "Cerrar"
-
-   ![Mensaje Sistema](/documentation/images/afip/22-mensaje-sistema.png)
-   *Mensaje informativo del sistema que se puede cerrar*
+**🔹 PASO 4:** **Si se presenta un mensaje**, presionar "Cerrar"
 
 ---
 
@@ -170,12 +164,9 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 1:** **Seleccionar** "Agregar…"
 
-   ![Agregar Punto Venta](/documentation/images/afip/23-agregar-punto-venta.png)
-   *Botón para agregar nuevo punto de venta*
-
 **🔹 PASO 2:** **Ingresar los siguientes datos:**
 
-   ![Formulario Punto Venta](/documentation/images/afip/24-formulario-punto-venta.png)
+   ![Formulario Punto Venta](/documentation/images/afip/11-abm.jpg)
    *Formulario completo para crear punto de venta*
 
 | Campo | Descripción | Ejemplo |
@@ -186,9 +177,6 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 | **Nuevo domicilio** | Seleccionar el domicilio fiscal asociado al punto de venta | Tu domicilio fiscal |
 
 #### **🏛️ Opciones para el campo "Sistema":**
-
-![Opciones Sistema](/documentation/images/afip/25-opciones-sistema.png)
-*Diferentes opciones de sistema según tu condición fiscal*
 
 | Tu condición fiscal | Opción que debés seleccionar |
 |--------------------|-----------------------------|
@@ -212,6 +200,29 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 **🔹 PASO FINAL:** **Seleccionar** "Aceptar" para confirmar la operación
 
 ---
+---
+
+### **📞 2.5 Notificar a PaxaPos**
+
+#### **📋 Paso obligatorio:**
+
+**🔹 IMPORTANTE:** **Una vez completados todos los pasos anteriores en ARCA**, deberás **notificarnos inmediatamente** para que podamos configurar el PVD (Punto de Venta) en tu comercio.
+
+#### **📧 ¿Cómo notificar?**
+- **Correo:** soporte@paxapos.com
+- **WhatsApp:** <a href="https://wa.me/17867553113?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+1 (786) 755-3113</a> *¡Click para chatear directamente en nueva pestaña!*
+
+#### **📋 Información que debés proporcionar:**
+- ✅ **CUIT del comercio**
+- ✅ **Número del punto de venta creado** (ej: 3)
+- ✅ **Nombre fantasía asignado** (ej: "Factura Electrónica")
+- ✅ **Tipo de sistema seleccionado** (Monotributo/Responsable Inscripto/Exportación)
+
+#### **⏱️ Tiempo de configuración:**
+Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en **24-48 horas hábiles**.
+
+#### **⚠️ Recordá:**
+Sin esta notificación, **no podrás comenzar a facturar electrónicamente** desde PaxaPos, aunque hayas completado todos los pasos en ARCA.
 
 ## 🎯 **Resumen del proceso completo**
 

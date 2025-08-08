@@ -5,17 +5,14 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run generate:ai && npm run generate:txt && vite build",
+		"build": "npm run generate:ai && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"generate:ai": "node scripts/generate-ai-files.mjs",
-		"generate:txt": "node scripts/generate-txt-files.mjs",
-		"whatsapp:install": "npm install whatsapp-web.js qrcode-terminal",
-		"whatsapp:start": "node scripts/whatsapp-bot.js"
+		"generate:ai": "node scripts/generate-ai-files.mjs"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

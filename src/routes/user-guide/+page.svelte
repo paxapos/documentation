@@ -4,7 +4,6 @@
     import { fade } from 'svelte/transition';
     import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
-    import { base } from '$app/paths';
 
     interface ContentItem {
         id: string;
@@ -197,99 +196,39 @@
         });
     }
 
-    // Función para abrir archivo TXT estático para LLMs
     function handleLLMIntegration(moduleId: string, moduleName: string) {
-        // Generar nombre de archivo limpio (igual lógica que el script)
-        const cleanFileName = moduleId
-            .toLowerCase()
-            .replace(/[\s\-_]+/g, '-')
-            .replace(/[^a-z0-9\-]/g, '')
-            .replace(/\-+/g, '-')
-            .replace(/^\-|\-$/g, '');
-        
-        // En producción: usar archivo estático
-        const txtUrl = `${base}/llms/${cleanFileName}.txt`;
-        
-        // En desarrollo: fallback a blob como antes (para testing)
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            // Encontrar el contenido markdown del módulo actual
-            let markdownContent = '';
-            for (const group of grouped_content) {
-                const foundItem = group.items.find(item => item.id === moduleId);
-                if (foundItem) {
-                    markdownContent = foundItem.rawMarkdown;
-                    break;
-                }
+        // Encontrar el contenido markdown del módulo actual
+        let markdownContent = '';
+        for (const group of grouped_content) {
+            const foundItem = group.items.find(item => item.id === moduleId);
+            if (foundItem) {
+                markdownContent = foundItem.rawMarkdown;
+                break;
             }
-            
-            if (!markdownContent) {
-                alert('No se pudo encontrar el contenido del módulo');
-                return;
-            }
-            
-            // Aplicar la misma limpieza que el script
-            const txtContent = cleanMarkdownToPlainText(markdownContent, moduleName);
-            
-            // Crear blob para desarrollo
-            const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
-            const blobUrl = URL.createObjectURL(blob);
-            
-            // Abrir en nueva pestaña
-            const newWindow = window.open(blobUrl, '_blank');
-            if (newWindow) {
-                newWindow.document.title = `${moduleName}.txt`;
-            }
-            
-            // Limpiar después de un tiempo
-            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-            
-            console.log('Development mode: Using blob for LLM file');
-        } else {
-            // Producción: abrir archivo estático
-            window.open(txtUrl, '_blank');
-            console.log('Production mode: Opening static TXT file for LLMs:', txtUrl);
         }
-    }
-    
-    // Función para limpiar markdown (misma lógica que el script)
-    function cleanMarkdownToPlainText(content: string, moduleName: string): string {
-        const header = `# PaxaPOS - Manual de Usuario
-# Módulo: ${moduleName}
-# Generado para LLMs/IA (Modo desarrollo)
-
-`;
         
-        const cleanContent = content
-            // Remover front matter YAML
-            .replace(/^---[\s\S]*?---\n/m, '')
-            // Remover headers (mantener el texto)
-            .replace(/^#{1,6}\s+(.+)$/gm, '$1')
-            // Remover bold/italic (mantener texto)
-            .replace(/\*\*(.*?)\*\*/g, '$1')
-            .replace(/\*(.*?)\*/g, '$1')
-            .replace(/__(.*?)__/g, '$1')
-            .replace(/_(.*?)_/g, '$1')
-            // Remover links (mantener texto)
-            .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-            // Remover imágenes
-            .replace(/!\[([^\]]*)\]\([^)]+\)/g, 'Imagen: $1')
-            // Remover code blocks
-            .replace(/```[\s\S]*?```/g, '[Código]')
-            // Remover inline code (mantener contenido)
-            .replace(/`([^`]+)`/g, '$1')
-            // Remover tablas (simplificar)
-            .replace(/\|.*?\|/g, '')
-            .replace(/\+[-=]+\+/g, '')
-            // Remover listas (mantener contenido)
-            .replace(/^[\s]*[-*+]\s+/gm, '• ')
-            .replace(/^[\s]*\d+\.\s+/gm, '')
-            // Limpiar espacios extra
-            .replace(/\n{3,}/g, '\n\n')
-            .replace(/^\s+/gm, '')
-            .replace(/\s+$/gm, '')
-            .trim();
-            
-        return header + cleanContent;
+        if (!markdownContent) {
+            alert('No se pudo encontrar el contenido del módulo');
+            return;
+        }
+        
+        // Aplicar reemplazo antes de exportar
+        const txtContent = prepareForExport(markdownContent);
+        
+        // Crear un blob con el contenido markdown como texto
+        const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        
+        // Abrir en nueva pestaña
+        const newWindow = window.open(url, '_blank');
+        if (newWindow) {
+            newWindow.document.title = `${moduleName}.txt`;
+        }
+        
+        // Limpiar la URL después de un tiempo para liberar memoria
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        
+        console.log('Opening markdown content as txt for:', moduleName);
     }
 
     // Función para manejar el selector dropdown (móvil)
