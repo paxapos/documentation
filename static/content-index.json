@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-08T23:49:50.520Z",
+  "generated_at": "2025-08-09T00:07:30.506Z",
   "version": "2025.1",
   "total_files": 19,
   "sections": {
@@ -25,7 +25,7 @@
             "tutorial",
             "introduccion"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.872Z"
         },
         {
           "id": "12-Iniciar-sesión",
@@ -45,7 +45,7 @@
             "iniciar",
             "sesión"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.872Z"
         },
         {
           "id": "21-Crear-Usuarios",
@@ -65,7 +65,7 @@
             "crear",
             "usuarios"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "22-Tipos-De-Pago",
@@ -85,7 +85,7 @@
             "tipos",
             "pago"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "23-Agregar-Personal",
@@ -105,7 +105,7 @@
             "agregar",
             "personal"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "24-Configuración-de-Impresoras",
@@ -125,7 +125,7 @@
             "configuración",
             "impresoras"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "25-Menú",
@@ -144,7 +144,7 @@
             "tutorial",
             "menú"
           ],
-          "last_modified": "2025-08-08T23:41:55.841Z"
+          "last_modified": "2025-08-09T00:04:45.266Z"
         },
         {
           "id": "32-Salón",
@@ -163,7 +163,7 @@
             "tutorial",
             "salón"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "33-Kitchen-Display-System-(KDS)",
@@ -185,7 +185,7 @@
             "system",
             "(kds)"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.873Z"
         },
         {
           "id": "34-Contabilidad",
@@ -204,7 +204,7 @@
             "tutorial",
             "contabilidad"
           ],
-          "last_modified": "2025-08-08T23:27:10.787Z"
+          "last_modified": "2025-08-08T23:54:19.874Z"
         },
         {
           "id": "35-Arqueos",
@@ -223,7 +223,7 @@
             "tutorial",
             "arqueos"
           ],
-          "last_modified": "2025-08-08T23:27:10.788Z"
+          "last_modified": "2025-08-08T23:54:19.874Z"
         },
         {
           "id": "36-Compras-y-Stock",
@@ -243,7 +243,7 @@
             "compras",
             "stock"
           ],
-          "last_modified": "2025-08-08T23:27:10.788Z"
+          "last_modified": "2025-08-08T23:54:19.874Z"
         },
         {
           "id": "37-ARCA-y-Facturación",
@@ -263,7 +263,7 @@
             "arca",
             "facturación"
           ],
-          "last_modified": "2025-08-08T23:27:10.788Z"
+          "last_modified": "2025-08-09T00:07:14.002Z"
         },
         {
           "id": "38-Estadísticas",
@@ -282,7 +282,7 @@
             "tutorial",
             "estadísticas"
           ],
-          "last_modified": "2025-08-08T23:27:10.788Z"
+          "last_modified": "2025-08-08T23:54:19.874Z"
         },
         {
           "id": "42-Buchón-Bot",
@@ -302,7 +302,7 @@
             "buchón",
             "bot"
           ],
-          "last_modified": "2025-08-08T23:27:10.788Z"
+          "last_modified": "2025-08-08T23:54:19.874Z"
         }
       ]
     },

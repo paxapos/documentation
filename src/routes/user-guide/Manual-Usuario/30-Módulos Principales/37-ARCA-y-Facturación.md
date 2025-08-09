@@ -19,14 +19,14 @@
 
 **🔹 PASO 1:** **Ingresar en el sitio de ARCA** (www.afip.gob.ar) y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
-   ![Ingreso a ARCA](/documentation/images/afip/1-Inicio-sesion.jpg)
+   ![Ingreso a ARCA](images/afip/1-Inicio-sesion.jpg)
    *Pantalla de ingreso a ARCA con Clave Fiscal*
 
 **🔹 PASO 2:** **Ingresar el CUIT**, presionar "Siguiente" luego ingresar la clave y seleccionar "Ingresar"
 
 **🔹 PASO 3:** **Seleccionar la opción** "Administrador de Relaciones de Clave Fiscal"
 
-   ![Administrador de Relaciones](/documentation/images/afip/2-Administrador-relaciones.jpg)
+   ![Administrador de Relaciones](images/afip/2-Administrador-relaciones.jpg)
    *Menú principal con opción de Administrador de Relaciones*
 
 **🔹 PASO 4:** **En el caso que tengas más de un CUIT** asociado a tu cuenta de ARCA, aparecerá una pantalla donde tendrás que seleccionar el CUIT con el que deseas emitir facturas electrónicas
@@ -39,19 +39,19 @@
 
 **🔹 PASO 1:** **Seleccionar** "Nueva Relación"
 
-   ![Nueva Relación](/documentation/images/afip/3-Nueva-relacion.jpg)
+   ![Nueva Relación](images/afip/3-Nueva-relacion.jpg)
    *Botón para crear una nueva relación*
 
 **🔹 PASO 2:** **Seleccionar** "Buscar" en la opción "Servicio"
 
-   ![Buscar Servicio](/documentation/images/afip/4-Servicios.jpg)
+   ![Buscar Servicio](images/afip/4-Servicios.jpg)
    *Campo de búsqueda de servicios*
 
 **🔹 PASO 3:** **Asegurate** que en el campo "Representado" figure el CUIT al que le estás habilitando el servicio
 
 **🔹 PASO 4:** **Luego abrir** la opción "ARCA" y seleccionar la opción "WebServices"
 
-   ![WebServices ARCA](/documentation/images/afip/5-Web-service.jpg)
+   ![WebServices ARCA](images/afip/5-Web-service.jpg)
    *Menú desplegable de ARCA mostrando WebServices*
 
 ---
@@ -77,12 +77,12 @@
 
 **🔹 PASO 1:** **Seleccionar** "Buscar" en la opción "Representante"
 
-   ![Buscar Representante](/documentation/images/afip/6-Buscar-representante.jpg)
+   ![Buscar Representante](images/afip/6-Buscar-representante.jpg)
    *Campo para buscar representante*
 
 **🔹 PASO 2:** **Ingresar el CUIT** `20306836268` y presionar "Buscar"
 
-   ![Ingresar CUIT Representante](/documentation/images/afip/7-Representante.jpg)
+   ![Ingresar CUIT Representante](images/afip/7-Representante.jpg)
    *Ingreso del CUIT del representante autorizado*
 
 **🔹 PASO 3:** **Se le indicará** que el CUIT pertenece a VILAR ALEJANDRO ERNESTO
@@ -98,7 +98,7 @@
 
 **🔹 PASO FINAL:** **Presione confirmar** nuevamente
 
-  ![Confirmar Relación](/documentation/images/afip/8-Confirmar-representante.jpg)
+  ![Confirmar Relación](images/afip/8-Confirmar-representante.jpg)
   *Botón de confirmación final de la relación*
 
 ---
@@ -118,25 +118,25 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 1:** **Ingresar a** "Administrador de Relaciones de Clave Fiscal"
 
-   ![Administrador Relaciones](/documentation/images/afip/2-Administrador-relaciones.jpg)
+   ![Administrador Relaciones](images/afip/2-Administrador-relaciones.jpg)
    *Acceso al administrador de relaciones*
 
 **🔹 PASO 2:** **Seleccionar** "Adherir Servicio"
 
-   ![Adherir Servicio](/documentation/images/afip/3-Nueva-relacion.jpg)
+   ![Adherir Servicio](images/afip/3-Nueva-relacion.jpg)
    *Opción para adherir nuevo servicio*
 
 **🔹 PASO 3:** **Abrir la opción** "ARCA", luego la opción "Servicios Interactivos" y buscar el servicio "Administración de puntos de venta y domicilios"
 
-   ![Servicios Interactivos](/documentation/images/afip/5-Web-service.jpg)
+   ![Servicios Interactivos](images/afip/5-Web-service.jpg)
    *Navegación hacia servicios interactivos*
 
-   ![Puntos de Venta](/documentation/images/afip/10-Administrador-pdv.jpg)
+   ![Puntos de Venta](images/afip/10-Administrador-pdv.jpg)
    *Servicio de administración de puntos de venta*
 
 **🔹 PASO 4:** **Confirmar** la operación
 
-   ![Confirmar Adherir](/documentation/images/afip/8-Confirmar-representante.jpg)
+   ![Confirmar Adherir](images/afip/8-Confirmar-representante.jpg)
    *Confirmación de adhesión al servicio*
 
 ---
@@ -147,12 +147,12 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 1:** **Para que este nuevo servicio quede habilitado** deberás salir del sitio de ARCA e ingresar nuevamente en www.afip.gob.ar y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
-   ![Reingresar ARCA](/documentation/images/afip/1-Inicio-sesion.jpg)
+   ![Reingresar ARCA](images/afip/1-Inicio-sesion.jpg)
    *Reingreso necesario para activar el nuevo servicio*
 
 **🔹 PASO 2:** **En el buscador**, ingresar la opción "Administración de puntos de venta y domicilios"
 
-   ![Servicios Habilitados](/documentation/images/afip/9-Administrar-relaciones.jpg)
+   ![Servicios Habilitados](images/afip/9-Administrar-relaciones.jpg)
    *Lista de servicios habilitados mostrando la nueva opción*
 
 **🔹 PASO 3:** **Seleccionar la empresa** e ingresar a "A/B/M de Puntos de Venta"
@@ -169,7 +169,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 2:** **Ingresar los siguientes datos:**
 
-   ![Formulario Punto Venta](/documentation/images/afip/11-abm.jpg)
+   ![Formulario Punto Venta](images/afip/11-abm.jpg)
    *Formulario completo para crear punto de venta*
 
 | Campo | Descripción | Ejemplo |
