@@ -76,7 +76,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 - ✅ **Para mozos que cambian de turno frecuentemente**
 - ✅ **Cuando tenés muchos mozos temporales**  
 - ✅ **Para agilizar el cambio de turno**
-- ❌ **NO para administradores o cajeros** (ellos necesitan usuario personal)
+
 
 ### **Paso a paso - Configurar usuario con PIN**
 
@@ -118,4 +118,4 @@ Una vez configurado, los mozos van a poder:
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
 - **"El email ya existe"** → Usá un email diferente para cada usuario
 - **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
-- **"El PIN no funciona"** → Asegurate que el usuario base tenga el rol "Mozo"
+- **"El PIN no funciona"** → Asegurate de haber ingresado el pin correctamente

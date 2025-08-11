@@ -40,11 +40,11 @@ Esta parte es clave para organizar tu restaurante:
 **👀 Opciones de visibilidad:**
 
 **🔹 Ver todas las mesas**  
-📌 *Cuándo usarla:* Todos los mozos pueden atender cualquier mesa  
+📌 *Cuándo usarla:* Todos los mozos pueden atender cualquier mesa (Dejar todas las opciones sin marcar) 
 📋 *Ejemplo:* Restaurante pequeño, todos ayudan
 
 **🔹 Solo sus mesas asignadas**  
-📌 *Cuándo usarla:* Cada mozo ve solo sus mesas  
+📌 *Cuándo usarla:* Cada mozo ve solo sus mesas (marcar las opciones correspondientes)
 📋 *Ejemplo:* Restaurante grande, mozos por sector
 
 ### **Paso 5: Asignar rol**
@@ -65,6 +65,13 @@ En **Rol de Dicho Mozo** elegí:
 
 ---
 
+### **¿Tienes delivery o Take Away?**
+1. Crea un usuario con los anteriores pasos
+2. Nombralo como "Delivery o Take Away"
+3. Configuralo como "Mozo rapido" (Esta opcion hace que no te pida introducir el nombre o cantidad de cubiertos a una mesa)
+4. Listoo!! ya tenes tu usuario solo para delivery o Take Away
+
+---
 ## 👥 **¿Cómo organizar tu equipo?**
 
 ### **🏪 Restaurante pequeño (1-15 mesas)**

@@ -13,7 +13,7 @@ Recordá buscar la **"P" roja** 🔴 para acceder a configuraciones avanzadas si
 ## 📋 **Paso a paso - Configurar impresoras**
 
 ### **Paso 1: Acceder al módulo Impresoras**
-1. En el menú principal de PaxaPOS, buscá **"Impresoras"**
+1. En los modulos principales de PaxaPOS, buscá **"Impresoras"**
 2. Hacé clic en **"Impresoras"**
 3. Vas a ver una lista de todas las impresoras configuradas
 

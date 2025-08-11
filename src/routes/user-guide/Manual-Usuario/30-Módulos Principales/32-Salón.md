@@ -9,7 +9,7 @@
 ## 📋 **Paso a paso - Atender tu primera mesa**
 
 ### **Paso 1: Acceder al Salón**
-1. En el menú principal de PaxaPOS, buscá **"Salón"**
+1. En los modulos principales de PaxaPOS, buscá **"Salón"**
 2. Hacé clic en **"Salón"**
 3. Vas a ver una lista con todos tus mozos
 
@@ -56,6 +56,25 @@ Una vez que tenés la mesa creada, aparecen estas opciones:
 - **Qué hace:** Aplica un descuento especial a la cuenta
 - **Cuándo usarlo:** Promociones, clientes especiales, compensaciones
 - **Cómo:** Hacé clic en **"Agregar Descuento"**
+
+### **👤 6. Agregar Cliente**
+- **Qué hace:** Permite registrar un cliente para poder imprimir Facturas Fiscales
+- **Cuándo usarlo:** Cuando necesités emitir una factura fiscal
+- **Cómo:** Hacé clic en **"Agregar Cliente"** y después en **"Crear Cliente"**
+
+**📝 Datos del cliente que te va a pedir:**
+
+🔹 **Nombre o Razón Social** | Nombre completo o empresa  
+🔹 **Dirección** | Domicilio del cliente  
+🔹 **Teléfono** | Número de contacto  
+🔹 **Domicilio de Facturación** | Dirección fiscal  
+🔹 **Email** | Correo electrónico  
+🔹 **Tipo de Documento** | CUIT, CUIL, DNI, Pasaporte, Cédula de Identidad, Sin Identificar  
+🔹 **Descuento** | Porcentaje de descuento (opcional)  
+🔹 **Fecha de Cumpleaños o Inicio de Actividades** | Para registro  
+🔹 **IVA Responsabilidad** | Condición ante IVA
+
+💡 **Tip:** Si el cliente ya existe, podés buscarlo por su número de CUIL o razón social
 
 ---
 
