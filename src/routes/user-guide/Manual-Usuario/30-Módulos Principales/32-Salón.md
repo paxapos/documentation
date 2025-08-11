@@ -57,6 +57,25 @@ Una vez que tenés la mesa creada, aparecen estas opciones:
 - **Cuándo usarlo:** Promociones, clientes especiales, compensaciones
 - **Cómo:** Hacé clic en **"Agregar Descuento"**
 
+### **👤 6. Agregar Cliente**
+- **Qué hace:** Permite registrar un cliente para poder imprimir Factura A
+- **Cuándo usarlo:** Cuando necesités emitir una factura A oficial
+- **Cómo:** Hacé clic en **"Agregar Cliente"** y después en **"Crear Cliente"**
+
+**📝 Datos del cliente que te va a pedir:**
+
+🔹 **Nombre o Razón Social** | Nombre completo o empresa  
+🔹 **Dirección** | Domicilio del cliente  
+🔹 **Teléfono** | Número de contacto  
+🔹 **Domicilio de Facturación** | Dirección fiscal  
+🔹 **Email** | Correo electrónico  
+🔹 **Tipo de Documento** | CUIT, CUIL, DNI, Pasaporte, Cédula de Identidad, Sin Identificar  
+🔹 **Descuento** | Porcentaje de descuento (opcional)  
+🔹 **Fecha de Cumpleaños o Inicio de Actividades** | Para registro  
+🔹 **IVA Responsabilidad** | Condición ante IVA
+
+💡 **Tip:** Si el cliente ya existe, podés buscarlo por su número de CUIL o razón social
+
 ---
 
 ## 💡 **Consejos para manejar el salón eficientemente**
