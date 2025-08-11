@@ -9,7 +9,7 @@
 ## 📋 **Paso a paso - Atender tu primera mesa**
 
 ### **Paso 1: Acceder al Salón**
-1. En el menú principal de PaxaPOS, buscá **"Salón"**
+1. En los modulos principales de PaxaPOS, buscá **"Salón"**
 2. Hacé clic en **"Salón"**
 3. Vas a ver una lista con todos tus mozos
 
