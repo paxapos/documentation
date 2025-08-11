@@ -58,8 +58,8 @@ Una vez que tenés la mesa creada, aparecen estas opciones:
 - **Cómo:** Hacé clic en **"Agregar Descuento"**
 
 ### **👤 6. Agregar Cliente**
-- **Qué hace:** Permite registrar un cliente para poder imprimir Factura A
-- **Cuándo usarlo:** Cuando necesités emitir una factura A oficial
+- **Qué hace:** Permite registrar un cliente para poder imprimir Facturas Fiscales
+- **Cuándo usarlo:** Cuando necesités emitir una factura fiscal
 - **Cómo:** Hacé clic en **"Agregar Cliente"** y después en **"Crear Cliente"**
 
 **📝 Datos del cliente que te va a pedir:**
