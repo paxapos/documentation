@@ -135,18 +135,145 @@ export const GET: RequestHandler = async ({ url }) => {
                     'Cache-Control': 'public, max-age=3600'
                 }
             });
+
+        case 'ai-urls':
+            // Lista de URLs dinámicas para indexación por IA
+            try {
+                // Obtener lista de módulos desde el endpoint dinámico
+                const response = await fetch(`${url.origin}/documentation/llms?type=list`);
+                if (response.ok) {
+                    const modules = await response.json();
+                    const urls = [
+                        `${url.origin}/documentation/llms`,
+                        ...modules.map((m: any) => `${url.origin}/documentation/llms/${m.id}`)
+                    ];
+                    return new Response(urls.join('\n'), {
+                        headers: {
+                            'Content-Type': 'text/plain',
+                            'Cache-Control': 'public, max-age=300'
+                        }
+                    });
+                } else {
+                    return json({ error: 'Could not fetch module list' }, { status: 500 });
+                }
+            } catch (error) {
+                return json({ error: 'Error generating AI URLs' }, { status: 500 });
+            }
+
+        case 'ai-index':
+            // Redirigir al endpoint dinámico del manual completo
+            try {
+                const response = await fetch(`${url.origin}/documentation/llms`);
+                if (response.ok) {
+                    const content = await response.text();
+                    return new Response(content, {
+                        headers: {
+                            'Content-Type': 'text/plain; charset=utf-8',
+                            'Cache-Control': 'public, max-age=300'
+                        }
+                    });
+                } else {
+                    return json({ error: 'Could not fetch complete manual' }, { status: 500 });
+                }
+            } catch (error) {
+                return json({ error: 'AI index not available' }, { status: 500 });
+            }
+
+        case 'robots':
+            // Generar robots.txt dinámico con referencias a archivos AI
+            const robotsContent = `# Robots.txt para PaxaPOS Documentation
+# Optimizado para indexación por IA
+
+User-agent: *
+Allow: /
+
+# Permitir acceso específico a crawlers de IA
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Archivos específicos para indexación por IA
+# Manual completo indexado dinámicamente
+Allow: /documentation/llms/
+
+# URLs importantes para SEO
+Sitemap: https://paxapos.github.io/documentation/seo?type=sitemap
+
+# URLs específicas para IA
+# Lista completa de archivos indexables
+${url.origin}/seo?type=ai-urls
+# Contenido completo para IA
+${url.origin}/seo?type=ai-index
+# Metadatos estructurados
+${url.origin}/seo?type=metadata`;
+            
+            return new Response(robotsContent, {
+                headers: {
+                    'Content-Type': 'text/plain',
+                    'Cache-Control': 'public, max-age=86400'
+                }
+            });
             
         default:
             // Información de endpoints disponibles
             return json({
                 seoEndpoints: {
                     sitemap: '/seo?type=sitemap',
+                    robots: '/seo?type=robots',
                     metadata: '/seo?type=metadata',
                     contentIndex: '/seo?type=content-index',
-                    aiMetadata: '/seo?type=ai-metadata'
+                    aiMetadata: '/seo?type=ai-metadata',
+                    aiUrls: '/seo?type=ai-urls',
+                    aiIndex: '/seo?type=ai-index'
                 },
                 description: 'Endpoints SEO para PaxaPOS Documentation',
-                usage: 'Añade ?type=<endpoint> para acceder a cada tipo de contenido'
+                usage: 'Añade ?type=<endpoint> para acceder a cada tipo de contenido',
+                aiIndexing: {
+                    dynamicEndpoints: 'URLs dinámicas desde /llms/[module] y /llms',
+                    masterIndex: '/llms (manual completo)',
+                    moduleIndex: '/llms/[moduleId] (módulo específico)',
+                    moduleList: '/llms?type=list (lista JSON)',
+                    seoEndpoints: {
+                        aiUrls: '/seo?type=ai-urls',
+                        aiIndex: '/seo?type=ai-index'
+                    }
+                },
+                implementation: {
+                    status: 'DYNAMIC URLs ✅',
+                    lastUpdate: new Date().toISOString(),
+                    features: [
+                        'URLs dinámicas generadas on-the-fly desde archivos MD',
+                        'No requiere regenerar archivos estáticos', 
+                        'Siempre sincronizado con contenido fuente',
+                        'Manejo de caracteres especiales automático',
+                        'Cache inteligente para performance',
+                        'Endpoints RESTful para IA'
+                    ]
+                }
             });
     }
 };

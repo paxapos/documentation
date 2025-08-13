@@ -11,7 +11,7 @@ const config = {
             assets: 'build', // Directorio de salida
             fallback: undefined, // No fallback - fully prerendered static site
             precompress: false,
-            strict: true // Be strict about prerendering
+            strict: false // Permitir rutas dinámicas no prerenderizadas
         }),
         prerender: {
             handleMissingId: 'warn', // Only warn about missing IDs instead of failing

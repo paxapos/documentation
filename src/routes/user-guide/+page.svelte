@@ -2,7 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
-    import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
+    import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
     import SEOHead from '$lib/components/SEOHead.svelte';
 
@@ -435,38 +435,13 @@
     }
 
     function handleLLMIntegration(moduleId: string, moduleName: string) {
-        // Encontrar el contenido markdown del módulo actual
-        let markdownContent = '';
-        for (const group of grouped_content) {
-            const foundItem = group.items.find(item => item.id === moduleId);
-            if (foundItem) {
-                markdownContent = foundItem.rawMarkdown;
-                break;
-            }
-        }
+        // URL dinámica que genera el TXT on-the-fly desde el MD
+        const dynamicUrl = `/documentation/llms/${moduleId}`;
         
-        if (!markdownContent) {
-            alert('No se pudo encontrar el contenido del módulo');
-            return;
-        }
+        // Abrir en nueva pestaña la URL dinámica
+        window.open(dynamicUrl, '_blank');
         
-        // Aplicar reemplazo antes de exportar
-        const txtContent = prepareForExport(markdownContent);
-        
-        // Crear un blob con el contenido markdown como texto
-        const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        
-        // Abrir en nueva pestaña
-        const newWindow = window.open(url, '_blank');
-        if (newWindow) {
-            newWindow.document.title = `${moduleName}.txt`;
-        }
-        
-        // Limpiar la URL después de un tiempo para liberar memoria
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        
-        console.log('Opening markdown content as txt for:', moduleName);
+        console.log('Opening dynamic LLM file for:', moduleName, 'at:', dynamicUrl);
     }
 
     // Función para manejar el selector dropdown (móvil)

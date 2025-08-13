@@ -1,9 +1,130 @@
 {
   "version": "1.0.0",
-  "generated": "2025-08-08T23:40:40.385Z",
+  "generated": "2025-08-13T15:43:09.480Z",
+  "totalFiles": 19,
   "features": {
     "documentation": true,
     "search": true,
-    "navigation": true
-  }
+    "navigation": true,
+    "aiIndexing": true
+  },
+  "staticUrls": [
+    "https://paxapos.github.io/documentation/llms/index.txt",
+    "https://paxapos.github.io/documentation/llms/11-introduccion.txt",
+    "https://paxapos.github.io/documentation/llms/12-iniciar-sesión.txt",
+    "https://paxapos.github.io/documentation/llms/21-crear-usuarios.txt",
+    "https://paxapos.github.io/documentation/llms/22-tipos-de-pago.txt",
+    "https://paxapos.github.io/documentation/llms/23-agregar-personal.txt",
+    "https://paxapos.github.io/documentation/llms/24-configuración-de-impresoras.txt",
+    "https://paxapos.github.io/documentation/llms/25-menú.txt",
+    "https://paxapos.github.io/documentation/llms/32-salón.txt",
+    "https://paxapos.github.io/documentation/llms/33-kitchen-display-system-(kds).txt",
+    "https://paxapos.github.io/documentation/llms/34-contabilidad.txt",
+    "https://paxapos.github.io/documentation/llms/35-arqueos.txt",
+    "https://paxapos.github.io/documentation/llms/36-compras-y-stock.txt",
+    "https://paxapos.github.io/documentation/llms/37-arca-y-facturación.txt",
+    "https://paxapos.github.io/documentation/llms/38-estadísticas.txt",
+    "https://paxapos.github.io/documentation/llms/42-buchón-bot.txt",
+    "https://paxapos.github.io/documentation/llms/documentation-one.txt",
+    "https://paxapos.github.io/documentation/llms/sample-two.txt",
+    "https://paxapos.github.io/documentation/llms/svelte-mdtest.txt",
+    "https://paxapos.github.io/documentation/llms/webhooks.txt"
+  ],
+  "files": [
+    {
+      "title": "11-Introduccion",
+      "filename": "11-introduccion.txt",
+      "url": "https://paxapos.github.io/documentation/llms/11-introduccion.txt"
+    },
+    {
+      "title": "12-Iniciar-sesión",
+      "filename": "12-iniciar-sesión.txt",
+      "url": "https://paxapos.github.io/documentation/llms/12-iniciar-sesión.txt"
+    },
+    {
+      "title": "21-Crear-Usuarios",
+      "filename": "21-crear-usuarios.txt",
+      "url": "https://paxapos.github.io/documentation/llms/21-crear-usuarios.txt"
+    },
+    {
+      "title": "22-Tipos-De-Pago",
+      "filename": "22-tipos-de-pago.txt",
+      "url": "https://paxapos.github.io/documentation/llms/22-tipos-de-pago.txt"
+    },
+    {
+      "title": "23-Agregar-Personal",
+      "filename": "23-agregar-personal.txt",
+      "url": "https://paxapos.github.io/documentation/llms/23-agregar-personal.txt"
+    },
+    {
+      "title": "24-Configuración-de-Impresoras",
+      "filename": "24-configuración-de-impresoras.txt",
+      "url": "https://paxapos.github.io/documentation/llms/24-configuración-de-impresoras.txt"
+    },
+    {
+      "title": "25-Menú",
+      "filename": "25-menú.txt",
+      "url": "https://paxapos.github.io/documentation/llms/25-menú.txt"
+    },
+    {
+      "title": "32-Salón",
+      "filename": "32-salón.txt",
+      "url": "https://paxapos.github.io/documentation/llms/32-salón.txt"
+    },
+    {
+      "title": "33-Kitchen-Display-System-(KDS)",
+      "filename": "33-kitchen-display-system-(kds).txt",
+      "url": "https://paxapos.github.io/documentation/llms/33-kitchen-display-system-(kds).txt"
+    },
+    {
+      "title": "34-Contabilidad",
+      "filename": "34-contabilidad.txt",
+      "url": "https://paxapos.github.io/documentation/llms/34-contabilidad.txt"
+    },
+    {
+      "title": "35-Arqueos",
+      "filename": "35-arqueos.txt",
+      "url": "https://paxapos.github.io/documentation/llms/35-arqueos.txt"
+    },
+    {
+      "title": "36-Compras-y-Stock",
+      "filename": "36-compras-y-stock.txt",
+      "url": "https://paxapos.github.io/documentation/llms/36-compras-y-stock.txt"
+    },
+    {
+      "title": "37-ARCA-y-Facturación",
+      "filename": "37-arca-y-facturación.txt",
+      "url": "https://paxapos.github.io/documentation/llms/37-arca-y-facturación.txt"
+    },
+    {
+      "title": "38-Estadísticas",
+      "filename": "38-estadísticas.txt",
+      "url": "https://paxapos.github.io/documentation/llms/38-estadísticas.txt"
+    },
+    {
+      "title": "42-Buchón-Bot",
+      "filename": "42-buchón-bot.txt",
+      "url": "https://paxapos.github.io/documentation/llms/42-buchón-bot.txt"
+    },
+    {
+      "title": "Documentation-one",
+      "filename": "documentation-one.txt",
+      "url": "https://paxapos.github.io/documentation/llms/documentation-one.txt"
+    },
+    {
+      "title": "Sample-two",
+      "filename": "sample-two.txt",
+      "url": "https://paxapos.github.io/documentation/llms/sample-two.txt"
+    },
+    {
+      "title": "svelte-mdtest",
+      "filename": "svelte-mdtest.txt",
+      "url": "https://paxapos.github.io/documentation/llms/svelte-mdtest.txt"
+    },
+    {
+      "title": "Webhooks",
+      "filename": "webhooks.txt",
+      "url": "https://paxapos.github.io/documentation/llms/webhooks.txt"
+    }
+  ]
 }
