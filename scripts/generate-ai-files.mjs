@@ -15,6 +15,42 @@ const __dirname = dirname(__filename);
 const FILE_ENCODING = 'utf8';
 const BOM = '\uFEFF'; // Byte Order Mark para UTF-8
 
+// Función adicional para verificar y corregir caracteres problemáticos
+function fixProblemCharacters(text) {
+    // Corregir secuencias de bytes UTF-8 mal codificadas
+    let fixed = text
+        // Acentos minúsculas
+        .replace(/Ã¡/g, 'á')
+        .replace(/Ã©/g, 'é') 
+        .replace(/Ã­/g, 'í')
+        .replace(/Ã³/g, 'ó')
+        .replace(/Ãº/g, 'ú')
+        .replace(/Ã±/g, 'ñ')
+        // Acentos mayúsculas
+        .replace(/Ã\u0081/g, 'Á')
+        .replace(/Ã\u0089/g, 'É')
+        .replace(/Ã\u008d/g, 'Í')
+        .replace(/Ã\u0093/g, 'Ó')
+        .replace(/Ã\u009a/g, 'Ú')
+        .replace(/Ã\u0091/g, 'Ñ')
+        // Caracteres de puntuación problemáticos
+        .replace(/â€œ/g, '"')
+        .replace(/â€\u009d/g, '"')
+        .replace(/â€™/g, "'")
+        .replace(/â€˜/g, "'")
+        .replace(/â€"/g, '–')
+        .replace(/â€"/g, '—')
+        .replace(/â€¦/g, '...')
+        // Símbolos
+        .replace(/â€¢/g, '•')
+        .replace(/Â/g, '')
+        .replace(/â„¢/g, '™')
+        .replace(/Â®/g, '®')
+        .replace(/Â©/g, '©');
+    
+    return fixed;
+}
+
 console.log('🤖 Generando archivos AI completos...');
 
 // Crear directorio para archivos TXT estáticos
@@ -26,8 +62,11 @@ if (!existsSync(staticLlmDir)) {
 
 // Función para normalizar caracteres especiales y limpiar contenido
 function normalizeAndCleanContent(content) {
-    // Normalizar caracteres Unicode
-    let normalized = content.normalize('NFC');
+    // Primero corregir caracteres problemáticos comunes
+    let normalized = fixProblemCharacters(content);
+    
+    // Luego normalizar caracteres Unicode
+    normalized = normalized.normalize('NFC');
     
     // Reemplazar entidades HTML comunes
     normalized = normalized
@@ -70,12 +109,15 @@ function normalizeAndCleanContent(content) {
 }
 
 // Función segura para escribir archivos con codificación UTF-8
-function safeWriteFile(filePath, content, addBOM = false) {
+function safeWriteFile(filePath, content, addBOM = true) {
     try {
         // Normalizar el contenido antes de escribir
         let normalizedContent = content.normalize('NFC');
         
-        // Agregar BOM si se solicita (útil para sistemas Windows)
+        // Corregir cualquier carácter problemático adicional
+        normalizedContent = fixProblemCharacters(normalizedContent);
+        
+        // Agregar BOM para mejor compatibilidad con sistemas Windows
         if (addBOM) {
             normalizedContent = BOM + normalizedContent;
         }
@@ -84,6 +126,8 @@ function safeWriteFile(filePath, content, addBOM = false) {
             encoding: FILE_ENCODING,
             flag: 'w'
         });
+        
+        console.log(`📝 Archivo escrito con codificación UTF-8${addBOM ? ' + BOM' : ''}: ${basename(filePath)}`);
         return true;
     } catch (error) {
         console.error(`❌ Error escribiendo archivo ${filePath}:`, error.message);
@@ -159,8 +203,8 @@ for (const filePath of allMdFiles) {
 
 ${cleanContent}`;
             
-            // Escribir archivo con codificación segura
-            if (safeWriteFile(txtPath, finalContent, false)) {
+            // Escribir archivo con codificación segura y BOM
+            if (safeWriteFile(txtPath, finalContent, true)) {
                 // Agregar al contenido completo (también limpio)
                 completeContent += `\n\n=== ${moduleTitle} ===\n\n${cleanContent}`;
                 console.log(`✅ Procesado: ${fileName} -> ${txtName}`);
@@ -174,7 +218,7 @@ ${cleanContent}`;
 
 // Crear índice completo con codificación segura
 const indexPath = join(staticLlmDir, 'index.txt');
-if (safeWriteFile(indexPath, completeContent, false)) {
+if (safeWriteFile(indexPath, completeContent, true)) {
     console.log(`\n🎉 Completado: ${processedCount} archivos procesados`);
     console.log(`📚 Índice creado en: ${indexPath}`);
 } else {
