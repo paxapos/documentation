@@ -2,8 +2,27 @@
     import { onMount } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
-    import { processGroupedContent, prepareForExport } from '$lib/helpers/textReplacer';
+    import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
+    import { browser } from '$app/environment';
+    
+    function handleLLMIntegration(moduleId: string, moduleName: string, mode: 'single' | 'all' = 'single') {
+        if (mode === 'all') {
+            // Para "all", usar endpoint dinámico del índice completo
+            const dynamicUrl = '/documentation/llms';
+            window.open(dynamicUrl, '_blank');
+            console.log('📚 Opening complete manual (dynamic) for AI at:', dynamicUrl);
+            return;
+        }
+        
+        // Modo single: usar endpoint dinámico del módulo específico
+        const dynamicUrl = `/documentation/llms/${moduleId}`;
+        
+        // Abrir en nueva pestaña la URL dinámica
+        window.open(dynamicUrl, '_blank');
+        
+        console.log('📄 Opening dynamic LLM file for:', moduleName, 'at:', dynamicUrl);
+    }
 
     interface ContentItem {
         id: string;
@@ -40,164 +59,87 @@
         return false;
     }
 
-    // Reactividad a cambios en la URL
-    $: if (contentLoaded && $page.url.search !== lastProcessedUrl) {
-        const urlParams = new URLSearchParams($page.url.search);
-        const moduleParam = urlParams.get('module');
-        const highlightParam = urlParams.get('highlight');
-        
-        // Si hay parámetros de módulo en la URL
-        if (moduleParam && moduleParam !== selectedModuleId) {
-            lastProcessedUrl = $page.url.search;
+    // Función reactiva para procesar parámetros de URL
+    $: if (browser && $page.url.searchParams.get('search') && !isProcessingUrlSearch && contentLoaded) {
+        const currentUrl = $page.url.toString();
+        if (currentUrl !== lastProcessedUrl) {
             isProcessingUrlSearch = true;
+            lastProcessedUrl = currentUrl;
             
-            if (!selectModuleById(moduleParam, true)) {
-                // Si no encuentra el módulo, ir al primero por defecto
-                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                    selectModule(
-                        grouped_content[0].items[0].id,
-                        grouped_content[0].items[0].title,
-                        grouped_content[0].items[0].html,
-                        grouped_content[0].items[0].rawMarkdown,
-                        true
-                    );
+            const searchParam = $page.url.searchParams.get('search');
+            if (searchParam) {
+                const found = selectModuleById(searchParam, true);
+                if (!found) {
+                    console.warn('Módulo no encontrado:', searchParam);
                 }
             }
             
-            // Resetear el flag después de un breve delay
+            // Reset flag después de un timeout para permitir futuras navegaciones
             setTimeout(() => {
                 isProcessingUrlSearch = false;
             }, 100);
-        } else if (!$page.url.search) {
-            // Si no hay parámetros, resetear lastProcessedUrl
-            lastProcessedUrl = '';
         }
     }
 
     onMount(async () => {
         try {
-            const modules = import.meta.glob('/src/routes/dev/Docs/**/*.md', {
-                query: '?raw',
-                import: 'default'
-            });
-            const files = Object.entries(modules);
-
-            const contentMap: Record<string, ContentItem[]> = {};
-
-            for (const [path, loader] of files) {
-                const markdownText = await loader() as string;
-                const fileName = path.split('/').pop();
-                const folderName = path.split('/').slice(-2, -1)[0]; 
-                
-                if (!fileName) continue; // Skip if fileName is undefined
-                
-                const cleanTitle = fileName.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' ');
-                const id = fileName.replace('.md', '');
-
-                if (!contentMap[folderName]) {
-                    contentMap[folderName] = [];
-                }
-
-                contentMap[folderName].push({
-                    id,
-                    title: cleanTitle,
-                    html: await marked(markdownText),
-                    rawMarkdown: markdownText 
-                });
-            }
-
-            Object.values(contentMap).forEach(items => {
-                items.sort((a: ContentItem, b: ContentItem) => {
-                    const numA = parseInt(a.id.split('-')[0]);
-                    const numB = parseInt(b.id.split('-')[0]);
-                    return numA - numB;
-                });
-            });
-
-            grouped_content = Object.entries(contentMap).map(([folder, items]) => ({
-                folder: folder.replace(/^\d+-/, '').replace(/-/g, ' '),
-                items
-            })).sort((a, b) => {
-                const numA = parseInt(a.folder.split('-')[0]);
-                const numB = parseInt(b.folder.split('-')[0]);
-                return numA - numB;
-            });
-
-            // Aplicar reemplazo de texto automáticamente
-            grouped_content = processGroupedContent(grouped_content);
-            contentLoaded = true;
-
-            // Verificar si hay un módulo específico en la URL después de cargar
-            const urlParams = new URLSearchParams($page.url.search);
-            const moduleParam = urlParams.get('module');
+            const response = await fetch('/documentation/seo?type=ai-config');
+            const result = await response.json();
             
-            if (moduleParam) {
-                if (!selectModuleById(moduleParam, true)) {
-                    // Fallback al primer módulo
-                    if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                        selectModule(
-                            grouped_content[0].items[0].id,
-                            grouped_content[0].items[0].title,
-                            grouped_content[0].items[0].html,
-                            grouped_content[0].items[0].rawMarkdown,
-                            true
-                        );
+            if (result.success && result.data) {
+                // Procesar el contenido usando la función helper
+                grouped_content = processGroupedContent(result.data, 'Docs');
+                contentLoaded = true;
+                console.log('📚 Contenido cargado:', grouped_content.length, 'grupos');
+                
+                // Procesar parámetro de búsqueda de la URL si existe
+                if (browser) {
+                    const searchParam = $page.url.searchParams.get('search');
+                    if (searchParam && !isProcessingUrlSearch) {
+                        selectModuleById(searchParam, true);
                     }
                 }
             } else {
-                // Si no hay módulo específico, selecciona el primer módulo por defecto
-                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                    selectModule(
-                        grouped_content[0].items[0].id,
-                        grouped_content[0].items[0].title,
-                        grouped_content[0].items[0].html,
-                        grouped_content[0].items[0].rawMarkdown,
-                        false
-                    );
-                }
+                console.error('❌ Error al cargar contenido:', result.error);
             }
-
         } catch (error) {
-            console.error('Error al cargar los módulos:', error);
+            console.error('❌ Error en fetch:', error);
         }
     });
-
 
     function selectModule(id: string, title: string, htmlContent: string, rawMarkdown?: string, fromUrlNavigation: boolean = false) {
         selectedModuleId = id;
         selectedModuleName = title;
-        
-        // Verificar si hay término de resaltado en la URL
-        const urlParams = new URLSearchParams($page.url.search);
-        const highlightParam = urlParams.get('highlight');
-        
-        if (highlightParam && fromUrlNavigation) {
-            // Si viene de navegación por URL (búsqueda), aplicar resaltado
-            selectedModuleHtml = highlightTextInHtml(htmlContent, highlightParam);
-        } else {
-            // Si es selección manual del usuario, limpiar la URL y mostrar sin resaltado
-            if ($page.url.search && !fromUrlNavigation) {
-                const newUrl = new URL(window.location.href);
-                newUrl.searchParams.delete('module');
-                newUrl.searchParams.delete('highlight');
-                window.history.replaceState({}, '', newUrl.pathname);
-                lastProcessedUrl = '';
-            }
-            selectedModuleHtml = htmlContent;
-        }
-        
+        selectedModuleHtml = htmlContent;
         selectedModuleRawMarkdown = rawMarkdown || '';
+        
+        console.log('📄 Módulo seleccionado:', {
+            id,
+            title,
+            htmlLength: htmlContent?.length || 0,
+            rawLength: rawMarkdown?.length || 0,
+            fromNavigation: fromUrlNavigation
+        });
+
+        // Actualizar la URL solo si no viene de navegación URL para evitar loops
+        if (browser && !fromUrlNavigation) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('search', id);
+            window.history.pushState({}, '', url.toString());
+        }
+
+        // Scroll al tope en móvil cuando se selecciona un módulo
+        if (window.innerWidth < 1024) {
+            document.documentElement.scrollTop = 0;
+        }
     }
 
-    // Función para resaltar texto en HTML de manera más elegante
     function highlightTextInHtml(html: string, searchTerm: string): string {
         if (!searchTerm || !html) return html;
         
-        // Escapar caracteres especiales del término de búsqueda
+        // Escapar caracteres especiales para regex
         const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        
-        // Crear regex con flag global para encontrar todas las coincidencias
-        const regex = new RegExp(`(${escapedTerm})`, 'gi');
+        const regex = new RegExp(escapedTerm, 'gi');
         
         // Limitar a máximo 4 resaltados para evitar sobrecarga visual
         let matchCount = 0;
@@ -212,112 +154,13 @@
         });
     }
 
-    function handleLLMIntegration(moduleId: string, moduleName: string, mode: 'single' | 'all' = 'single') {
-        if (mode === 'all') {
-            // Exportar todo el manual como un solo archivo
-            let allContent = '';
-            grouped_content.forEach(group => {
-                allContent += `\n\n# ${group.folder}\n\n`;
-                group.items.forEach(item => {
-                    allContent += `## ${item.title}\n\n`;
-                    allContent += prepareForExport(item.rawMarkdown);
-                    allContent += '\n\n---\n\n';
-                });
-            });
-            
-            // Crear blob con todo el contenido
-            const blob = new Blob([allContent], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            
-            // Abrir en nueva pestaña
-            const newWindow = window.open(url, '_blank');
-            if (newWindow) {
-                newWindow.document.title = 'Manual-Completo-Desarrolladores.txt';
-            }
-            
-            // Copiar automáticamente al portapapeles para IA
-            navigator.clipboard.writeText(allContent).then(() => {
-                console.log('📋 Manual completo copiado al portapapeles para IA');
-            }).catch(err => {
-                console.error('Error al copiar al portapapeles:', err);
-            });
-            
-            setTimeout(() => URL.revokeObjectURL(url), 2000);
-            console.log('📚 Manual completo exportado para IA');
-            return;
-        }
-        
-        // Modo single: exportar solo el módulo actual
-        let markdownContent = '';
-        for (const group of grouped_content) {
-            const foundItem = group.items.find(item => item.id === moduleId);
-            if (foundItem) {
-                markdownContent = foundItem.rawMarkdown;
-                break;
-            }
-        }
-        
-        if (!markdownContent) {
-            alert('No se pudo encontrar el contenido del módulo');
-            return;
-        }
-        
-        // Aplicar reemplazo antes de exportar
-        const txtContent = prepareForExport(markdownContent);
-        
-        // Crear un blob con el contenido markdown como texto
-        const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        
-        // Abrir en nueva pestaña
-        const newWindow = window.open(url, '_blank');
-        if (newWindow) {
-            newWindow.document.title = `${moduleName}.txt`;
-        }
-        
-        // Copiar automáticamente al portapapeles para IA
-        navigator.clipboard.writeText(txtContent).then(() => {
-            console.log(`📋 Módulo "${moduleName}" copiado al portapapeles para IA`);
-        }).catch(err => {
-            console.error('Error al copiar al portapapeles:', err);
-        });
-        
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        console.log('Opening markdown content as txt for:', moduleName);
-    }
-    
     // Función para generar índice automático para IA
     function generateAIIndex() {
-        let index = '# ÍNDICE AUTOMÁTICO PARA IA - DOCUMENTACIÓN DESARROLLADORES\n\n';
-        index += '## Estructura del Manual:\n\n';
+        // Usar endpoint dinámico para obtener lista de módulos
+        const dynamicUrl = '/documentation/llms?type=list';
+        window.open(dynamicUrl, '_blank');
         
-        grouped_content.forEach((group, groupIndex) => {
-            index += `### ${groupIndex + 1}. ${group.folder}\n`;
-            group.items.forEach((item, itemIndex) => {
-                index += `   ${groupIndex + 1}.${itemIndex + 1} ${item.title} (ID: ${item.id})\n`;
-            });
-            index += '\n';
-        });
-        
-        index += '\n## Instrucciones para IA:\n';
-        index += '- Cada sección está identificada con un ID único\n';
-        index += '- El contenido está en formato markdown limpio\n';
-        index += '- Use este índice para navegar y referenciar secciones específicas\n';
-        index += '- Para obtener contenido específico, solicite por ID de módulo\n\n';
-        
-        // Copiar al portapapeles
-        navigator.clipboard.writeText(index).then(() => {
-            console.log('📑 Índice para IA generado y copiado al portapapeles');
-        });
-        
-        // También mostrar en nueva pestaña
-        const blob = new Blob([index], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const newWindow = window.open(url, '_blank');
-        if (newWindow) {
-            newWindow.document.title = 'Indice-IA-Desarrolladores.txt';
-        }
-        setTimeout(() => URL.revokeObjectURL(url), 2000);
+        console.log('📑 Opening dynamic AI index at:', dynamicUrl);
     }
 
     // Función para manejar el selector dropdown (móvil)
@@ -346,13 +189,14 @@
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 sm:p-4 md:p-5 shadow-sm">
                 <h3 class="mb-3 sm:mb-4 font-bold text-gray-900 dark:text-white text-sm sm:text-base md:text-lg">Documentación para Desarrolladores</h3>
                 
-                <!-- Dropdown para móvil (visible solo en pantallas pequeñas) -->
-                <div class="block lg:hidden mb-3 sm:mb-4">
+                <!-- Selector dropdown para móviles -->
+                <div class="mb-3 sm:mb-4 block lg:hidden">
                     <select 
-                        class="w-full p-2.5 sm:p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all duration-200 min-h-[44px] touch-manipulation"
-                        value={selectedModuleId || (grouped_content.length > 0 && grouped_content[0].items.length > 0 ? grouped_content[0].items[0].id : '')}
+                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         onchange={handleModuleSelect}
+                        value={selectedModuleId || ''}
                     >
+                        <option value="">Seleccionar módulo...</option>
                         {#each grouped_content as group}
                             <optgroup label={group.folder}>
                                 {#each group.items as item}
@@ -363,81 +207,109 @@
                     </select>
                 </div>
 
-                <!-- Sidebar tradicional para desktop (visible solo en pantallas grandes) -->
-                <nav class="hidden lg:block">
+                <!-- Lista de navegación para escritorio -->
+                <div class="space-y-2 sm:space-y-3 hidden lg:block">
                     {#each grouped_content as group}
-                        <div class="mb-3 sm:mb-4">
-                            <h4 class="mb-2 sm:mb-3 font-semibold text-gray-800 dark:text-gray-200 text-xs sm:text-sm md:text-base">{group.folder}</h4>
-                            <nav class="space-y-1 sm:space-y-1.5 pl-2 sm:pl-3">
+                        <div class="space-y-1 sm:space-y-2">
+                            <h4 class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider border-b border-gray-200 dark:border-gray-600 pb-1">{group.folder}</h4>
+                            <div class="space-y-1">
                                 {#each group.items as item}
                                     <button
-                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown, false)}
-                                        class="block w-full text-left text-xs sm:text-sm md:text-base p-1.5 sm:p-2 md:p-2.5 rounded-md transition-colors duration-200 cursor-pointer leading-relaxed min-h-[44px] touch-manipulation
-                                        {selectedModuleId === item.id
-                                            ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
-                                            : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
+                                        type="button"
+                                        class="w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm rounded-md transition-colors duration-200 {selectedModuleId === item.id ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 font-medium border-l-2 border-blue-500' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}"
+                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                     >
                                         {item.title}
                                     </button>
                                 {/each}
-                            </nav>
+                            </div>
                         </div>
                     {/each}
-                </nav>
+                </div>
+
+                <!-- Botones de integración con LLMs -->
+                <div class="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
+                    <h4 class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">Integración con IA</h4>
+                    
+                    <!-- Botón para archivo individual -->
+                    <button
+                        type="button"
+                        class="w-full px-3 py-2 text-xs sm:text-sm bg-purple-100 dark:bg-purple-900 text-purple-900 dark:text-purple-100 rounded-md hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors duration-200 border border-purple-200 dark:border-purple-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={!selectedModuleId}
+                        onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName, 'single')}
+                    >
+                        📄 LLM: Módulo Actual
+                    </button>
+
+                    <!-- Botón para archivo completo -->
+                    <button
+                        type="button"
+                        class="w-full px-3 py-2 text-xs sm:text-sm bg-green-100 dark:bg-green-900 text-green-900 dark:text-green-100 rounded-md hover:bg-green-200 dark:hover:bg-green-800 transition-colors duration-200 border border-green-200 dark:border-green-700"
+                        onclick={() => handleLLMIntegration('', 'Manual-Completo', 'all')}
+                    >
+                        📚 LLM: Manual Completo
+                    </button>
+
+                    <!-- Botón para índice de módulos -->
+                    <button
+                        type="button"
+                        class="w-full px-3 py-2 text-xs sm:text-sm bg-yellow-100 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-100 rounded-md hover:bg-yellow-200 dark:hover:bg-yellow-800 transition-colors duration-200 border border-yellow-200 dark:border-yellow-700"
+                        onclick={() => generateAIIndex()}
+                    >
+                        📑 Índice para IA
+                    </button>
+                </div>
             </div>
         </aside>
 
+        <!-- Contenido principal -->
+        <main class="flex-1 min-w-0">
+            {#if selectedModuleId && selectedModuleName}
+                <article transition:fade={{ duration: 200 }} class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <!-- Header del módulo -->
+                    <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 sm:p-6 md:p-8">
+                        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">{selectedModuleName}</h1>
+                        <div class="mt-2 flex flex-wrap items-center gap-2 text-xs sm:text-sm opacity-90">
+                            <span class="bg-white/20 px-2 py-1 rounded-full">Dev Docs</span>
+                            <span class="bg-white/20 px-2 py-1 rounded-full">ID: {selectedModuleId}</span>
+                        </div>
+                    </header>
 
-        <main class="min-w-0 flex-1">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm">
-                {#if selectedModuleHtml}
-                    <section class="markdown-paxapos prose prose-sm sm:prose md:prose-lg xl:prose-xl max-w-none" transition:fade={{ duration: 150 }}>
-                        {@html selectedModuleHtml}
-                    </section>
-                    
-                    <!-- Botones LLM Integration mejorados -->
-                    <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center sm:justify-end">
-                            <!-- Botón módulo individual -->
-                            <button
-                                onclick={() => handleLLMIntegration(selectedModuleId || '', selectedModuleName, 'single')}
-                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
-                            >
-                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                <span class="whitespace-nowrap">Módulo para IA</span>
-                            </button>
-                            
-                            <!-- Botón manual completo -->
-                            <button
-                                onclick={() => handleLLMIntegration('', 'Manual-Completo', 'all')}
-                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
-                            >
-                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                <span class="whitespace-nowrap">Todo para IA</span>
-                            </button>
-                            
-                            <!-- Botón índice para IA -->
-                            <button
-                                onclick={() => generateAIIndex()}
-                                class="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 cursor-pointer text-white text-xs sm:text-sm font-medium rounded-md transition-colors duration-200 shadow-sm min-h-[44px] touch-manipulation"
-                            >
-                                <svg class="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                                </svg>
-                                <span class="whitespace-nowrap">Índice IA</span>
-                            </button>
+                    <!-- Contenido del módulo -->
+                    <div class="p-4 sm:p-6 md:p-8">
+                        <div class="prose prose-sm sm:prose-base lg:prose-lg max-w-none dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800">
+                            {@html selectedModuleHtml}
                         </div>
                     </div>
-                {:else}
-                    <div class="flex items-center justify-center py-12 sm:py-16 md:py-20">
-                        <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center">Selecciona un módulo del menú lateral.</p>
+                </article>
+            {:else}
+                <!-- Estado inicial -->
+                <div class="flex items-center justify-center min-h-[60vh] bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Documentación para Desarrolladores</h2>
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6">Selecciona un módulo del menú para comenzar</p>
+                        
+                        <!-- Contadores de contenido -->
+                        {#if contentLoaded}
+                            <div class="flex justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                                <div class="text-center">
+                                    <div class="font-semibold text-blue-600 dark:text-blue-400">{grouped_content.length}</div>
+                                    <div>Categorías</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="font-semibold text-purple-600 dark:text-purple-400">{grouped_content.reduce((acc, group) => acc + group.items.length, 0)}</div>
+                                    <div>Módulos</div>
+                                </div>
+                            </div>
+                        {/if}
                     </div>
-                {/if}
-            </div>
+                </div>
+            {/if}
         </main>
     </div>
 </div>
