@@ -217,7 +217,7 @@ Allow: /
 Crawl-delay: 1
 
 # Archivos específicos para indexación por IA
-# Manual completo indexado dinámicamente
+# Manual completo indexado estáticamente
 Allow: /documentation/llms/
 
 # URLs importantes para SEO

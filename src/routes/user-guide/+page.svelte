@@ -435,13 +435,14 @@
     }
 
     function handleLLMIntegration(moduleId: string, moduleName: string) {
-        // URL dinámica que genera el TXT on-the-fly desde el MD
-        const dynamicUrl = `/documentation/llms/${moduleId}`;
+        // Usar archivo TXT estático del módulo específico
+        const txtFileName = moduleId.toLowerCase().replace(/\s+/g, '-') + '.txt';
+        const staticUrl = `/documentation/llms/${txtFileName}`;
         
-        // Abrir en nueva pestaña la URL dinámica
-        window.open(dynamicUrl, '_blank');
+        // Abrir en nueva pestaña la URL estática
+        window.open(staticUrl, '_blank');
         
-        console.log('Opening dynamic LLM file for:', moduleName, 'at:', dynamicUrl);
+        console.log('Opening static LLM file for:', moduleName, 'at:', staticUrl);
     }
 
     // Función para manejar el selector dropdown (móvil)

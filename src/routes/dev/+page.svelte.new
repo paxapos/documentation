@@ -4,25 +4,23 @@
     import { fade } from 'svelte/transition';
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
-    import { browser } from '$app/environment';
     
     function handleLLMIntegration(moduleId: string, moduleName: string, mode: 'single' | 'all' = 'single') {
         if (mode === 'all') {
-            // Para "all", usar archivo estático del índice completo
-            const staticUrl = '/documentation/llms/index.txt';
-            window.open(staticUrl, '_blank');
-            console.log('📚 Opening complete manual (static) for AI at:', staticUrl);
+            // Para "all", usar endpoint dinámico del índice completo
+            const dynamicUrl = '/documentation/llms';
+            window.open(dynamicUrl, '_blank');
+            console.log('📚 Opening complete manual (dynamic) for AI at:', dynamicUrl);
             return;
         }
         
-        // Modo single: usar archivo TXT estático del módulo específico
-        const txtFileName = moduleId.toLowerCase().replace(/\s+/g, '-') + '.txt';
-        const staticUrl = `/documentation/llms/${txtFileName}`;
+        // Modo single: usar endpoint dinámico del módulo específico
+        const dynamicUrl = `/documentation/llms/${moduleId}`;
         
-        // Abrir en nueva pestaña la URL estática
-        window.open(staticUrl, '_blank');
+        // Abrir en nueva pestaña la URL dinámica
+        window.open(dynamicUrl, '_blank');
         
-        console.log('📄 Opening static LLM file for:', moduleName, 'at:', staticUrl);
+        console.log('📄 Opening dynamic LLM file for:', moduleName, 'at:', dynamicUrl);
     }
 
     interface ContentItem {
@@ -61,7 +59,7 @@
     }
 
     // Función reactiva para procesar parámetros de URL
-    $: if (browser && $page.url.searchParams.get('search') && !isProcessingUrlSearch && contentLoaded) {
+    $: if ($page.url.searchParams.get('search') && !isProcessingUrlSearch && contentLoaded) {
         const currentUrl = $page.url.toString();
         if (currentUrl !== lastProcessedUrl) {
             isProcessingUrlSearch = true;
@@ -94,11 +92,9 @@
                 console.log('📚 Contenido cargado:', grouped_content.length, 'grupos');
                 
                 // Procesar parámetro de búsqueda de la URL si existe
-                if (browser) {
-                    const searchParam = $page.url.searchParams.get('search');
-                    if (searchParam && !isProcessingUrlSearch) {
-                        selectModuleById(searchParam, true);
-                    }
+                const searchParam = $page.url.searchParams.get('search');
+                if (searchParam && !isProcessingUrlSearch) {
+                    selectModuleById(searchParam, true);
                 }
             } else {
                 console.error('❌ Error al cargar contenido:', result.error);
@@ -123,7 +119,7 @@
         });
 
         // Actualizar la URL solo si no viene de navegación URL para evitar loops
-        if (browser && !fromUrlNavigation) {
+        if (!fromUrlNavigation) {
             const url = new URL(window.location.href);
             url.searchParams.set('search', id);
             window.history.pushState({}, '', url.toString());
@@ -157,11 +153,11 @@
 
     // Función para generar índice automático para IA
     function generateAIIndex() {
-        // Usar archivo estático del índice de módulos
-        const staticUrl = '/documentation/llms/index.txt';
-        window.open(staticUrl, '_blank');
+        // Usar endpoint dinámico para obtener lista de módulos
+        const dynamicUrl = '/documentation/llms?type=list';
+        window.open(dynamicUrl, '_blank');
         
-        console.log('📑 Opening static AI index at:', staticUrl);
+        console.log('📑 Opening dynamic AI index at:', dynamicUrl);
     }
 
     // Función para manejar el selector dropdown (móvil)
@@ -194,7 +190,7 @@
                 <div class="mb-3 sm:mb-4 block lg:hidden">
                     <select 
                         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        onchange={handleModuleSelect}
+                        on:change={handleModuleSelect}
                         value={selectedModuleId || ''}
                     >
                         <option value="">Seleccionar módulo...</option>
@@ -218,7 +214,7 @@
                                     <button
                                         type="button"
                                         class="w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm rounded-md transition-colors duration-200 {selectedModuleId === item.id ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 font-medium border-l-2 border-blue-500' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}"
-                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
+                                        on:click={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
                                     >
                                         {item.title}
                                     </button>
