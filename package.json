@@ -5,14 +5,14 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run generate:seo && vite build",
+		"build": "npm run generate:seo && npm run generate:ai && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"generate:ai": "echo 'AI endpoints are now dynamic - no generation needed'",
+		"generate:ai": "node scripts/generate-ai-files.mjs",
 		"generate:seo": "node scripts/generate-seo-files.mjs",
 		"seo:analyze": "npm run generate:seo && echo 'SEO files ready for analysis'"
 	},
