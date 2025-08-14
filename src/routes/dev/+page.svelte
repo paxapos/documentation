@@ -16,7 +16,10 @@
         }
         
         // Modo single: usar archivo TXT estático del módulo específico
-        const txtFileName = moduleId.toLowerCase().replace(/\s+/g, '-') + '.txt';
+        const txtFileName = moduleId.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/[()]/g, '') + '.txt';
         const staticUrl = `/documentation/llms/${txtFileName}`;
         
         // Abrir en nueva pestaña la URL estática

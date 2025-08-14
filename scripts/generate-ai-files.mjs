@@ -224,3 +224,17 @@ if (safeWriteFile(indexPath, completeContent, true)) {
 } else {
     console.error('❌ Error al crear el archivo índice');
 }
+
+// Generar archivo URLs (para que crawlers/LLMs indexen fácilmente)
+try {
+    const basePublic = 'https://paxapos.github.io/documentation/llms/';
+    const filesInDir = readdirSync(staticLlmDir).filter(f => f.toLowerCase().endsWith('.txt'));
+    // Ordenar para estabilidad
+    filesInDir.sort();
+    const urlsContent = filesInDir.map(f => basePublic + encodeURIComponent(f)).join('\n') + '\n';
+    const urlsPath = join(staticLlmDir, '..', 'urls.txt'); // static/urls.txt
+    safeWriteFile(urlsPath, urlsContent, false);
+    console.log(`🌐 URLs generado en: ${urlsPath}`);
+} catch (err) {
+    console.error('❌ Error generando urls.txt:', err.message);
+}
