@@ -12,6 +12,7 @@ https://paxapos.github.io/documentation/llms/35-arqueos.txt
 https://paxapos.github.io/documentation/llms/36-compras-y-stock.txt
 https://paxapos.github.io/documentation/llms/37-arca-y-facturacion.txt
 https://paxapos.github.io/documentation/llms/38-estadisticas.txt
+https://paxapos.github.io/documentation/llms/39-business-intelligence.txt
 https://paxapos.github.io/documentation/llms/42-buchon-bot.txt
 https://paxapos.github.io/documentation/llms/documentation-one.txt
 https://paxapos.github.io/documentation/llms/index.txt
