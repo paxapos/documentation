@@ -11,6 +11,16 @@
 	let manualContent: any[] = [];
 	let isLoading = false;
 
+	// Función para convertir IDs a slugs para URLs reales
+	function getSlugFromId(id: string): string {
+		return id.toLowerCase()
+			.replace(/^\d+-/, '') // Remover números del inicio
+			.replace(/[()]/g, '') // Remover paréntesis
+			.replace(/\s+/g, '-') // Espacios a guiones
+			.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remover acentos
+			.replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
+	}
+
 	// FAQ optimizado como fallback
 	const faqResponses = {
 		'mozo': `**Gestión de Personal - Mozos** 👨‍💼
@@ -23,7 +33,7 @@ Para crear y gestionar mozos en PaxaPOS:
 • Asignar rol "Mozo"
 • Configurar permisos y horarios
 
-🔗 **[Ver Guía Completa: Agregar Personal](${base}/user-guide#23-Agregar-Personal)**`,
+🔗 **[Ver Guía Completa: Agregar Personal](${base}/user-guide/agregar-personal)**`,
 
 		'impresora': `**Configuración de Impresoras** 🖨️
 
@@ -39,7 +49,7 @@ Configura impresoras para tickets y comandas:
 • Configurar en PaxaPOS
 • Probar impresión
 
-🔗 **[Ver Guía Completa: Configuración de Impresoras](${base}/user-guide#24-Configuración-de-Impresoras)**`,
+🔗 **[Ver Guía Completa: Configuración de Impresoras](${base}/user-guide/configuracion-impresoras)**`,
 
 		'salon': `**Gestión del Salón** 🏪
 
@@ -51,7 +61,7 @@ Administra mesas y clientes eficientemente:
 • Control de pedidos
 • Estados de ocupación
 
-🔗 **[Ver Guía Completa: Salón](${base}/user-guide#32-Salón)**`,
+🔗 **[Ver Guía Completa: Salón](${base}/user-guide/salon)**`,
 
 		'cocina': `**Kitchen Display System (KDS)** 👨‍🍳
 
@@ -63,7 +73,7 @@ Sistema digital para optimizar la cocina:
 • Control visual completo
 • Comunicación directa con salón
 
-🔗 **[Ver Guía Completa: KDS](${base}/user-guide#33-Kitchen-Display-System-(KDS))**`,
+🔗 **[Ver Guía Completa: KDS](${base}/user-guide/kds)**`,
 
 		'pago': `**Sistema de Pagos** 💳
 
@@ -75,7 +85,7 @@ Gestiona múltiples formas de pago:
 • Transferencias
 • Billeteras digitales
 
-🔗 **[Ver Guía Completa: Tipos de Pago](${base}/user-guide#22-Tipos-De-Pago)**`,
+🔗 **[Ver Guía Completa: Tipos de Pago](${base}/user-guide/tipos-de-pago)**`,
 
 		'menu': `**Gestión de Menú** 📋
 
@@ -87,7 +97,7 @@ Administra tu carta y productos:
 • Gestionar disponibilidad
 • Combos y promociones
 
-🔗 **[Ver Guía Completa: Menú](${base}/user-guide#25-Menú)**`,
+🔗 **[Ver Guía Completa: Menú](${base}/user-guide/menu)**`,
 
 		'arqueo': `**Arqueos de Caja** 💰
 
@@ -99,7 +109,7 @@ Controla el dinero diariamente:
 • Registrar diferencias
 • Cerrar turno
 
-🔗 **[Ver Guía Completa: Arqueos](${base}/user-guide#35-Arqueos)**`,
+🔗 **[Ver Guía Completa: Arqueos](${base}/user-guide/arqueos)**`,
 
 		'facturacion': `**Facturación y AFIP** 📄
 
@@ -111,7 +121,7 @@ Cumple normativas fiscales:
 • Integración con AFIP
 • Reportes automáticos
 
-🔗 **[Ver Guía Completa: AFIP y Facturación](${base}/user-guide#37-AFIP-y-Facturación)**`,
+🔗 **[Ver Guía Completa: AFIP y Facturación](${base}/user-guide/arca-facturacion)**`,
 
 		'usuario': `**Gestión de Usuarios** 👥
 
@@ -126,7 +136,7 @@ Administra accesos al sistema:
 • Asignar permisos
 • Gestionar accesos
 
-🔗 **[Ver Guía Completa: Crear Usuarios](${base}/user-guide#21-Crear-Usuarios)**`
+🔗 **[Ver Guía Completa: Crear Usuarios](${base}/user-guide/crear-usuarios)**`
 	};
 
 	onMount(async () => {
@@ -271,16 +281,18 @@ Administra accesos al sistema:
 		
 		if (manualResults && manualResults.length > 0) {
 			const bestResult = manualResults[0];
+			const moduleSlug = getSlugFromId(bestResult.id);
 			
 			let response = `**${bestResult.title}** (${bestResult.folder})\n\n`;
 			response += bestResult.relevantText;
-			response += `\n\n🔗 **[Ver guía completa: ${bestResult.title}](${base}/user-guide#${bestResult.id})**`;
+			response += `\n\n🔗 **[Ver guía completa: ${bestResult.title}](${base}/user-guide/${moduleSlug})**`;
 			
 			// Si hay más resultados, mencionarlos
 			if (manualResults.length > 1) {
 				response += `\n\n**También podrías revisar:**`;
 				manualResults.slice(1).forEach(result => {
-					response += `\n• [${result.title}](${base}/user-guide#${result.id})`;
+					const slug = getSlugFromId(result.id);
+					response += `\n• [${result.title}](${base}/user-guide/${slug})`;
 				});
 			}
 			

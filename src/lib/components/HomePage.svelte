@@ -164,14 +164,22 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Explora las APIs
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Explora las APIs
+						{:else}
+							Lee el Manual
+						{/if}
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Comienza explorando nuestra documentación de APIs REST y GraphQL
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Comienza explorando nuestra documentación de APIs REST y GraphQL
+						{:else}
+							Familiarízate con todos los módulos y funcionalidades de PaxaPOS
+						{/if}
 					</p>
 				</div>
 				<div class="text-center">
@@ -191,14 +199,22 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Prueba el Sistema
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Prueba el Sistema
+						{:else}
+							Practica
+						{/if}
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS
+						{:else}
+							Sigue las guías paso a paso para dominar cada función del sistema
+						{/if}
 					</p>
 				</div>
 				<div class="text-center">
@@ -218,14 +234,22 @@
 							? 'mb-2'
 							: 'mb-3 text-lg'}"
 					>
-						Implementa
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Implementa
+						{:else}
+							Optimiza
+						{/if}
 					</h4>
 					<p
 						class="{FEATURE_FLAGS.showDevDocumentation
 							? 'text-sm'
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
-						Sigue nuestras guías de implementación para poner en marcha tu sistema
+						{#if FEATURE_FLAGS.showDevDocumentation}
+							Sigue nuestras guías de implementación para poner en marcha tu sistema
+						{:else}
+							Utiliza las mejores prácticas para maximizar la eficiencia de tu negocio
+						{/if}
 					</p>
 				</div>
 			</div>

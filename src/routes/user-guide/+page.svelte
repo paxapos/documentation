@@ -2,9 +2,170 @@
     import { onMount, onDestroy } from 'svelte';
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
+    import { goto } from '$app/navigation';
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
     import SEOHead from '$lib/components/SEOHead.svelte';
+
+    interface ModuleInfo {
+        slug: string;
+        title: string;
+        description: string;
+        category: string;
+        icon: string;
+        id: string;
+    }
+
+    const modulesList: ModuleInfo[] = [
+        {
+            slug: 'introduccion',
+            title: 'Introducción',
+            description: 'Conceptos básicos de PaxaPOS y primeros pasos en el sistema',
+            category: 'Primeros Pasos',
+            icon: '🚀',
+            id: '11-introduccion'
+        },
+        {
+            slug: 'iniciar-sesion',
+            title: 'Iniciar Sesión',
+            description: 'Cómo acceder a tu cuenta de PaxaPOS de forma segura',
+            category: 'Primeros Pasos',
+            icon: '🔐',
+            id: '12-iniciar-sesion'
+        },
+        {
+            slug: 'crear-usuarios',
+            title: 'Crear Usuarios',
+            description: 'Gestión de usuarios, roles y permisos en el sistema',
+            category: 'Administración',
+            icon: '👥',
+            id: '21-crear-usuarios'
+        },
+        {
+            slug: 'tipos-de-pago',
+            title: 'Tipos de Pago',
+            description: 'Configuración de métodos de pago y procesamiento',
+            category: 'Administración',
+            icon: '💳',
+            id: '22-tipos-de-pago'
+        },
+        {
+            slug: 'agregar-personal',
+            title: 'Agregar Personal',
+            description: 'Gestión de empleados y asignación de roles',
+            category: 'Administración',
+            icon: '👨‍💼',
+            id: '23-agregar-personal'
+        },
+        {
+            slug: 'configuracion-impresoras',
+            title: 'Configuración de Impresoras',
+            description: 'Setup y configuración de impresoras térmicas',
+            category: 'Configuración',
+            icon: '🖨️',
+            id: '24-configuracion-impresoras'
+        },
+        {
+            slug: 'menu',
+            title: 'Configuración del Menú',
+            description: 'Carga de productos, categorías y organización de la carta',
+            category: 'Configuración',
+            icon: '📋',
+            id: '25-menu'
+        },
+        {
+            slug: 'salon',
+            title: 'Módulo de Salón',
+            description: 'Gestión de mesas, pedidos y servicio en el salón',
+            category: 'Operaciones',
+            icon: '🍽️',
+            id: '32-salon'
+        },
+        {
+            slug: 'kds',
+            title: 'Kitchen Display System (KDS)',
+            description: 'Sistema de pantalla de cocina para optimizar pedidos',
+            category: 'Operaciones',
+            icon: '👨‍🍳',
+            id: '33-kitchen-display-system-kds'
+        },
+        {
+            slug: 'contabilidad',
+            title: 'Contabilidad',
+            description: 'Gestión contable, arqueos y reportes financieros',
+            category: 'Gestión',
+            icon: '💰',
+            id: '34-contabilidad'
+        },
+        {
+            slug: 'arqueos',
+            title: 'Arqueos',
+            description: 'Control de caja y cuadre de efectivo diario',
+            category: 'Gestión',
+            icon: '🔍',
+            id: '35-arqueos'
+        },
+        {
+            slug: 'compras-stock',
+            title: 'Compras y Stock',
+            description: 'Gestión de inventario, compras y control de stock',
+            category: 'Gestión',
+            icon: '📦',
+            id: '36-compras-stock'
+        },
+        {
+            slug: 'arca-facturacion',
+            title: 'ARCA y Facturación',
+            description: 'Facturación electrónica y cumplimiento AFIP',
+            category: 'Gestión',
+            icon: '📄',
+            id: '37-arca-facturacion'
+        },
+        {
+            slug: 'estadisticas',
+            title: 'Estadísticas',
+            description: 'Reportes y análisis de ventas del restaurante',
+            category: 'Gestión',
+            icon: '📈',
+            id: '38-estadisticas'
+        },
+        {
+            slug: 'buchon-bot',
+            title: 'Buchón Bot',
+            description: 'Asistente virtual inteligente para gestión del restaurante',
+            category: 'Herramientas',
+            icon: '🤖',
+            id: '42-buchon-bot'
+        }
+    ];
+
+    // Agrupar módulos por categoría
+    const groupedModules = modulesList.reduce((acc, module) => {
+        if (!acc[module.category]) {
+            acc[module.category] = [];
+        }
+        acc[module.category].push(module);
+        return acc;
+    }, {} as Record<string, ModuleInfo[]>);
+
+    function navigateToModule(slug: string) {
+        // En lugar de navegar, buscar el módulo por slug y seleccionarlo
+        const moduleInfo = modulesList.find((m: ModuleInfo) => m.slug === slug);
+        if (moduleInfo) {
+            // Buscar el módulo en grouped_content por ID
+            for (const group of grouped_content) {
+                const foundItem = group.items.find(item => item.id === moduleInfo.id);
+                if (foundItem) {
+                    selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
+                    // Actualizar la URL sin recargar la página
+                    window.history.pushState({}, '', `/documentation/user-guide/${slug}`);
+                    return;
+                }
+            }
+        }
+        // Fallback: navegar normalmente si no se encuentra
+        goto(`/documentation/user-guide/${slug}`);
+    }
 
     interface ContentItem {
         id: string;
@@ -111,25 +272,48 @@
         return false;
     }
 
-    // Reactividad a cambios en la URL (parámetros de consulta)
-    $: if (contentLoaded && $page.url.search) {
+    // Reactividad a cambios en la URL (parámetros de consulta y pathname)
+    $: if (contentLoaded && ($page.url.search || $page.url.pathname)) {
         const urlParams = new URLSearchParams($page.url.search);
         const moduleParam = urlParams.get('module');
         const highlightParam = urlParams.get('highlight');
         
+        // También verificar si la URL tiene un slug de módulo en el pathname
+        const pathParts = $page.url.pathname.split('/');
+        const possibleSlug = pathParts[pathParts.length - 1];
+        
         if (moduleParam && moduleParam !== selectedModuleId) {
             if (!selectModuleById(moduleParam)) {
-                // Si no encuentra el módulo, mostrar el primero y seleccionarlo
-                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                    const firstItem = grouped_content[0].items[0];
-                    selectModule(
-                        firstItem.id,
-                        firstItem.title,
-                        firstItem.html,
-                        firstItem.rawMarkdown
-                    );
-                }
+                // Si no encuentra el módulo, mostrar índice sin seleccionar nada
+                selectedModuleId = null;
+                selectedModuleName = '';
+                selectedModuleHtml = '';
+                selectedModuleRawMarkdown = '';
             }
+        } else if (possibleSlug && possibleSlug !== 'user-guide' && !moduleParam) {
+            // Intentar cargar módulo por slug desde la URL si no hay moduleParam
+            const moduleInfo = modulesList.find((m: ModuleInfo) => m.slug === possibleSlug);
+            if (moduleInfo && moduleInfo.id !== selectedModuleId) {
+                if (!selectModuleById(moduleInfo.id)) {
+                    // Si no encuentra el módulo, mostrar índice
+                    selectedModuleId = null;
+                    selectedModuleName = '';
+                    selectedModuleHtml = '';
+                    selectedModuleRawMarkdown = '';
+                }
+            } else if (!moduleInfo && selectedModuleId) {
+                // Si el slug no coincide con ningún módulo, mostrar índice
+                selectedModuleId = null;
+                selectedModuleName = '';
+                selectedModuleHtml = '';
+                selectedModuleRawMarkdown = '';
+            }
+        } else if (possibleSlug === 'user-guide' && selectedModuleId) {
+            // Si estamos en la URL base, mostrar índice
+            selectedModuleId = null;
+            selectedModuleName = '';
+            selectedModuleHtml = '';
+            selectedModuleRawMarkdown = '';
         }
     }
 
@@ -202,32 +386,24 @@
             const urlParams = new URLSearchParams($page.url.search);
             const moduleParam = urlParams.get('module');
             
+            // También verificar si la URL tiene un slug de módulo en el pathname
+            const pathParts = $page.url.pathname.split('/');
+            const possibleSlug = pathParts[pathParts.length - 1];
+            
             if (moduleParam) {
                 if (!selectModuleById(moduleParam)) {
                     console.warn(`Módulo no encontrado: ${moduleParam}`);
-                    // Fallback al primer módulo y seleccionarlo
-                    if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                        const firstItem = grouped_content[0].items[0];
-                        selectModule(
-                            firstItem.id,
-                            firstItem.title,
-                            firstItem.html,
-                            firstItem.rawMarkdown
-                        );
+                }
+            } else if (possibleSlug && possibleSlug !== 'user-guide') {
+                // Intentar cargar módulo por slug desde la URL
+                const moduleInfo = modulesList.find((m: ModuleInfo) => m.slug === possibleSlug);
+                if (moduleInfo) {
+                    if (!selectModuleById(moduleInfo.id)) {
+                        console.warn(`Módulo no encontrado: ${moduleInfo.id}`);
                     }
                 }
-            } else {
-                // Si no hay módulo específico, mostrar el primer módulo por defecto y seleccionarlo
-                if (grouped_content.length > 0 && grouped_content[0].items.length > 0) {
-                    const firstItem = grouped_content[0].items[0];
-                    selectModule(
-                        firstItem.id,
-                        firstItem.title,
-                        firstItem.html,
-                        firstItem.rawMarkdown
-                    );
-                }
             }
+            // Si no hay parámetros específicos, mostrar el índice por defecto
 
         } catch (error) {
             console.error('Error al cargar los módulos:', error);
@@ -449,6 +625,16 @@
         console.log('Opening static LLM file for:', moduleName, 'at:', staticUrl);
     }
 
+    // Función para convertir IDs a slugs para URLs
+    function getSlugFromId(id: string): string {
+        return id.toLowerCase()
+            .replace(/^\d+-/, '') // Remover números del inicio
+            .replace(/[()]/g, '') // Remover paréntesis
+            .replace(/\s+/g, '-') // Espacios a guiones
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remover acentos
+            .replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
+    }
+
     // Función para manejar el selector dropdown (móvil)
     function handleModuleSelect(event: Event) {
         const target = event.target as HTMLSelectElement;
@@ -480,53 +666,6 @@
 
 <div class="mx-auto max-w-7xl px-3 py-4 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
     <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:flex-row">
-        <!-- Sidebar responsivo -->
-        <aside class="lg:w-64 flex-shrink-0">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3 sm:p-4 md:p-5 shadow-sm">
-                <h3 class="mb-3 sm:mb-4 font-bold text-gray-900 dark:text-white text-sm sm:text-base md:text-lg">Manual de usuario</h3>
-                
-                <!-- Dropdown para móvil (visible solo en pantallas pequeñas) -->
-                <div class="block lg:hidden mb-3 sm:mb-4">
-                    <select 
-                        class="w-full p-2.5 sm:p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all duration-200 min-h-[44px] touch-manipulation"
-                        value={selectedModuleId || ''}
-                        onchange={handleModuleSelect}
-                    >
-                        <option value="">Selecciona un módulo...</option>
-                        {#each grouped_content as group}
-                            <optgroup label={group.folder}>
-                                {#each group.items as item}
-                                    <option value={item.id}>{item.title}</option>
-                                {/each}
-                            </optgroup>
-                        {/each}
-                    </select>
-                </div>
-
-                <!-- Sidebar tradicional para desktop (visible solo en pantallas grandes) -->
-                <nav class="hidden lg:block">
-                    {#each grouped_content as group}
-                        <div class="mb-3 sm:mb-2.5">
-                            <h4 class="mb-2 sm:mb-1 font-semibold text-gray-800 dark:text-gray-200 text-xs sm:text-sm md:text-base">{group.folder}</h4>
-                            <nav class="space-y-1 sm:space-y-1.5 pl-2 sm:pl-3">
-                                {#each group.items as item}
-                                    <button
-                                        onclick={() => selectModule(item.id, item.title, item.html, item.rawMarkdown)}
-                                        class="block w-full text-left text-xs sm:text-sm md:text-base p-1.5 sm:p-2 md:p-2.5 rounded-md transition-colors duration-200 cursor-pointer leading-relaxed min-h-[44px] touch-manipulation
-                                        {selectedModuleId === item.id
-                                            ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-medium' 
-                                            : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'}"
-                                    >
-                                        {item.title}
-                                    </button>
-                                {/each}
-                            </nav>
-                        </div>
-                    {/each}
-                </nav>
-            </div>
-        </aside>
-
         <main class="min-w-0 flex-1">
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm">
                 {#if selectedModuleHtml}
@@ -549,8 +688,92 @@
                         </div>
                     </div>  
                 {:else}
-                    <div class="flex items-center justify-center py-12 sm:py-16 md:py-20">
-                        <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center">Selecciona un módulo del menú lateral.</p>
+                    <!-- Índice de módulos cuando no hay módulo seleccionado -->
+                    <div class="max-w-none">
+                        <!-- Header -->
+                        <div class="mb-8 text-center">
+                            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                                Manual de Usuario PaxaPOS
+                            </h1>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                                Aprende paso a paso cómo usar todas las funciones de PaxaPOS. Desde la configuración inicial hasta la gestión avanzada de tu restaurante.
+                            </p>
+                        </div>
+
+                        <!-- Módulos organizados por categorías -->
+                        <div class="space-y-8">
+                            {#each Object.entries(groupedModules) as [categoryName, categoryModules]}
+                                <section>
+                                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-700 pb-3">
+                                        {categoryName}
+                                    </h2>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {#each categoryModules as module}
+                                            <button
+                                                onclick={() => navigateToModule(module.slug)}
+                                                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 text-left w-full min-h-[120px] flex flex-col"
+                                            >
+                                                <div class="flex items-start mb-3">
+                                                    <div class="text-2xl mr-3 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
+                                                        {module.icon}
+                                                    </div>
+                                                    <div class="flex-1 min-w-0">
+                                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-base leading-tight">
+                                                            {module.title}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                
+                                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3 flex-1">
+                                                    {module.description}
+                                                </p>
+                                                
+                                                <div class="mt-auto">
+                                                    <div class="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 font-medium">
+                                                        Ver módulo
+                                                        <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        {/each}
+                                    </div>
+                                </section>
+                            {/each}
+                        </div>
+
+                        <!-- Footer informativo -->
+                        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
+                                <div class="flex flex-col sm:flex-row items-start">
+                                    <div class="text-2xl mb-3 sm:mb-0 sm:mr-4 flex-shrink-0">💡</div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">
+                                            ¿Necesitas ayuda adicional?
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                                            Si tienes dudas sobre algún módulo o necesitas soporte técnico, nuestro equipo está aquí para ayudarte.
+                                        </p>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                            <div class="flex items-center text-gray-600 dark:text-gray-400">
+                                                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                                </svg>
+                                                Email: soporte@paxapos.com
+                                            </div>
+                                            <div class="flex items-center text-gray-600 dark:text-gray-400">
+                                                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.955 8.955 0 01-4.951-1.488A11.956 11.956 0 002 18c.404-.441.802-.872 1.17-1.293C3.708 16.04 4 15.543 4 15c0-2.667 1.333-4 4-4s4 1.333 4 4"></path>
+                                                </svg>
+                                                Chat: Disponible 24/7
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 {/if}
             </div>
