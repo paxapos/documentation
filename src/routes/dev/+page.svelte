@@ -1,5 +1,11 @@
 <script lang="ts">
+    import { onMount, onDestroy } from 'svelte';
+    import { marked } from 'marked';
+    import { fade } from 'svelte/transition';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
+    import { processGroupedContent } from '$lib/helpers/textReplacer';
+    import { page } from '$app/stores';
     import SEOHead from '$lib/components/SEOHead.svelte';
 
     interface ModuleInfo {
@@ -57,7 +63,7 @@
     }, {} as Record<string, ModuleInfo[]>);
 
     function navigateToModule(slug: string) {
-        goto(`/documentation/dev/${slug}`);
+        goto(`${base}/dev/${slug}`);
     }
 </script>
 

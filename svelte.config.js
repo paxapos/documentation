@@ -34,11 +34,12 @@ const config = {
                 '/api/llm/estadisticas',
                 '/api/llm/buchon-bot'
             ]
-        },
-        // Path base para GitHub Pages
-        paths: {
-            base: '/documentation'
         }
+        // Path base removido para dominio personalizado
+        // Si necesitas volver a GitHub Pages sin dominio, descomenta:
+        // paths: {
+        //     base: '/documentation'
+        // }
     }
 };
 

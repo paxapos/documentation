@@ -1,7 +1,7 @@
-import { error } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
-export const GET: RequestHandler = async ({ params, fetch }) => {
+export const GET: RequestHandler = async ({ params }) => {
     const { slug } = params;
     
     // Mapeo de slugs a archivos LLM
@@ -29,27 +29,6 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
         throw error(404, 'Archivo LLM no encontrado');
     }
     
-    try {
-        // Usar fetch para cargar el archivo desde static
-        const response = await fetch(`/llms/${fileName}`);
-        
-        if (!response.ok) {
-            throw error(404, 'Archivo LLM no encontrado');
-        }
-        
-        const content = await response.text();
-        
-        // Devolver el contenido como texto plano
-        return new Response(content, {
-            headers: {
-                'content-type': 'text/plain; charset=utf-8',
-                'cache-control': 'public, max-age=3600' // Cache por 1 hora
-            }
-        });
-    } catch (err) {
-        console.error('Error reading LLM file:', err);
-        throw error(500, 'Error al cargar el archivo LLM');
-    }
+    // Redirigir directamente al archivo estático
+    throw redirect(302, `/llms/${fileName}`);
 };
-
-export const prerender = true;
