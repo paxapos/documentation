@@ -14,8 +14,26 @@ const config = {
             strict: false // Permitir rutas dinámicas no prerenderizadas
         }),
         prerender: {
-            handleMissingId: 'warn', // Only warn about missing IDs instead of failing
-            handleHttpError: 'warn' // Only warn about HTTP errors instead of failing
+            handleHttpError: 'warn',
+            entries: [
+                '*',
+                // Agregar rutas explícitas para los endpoints LLM
+                '/api/llm/introduccion',
+                '/api/llm/iniciar-sesion',
+                '/api/llm/crear-usuarios',
+                '/api/llm/tipos-de-pago',
+                '/api/llm/agregar-personal',
+                '/api/llm/configuracion-impresoras',
+                '/api/llm/menu',
+                '/api/llm/salon',
+                '/api/llm/kds',
+                '/api/llm/contabilidad',
+                '/api/llm/arqueos',
+                '/api/llm/compras-stock',
+                '/api/llm/arca-facturacion',
+                '/api/llm/estadisticas',
+                '/api/llm/buchon-bot'
+            ]
         },
         // Path base para GitHub Pages
         paths: {
