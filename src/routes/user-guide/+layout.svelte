@@ -2,6 +2,7 @@
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
 
     let { children }: { children: any } = $props();
 
@@ -39,7 +40,7 @@
     }
 
     function navigateToModule(moduleSlug: string) {
-        goto(`/documentation/user-guide/${moduleSlug}`);
+        goto(`${base}/user-guide/${moduleSlug}`);
         if (isMobile) sidebarOpen = false;
     }
 

@@ -2,6 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import SEOHead from '$lib/components/SEOHead.svelte';
     import type { PageData } from './$types';
@@ -144,9 +145,9 @@
         const imgRegex = /<img([^>]*)\ssrc\s*=\s*["'](?!https?:\/\/)(?!\/)([^"']+)["']([^>]*)>/gi;
         
         return html.replace(imgRegex, (match, beforeSrc, src, afterSrc) => {
-            // Si la imagen empieza con "images/", agregar el prefijo /documentation/
+            // Si la imagen empieza con "images/", agregar el prefijo base
             if (src.startsWith('images/')) {
-                const newSrc = `/documentation/${src}`;
+                const newSrc = `${base}/${src}`;
                 return `<img${beforeSrc} src="${newSrc}"${afterSrc}>`;
             }
             return match;
@@ -155,9 +156,9 @@
 
     // Función para copiar el enlace de una sección específica
     function copyLinkToSection(sectionId: string) {
-        // Construir URL completa incluyendo el prefijo /documentation
+        // Construir URL completa incluyendo el prefijo base
         const baseUrl = window.location.origin;
-        const currentPath = `/documentation/user-guide/${data.slug}`;
+        const currentPath = `${base}/user-guide/${data.slug}`;
         const linkWithHash = sectionId ? `${baseUrl}${currentPath}#${sectionId}` : `${baseUrl}${currentPath}`;
         
         navigator.clipboard.writeText(linkWithHash).then(() => {
@@ -197,6 +198,12 @@
         }, 2000);
     }
 
+    // Función para abrir el archivo LLM en una nueva pestaña
+    function openLLMPage() {
+        const llmUrl = `${base}/api/llm/${data.slug}`;
+        window.open(llmUrl, '_blank');
+    }
+
     // Función para manejar la descarga de archivos LLM
     function handleLLMIntegration(moduleSlug: string, moduleName: string, type: 'single' | 'all') {
         if (type === 'single' && moduleSlug) {
@@ -214,11 +221,6 @@
     // Función para generar índice de IA
     function generateAIIndex() {
         window.open('/ai-metadata.json', '_blank');
-    }
-
-    // Función para abrir archivo LLM en nueva pestaña
-    function openLLMPage() {
-        window.open(`/documentation/api/llm/${data.slug}`, '_blank');
     }
 
     // Calcular el módulo actual para navegación móvil
@@ -252,12 +254,12 @@
                     <select 
                         class="w-full px-2 py-1.5 sm:px-3 sm:py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         value={currentSlug}
-                        onchange={(e) => {
-                            const target = e.target as HTMLSelectElement;
-                            if (target.value) {
-                                goto(`/documentation/user-guide/${target.value}`);
-                            }
-                        }}
+                        onchange={async (e) => {
+                                const target = e.target as HTMLSelectElement;
+                                if (target.value) {
+                                    goto(`${base}/user-guide/${target.value}`);
+                                }
+                            }}
                     >
                         <option value="">Seleccionar módulo...</option>
                         {#each moduleCategories as category}
@@ -278,7 +280,7 @@
                             <div class="space-y-1">
                                 {#each category.modules as module}
                                     <a
-                                        href="/documentation/user-guide/{module.slug}"
+                                        href="{base}/user-guide/{module.slug}"
                                         class="block w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm rounded-md transition-colors duration-200 {currentSlug === module.slug ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 font-medium border-l-2 border-blue-500' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}"
                                     >
                                         {module.title}
@@ -322,7 +324,7 @@
                 <div class="p-3 sm:p-4 md:p-6 pt-0 border-t border-gray-200 dark:border-gray-700">
                     <div class="flex justify-between items-center">
                         <a 
-                            href="/documentation/user-guide"
+                            href="{base}/user-guide"
                             class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                         >
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

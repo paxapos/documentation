@@ -3,6 +3,7 @@
     import { marked } from 'marked';
     import { fade } from 'svelte/transition';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
     import SEOHead from '$lib/components/SEOHead.svelte';
@@ -158,13 +159,13 @@
                 if (foundItem) {
                     selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
                     // Actualizar la URL sin recargar la página
-                    window.history.pushState({}, '', `/documentation/user-guide/${slug}`);
+                    window.history.pushState({}, '', `${base}/user-guide/${slug}`);
                     return;
                 }
             }
         }
         // Fallback: navegar normalmente si no se encuentra
-        goto(`/documentation/user-guide/${slug}`);
+        goto(`${base}/user-guide/${slug}`);
     }
 
     interface ContentItem {
@@ -617,7 +618,7 @@
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/\s+/g, '-')
             .replace(/[()]/g, '') + '.txt';
-        const staticUrl = `/documentation/llms/${txtFileName}`;
+        const staticUrl = `${base}/llms/${txtFileName}`;
         
         // Abrir en nueva pestaña la URL estática
         window.open(staticUrl, '_blank');
