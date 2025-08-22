@@ -1,5 +1,5 @@
 ﻿
-# 👥 Configuración Inicial - Crear Usuarios
+# 👥 Crear Usuarios
 <div id="crear-usuarios"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
