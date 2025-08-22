@@ -8,6 +8,13 @@ node_modules
 /.svelte-kit
 /build
 
+# Archivos generados automáticamente durante el build
+/static/ai-metadata.json
+/static/content-index.json
+/static/urls.txt
+/static/llms/*.txt
+/src/lib/generated/
+
 # Evitar archivos duplicados del ChatBot
 **/ChatBot.svelte
 **/ChatBotIntelligent*.svelte
