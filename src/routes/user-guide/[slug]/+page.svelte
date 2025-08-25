@@ -200,8 +200,30 @@
 
     // Función para abrir el archivo LLM en una nueva pestaña
     function openLLMPage() {
-        const llmUrl = `${base}/api/llm/${data.slug}`;
-        window.open(llmUrl, '_blank');
+        // Mapeo de slugs a archivos LLM directos (saltando el API endpoint)
+        const slugToFileMap: Record<string, string> = {
+            'introduccion': '11-introduccion.txt',
+            'iniciar-sesion': '12-iniciar-sesion.txt',
+            'crear-usuarios': '21-crear-usuarios.txt',
+            'tipos-de-pago': '22-tipos-de-pago.txt',
+            'agregar-personal': '23-agregar-personal.txt',
+            'configuracion-impresoras': '24-configuracion-de-impresoras.txt',
+            'menu': '25-menu.txt',
+            'salon': '32-salon.txt',
+            'kds': '33-kitchen-display-system-kds.txt',
+            'contabilidad': '34-contabilidad.txt',
+            'arqueos': '35-arqueos.txt',
+            'compras-stock': '36-compras-y-stock.txt',
+            'arca-facturacion': '37-arca-y-facturacion.txt',
+            'estadisticas': '38-estadisticas.txt',
+            'buchon-bot': '42-buchon-bot.txt'
+        };
+        
+        const fileName = slugToFileMap[data.slug];
+        if (fileName) {
+            const llmUrl = `${base}/llms/${fileName}`;
+            window.open(llmUrl, '_blank');
+        }
     }
 
     // Función para manejar la descarga de archivos LLM
