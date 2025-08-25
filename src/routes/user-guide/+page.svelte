@@ -665,12 +665,12 @@
     section="Manual de Usuario"
 />
 
-<div class="mx-auto max-w-7xl px-3 py-4 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+<div class="mx-auto max-w-7xl px-3 py-4 sm:px-4 md:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen overflow-x-hidden">
     <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:flex-row">
-        <main class="min-w-0 flex-1">
-            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm">
+        <main class="min-w-0 flex-1 w-full">
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm overflow-x-hidden">
                 {#if selectedModuleHtml}
-                    <section class="markdown-paxapos prose prose-sm sm:prose md:prose-lg xl:prose-xl max-w-none" transition:fade={{ duration: 150 }}>
+                    <section class="markdown-paxapos prose prose-sm sm:prose md:prose-lg max-w-none overflow-x-hidden break-words" transition:fade={{ duration: 150 }}>
                         {@html selectedModuleHtml}
                     </section>
                     
@@ -709,24 +709,24 @@
                                         {categoryName}
                                     </h2>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4 overflow-x-hidden">
                                         {#each categoryModules as module}
                                             <button
                                                 onclick={() => navigateToModule(module.slug)}
-                                                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 text-left w-full min-h-[120px] flex flex-col"
+                                                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 text-left w-full min-h-[120px] flex flex-col overflow-hidden"
                                             >
                                                 <div class="flex items-start mb-3">
-                                                    <div class="text-2xl mr-3 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
+                                                    <div class="text-xl sm:text-2xl mr-3 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                                                         {module.icon}
                                                     </div>
-                                                    <div class="flex-1 min-w-0">
-                                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-base leading-tight">
+                                                    <div class="flex-1 min-w-0 overflow-hidden">
+                                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-sm sm:text-base leading-tight truncate">
                                                             {module.title}
                                                         </h3>
                                                     </div>
                                                 </div>
                                                 
-                                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3 flex-1">
+                                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3 flex-1 line-clamp-3">
                                                     {module.description}
                                                 </p>
                                                 
@@ -757,18 +757,18 @@
                                         <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                                             Si tienes dudas sobre algún módulo o necesitas soporte técnico, nuestro equipo está aquí para ayudarte.
                                         </p>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                            <div class="flex items-center text-gray-600 dark:text-gray-400">
-                                                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div class="grid grid-cols-1 gap-2 sm:gap-3 text-xs sm:text-sm overflow-x-hidden">
+                                            <div class="flex items-center text-gray-600 dark:text-gray-400 overflow-hidden">
+                                                <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                                 </svg>
-                                                Email: soporte@paxapos.com
+                                                <span class="truncate">Email: soporte@paxapos.com</span>
                                             </div>
-                                            <div class="flex items-center text-gray-600 dark:text-gray-400">
-                                                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div class="flex items-center text-gray-600 dark:text-gray-400 overflow-hidden">
+                                                <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.955 8.955 0 01-4.951-1.488A11.956 11.956 0 002 18c.404-.441.802-.872 1.17-1.293C3.708 16.04 4 15.543 4 15c0-2.667 1.333-4 4-4s4 1.333 4 4"></path>
                                                 </svg>
-                                                Chat: Disponible 24/7
+                                                <span class="truncate">Chat: Disponible 24/7</span>
                                             </div>
                                         </div>
                                     </div>
