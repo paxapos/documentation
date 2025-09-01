@@ -44,9 +44,16 @@
             ]
         },
         {
+            title: 'Biblioteca de Drivers',
+            modules: [
+                { slug: 'biblioteca-de-drivers', title: 'Biblioteca de Drivers' },
+                { slug: 'sam4s-giant-100', title: 'Sam4S Giant - 100' }
+            ]
+        },
+        {
             title: 'Extras',
             modules: [
-                { slug: 'buchon-bot', title: 'Buchon Bot' }
+                { slug: 'buchon-bot', title: 'Buchon Bot' },
             ]
         }
     ];
@@ -216,7 +223,8 @@
             'compras-stock': '36-compras-y-stock.txt',
             'arca-facturacion': '37-arca-y-facturacion.txt',
             'estadisticas': '38-estadisticas.txt',
-            'buchon-bot': '42-buchon-bot.txt'
+            'biblioteca-de-drivers': '41-biblioteca-de-drivers.txt',
+            'buchon-bot': '51-buchon-bot.txt'
         };
         
         const fileName = slugToFileMap[data.slug];

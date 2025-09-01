@@ -15,7 +15,8 @@ export function entries() {
         { slug: 'compras-stock' },
         { slug: 'arca-facturacion' },
         { slug: 'estadisticas' },
-        { slug: 'buchon-bot' }
+        { slug: 'buchon-bot' },
+        { slug: 'biblioteca-de-drivers' }
     ];
 }
 

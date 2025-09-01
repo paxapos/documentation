@@ -131,6 +131,14 @@
             id: '38-estadisticas'
         },
         {
+            slug: 'biblioteca-de-drivers',
+            title: 'Biblioteca de Drivers',
+            description: 'Drivers y controladores para impresoras de comandas (Sam4S, etc.)',
+            category: 'Herramientas',
+            icon: '🧰',
+            id: '41-Biblioteca-de-Drivers'
+        },
+        {
             slug: 'buchon-bot',
             title: 'Buchón Bot',
             description: 'Asistente virtual inteligente para gestión del restaurante',
@@ -150,21 +158,7 @@
     }, {} as Record<string, ModuleInfo[]>);
 
     function navigateToModule(slug: string) {
-        // En lugar de navegar, buscar el módulo por slug y seleccionarlo
-        const moduleInfo = modulesList.find((m: ModuleInfo) => m.slug === slug);
-        if (moduleInfo) {
-            // Buscar el módulo en grouped_content por ID
-            for (const group of grouped_content) {
-                const foundItem = group.items.find(item => item.id === moduleInfo.id);
-                if (foundItem) {
-                    selectModule(foundItem.id, foundItem.title, foundItem.html, foundItem.rawMarkdown);
-                    // Actualizar la URL sin recargar la página
-                    window.history.pushState({}, '', `${base}/user-guide/${slug}`);
-                    return;
-                }
-            }
-        }
-        // Fallback: navegar normalmente si no se encuentra
+        // Navegar directamente a la página del módulo
         goto(`${base}/user-guide/${slug}`);
     }
 
@@ -758,12 +752,6 @@
                                             Si tienes dudas sobre algún módulo o necesitas soporte técnico, nuestro equipo está aquí para ayudarte.
                                         </p>
                                         <div class="grid grid-cols-1 gap-2 sm:gap-3 text-xs sm:text-sm overflow-x-hidden">
-                                            <div class="flex items-center text-gray-600 dark:text-gray-400 overflow-hidden">
-                                                <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                                </svg>
-                                                <span class="truncate">Email: soporte@paxapos.com</span>
-                                            </div>
                                             <div class="flex items-center text-gray-600 dark:text-gray-400 overflow-hidden">
                                                 <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.955 8.955 0 01-4.951-1.488A11.956 11.956 0 002 18c.404-.441.802-.872 1.17-1.293C3.708 16.04 4 15.543 4 15c0-2.667 1.333-4 4-4s4 1.333 4 4"></path>

@@ -19,7 +19,9 @@ const slugToFile = {
     'compras-stock': '36-Compras-y-Stock.md',
     'arca-facturacion': '37-ARCA-y-Facturación.md',
     'estadisticas': '38-Estadísticas.md',
-    'buchon-bot': '42-Buchón-Bot.md'
+    'buchon-bot': '42-Buchón-Bot.md', 
+    'biblioteca-de-drivers': '41-Biblioteca-de-Drivers.md',
+    'sam4s-giant-100': '42-Sam4s-Giant-100.md'
 };
 
 // Mapeo de SEO específico por módulo
@@ -99,6 +101,21 @@ const seoData = {
         description: 'Configura alertas automáticas por Telegram para controlar tu negocio a distancia y recibir notificaciones importantes.',
         keywords: 'buchón bot paxapos, notificaciones telegram, alertas automáticas, control remoto'
     }
+    , 'biblioteca-de-drivers': {
+        title: 'Biblioteca de Drivers - Impresoras y Controladores',
+        description: 'Descarga e instrucciones de instalación para drivers de impresoras de comandas (Sam4S Giant - 100 y otros modelos compatibles).',
+        keywords: 'drivers impresora sam4s, biblioteca drivers, giant-100, instalar impresora'
+    }
+    , 'sam4s-giant-100': {
+        title: 'Driver Sam4S Giant - 100 - Instalación',
+        description: 'Instrucciones paso a paso para descargar e instalar el driver de la impresora de comandas Sam4S Giant - 100.',
+        keywords: 'sam4s giant 100, driver impresora, instalación, comandas, controlador'
+    }
+    , 'sam4s-giant-100-v2': {
+        title: 'Driver Sam4S Giant - 100 v2 - Instalación',
+        description: 'Instrucciones actualizadas para descargar e instalar el driver de la impresora de comandas Sam4S Giant - 100.',
+        keywords: 'sam4s giant 100, driver impresora, instalación, comandas, controlador, versión 2'
+    }
 };
 
 export async function load({ params }) {
@@ -109,7 +126,7 @@ export async function load({ params }) {
         throw error(404, 'Módulo no encontrado');
     }
 
-    const fileName = slugToFile[slug];
+    const fileName = slugToFile[/** @type {keyof typeof slugToFile} */ (slug)];
     
     try {
         let markdownContent = '';
