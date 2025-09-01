@@ -1,37 +1,61 @@
-# 🧰 Biblioteca de Drivers
+# 🖨️ Biblioteca de Drivers
 
 Esta sección contiene drivers y controladores para impresoras de comandas compatibles con PaxaPOS.
 
-## 🖨️ Drivers Disponibles
+## Drivers Disponibles
 
 ### Sam4S
-
-#### Modelo Giant - 100
 
 **📄 [Sam4S Giant - 100](/user-guide/sam4s-giant-100)**
 - Driver completo con instrucciones de instalación paso a paso
 - Compatible con Windows 7, 8, 10 y 11
 - Incluye configuración USB
----
 
+### Citizen
+
+**📄 [Citizen CT-S310II](/user-guide/citizen-ct-s310ii)**
+- Driver oficial para impresora térmica Citizen
+- Compatible con Windows 10
+- Configuración automática de puerto
+
+### Epson
+
+**📄 [Epson TM-T20/T20II/T20III/T20IIIL](/user-guide/epson-tm-t20)**
+- Driver avanzado para impresoras Epson TM-T20 series
+- Compatible con múltiples versiones del modelo
+- Configuración USB simplificada
+
+**📄 [Epson TM-T88V](/user-guide/epson-tm-t88v)**
+- Driver oficial para impresora de comandas Epson TM-T88V
+- Modelo inglés con soporte completo
+- Configuración automática de puerto USB
+
+### Drivers Genéricos
+
+**📄 [Drivers Genéricos POS 80mm y 58mm](/user-guide/drivers-genericos)**
+- Driver universal para impresoras térmicas genéricas
+- Compatible con impresoras POS de 80mm y 58mm
+- Instalación automática
+
+---
 
 ## 📋 Instrucciones Generales
 
-### Antes de Instalar
-1. **Permisos**: Asegúrate de tener permisos de administrador
-2. **Conexión**: Conecta la impresora via USB antes de instalar
-3. **Antivirus**: Desactiva temporalmente el antivirus durante la instalación
+✅ **Antes de Instalar**
+- **Permisos**: Asegúrate de tener permisos de administrador
+- **Conexión**: Conecta la impresora via USB antes de instalar
+- **Antivirus**: Desactiva temporalmente el antivirus durante la instalación
 
-### Proceso de Instalación
-1. **Descargar**: Haz clic en el enlace del driver correspondiente
-2. **Ejecutar**: Ejecuta el instalador como administrador
-3. **Seguir**: Sigue las instrucciones paso a paso
-4. **Configurar**: Configura la impresora en PaxaPOS
+✅ **Proceso de Instalación**
+- **Descargar**: Haz clic en el enlace del driver correspondiente
+- **Ejecutar**: Ejecuta el instalador como administrador
+- **Seguir**: Sigue las instrucciones paso a paso
+- **Configurar**: Configura la impresora en PaxaPOS
 
-### Después de Instalar
-1. **Reiniciar**: Reinicia la impresora
-2. **Probar**: Realiza una impresión de prueba
-3. **Configurar**: Ajusta la configuración en PaxaPOS
+✅ **Después de Instalar**
+- **Reiniciar**: Reinicia la impresora
+- **Probar**: Realiza una impresión de prueba
+- **Configurar**: Ajusta la configuración en PaxaPOS
 
 ---
 
@@ -39,9 +63,8 @@ Esta sección contiene drivers y controladores para impresoras de comandas compa
 
 Si tienes problemas con la instalación de algún driver:
 
-- **📧 Email**: soporte@paxapos.com  
-- **💬 Chat**: Disponible 24/7 en la plataforma
-- **📞 WhatsApp**: +54 11 1234-5678
+- **Correo:** soporte@paxapos.com
+- **WhatsApp:** <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a> *¡Click para chatear directamente en nueva pestaña!*
 
 ### Problemas Comunes
 

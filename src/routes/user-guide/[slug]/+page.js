@@ -21,7 +21,11 @@ const slugToFile = {
     'estadisticas': '38-Estadísticas.md',
     'buchon-bot': '42-Buchón-Bot.md', 
     'biblioteca-de-drivers': '41-Biblioteca-de-Drivers.md',
-    'sam4s-giant-100': '42-Sam4s-Giant-100.md'
+    'sam4s-giant-100': '42-Sam4s-Giant-100.md',
+    'citizen-ct-s310ii': '43-citizen-ct-s310II.md',
+    'epson-tm-t20': '44-Epson-TM-T20.md',
+    'drivers-genericos': '45-Drivers-Genericos.md',
+    'epson-tm-t88v': '46-Epson-TM-T88.md'
 };
 
 // Mapeo de SEO específico por módulo
@@ -111,10 +115,25 @@ const seoData = {
         description: 'Instrucciones paso a paso para descargar e instalar el driver de la impresora de comandas Sam4S Giant - 100.',
         keywords: 'sam4s giant 100, driver impresora, instalación, comandas, controlador'
     }
-    , 'sam4s-giant-100-v2': {
-        title: 'Driver Sam4S Giant - 100 v2 - Instalación',
-        description: 'Instrucciones actualizadas para descargar e instalar el driver de la impresora de comandas Sam4S Giant - 100.',
-        keywords: 'sam4s giant 100, driver impresora, instalación, comandas, controlador, versión 2'
+    , 'citizen-ct-s310ii': {
+        title: 'Driver Citizen CT-S310II - Instalación',
+        description: 'Instrucciones paso a paso para descargar e instalar el driver de la impresora térmica Citizen CT-S310II.',
+        keywords: 'citizen ct-s310ii, driver impresora, instalación, térmica, controlador'
+    }
+    , 'epson-tm-t20': {
+        title: 'Driver Epson TM-T20 Series - Instalación',
+        description: 'Instrucciones paso a paso para descargar e instalar el driver de las impresoras Epson TM-T20/T20II/T20III/T20IIIL.',
+        keywords: 'epson tm-t20, driver impresora, instalación, térmica, series'
+    }
+    , 'drivers-genericos': {
+        title: 'Drivers Genéricos POS 80mm y 58mm - Instalación',
+        description: 'Descarga e instalación de drivers universales para impresoras térmicas genéricas de 80mm y 58mm.',
+        keywords: 'drivers genéricos pos, impresoras térmicas, 80mm, 58mm, universal'
+    }
+    , 'epson-tm-t88v': {
+        title: 'Driver Epson TM-T88V - Instalación',
+        description: 'Instrucciones paso a paso para descargar e instalar el driver de la impresora de comandas Epson TM-T88V.',
+        keywords: 'epson tm-t88v, driver impresora, instalación, comandas, controlador'
     }
 };
 
