@@ -44,9 +44,20 @@
             ]
         },
         {
+            title: 'Biblioteca de Drivers',
+            modules: [
+                { slug: 'biblioteca-de-drivers', title: 'Biblioteca de Drivers' },
+                { slug: 'sam4s-giant-100', title: 'Sam4S Giant - 100' },
+                { slug: 'citizen-ct-s310ii', title: 'Citizen CT-S310II' },
+                { slug: 'epson-tm-t20', title: 'Epson TM-T20' },
+                { slug: 'epson-tm-t88v', title: 'Epson TM-T88V' },
+                { slug: 'drivers-genericos', title: 'Drivers Genéricos' }
+            ]
+        },
+        {
             title: 'Extras',
             modules: [
-                { slug: 'buchon-bot', title: 'Buchon Bot' }
+                { slug: 'buchon-bot', title: 'Buchon Bot' },
             ]
         }
     ];
@@ -216,7 +227,13 @@
             'compras-stock': '36-compras-y-stock.txt',
             'arca-facturacion': '37-arca-y-facturacion.txt',
             'estadisticas': '38-estadisticas.txt',
-            'buchon-bot': '42-buchon-bot.txt'
+            'biblioteca-de-drivers': '41-biblioteca-de-drivers.txt',
+            'sam4s-giant-100': '42-sam4s-giant-100.txt',
+            'citizen-ct-s310ii': '43-citizen-ct-s310ii.txt',
+            'epson-tm-t20': '44-epson-tm-t20.txt',
+            'drivers-genericos': '45-drivers-genericos.txt',
+            'epson-tm-t88v': '46-epson-tm-t88.txt',
+            'buchon-bot': '51-buchon-bot.txt'
         };
         
         const fileName = slugToFileMap[data.slug];

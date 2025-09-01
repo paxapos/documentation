@@ -31,7 +31,7 @@
             "url": "https://paxapos.com",
             "logo": {
                 "@type": "ImageObject",
-                "url": `${baseUrl}/static/favicon.png`
+                "url": `${baseUrl}/favicon.png`
             }
         },
         "publisher": {
@@ -39,7 +39,7 @@
             "name": "PaxaPOS",
             "logo": {
                 "@type": "ImageObject",
-                "url": `${baseUrl}/static/favicon.png`
+                "url": `${baseUrl}/favicon.png`
             }
         },
         "mainEntityOfPage": {
@@ -124,7 +124,7 @@
     {/if}
     
     <!-- Preload de recursos importantes -->
-    <link rel="preload" href="/static/favicon.png" as="image" />
+    <link rel="preload" href="/favicon.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     
@@ -135,7 +135,7 @@
         "@type": "Organization",
         "name": "PaxaPOS",
         "url": "https://paxapos.com",
-        "logo": "{baseUrl}/static/favicon.png",
+        "logo": "{baseUrl}/favicon.png",
         "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
         "address": {
             "@type": "PostalAddress",
