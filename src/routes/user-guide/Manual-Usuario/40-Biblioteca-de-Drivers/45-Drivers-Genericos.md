@@ -79,5 +79,4 @@ Haz clic en "Aplicar" para guardar los cambios.
 ✅ ¡Listo!
 Tu impresora térmica genérica ya está instalada correctamente en tu computadora.
 
-Si quieres saber cómo agregarla a Fudo para comenzar a imprimir tus tickets, puedes seguir esta guía: Cómo agregar tu impresora en Fudo.
 
