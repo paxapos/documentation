@@ -1,139 +1,135 @@
 # 🖨️ Configuración de Impresoras
 <div id="configurar-impresoras"></div>
 
-> 🎯 **¿Para qué sirve esto?**  
-> Vas a configurar tus impresoras para que salgan los tickets de clientes, las comandas de cocina y las facturas. Sin esto configurado, no vas a poder imprimir nada.
-
-## 🔴 **RECORDATORIO - La "P" roja**
-
-Recordá buscar la **"P" roja** 🔴 para acceder a configuraciones avanzadas si las necesitás.
+> 🎯 **Tu objetivo:** Configurar todas las impresoras para tickets, comandas y facturas fiscales en menos de 10 minutos.
 
 ---
 
-## 📋 **Paso a paso - Configurar impresoras**
+## 🎯 **¿Qué vas a lograr?**
 
-### **Paso 1: Acceder al módulo Impresoras**
-1. En los modulos principales de PaxaPOS, buscá **"Impresoras"**
-2. Hacé clic en **"Impresoras"**
-3. Vas a ver una lista de todas las impresoras configuradas
-
-### **Paso 2: Configurar las opciones básicas**
-
-Vas a ver estas opciones importantes. Te explico qué hace cada una:
-
-**📋 Opciones de configuración de impresoras:**
-
-**🔹 Impresora Fiscal por Defecto**  
-🎯 *Qué hace:* Cuál imprime las facturas legales  
-💡 *Cuándo activarla:* Seleccioná tu impresora fiscal
-
-**🔹 Imprimir Fiscal al Hacer Checkout**  
-🎯 *Qué hace:* Imprime automático al cerrar mesa  
-💡 *Cuándo activarla:* ✅ Activar si querés automático
-
-**🔹 Remito o Fiscal al Cerrar Mesa**  
-🎯 *Qué hace:* Qué tipo de comprobante imprimir  
-💡 *Cuándo activarla:* Fiscal para facturas, Remito para pedidos
-
-**🔹 Impresora de Remitos por Defecto**  
-🎯 *Qué hace:* Dónde salen los tickets simples  
-💡 *Cuándo activarla:* La impresora de caja
-
-**🔹 Impresora de Cajón de Dinero**  
-🎯 *Qué hace:* Cuál abre el cajón  
-💡 *Cuándo activarla:* La que está conectada al cajón
-
-**🔹 Impresora de Comandas/Pedidos**  
-🎯 *Qué hace:* Dónde salen los pedidos para cocina  
-💡 *Cuándo activarla:* La impresora de cocina
+Al finalizar esta guía tendrás:
+- ✅ **Tickets de cliente** funcionando perfectamente
+- ✅ **Comandas de cocina** llegando automáticamente  
+- ✅ **Facturas fiscales** legales y válidas
+- ✅ **Cajón de dinero** abriéndose automáticamente
 
 ---
 
-## 🏪 **Configuración típica para un restaurante**
+## 🏭 **Configuración Manual Detallada**
 
-### **📍 Setup recomendado:**
+Si querés ajustar configuraciones específicas:
 
-**🏪 Configuración típica de impresoras:**
+### **🎛️ Panel de Control de Impresoras**
 
-**🖨️ Impresora Fiscal**  
-📍 *Ubicación:* Caja/mostrador  
-🎯 *Para qué:* Facturas legales  
-⚙️ *Configuración:* Impresora Fiscal por Defecto
+| 🎯 **Función** | � **Descripción** | 🔧 **Configuración** |
+|----------------|-------------------|---------------------|
+| **Impresora Fiscal** | Facturas legales para AFIP | Seleccionar impresora fiscal |
+| **Auto-Fiscal** | Imprime factura al cerrar mesa | ✅ Recomendado ON |
+| **Tipo Comprobante** | Fiscal o Remito al cerrar | Fiscal = Legal / Remito = Simple |
+| **Tickets Simples** | Comprobantes de caja | Impresora de mostrador |
+| **Comandas** | Pedidos para cocina | Impresora de cocina |
+| **Cajón $$$** | Abre cajón automático | Impresora conectada al cajón |
 
-**🖨️ Impresora de Tickets**  
-📍 *Ubicación:* Caja/mostrador  
-🎯 *Para qué:* Tickets simples  
-⚙️ *Configuración:* Impresora de Remitos
+---
 
-**🖨️ Impresora de Comandas**  
-📍 *Ubicación:* Cocina  
-🎯 *Para qué:* Pedidos para cocinar  
-⚙️ *Configuración:* Impresora de Comandas
+## 🏪 **Layouts por Tipo de Negocio**
 
-**🖨️ Impresora de Cajón**  
-📍 *Ubicación:* Caja  
-🎯 *Para qué:* Abrir cajón de dinero  
-⚙️ *Configuración:* Impresora de Cajón
+### **🍽️ RESTAURANTE TÍPICO**
+
+```
+🏪 MOSTRADOR/CAJA
+├── 🖨️ Impresora Fiscal (Facturas)
+├── 🖨️ Impresora Tickets (Comprobantes simples)  
+└── 💰 Cajón de dinero
+
+🍳 COCINA
+└── 🖨️ Impresora Comandas (Pedidos)
+```
+
+### **🛍️ COMERCIO TÍPICO**
+
+```
+🏪 PUNTO DE VENTA
+├── 🖨️ Impresora Fiscal (Facturas)
+└── 💰 Cajón de dinero
+```
 
 ---
 
 ## 🔧 **¿Qué es Fiscalberry? (IMPORTANTE)**
 <div id="que-es-fiscalberry"></div>
 
-**Fiscalberry** es un programa que **conecta PaxaPOS con tu impresora fiscal**.
+> 🚨 **CRÍTICO:** Sin Fiscalberry NO podrás emitir facturas legales
 
-### **¿Para qué sirve?**
-- 🔗 **Hace de traductor** entre PaxaPOS y la impresora fiscal
-- ✅ **Garantiza que las facturas salgan bien**
-- 🛡️ **Cumple con todas las normas de ARCA**
-- 🔧 **Funciona con cualquier marca de impresora fiscal**
+**Fiscalberry** = El puente entre PaxaPOS y tu impresora fiscal
 
-### **¿Cómo instalar Fiscalberry?**
-1. **Descargá** Fiscalberry desde el link que te aparece en pantalla
-2. **Instalalo** en la computadora donde está la impresora fiscal
-3. **Seguí** las instrucciones paso a paso que aparecen
-4. **Probá** que funcione imprimiendo una factura de prueba
+### **⚡ Instalación en 3 pasos:**
 
-> 🚨 **MUY IMPORTANTE:** Sin Fiscalberry instalado, no vas a poder imprimir facturas legales
+**1️⃣ DESCARGAR**  
+[⬇️ **Descargar Fiscalberry**](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-win.exe)
 
----
+**2️⃣ INSTALAR**  
+Ejecutar como administrador en la PC con impresora fiscal
 
-## ✅ **¿Cómo saber si está todo bien configurado?**
+**3️⃣ VERIFICAR**  
+Imprimir factura de prueba
 
-### **🧪 Probá cada impresora:**
-
-1. **Impresora de Tickets:**
-   - Hacé una venta de prueba
-   - Cerrá la mesa
-   - ¿Salió el ticket? ✅
-
-2. **Impresora de Comandas:**
-   - Cargá un pedido de prueba
-   - Envialo a cocina
-   - ¿Salió en la impresora de cocina? ✅
-
-3. **Impresora Fiscal:**
-   - Hacé una factura de prueba
-   - ¿Salió la factura legal? ✅
-
-4. **Cajón de Dinero:**
-   - Cobrá en efectivo
-   - ¿Se abrió el cajón automáticamente? ✅
+### **🔍 ¿Qué hace exactamente?**
+- 🔄 **Traduce** comandos de PaxaPOS → Impresora fiscal
+- ✅ **Garantiza** cumplimiento AFIP/ARCA  
+- 🔧 **Compatible** con todas las marcas
 
 ---
 
-## 💡 **Consejos importantes**
-- ✅ **Probá SIEMPRE** cada impresora después de configurarla
-- ✅ **Tené papel suficiente** en todas las impresoras
-- ✅ **Instalá Fiscalberry** antes de abrir el restaurante
-- ✅ **Anotá** qué impresora está en cada lugar
+## ✅ **Test de Funcionamiento**
 
-## 🚨 **¿Problemas comunes?**
-- **"No imprime nada"** → Verificá que la impresora esté encendida y conectada
-- **"Error de Fiscalberry"** → Verificá que esté instalado y funcionando
-- **"No se abre el cajón"** → Verificá la configuración de cajón de dinero
-- **"Sale en la impresora equivocada"** → Revisá la configuración de cada tipo de impresión
+### **🧪 Checklist de Pruebas**
 
-> **Recomendaciones Adicionales:**
-> * **Prueba de Impresión:** Una vez configuradas, realiza una prueba de impresión desde el sistema para asegurarte de que todas las impresoras funcionan correctamente.
-> * **Múltiples Impresoras:** Si utilizas múltiples impresoras de comanda (ej., una para fríos, otra para calientes), asegúrate de configurar las reglas de ruteo de productos en el módulo de Menú o Cocina para que los ítems se impriman en la impresora correcta.
+**📋 PASO A PASO:**
+
+1. **TEST TICKETS** 🎫
+   ```
+   Crear venta → Cerrar mesa → ¿Imprimió ticket? ✅
+   ```
+
+2. **TEST COMANDAS** 🍽️
+   ```
+   Cargar pedido → Enviar cocina → ¿Salió comanda? ✅
+   ```
+
+3. **TEST FISCAL** 📄
+   ```
+   Crear factura → Imprimir → ¿Factura legal válida? ✅
+   ```
+
+4. **TEST CAJÓN** 💰
+   ```
+   Cobrar efectivo → ¿Se abrió automáticamente? ✅
+   ```
+
+---
+
+## 🆘 **Solución de Problemas**
+
+### **⚠️ Errores Comunes**
+
+| 🚨 **Error** | 🔧 **Solución Rápida** |
+|-------------|----------------------|
+| No imprime nada | Verificar encendido + conexión |
+| Error Fiscalberry | Reinstalar como administrador |
+| Cajón no abre | Revisar conexión impresora-cajón |
+| Imprime en lugar equivocado | Verificar asignación de impresoras |
+
+### **📞 ¿Necesitás ayuda?**
+**WhatsApp directo:** [+1 (786) 755-3113](https://wa.me/17867553113)
+
+---
+
+## 💡 **Tips de Experto**
+
+> **🔥 RECOMENDACIONES PRO:**
+> 
+> ✅ **Siempre probá** después de cada configuración  
+> ✅ **Mantené papel** suficiente en todas las impresoras  
+> ✅ **Instalá Fiscalberry** antes del primer día de ventas  
+> ✅ **Etiquetá** físicamente cada impresora con su función
