@@ -1,85 +1,84 @@
 # 🖨️ Biblioteca de Drivers
 
-Esta sección contiene drivers y controladores para impresoras de comandas compatibles con PaxaPOS.
+## 📋 **Guía de Instalación Rápida de drivers**
 
-## Drivers Disponibles
-
-### Sam4S
-
-**📄 [Sam4S Giant - 100](/user-guide/sam4s-giant-100)**
-- Driver completo con instrucciones de instalación paso a paso
-- Compatible con Windows 7, 8, 10 y 11
-- Incluye configuración USB
-
-### Citizen
-
-**📄 [Citizen CT-S310II](/user-guide/citizen-ct-s310ii)**
-- Driver oficial para impresora térmica Citizen
-- Compatible con Windows 10
-- Configuración automática de puerto
-
-### Epson
-
-**📄 [Epson TM-T20/T20II/T20III/T20IIIL](/user-guide/epson-tm-t20)**
-- Driver avanzado para impresoras Epson TM-T20 series
-- Compatible con múltiples versiones del modelo
-- Configuración USB simplificada
-
-**📄 [Epson TM-T88V](/user-guide/epson-tm-t88v)**
-- Driver oficial para impresora de comandas Epson TM-T88V
-- Modelo inglés con soporte completo
-- Configuración automática de puerto USB
-
-### Drivers Genéricos
-
-**📄 [Drivers Genéricos POS 80mm y 58mm](/user-guide/drivers-genericos)**
-- Driver universal para impresoras térmicas genéricas
-- Compatible con impresoras POS de 80mm y 58mm
-- Instalación automática
+> 🎯 **¿Para qué sirve esto?**  
+> Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas con PaxaPOS. Cada driver incluye instrucciones detalladas e instaladores oficiales.
 
 ---
 
-## 📋 Instrucciones Generales
+## 📦 **Drivers Disponibles**
 
-✅ **Antes de Instalar**
-- **Permisos**: Asegúrate de tener permisos de administrador
-- **Conexión**: Conecta la impresora via USB antes de instalar
-- **Antivirus**: Desactiva temporalmente el antivirus durante la instalación
+### **🏷️ Marcas Específicas**
 
-✅ **Proceso de Instalación**
-- **Descargar**: Haz clic en el enlace del driver correspondiente
-- **Ejecutar**: Ejecuta el instalador como administrador
-- **Seguir**: Sigue las instrucciones paso a paso
-- **Configurar**: Configura la impresora en PaxaPOS
-
-✅ **Después de Instalar**
-- **Reiniciar**: Reinicia la impresora
-- **Probar**: Realiza una impresión de prueba
-- **Configurar**: Ajusta la configuración en PaxaPOS
+| 🏭 **Fabricante** | 📱 **Modelo** | 🖥️ **Windows** | 📋 **Manual** |
+|-------------------|---------------|-----------------|----------------|
+| **SAM4S** | Giant 100 | 7/8/10/11 | [📄 Ver Guía](/user-guide/sam4s-giant-100) |
+| **CITIZEN** | CT-S310II | 10+ | [📄 Ver Guía](/user-guide/citizen-ct-s310ii) |
+| **EPSON** | TM-T20/T20II/T20III | 7/8/10/11 | [📄 Ver Guía](/user-guide/epson-tm-t20) |
+| **EPSON** | TM-T88V | 7/8/10/11 | [📄 Ver Guía](/user-guide/epson-tm-t88v) |
+| **Genérico POS** | 80mm / 58mm | 7/8/10/11 | [📄 Ver Guía](/user-guide/drivers-genericos) |
 
 ---
 
-## 🆘 Soporte Técnico
+## 📋 **Guía de Instalación Rápida**
 
-Si tienes problemas con la instalación de algún driver:
+### **🔧 Antes de Empezar**
 
-- **Correo:** soporte@paxapos.com
-- **WhatsApp:** <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a> *¡Click para chatear directamente en nueva pestaña!*
+> ⚠️ **REQUISITOS PREVIOS:**
+> - ✅ Permisos de administrador en Windows
+> - ✅ Impresora conectada vía USB/Ethernet
+> - ✅ Antivirus temporalmente desactivado
 
-### Problemas Comunes
+### **🚀 Proceso de Instalación**
 
-**🔧 La impresora no se detecta**
-- Verificar conexión USB
-- Reinstalar driver
-- Cambiar puerto USB
+**1️⃣ Descargar**
+- Haz clic en el enlace del driver correspondiente a tu impresora
 
-**🔧 Impresión con caracteres extraños**
-- Verificar codificación
-- Actualizar driver
-- Configurar idioma
+**2️⃣ Ejecutar**
+- Ejecuta el instalador como administrador (clic derecho → "Ejecutar como administrador")
 
-**🔧 No imprime comandas**
-- Verificar configuración en PaxaPOS
-- Revisar papel térmico
-- Limpiar cabezal
+**3️⃣ Seguir**
+- Sigue las instrucciones paso a paso del asistente de instalación
+
+**4️⃣ Configurar**
+- Configura la impresora en PaxaPOS desde el menú de configuración
+
+### **✅ Verificación Post-Instalación**
+
+| Verificar | Cómo Hacerlo |
+|-----------|--------------|
+| **🔄 Reiniciar** | Reinicia la impresora físicamente |
+| **🖨️ Probar** | Realiza una impresión de prueba |
+| **⚙️ Configurar** | Ajusta la configuración en PaxaPOS |
+
+> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/configuracion-impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
+
+---
+
+## 🆘 **Problemas Comunes y Soluciones**
+
+| 🚨 Problema | 🔧 Solución | 📝 Detalles |
+|-------------|-------------|-------------|
+| **Impresora no detectada** | • Verificar conexión USB<br>• Reinstalar driver<br>• Cambiar puerto USB | Revisar Device Manager de Windows |
+| **Caracteres extraños** | • Verificar codificación<br>• Actualizar driver<br>• Configurar idioma | Problema de encoding UTF-8 |
+| **No imprime comandas** | • Verificar configuración PaxaPOS<br>• Revisar papel térmico<br>• Limpiar cabezal | Comprobar conexión en software |
+| **Impresión lenta** | • Actualizar driver<br>• Verificar cable USB<br>• Reiniciar spooler | Optimizar velocidad de impresión |
+| **Papel se atasca** | • Verificar tipo de papel<br>• Limpiar rodillos<br>• Ajustar guías | Mantenimiento preventivo |
+
+---
+
+## 🆘 **Soporte Técnico Especializado**
+
+> 💬 **¿Necesitás ayuda personalizada?**  
+> Nuestro equipo técnico está disponible para asistirte con cualquier problema de instalación o configuración.
+
+### **📞 Contacto Directo**
+
+**💬 WhatsApp Business**
+- **Número:** <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
+- **Horario:** Lunes a Viernes de 9:00 a 18:00 hs
+- **Respuesta:** Inmediata durante horario de atención
+
+> 🚀 **Tip:** *¡Hacé clic en WhatsApp para chatear directamente en una nueva pestaña!*
 

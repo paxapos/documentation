@@ -78,6 +78,7 @@ Vas a ver estas opciones importantes. Te explico qué hace cada una:
 ---
 
 ## 🔧 **¿Qué es Fiscalberry? (IMPORTANTE)**
+<div id="que-es-fiscalberry"></div>
 
 **Fiscalberry** es un programa que **conecta PaxaPOS con tu impresora fiscal**.
 
