@@ -5,9 +5,34 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 
 ---
 
+## ⚠️ **ADVERTENCIA IMPORTANTE - Solución Universal**
+<div id="solucion-universal"></div>
+
+> 🚨 **ANTES DE REVISAR LOS PROBLEMAS ESPECÍFICOS:**
+> 
+> Si experimentás **cualquier error raro**, **problema de carga**, **pantalla en blanco** o **comportamiento inesperado** en PaxaPOS, **SIEMPRE probá primero estas soluciones básicas:**
+> 
+> ### 🔄 **Solución Rápida:**
+> 1. **Cerrá completamente PaxaPOS**
+> 2. **Volvé a abrir el programa**
+> 3. **Intentá nuevamente la operación**
+> 
+> ### 🖥️ **Solución Completa:**
+> 1. **Cerrá sesión** en PaxaPOS 
+> 2. **Reiniciá el dispositivo** (PC, tablet, etc.)
+> 3. **Volvé a iniciar sesión**
+> 
+> **💡 ¿Por qué funciona esto?**  
+> Muchos problemas se deben a memoria temporalmente sobrecargada, conexiones de red intermitentes o datos en caché corruptos. Un reinicio limpia todo esto.
+> 
+> **✅ Si el problema persiste** después del reinicio, entonces sí revisá las soluciones específicas de abajo.
+
+---
+
 ## 🔧 Problemas Técnicos Resueltos
 
 ### 1. **Los tipos de pago no aparecen al cobrar una mesa**
+<div id="tipos-pago-no-aparecen"></div>
 
 **Problema:** Configuré los tipos de pago pero cuando voy a cobrar no veo las opciones de Visa, MercadoPago, etc.
 
@@ -20,6 +45,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 2. **Los mozos no ven todas las mesas que deberían ver**
+<div id="mozos-no-ven-mesas"></div>
 
 **Problema:** Configuré un mozo pero solo ve algunas mesas o no ve ninguna.
 
@@ -32,6 +58,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 3. **Las comandas no salen en la impresora de cocina**
+<div id="comandas-no-imprimen"></div>
 
 **Problema:** Tomo el pedido pero la impresora de cocina no imprime la comanda.
 
@@ -44,6 +71,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 4. **No imprime facturas fiscales o aparece "Error de Fiscalberry"**
+<div id="error-fiscalberry"></div>
 
 **Problema:** Al intentar imprimir una factura fiscal no sale nada o aparece "Error de Fiscalberry".
 
@@ -55,6 +83,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 5. **El stock de mercadería no coincide con la realidad**
+<div id="stock-incorrecto"></div>
 
 **Problema:** Compré 12 botellas pero el sistema muestra números incorrectos en stock.
 
@@ -66,6 +95,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 6. **No puedo crear una factura A porque falta el cliente**
+<div id="falta-cliente-factura"></div>
 
 **Problema:** Al querer facturar aparece error porque no está cargado el cliente.
 
@@ -78,6 +108,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 7. **El arqueo no cierra: hay diferencia entre sistema y caja real**
+<div id="arqueo-no-cierra"></div>
 
 **Problema:** El sistema dice que debería haber $50.000 pero en la caja física hay $48.500.
 
@@ -90,6 +121,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 8. **Los productos con variantes no se cargan correctamente**
+<div id="variantes-no-funcionan"></div>
 
 **Problema:** Configuré variantes (como "tipo de salsa") pero al tomar el pedido no aparecen las opciones.
 
@@ -102,6 +134,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 9. **Las estadísticas muestran números que no coinciden con la realidad**
+<div id="estadisticas-incorrectas"></div>
 
 **Problema:** En Business Intelligence veo que vendí $100.000 pero en el arqueo tengo menos dinero.
 
@@ -113,6 +146,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 10. **El KDS no muestra los pedidos de algunas categorías**
+<div id="kds-categorias-faltantes"></div>
 
 **Problema:** Los platos principales aparecen en la pantalla de cocina pero las ensaladas no.
 
@@ -125,15 +159,20 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ---
 
 ### 11. **El sistema funciona lento en mi configuración**
+<div id="sistema-lento"></div>
 
 **Problema:** PaxaPOS tarda mucho en cargar o responder.
 
 **Solución:**
 1. **Limpiar caché:** Borra la caché del navegador y los datos temporales, apretando ctrl + F5 para forzar recarga o ctrl + R.
 2. **Cerrar aplicaciones:** Cierra otras aplicaciones que puedan estar consumiendo recursos.
+3. **Verificar conexión a internet:** Asegurate de tener una conexión estable y rápida.
 
+
+---
 
 ### 12. **¿Cómo manejo inventario con múltiples depósitos?**
+<div id="multiples-depositos"></div>
 
 **Problema:** Tengo varios depósitos y no sé cómo gestionar el inventario entre ellos.
 
