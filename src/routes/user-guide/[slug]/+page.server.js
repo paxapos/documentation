@@ -1,23 +1,14 @@
-// Definir todas las rutas que deben ser prerenderizadas
-export function entries() {
-    return [
-        { slug: 'introduccion' },
-        { slug: 'iniciar-sesion' },
-        { slug: 'crear-usuarios' },
-        { slug: 'tipos-de-pago' },
-        { slug: 'agregar-personal' },
-        { slug: 'configuracion-impresoras' },
-        { slug: 'menu' },
-        { slug: 'salon' },
-        { slug: 'kds' },
-        { slug: 'contabilidad' },
-        { slug: 'arqueos' },
-        { slug: 'compras-stock' },
-        { slug: 'arca-facturacion' },
-        { slug: 'estadisticas' },
-        { slug: 'buchon-bot' },
-        { slug: 'biblioteca-de-drivers' }
-    ];
+import { getAllSlugs } from '$lib/utils/markdownDetector.js';
+
+// Generar automáticamente todas las rutas basándose en archivos MD
+export async function entries() {
+    try {
+        const slugs = await getAllSlugs();
+        return slugs;
+    } catch (error) {
+        console.error('Error generando entradas automáticas:', error);
+        return [];
+    }
 }
 
 export { prerender } from './+page.js';

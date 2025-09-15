@@ -1,4 +1,4 @@
-# ❓ Preguntas Frecuentes
+# Preguntas Frecuentes
 <div id="preguntas-frecuentes"></div>
 
 Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
