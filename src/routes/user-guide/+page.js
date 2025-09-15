@@ -27,17 +27,24 @@ export async function load() {
             'crear-usuarios': '👥',
             'tipos-de-pago': '💳',
             'agregar-personal': '👨‍💼',
-            'configuracion-impresoras': '🖨️',
+            'configuracion-de-impresoras': '🖨️',
             'menu': '🍽️',
             'salon': '🏪',
-            'kds': '👨‍🍳',
+            'kitchen-display-system-kds': '👨‍🍳',
             'contabilidad': '📊',
             'arqueos': '💰',
-            'compras-stock': '📦',
-            'arca-facturacion': '🏛️',
+            'compras-y-stock': '📦',
+            'arca-y-facturacion': '🏛️',
             'estadisticas': '📈',
+            'business-intelligence': '🧠',
             'buchon-bot': '🤖',
-            'biblioteca-de-drivers': '🖨️'
+            'biblioteca-de-drivers': '🖨️',
+            'sam4s-giant-100': '🖨️',
+            'citizen-ct-s310ii': '🖨️',
+            'epson-tm-t20': '🖨️',
+            'epson-tm-t88': '🖨️',
+            'drivers-genericos': '🖨️',
+            'preguntas-frecuentes': '❓'
         };
 
         moduleCategories.forEach(category => {
