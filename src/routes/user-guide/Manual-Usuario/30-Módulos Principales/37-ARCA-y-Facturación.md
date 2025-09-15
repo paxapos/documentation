@@ -82,7 +82,7 @@
 
 **🔹 PASO 2:** **Ingresar el CUIT** `20306836268` y presionar "Buscar"
 
-   ![Ingresar CUIT Representante](images/afip/7-Representante.jpg)
+   ![Ingresar CUIT Representante](images/afip/7-Representante.webp)
    *Ingreso del CUIT del representante autorizado*
 
 **🔹 PASO 3:** **Se le indicará** que el CUIT pertenece a VILAR ALEJANDRO ERNESTO
@@ -98,7 +98,7 @@
 
 **🔹 PASO FINAL:** **Presione confirmar** nuevamente
 
-  ![Confirmar Relación](images/afip/8-Confirmar-representante.jpg)
+  ![Confirmar Relación](images/afip/8-Confirmar-representante.webp)
   *Botón de confirmación final de la relación*
 
 ---
@@ -136,7 +136,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 4:** **Confirmar** la operación
 
-   ![Confirmar Adherir](images/afip/8-Confirmar-representante.jpg)
+   ![Confirmar Adherir](images/afip/8-Confirmar-representante.webp)
    *Confirmación de adhesión al servicio*
 
 ---
@@ -152,7 +152,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 2:** **En el buscador**, ingresar la opción "Administración de puntos de venta y domicilios"
 
-   ![Servicios Habilitados](images/afip/9-Administrar-relaciones.jpg)
+   ![Servicios Habilitados](images/afip/9-Administrar-relaciones.webp)
    *Lista de servicios habilitados mostrando la nueva opción*
 
 **🔹 PASO 3:** **Seleccionar la empresa** e ingresar a "A/B/M de Puntos de Venta"
