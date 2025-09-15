@@ -212,7 +212,6 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 **🔹 IMPORTANTE:** **Una vez completados todos los pasos anteriores en ARCA**, deberás **notificarnos inmediatamente** para que podamos configurar el PVD (Punto de Venta) en tu comercio.
 
 #### **📧 ¿Cómo notificar?**
-- **Correo:** soporte@paxapos.com
 - **WhatsApp:** <a href="https://wa.me/17867553113?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+1 (786) 755-3113</a> *¡Click para chatear directamente en nueva pestaña!*
 
 #### **📋 Información que debés proporcionar:**
