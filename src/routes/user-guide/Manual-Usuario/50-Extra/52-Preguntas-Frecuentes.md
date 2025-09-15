@@ -186,7 +186,8 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 
 Si tu problema no está listado aquí o necesitás información adicional para las consultas pendientes, no dudes en contactarnos:
 
-<a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a> 
+*¡Click para chatear directamente con nuestro soporte tecnico!*
+ <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
 
 
 Recordá siempre incluir:
