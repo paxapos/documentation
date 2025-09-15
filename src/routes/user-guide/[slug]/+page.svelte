@@ -5,62 +5,24 @@
     import { base } from '$app/paths';
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import SEOHead from '$lib/components/SEOHead.svelte';
+    import { getModuleCategories } from '$lib/utils/markdownDetector.js';
     import type { PageData } from './$types';
 
     let { data }: { data: PageData } = $props();
 
     let processedContent = $state('');
     let showCopyMessage = $state(false);
+    let moduleCategories = $state([]);
 
-    // Categorías de módulos para la navegación
-    const moduleCategories = [
-        {
-            title: 'Primeros Pasos',
-            modules: [
-                { slug: 'introduccion', title: 'Introducción' },
-                { slug: 'iniciar-sesion', title: 'Iniciar Sesión' }
-            ]
-        },
-        {
-            title: 'Configuración',
-            modules: [
-                { slug: 'crear-usuarios', title: 'Crear Usuarios' },
-                { slug: 'tipos-de-pago', title: 'Tipos de Pago' },
-                { slug: 'agregar-personal', title: 'Agregar Personal' },
-                { slug: 'configuracion-impresoras', title: 'Configuración de Impresoras' },
-                { slug: 'menu', title: 'Menú' }
-            ]
-        },
-        {
-            title: 'Operaciones',
-            modules: [
-                { slug: 'salon', title: 'Salón' },
-                { slug: 'kds', title: 'Kitchen Display System' },
-                { slug: 'contabilidad', title: 'Contabilidad' },
-                { slug: 'arqueos', title: 'Arqueos' },
-                { slug: 'compras-stock', title: 'Compras y Stock' },
-                { slug: 'arca-facturacion', title: 'Arca y Facturación' },
-                { slug: 'estadisticas', title: 'Estadísticas' }
-            ]
-        },
-        {
-            title: 'Biblioteca de Drivers',
-            modules: [
-                { slug: 'biblioteca-de-drivers', title: 'Biblioteca de Drivers' },
-                { slug: 'sam4s-giant-100', title: 'Sam4S Giant - 100' },
-                { slug: 'citizen-ct-s310ii', title: 'Citizen CT-S310II' },
-                { slug: 'epson-tm-t20', title: 'Epson TM-T20' },
-                { slug: 'epson-tm-t88v', title: 'Epson TM-T88V' },
-                { slug: 'drivers-genericos', title: 'Drivers Genéricos' }
-            ]
-        },
-        {
-            title: 'Extras',
-            modules: [
-                { slug: 'buchon-bot', title: 'Buchon Bot' },
-            ]
+    // Cargar categorías dinámicamente
+    onMount(async () => {
+        try {
+            moduleCategories = await getModuleCategories();
+        } catch (error) {
+            console.error('Error cargando categorías:', error);
+            moduleCategories = [];
         }
-    ];
+    });
 
     // Procesar contenido de manera reactiva cuando cambien los datos
     $effect(() => {

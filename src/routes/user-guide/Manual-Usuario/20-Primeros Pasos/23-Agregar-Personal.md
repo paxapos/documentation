@@ -1,5 +1,5 @@
 ﻿
-# 👨‍💼 Agregar Personal (Mozos)
+# 👨‍💼 Agregar Personal
 <div id="agregar-personal"></div>
 
 > 🎯 **¿Para qué sirve esto?**  

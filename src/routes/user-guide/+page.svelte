@@ -7,6 +7,9 @@
     import { processGroupedContent } from '$lib/helpers/textReplacer';
     import { page } from '$app/stores';
     import SEOHead from '$lib/components/SEOHead.svelte';
+    import type { PageData } from './$types';
+
+    let { data }: { data: PageData } = $props();
 
     interface ModuleInfo {
         slug: string;
@@ -17,136 +20,8 @@
         id: string;
     }
 
-    const modulesList: ModuleInfo[] = [
-        {
-            slug: 'introduccion',
-            title: 'Introducción',
-            description: 'Conceptos básicos de PaxaPOS y primeros pasos en el sistema',
-            category: 'Primeros Pasos',
-            icon: '🚀',
-            id: '11-introduccion'
-        },
-        {
-            slug: 'iniciar-sesion',
-            title: 'Iniciar Sesión',
-            description: 'Cómo acceder a tu cuenta de PaxaPOS de forma segura',
-            category: 'Primeros Pasos',
-            icon: '🔐',
-            id: '12-iniciar-sesion'
-        },
-        {
-            slug: 'crear-usuarios',
-            title: 'Crear Usuarios',
-            description: 'Gestión de usuarios, roles y permisos en el sistema',
-            category: 'Administración',
-            icon: '👥',
-            id: '21-crear-usuarios'
-        },
-        {
-            slug: 'tipos-de-pago',
-            title: 'Tipos de Pago',
-            description: 'Configuración de métodos de pago y procesamiento',
-            category: 'Administración',
-            icon: '💳',
-            id: '22-tipos-de-pago'
-        },
-        {
-            slug: 'agregar-personal',
-            title: 'Agregar Personal',
-            description: 'Gestión de empleados y asignación de roles',
-            category: 'Administración',
-            icon: '👨‍💼',
-            id: '23-agregar-personal'
-        },
-        {
-            slug: 'configuracion-impresoras',
-            title: 'Configuración de Impresoras',
-            description: 'Setup y configuración de impresoras térmicas',
-            category: 'Configuración',
-            icon: '🖨️',
-            id: '24-configuracion-impresoras'
-        },
-        {
-            slug: 'menu',
-            title: 'Configuración del Menú',
-            description: 'Carga de productos, categorías y organización de la carta',
-            category: 'Configuración',
-            icon: '📋',
-            id: '25-menu'
-        },
-        {
-            slug: 'salon',
-            title: 'Módulo de Salón',
-            description: 'Gestión de mesas, pedidos y servicio en el salón',
-            category: 'Operaciones',
-            icon: '🍽️',
-            id: '32-salon'
-        },
-        {
-            slug: 'kds',
-            title: 'Kitchen Display System (KDS)',
-            description: 'Sistema de pantalla de cocina para optimizar pedidos',
-            category: 'Operaciones',
-            icon: '👨‍🍳',
-            id: '33-kitchen-display-system-kds'
-        },
-        {
-            slug: 'contabilidad',
-            title: 'Contabilidad',
-            description: 'Gestión contable, arqueos y reportes financieros',
-            category: 'Gestión',
-            icon: '💰',
-            id: '34-contabilidad'
-        },
-        {
-            slug: 'arqueos',
-            title: 'Arqueos',
-            description: 'Control de caja y cuadre de efectivo diario',
-            category: 'Gestión',
-            icon: '🔍',
-            id: '35-arqueos'
-        },
-        {
-            slug: 'compras-stock',
-            title: 'Compras y Stock',
-            description: 'Gestión de inventario, compras y control de stock',
-            category: 'Gestión',
-            icon: '📦',
-            id: '36-compras-stock'
-        },
-        {
-            slug: 'arca-facturacion',
-            title: 'ARCA y Facturación',
-            description: 'Facturación electrónica y cumplimiento AFIP',
-            category: 'Gestión',
-            icon: '📄',
-            id: '37-arca-facturacion'
-        },
-        {
-            slug: 'estadisticas',
-            title: 'Estadísticas',
-            description: 'Reportes y análisis de ventas del restaurante',
-            category: 'Gestión',
-            icon: '📈',
-            id: '38-estadisticas'
-        },
-        {
-            slug: 'biblioteca-de-drivers',
-            title: 'Biblioteca de Drivers',
-            description: 'Drivers y controladores para impresoras de comandas (Sam4S, etc.)',
-            category: 'Herramientas',
-            icon: '🧰',
-            id: '41-Biblioteca-de-Drivers'
-        },
-        {
-            slug: 'buchon-bot',
-            title: 'Buchón Bot',
-            description: 'Asistente virtual inteligente para gestión del restaurante',
-            category: 'Herramientas',
-            icon: '🤖',
-            id: '42-buchon-bot'
-        }
-    ];
+    // Usar datos dinámicos cargados desde +page.js
+    const modulesList: ModuleInfo[] = data.modulesList || [];
 
     // Agrupar módulos por categoría
     const groupedModules = modulesList.reduce((acc, module) => {
@@ -174,12 +49,12 @@
         items: ContentItem[];
     }
 
-    let grouped_content: GroupedContent[] = [];
-    let selectedModuleId: string | null = null;
-    let selectedModuleName: string = '';
-    let selectedModuleHtml: string = '';
-    let selectedModuleRawMarkdown: string = '';
-    let contentLoaded = false;
+    let grouped_content: GroupedContent[] = $state([]);
+    let selectedModuleId: string | null = $state(null);
+    let selectedModuleName: string = $state('');
+    let selectedModuleHtml: string = $state('');
+    let selectedModuleRawMarkdown: string = $state('');
+    let contentLoaded = $state(false);
 
     // Función para generar SEO específico del módulo actual
     function getCurrentModuleSEO() {
@@ -253,7 +128,7 @@
     }
 
     // Variable reactiva para el SEO actual
-    $: currentSEO = getCurrentModuleSEO();
+    const currentSEO = $derived(getCurrentModuleSEO());
 
     // Función para seleccionar módulo específico
     function selectModuleById(moduleId: string) {
@@ -268,7 +143,8 @@
     }
 
     // Reactividad a cambios en la URL (parámetros de consulta y pathname)
-    $: if (contentLoaded && ($page.url.search || $page.url.pathname)) {
+    $effect(() => {
+        if (contentLoaded && ($page.url.search || $page.url.pathname)) {
         const urlParams = new URLSearchParams($page.url.search);
         const moduleParam = urlParams.get('module');
         const highlightParam = urlParams.get('highlight');
@@ -310,7 +186,8 @@
             selectedModuleHtml = '';
             selectedModuleRawMarkdown = '';
         }
-    }
+        }
+    });
 
     onMount(async () => {
         try {
@@ -521,7 +398,7 @@
     }
 
     // Variable para el mensaje de confirmación
-    let showCopyMessage = false;
+    let showCopyMessage = $state(false);
 
     // Función para mostrar confirmación de copia
     function showCopyConfirmation() {

@@ -82,7 +82,7 @@
 
 **🔹 PASO 2:** **Ingresar el CUIT** `20306836268` y presionar "Buscar"
 
-   ![Ingresar CUIT Representante](images/afip/7-Representante.jpg)
+   ![Ingresar CUIT Representante](images/afip/7-Representante.webp)
    *Ingreso del CUIT del representante autorizado*
 
 **🔹 PASO 3:** **Se le indicará** que el CUIT pertenece a VILAR ALEJANDRO ERNESTO
@@ -98,7 +98,7 @@
 
 **🔹 PASO FINAL:** **Presione confirmar** nuevamente
 
-  ![Confirmar Relación](images/afip/8-Confirmar-representante.jpg)
+  ![Confirmar Relación](images/afip/8-Confirmar-representante.webp)
   *Botón de confirmación final de la relación*
 
 ---
@@ -136,7 +136,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 4:** **Confirmar** la operación
 
-   ![Confirmar Adherir](images/afip/8-Confirmar-representante.jpg)
+   ![Confirmar Adherir](images/afip/8-Confirmar-representante.webp)
    *Confirmación de adhesión al servicio*
 
 ---
@@ -152,7 +152,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 
 **🔹 PASO 2:** **En el buscador**, ingresar la opción "Administración de puntos de venta y domicilios"
 
-   ![Servicios Habilitados](images/afip/9-Administrar-relaciones.jpg)
+   ![Servicios Habilitados](images/afip/9-Administrar-relaciones.webp)
    *Lista de servicios habilitados mostrando la nueva opción*
 
 **🔹 PASO 3:** **Seleccionar la empresa** e ingresar a "A/B/M de Puntos de Venta"
@@ -212,7 +212,6 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 **🔹 IMPORTANTE:** **Una vez completados todos los pasos anteriores en ARCA**, deberás **notificarnos inmediatamente** para que podamos configurar el PVD (Punto de Venta) en tu comercio.
 
 #### **📧 ¿Cómo notificar?**
-- **Correo:** soporte@paxapos.com
 - **WhatsApp:** <a href="https://wa.me/17867553113?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+1 (786) 755-3113</a> *¡Click para chatear directamente en nueva pestaña!*
 
 #### **📋 Información que debés proporcionar:**
