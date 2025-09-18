@@ -12,8 +12,10 @@
 ---
 
 ## 🚀 **1. Habilitar el servicio de factura electrónica por web service**
+<div id="habilitar-servicio"></div>
 
 ### **🌐 1.1 Ingreso a ARCA y acceso a Administrador**
+<div id="ingreso-arca"></div>
 
 #### **📋 Paso a paso:**
 
@@ -34,6 +36,7 @@
 ---
 
 ### **🔗 1.2 Crear nueva relación y seleccionar servicio**
+<div id="crear-relacion"></div>
 
 #### **📋 Paso a paso:**
 
@@ -57,6 +60,7 @@
 ---
 
 ### **📑 1.3 Elegir servicio según tipo de factura**
+<div id="elegir-servicio"></div>
 
 #### **🎯 Tipos de servicios disponibles:**
 
@@ -72,6 +76,7 @@
 ---
 
 ### **👤 1.4 Buscar y asignar representante**
+<div id="asignar-representante"></div>
 
 #### **📋 Paso a paso:**
 
@@ -93,6 +98,7 @@
 ---
 
 ### **✅ 1.5 Confirmar la relación**
+<div id="confirmar-relacion"></div>
 
 #### **📋 Paso final:**
 
@@ -104,7 +110,7 @@
 ---
 
 ## 🏪 **2. Crear un nuevo punto de venta electrónico**
-<div id="Alta-pvd"></div>
+<div id="crear-punto-venta"></div>
 
 
 ### **🎯 Objetivo:**
@@ -113,6 +119,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 
 ### **⚙️ 2.1 Adherir el servicio desde administrador**
+<div id="adherir-servicio"></div>
 
 #### **📋 Paso a paso:**
 
@@ -142,6 +149,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 
 ### **🔄 2.2 Reingresar y acceder a administración**
+<div id="reingresar-arca"></div>
 
 #### **📋 Paso a paso:**
 
@@ -162,6 +170,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 
 ### **➕ 2.3 Crear nuevo punto de venta**
+<div id="crear-pvd"></div>
 
 #### **📋 Paso a paso:**
 
@@ -197,6 +206,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 
 ### **✅ 2.4 Confirmar punto de venta**
+<div id="confirmar-pvd"></div>
 
 #### **📋 Paso final:**
 
@@ -206,6 +216,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 
 ### **📞 2.5 Notificar a PaxaPos**
+
 
 #### **📋 Paso obligatorio:**
 
@@ -227,6 +238,7 @@ Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD e
 Sin esta notificación, **no podrás comenzar a facturar electrónicamente** desde PaxaPos, aunque hayas completado todos los pasos en ARCA.
 
 ## 🎯 **Resumen del proceso completo**
+
 
 ```
 🏛️ 1. Entrás a ARCA con clave fiscal nivel 3
