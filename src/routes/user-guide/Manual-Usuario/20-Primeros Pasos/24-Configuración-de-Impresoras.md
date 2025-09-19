@@ -61,7 +61,7 @@ Si querés ajustar configuraciones específicas:
 
 > 🚨 **CRÍTICO:** Sin Fiscalberry NO podrás emitir facturas legales
 
-**Fiscalberry** = El puente entre PaxaPOS y tu impresora fiscal
+**Fiscalberry** = El puente entre el software y tu impresora fiscal
 
 ### **⚡ Instalación en 3 pasos:**
 
@@ -75,7 +75,7 @@ Ejecutar como administrador en la PC con impresora fiscal
 Imprimir factura de prueba
 
 ### **🔍 ¿Qué hace exactamente?**
-- 🔄 **Traduce** comandos de PaxaPOS → Impresora fiscal
+- 🔄 **Traduce** comandos del software → Impresora fiscal
 - ✅ **Garantiza** cumplimiento AFIP/ARCA  
 - 🔧 **Compatible** con todas las marcas
 
