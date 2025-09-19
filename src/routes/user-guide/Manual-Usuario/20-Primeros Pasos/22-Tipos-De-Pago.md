@@ -9,7 +9,7 @@
 Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las configuraciones.
 
 ```
-🏪 PaxaPOS      [ 🔴 P ]      👤 Usuario
+🏪 Software    [ 🔴 P ]      👤 Usuario
 ```
 
 ---

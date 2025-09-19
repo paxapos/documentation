@@ -1,7 +1,7 @@
 # Preguntas Frecuentes
 <div id="preguntas-frecuentes"></div>
 
-Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
+Esta sección contiene las consultas más comunes sobre el sistema gastronómico y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
 
 ---
 
@@ -10,15 +10,15 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 
 > 🚨 **ANTES DE REVISAR LOS PROBLEMAS ESPECÍFICOS:**
 > 
-> Si experimentás **cualquier error raro**, **problema de carga**, **pantalla en blanco** o **comportamiento inesperado** en PaxaPOS, **SIEMPRE probá primero estas soluciones básicas:**
+> Si experimentás **cualquier error raro**, **problema de carga**, **pantalla en blanco** o **comportamiento inesperado**, **SIEMPRE probá primero estas soluciones básicas:**
 > 
 > ### 🔄 **Solución Rápida:**
-> 1. **Cerrá completamente PaxaPOS**
-> 2. **Volvé a abrir el programa**
+> 1. **Cerrá completamente**
+> 2. **Volvé a abrir**
 > 3. **Intentá nuevamente la operación**
 > 
 > ### 🖥️ **Solución Completa:**
-> 1. **Cerrá sesión** en PaxaPOS 
+> 1. **Cerrá sesión** 
 > 2. **Reiniciá el dispositivo** (PC, tablet, etc.)
 > 3. **Volvé a iniciar sesión**
 > 
@@ -39,7 +39,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 **Solución:**
 1. **Verificar casillas:** Ve a la **P roja** → *Tipos de Pago* y asegurate de que tengas marcada la casilla **"Para Cobros"** en cada método.
 2. **Revisar nombres:** Verificá que los nombres no tengan caracteres especiales o espacios al principio/final.
-3. **Reiniciar sesión:** Cerrá PaxaPOS completamente y volvé a abrir para que tome los cambios.
+3. **Reiniciar sesión:** Cerrá completamente y volvé a abrir para que tome los cambios.
 
 
 ---
@@ -161,7 +161,7 @@ Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones
 ### 11. **El sistema funciona lento en mi configuración**
 <div id="sistema-lento"></div>
 
-**Problema:** PaxaPOS tarda mucho en cargar o responder.
+**Problema:** La plataforma tarda mucho en cargar o responder.
 
 **Solución:**
 1. **Limpiar caché:** Borra la caché del navegador y los datos temporales, apretando ctrl + F5 para forzar recarga o ctrl + R.
@@ -191,7 +191,7 @@ Si tu problema no está listado aquí o necesitás información adicional para l
 
 
 Recordá siempre incluir:
-- Versión de PaxaPOS que estás usando
+- Versión de la plataforma que estás usando
 - Descripción detallada del problema
 - Pasos que realizaste antes del error
 - Capturas de pantalla si es posible

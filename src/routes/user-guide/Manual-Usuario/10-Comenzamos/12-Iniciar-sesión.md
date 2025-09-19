@@ -1,12 +1,12 @@
-# 🔑 Cómo iniciar sesión en PaxaPOS
+# 🔑 Cómo Iniciar Sesión
 <div id="iniciar-sesion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de PaxaPOS.
+> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de nuestro software.
 
 ## 📍 **Paso 1: Ingresá a la página web**
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: **https://beta.paxapos.com**
+2. En la barra de direcciones, escribí: **{{WEB_URL}}**
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
@@ -17,7 +17,7 @@ Vas a ver una pantalla de ingreso como esta:
 
 ```
 ┌─────────────────────────────┐
-│        🏪 PaxaPOS          │
+│        🏪 Software          │
 │                             │
 │  Usuario: [____________]    │
 │                             │
@@ -34,7 +34,7 @@ Vas a ver una pantalla de ingreso como esta:
 5. Hacé clic en el botón **"Iniciar sesión"**
 
 ## ✅ **¡Perfecto!**
-Si los datos son correctos, vas a ingresar al **panel principal** de PaxaPOS donde podés empezar a trabajar.
+Si los datos son correctos, vas a ingresar al **panel principal** donde podés empezar a trabajar.
 
 ---
 

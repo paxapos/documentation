@@ -7,10 +7,10 @@
 
 ## 🔴 **MUY IMPORTANTE - La "P" roja**
 
-En **TODOS** los módulos de PaxaPOS, vas a ver un ícono de **"P" roja** 🔴 en la parte superior de la pantalla.
+En **TODOS** los módulos, vas a ver un ícono de **"P" roja** 🔴 en la parte superior de la pantalla.
 
 `
-🏪 PaxaPOS      [ 🔴 P ]      👤 Usuario
+🏪 Software    [ 🔴 P ]      👤 Usuario
 `
 
 **¡Esta "P" roja es SÚPER IMPORTANTE!** 
@@ -23,7 +23,7 @@ En **TODOS** los módulos de PaxaPOS, vas a ver un ícono de **"P" roja** 🔴 e
 ## 📋 **Paso a paso - Crear tu primer usuario**
 
 ### **Paso 1: Encontrar la "P" roja**
-1. Una vez que estés dentro de PaxaPOS, mirá la parte **superior** de la pantalla
+1. Una vez que estés dentro, mirá la parte **superior** de la pantalla
 2. Buscá el ícono de **"P" roja** 🔴
 3. Hacé clic en la **"P" roja**
 4. Se va a abrir una ventana con muchas opciones
@@ -51,7 +51,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ## 🎭 **¿Qué rol tiene que elegir cada persona?**
 
-🔹 **Administrador** | TODO - Control total del sistema (Dueño, gerente, encargado)  
+🔹 **Administrador** | TODO - Control total (Dueño, gerente, encargado)  
 🔹 **Cajero** | Cobrar, facturar, manejar dinero (Personal de caja)  
 🔹 **Mozo** | Tomar pedidos, manejar mesas (Meseros, vendedores)  
 🔹 **Cocinero** | Ver pedidos de cocina solamente (Chef, ayudantes de cocina)
