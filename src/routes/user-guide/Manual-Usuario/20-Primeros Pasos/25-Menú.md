@@ -7,7 +7,7 @@
 ## 🔴 **MUY IMPORTANTE - La "P" roja**
 
 ```
-🏪 PaxaPOS      [ 🔴 P ]      👤 Usuario
+🏪 Software    [ 🔴 P ]      👤 Usuario
                      ↓
                 "Productos"
 ```
@@ -27,7 +27,7 @@
 🔹 **Menú Delivery** | Productos solo para entrega
 
 > 💡 **¿Sabías que...?**  
-> El nombre "Menú" es configurable. Podés cambiarlo a "Lista de Precios", "Carta", "Tarifario" o como prefieras. Un hotel que usa PaxaPOS para restaurante y kiosko lo llamó "Tarifario" porque vende comidas, revistas y paquetes turísticos.
+> El nombre "Menú" es configurable. Podés cambiarlo a "Lista de Precios", "Carta", "Tarifario" o como prefieras. Un hotel lo llamó "Tarifario" porque vende comidas, revistas y paquetes turísticos.
 
 ### 🥘 **2. Producto**
 **¿Qué es?** Cualquier cosa que vendes, usas o compras en tu negocio. Se divide en 4 tipos:
@@ -103,7 +103,7 @@ Menú Principal
 
 ### **� ETAPA 1** → **Acceso al sistema de productos**
 
-> **🖥️ Ubicación:** Panel principal de PaxaPOS
+> **🖥️ Ubicación:** Panel principal
 
 ### **📋 Cómo crear variantes:**
 <div id="variantes"></div>

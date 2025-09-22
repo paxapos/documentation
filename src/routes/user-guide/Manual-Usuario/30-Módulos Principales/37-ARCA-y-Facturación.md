@@ -2,7 +2,7 @@
 <div id="arca-facturacion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Para poder comenzar a facturar con PaxaPos necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado en el sistema.
+> Para poder comenzar a facturar necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado.
 
 ---
 
@@ -215,7 +215,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 ---
 ---
 
-### **📞 2.5 Notificar a PaxaPos**
+### **📞 2.5 Notificar al soporte técnico**
 
 
 #### **📋 Paso obligatorio:**
@@ -235,7 +235,7 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en **24-48 horas hábiles**.
 
 #### **⚠️ Recordá:**
-Sin esta notificación, **no podrás comenzar a facturar electrónicamente** desde PaxaPos, aunque hayas completado todos los pasos en ARCA.
+Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, aunque hayas completado todos los pasos en ARCA.
 
 ## 🎯 **Resumen del proceso completo**
 
@@ -251,7 +251,7 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente** des
    ↓
 ✅ 5. Confirmás toda la configuración
    
-🎉 ¡Ya podés facturar electrónicamente con PaxaPos!
+🎉 ¡Ya podés facturar electrónicamente!
 ```
 
 ---
@@ -267,5 +267,5 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente** des
 ### **📞 ¿Necesitás ayuda?**
 Este proceso es técnico y específico de ARCA. Si tenés dudas, consultá con:
 - **Contador:** Para aspectos fiscales
-- **Soporte PaxaPos:** Para la integración con el sistema
+- **Soporte técnico:** Para la integración
 - **ARCA:** Para problemas con la plataforma oficial
