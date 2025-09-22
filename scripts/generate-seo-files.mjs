@@ -59,6 +59,23 @@ function getAllMdFiles(dir, basePath = '') {
 }
 
 /**
+ * Obtener archivos TXT generados automáticamente
+ */
+function getTxtFiles() {
+    try {
+        const registerPath = path.join(staticDir, 'llms', 'files-register.json');
+        if (fs.existsSync(registerPath)) {
+            const registerContent = fs.readFileSync(registerPath, 'utf-8');
+            const register = JSON.parse(registerContent);
+            return register.detailed_files || [];
+        }
+    } catch (error) {
+        console.warn('No se pudo cargar el registro de archivos TXT:', error.message);
+    }
+    return [];
+}
+
+/**
  * Generar archivo JSON con toda la estructura de contenido para AI
  */
 function generateContentIndex() {
@@ -66,11 +83,12 @@ function generateContentIndex() {
     
     const userGuideFiles = getAllMdFiles(userGuideDir);
     const devFiles = getAllMdFiles(devDocsDir);
+    const txtFiles = getTxtFiles();
     
     const contentIndex = {
         generated_at: new Date().toISOString(),
         version: "2025.1",
-        total_files: userGuideFiles.length + devFiles.length,
+        total_files: userGuideFiles.length + devFiles.length + txtFiles.length,
         sections: {
             user_guide: {
                 title: "Manual de Usuario",
@@ -99,6 +117,20 @@ function generateContentIndex() {
                     seo_keywords: generateSEOKeywords(file.name, 'dev'),
                     last_modified: fs.statSync(file.path).mtime.toISOString()
                 }))
+            },
+            txt_files: {
+                title: "Archivos de Indexación TXT",
+                description: "Archivos optimizados para indexación por IA",
+                base_url: "/llms",
+                files: txtFiles.map(file => ({
+                    id: file.txt_file.replace('.txt', ''),
+                    title: file.title,
+                    filename: file.txt_file,
+                    original_md: file.original_md,
+                    url: `/llms/${file.txt_file}`,
+                    seo_keywords: generateSEOKeywords(file.txt_file, 'txt'),
+                    generated_from: file.generated_from
+                }))
             }
         }
     };
@@ -120,7 +152,8 @@ function generateSEOKeywords(filename, section) {
     // Keywords específicos por sección
     const sectionKeywords = {
         user: ['manual', 'usuario', 'guía', 'tutorial'],
-        dev: ['API', 'desarrollo', 'integración', 'documentación técnica']
+        dev: ['API', 'desarrollo', 'integración', 'documentación técnica'],
+        txt: ['indexación', 'IA', 'texto plano', 'búsqueda']
     };
     
     // Keywords basados en el nombre del archivo
@@ -154,6 +187,11 @@ function generateURLList(contentIndex) {
     });
     
     contentIndex.sections.developer_docs.files.forEach(file => {
+        urls.push(`${baseURL}${file.url}`);
+    });
+    
+    // Agregar URLs de archivos TXT para indexación
+    contentIndex.sections.txt_files.files.forEach(file => {
         urls.push(`${baseURL}${file.url}`);
     });
     

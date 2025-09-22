@@ -4,7 +4,8 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "npm run generate:ai && npm run generate:seo && vite dev",
+		"dev:clean": "vite dev",
 		"build": "npm run generate:seo && npm run generate:ai && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",

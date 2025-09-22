@@ -172,36 +172,26 @@
     }
 
     // Función para abrir el archivo LLM en una nueva pestaña
-    function openLLMPage() {
-        // Mapeo de slugs a archivos LLM directos (saltando el API endpoint)
-        const slugToFileMap: Record<string, string> = {
-            'introduccion': '11-introduccion.txt',
-            'iniciar-sesion': '12-iniciar-sesion.txt',
-            'crear-usuarios': '21-crear-usuarios.txt',
-            'tipos-de-pago': '22-tipos-de-pago.txt',
-            'agregar-personal': '23-agregar-personal.txt',
-            'configuracion-impresoras': '24-configuracion-de-impresoras.txt',
-            'menu': '25-menu.txt',
-            'salon': '32-salon.txt',
-            'kds': '33-kitchen-display-system-kds.txt',
-            'contabilidad': '34-contabilidad.txt',
-            'arqueos': '35-arqueos.txt',
-            'compras-stock': '36-compras-y-stock.txt',
-            'arca-facturacion': '37-arca-y-facturacion.txt',
-            'estadisticas': '38-estadisticas.txt',
-            'biblioteca-de-drivers': '41-biblioteca-de-drivers.txt',
-            'sam4s-giant-100': '42-sam4s-giant-100.txt',
-            'citizen-ct-s310ii': '43-citizen-ct-s310ii.txt',
-            'epson-tm-t20': '44-epson-tm-t20.txt',
-            'drivers-genericos': '45-drivers-genericos.txt',
-            'epson-tm-t88v': '46-epson-tm-t88.txt',
-            'buchon-bot': '51-buchon-bot.txt'
-        };
-        
-        const fileName = slugToFileMap[data.slug];
-        if (fileName) {
-            const llmUrl = `${base}/llms/${fileName}`;
-            window.open(llmUrl, '_blank');
+    async function openLLMPage() {
+        try {
+            // Importar la utilidad de mapeo dinámico
+            const { getTxtFileForSlug } = await import('$lib/utils/slugMapping.js');
+            
+            // Obtener el archivo TXT correspondiente al slug actual
+            const fileName = await getTxtFileForSlug(data.slug);
+            
+            if (fileName) {
+                const llmUrl = `${base}/llms/${fileName}`;
+                window.open(llmUrl, '_blank');
+            } else {
+                console.warn(`No se encontró archivo TXT para el slug: ${data.slug}`);
+                // Fallback: intentar construcción manual
+                const fallbackFileName = `${data.slug.replace(/[^a-z0-9-]/g, '')}.txt`;
+                const fallbackUrl = `${base}/llms/${fallbackFileName}`;
+                window.open(fallbackUrl, '_blank');
+            }
+        } catch (error) {
+            console.error('Error abriendo archivo LLM:', error);
         }
     }
 

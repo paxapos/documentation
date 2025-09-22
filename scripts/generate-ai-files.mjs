@@ -4,7 +4,7 @@
  * Script para generar archivos AI y TXT completo
  */
 
-import { writeFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, unlinkSync } from 'fs';
 import { join, dirname, basename, extname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -127,7 +127,6 @@ function safeWriteFile(filePath, content, addBOM = true) {
             flag: 'w'
         });
         
-        console.log(`📝 Archivo escrito con codificación UTF-8${addBOM ? ' + BOM' : ''}: ${basename(filePath)}`);
         return true;
     } catch (error) {
         console.error(`❌ Error escribiendo archivo ${filePath}:`, error.message);
@@ -174,6 +173,57 @@ if (existsSync(devDocsPath)) {
 
 console.log(`📄 Encontrados ${allMdFiles.length} archivos MD para procesar`);
 
+// Función para limpiar archivos TXT huérfanos (sin .md correspondiente)
+function cleanOrphanTxtFiles() {
+    const llmsDir = join(__dirname, '..', 'static', 'llms');
+    
+    if (!existsSync(llmsDir)) {
+        return;
+    }
+    
+    // Obtener todos los archivos TXT existentes (excluyendo archivos del sistema)
+    const existingTxtFiles = readdirSync(llmsDir)
+        .filter(file => file.endsWith('.txt') && !['index.txt'].includes(file));
+    
+    // Crear set de nombres de archivos MD esperados
+    const expectedTxtFiles = new Set();
+    
+    allMdFiles.forEach(filePath => {
+        const fileName = basename(filePath, '.md');
+        const txtName = fileName.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[()]/g, '')
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remover diacríticos
+            + '.txt';
+        expectedTxtFiles.add(txtName);
+    });
+    
+    // Eliminar archivos TXT huérfanos
+    let cleanedCount = 0;
+    existingTxtFiles.forEach(txtFile => {
+        if (!expectedTxtFiles.has(txtFile)) {
+            const txtPath = join(llmsDir, txtFile);
+            try {
+                unlinkSync(txtPath);
+                console.log(`🗑️  Eliminado archivo huérfano: ${txtFile}`);
+                cleanedCount++;
+            } catch (error) {
+                console.warn(`⚠️  No se pudo eliminar ${txtFile}:`, error.message);
+            }
+        }
+    });
+    
+    if (cleanedCount > 0) {
+        console.log(`🧹 Limpieza completada: ${cleanedCount} archivo(s) huérfano(s) eliminado(s)`);
+    }
+}
+
+// Ejecutar limpieza antes de generar nuevos archivos
+cleanOrphanTxtFiles();
+
+// Array para almacenar información de archivos generados
+const generatedFiles = [];
+
 let completeContent = '# Manual Completo PaxaPOS\n\n';
 let processedCount = 0;
 
@@ -207,7 +257,15 @@ ${cleanContent}`;
             if (safeWriteFile(txtPath, finalContent, true)) {
                 // Agregar al contenido completo (también limpio)
                 completeContent += `\n\n=== ${moduleTitle} ===\n\n${cleanContent}`;
-                console.log(`✅ Procesado: ${fileName} -> ${txtName}`);
+                
+                // Guardar información del archivo generado
+                generatedFiles.push({
+                    fileName: txtName,
+                    originalMd: fileName,
+                    title: moduleTitle,
+                    path: filePath
+                });
+                
                 processedCount++;
             }
         }
@@ -223,6 +281,27 @@ if (safeWriteFile(indexPath, completeContent, true)) {
     console.log(`📚 Índice creado en: ${indexPath}`);
 } else {
     console.error('❌ Error al crear el archivo índice');
+}
+
+// Generar archivo de registro de archivos TXT para el detector
+try {
+    const txtFilesRegister = {
+        generated_at: new Date().toISOString(),
+        total_files: generatedFiles.length,
+        files: generatedFiles.map(file => file.fileName).sort(),
+        detailed_files: generatedFiles.map(file => ({
+            txt_file: file.fileName,
+            original_md: file.originalMd,
+            title: file.title,
+            generated_from: file.path
+        }))
+    };
+    
+    const registerPath = join(staticLlmDir, 'files-register.json');
+    writeFileSync(registerPath, JSON.stringify(txtFilesRegister, null, 2), 'utf8');
+    console.log(`📋 Registro de archivos TXT creado: ${registerPath}`);
+} catch (err) {
+    console.error('❌ Error generando registro de archivos:', err.message);
 }
 
 // Generar archivo URLs (para que crawlers/LLMs indexen fácilmente)
