@@ -1,6 +1,9 @@
-# 🚀 ## 🎯 ¿Qué hace este software?
-Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.envenido al Software Gastronómico
+
+# Bienvenido al Software Gastronómico
 <div id="introduccion"></div>
+
+Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.
+
 
 Este es tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
 

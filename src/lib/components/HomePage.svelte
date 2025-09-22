@@ -15,7 +15,7 @@
 					? 'text-4xl'
 					: 'text-5xl'} mb-4 font-bold text-gray-900 dark:text-white"
 			>
-				Centro de Documentación PaxaPOS
+				Centro de Documentación
 			</h2>
 			<p
 				class="{FEATURE_FLAGS.showDevDocumentation
@@ -178,7 +178,7 @@
 						{#if FEATURE_FLAGS.showDevDocumentation}
 							Comienza explorando nuestra documentación de APIs REST y GraphQL
 						{:else}
-							Familiarízate con todos los módulos y funcionalidades de PaxaPOS
+							Familiarízate con todos los módulos y funcionalidades del software
 						{/if}
 					</p>
 				</div>
@@ -211,7 +211,7 @@
 							: 'text-base'} text-gray-600 dark:text-gray-300"
 					>
 						{#if FEATURE_FLAGS.showDevDocumentation}
-							Utiliza nuestro entorno de pruebas para familiarizarte con PaxaPOS
+							Utiliza nuestro entorno de pruebas para familiarizarte
 						{:else}
 							Sigue las guías paso a paso para dominar cada función del sistema
 						{/if}
@@ -262,7 +262,7 @@
 	>
 		<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 			<div class="text-center text-gray-600 dark:text-gray-400">
-				<p>&copy; 2025 PaxaPOS. Todos los derechos reservados.</p>
+				<p>&copy; 2025 Todos los derechos reservados.</p>
 			</div>
 		</div>
 	</footer>

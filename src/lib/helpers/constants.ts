@@ -50,18 +50,18 @@ export interface SearchableItem {
 // Datos dinámicos para búsqueda con contenido real
 export const searchableContentWithContent = [
 	{ 
-		title: 'Bienvenido a PaxaPOS', 
+		title: 'Bienvenido', 
 		href: '/user-guide', 
 		type: 'Manual de Usuario', 
 		id: '11-Introduccion',
-		content: 'PaxaPOS es un sistema de gestión integral pensado para adaptarse a las necesidades de tu comercio. Desde un solo lugar, permite administrar operaciones clave como la toma de pedidos, el control de stock, la facturación, el seguimiento de ventas y la gestión del personal, de forma clara y eficiente. Con una interfaz moderna e intuitiva, PaxaPOS acompaña el trabajo diario, ayudando a reducir errores, optimizar tiempos y mantener una visión ordenada del funcionamiento general del negocio. Optimiza la gestión de ventas y operaciones. Controla el inventario y minimiza pérdidas. Administra eficientemente al personal y sus roles. Accede a estadísticas clave para la toma de decisiones. Gestiona tu cartera de clientes de forma efectiva. Personaliza la plataforma según tus necesidades operativas. Monitorea y opera tu negocio de forma remota.'
+		content: 'Un sistema de gestión integral pensado para adaptarse a las necesidades de tu comercio. Desde un solo lugar, permite administrar operaciones clave como la toma de pedidos, el control de stock, la facturación, el seguimiento de ventas y la gestión del personal, de forma clara y eficiente. Con una interfaz moderna e intuitiva, acompaña el trabajo diario, ayudando a reducir errores, optimizar tiempos y mantener una visión ordenada del funcionamiento general del negocio. Optimiza la gestión de ventas y operaciones. Controla el inventario y minimiza pérdidas. Administra eficientemente al personal y sus roles. Accede a estadísticas clave para la toma de decisiones. Gestiona tu cartera de clientes de forma efectiva. Personaliza la plataforma según tus necesidades operativas. Monitorea y opera tu negocio de forma remota.'
 	},
 	{ 
 		title: 'Iniciar sesión', 
 		href: '/user-guide', 
 		type: 'Manual de Usuario', 
 		id: '12-Iniciar-sesión',
-		content: 'Para acceder a PaxaPOS, necesitarás las credenciales proporcionadas por tu administrador. El proceso de login es simple y seguro. Ingresa tu nombre de usuario y contraseña en los campos correspondientes. Una vez autenticado, serás dirigido al panel principal del sistema donde podrás acceder a todas las funcionalidades según tu rol asignado.'
+		content: 'Para acceder, necesitarás las credenciales proporcionadas por tu administrador. El proceso de login es simple y seguro. Ingresa tu nombre de usuario y contraseña en los campos correspondientes. Una vez autenticado, serás dirigido al panel principal del sistema donde podrás acceder a todas las funcionalidades según tu rol asignado.'
 	},
 	{ 
 		title: 'Primeros pasos para configurar tu sistema', 
@@ -235,4 +235,14 @@ export async function searchContent(query: string, limit: number = 4): Promise<S
 	
 	// Remover el score del resultado final pero mantener preview
 	return results.slice(0, limit).map(({ score, ...item }) => item);
+}
+
+// Función para convertir IDs de módulos a slugs para URLs
+export function getSlugFromModuleId(id: string): string {
+	return id.toLowerCase()
+		.replace(/^\d+-/, '') // Remover números del inicio
+		.replace(/[()]/g, '') // Remover paréntesis
+		.replace(/\s+/g, '-') // Espacios a guiones
+		.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remover acentos
+		.replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
 }

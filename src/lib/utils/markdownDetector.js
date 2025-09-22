@@ -58,7 +58,7 @@ function generateSEO(title, content, slug) {
     const firstParagraph = contentWithoutTitle.split('\n\n')[0] || '';
     const description = firstParagraph.length > 160 
         ? firstParagraph.substring(0, 157) + '...' 
-        : firstParagraph || `Guía completa sobre ${title} en PaxaPOS.`;
+        : firstParagraph || `Guía completa sobre ${title}.`;
 
     // Genera keywords automáticamente
     const keywords = [
@@ -71,7 +71,7 @@ function generateSEO(title, content, slug) {
     ].join(', ');
 
     return {
-        title: `${title} - Manual PaxaPOS`,
+        title: `${title} - Manual`,
         description: description.replace(/[#*]/g, '').trim(),
         keywords
     };

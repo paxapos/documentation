@@ -54,7 +54,7 @@ export async function load() {
                 modulesList.push({
                     slug: module.slug,
                     title: module.title,
-                    description: `Guía completa sobre ${module.title.toLowerCase()} en PaxaPOS`,
+                    description: `Guía completa sobre ${module.title.toLowerCase()}`,
                     category: category.title,
                     icon: icon,
                     id: module.fileName.replace('.md', '').toLowerCase()

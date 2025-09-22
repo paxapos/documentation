@@ -44,6 +44,14 @@
             // Corregir rutas de imágenes
             htmlContent = fixImagePaths(htmlContent);
             
+            // Manejar highlighting si existe el parámetro
+            const urlParams = new URLSearchParams($page.url.search);
+            const highlightParam = urlParams.get('highlight');
+            
+            if (highlightParam) {
+                htmlContent = highlightTextInHtml(htmlContent, highlightParam);
+            }
+            
             // Agregar íconos de enlace a los títulos
             processedContent = addLinkIconsToHeaders(htmlContent);
             
@@ -171,6 +179,29 @@
         }, 2000);
     }
 
+    // Función para resaltar texto en HTML de manera más elegante
+    function highlightTextInHtml(html: string, searchTerm: string): string {
+        if (!searchTerm || !html) return html;
+        
+        // Escapar caracteres especiales del término de búsqueda
+        const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        
+        // Crear regex con flag global para encontrar todas las coincidencias
+        const regex = new RegExp(`(${escapedTerm})`, 'gi');
+        
+        // Limitar a máximo 4 resaltados para evitar sobrecarga visual
+        let matchCount = 0;
+        const maxMatches = 4;
+        
+        return html.replace(regex, (match) => {
+            if (matchCount >= maxMatches) {
+                return match; // Devolver sin resaltar si ya llegamos al límite
+            }
+            matchCount++;
+            return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
+        });
+    }
+
     // Función para abrir el archivo LLM en una nueva pestaña
     async function openLLMPage() {
         try {
@@ -238,7 +269,7 @@
         <!-- Sidebar responsivo -->
         <aside class="lg:w-64 flex-shrink-0 relative z-20">
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-2 sm:p-4 md:p-5 shadow-sm">
-                <h3 class="mb-2 sm:mb-4 font-bold text-gray-900 dark:text-white text-xs sm:text-base md:text-lg">Manual de Usuario PaxaPOS</h3>
+                <h3 class="mb-2 sm:mb-4 font-bold text-gray-900 dark:text-white text-xs sm:text-base md:text-lg">Manual de Usuario</h3>
                 
                 <!-- Selector dropdown para móviles -->
                 <div class="mb-2 sm:mb-4 block lg:hidden">

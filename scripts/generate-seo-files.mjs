@@ -92,7 +92,7 @@ function generateContentIndex() {
         sections: {
             user_guide: {
                 title: "Manual de Usuario",
-                description: "Documentación completa para usuarios finales de PaxaPOS",
+                description: "Documentación completa para usuarios finales",
                 base_url: "/user-guide",
                 files: userGuideFiles.map(file => ({
                     id: file.id,
