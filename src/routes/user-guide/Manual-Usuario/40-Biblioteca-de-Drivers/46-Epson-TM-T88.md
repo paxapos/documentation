@@ -39,7 +39,7 @@ Se abrirá la siguiente ventana de configuración de impresora, En 'Port Type' h
 ✅ Paso 7: Finalizar configuración
 Haz clic en 'Next'.
 
-![Imagen](images/Epson-t88/9-default.webp)
+![Imagen](images/Epson-t88/8-default.webp)
 
 ✅ ¡Listo!
 Tu impresora Epson TM-T88V ya está instalada correctamente en tu computadora. 

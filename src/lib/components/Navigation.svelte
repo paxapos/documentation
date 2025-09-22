@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { searchContent, navigation, type SearchableItem } from '$lib/helpers/constants';
+	import { searchContent, navigation, type SearchableItem, getSlugFromModuleId } from '$lib/helpers/constants';
 
 	let mobileMenuOpen = false;
 	let searchQuery = '';
@@ -41,10 +41,16 @@
 		searchResults = [];
 		mobileMenuOpen = false;
 
-		// Si tiene ID específico y es de documentación, navegar con parámetro
-		if (item.id && (item.href === '/user-guide' || item.href === '/dev')) {
+		// Si tiene ID específico y es de documentación del usuario, navegar a la página individual
+		if (item.id && item.href === '/user-guide') {
+			const slug = getSlugFromModuleId(item.id);
+			const url = `${base}/user-guide/${slug}?highlight=${encodeURIComponent(currentSearchQuery)}`;
+			console.log('URL generada para user-guide:', url);
+			goto(url);
+		} else if (item.id && item.href === '/dev') {
+			// Para documentación de desarrolladores, mantener el comportamiento anterior
 			const url = `${base}${item.href}?module=${item.id}&highlight=${encodeURIComponent(currentSearchQuery)}`;
-			console.log('URL generada:', url);
+			console.log('URL generada para dev:', url);
 			goto(url);
 		} else {
 			goto(`${base}${item.href}?highlight=${encodeURIComponent(currentSearchQuery)}`);

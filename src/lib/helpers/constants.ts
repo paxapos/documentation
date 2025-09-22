@@ -236,3 +236,13 @@ export async function searchContent(query: string, limit: number = 4): Promise<S
 	// Remover el score del resultado final pero mantener preview
 	return results.slice(0, limit).map(({ score, ...item }) => item);
 }
+
+// Función para convertir IDs de módulos a slugs para URLs
+export function getSlugFromModuleId(id: string): string {
+	return id.toLowerCase()
+		.replace(/^\d+-/, '') // Remover números del inicio
+		.replace(/[()]/g, '') // Remover paréntesis
+		.replace(/\s+/g, '-') // Espacios a guiones
+		.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remover acentos
+		.replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
+}
