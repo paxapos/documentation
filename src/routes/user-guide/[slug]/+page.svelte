@@ -44,6 +44,14 @@
             // Corregir rutas de imágenes
             htmlContent = fixImagePaths(htmlContent);
             
+            // Manejar highlighting si existe el parámetro
+            const urlParams = new URLSearchParams($page.url.search);
+            const highlightParam = urlParams.get('highlight');
+            
+            if (highlightParam) {
+                htmlContent = highlightTextInHtml(htmlContent, highlightParam);
+            }
+            
             // Agregar íconos de enlace a los títulos
             processedContent = addLinkIconsToHeaders(htmlContent);
             
@@ -169,6 +177,29 @@
         setTimeout(() => {
             showCopyMessage = false;
         }, 2000);
+    }
+
+    // Función para resaltar texto en HTML de manera más elegante
+    function highlightTextInHtml(html: string, searchTerm: string): string {
+        if (!searchTerm || !html) return html;
+        
+        // Escapar caracteres especiales del término de búsqueda
+        const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        
+        // Crear regex con flag global para encontrar todas las coincidencias
+        const regex = new RegExp(`(${escapedTerm})`, 'gi');
+        
+        // Limitar a máximo 4 resaltados para evitar sobrecarga visual
+        let matchCount = 0;
+        const maxMatches = 4;
+        
+        return html.replace(regex, (match) => {
+            if (matchCount >= maxMatches) {
+                return match; // Devolver sin resaltar si ya llegamos al límite
+            }
+            matchCount++;
+            return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
+        });
     }
 
     // Función para abrir el archivo LLM en una nueva pestaña
