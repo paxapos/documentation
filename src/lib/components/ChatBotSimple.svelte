@@ -25,7 +25,7 @@
 	const faqResponses = {
 		'mozo': `**Gestión de Personal - Mozos** 👨‍💼
 
-Para crear y gestionar mozos en PaxaPOS:
+Para crear y gestionar mozos:
 
 **Pasos básicos:**
 • Ir al módulo "Agregar Personal"
@@ -46,7 +46,7 @@ Configura impresoras para tickets y comandas:
 
 **Pasos:**
 • Conectar impresora (USB/Red)
-• Configurar en PaxaPOS
+• Configurar en el software
 • Probar impresión
 
 🔗 **[Ver Guía Completa: Configuración de Impresoras](${base}/user-guide/configuracion-impresoras)**`,
@@ -143,7 +143,7 @@ Administra accesos al sistema:
 		// Cargar todo el manual usando la misma lógica que user-guide
 		await loadManualContent();
 		
-		addMessage('¡Hola! 👋 Soy el asistente de PaxaPOS.\n\n**Puedo ayudarte con:**\n• Buscar información específica en el manual\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y mucho más!\n\n**Pregúntame algo específico:** "¿cómo configurar impresoras?" o "crear mozo"', false);
+		addMessage('¡Hola! 👋 Soy tu asistente del sistema gastronómico.\n\n**Puedo ayudarte con:**\n• Buscar información específica en el manual\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y mucho más!\n\n**Pregúntame algo específico:** "¿cómo configurar impresoras?" o "crear mozo"', false);
 	});
 
 	async function loadManualContent() {
@@ -391,7 +391,7 @@ Administra accesos al sistema:
 					</svg>
 				</div>
 				<div>
-					<span class="font-semibold text-sm md:text-base">Asistente PaxaPOS</span>
+					<span class="font-semibold text-sm md:text-base">Asistente Virtual</span>
 					<div class="flex items-center space-x-1 text-xs opacity-90">
 						<div class="w-2 h-2 bg-green-400 rounded-full"></div>
 						<span>En línea</span>
@@ -473,7 +473,7 @@ Administra accesos al sistema:
 					<textarea
 						bind:value={currentMessage}
 						on:keydown={handleKeyDown}
-						placeholder="Pregúntame sobre PaxaPOS..."
+						placeholder="Pregúntame sobre el software..."
 						class="w-full border border-gray-200 dark:border-gray-600 rounded-xl px-3 py-2 md:px-4 md:py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 focus:bg-white dark:focus:bg-gray-600 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-all"
 						rows="1"
 						disabled={isLoading}

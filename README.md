@@ -1,10 +1,10 @@
-# PaxaPOS Documentation
+# Plataforma de Gestión Empresarial - Documentation
 
-Sitio web de documentación oficial para PaxaPOS, construido con SvelteKit y Tailwind CSS.
+Sitio web de documentación oficial de nuestra solución integral de gestión, construido con SvelteKit y Tailwind CSS.
 
 ## Descripción
 
-Este proyecto contiene la documentación completa de PaxaPOS, incluyendo:
+Este proyecto contiene la documentación completa del sistema de gestión, incluyendo:
 
 - **API Reference**: Documentación de todas las APIs y endpoints
 - **Manual de Usuario**: Guías paso a paso para usuarios finales

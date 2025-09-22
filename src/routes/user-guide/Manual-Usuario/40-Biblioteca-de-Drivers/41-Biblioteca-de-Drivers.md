@@ -3,7 +3,7 @@
 ## 📋 **Guía de Instalación Rápida de drivers**
 
 > 🎯 **¿Para qué sirve esto?**  
-> Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas con PaxaPOS. Cada driver incluye instrucciones detalladas e instaladores oficiales.
+> Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas. Cada driver incluye instrucciones detalladas e instaladores oficiales.
 
 ---
 
@@ -42,7 +42,7 @@
 - Sigue las instrucciones paso a paso del asistente de instalación
 
 **4️⃣ Configurar**
-- Configura la impresora en PaxaPOS desde el menú de configuración
+- Configura la impresora desde el menú de configuración
 
 ### **✅ Verificación Post-Instalación**
 
@@ -50,7 +50,7 @@
 |-----------|--------------|
 | **🔄 Reiniciar** | Reinicia la impresora físicamente |
 | **🖨️ Probar** | Realiza una impresión de prueba |
-| **⚙️ Configurar** | Ajusta la configuración en PaxaPOS |
+| **⚙️ Configurar** | Ajusta la configuración |
 
 > 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/configuracion-impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
 
@@ -62,7 +62,7 @@
 |-------------|-------------|-------------|
 | **Impresora no detectada** | • Verificar conexión USB<br>• Reinstalar driver<br>• Cambiar puerto USB | Revisar Device Manager de Windows |
 | **Caracteres extraños** | • Verificar codificación<br>• Actualizar driver<br>• Configurar idioma | Problema de encoding UTF-8 |
-| **No imprime comandas** | • Verificar configuración PaxaPOS<br>• Revisar papel térmico<br>• Limpiar cabezal | Comprobar conexión en software |
+| **No imprime comandas** | • Verificar configuración<br>• Revisar papel térmico<br>• Limpiar cabezal | Comprobar conexión en software |
 | **Impresión lenta** | • Actualizar driver<br>• Verificar cable USB<br>• Reiniciar spooler | Optimizar velocidad de impresión |
 | **Papel se atasca** | • Verificar tipo de papel<br>• Limpiar rodillos<br>• Ajustar guías | Mantenimiento preventivo |
 
