@@ -269,7 +269,7 @@
         <!-- Sidebar responsivo -->
         <aside class="lg:w-64 flex-shrink-0 relative z-20">
             <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-2 sm:p-4 md:p-5 shadow-sm">
-                <h3 class="mb-2 sm:mb-4 font-bold text-gray-900 dark:text-white text-xs sm:text-base md:text-lg">Manual de Usuario PaxaPOS</h3>
+                <h3 class="mb-2 sm:mb-4 font-bold text-gray-900 dark:text-white text-xs sm:text-base md:text-lg">Manual de Usuario</h3>
                 
                 <!-- Selector dropdown para móviles -->
                 <div class="mb-2 sm:mb-4 block lg:hidden">

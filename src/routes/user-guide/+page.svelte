@@ -60,58 +60,58 @@
     function getCurrentModuleSEO() {
         if (!selectedModuleId) {
             return {
-                title: 'Manual de Usuario PaxaPOS',
-                description: 'Manual completo de PaxaPOS para usuarios finales. Aprende paso a paso cómo usar todas las funciones del sistema.',
-                keywords: 'manual usuario paxapos, guía completa, tutorial sistema restaurante'
+                title: 'Manual de Usuario',
+                description: 'Manual completo para usuarios finales. Aprende paso a paso cómo usar todas las funciones del sistema.',
+                keywords: 'manual usuario, guía completa, tutorial sistema restaurante'
             };
         }
         
         // Mapeo de módulos específicos para mejor SEO
         const moduleDescriptions: Record<string, {title: string, description: string, keywords: string}> = {
             '11-Introduccion': {
-                title: 'Introducción a PaxaPOS - Primeros Pasos',
-                description: 'Aprende los conceptos básicos de PaxaPOS y cómo dar tus primeros pasos en el sistema de gestión para restaurantes más completo de Argentina.',
-                keywords: 'introducción paxapos, primeros pasos, tutorial básico, sistema restaurante'
+                title: 'Introducción - Primeros Pasos',
+                description: 'Aprende los conceptos básicos del software y cómo dar tus primeros pasos en el sistema de gestión para restaurantes más completo de Argentina.',
+                keywords: 'introducción, primeros pasos, tutorial básico, sistema restaurante'
             },
             '12-Iniciar-sesión': {
-                title: 'Cómo Iniciar Sesión en PaxaPOS',
-                description: 'Guía paso a paso para acceder a tu cuenta de PaxaPOS, recuperar contraseñas y configurar el acceso seguro a tu sistema.',
-                keywords: 'login paxapos, iniciar sesión, acceso sistema, contraseña'
+                title: 'Cómo Iniciar Sesión',
+                description: 'Guía paso a paso para acceder a tu cuenta, recuperar contraseñas y configurar el acceso seguro a tu sistema.',
+                keywords: 'login, iniciar sesión, acceso sistema, contraseña'
             },
             '21-Crear-Usuarios': {
-                title: 'Crear y Gestionar Usuarios en PaxaPOS',
+                title: 'Crear y Gestionar Usuarios ',
                 description: 'Aprende a crear usuarios, asignar roles y permisos, gestionar personal y configurar accesos seguros en tu restaurante.',
-                keywords: 'crear usuarios paxapos, gestión personal, roles permisos, administración usuarios'
+                keywords: 'crear usuarios, gestión personal, roles permisos, administración usuarios'
             },
             '22-Tipos-De-Pago': {
-                title: 'Configurar Métodos de Pago en PaxaPOS',
+                title: 'Configurar Métodos de Pago ',
                 description: 'Configura todos los métodos de pago: efectivo, tarjetas, transferencias, QR. Aprende a gestionar comisiones y tiempos de acreditación.',
-                keywords: 'métodos pago paxapos, tarjetas crédito débito, efectivo, transferencias, mercadopago'
+                keywords: 'métodos pago, tarjetas crédito débito, efectivo, transferencias, mercadopago'
             },
             '25-Menú': {
-                title: 'Configuración del Menú en PaxaPOS',
+                title: 'Configuración del Menú',
                 description: 'Carga productos, crea categorías, gestiona precios y organiza tu menú digital. Guía completa para configurar tu carta.',
-                keywords: 'configurar menú paxapos, cargar productos, categorías, precios, carta digital'
+                keywords: 'configurar menú, cargar productos, categorías, precios, carta digital'
             },
             '32-Salón': {
-                title: 'Módulo de Salón PaxaPOS - Gestión de Mesas',
-                description: 'Aprende a gestionar mesas, tomar pedidos, asignar mozos y optimizar el servicio en tu salón con PaxaPOS.',
-                keywords: 'salón paxapos, gestión mesas, tomar pedidos, mozos, servicio restaurante'
+                title: 'Módulo de Salón - Gestión de Mesas',
+                description: 'Aprende a gestionar mesas, tomar pedidos, asignar mozos y optimizar el servicio en tu salón.',
+                keywords: 'salón, gestión mesas, tomar pedidos, mozos, servicio restaurante'
             },
             '33-Kitchen-Display-System-(KDS)': {
-                title: 'KDS - Sistema de Pantalla de Cocina PaxaPOS',
+                title: 'KDS - Sistema de Pantalla de Cocina ',
                 description: 'Configura y usa el Kitchen Display System para mejorar la comunicación entre salón y cocina, reducir tiempos y optimizar pedidos.',
-                keywords: 'KDS paxapos, pantalla cocina, kitchen display system, gestión pedidos, comunicación cocina'
+                keywords: 'KDS, pantalla cocina, kitchen display system, gestión pedidos, comunicación cocina'
             },
             '34-Contabilidad': {
-                title: 'Contabilidad y Reportes en PaxaPOS',
+                title: 'Contabilidad y Reportes',
                 description: 'Gestiona la contabilidad de tu restaurante: arqueos, reportes de ventas, control de caja y análisis financiero completo.',
-                keywords: 'contabilidad paxapos, arqueos, reportes ventas, control caja, análisis financiero'
+                keywords: 'contabilidad, arqueos, reportes ventas, control caja, análisis financiero'
             },
             '37-ARCA-y-Facturación': {
-                title: 'Facturación AFIP en PaxaPOS',
+                title: 'Facturación AFIP',
                 description: 'Configura la facturación electrónica con AFIP, emite comprobantes fiscales y cumple todas las normativas argentinas.',
-                keywords: 'facturación AFIP paxapos, facturación electrónica argentina, comprobantes fiscales, normativas AFIP'
+                keywords: 'facturación AFIP, facturación electrónica argentina, comprobantes fiscales, normativas AFIP'
             }
         };
         
@@ -121,9 +121,9 @@
         
         // SEO por defecto para módulos no mapeados
         return {
-            title: `${selectedModuleName} - Manual PaxaPOS`,
-            description: `Aprende a usar ${selectedModuleName} en PaxaPOS. Guía detallada paso a paso con ejemplos prácticos.`,
-            keywords: `${selectedModuleName} paxapos, tutorial, guía, manual usuario`
+            title: `${selectedModuleName} - Manual`,
+            description: `Aprende a usar ${selectedModuleName}. Guía detallada paso a paso con ejemplos prácticos.`,
+            keywords: `${selectedModuleName}, tutorial, guía, manual usuario`
         };
     }
 
@@ -565,10 +565,10 @@
                         <!-- Header -->
                         <div class="mb-8 text-center">
                             <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                                Manual de Usuario PaxaPOS
+                                Manual de Usuario
                             </h1>
                             <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                                Aprende paso a paso cómo usar todas las funciones de PaxaPOS. Desde la configuración inicial hasta la gestión avanzada de tu restaurante.
+                                Aprende paso a paso cómo usar todas las funciones. Desde la configuración inicial hasta la gestión avanzada de tu restaurante.
                             </p>
                         </div>
 

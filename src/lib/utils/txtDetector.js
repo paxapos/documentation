@@ -85,7 +85,7 @@ function generateSEO(title, content, slug) {
         .substring(0, 160) || `Documentación sobre ${title}`;
     
     return {
-        title: `${title} - PaxaPOS Manual`,
+        title: `${title} - Manual`,
         description,
         keywords: `PaxaPOS, ${title.toLowerCase()}, restaurant, punto de venta, ${slug.replace(/-/g, ', ')}`
     };

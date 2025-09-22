@@ -80,7 +80,7 @@
 			<!-- Logo and primary nav -->
 			<div class="flex">
 				<div class="flex flex-shrink-0 items-center">
-					<a href="{base}/" class="text-xl font-bold text-gray-900 dark:text-white">PaxaPOS Docs</a>
+					<a href="{base}/" class="text-xl font-bold text-gray-900 dark:text-white">Centro de ayuda</a>
 				</div>
 				<!-- Desktop navigation -->
 				<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
