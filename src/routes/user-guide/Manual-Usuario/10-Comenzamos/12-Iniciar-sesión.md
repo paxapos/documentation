@@ -6,7 +6,7 @@
 
 ## 📍 **Paso 1: Ingresá a la página web**
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: **{{WEB_URL}}**
+2. En la barra de direcciones, escribí: [**beta.paxapos.com**](https://beta.paxapos.com)
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
