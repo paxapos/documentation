@@ -161,14 +161,10 @@ function findAllMarkdownFiles(dir) {
 
 // Buscar todos los archivos MD en las carpetas de documentación
 const userGuidePath = join(__dirname, '..', 'src', 'routes', 'user-guide', 'Manual-Usuario');
-const devDocsPath = join(__dirname, '..', 'src', 'routes', 'dev', 'Docs');
 
 const allMdFiles = [];
 if (existsSync(userGuidePath)) {
     allMdFiles.push(...findAllMarkdownFiles(userGuidePath));
-}
-if (existsSync(devDocsPath)) {
-    allMdFiles.push(...findAllMarkdownFiles(devDocsPath));
 }
 
 console.log(`📄 Encontrados ${allMdFiles.length} archivos MD para procesar`);

@@ -1,10 +1,7 @@
 
 import { replacePaxaPOS } from './textReplacer';
 
-// Configuración de visibilidad de características
-export const FEATURE_FLAGS = {
-	showDevDocumentation: false, // Cambiar a true para mostrar la documentación de desarrolladores
-};
+// No hay configuraciones de características necesarias
 
 // Datos estáticos para búsqueda de fallback
 export const searchableContent = [
@@ -23,17 +20,10 @@ export const searchableContent = [
 	{ title: 'ARCA y Facturación', href: '/user-guide', type: 'Manual de Usuario', id: '37-AFIP-y-Facturación' },
 	{ title: 'Estadísticas', href: '/user-guide', type: 'Manual de Usuario', id: '38-Estadísticas' },
 	{ title: 'Buchón Bot', href: '/user-guide', type: 'Manual de Usuario', id: '42-Buchón-Bot' },
-	{ title: 'Propina', href: '/user-guide', type: 'Manual de Usuario', id: '43-Propina' },
-	// Documentación para desarrolladores
-	{ title: 'Documentation one', href: '/dev', type: 'Documentación Desarrolladores', id: 'Documentation-one' },
-	{ title: 'Sample two', href: '/dev', type: 'Documentación Desarrolladores', id: 'Sample-two' },
-	{ title: 'Svelte mdtest', href: '/dev', type: 'Documentación Desarrolladores', id: 'svelte-mdtest' },
-	{ title: 'Webhooks', href: '/dev', type: 'Documentación Desarrolladores', id: 'Webhooks' }
+	{ title: 'Propina', href: '/user-guide', type: 'Manual de Usuario', id: '43-Propina' }
 ];
 
 export const navigation = [
-	{ name: 'Inicio', href: '/' },
-	...(FEATURE_FLAGS.showDevDocumentation ? [{ name: 'Dev documentation', href: '/dev' }] : []),
 	{ name: 'Manual de Usuario', href: '/user-guide' }
 ];
 
@@ -169,12 +159,9 @@ export async function searchContent(query: string, limit: number = 4): Promise<S
 	
 	const searchTerm = query.toLowerCase();
 	
-	// Filtrar contenido basado en feature flags
+	// Filtrar solo contenido del manual de usuario
 	const filteredContent = searchableContentWithContent.filter(item => {
-		if (!FEATURE_FLAGS.showDevDocumentation && item.type === 'Documentación Desarrolladores') {
-			return false;
-		}
-		return true;
+		return item.type === 'Manual de Usuario';
 	});
 	
 	const results: Array<SearchableItem & { score: number; preview?: string }> = [];

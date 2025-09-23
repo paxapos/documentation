@@ -16,7 +16,6 @@ console.log('🚀 Generando archivos optimizados para SEO e IA...');
 
 // Directorios de contenido
 const userGuideDir = path.join(__dirname, '../src/routes/user-guide/Manual-Usuario');
-const devDocsDir = path.join(__dirname, '../src/routes/dev/Docs');
 const staticDir = path.join(__dirname, '../static');
 
 // Crear directorio static si no existe
@@ -82,13 +81,12 @@ function generateContentIndex() {
     console.log('📋 Generando índice de contenido...');
     
     const userGuideFiles = getAllMdFiles(userGuideDir);
-    const devFiles = getAllMdFiles(devDocsDir);
     const txtFiles = getTxtFiles();
     
     const contentIndex = {
         generated_at: new Date().toISOString(),
         version: "2025.1",
-        total_files: userGuideFiles.length + devFiles.length + txtFiles.length,
+        total_files: userGuideFiles.length + txtFiles.length,
         sections: {
             user_guide: {
                 title: "Manual de Usuario",
@@ -101,20 +99,6 @@ function generateContentIndex() {
                     section: file.section,
                     url: `/user-guide#${file.id}`, // Cambiar a hash navigation
                     seo_keywords: generateSEOKeywords(file.name, 'user'),
-                    last_modified: fs.statSync(file.path).mtime.toISOString()
-                }))
-            },
-            developer_docs: {
-                title: "Documentación para Desarrolladores",
-                description: "Documentación técnica, APIs e integraciones",
-                base_url: "/dev",
-                files: devFiles.map(file => ({
-                    id: file.id,
-                    title: file.name.replace('.md', '').replace(/-/g, ' '),
-                    filename: file.name,
-                    section: file.section,
-                    url: `/dev#${file.id}`, // Cambiar a hash navigation
-                    seo_keywords: generateSEOKeywords(file.name, 'dev'),
                     last_modified: fs.statSync(file.path).mtime.toISOString()
                 }))
             },
@@ -152,7 +136,6 @@ function generateSEOKeywords(filename, section) {
     // Keywords específicos por sección
     const sectionKeywords = {
         user: ['manual', 'usuario', 'guía', 'tutorial'],
-        dev: ['API', 'desarrollo', 'integración', 'documentación técnica'],
         txt: ['indexación', 'IA', 'texto plano', 'búsqueda']
     };
     
@@ -177,16 +160,11 @@ function generateURLList(contentIndex) {
     const baseURL = 'https://paxapos.github.io/documentation';
     const urls = [
         baseURL,
-        `${baseURL}/user-guide`,
-        `${baseURL}/dev`
+        `${baseURL}/user-guide`
     ];
     
     // Agregar URLs de cada archivo con hash navigation
     contentIndex.sections.user_guide.files.forEach(file => {
-        urls.push(`${baseURL}${file.url}`);
-    });
-    
-    contentIndex.sections.developer_docs.files.forEach(file => {
         urls.push(`${baseURL}${file.url}`);
     });
     
@@ -248,7 +226,7 @@ function generateAIMetadata(contentIndex) {
         content_statistics: {
             total_modules: contentIndex.total_files,
             user_guide_modules: contentIndex.sections.user_guide.files.length,
-            developer_modules: contentIndex.sections.developer_docs.files.length,
+            txt_modules: contentIndex.sections.txt_files.files.length,
             estimated_reading_time_minutes: contentIndex.total_files * 5
         }
     };
@@ -275,7 +253,7 @@ function main() {
         console.log('\n📊 Resumen de generación:');
         console.log(`   📄 Total de archivos: ${contentIndex.total_files}`);
         console.log(`   👤 Manual de usuario: ${contentIndex.sections.user_guide.files.length} módulos`);
-        console.log(`   💻 Docs desarrolladores: ${contentIndex.sections.developer_docs.files.length} módulos`);
+        console.log(`   � Archivos TXT: ${contentIndex.sections.txt_files.files.length} módulos`);
         console.log(`   🔗 URLs generadas: ${urls.length}`);
         console.log(`   🤖 Metadatos IA: ✅ Listos`);
         

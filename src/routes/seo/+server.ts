@@ -32,7 +32,6 @@ function loadAiMetadata() {
 // URLs base del proyecto
 const BASE_URLS = [
     '/',
-    '/dev',
     '/user-guide'
 ];
 
@@ -52,13 +51,7 @@ function generateSitemap() {
         urls.push(...userGuideUrls);
     }
     
-    // Agregar URLs de desarrollo si existen
-    if (contentIndex?.sections?.dev?.files) {
-        const devUrls = contentIndex.sections.dev.files.map((file: any) => 
-            `/dev#${file.id}`
-        );
-        urls.push(...devUrls);
-    }
+    // Solo incluimos URLs del manual de usuario
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -91,8 +84,7 @@ function generateMetadata() {
         "commonQueries": aiMetadata?.indexing_instructions?.common_user_questions || [],
         "documentation": {
             "url": "https://paxapos.github.io/documentation",
-            "userGuide": "https://paxapos.github.io/documentation/user-guide",
-            "devDocs": "https://paxapos.github.io/documentation/dev"
+            "userGuide": "https://paxapos.github.io/documentation/user-guide"
         },
         "contentStatistics": aiMetadata?.content_statistics || {},
         "lastUpdated": aiMetadata?.last_updated || new Date().toISOString(),
