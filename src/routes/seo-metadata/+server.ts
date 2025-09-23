@@ -16,7 +16,6 @@ export const GET: RequestHandler = async () => {
         "documentation": {
             "url": "https://paxapos.github.io/documentation",
             "userGuide": "https://paxapos.github.io/documentation/user-guide",
-            "devDocs": "https://paxapos.github.io/documentation/dev",
             "llmEndpoints": [
                 "https://paxapos.github.io/documentation/api/llm/introduccion",
                 "https://paxapos.github.io/documentation/api/llm/iniciar-sesion",
