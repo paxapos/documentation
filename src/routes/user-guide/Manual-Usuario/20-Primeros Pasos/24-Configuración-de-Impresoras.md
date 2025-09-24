@@ -109,27 +109,13 @@ Imprimir factura de prueba
 
 ---
 
-## 🆘 **Solución de Problemas**
-
-### **⚠️ Errores Comunes**
-
-| 🚨 **Error** | 🔧 **Solución Rápida** |
-|-------------|----------------------|
-| No imprime nada | Verificar encendido + conexión |
-| Error Fiscalberry | Reinstalar como administrador |
-| Cajón no abre | Revisar conexión impresora-cajón |
-| Imprime en lugar equivocado | Verificar asignación de impresoras |
+## 🚨 **¿Problemas comunes?**
+- **"No imprime nada"** → Verificar encendido + conexión
+- **"Error Fiscalberry"** → Reinstalar como administrador  
+- **"Cajón no abre"** → Revisar conexión impresora-cajón
+- **"Imprime en lugar equivocado"** → Verificar asignación de impresoras
 
 ### **📞 ¿Necesitás ayuda?**
 **WhatsApp directo:** [+1 (786) 755-3113](https://wa.me/17867553113)
 
 ---
-
-## 💡 **Tips de Experto**
-
-> **🔥 RECOMENDACIONES PRO:**
-> 
-> ✅ **Siempre probá** después de cada configuración  
-> ✅ **Mantené papel** suficiente en todas las impresoras  
-> ✅ **Instalá Fiscalberry** antes del primer día de ventas  
-> ✅ **Etiquetá** físicamente cada impresora con su función

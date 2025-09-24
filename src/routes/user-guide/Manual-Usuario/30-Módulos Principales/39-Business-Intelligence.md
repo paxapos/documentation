@@ -170,15 +170,7 @@
 ---
 
 ## 🚨 **¿Problemas comunes?**
-
-### **🔧 Soluciones rápidas:**
 - **"No aparecen datos"** → Verificá que el rango de fechas sea correcto
 - **"Los números no coinciden"** → Revisá que concuerden los rangos de fecha en cada pestaña
 - **"No veo clientes"** → Asegurate de tener clientes registrados en el sistema
-- **"La proyección parece incorrecta"** → Necesitás más histórico de ventas
-
-### **📞 ¿Necesitás ayuda?**
-Si tenés dudas con algún reporte o los números no te cierran, contactá al soporte técnico con:
-- 📸 **Captura de pantalla** del problema
-- 📅 **Fechas** que estás consultando
-- 🎯 **Qué esperabas ver** vs lo que ves
+- **"La proyección parece incorrecta"** → Necesitás más histórico de ventas para cálculos precisos

@@ -276,15 +276,8 @@ Menú Principal
 - ✅ **Probá vender** cada producto después de cargarlo
 
 ## 🚨 **¿Problemas comunes?**
-- **"No encuentro Productos"** → Buscá la "P" roja primero
 - **"No me deja guardar"** → Verificá que tengas nombre, categoría y precio
 - **"No aparece en la venta"** → Verificá que esté en el menú correcto
 - **"Sale en la impresora equivocada"** → Configurá la impresora predeterminada
 - **"No sale impreso en la comanda"** → Asignale una impresora
-
-## 📂 **Funciones adicionales**
-
-### **🗂️ Productos Duplicados**
-Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
-
 

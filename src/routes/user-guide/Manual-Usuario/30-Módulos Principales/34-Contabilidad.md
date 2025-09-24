@@ -170,14 +170,11 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 ---
 
 ## 🚨 **¿Problemas comunes?**
-
-| Problema | Solución |
-|----------|----------|
-| **"No puedo cargar la factura"** | Verificá que tengas creado el proveedor |
-| **"No aparece el impuesto"** | Creá el tipo de impuesto primero |
-| **"No sé qué clasificación usar"** | Consultá con tu contador |
-| **"Se cargó mal un gasto"** | Podés editarlo desde el listado |
-| **"No coinciden los totales"** | Revisá que todos los impuestos estén bien configurados |
+- **"No puedo cargar la factura"** → Verificá que tengas creado el proveedor
+- **"No aparece el impuesto"** → Creá el tipo de impuesto primero
+- **"No sé qué clasificación usar"** → Consultá con tu contador
+- **"Se cargó mal un gasto"** → Podés editarlo desde el listado
+- **"No coinciden los totales"** → Revisá que todos los impuestos estén bien configurados
 
 ### **📞 ¿Seguís con dudas?**
 Consultá con tu contador o administrador del sistema.

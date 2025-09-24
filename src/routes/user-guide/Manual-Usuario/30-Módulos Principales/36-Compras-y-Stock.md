@@ -153,12 +153,9 @@ Vendés: 1 Coca-Cola → Stock baja 1 unidad
 ---
 
 ## 🚨 **¿Problemas comunes?**
-
-| Problema | Solución |
-|----------|----------|
-| **"No puedo crear la mercadería"** | Verificá que no exista ya con ese nombre |
-| **"No aparece en productos"** | Fijate si completaste el paso 2 |
-| **"Stock negativo"** | Revisá la "Cantidad que suma" |
-| **"No sé qué unidad usar"** | Usá la más simple: UNIDAD, GRAMO, LITRO |
-| **"Se mezcla el stock"** | Cada mercadería debe tener nombre único |
+- **"No puedo crear la mercadería"** → Verificá que no exista ya con ese nombre
+- **"No aparece en productos"** → Fijate si completaste el paso 2
+- **"Stock negativo"** → Revisá la "Cantidad que suma"
+- **"No sé qué unidad usar"** → Usá la más simple: UNIDAD, GRAMO, LITRO
+- **"Se mezcla el stock"** → Cada mercadería debe tener nombre único
 

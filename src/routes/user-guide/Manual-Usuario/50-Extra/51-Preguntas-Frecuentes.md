@@ -189,9 +189,3 @@ Si tu problema no está listado aquí o necesitás información adicional para l
 *¡Click para chatear directamente con nuestro soporte tecnico!*
  <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
 
-
-Recordá siempre incluir:
-- Versión de la plataforma que estás usando
-- Descripción detallada del problema
-- Pasos que realizaste antes del error
-- Capturas de pantalla si es posible

@@ -59,7 +59,7 @@ Si los datos son correctos, vas a ingresar al **panel principal** donde podés e
 
 ---
 
-## 🚨 **¿Tenés problemas para ingresar?**
+## 🚨 **¿Problemas comunes?**
 
 ### 🔒 **¿Olvidaste tu contraseña?**
 **No te preocupes, es súper fácil recuperarla:**

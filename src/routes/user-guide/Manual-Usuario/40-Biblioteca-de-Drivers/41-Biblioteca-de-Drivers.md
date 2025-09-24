@@ -56,15 +56,12 @@
 
 ---
 
-## 🆘 **Problemas Comunes y Soluciones**
-
-| 🚨 Problema | 🔧 Solución | 📝 Detalles |
-|-------------|-------------|-------------|
-| **Impresora no detectada** | • Verificar conexión USB<br>• Reinstalar driver<br>• Cambiar puerto USB | Revisar Device Manager de Windows |
-| **Caracteres extraños** | • Verificar codificación<br>• Actualizar driver<br>• Configurar idioma | Problema de encoding UTF-8 |
-| **No imprime comandas** | • Verificar configuración<br>• Revisar papel térmico<br>• Limpiar cabezal | Comprobar conexión en software |
-| **Impresión lenta** | • Actualizar driver<br>• Verificar cable USB<br>• Reiniciar spooler | Optimizar velocidad de impresión |
-| **Papel se atasca** | • Verificar tipo de papel<br>• Limpiar rodillos<br>• Ajustar guías | Mantenimiento preventivo |
+## 🚨 **¿Problemas comunes?**
+- **"Impresora no detectada"** → Verificar conexión USB, reinstalar driver, cambiar puerto USB
+- **"Caracteres extraños"** → Verificar codificación, actualizar driver, configurar idioma  
+- **"No imprime comandas"** → Verificar configuración, revisar papel térmico, limpiar cabezal
+- **"Impresión lenta"** → Actualizar driver, verificar cable USB, reiniciar spooler
+- **"Papel se atasca"** → Verificar tipo de papel, limpiar rodillos, ajustar guías
 
 ---
 

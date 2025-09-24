@@ -94,7 +94,7 @@ Una vez configurado, los usuarios van a poder:
 
 ---
 
-## �🚨 **¿Problemas comunes?**
+## 🚨 **¿Problemas comunes?**
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
 - **"El email ya existe"** → Usá un email diferente para cada usuario
 - **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
