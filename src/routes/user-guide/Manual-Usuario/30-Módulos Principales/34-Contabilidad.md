@@ -21,17 +21,18 @@ Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos 
 ✅ Recién ahí podés cargar facturas
 ```
 
-### **🔴 ¿Dónde está la configuración?**
-1. **Entrá a "Contabilidad"**
-2. **Buscá la "P roja"** 🔴 (es el ícono de configuración)
-3. **Hacé clic** y se abren todas las opciones
+### ** ¿Dónde está la configuración?**
+
+Clasificacion = Configuracion -> Parametros del negocio -> Clasificacion de gastos
+
+Proveedores = Operaciones -> Compras -> Proveedores
 
 ---
 
 ## 🧾 **1. Configurar Impuestos**
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** P roja → "Módulo Impuestos"
+1. **Entrá a:**  "Módulo Impuestos"
 2. **Clic en:** "Crear Tipo de Impuesto"
 3. **Completá los datos:**
 
@@ -82,7 +83,7 @@ Para ordenar tus gastos en categorías y después poder hacer reportes (ej: "¿c
 Para registrar quién te vende qué, y llevar control de lo que debés a cada uno.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** P roja → "Módulo Proveedores"
+1. **Entrá a:** Operaciones -> Compras -> Proveedores
 2. **Clic en:** "Crear Proveedores"
 3. **Completá la ficha:**
 
@@ -105,7 +106,7 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 ### **✅ Una vez que tengas todo configurado, podés empezar a cargar gastos:**
 
 ### **🚀 Paso a paso:**
-1. **Desde Contabilidad** → Pestaña "Resumen de Deuda"
+1. **Desde Administración** → Pestaña "Resumen de Deuda"
 2. **Clic en:** "Nuevo Gasto"
 3. **Completá los datos de la factura:**
 

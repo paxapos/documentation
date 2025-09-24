@@ -4,21 +4,13 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar cómo pueden pagar tus clientes: efectivo, tarjeta de crédito, débito, Mercado Pago, etc. Sin esto configurado, no vas a poder cobrar.
 
-## 🔴 **RECORDATORIO - La "P" roja**
-
-Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las configuraciones.
-
-```
-🏪 Software    [ 🔴 P ]      👤 Usuario
-```
-
 ---
 
 ## 📋 **Paso a paso - Configurar formas de pago**
 
 ### **Paso 1: Acceder a Tipos de Pago**
-1. Hacé clic en la **"P" roja** 🔴 
-2. En la ventana que se abre, buscá **"Tipos de Pago"**
+1. Hacé clic en **Configuracion**
+2. En la ventana que se abre, buscá **"Parametros del negocio"**
 3. Hacé clic en **"Tipos de Pago"**
 
 ### **Paso 2: Crear un nuevo tipo de pago**
@@ -51,49 +43,6 @@ Completá estos campos según el tipo de pago que estés agregando:
 6. Verificá que todo esté bien
 7. Hacé clic en **"Guardar"**
 8. ¡Listo! Ya tenés un método de pago configurado
-
----
-
-## 💡 **Métodos de pago más comunes para configurar**
-
-### **📄 Para restaurantes típicos, configurá estos:**
-
-**💳 Métodos de pago recomendados:**
-
-**🔹 Efectivo**  
-💰 *Comisión típica:* 0%  
-⏰ *Días acreditación:* 0 días  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ✅ | *Para Propina:* ✅
-
-**🔹 Visa Débito**  
-💰 *Comisión típica:* 1.5%  
-⏰ *Días acreditación:* 1 día  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
-
-**🔹 Visa Crédito**  
-💰 *Comisión típica:* 2.8%  
-⏰ *Días acreditación:* 7 días  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
-
-**🔹 Mastercard Débito**  
-💰 *Comisión típica:* 1.5%  
-⏰ *Días acreditación:* 1 día  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
-
-**🔹 Mastercard Crédito**  
-💰 *Comisión típica:* 2.8%  
-⏰ *Días acreditación:* 7 días  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ✅
-
-**🔹 MercadoPago**  
-💰 *Comisión típica:* 2.99%  
-⏰ *Días acreditación:* 14 días  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ❌ | *Para Propina:* ❌
-
-**🔹 Transferencia**  
-💰 *Comisión típica:* 0%  
-⏰ *Días acreditación:* 0 días  
-✅ *Para Cobros:* ✅ | *Para Pagos:* ✅ | *Para Propina:* ❌
 
 ---
 

@@ -4,15 +4,8 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar todo lo que vendés: comidas, bebidas, postres, etc. Sin el menú configurado, no vas a poder tomar pedidos ni vender nada.
 
-## 🔴 **MUY IMPORTANTE - La "P" roja**
-
-```
-🏪 Software    [ 🔴 P ]      👤 Usuario
-                     ↓
-                "Productos"
-```
-
 ---
+
 
 ## 📚 **Conceptos básicos que necesitás conocer**
 
@@ -103,14 +96,25 @@ Menú Principal
 
 ### **� ETAPA 1** → **Acceso al sistema de productos**
 
-> **🖥️ Ubicación:** Panel principal
+## 📋 **Paso a paso - Configurar productos en venta**
+
+### **Paso 1: Acceder a menu**
+1. Hacé clic en **Productos**
+2. En la ventana que se abre, buscá **"Catalogo de ventas"**
+3. Hacé clic en **"Menu"**
+
+### **Paso 2: Crear un nuevo menu**
+4. Hacé clic en el botón **"Crear Menu"**
+5. Se va a abrir una ventana para completar datos
+
+--- 
 
 ### **📋 Cómo crear variantes:**
 <div id="variantes"></div>
 
 **Paso 1: Crear la variante**
-1. Dentro de Productos, buscá **"Variantes"**
-2. Hacé clic en **"+ Nueva Variante"**
+1. Dentro de Catalogo de ventas, buscá **"Variantes"**
+2. Hacé clic en **"Crear Variante"**
 3. Nombre: "Acompañamiento"
 4. Agregá las opciones:
    - Papas fritas - $0
@@ -149,7 +153,7 @@ Menú Principal
 💻 INSTRUCCIONES:
 ┌────────────────────────────────────────┐
 │ 1️⃣ Navegá a "Categorías"              │
-│ 2️⃣ Clic en "+ Nueva Categoría"        │
+│ 2️⃣ Clic en "Crear Categoría"          │
 │ 3️⃣ Escribí nombre: Platos Principales │
 │ 4️⃣ Presioná "Guardar"                 │
 └────────────────────────────────────────┘
@@ -218,6 +222,9 @@ Menú Principal
 
 🔹 **🎫 Nombre en Ticket** | `OPCIONAL` → Nombre corto (ej: "Mila Napo")
 
+🔹 **Variante** | `OPCIONAL` → Asignarle una variante (ej: "Guarnición")
+
+
 ---
 
 ### **� ETAPA 5** → **Guardado y verificación**
@@ -234,77 +241,6 @@ Menú Principal
 ```
 
 **🎊 ¡FELICITACIONES! Ya tenés tu primer producto configurado**
-
----
-
-## 🎛️ **Configuración de Variantes**
-
-> **🎪 Para productos con opciones personalizables**
-
----
-
-### **� PROCEDIMIENTO A** → **Crear variante maestra**
-
-```
-� PASO A PASO:
-┌─────────────────────────────────────────┐
-│ 🟢 Ir a "Variantes" en el menú         │
-│ 🟢 Clic en "+ Nueva Variante"          │
-│ � Nombre: "Acompañamiento"            │
-│ 🟢 Configurar opciones disponibles     │
-└─────────────────────────────────────────┘
-```
-
-**� Ejemplo de configuración:**
-
-| Opción | Precio Extra | Disponible |
-|--------|--------------|------------|
-| Papas fritas | $0 | ✅ |
-| Puré de papa | $+100 | ✅ |
-| Ensalada mixta | $+150 | ✅ |
-
----
-
-### **� PROCEDIMIENTO B** → **Vincular al producto**
-
-```
-� PASO A PASO:
-┌─────────────────────────────────────────┐
-│ 🟡 Editar producto existente           │
-│ � Buscar "Asignar Variante"           │
-│ � Seleccionar "Acompañamiento"        │
-│ � Confirmar con "Guardar"             │
-└─────────────────────────────────────────┘
-```
-
----
-
-### **🎨 GALERÍA DE EJEMPLOS**
-
-**🥩 Carnes:**
-```
-Variante: "Cocción"
-├── Bien cocido    ($0)
-├── A punto        ($0)
-└── Jugoso         ($0)
-```
-
-**🍝 Pastas:**
-```
-Variante: "Salsas"
-├── Blanca         ($0)
-├── Fileto         ($+500)
-├── Mixta          ($+200)
-└── Bolognesa      ($+1500)
-```
-
-**🥗 Ensaladas:**
-```
-Variante: "Tipos"
-├── Mixta
-├── Lechuga y Tomate
-└── Zanahoria y Huevo
-```
 
 ---
 
@@ -351,6 +287,4 @@ Variante: "Tipos"
 ### **🗂️ Productos Duplicados**
 Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
 
-### **🏷️ Gestión de Categorías**
-Podés crear distintas categorías para agrupar tus productos y dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.
 

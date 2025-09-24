@@ -26,9 +26,9 @@
 Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** "Productos"
-2. **clic en:** "Mercaderias"
-2. **Clic en:** "Nueva Mercadería"
+1. **Entrá a:** "operaciones"
+2. **clic en:** "Compras"
+2. **Clic en:** "Mercadería"
 3. **Completá la ficha:**
 
 🔹 **Nombre de la Mercadería** | Cómo viene del proveedor  
@@ -56,10 +56,12 @@ Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 Para que lo que compraste aparezca en el menú y lo puedas vender a los clientes.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** "Maestro de Productos"
-2. **Buscá:** El nombre de la mercadería que creaste
-3. **Clic en:** Ícono de editar ✏️
-4. **Editá la unidad de venta:**
+1. **Entrá a:** "Porductos"
+2. **Click en:** "Gestion de productos"
+3. **Click en:** "Maestro de productos"
+4. **Buscá:** El nombre de la mercadería que creaste
+5. **Clic en:** Ícono de editar ✏️
+6. **Editá la unidad de venta:**
 
 🔹 **Nombre del Producto** | Cómo lo vas a vender  
 🔹 **Unidad de Stock** | Unidad de venta individual
@@ -159,7 +161,4 @@ Vendés: 1 Coca-Cola → Stock baja 1 unidad
 | **"Stock negativo"** | Revisá la "Cantidad que suma" |
 | **"No sé qué unidad usar"** | Usá la más simple: UNIDAD, GRAMO, LITRO |
 | **"Se mezcla el stock"** | Cada mercadería debe tener nombre único |
-
-### **📞 ¿Seguís con dudas?**
-Probá con un ejemplo simple primero: comprá algo que vendas igual (ej: botella de agua). Una vez que entiendas el flujo, pasá a cosas más complejas.
 

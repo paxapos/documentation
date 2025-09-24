@@ -1,5 +1,5 @@
 
-# 📊 Módulo de Business Intelligence
+# 📊 Business Intelligence
 <div id="business-intelligence"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
@@ -9,8 +9,8 @@
 
 ## 🚀 **¿Cómo entrar al módulo?**
 
-1. 📱 **Buscá** el módulo **Business Intelligence** en el panel principal
-2. 🖱️ **Hacé clic** para entrar  
+1. 📱 **Buscá** el módulo **Reportes** en el panel lateral
+2. 🖱️ **Hacé clic** en "productos y rentabilidad"
 3. 🎛️ **Elegí** una de las 5 pestañas según lo que quieras analizar
 
 ---

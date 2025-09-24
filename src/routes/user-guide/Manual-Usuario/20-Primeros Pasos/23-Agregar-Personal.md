@@ -5,18 +5,14 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a registrar a tus mozos, meseros y vendedores en el sistema. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
 
-## 🔴 **RECORDATORIO - La P roja**
-
-No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
-
 ---
 
 ## 📋 **Paso a paso - Agregar tu primer mozo**
 
 ### **Paso 1: Acceder al módulo Mozos**
-1. Hacé clic en la **P roja** 🔴
-2. En la ventana que se abre, buscá **Mozos** o **Equipo**
-3. Hacé clic en **Mozos** 
+1. Hacé clic en **"Ventas"**
+2. Dentro de las opciones, buscá **operacion diaria**
+3. Hacé clic en **Mozo** 
 
 ### **Paso 2: Crear un nuevo mozo**
 4. Hacé clic en el botón **Crear Mozo**

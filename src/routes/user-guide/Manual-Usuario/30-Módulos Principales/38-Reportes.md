@@ -1,4 +1,4 @@
-# 📊 Estadísticas y Reportes
+# 📊 Reportes
 <div id="estadisticas"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 **¿Dónde encuentro las estadísticas?**
-1. **Clic en:** "Estadísticas y Reportes" (en el menú principal)
+1. **Clic en:** "Reportes" 
 2. **Se abre:** Un submenú con todas las opciones de reportes
 3. **Elegí:** El tipo de reporte que necesitás
 

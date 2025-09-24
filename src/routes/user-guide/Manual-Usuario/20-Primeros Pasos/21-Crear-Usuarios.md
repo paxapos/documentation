@@ -5,32 +5,18 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a crear las cuentas para que tu equipo (mozos, cajeros, cocineros) pueda usar el sistema. Cada persona tendrá su usuario y contraseña personal.
 
-## 🔴 **MUY IMPORTANTE - La "P" roja**
 
-En **TODOS** los módulos, vas a ver un ícono de **"P" roja** 🔴 en la parte superior de la pantalla.
-
-`
-🏪 Software    [ 🔴 P ]      👤 Usuario
-`
-
-**¡Esta "P" roja es SÚPER IMPORTANTE!** 
-- Te da acceso a configuraciones avanzadas de cada módulo
-- **SIEMPRE** buscá esta "P" roja cuando necesites configurar algo
-- Sin ella, no vas a poder acceder a muchas funciones
-
----
 
 ## 📋 **Paso a paso - Crear tu primer usuario**
 
-### **Paso 1: Encontrar la "P" roja**
-1. Una vez que estés dentro, mirá la parte **superior** de la pantalla
-2. Buscá el ícono de **"P" roja** 🔴
-3. Hacé clic en la **"P" roja**
-4. Se va a abrir una ventana con muchas opciones
+### **Paso 1: Encontra el menu lateral**
+1. Una vez que lo hayas visualizado, Desplega la opcion "Configuracion"
+2. Hacé clic en la opcion **Usuarios Paxapos**
+3. Se va a abrir una ventana
 
 ### **Paso 2: Ir a Crear Usuarios**
-5. En la ventana que se abrió, buscá la opción **"Crear Usuarios"**
-6. Hacé clic en **"Crear Usuarios"**
+4. En la ventana que se abrió, buscá la opción **"Crear Usuarios"**
+5. Hacé clic en **"Crear Usuarios"**
 
 ### **Paso 3: Completar los datos del nuevo usuario**
 Ahora vas a completar la información de la persona que va a usar el sistema:
@@ -80,18 +66,13 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ### **Paso a paso - Configurar usuario con PIN**
 
-#### **Paso 1: Crear el usuario genérico primero**
-1. **IMPORTANTE:** Primero tenés que crear un usuario normal (como explicamos arriba)
-2. Este usuario va a ser la "base" del usuario con PIN
-3. Asigná el rol **"Mozo"** a este usuario
-
-#### **Paso 2: Configurar el PIN**
-4. Hacé clic en la **"P" roja** 🔴
-5. Buscá la opción **"Usuarios con PIN"**
+#### **Paso 1: Configurar el PIN**
+4. Hacé clic en **"Configuracion"**
+5. Buscá la opción **"Usuarios y Permisos"**
 6. Hacé clic en **"Usuarios con PIN"**
-7. Hacé clic en **"Crear Usuario"** o **"Nuevo"**
+7. Hacé clic en **"Crear Usuario"**
 
-#### **Paso 3: Completar la configuración del PIN**
+#### **Paso 2: Completar la configuración del PIN**
 
 🔹 **Nombre del Usuario Genérico** | Un nombre que identifique el grupo  
 🔹 **Rol** | seleccionar "Mozo" o el rol que quieras que tenga este usuario con pin  
@@ -99,22 +80,21 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 8. Hacé clic en **"Guardar"**
 
-### **¿Cómo van a ingresar los mozos?**
-Una vez configurado, los mozos van a poder:
+### **¿Cómo van a ingresar los usuarios?**
+Una vez configurado, los usuarios van a poder:
 1. En la pantalla de login, elegir **"Ingresar con PIN"**
 2. Escribir el PIN (ejemplo: **1111**)
 3. ¡Listo! Ya están dentro del sistema
 
 ### **💡 Consejos para el PIN**
 - ✅ **Usá un PIN fácil de recordar** pero no obvio (evitá 0000 o 1234)
-- ✅ **Comunicá el PIN solo a los mozos** autorizados
+- ✅ **Comunicá el PIN solo a los usuarios** autorizados
 - ✅ **Cambiá el PIN periódicamente** si tenés mucha rotación de personal
 - ✅ **Combiná ambos métodos:** PIN para mozos, usuario personal para administradores
 
 ---
 
 ## �🚨 **¿Problemas comunes?**
-- **"No encuentro la P roja"** → Mirá bien la parte superior, está siempre visible
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
 - **"El email ya existe"** → Usá un email diferente para cada usuario
 - **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
