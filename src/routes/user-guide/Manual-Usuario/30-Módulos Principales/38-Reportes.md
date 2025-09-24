@@ -130,14 +130,13 @@ Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 ---
 
 ## 🚨 **¿Problemas comunes?**
+- **"Los números no coinciden"** → Verificá que estén cargadas todas las ventas y gastos
+- **"Un mozo aparece con cero ventas"** → Revisá si está usando su usuario correcto
+- **"No aparecen algunos tipos de pago"** → Verificá la configuración de métodos de cobro
+- **"No puedo exportar a Excel"** → Probá con períodos más cortos o contactá soporte
+- **"Los gráficos no se ven"** → Actualizá el navegador o probá en otro
 
-🔹 **"Los números no coinciden"** | Verificá que estén cargadas todas las ventas y gastos  
-🔹 **"Un mozo aparece con cero ventas"** | Revisá si está usando su usuario correcto  
-🔹 **"No aparecen algunos tipos de pago"** | Verificá la configuración de métodos de cobro  
-🔹 **"No puedo exportar a Excel"** | Probá con períodos más cortos o contactá soporte  
-🔹 **"Los gráficos no se ven"** | Actualizá el navegador o probá en otro
-
-### **📞 ¿Para qué más sirven las estadísticas?**
+### **¿Para qué más sirven las estadísticas?**
 - **Préstamos bancarios** (mostrar crecimiento)
 - **Venta del negocio** (historial de ventas)
 - **Nuevos socios** (transparencia financiera)
