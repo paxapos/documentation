@@ -1,5 +1,5 @@
 
-# Bienvenido a {{BRAND_NAME}}
+# Bienvenido a tu software gastronómico
 <div id="introduccion"></div>
 
 Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.
