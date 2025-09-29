@@ -1,11 +1,11 @@
 
-# Bienvenido al Software Gastronómico
+# Bienvenido a {{BRAND_NAME}}
 <div id="introduccion"></div>
 
 Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.
 
 
-Este es tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
+Este es {{BRAND_NAME}}, tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
 
 ## 🎯 ¿Qué es esta plataforma de gestión?
 Imagínate tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece esta **solución empresarial avanzada**.

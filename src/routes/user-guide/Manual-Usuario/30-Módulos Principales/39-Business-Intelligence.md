@@ -76,7 +76,7 @@
 
 ### **👥 4. Estadísticas de Clientes**
 
-> ⚠️ **Requisito:** Tenés que tener clientes registrados en el sistema  
+> ⚠️ **Requisito:** Tenés que tener clientes registrados en {{BRAND_NAME}}  
 > 📖 **¿Cómo registrar clientes?** Ver paso numero 6 del modulo "Salon"
 
 > 🏆 **¿Qué ves acá?** El consumo total de cada cliente en el período que elijas
@@ -174,7 +174,7 @@
 ### **🔧 Soluciones rápidas:**
 - **"No aparecen datos"** → Verificá que el rango de fechas sea correcto
 - **"Los números no coinciden"** → Revisá que concuerden los rangos de fecha en cada pestaña
-- **"No veo clientes"** → Asegurate de tener clientes registrados en el sistema
+- **"No veo clientes"** → Asegurate de tener clientes registrados en {{BRAND_NAME}}
 - **"La proyección parece incorrecta"** → Necesitás más histórico de ventas
 
 ### **📞 ¿Necesitás ayuda?**

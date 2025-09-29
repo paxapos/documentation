@@ -1,7 +1,7 @@
 # Preguntas Frecuentes
 <div id="preguntas-frecuentes"></div>
 
-Esta sección contiene las consultas más comunes sobre el sistema gastronómico y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
+Esta sección contiene las consultas más comunes sobre {{BRAND_NAME}} y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
 
 ---
 
@@ -129,7 +129,7 @@ Esta sección contiene las consultas más comunes sobre el sistema gastronómico
 1. **Verificar asignación:** En *Productos → [Tu producto] → Editar* asegurate de tener asignada la variante en **"Asignar Variante"**.
 2. **Revisar opciones:** Cada opción de la variante debe estar vinculada a un producto del Maestro (subproducto o producto en venta).
 3. **Probar desde el menú:** Ve al módulo de ventas y verificá que al seleccionar el producto aparezcan las opciones.
-4. **Reiniciar menú:** Cerrá y volvé a abrir el sistema de ventas.
+4. **Reiniciar menú:** Cerrá y volvé a abrir {{BRAND_NAME}}.
 
 ---
 
@@ -158,8 +158,8 @@ Esta sección contiene las consultas más comunes sobre el sistema gastronómico
 
 ---
 
-### 11. **El sistema funciona lento en mi configuración**
-<div id="sistema-lento"></div>
+### 11. **{{BRAND_NAME}} funciona lento en mi configuración**
+<div id="software-lento"></div>
 
 **Problema:** La plataforma tarda mucho en cargar o responder.
 

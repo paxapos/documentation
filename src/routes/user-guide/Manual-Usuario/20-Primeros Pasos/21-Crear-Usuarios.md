@@ -3,7 +3,7 @@
 <div id="crear-usuarios"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Vas a crear las cuentas para que tu equipo (mozos, cajeros, cocineros) pueda usar el sistema. Cada persona tendrá su usuario y contraseña personal.
+> Vas a crear las cuentas para que tu equipo (mozos, cajeros, cocineros) pueda usar {{BRAND_NAME}}. Cada persona tendrá su usuario y contraseña personal.
 
 ## 🔴 **MUY IMPORTANTE - La "P" roja**
 
@@ -103,7 +103,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 Una vez configurado, los mozos van a poder:
 1. En la pantalla de login, elegir **"Ingresar con PIN"**
 2. Escribir el PIN (ejemplo: **1111**)
-3. ¡Listo! Ya están dentro del sistema
+3. ¡Listo! Ya están dentro de {{BRAND_NAME}}
 
 ### **💡 Consejos para el PIN**
 - ✅ **Usá un PIN fácil de recordar** pero no obvio (evitá 0000 o 1234)

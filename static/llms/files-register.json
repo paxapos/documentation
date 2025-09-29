@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-09-23T19:06:36.168Z",
+  "generated_at": "2025-09-29T20:30:15.544Z",
   "total_files": 23,
   "files": [
     "11-introduccion.txt",
@@ -31,139 +31,139 @@
       "txt_file": "11-introduccion.txt",
       "original_md": "11-Introduccion",
       "title": "Introduccion",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\10-Comenzamos\\11-Introduccion.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/10-Comenzamos/11-Introduccion.md"
     },
     {
       "txt_file": "12-iniciar-sesion.txt",
       "original_md": "12-Iniciar-sesión",
       "title": "Iniciar sesión",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\10-Comenzamos\\12-Iniciar-sesión.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/10-Comenzamos/12-Iniciar-sesión.md"
     },
     {
       "txt_file": "21-crear-usuarios.txt",
       "original_md": "21-Crear-Usuarios",
       "title": "Crear Usuarios",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\20-Primeros Pasos\\21-Crear-Usuarios.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/21-Crear-Usuarios.md"
     },
     {
       "txt_file": "22-tipos-de-pago.txt",
       "original_md": "22-Tipos-De-Pago",
       "title": "Tipos De Pago",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\20-Primeros Pasos\\22-Tipos-De-Pago.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/22-Tipos-De-Pago.md"
     },
     {
       "txt_file": "23-agregar-personal.txt",
       "original_md": "23-Agregar-Personal",
       "title": "Agregar Personal",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\20-Primeros Pasos\\23-Agregar-Personal.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/23-Agregar-Personal.md"
     },
     {
       "txt_file": "24-configuracion-de-impresoras.txt",
       "original_md": "24-Configuración-de-Impresoras",
       "title": "Configuración de Impresoras",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\20-Primeros Pasos\\24-Configuración-de-Impresoras.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/24-Configuración-de-Impresoras.md"
     },
     {
       "txt_file": "25-menu.txt",
       "original_md": "25-Menú",
       "title": "Menú",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\20-Primeros Pasos\\25-Menú.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/25-Menú.md"
     },
     {
       "txt_file": "32-salon.txt",
       "original_md": "32-Salón",
       "title": "Salón",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\32-Salón.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/32-Salón.md"
     },
     {
       "txt_file": "33-kitchen-display-system-kds.txt",
       "original_md": "33-Kitchen-Display-System-(KDS)",
       "title": "Kitchen Display System (KDS)",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\33-Kitchen-Display-System-(KDS).md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/33-Kitchen-Display-System-(KDS).md"
     },
     {
       "txt_file": "34-contabilidad.txt",
       "original_md": "34-Contabilidad",
       "title": "Contabilidad",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\34-Contabilidad.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/34-Contabilidad.md"
     },
     {
       "txt_file": "35-arqueos.txt",
       "original_md": "35-Arqueos",
       "title": "Arqueos",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\35-Arqueos.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/35-Arqueos.md"
     },
     {
       "txt_file": "36-compras-y-stock.txt",
       "original_md": "36-Compras-y-Stock",
       "title": "Compras y Stock",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\36-Compras-y-Stock.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/36-Compras-y-Stock.md"
     },
     {
       "txt_file": "37-arca-y-facturacion.txt",
       "original_md": "37-ARCA-y-Facturación",
       "title": "ARCA y Facturación",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\37-ARCA-y-Facturación.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/37-ARCA-y-Facturación.md"
     },
     {
       "txt_file": "38-estadisticas.txt",
       "original_md": "38-Estadísticas",
       "title": "Estadísticas",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\38-Estadísticas.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/38-Estadísticas.md"
     },
     {
       "txt_file": "39-business-intelligence.txt",
       "original_md": "39-Business-Intelligence",
       "title": "Business Intelligence",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\30-Módulos Principales\\39-Business-Intelligence.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/39-Business-Intelligence.md"
     },
     {
       "txt_file": "41-biblioteca-de-drivers.txt",
       "original_md": "41-Biblioteca-de-Drivers",
       "title": "Biblioteca de Drivers",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\41-Biblioteca-de-Drivers.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/41-Biblioteca-de-Drivers.md"
     },
     {
       "txt_file": "42-sam4s-giant-100.txt",
       "original_md": "42-Sam4s-Giant-100",
       "title": "Sam4s Giant 100",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\42-Sam4s-Giant-100.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/42-Sam4s-Giant-100.md"
     },
     {
       "txt_file": "43-citizen-ct-s310ii.txt",
       "original_md": "43-citizen-ct-s310II",
       "title": "citizen ct s310II",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\43-citizen-ct-s310II.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/43-citizen-ct-s310II.md"
     },
     {
       "txt_file": "44-epson-tm-t20.txt",
       "original_md": "44-Epson-TM-T20",
       "title": "Epson TM T20",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\44-Epson-TM-T20.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/44-Epson-TM-T20.md"
     },
     {
       "txt_file": "45-drivers-genericos.txt",
       "original_md": "45-Drivers-Genericos",
       "title": "Drivers Genericos",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\45-Drivers-Genericos.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/45-Drivers-Genericos.md"
     },
     {
       "txt_file": "46-epson-tm-t88.txt",
       "original_md": "46-Epson-TM-T88",
       "title": "Epson TM T88",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\40-Biblioteca-de-Drivers\\46-Epson-TM-T88.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/40-Biblioteca-de-Drivers/46-Epson-TM-T88.md"
     },
     {
       "txt_file": "51-preguntas-frecuentes.txt",
       "original_md": "51-Preguntas-Frecuentes",
       "title": "Preguntas Frecuentes",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\50-Extra\\51-Preguntas-Frecuentes.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/50-Extra/51-Preguntas-Frecuentes.md"
     },
     {
       "txt_file": "52-buchon-bot.txt",
       "original_md": "52-Buchón-Bot",
       "title": "Buchón Bot",
-      "generated_from": "C:\\Users\\gaysa\\Desktop\\proyecto\\documentation\\src\\routes\\user-guide\\Manual-Usuario\\50-Extra\\52-Buchón-Bot.md"
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/50-Extra/52-Buchón-Bot.md"
     }
   ]
 }
