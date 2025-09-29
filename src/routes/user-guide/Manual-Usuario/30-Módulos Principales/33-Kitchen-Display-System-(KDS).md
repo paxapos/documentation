@@ -31,7 +31,7 @@
 ## 📊 **Organización inteligente de pedidos**
 
 ### **🏷️ Ruteo automático por estación:**
-El sistema puede separar los pedidos:
+{{BRAND_NAME}} puede separar los pedidos:
 
 **🏭 Estaciones de trabajo:**
 
@@ -77,7 +77,7 @@ El sistema puede separar los pedidos:
 1. **Pantalla o tablet** para la cocina
 2. **Conexión a internet** estable
 3. **Navegador web**
-4. **Mozos configurados** en el sistema
+4. **Mozos configurados** en {{BRAND_NAME}}
 
 ### **⚙️ Pasos para activar:**
 1. Acceder al módulo **"KDS"** desde el menú principal

@@ -3,7 +3,7 @@
 <div id="agregar-personal"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Vas a registrar a tus mozos, meseros y vendedores en el sistema. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
+> Vas a registrar a tus mozos, meseros y vendedores en {{BRAND_NAME}}. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
 
 ## 🔴 **RECORDATORIO - La P roja**
 

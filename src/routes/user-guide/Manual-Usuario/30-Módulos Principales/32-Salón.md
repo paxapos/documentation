@@ -33,7 +33,7 @@
 Una vez que tenés la mesa creada, aparecen estas opciones:
 
 ### **📋 1. Agregar Productos (Tomar pedido)**
-- **Qué hace:** Abre el sistema de ventas para cargar el pedido
+- **Qué hace:** Abre {{BRAND_NAME}} para cargar el pedido
 - **Cuándo usarlo:** Cuando el cliente quiere pedir comida/bebida
 - **Cómo:** Hacé clic en **"Agregar Productos"**
 

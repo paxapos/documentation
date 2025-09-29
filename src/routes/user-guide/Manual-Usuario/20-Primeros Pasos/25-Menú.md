@@ -349,7 +349,7 @@ Variante: "Tipos"
 ## 📂 **Funciones adicionales**
 
 ### **🗂️ Productos Duplicados**
-Esta sección te permite visualizar y gestionar cualquier producto que el sistema identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
+Esta sección te permite visualizar y gestionar cualquier producto que {{BRAND_NAME}} identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
 
 ### **🏷️ Gestión de Categorías**
 Podés crear distintas categorías para agrupar tus productos y dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.

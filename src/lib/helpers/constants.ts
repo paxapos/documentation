@@ -1,5 +1,5 @@
 
-import { replacePaxaPOS } from './textReplacer';
+import { replaceWithVariables } from './textReplacer';
 
 // No hay configuraciones de características necesarias
 
@@ -210,9 +210,9 @@ export async function searchContent(query: string, limit: number = 4): Promise<S
 				...item, 
 				score, 
 				preview,
-				title: replacePaxaPOS(item.title),
-				type: replacePaxaPOS(item.type),
-				content: item.content ? replacePaxaPOS(item.content) : undefined
+				title: replaceWithVariables(item.title),
+				type: replaceWithVariables(item.type),
+				content: item.content ? replaceWithVariables(item.content) : undefined
 			});
 		}
 	}

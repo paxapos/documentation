@@ -2,11 +2,11 @@
 <div id="iniciar-sesion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de nuestro software.
+> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de {{BRAND_NAME}}.
 
 ## 📍 **Paso 1: Ingresá a la página web**
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: [**beta.paxapos.com**](https://beta.paxapos.com)
+2. En la barra de direcciones, escribí: [**{{SYSTEM_URL}}**](https://{{SYSTEM_URL}})
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
@@ -17,7 +17,6 @@ Vas a ver una pantalla de ingreso como esta:
 
 ```
 ┌─────────────────────────────┐
-│        🏪 Software          │
 │                             │
 │  Usuario: [____________]    │
 │                             │
@@ -47,7 +46,7 @@ Si los datos son correctos, vas a ingresar al **panel principal** donde podés e
 ### **¿Cómo funciona?**
 1. En la pantalla de login, visualiza la opción **"Ingresar con PIN"**
 2. Escribí el **PIN** que te dió tu administrador (ejemplo: 1111)
-3. ¡Listo! Ya estás dentro del sistema
+3. ¡Listo! Ya estás dentro de {{BRAND_NAME}}
 
 ### **¿Para quién está pensado esto?**
 - ✅ **Mozos** que cambian de turno frecuentemente

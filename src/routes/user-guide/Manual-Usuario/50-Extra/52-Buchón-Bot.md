@@ -49,7 +49,7 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ### **📲 Paso 1: Conectar Telegram**
 1. **Abrir Telegram** en tu celular
-2. **Buscar el bot** del sistema (te lo da soporte técnico)
+2. **Buscar el bot** de {{BRAND_NAME}} (te lo da soporte técnico)
 3. **Escribir /start** para activarlo
 4. **Copiar tu Chat ID** (aparece automáticamente)
 
