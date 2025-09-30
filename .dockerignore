@@ -1,6 +1,4 @@
-# ==========================================
-# 🚫 DOCKERIGNORE PARA OPTIMIZAR BUILD
-# ==========================================
+
 
 # Dependencias
 node_modules/
@@ -9,7 +7,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-build/
+# build/               # Comentado para permitir uso del build generado
 dist/
 .output/
 .svelte-kit/
