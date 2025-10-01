@@ -44,6 +44,9 @@
             // Corregir rutas de imágenes
             htmlContent = fixImagePaths(htmlContent);
             
+            // Envolver tablas para responsive
+            htmlContent = wrapTablesForResponsive(htmlContent);
+            
             // Manejar highlighting si existe el parámetro
             const urlParams = new URLSearchParams($page.url.search);
             const highlightParam = urlParams.get('highlight');
@@ -132,6 +135,16 @@
                 return `<img${beforeSrc} src="${newSrc}"${afterSrc}>`;
             }
             return match;
+        });
+    }
+
+    // Función para envolver tablas en un contenedor responsive
+    function wrapTablesForResponsive(html: string): string {
+        // Buscar todas las tablas que no estén ya envueltas
+        const tableRegex = /<table(?![^>]*class[^>]*table-wrapper)[^>]*>[\s\S]*?<\/table>/gi;
+        
+        return html.replace(tableRegex, (match) => {
+            return `<div class="table-wrapper">${match}</div>`;
         });
     }
 
