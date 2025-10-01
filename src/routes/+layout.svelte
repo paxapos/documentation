@@ -22,8 +22,10 @@
 	<Navigation/>
 
 	<!-- Main content -->
-	<main class="bg-white dark:bg-gray-900">
-		{@render children()}
+	<main class="bg-white dark:bg-gray-900 w-full max-w-full overflow-x-hidden">
+		<div class="w-full mx-auto max-w-7xl px-0 sm:px-4 lg:px-8">
+			{@render children()}
+		</div>
 	</main>
 
 	<!-- ChatBot simple y optimizado -->
@@ -40,5 +42,24 @@
 	/* Modo oscuro */
 	:global(.dark .markdown-content) {
 		color: rgb(209 213 219); /* gray-300 */
+	}
+	
+	/* Eliminar márgenes laterales en móvil */
+	@media (max-width: 640px) {
+		main {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+		
+		main > div {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			max-width: 100% !important;
+			width: 100% !important;
+		}
 	}
 </style>
