@@ -20,14 +20,14 @@
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.paxapos.com/" />
+	<meta property="og:url" content="https://doc.paxapos.com/" />
 	<meta property="og:title" content="PaxaPOS - Manual de Usuario" />
 	<meta property="og:description" content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso." />
 	<meta property="og:site_name" content="PaxaPOS Documentation" />
 	
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://docs.paxapos.com/" />
+	<meta property="twitter:url" content="https://doc.paxapos.com/" />
 	<meta property="twitter:title" content="PaxaPOS - Manual de Usuario" />
 	<meta property="twitter:description" content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso." />
 	
@@ -38,11 +38,11 @@
 			"@type": "TechArticle",
 			"name": "PaxaPOS - Manual de Usuario",
 			"description": "Manual de usuario completo para aprender a utilizar PaxaPOS paso a paso",
-			"url": "https://docs.paxapos.com/",
+			"url": "https://doc.paxapos.com/",
 			"publisher": {
 				"@type": "Organization",
 				"name": "PaxaPOS",
-				"url": "https://docs.paxapos.com/"
+				"url": "https://doc.paxapos.com/"
 			},
 			"datePublished": "2024-01-01",
 			"dateModified": "2025-09-23"
