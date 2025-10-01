@@ -234,17 +234,27 @@ body {
 
 /* === TABLAS SIMPLES (SIN RESPONSIVIDAD) === */
 
+/* Contenedor wrapper para tablas responsive */
+.markdown-paxapos .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: clamp(16px, 4vw, 24px) 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
 /* Tablas básicas para casos donde aún aparezcan */
 .markdown-paxapos table {
   border-collapse: collapse;
   width: 100%;
-  margin: clamp(16px, 4vw, 24px) 0;
+  margin: 0; /* Remove margin since wrapper handles it */
   background: rgb(255 255 255); /* bg-white */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow-sm */
   border: 1px solid rgb(229 231 235); /* gray-200 */
   font-size: 0.875rem;
+  min-width: 100%;
 }
 
 .markdown-paxapos th,
@@ -505,20 +515,20 @@ body {
   }
   
   /* Tablas responsive */
-  .markdown-paxapos table {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+  .markdown-paxapos .table-wrapper {
+    margin: 0.75rem 0;
+    border-radius: 6px;
   }
   
-  .markdown-paxapos thead,
-  .markdown-paxapos tbody,
-  .markdown-paxapos tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  .markdown-paxapos table {
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .markdown-paxapos th,
+  .markdown-paxapos td {
+    padding: 6px 8px;
+    font-size: 0.75rem;
   }
   
   /* Imágenes responsive */
@@ -567,6 +577,23 @@ body {
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 0.5rem;
+  }
+  
+  /* Tablas en pantallas muy pequeñas */
+  .markdown-paxapos .table-wrapper {
+    margin: 0.5rem 0;
+    border-radius: 4px;
+  }
+  
+  .markdown-paxapos table {
+    font-size: 0.6875rem; /* 11px */
+    border-radius: 4px;
+  }
+  
+  .markdown-paxapos th,
+  .markdown-paxapos td {
+    padding: 4px 6px;
+    font-size: 0.6875rem;
   }
 }
 
