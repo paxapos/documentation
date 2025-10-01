@@ -22,17 +22,64 @@ html.dark {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Mejoras para el contenedor global y centrado móvil */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px; /* Prevenir zoom en iOS */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Contenedor responsive mejorado */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 641px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 /* Estilos base para modo claro */
 .markdown-paxapos {
-    padding: clamp(1rem, 4vw, 1.5rem);
-    margin-top: clamp(1rem, 3vw, 1.875rem);
-    margin-bottom: clamp(1rem, 3vw, 1.875rem);
+    padding: clamp(0.75rem, 3vw, 1.5rem);
+    margin-top: clamp(0.5rem, 2vw, 1.875rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1.875rem);
     background: transparent; /* Fondo transparente para heredar del contenedor */
     color: rgb(34 34 34); /* gray-800 para modo claro */
     border-radius: 8px;
     /* Sin sombra por defecto para integración más suave */
     line-height: 1.6;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .markdown-paxapos h1 {
@@ -348,5 +395,195 @@ html.dark {
   
   .markdown-paxapos hr {
     border-color: rgb(75 85 99 / 0.4);
+  }
+}
+
+/* ==========================================
+ * MEJORAS RESPONSIVE MÓVIL - CENTRADO Y LAYOUT
+ * ========================================== */
+
+/* Mejoras específicas para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Asegurar contenido centrado en móvil */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedor principal mobile-first */
+  main {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedor interno centrado */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mejoras para markdown container */
+  .markdown-paxapos {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Títulos optimizados para móvil */
+  .markdown-paxapos h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    word-break: break-word;
+  }
+  
+  .markdown-paxapos h2 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
+  }
+  
+  .markdown-paxapos h3 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Párrafos móvil */
+  .markdown-paxapos p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Listas móvil */
+  .markdown-paxapos ul,
+  .markdown-paxapos ol {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .markdown-paxapos li {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    word-wrap: break-word;
+  }
+  
+  /* Código móvil */
+  .markdown-paxapos pre {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .markdown-paxapos code {
+    font-size: 0.75rem;
+    padding: 2px 4px;
+  }
+  
+  /* Tablas responsive */
+  .markdown-paxapos table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .markdown-paxapos thead,
+  .markdown-paxapos tbody,
+  .markdown-paxapos tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  /* Imágenes responsive */
+  .markdown-paxapos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.75rem auto;
+  }
+  
+  /* Elementos interactivos móviles */
+  button,
+  [role="button"],
+  input,
+  textarea {
+    min-height: 44px; /* iOS touch target minimum */
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .markdown-paxapos {
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .markdown-paxapos h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .markdown-paxapos h2 {
+    font-size: 1.125rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.375rem;
+  }
+  
+  .markdown-paxapos p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mejoras para dispositivos con hover limitado (touch) */
+@media (hover: none) and (pointer: coarse) {
+  /* Elementos clickeables más grandes */
+  .btn,
+  .link,
+  [role="button"] {
+    padding: 12px 16px;
+    margin: 4px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Eliminar efectos hover problemáticos en touch */
+  .markdown-paxapos a:hover {
+    color: inherit;
   }
 }

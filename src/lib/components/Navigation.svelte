@@ -94,11 +94,11 @@
 
 <!-- Search Navigation -->
 <nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm dark:border-gray-700 dark:bg-gray-900/80">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="flex h-16 items-center justify-between">
+	<div class="mx-auto max-w-7xl px-0 sm:px-4 lg:px-8 w-full">
+		<div class="flex h-16 items-center justify-between w-full px-4 sm:px-0">
 			<!-- Logo/Title -->
-			<div class="flex-shrink-0">
-				<a href="{base}/user-guide" class="text-xl font-bold text-gray-900 dark:text-white">
+			<div class="flex-shrink-0 min-w-0">
+				<a href="{base}/user-guide" class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white truncate">
 					📚 Centro de Documentación
 				</a>
 			</div>
@@ -214,10 +214,10 @@
 			</div>
 
 			<!-- Mobile Search Button -->
-			<div class="md:hidden">
+			<div class="md:hidden flex items-center">
 				<button
 					type="button"
-					class="inline-flex items-center justify-center rounded-xl p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-gray-400"
+					class="inline-flex items-center justify-center rounded-xl p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-gray-400 min-h-[44px] min-w-[44px]"
 					on:click={toggleMobileSearch}
 				>
 					<span class="sr-only">Buscar</span>
@@ -235,13 +235,13 @@
 
 		<!-- Mobile Search (Solo visible cuando se presiona el icono) -->
 		{#if showMobileSearch}
-			<div class="md:hidden pb-4 animate-in slide-in-from-top-2 duration-200">
-				<div class="relative">
+			<div class="md:hidden pb-4 px-0 animate-in slide-in-from-top-2 duration-200">
+				<div class="relative w-full">
 					<input
 						bind:this={searchInputMobile}
 						type="text"
 						placeholder="Buscar en el manual..."
-						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-gray-900 placeholder-gray-500 focus:border-transparent focus:ring-2 focus:ring-blue-500 shadow-sm dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-gray-900 placeholder-gray-500 focus:border-transparent focus:ring-2 focus:ring-blue-500 shadow-sm dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 text-base"
 						bind:value={searchQuery}
 						on:input={handleSearch}
 						on:focus={handleSearchFocus}
