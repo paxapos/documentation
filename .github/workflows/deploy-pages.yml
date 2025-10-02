@@ -41,6 +41,9 @@ jobs:
         run: pnpm run build
         env:
           NODE_ENV: production
+          PUBLIC_BRAND_NAME: ${{ vars.PUBLIC_BRAND_NAME || 'PaxaPOS' }}
+          PUBLIC_SYSTEM_URL: ${{ vars.PUBLIC_SYSTEM_URL || 'beta.paxapos.com' }}
+          PUBLIC_COMPANY_NAME: ${{ vars.PUBLIC_COMPANY_NAME }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
