@@ -9,7 +9,9 @@
 
 ## 📦 **Drivers Disponibles**
 
-### **🏷️ Marcas Específicas**
+### **🏷️ Drivers con Guía Completa**
+
+> 📚 **Estos modelos incluyen documentación paso a paso detallada:**
 
 | 🏭 **Fabricante** | 📱 **Modelo** | 🖥️ **Windows** | 📋 **Manual** |
 |-------------------|---------------|-----------------|----------------|
@@ -18,6 +20,22 @@
 | **EPSON** | TM-T20/T20II/T20III | 7/8/10/11 | [📄 Ver Guía](/user-guide/epson-tm-t20) |
 | **EPSON** | TM-T88V | 7/8/10/11 | [📄 Ver Guía](/user-guide/epson-tm-t88v) |
 | **Genérico POS** | 80mm / 58mm | 7/8/10/11 | [📄 Ver Guía](/user-guide/drivers-genericos) |
+
+---
+
+### **⬇️ Descarga Directa de Drivers**
+
+> 💾 **Drivers disponibles para descarga inmediata sin guía paso a paso:**
+
+| 🏭 **Fabricante** | 📱 **Modelo** | 🖥️ **Windows** | ⬇️ **Descarga** |
+|-------------------|---------------|-----------------|-----------------|
+| **3nStar** | LTT214 | 7/8/10/11 | [⬇️ Descargar](/drivers/3nstar/LTT214.zip) |
+| **3nStar** | RPT005 | 7/8/10/11 | [⬇️ Descargar](/drivers/3nstar/RPT005.zip) |
+| **3nStar** | RPT006w | 7/8/10/11 | [⬇️ Descargar](/drivers/3nstar/RPT006w.zip) |
+| **HASAR** | 85E | 7/8/10/11 | [⬇️ Descargar](/drivers/hasar/85E.zip) |
+| **HASAR** | 180 | 7/8/10/11 | [⬇️ Descargar](/drivers/hasar/HASAR-180.zip) |
+| **HASAR** | 181 | 7/8/10/11 | [⬇️ Descargar](/drivers/hasar/HASAR-181.zip) |
+| **HASAR** | 250 | 7/8/10/11 | [⬇️ Descargar](/drivers/hasar/HASAR-250.zip) |
 
 ---
 
@@ -52,7 +70,7 @@
 | **🖨️ Probar** | Realiza una impresión de prueba |
 | **⚙️ Configurar** | Ajusta la configuración |
 
-> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/configuracion-impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
+> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/configuracion-de-impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
 
 ---
 
