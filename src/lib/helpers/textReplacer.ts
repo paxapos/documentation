@@ -1,8 +1,22 @@
 import { writable, derived, get } from 'svelte/store';
+import { browser } from '$app/environment';
 
-const REPLACEMENT_WORD = "PaxaPOS";
-const DEFAULT_SYSTEM_URL = "beta.paxapos.com";
-// const DEFAULT_COMPANY_NAME = "Tu Empresa"; // Opcional: descomenta para usar nombre de empresa
+// Función para obtener configuración de runtime
+function getConfig() {
+    if (browser && typeof window !== 'undefined' && (window as any).__APP_CONFIG__) {
+        return (window as any).__APP_CONFIG__;
+    }
+    return {
+        BRAND_NAME: 'PaxaPOS',
+        SYSTEM_URL: 'beta.paxapos.com',
+        COMPANY_NAME: ''
+    };
+}
+
+const config = getConfig();
+const REPLACEMENT_WORD = config.BRAND_NAME || "PaxaPOS";
+const DEFAULT_SYSTEM_URL = config.SYSTEM_URL || "beta.paxapos.com";
+// const DEFAULT_COMPANY_NAME = config.COMPANY_NAME || "Tu Empresa"; // Opcional: descomenta para usar nombre de empresa
 
 export const brandName = writable(REPLACEMENT_WORD);
 export const systemUrl = writable(DEFAULT_SYSTEM_URL);

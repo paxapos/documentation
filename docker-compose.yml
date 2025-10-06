@@ -1,67 +1,124 @@
-
-
 services:
-  documentation:
-    image: paxapos-docs-secure:2.0
+  # PaxaPOS (paxapos.com) - Puerto 3000
+  paxapos-docs:
+    image: yoalevilar/paxapos-docs:latest
     container_name: paxapos-docs
     restart: unless-stopped
-    ports:
-      - "${DOCS_PORT:-3000}:8080"
+    
+    # Variables de entorno para PaxaPOS
     environment:
-      - NODE_ENV=production
-      - TZ=America/Argentina/Buenos_Aires
-      - NGINX_WORKER_PROCESSES=auto
-    networks:
-      - paxapos-network
+      - BRAND_NAME=PaxaPOS
+      - SYSTEM_URL=beta.paxapos.com
+      - COMPANY_NAME=PaxaPOS
+    
+    ports:
+      - "3000:8080"
+    
+    networks: 
+      - web
+    
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
+    
     labels:
+      # Traefik - Router principal
       - "traefik.enable=true"
-      - "traefik.http.routers.docs.rule=Host(`docs.paxapos.local`)"
-      - "traefik.http.routers.docs.entrypoints=web"
-      - "traefik.http.services.docs.loadbalancer.server.port=8080"
-    volumes:
-      - docs-logs:/var/log/nginx:rw
+      - "traefik.http.routers.paxapos-docs.rule=Host(`paxapos.com`) || Host(`www.paxapos.com`)"
+      - "traefik.http.routers.paxapos-docs.entrypoints=websecure"
+      - "traefik.http.routers.paxapos-docs.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.paxapos-docs-service.loadbalancer.server.port=8080"
+      
+      # Middleware - Redirect www a non-www
+      - "traefik.http.middlewares.paxapos-redirect-www.redirectregex.regex=^https://www\\.paxapos\\.com/(.*)"
+      - "traefik.http.middlewares.paxapos-redirect-www.redirectregex.replacement=https://paxapos.com/$${1}"
+      - "traefik.http.middlewares.paxapos-redirect-www.redirectregex.permanent=true"
+      
+      # Security headers
+      - "traefik.http.middlewares.paxapos-security-headers.headers.customResponseHeaders.X-Frame-Options=DENY"
+      - "traefik.http.middlewares.paxapos-security-headers.headers.customResponseHeaders.X-Content-Type-Options=nosniff"
+      - "traefik.http.middlewares.paxapos-security-headers.headers.customResponseHeaders.X-XSS-Protection=1; mode=block"
+      - "traefik.http.middlewares.paxapos-security-headers.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.paxapos-security-headers.headers.stsIncludeSubdomains=true"
+      
+      # Apply middlewares
+      - "traefik.http.routers.paxapos-docs.middlewares=paxapos-redirect-www,paxapos-security-headers"
+    
     security_opt:
       - no-new-privileges:true
-    read_only: true
+    
+    read_only: false
+    
     tmpfs:
-      - /tmp:noexec,nosuid,size=100m
-      - /var/cache/nginx:noexec,nosuid,size=50m
-      - /var/run:noexec,nosuid,size=10m
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
 
-  # Servicio de desarrollo (opcional)
-  dev:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-    container_name: paxapos-docs-dev
-    profiles:
-      - dev
-    ports:
-      - "${DEV_PORT:-5173}:5173"
+  # RestoDigital (restodigital.com.ar) - Puerto 3001
+  restodigital-docs:
+    image: yoalevilar/paxapos-docs:latest
+    container_name: restodigital-docs
+    restart: unless-stopped
+    
+    # Variables de entorno para RestoDigital
     environment:
-      - NODE_ENV=development
-      - VITE_HMR_PORT=5173
-    volumes:
-      - .:/app:cached
-      - node_modules:/app/node_modules
-    command: npm run dev
+      - BRAND_NAME=RestoDigital
+      - SYSTEM_URL=restodigital.com.ar
+      - COMPANY_NAME=RestoDigital Argentina
+    
+    ports:
+      - "3001:8080"
+    
     networks:
-      - paxapos-network
+      - web
+    
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    labels:
+      # Traefik - Router principal
+      - "traefik.enable=true"
+      - "traefik.http.routers.restodigital-docs.rule=Host(`restodigital.com.ar`) || Host(`www.restodigital.com.ar`)"
+      - "traefik.http.routers.restodigital-docs.entrypoints=websecure"
+      - "traefik.http.routers.restodigital-docs.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.restodigital-docs-service.loadbalancer.server.port=8080"
+      
+      # Middleware - Redirect www a non-www
+      - "traefik.http.middlewares.restodigital-redirect-www.redirectregex.regex=^https://www\\.restodigital\\.com\\.ar/(.*)"
+      - "traefik.http.middlewares.restodigital-redirect-www.redirectregex.replacement=https://restodigital.com.ar/$${1}"
+      - "traefik.http.middlewares.restodigital-redirect-www.redirectregex.permanent=true"
+      
+      # Security headers
+      - "traefik.http.middlewares.restodigital-security-headers.headers.customResponseHeaders.X-Frame-Options=DENY"
+      - "traefik.http.middlewares.restodigital-security-headers.headers.customResponseHeaders.X-Content-Type-Options=nosniff"
+      - "traefik.http.middlewares.restodigital-security-headers.headers.customResponseHeaders.X-XSS-Protection=1; mode=block"
+      - "traefik.http.middlewares.restodigital-security-headers.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.restodigital-security-headers.headers.stsIncludeSubdomains=true"
+      
+      # Apply middlewares
+      - "traefik.http.routers.restodigital-docs.middlewares=restodigital-redirect-www,restodigital-security-headers"
+    
+    security_opt:
+      - no-new-privileges:true
+    
+    read_only: false
+    
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
 
 networks:
-  paxapos-network:
-    name: paxapos
-    driver: bridge
-
-volumes:
-  docs-logs:
-    name: paxapos-docs-logs
-  node_modules:
-    name: paxapos-docs-node-modules
+  web:
+    external: true
