@@ -37,13 +37,18 @@ jobs:
       - name: Prepare SvelteKit
         run: pnpm run prepare
 
+      - name: Generate config.js for GitHub Pages
+        run: node scripts/generate-config.mjs
+        env:
+          GITHUB_ACTIONS: true
+          PUBLIC_BRAND_NAME: ${{ vars.PUBLIC_BRAND_NAME }}
+          PUBLIC_SYSTEM_URL: ${{ vars.PUBLIC_SYSTEM_URL }}
+          PUBLIC_COMPANY_NAME: ${{ vars.PUBLIC_COMPANY_NAME }}
+
       - name: Build
         run: pnpm run build
         env:
           NODE_ENV: production
-          PUBLIC_BRAND_NAME: ${{ vars.PUBLIC_BRAND_NAME || 'PaxaPOS' }}
-          PUBLIC_SYSTEM_URL: ${{ vars.PUBLIC_SYSTEM_URL || 'beta.paxapos.com' }}
-          PUBLIC_COMPANY_NAME: ${{ vars.PUBLIC_COMPANY_NAME }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

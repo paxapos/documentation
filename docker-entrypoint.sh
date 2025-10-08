@@ -29,6 +29,16 @@ find /usr/share/nginx/html -type f -name "*.html" -exec sed -i \
     -e "s|__COMPANY_NAME__|$COMPANY_NAME|g" \
     {} +
 
+# Reemplazar variables en config.js (runtime configuration)
+if [ -f /usr/share/nginx/html/config.js ]; then
+    sed -i \
+        -e "s|{{BRAND_NAME}}|$BRAND_NAME|g" \
+        -e "s|{{SYSTEM_URL}}|$SYSTEM_URL|g" \
+        -e "s|{{COMPANY_NAME}}|$COMPANY_NAME|g" \
+        /usr/share/nginx/html/config.js
+    echo "✅ config.js actualizado con variables de entorno"
+fi
+
 echo "Variables de entorno aplicadas correctamente"
 
 # Iniciar nginx

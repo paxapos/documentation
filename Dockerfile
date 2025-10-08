@@ -10,6 +10,9 @@ RUN npm install
 # Copiar codigo fuente
 COPY . .
 
+# Generar config.js con placeholders para Docker
+RUN DOCKER_BUILD=true node scripts/generate-config.mjs
+
 # Build generico (sin variables de entorno)
 RUN npm run build
 

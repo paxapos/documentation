@@ -4,19 +4,31 @@ import { browser } from '$app/environment';
 // Función para obtener configuración de runtime
 function getConfig() {
     if (browser && typeof window !== 'undefined' && (window as any).__APP_CONFIG__) {
-        return (window as any).__APP_CONFIG__;
+        const config = (window as any).__APP_CONFIG__;
+        
+        // Validar que las variables no sean placeholders
+        if (config.BRAND_NAME && config.BRAND_NAME.includes('{{')) {
+            console.error('❌ ERROR: Variables de configuración no reemplazadas');
+            console.error('   Las variables aún contienen placeholders:', config);
+            console.error('   Verifica que el contenedor Docker tenga las variables de entorno definidas');
+        }
+        
+        return config;
     }
+    
+    // Si no hay config, retornar objeto vacío (forzará errores visibles)
+    console.warn('⚠️ ADVERTENCIA: window.__APP_CONFIG__ no está definido');
     return {
-        BRAND_NAME: 'PaxaPOS',
-        SYSTEM_URL: 'beta.paxapos.com',
+        BRAND_NAME: '',
+        SYSTEM_URL: '',
         COMPANY_NAME: ''
     };
 }
 
 const config = getConfig();
-const REPLACEMENT_WORD = config.BRAND_NAME || "PaxaPOS";
-const DEFAULT_SYSTEM_URL = config.SYSTEM_URL || "beta.paxapos.com";
-// const DEFAULT_COMPANY_NAME = config.COMPANY_NAME || "Tu Empresa"; // Opcional: descomenta para usar nombre de empresa
+const REPLACEMENT_WORD = config.BRAND_NAME || "{{BRAND_NAME}}";
+const DEFAULT_SYSTEM_URL = config.SYSTEM_URL || "{{SYSTEM_URL}}";
+// const DEFAULT_COMPANY_NAME = config.COMPANY_NAME || "{{COMPANY_NAME}}"; // Opcional: descomenta para usar nombre de empresa
 
 export const brandName = writable(REPLACEMENT_WORD);
 export const systemUrl = writable(DEFAULT_SYSTEM_URL);
