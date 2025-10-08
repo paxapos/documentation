@@ -23,7 +23,7 @@ const config = {
                 '/api/llm/crear-usuarios',
                 '/api/llm/tipos-de-pago',
                 '/api/llm/agregar-personal',
-                '/api/llm/configuracion-impresoras',
+                '/api/llm/configuracion-de-impresoras',
                 '/api/llm/menu',
                 '/api/llm/salon',
                 '/api/llm/kds',
@@ -32,6 +32,14 @@ const config = {
                 '/api/llm/compras-stock',
                 '/api/llm/arca-facturacion',
                 '/api/llm/estadisticas',
+                '/api/llm/business-intelligence',
+                '/api/llm/biblioteca-de-drivers',
+                '/api/llm/sam4s-giant-100',
+                '/api/llm/citizen-ct-s310ii',
+                '/api/llm/epson-tm-t20',
+                '/api/llm/drivers-genericos',
+                '/api/llm/epson-tm-t88',
+                '/api/llm/preguntas-frecuentes',
                 '/api/llm/buchon-bot'
             ]
         }
