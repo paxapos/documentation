@@ -41,7 +41,7 @@ async function getSlugMapping(): Promise<Record<string, string>> {
         'crear-usuarios': '21-crear-usuarios.txt',
         'tipos-de-pago': '22-tipos-de-pago.txt',
         'agregar-personal': '23-agregar-personal.txt',
-        'configuracion-impresoras': '24-configuracion-de-impresoras.txt',
+        'configuracion-de-impresoras': '24-configuracion-de-impresoras.txt',
         'menu': '25-menu.txt',
         'salon': '32-salon.txt',
         'kds': '33-kitchen-display-system-kds.txt',
@@ -50,8 +50,15 @@ async function getSlugMapping(): Promise<Record<string, string>> {
         'compras-stock': '36-compras-y-stock.txt',
         'arca-facturacion': '37-arca-y-facturacion.txt',
         'estadisticas': '38-estadisticas.txt',
-        'preguntas-frecuentes': '52-preguntas-frecuentes.txt',
-        'buchon-bot': '51-buchon-bot.txt'
+        'business-intelligence': '39-business-intelligence.txt',
+        'biblioteca-de-drivers': '41-biblioteca-de-drivers.txt',
+        'sam4s-giant-100': '42-sam4s-giant-100.txt',
+        'citizen-ct-s310ii': '43-citizen-ct-s310ii.txt',
+        'epson-tm-t20': '44-epson-tm-t20.txt',
+        'drivers-genericos': '45-drivers-genericos.txt',
+        'epson-tm-t88': '46-epson-tm-t88.txt',
+        'preguntas-frecuentes': '51-preguntas-frecuentes.txt',
+        'buchon-bot': '52-buchon-bot.txt'
     };
 }
 

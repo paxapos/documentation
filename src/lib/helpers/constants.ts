@@ -17,10 +17,12 @@ export const searchableContent = [
 	{ title: 'Contabilidad', href: '/user-guide', type: 'Manual de Usuario', id: '34-Contabilidad' },
 	{ title: 'Arqueos', href: '/user-guide', type: 'Manual de Usuario', id: '35-Arqueos' },
 	{ title: 'Compras y Stock', href: '/user-guide', type: 'Manual de Usuario', id: '36-Compras-y-Stock' },
-	{ title: 'ARCA y Facturación', href: '/user-guide', type: 'Manual de Usuario', id: '37-AFIP-y-Facturación' },
+	{ title: 'ARCA y Facturación', href: '/user-guide', type: 'Manual de Usuario', id: '37-ARCA-y-Facturación' },
 	{ title: 'Estadísticas', href: '/user-guide', type: 'Manual de Usuario', id: '38-Estadísticas' },
-	{ title: 'Buchón Bot', href: '/user-guide', type: 'Manual de Usuario', id: '42-Buchón-Bot' },
-	{ title: 'Propina', href: '/user-guide', type: 'Manual de Usuario', id: '43-Propina' }
+	{ title: 'Business Intelligence', href: '/user-guide', type: 'Manual de Usuario', id: '39-Business-Intelligence' },
+	{ title: 'Biblioteca de Drivers', href: '/user-guide', type: 'Manual de Usuario', id: '41-Biblioteca-de-Drivers' },
+	{ title: 'Preguntas Frecuentes', href: '/user-guide', type: 'Manual de Usuario', id: '51-Preguntas-Frecuentes' },
+	{ title: 'Buchón Bot', href: '/user-guide', type: 'Manual de Usuario', id: '52-Buchón-Bot' }
 ];
 
 export const navigation = [
@@ -127,7 +129,7 @@ export const searchableContentWithContent = [
 		title: 'ARCA y Facturación', 
 		href: '/user-guide', 
 		type: 'Manual de Usuario', 
-		id: '37-AFIP-y-Facturación',
+		id: '37-ARCA-y-Facturación',
 		content: 'Mantente al día con las obligaciones fiscales a través del módulo de ARCA y facturación. Genera facturas electrónicas automáticamente, cumple con las normativas vigentes, maneja diferentes tipos de comprobantes y mantén tu situación fiscal en orden. El sistema se integra directamente con los servicios de ARCA para mayor comodidad y precisión.'
 	},
 	{ 
@@ -138,18 +140,32 @@ export const searchableContentWithContent = [
 		content: 'Toma decisiones informadas con el poderoso módulo de estadísticas. Analiza ventas por período, productos más vendidos, rendimiento del personal, horarios de mayor actividad y tendencias del negocio. Los reportes visuales y gráficos te ayudan a identificar oportunidades de crecimiento y áreas de mejora.'
 	},
 	{ 
+		title: 'Business Intelligence', 
+		href: '/user-guide', 
+		type: 'Manual de Usuario', 
+		id: '39-Business-Intelligence',
+		content: 'El módulo de Business Intelligence te proporciona análisis avanzados y visualizaciones de datos para tomar decisiones estratégicas. Incluye dashboards interactivos, reportes personalizados, análisis de tendencias y predicciones basadas en el comportamiento histórico del negocio.'
+	},
+	{ 
+		title: 'Biblioteca de Drivers', 
+		href: '/user-guide', 
+		type: 'Manual de Usuario', 
+		id: '41-Biblioteca-de-Drivers',
+		content: 'Accede a una biblioteca completa de controladores para impresoras fiscales y de comandas. Incluye drivers oficiales para marcas como Epson, SAM4S, Citizen, Hasar y más. Encuentra guías de instalación paso a paso y soluciones a problemas comunes de configuración de hardware.'
+	},
+	{ 
+		title: 'Preguntas Frecuentes', 
+		href: '/user-guide', 
+		type: 'Manual de Usuario', 
+		id: '51-Preguntas-Frecuentes',
+		content: 'Encuentra respuestas rápidas a las dudas más comunes sobre el uso del sistema. Incluye soluciones a problemas técnicos, configuraciones específicas, troubleshooting y mejores prácticas recomendadas por nuestro equipo de soporte.'
+	},
+	{ 
 		title: 'Buchón Bot', 
 		href: '/user-guide', 
 		type: 'Manual de Usuario', 
-		id: '42-Buchón-Bot',
+		id: '52-Buchón-Bot',
 		content: 'Buchón Bot es tu asistente inteligente que monitorea el funcionamiento del sistema las 24 horas. Te notifica sobre eventos importantes, irregularidades, recordatorios de tareas pendientes y alertas del sistema. Mantiene informado al personal administrativo sobre el estado general del negocio incluso cuando no están físicamente presentes.'
-	},
-	{ 
-		title: 'Propina', 
-		href: '/user-guide', 
-		type: 'Manual de Usuario', 
-		id: '43-Propina',
-		content: 'Gestiona las propinas de manera justa y transparente. El módulo de propinas permite configurar diferentes esquemas de distribución: por porcentaje, por turnos, individual o colectiva. Lleva un registro detallado de las propinas recibidas y su distribución entre el personal, asegurando equidad y motivación en el equipo de trabajo.'
 	}
 ];
 

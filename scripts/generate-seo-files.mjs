@@ -199,14 +199,14 @@ function generateAIMetadata(contentIndex) {
             focus_areas: [
                 "Restaurant management",
                 "Point of sale systems", 
-                "AFIP billing Argentina",
+                "ARCA AFIP billing Argentina",
                 "Inventory control",
                 "Kitchen display systems",
                 "Staff management"
             ],
             key_concepts: [
                 "PaxaPOS como sistema integral para restaurantes",
-                "Facturación electrónica AFIP en Argentina",
+                "Facturación electrónica ARCA (ex AFIP) en Argentina",
                 "Control de stock y inventario automático",
                 "Kitchen Display System (KDS) para cocinas",
                 "Gestión de personal y empleados",
@@ -216,7 +216,7 @@ function generateAIMetadata(contentIndex) {
             common_user_questions: [
                 "¿Cómo empezar con PaxaPOS?",
                 "¿Cómo configurar métodos de pago?",
-                "¿Cómo funciona la facturación AFIP?",
+                "¿Cómo funciona la facturación ARCA?",
                 "¿Qué es el KDS?",
                 "¿Cómo controlar el stock?",
                 "¿Cómo crear usuarios?",

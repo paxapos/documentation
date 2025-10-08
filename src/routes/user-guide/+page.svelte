@@ -109,9 +109,9 @@
                 keywords: 'contabilidad, arqueos, reportes ventas, control caja, análisis financiero'
             },
             '37-ARCA-y-Facturación': {
-                title: 'Facturación AFIP',
-                description: 'Configura la facturación electrónica con AFIP, emite comprobantes fiscales y cumple todas las normativas argentinas.',
-                keywords: 'facturación AFIP, facturación electrónica argentina, comprobantes fiscales, normativas AFIP'
+                title: 'Facturación ARCA',
+                description: 'Configura la facturación electrónica con ARCA (ex AFIP), emite comprobantes fiscales y cumple todas las normativas argentinas.',
+                keywords: 'facturación ARCA, facturación AFIP, facturación electrónica argentina, comprobantes fiscales, normativas ARCA'
             }
         };
         
