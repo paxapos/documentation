@@ -23,9 +23,9 @@ Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos 
 
 ### ** ¿Dónde está la configuración?**
 
-Clasificacion = Configuracion -> Parametros del negocio -> Clasificacion de gastos
+Clasificacion = Configuracion -> Clasificacion de gastos
 
-Proveedores = Operaciones -> Compras -> Proveedores
+Proveedores = Compras -> Proveedores
 
 ---
 

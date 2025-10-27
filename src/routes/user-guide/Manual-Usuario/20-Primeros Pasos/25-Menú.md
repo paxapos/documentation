@@ -30,7 +30,7 @@ La lista completa de **TODOS** los productos de tu negocio.
 - Incluye productos en venta, subproductos y mercaderías
 - Es como el "diccionario" de todo lo que existe
 
-#### **🛒 Productos en Venta**
+#### **🛒 Productos**
 Los que aparecen en tus menús y los clientes pueden pedir.
 - **Ejemplos:** Pizza Margarita, Coca-Cola, Helado de Vainilla
 
@@ -38,23 +38,9 @@ Los que aparecen en tus menús y los clientes pueden pedir.
 Productos que **NO se venden ni se compran**. Se usan para preparar otros productos.
 - **Ejemplos:** Salsa Fileto (se usa para hacer Pizza Napolitana)
 
-#### **📦 Mercadería**
-Todo lo que **COMPRAS** a proveedores.
-- **Ejemplos:** Tomates, Queso Mozzarella, Botella de Coca-Cola
-
 ### ⚙️ **3. Variante**
 **¿Qué es?** Un grupo de opciones que modifican un producto.
 - **Ejemplo:** Variante "Tipo de Salsa" para un plato de pasta
-
-### 🎛️ **4. Opciones de Variantes**
-**¿Qué es?** Las elecciones específicas dentro de una variante. Cada opción está vinculada a un producto del Maestro.
-
-**Ejemplos:**
-
-🔹 **Opción "Salsa Fileto"** | Vinculada al subproducto "Salsa Fileto"  
-🔹 **Opción "Coca-Cola"** | Vinculada al producto en venta "Coca-Cola"
-
-> ⚠️ **¡Importante!** Pueden ser subproductos (como salsas) o productos en venta (como bebidas)
 
 ### 🏷️ **5. Categorías**
 **¿Qué es?** Secciones para organizar los productos en tus menús. Pueden tener subsecciones (como un árbol).
@@ -99,15 +85,26 @@ Menú Principal
 ## 📋 **Paso a paso - Configurar productos en venta**
 
 ### **Paso 1: Acceder a menu**
-1. Hacé clic en **Productos**
-2. En la ventana que se abre, buscá **"Catalogo de ventas"**
-3. Hacé clic en **"Menu"**
 
-### **Paso 2: Crear un nuevo menu**
-4. Hacé clic en el botón **"Crear Menu"**
-5. Se va a abrir una ventana para completar datos
+```
+💻 INSTRUCCIONES:
+┌────────────────────────────────────────────┐
+│ 1️⃣ Presioná "+ Crear Nuevo"               │
+│ 2️⃣ Nombre sugerido: "Menú Principal"      │
+│ 3️⃣ Confirmá con "Guardar"                 │
+└────────────────────────────────────────────┘
+```
 
---- 
+> **🎯 Meta:** Crear tu primera carta digital
+
+**💡 Ideas de nombres para menús:**
+- **"Menú Principal"** → Carta completa
+- **"Menú Ejecutivo"** → Opciones rápidas  
+- **"Carta de Bebidas"** → Solo líquidos
+- **"Menú Delivery"** → Para envío
+
+---
+
 
 ### **📋 Cómo crear variantes:**
 <div id="variantes"></div>
@@ -173,26 +170,6 @@ Menú Principal
 
 ---
 
-### **� ETAPA 3** → **Creación del menú base**
-
-> **🎯 Meta:** Crear tu primera carta digital
-
-```
-💻 INSTRUCCIONES:
-┌────────────────────────────────────────────┐
-│ 1️⃣ Presioná "+ Crear Nuevo"               │
-│ 2️⃣ Nombre sugerido: "Menú Principal"      │
-│ 3️⃣ Confirmá con "Guardar"                 │
-└────────────────────────────────────────────┘
-```
-
-**💡 Ideas de nombres para menús:**
-- **"Menú Principal"** → Carta completa
-- **"Menú Ejecutivo"** → Opciones rápidas  
-- **"Carta de Bebidas"** → Solo líquidos
-- **"Menú Delivery"** → Para envío
-
----
 
 ### **�️ ETAPA 4** → **Agregando productos**
 
@@ -241,30 +218,6 @@ Menú Principal
 ```
 
 **🎊 ¡FELICITACIONES! Ya tenés tu primer producto configurado**
-
----
-
-## 📊 **Sistema de Recetas y Costos**
-
-> **💡 Herramienta avanzada:** Control de rentabilidad
-
-### **🧮 Ejemplo práctico:**
-
-```
-📋 PRODUCTO: Pizza Muzzarella
-┌─────────────────────────────────┐
-│ Ingrediente    │ Costo Individual│
-├───────────────┼─────────────────┤
-│ 🍞 Masa        │ $50             │
-│ 🍅 Salsa       │ $30             │
-│ 🧀 Muzzarella  │ $200            │
-│ 🔥 Gas/Energía │ $10             │
-├───────────────┼─────────────────┤
-│ TOTAL COSTO    │ $290            │
-│ PRECIO VENTA   │ $800            │
-│ 💰 GANANCIA    │ $510 (64%)     │
-└─────────────────────────────────┘
-```
 
 ---
 

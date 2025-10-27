@@ -92,28 +92,6 @@ Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 
 ---
 
-## 🔄 **¿Cómo usar las estadísticas en el día a día?**
-
-### **🌅 Rutina diaria (5 minutos):**
-1. **Ventas de ayer:** ¿Cumplimos objetivo?
-2. **Comparar con mismo día semana pasada**
-3. **Ver qué mozo vendió más**
-4. **Revisar tipos de pago**
-
-### **📊 Rutina semanal (15 minutos):**
-1. **Reporte de la semana completa**
-2. **Comparar con semana anterior**
-3. **Premiar al mejor mozo**
-4. **Planificar compras según ventas**
-
-### **📈 Rutina mensual (30 minutos):**
-1. **Reporte mensual completo**
-2. **Analizar gastos vs ingresos**
-3. **Ajustar precios si es necesario**
-4. **Planificar próximo mes**
-
----
-
 ## 📤 **Exportar y compartir reportes**
 
 ### **💾 Formatos disponibles:**
@@ -136,8 +114,3 @@ Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
 - **"No puedo exportar a Excel"** → Probá con períodos más cortos o contactá soporte
 - **"Los gráficos no se ven"** → Actualizá el navegador o probá en otro
 
-### **¿Para qué más sirven las estadísticas?**
-- **Préstamos bancarios** (mostrar crecimiento)
-- **Venta del negocio** (historial de ventas)
-- **Nuevos socios** (transparencia financiera)
-- **Franquicias** (replicar modelo exitoso)

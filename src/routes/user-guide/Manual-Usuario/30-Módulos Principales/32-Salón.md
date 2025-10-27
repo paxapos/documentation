@@ -9,7 +9,7 @@
 ## 📋 **Paso a paso - Atender tu primera mesa**
 
 ### **Paso 1: Acceder al Salón**
-1. En los módulos principales, buscá **"Salón"**
+1. En los módulos principales, buscá **"Ventas"**
 2. Hacé clic en **"Salón"**
 3. Vas a ver una lista con todos tus mozos
 

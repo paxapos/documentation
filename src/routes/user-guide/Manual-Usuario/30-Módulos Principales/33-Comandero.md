@@ -1,12 +1,12 @@
-# 👨‍🍳 Kitchen Display System (KDS)
-<div id="kds"></div>
+# 👨‍🍳 Comandero
+<div id="comandero"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> El KDS es una pantalla digital para la cocina que reemplaza los papeles. Los pedidos aparecen automáticamente en pantalla y los cocineros pueden marcar cuándo están listos. ¡Adiós al papel en la cocina!
+> El Comandero es una pantalla digital para la cocina que reemplaza los papeles. Los pedidos aparecen automáticamente en pantalla y los cocineros pueden marcar cuándo están listos. ¡Adiós al papel en la cocina!
 
 ---
 
-## ✨ **¿Por qué usar el KDS?**
+## ✨ **¿Por qué usar el Comandero?**
 
 ### **🆚 Antes vs Ahora:**
 
@@ -18,7 +18,7 @@
 ❌ No sabés cuánto falta  
 ❌ Comunicación confusa  
 
-**🔹 Ahora (con KDS)**  
+**🔹 Ahora (con Comandero)**  
 ✅ Todo en pantalla, no se pierde  
 ✅ Pantalla resistente  
 ✅ Letras grandes y claras  
@@ -87,7 +87,7 @@ El sistema puede separar los pedidos:
 
 ---
 
-## 📱 **¿Dónde poner la pantalla KDS?**
+## 📱 **¿Dónde poner la pantalla del Comandero?**
 
 ### **🎯 Ubicación ideal:**
 - **En la cocina** donde todos los cocineros la vean
@@ -103,7 +103,7 @@ El sistema puede separar los pedidos:
 
 ---
 
-## 💡 **Consejos para usar el KDS eficientemente**
+## 💡 **Consejos para usar el Comandero eficientemente**
 - ✅ **Capacitá a todos los cocineros** en el sistema
 - ✅ **Marcá "listo"** apenas termines cada plato
 - ✅ **Mantené la pantalla limpia** y visible

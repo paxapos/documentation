@@ -1,21 +1,21 @@
 ﻿
-# 👨‍💼 Agregar Personal
-<div id="agregar-personal"></div>
+# 👨‍💼 Agregar Empleado
+<div id="agregar-empleado"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a registrar a tus mozos, meseros y vendedores en el sistema. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
 
 ---
 
-## 📋 **Paso a paso - Agregar tu primer mozo**
+## 📋 **Paso a paso - Agregar tu primer empleado**
 
-### **Paso 1: Acceder al módulo Mozos**
-1. Hacé clic en **"Ventas"**
-2. Dentro de las opciones, buscá **operacion diaria**
-3. Hacé clic en **Mozo** 
+### **Paso 1: Acceder al módulo Empleados**
+1. Hacé clic en **"RRHH"**
+2. Dentro de las opciones, buscá **Empleados**
+3. Hacé clic en **Empleado**
 
-### **Paso 2: Crear un nuevo mozo**
-4. Hacé clic en el botón **Crear Mozo**
+### **Paso 2: Crear un nuevo empleado**
+4. Hacé clic en el botón **Crear Empleado**
 5. Se va a abrir una ventana para completar datos
 
 ### **Paso 3: Completar información del empleado**
@@ -31,20 +31,20 @@
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
 
-**Seleccionar Qué Usuarios Puede Ver tu Mozo**
+**Seleccionar Qué Usuarios Puede Ver tu empleado**
 
 **👀 Opciones de visibilidad:**
 
 **🔹 Ver todas las mesas**  
-📌 *Cuándo usarla:* Todos los mozos pueden atender cualquier mesa (Dejar todas las opciones sin marcar) 
+📌 *Cuándo usarla:* Todos los empleados pueden atender cualquier mesa (Dejar todas las opciones sin marcar) 
 📋 *Ejemplo:* Restaurante pequeño, todos ayudan
 
 **🔹 Solo sus mesas asignadas**  
-📌 *Cuándo usarla:* Cada mozo ve solo sus mesas (marcar las opciones correspondientes)
-📋 *Ejemplo:* Restaurante grande, mozos por sector
+📌 *Cuándo usarla:* Cada empleado ve solo sus mesas (marcar las opciones correspondientes)
+📋 *Ejemplo:* Restaurante grande, empleados por sector
 
 ### **Paso 5: Asignar rol**
-En **Rol de Dicho Mozo** elegí:
+En **Rol de Dicho empleado** elegí:
 
 **👥 Roles disponibles:**
 
