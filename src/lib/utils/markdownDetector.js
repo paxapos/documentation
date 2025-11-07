@@ -53,9 +53,14 @@ function categorizeByFolder(path) {
 
 // Genera SEO automáticamente basado en el contenido
 function generateSEO(title, content, slug) {
+    // Limpiar divs vacíos del contenido para SEO
+    const cleanContent = content
+        .replace(/<div\s+id="[^"]*">\s*<\/div>/g, '') // Remover divs vacíos con ID
+        .replace(/^#.+$/m, '') // Remover título principal
+        .trim();
+    
     // Extrae primeros párrafos como descripción
-    const contentWithoutTitle = content.replace(/^#.+$/m, '').trim();
-    const firstParagraph = contentWithoutTitle.split('\n\n')[0] || '';
+    const firstParagraph = cleanContent.split('\n\n')[0] || '';
     const description = firstParagraph.length > 160 
         ? firstParagraph.substring(0, 157) + '...' 
         : firstParagraph || `Guía completa sobre ${title}.`;
@@ -72,7 +77,7 @@ function generateSEO(title, content, slug) {
 
     return {
         title: `${title} - Manual`,
-        description: description.replace(/[#*]/g, '').trim(),
+        description: description.replace(/[#*<>]/g, '').trim(),
         keywords
     };
 }
