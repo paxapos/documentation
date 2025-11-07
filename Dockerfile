@@ -1,7 +1,10 @@
 # Multi-stage build
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
+
+# Actualizar npm y verificar instalación
+RUN npm install -g npm@latest patch-package && npm --version
 
 # Copiar archivos de dependencias
 COPY package*.json ./
