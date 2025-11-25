@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Generando archivos optimizados para SEO e IA...');
+console.log( 'Generando archivos optimizados para SEO e IA...');
 
 // Directorios de contenido
 const userGuideDir = path.join(__dirname, '../src/routes/user-guide/Manual-Usuario');
@@ -30,7 +30,7 @@ function getAllMdFiles(dir, basePath = '') {
     const files = [];
     
     if (!fs.existsSync(dir)) {
-        console.warn(`⚠️  Directorio no encontrado: ${dir}`);
+        console.warn(` Directorio no encontrado: ${dir}`);
         return files;
     }
     
@@ -78,7 +78,7 @@ function getTxtFiles() {
  * Generar archivo JSON con toda la estructura de contenido para AI
  */
 function generateContentIndex() {
-    console.log('📋 Generando índice de contenido...');
+    console.log(' Generando índice de contenido...');
     
     const userGuideFiles = getAllMdFiles(userGuideDir);
     const txtFiles = getTxtFiles();
@@ -122,7 +122,7 @@ function generateContentIndex() {
     // Guardar índice de contenido
     const indexPath = path.join(staticDir, 'content-index.json');
     fs.writeFileSync(indexPath, JSON.stringify(contentIndex, null, 2));
-    console.log(`✅ Índice de contenido generado: ${indexPath}`);
+    console.log(` Índice de contenido generado: ${indexPath}`);
     
     return contentIndex;
 }
@@ -146,7 +146,7 @@ function generateSEOKeywords(filename, section) {
         .replace(/-/g, ' ')
         .toLowerCase()
         .split(' ')
-        .filter(word => word.length > 2);
+       .filter(word => word.length > 2);
     
     return [...baseKeywords, ...sectionKeywords[section] || [], ...fileKeywords];
 }
@@ -155,20 +155,20 @@ function generateSEOKeywords(filename, section) {
  * Generar archivo de URLs para submitir a Google
  */
 function generateURLList(contentIndex) {
-    console.log('🔗 Generando lista de URLs...');
+    console.log(' Generando lista de URLs...');
     
     const baseURL = 'https://paxapos.github.io/documentation';
     const urls = [
         baseURL,
-        `${baseURL}/user-guide`
-    ];
+       `${baseURL}/user-guide`
+   ];
     
     // Agregar URLs de cada archivo con hash navigation
     contentIndex.sections.user_guide.files.forEach(file => {
         urls.push(`${baseURL}${file.url}`);
     });
     
-    // Agregar URLs de archivos TXT para indexación
+    // Agregar URLs e archivos TXT para indexación
     contentIndex.sections.txt_files.files.forEach(file => {
         urls.push(`${baseURL}${file.url}`);
     });
@@ -176,7 +176,7 @@ function generateURLList(contentIndex) {
     // Guardar lista de URLs
     const urlsPath = path.join(staticDir, 'urls.txt');
     fs.writeFileSync(urlsPath, urls.join('\n'));
-    console.log(`✅ Lista de URLs generada: ${urlsPath} (${urls.length} URLs)`);
+    console.log(` Lista de URLs generada: ${urlsPath} (${urls.length} URLs)`);
     
     return urls;
 }
@@ -185,7 +185,7 @@ function generateURLList(contentIndex) {
  * Generar archivo de metadatos para AI training
  */
 function generateAIMetadata(contentIndex) {
-    console.log('🤖 Generando metadatos para entrenamiento IA...');
+    console.log(' Generando metadatos para entrenamiento IA...');
     
     const aiMetadata = {
         system_name: "PaxaPOS",
@@ -234,7 +234,7 @@ function generateAIMetadata(contentIndex) {
     // Guardar metadatos para AI
     const aiPath = path.join(staticDir, 'ai-metadata.json');
     fs.writeFileSync(aiPath, JSON.stringify(aiMetadata, null, 2));
-    console.log(`✅ Metadatos IA generados: ${aiPath}`);
+    console.log(` Metadatos IA generados: ${aiPath}`);
     
     return aiMetadata;
 }
@@ -244,28 +244,28 @@ function generateAIMetadata(contentIndex) {
  */
 function main() {
     try {
-        console.log('🔍 Analizando estructura de archivos...');
+        console.log(' Analizando estructura de archivos...');
         
         const contentIndex = generateContentIndex();
         const urls = generateURLList(contentIndex);
         const aiMetadata = generateAIMetadata(contentIndex);
         
-        console.log('\n📊 Resumen de generación:');
-        console.log(`   📄 Total de archivos: ${contentIndex.total_files}`);
-        console.log(`   👤 Manual de usuario: ${contentIndex.sections.user_guide.files.length} módulos`);
-        console.log(`   � Archivos TXT: ${contentIndex.sections.txt_files.files.length} módulos`);
-        console.log(`   🔗 URLs generadas: ${urls.length}`);
-        console.log(`   🤖 Metadatos IA: ✅ Listos`);
+        console.log('\n Resumen de generación:');
+        console.log(`    Total de archivos: ${contentIndex.total_files}`);
+        console.log(`    Manual de usuario: ${contentIndex.sections.user_guide.files.length} módulos`);
+        console.log(`    Archivos TXT: ${contentIndex.sections.txt_files.files.length} módulos`);
+        console.log(`    URLs generadas: ${urls.length}`);
+        console.log(`    Metadatos IA:  Listos`);
         
-        console.log('\n🎉 ¡Archivos SEO e IA generados exitosamente!');
-        console.log('\n📋 Próximos pasos para indexación:');
+        console.log('\n ¡Archivos SEO e IA generados exitosamente!');
+        console.log('\n Próximos pasos para indexación:');
         console.log('   1. Subir el sitio a producción');
         console.log('   2. Verificar en Google Search Console');
         console.log('   3. Enviar sitemap.xml');
         console.log('   4. Monitorear indexación');
         
     } catch (error) {
-        console.error('❌ Error durante la generación:', error);
+        console.error(' Error durante la generación:', error);
         process.exit(1);
     }
 }

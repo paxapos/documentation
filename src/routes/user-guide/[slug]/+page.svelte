@@ -60,8 +60,11 @@
             
             console.log('Contenido actualizado para:', data.slug);
             
-            // Manejar hash después de actualizar el contenido
-            setTimeout(() => handleHashNavigation(), 150);
+            // Manejar hash y visibilidad después de actualizar el contenido
+            setTimeout(() => {
+                handleHashNavigation();
+                handleMainDivVisibility();
+            }, 150);
         }
     });
 
@@ -73,11 +76,16 @@
         // Manejar hash inicial y cambios de hash
         handleHashNavigation();
         window.addEventListener('hashchange', handleHashNavigation);
+        
+        // Manejar visibilidad del div principal al cargar y cambiar hash
+        handleMainDivVisibility();
+        window.addEventListener('hashchange', handleMainDivVisibility);
     });
 
     onDestroy(() => {
         if (typeof window !== 'undefined') {
             window.removeEventListener('hashchange', handleHashNavigation);
+            window.removeEventListener('hashchange', handleMainDivVisibility);
         }
     });
 
@@ -146,6 +154,39 @@
         return html.replace(tableRegex, (match) => {
             return `<div class="table-wrapper">${match}</div>`;
         });
+    }
+
+    // Función para ocultar el div principal cuando hay hash en la URL
+    function hideMainDivWhenHash(html: string): string {
+        // Esta función ya no es necesaria, la lógica se maneja dinámicamente
+        return html;
+    }
+
+    // Función para manejar la visibilidad del div principal dinámicamente
+    function handleMainDivVisibility() {
+        try {
+            // Buscar automáticamente el primer div vacío con ID en el contenido
+            // Estos suelen ser los divs principales de cada página
+            const mainContent = document.querySelector('.prose');
+            if (mainContent) {
+                const firstEmptyDiv = mainContent.querySelector('div[id]:empty');
+                
+                if (firstEmptyDiv) {
+                    const hasHash = window.location.hash && window.location.hash.length > 1;
+                    const divElement = firstEmptyDiv as HTMLElement;
+                    
+                    if (hasHash) {
+                        // Ocultar el div cuando hay hash
+                        divElement.style.display = 'none';
+                    } else {
+                        // Mostrar el div cuando no hay hash
+                        divElement.style.display = '';
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn('Error manejando visibilidad del div principal:', error);
+        }
     }
 
     // Función para copiar el enlace de una sección específica
