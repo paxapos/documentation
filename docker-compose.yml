@@ -1,6 +1,13 @@
+version: '3.8'
+
 services:
+  # ============================================
   # PaxaPOS (paxapos.com) - Puerto 3000
+  # ============================================
   paxapos-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: yoalevilar/paxapos-docs:latest
     container_name: paxapos-docs
     restart: unless-stopped
@@ -10,6 +17,7 @@ services:
       - BRAND_NAME=PaxaPOS
       - SYSTEM_URL=beta.paxapos.com
       - COMPANY_NAME=PaxaPOS
+      - TZ=America/Argentina/Buenos_Aires
     
     ports:
       - "3000:8080"
@@ -59,8 +67,13 @@ services:
       - /var/cache/nginx
       - /var/run
 
+  # ============================================
   # RestoDigital (restodigital.com.ar) - Puerto 3001
+  # ============================================
   restodigital-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: yoalevilar/paxapos-docs:latest
     container_name: restodigital-docs
     restart: unless-stopped
@@ -70,6 +83,7 @@ services:
       - BRAND_NAME=RestoDigital
       - SYSTEM_URL=restodigital.com.ar
       - COMPANY_NAME=RestoDigital Argentina
+      - TZ=America/Argentina/Buenos_Aires
     
     ports:
       - "3001:8080"
@@ -118,6 +132,52 @@ services:
       - /tmp
       - /var/cache/nginx
       - /var/run
+
+  # ============================================
+  # Tercer Servicio (ejemplo) - Puerto 3002
+  # ============================================
+  # Descomenta y configura si necesitas un tercer servicio
+  # brand3-docs:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   image: yoalevilar/paxapos-docs:latest
+  #   container_name: brand3-docs
+  #   restart: unless-stopped
+  #   
+  #   environment:
+  #     - BRAND_NAME=TuMarca
+  #     - SYSTEM_URL=tumarca.com
+  #     - COMPANY_NAME=Tu Empresa
+  #     - TZ=America/Argentina/Buenos_Aires
+  #   
+  #   ports:
+  #     - "3002:8080"
+  #   
+  #   networks:
+  #     - web
+  #   
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #     start_period: 40s
+  #   
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.brand3-docs.rule=Host(`tumarca.com`) || Host(`www.tumarca.com`)"
+  #     - "traefik.http.routers.brand3-docs.entrypoints=websecure"
+  #     - "traefik.http.routers.brand3-docs.tls.certresolver=letsencrypt"
+  #     - "traefik.http.services.brand3-docs-service.loadbalancer.server.port=8080"
+  #   
+  #   security_opt:
+  #     - no-new-privileges:true
+  #   
+  #   tmpfs:
+  #     - /tmp
+  #     - /var/cache/nginx
+  #     - /var/run
 
 networks:
   web:
