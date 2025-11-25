@@ -15,6 +15,7 @@ Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las 
 ---
 
 ## 📋 **Paso a paso - Configurar formas de pago**
+<div id="configurar-tipos-pago"></div>
 
 ### **Paso 1: Acceder a Tipos de Pago**
 1. Hacé clic en la **"P" roja** 🔴 

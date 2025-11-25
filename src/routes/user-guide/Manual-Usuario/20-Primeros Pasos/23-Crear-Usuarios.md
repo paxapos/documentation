@@ -3,14 +3,14 @@
 <div id="crear-usuarios"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Vas a crear las cuentas para que tu equipo (mozos, cajeros, cocineros) pueda usar {{BRAND_NAME}}. Cada persona tendrá su usuario y contraseña personal.
+> Vas a crear cuentas SOLO para los dueños, encargados y cajeros que van a usar {{BRAND_NAME}}. Cada usuario tendrá su usuario y contraseña personal.
 
 ## 🔴 **MUY IMPORTANTE - La "P" roja**
 
 En **TODOS** los módulos, vas a ver un ícono de **"P" roja** 🔴 en la parte superior de la pantalla.
 
 `
-🏪 Software    [ 🔴 P ]      👤 Usuario
+🏪 Software    [ 🔴 P ]      👤 Usuario Paxapos
 `
 
 **¡Esta "P" roja es SÚPER IMPORTANTE!** 
@@ -28,9 +28,9 @@ En **TODOS** los módulos, vas a ver un ícono de **"P" roja** 🔴 en la parte 
 3. Hacé clic en la **"P" roja**
 4. Se va a abrir una ventana con muchas opciones
 
-### **Paso 2: Ir a Crear Usuarios**
-5. En la ventana que se abrió, buscá la opción **"Crear Usuarios"**
-6. Hacé clic en **"Crear Usuarios"**
+### **Paso 2: Ir a Usuarios**
+5. En la ventana que se abrió, buscá la opción **"Usuarios Paxapos"**
+6. Hacé clic en **"Usuarios Paxapos"**
 
 ### **Paso 3: Completar los datos del nuevo usuario**
 Ahora vas a completar la información de la persona que va a usar el sistema:
@@ -42,7 +42,18 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 🔹 **Contraseña** | Una contraseña segura  
 🔹 **Rol** | Qué puede hacer en el sistema
 
-### **Paso 4: Guardar el usuario**
+### **Paso 4: Asignar rol**
+En **Rol de Dicho Mozo** elegí:
+
+**👥 Roles disponibles:**
+
+**🔹 Mozo**  
+**🔹 Vendedor**  
+**🔹 Encargado**  
+**🔹 Auditor**  
+**🔹 Dueño** 
+
+### **Paso 5: Guardar el usuario**
 7. Verificá que todos los datos estén correctos
 8. Hacé clic en **"Guardar"** o **"Confirmar"**
 9. ¡Listo! Ya creaste tu primer usuario
@@ -51,7 +62,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ## 🎭 **¿Qué rol tiene que elegir cada persona?**
 
-🔹 **Administrador** | TODO - Control total (Dueño, gerente, encargado)  
+🔹 **Dueño** | TODO - Control total (Dueño, gerente, encargado)  
 🔹 **Cajero** | Cobrar, facturar, manejar dinero (Personal de caja)  
 🔹 **Mozo** | Tomar pedidos, manejar mesas (Meseros, vendedores)  
 🔹 **Cocinero** | Ver pedidos de cocina solamente (Chef, ayudantes de cocina)
@@ -59,7 +70,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 ---
 
 ## �� **Consejos importantes para no tener problemas**
-- ✅ **Creá usuarios solo para personas que realmente van a usar el sistema**
+- ✅ **Creá usuarios solo para personas que son dueños, encargados y cajeros**
 - ✅ **Usá contraseñas diferentes para cada usuario** (nunca la misma para todos)
 - ✅ **Asigná el rol correcto** - No des permisos de administrador a todos
 - ✅ **Anotá los usuarios y contraseñas** en un lugar seguro
@@ -67,10 +78,10 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 ---
 
-## � **Método alternativo - Usuario con PIN (Recomendado para mozos)**
+## � **Usuario con PIN (Recomendado para mozos y cocineros)**
 
 > 💡 **¿Para qué sirve esto?**  
-> Es un método más rápido para que los mozos accedan al sistema sin tener que recordar usuario y contraseña. Todos usan el mismo PIN (ejemplo: 1111).
+> Es un método más rápido para que los mozos y cocineros accedan al sistema sin tener que recordar usuario y contraseña. Todos usan el mismo PIN (ejemplo: 1111).
 
 ### **¿Cuándo usar este método?**
 - ✅ **Para mozos que cambian de turno frecuentemente**
@@ -79,19 +90,15 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 
 ### **Paso a paso - Configurar usuario con PIN**
+<div id="usuario-con-pin"></div>
 
-#### **Paso 1: Crear el usuario genérico primero**
-1. **IMPORTANTE:** Primero tenés que crear un usuario normal (como explicamos arriba)
-2. Este usuario va a ser la "base" del usuario con PIN
-3. Asigná el rol **"Mozo"** a este usuario
-
-#### **Paso 2: Configurar el PIN**
+#### **Paso 1: Configurar el PIN**
 4. Hacé clic en la **"P" roja** 🔴
 5. Buscá la opción **"Usuarios con PIN"**
 6. Hacé clic en **"Usuarios con PIN"**
 7. Hacé clic en **"Crear Usuario"** o **"Nuevo"**
 
-#### **Paso 3: Completar la configuración del PIN**
+#### **Paso 2: Completar la configuración del PIN**
 
 🔹 **Nombre del Usuario Genérico** | Un nombre que identifique el grupo  
 🔹 **Rol** | seleccionar "Mozo" o el rol que quieras que tenga este usuario con pin  
@@ -99,23 +106,22 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 8. Hacé clic en **"Guardar"**
 
-### **¿Cómo van a ingresar los mozos?**
-Una vez configurado, los mozos van a poder:
+### **¿Cómo van a ingresar los mozos y cocineros?**
+Una vez configurado, los mozos y cocineros van a poder:
 1. En la pantalla de login, elegir **"Ingresar con PIN"**
 2. Escribir el PIN (ejemplo: **1111**)
 3. ¡Listo! Ya están dentro de {{BRAND_NAME}}
 
 ### **💡 Consejos para el PIN**
 - ✅ **Usá un PIN fácil de recordar** pero no obvio (evitá 0000 o 1234)
-- ✅ **Comunicá el PIN solo a los mozos** autorizados
+- ✅ **Comunicá el PIN solo a los mozos y cocineros** autorizados
 - ✅ **Cambiá el PIN periódicamente** si tenés mucha rotación de personal
-- ✅ **Combiná ambos métodos:** PIN para mozos, usuario personal para administradores
+- ✅ **Combiná ambos métodos:** PIN para mozos y cocineros, usuario personal para administradores
 
 ---
 
 ## �🚨 **¿Problemas comunes?**
 - **"No encuentro la P roja"** → Mirá bien la parte superior, está siempre visible
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
-- **"El email ya existe"** → Usá un email diferente para cada usuario
 - **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
 - **"El PIN no funciona"** → Asegurate de haber ingresado el pin correctamente

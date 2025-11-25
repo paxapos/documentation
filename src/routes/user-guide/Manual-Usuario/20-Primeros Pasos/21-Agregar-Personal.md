@@ -12,6 +12,7 @@ No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
 ---
 
 ## 📋 **Paso a paso - Agregar tu primer mozo**
+<div id="primer-mozo"></div>
 
 ### **Paso 1: Acceder al módulo Mozos**
 1. Hacé clic en la **P roja** 🔴
@@ -30,7 +31,7 @@ No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
 🔹 **Nombre** | Nombre real del empleado (Obligatorio)  
 🔹 **Apellido** | Apellido del empleado (Obligatorio)  
 🔹 **Foto** | Foto del empleado (Opcional)  
-🔹 **Punto de Venta** | En qué sector trabaja (Opcional)
+🔹 **Punto de Venta** | En qué sector trabaja (Obligatorio)
 
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
@@ -47,18 +48,7 @@ Esta parte es clave para organizar tu restaurante:
 📌 *Cuándo usarla:* Cada mozo ve solo sus mesas (marcar las opciones correspondientes)
 📋 *Ejemplo:* Restaurante grande, mozos por sector
 
-### **Paso 5: Asignar rol**
-En **Rol de Dicho Mozo** elegí:
-
-**👥 Roles disponibles:**
-
-**🔹 Mozo**  
-**🔹 Vendedor**  
-**🔹 Encargado**  
-**🔹 Auditor**  
-**🔹 Dueño**  
-
-### **Paso 6: Guardar**
+### **Paso 5: Guardar**
 6. Verificá que todos los datos estén correctos
 7. Hacé clic en **Guardar**
 8. ¡Listo! Tu mozo ya está en el sistema
