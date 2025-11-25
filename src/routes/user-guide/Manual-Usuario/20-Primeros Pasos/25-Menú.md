@@ -7,7 +7,7 @@
 ## 🔴 **MUY IMPORTANTE - La "P" roja**
 
 ```
-🏪 Software    [ 🔴 P ]      👤 Usuario
+🏪 Software    [ 🔴 P ]    
                      ↓
                 "Productos"
 ```
@@ -18,13 +18,6 @@
 
 ### 🍽️ **1. Menú**
 **¿Qué es?** La carta que ven tus clientes, con todos los platos, bebidas y precios que ofreces.
-
-**Ejemplos:**
-
-🔹 **Menú Principal** | Carta completa del restaurante  
-🔹 **Menú de Almuerzos** | Solo comidas del mediodía  
-🔹 **Menú Ejecutivo** | Opciones rápidas de oficina  
-🔹 **Menú Delivery** | Productos solo para entrega
 
 > 💡 **¿Sabías que...?**  
 > El nombre "Menú" es configurable. Podés cambiarlo a "Lista de Precios", "Carta", "Tarifario" o como prefieras. Un hotel lo llamó "Tarifario" porque vende comidas, revistas y paquetes turísticos.
@@ -98,7 +91,7 @@ Menú Principal
 ---
 
 ## 🎯 **Paso a paso - Configurar tu primer menú**
-
+<div id="configurar-menu"></div>
 ---
 
 ### **� ETAPA 1** → **Acceso al sistema de productos**
@@ -123,29 +116,9 @@ Menú Principal
 3. Seleccioná "Acompañamiento"
 4. Guardá
 
-### **Ejemplos:**
-1. 
-- **Producto:** Bife de chorizo
-- **Nombre Variante:** Punto de la carne
-- **Opciones Variante:** Cocido / A Punto / Jugoso
-
-2. 
-- **Producto:** Pastas
-- **Nombre Variante:** Salsas
-- **Opciones Variante:** Blanca $0 / Fileto $ +500 / Mixta $ +200 / Bolognesa $1500
-
-3.
-- **Producto:** Ensaladas
-- **Nombre Variante:** Tipos Ensaladas
-- **Opciones Variante:** Mixta / Lechuga y Tomate / Zanahoria y Huevo
-
----
-
 ### **� ETAPA 2** → **Configuración de categorías**
+<div id="categorias"></div>
 
-> **🎨 Propósito:** Organizar tu menú por secciones
-
-```
 💻 INSTRUCCIONES:
 ┌────────────────────────────────────────┐
 │ 1️⃣ Navegá a "Categorías"              │
@@ -170,8 +143,7 @@ Menú Principal
 ---
 
 ### **� ETAPA 3** → **Creación del menú base**
-
-> **🎯 Meta:** Crear tu primera carta digital
+<div id="menu-base"></div>
 
 ```
 💻 INSTRUCCIONES:
@@ -191,8 +163,8 @@ Menú Principal
 ---
 
 ### **�️ ETAPA 4** → **Agregando productos**
+<div id="agregar-productos"></div>
 
-> **⭐ El momento clave:** Cargar tu primer producto
 
 ```
 � INSTRUCCIONES:
@@ -214,7 +186,7 @@ Menú Principal
 
 🔹 **🧾 Impuestos** | `OBLIGATORIO` → IVA que corresponde (ej: 21%)
 
-🔹 **🖨️ Impresora** | `OPCIONAL` → Dónde se imprime (ej: Cocina)
+🔹 **🖨️ Impresora** | `OBLIGATORIO` → Dónde se imprime (ej: Cocina)
 
 🔹 **🎫 Nombre en Ticket** | `OPCIONAL` → Nombre corto (ej: "Mila Napo")
 
@@ -232,112 +204,13 @@ Menú Principal
 │ 3️⃣ ¡Confirmación exitosa! 🎉          │
 └────────────────────────────────────────┘
 ```
-
-**🎊 ¡FELICITACIONES! Ya tenés tu primer producto configurado**
-
 ---
 
-## 🎛️ **Configuración de Variantes**
+## 📂 **Funciones adicionales**
 
-> **🎪 Para productos con opciones personalizables**
+### **🗂️ Productos Duplicados**
+Esta sección te permite visualizar y gestionar cualquier producto que {{BRAND_NAME}} identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
 
----
-
-### **� PROCEDIMIENTO A** → **Crear variante maestra**
-
-```
-� PASO A PASO:
-┌─────────────────────────────────────────┐
-│ 🟢 Ir a "Variantes" en el menú         │
-│ 🟢 Clic en "+ Nueva Variante"          │
-│ � Nombre: "Acompañamiento"            │
-│ 🟢 Configurar opciones disponibles     │
-└─────────────────────────────────────────┘
-```
-
-**� Ejemplo de configuración:**
-
-| Opción | Precio Extra | Disponible |
-|--------|--------------|------------|
-| Papas fritas | $0 | ✅ |
-| Puré de papa | $+100 | ✅ |
-| Ensalada mixta | $+150 | ✅ |
-
----
-
-### **� PROCEDIMIENTO B** → **Vincular al producto**
-
-```
-� PASO A PASO:
-┌─────────────────────────────────────────┐
-│ 🟡 Editar producto existente           │
-│ � Buscar "Asignar Variante"           │
-│ � Seleccionar "Acompañamiento"        │
-│ � Confirmar con "Guardar"             │
-└─────────────────────────────────────────┘
-```
-
----
-
-### **🎨 GALERÍA DE EJEMPLOS**
-
-**🥩 Carnes:**
-```
-Variante: "Cocción"
-├── Bien cocido    ($0)
-├── A punto        ($0)
-└── Jugoso         ($0)
-```
-
-**🍝 Pastas:**
-```
-Variante: "Salsas"
-├── Blanca         ($0)
-├── Fileto         ($+500)
-├── Mixta          ($+200)
-└── Bolognesa      ($+1500)
-```
-
-**🥗 Ensaladas:**
-```
-Variante: "Tipos"
-├── Mixta
-├── Lechuga y Tomate
-└── Zanahoria y Huevo
-```
-
----
-
-## 📊 **Sistema de Recetas y Costos**
-
-> **💡 Herramienta avanzada:** Control de rentabilidad
-
-### **🧮 Ejemplo práctico:**
-
-```
-📋 PRODUCTO: Pizza Muzzarella
-┌─────────────────────────────────┐
-│ Ingrediente    │ Costo Individual│
-├───────────────┼─────────────────┤
-│ 🍞 Masa        │ $50             │
-│ 🍅 Salsa       │ $30             │
-│ 🧀 Muzzarella  │ $200            │
-│ 🔥 Gas/Energía │ $10             │
-├───────────────┼─────────────────┤
-│ TOTAL COSTO    │ $290            │
-│ PRECIO VENTA   │ $800            │
-│ 💰 GANANCIA    │ $510 (64%)     │
-└─────────────────────────────────┘
-```
-
----
-
-## 💡 **Consejos para un menú perfecto**
-- ✅ **Empezá con lo básico** (5-10 productos más vendidos)
-- ✅ **Usá nombres claros** (evitá nombres rebuscados)
-- ✅ **Organizá por categorías** (facilita encontrar productos)
-- ✅ **Configurá bien las impresoras** (cocina, bar, etc.)
-- ✅ **Probá vender** cada producto después de cargarlo
 
 ## 🚨 **¿Problemas comunes?**
 - **"No encuentro Productos"** → Buscá la "P" roja primero
@@ -345,12 +218,4 @@ Variante: "Tipos"
 - **"No aparece en la venta"** → Verificá que esté en el menú correcto
 - **"Sale en la impresora equivocada"** → Configurá la impresora predeterminada
 - **"No sale impreso en la comanda"** → Asignale una impresora
-
-## 📂 **Funciones adicionales**
-
-### **🗂️ Productos Duplicados**
-Esta sección te permite visualizar y gestionar cualquier producto que {{BRAND_NAME}} identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
-
-### **🏷️ Gestión de Categorías**
-Podés crear distintas categorías para agrupar tus productos y dentro de la sección "Categorías", podrás crear nuevas, editar nombres y reordenarlas según tu preferencia.
 

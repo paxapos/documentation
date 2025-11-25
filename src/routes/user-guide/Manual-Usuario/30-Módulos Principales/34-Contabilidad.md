@@ -29,6 +29,7 @@ Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos 
 ---
 
 ## 🧾 **1. Configurar Impuestos**
+<div id="impuestos"></div>
 
 ### **🚀 Paso a paso:**
 1. **Entrá a:** P roja → "Módulo Impuestos"
@@ -56,6 +57,7 @@ Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos 
 ---
 
 ## 📂 **2. Configurar Clasificaciones**
+<div id="clasificaciones"></div>
 
 ### **🎯 ¿Para qué sirve?**
 Para ordenar tus gastos en categorías y después poder hacer reportes (ej: "¿cuánto gasté en mercadería este mes?")
@@ -77,6 +79,7 @@ Para ordenar tus gastos en categorías y después poder hacer reportes (ej: "¿c
 ---
 
 ## 🏪 **3. Configurar Proveedores**
+<div id="proveedores"></div>  
 
 ### **🎯 ¿Para qué sirve?**
 Para registrar quién te vende qué, y llevar control de lo que debés a cada uno.
@@ -101,6 +104,7 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 ---
 
 ## 💰 **Cargar Facturas de Gasto**
+<div id="facturas-gasto"></div>
 
 ### **✅ Una vez que tengas todo configurado, podés empezar a cargar gastos:**
 
@@ -152,22 +156,6 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 
 ---
 
-## 💡 **Consejos para un uso perfecto**
-
-### **📋 Organización:**
-- ✅ **Cargá las facturas** apenas las recibís
-- ✅ **Revisá el "Resumen de Deuda"** todas las semanas
-- ✅ **Pagá a tiempo** para evitar recargos
-- ✅ **Usá buenas clasificaciones** para hacer reportes después
-
-### **📊 Para contabilidad:**
-- ✅ **Exportá reportes** mensualmente
-- ✅ **Guardá los comprobantes** físicos
-- ✅ **Verificá que coincidan** los totales
-- ✅ **Consultá con tu contador** sobre clasificaciones
-
----
-
 ## 🚨 **¿Problemas comunes?**
 
 | Problema | Solución |
@@ -177,6 +165,3 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 | **"No sé qué clasificación usar"** | Consultá con tu contador |
 | **"Se cargó mal un gasto"** | Podés editarlo desde el listado |
 | **"No coinciden los totales"** | Revisá que todos los impuestos estén bien configurados |
-
-### **📞 ¿Seguís con dudas?**
-Consultá con tu contador o administrador del sistema.
