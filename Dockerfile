@@ -33,18 +33,18 @@ ENV SYSTEM_URL=""
 ENV COMPANY_NAME=""
 ENV TZ=America/Argentina/Buenos_Aires
 
-RUN apk update && apk upgrade && apk add --no-cache curl tzdata
+RUN apk update && apk upgrade && apk add --no-cache curl tzdata dos2unix
 RUN rm -rf /usr/share/nginx/html/*
+
+# Copiar script de entrada PRIMERO y asegurar formato Unix
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN dos2unix /docker-entrypoint.sh && chmod +x /docker-entrypoint.sh
 
 # Copiar build
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # Copiar configuracion de nginx con templates
 COPY nginx-runtime.conf /etc/nginx/templates/default.conf.template
-
-# Copiar script de entrada
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=10s CMD curl -f http://localhost:8080/health || exit 1
