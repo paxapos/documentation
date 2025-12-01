@@ -173,71 +173,20 @@ export const searchableContentWithContent = [
 export async function searchContent(query: string, limit: number = 4): Promise<SearchableItem[]> {
 	if (query.length < 2) return [];
 	
-	const searchTerm = query.toLowerCase();
-	
-	// Filtrar solo contenido del manual de usuario
-	const filteredContent = searchableContentWithContent.filter(item => {
-		return item.type === 'Manual de Usuario';
-	});
-	
-	const results: Array<SearchableItem & { score: number; preview?: string }> = [];
-	
-	for (const item of filteredContent) {
-		let score = 0;
-		let preview = '';
+	try {
+		// Llamar al endpoint API para búsqueda en tiempo real
+		const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=${limit}`);
 		
-		// Buscar en título (mayor peso)
-		if (item.title.toLowerCase().includes(searchTerm)) {
-			score += 10;
+		if (!response.ok) {
+			throw new Error('Error en la búsqueda');
 		}
 		
-		// Buscar en tipo
-		if (item.type.toLowerCase().includes(searchTerm)) {
-			score += 5;
-		}
-		
-		// Buscar en contenido
-		if (item.content && item.content.toLowerCase().includes(searchTerm)) {
-			score += 3;
-			
-			// Bonus por múltiples ocurrencias en contenido
-			const matches = (item.content.toLowerCase().match(new RegExp(searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
-			score += matches * 0.5;
-			
-			// Crear preview del contenido
-			const contentLower = item.content.toLowerCase();
-			const queryIndex = contentLower.indexOf(searchTerm);
-			if (queryIndex !== -1) {
-				const start = Math.max(0, queryIndex - 50);
-				const end = Math.min(item.content.length, queryIndex + searchTerm.length + 100);
-				preview = '...' + item.content.substring(start, end) + '...';
-			}
-		}
-		
-		// Buscar palabras parciales
-		const searchWords = searchTerm.split(' ').filter(word => word.length > 1);
-		for (const word of searchWords) {
-			if (item.title.toLowerCase().includes(word)) score += 2;
-			if (item.content && item.content.toLowerCase().includes(word)) score += 1;
-		}
-		
-		if (score > 0) {
-			results.push({ 
-				...item, 
-				score, 
-				preview,
-				title: replaceWithVariables(item.title),
-				type: replaceWithVariables(item.type),
-				content: item.content ? replaceWithVariables(item.content) : undefined
-			});
-		}
+		const results: SearchableItem[] = await response.json();
+		return results;
+	} catch (error) {
+		console.error('Error en búsqueda:', error);
+		return [];
 	}
-	
-	// Ordenar por score descendente
-	results.sort((a, b) => b.score - a.score);
-	
-	// Remover el score del resultado final pero mantener preview
-	return results.slice(0, limit).map(({ score, ...item }) => item);
 }
 
 // Función para convertir IDs de módulos a slugs para URLs

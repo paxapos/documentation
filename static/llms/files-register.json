@@ -1,14 +1,15 @@
 {
-  "generated_at": "2025-11-07T20:24:37.272Z",
-  "total_files": 23,
+  "generated_at": "2025-12-01T19:36:00.839Z",
+  "total_files": 24,
   "files": [
     "11-introduccion.txt",
     "12-iniciar-sesion.txt",
-    "21-crear-usuarios.txt",
+    "21-agregar-personal.txt",
     "22-tipos-de-pago.txt",
-    "23-agregar-personal.txt",
+    "23-crear-usuarios.txt",
     "24-configuracion-de-impresoras.txt",
     "25-menu.txt",
+    "26-permisos-por-rol.txt",
     "32-salon.txt",
     "33-kitchen-display-system-kds.txt",
     "34-contabilidad.txt",
@@ -40,10 +41,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/10-Comenzamos/12-Iniciar-sesión.md"
     },
     {
-      "txt_file": "21-crear-usuarios.txt",
-      "original_md": "21-Crear-Usuarios",
-      "title": "Crear Usuarios",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/21-Crear-Usuarios.md"
+      "txt_file": "21-agregar-personal.txt",
+      "original_md": "21-Agregar-Personal",
+      "title": "Agregar Personal",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/21-Agregar-Personal.md"
     },
     {
       "txt_file": "22-tipos-de-pago.txt",
@@ -52,10 +53,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/22-Tipos-De-Pago.md"
     },
     {
-      "txt_file": "23-agregar-personal.txt",
-      "original_md": "23-Agregar-Personal",
-      "title": "Agregar Personal",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/23-Agregar-Personal.md"
+      "txt_file": "23-crear-usuarios.txt",
+      "original_md": "23-Crear-Usuarios",
+      "title": "Crear Usuarios",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/23-Crear-Usuarios.md"
     },
     {
       "txt_file": "24-configuracion-de-impresoras.txt",
@@ -68,6 +69,12 @@
       "original_md": "25-Menú",
       "title": "Menú",
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/25-Menú.md"
+    },
+    {
+      "txt_file": "26-permisos-por-rol.txt",
+      "original_md": "26-Permisos-por-rol",
+      "title": "Permisos por rol",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/26-Permisos-por-rol.md"
     },
     {
       "txt_file": "32-salon.txt",
