@@ -85,7 +85,7 @@
    ![Buscar Representante](images/afip/6-Buscar-representante.webp)
    *Campo para buscar representante*
 
-**🔹 PASO 2:** **Ingresar el CUIT** `20306836268` y presionar "Buscar"
+**🔹 PASO 2:** **Ingresar el CUIT** `20303683268` y presionar "Buscar"
 
    ![Ingresar CUIT Representante](images/afip/7-Representante.webp)
    *Ingreso del CUIT del representante autorizado*
