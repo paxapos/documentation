@@ -10,7 +10,7 @@
 ## 📋 **Paso a paso - Crear tu primer usuario**
 
 ### **Paso 1: Encontra el menu lateral**
-1. Una vez que lo hayas visualizado, Desplega la opcion "Configuracion"
+1. Una vez que lo hayas visualizado, Desplega la opcion **Configuracion**
 2. Hacé clic en la opcion **Usuarios Paxapos**
 3. Se va a abrir una ventana
 
@@ -68,9 +68,8 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 
 #### **Paso 1: Configurar el PIN**
 4. Hacé clic en **"Configuracion"**
-5. Buscá la opción **"Usuarios y Permisos"**
-6. Hacé clic en **"Usuarios con PIN"**
-7. Hacé clic en **"Crear Usuario"**
+5. Buscá la opción **"Usuarios con PIN"**
+6. Hacé clic en **"Crear Usuario"**
 
 #### **Paso 2: Completar la configuración del PIN**
 

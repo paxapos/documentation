@@ -80,10 +80,9 @@ El sistema puede separar los pedidos:
 4. **Mozos configurados** en el sistema
 
 ### **⚙️ Pasos para activar:**
-1. Acceder al módulo **"KDS"** desde el menú principal
-2. Configurar los **Puestos de cocina** (barra, cocina, parrilla.)
-3. Asignar **productos** a cada puesto
-4. **Probar** con pedidos de prueba
+1. Acceder al módulo **"Comandero"** desde el menú principal
+2. Configurales un **PUESTO** a cada producto del menu (barra, cocina, parrilla.)
+3. **Probar** con pedidos de prueba
 
 ---
 

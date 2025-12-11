@@ -8,7 +8,7 @@
 
 ## 🔍 **¿Dónde encuentro los arqueos?**
 1. **Clic en:** "Ventas" 
-2. **Se abre:** un sub menu donde tendras que seleccionar "Arqueo de caja"
+2. **Click en:** "Arqueo de caja"
 
 
 ## 🔍 **¿Qué vas a ver en Arqueos?**

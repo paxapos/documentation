@@ -9,13 +9,13 @@
 
 ## 📋 **Paso a paso - Agregar tu primer empleado**
 
-### **Paso 1: Acceder al módulo Empleados**
-1. Hacé clic en **"RRHH"**
-2. Dentro de las opciones, buscá **Empleados**
-3. Hacé clic en **Empleado**
+### **Paso 1: Acceder al módulo salon**
+1. Hacé clic en el menu hamburguesa (el icono de 3 lineas)
+2. Dentro de las opciones, buscá **Administrar Mozos**
+3. Hacé clic en **Administrar Mozos**
 
 ### **Paso 2: Crear un nuevo empleado**
-4. Hacé clic en el botón **Crear Empleado**
+4. Hacé clic en el botón **Crear Mozo**
 5. Se va a abrir una ventana para completar datos
 
 ### **Paso 3: Completar información del empleado**
@@ -26,7 +26,7 @@
 🔹 **Nombre** | Nombre real del empleado (Obligatorio)  
 🔹 **Apellido** | Apellido del empleado (Obligatorio)  
 🔹 **Foto** | Foto del empleado (Opcional)  
-🔹 **Punto de Venta** | En qué sector trabaja (Opcional)
+🔹 **Punto de Venta** | En qué sector trabaja (obligatorio)
 
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
@@ -43,18 +43,7 @@ Esta parte es clave para organizar tu restaurante:
 📌 *Cuándo usarla:* Cada empleado ve solo sus mesas (marcar las opciones correspondientes)
 📋 *Ejemplo:* Restaurante grande, empleados por sector
 
-### **Paso 5: Asignar rol**
-En **Rol de Dicho empleado** elegí:
-
-**👥 Roles disponibles:**
-
-**🔹 Mozo**  
-**🔹 Vendedor**  
-**🔹 Encargado**  
-**🔹 Auditor**  
-**🔹 Dueño**  
-
-### **Paso 6: Guardar**
+### **Paso 5: Guardar**
 6. Verificá que todos los datos estén correctos
 7. Hacé clic en **Guardar**
 8. ¡Listo! Tu mozo ya está en el sistema

@@ -26,9 +26,9 @@
 Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** "operaciones"
-2. **clic en:** "Compras"
-2. **Clic en:** "Mercadería"
+1. **Entrá a:** "Compras"
+2. **clic en:** "Mercadería"
+2. **Clic en:** "Nueva Mercadería"
 3. **Completá la ficha:**
 
 🔹 **Nombre de la Mercadería** | Cómo viene del proveedor  
@@ -50,33 +50,22 @@ Cada vez que vayas a comprar algo nuevo que no tenés en el sistema.
 
 ---
 
-## 🛍️ **2. Convertir Mercadería en Producto Vendible**
-
-### **🎯 ¿Para qué sirve?**
-Para que lo que compraste aparezca en el menú y lo puedas vender a los clientes.
+## 🛍️ **2. Crear una mercaderia desde un producto**
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** "Porductos"
-2. **Click en:** "Gestion de productos"
-3. **Click en:** "Maestro de productos"
-4. **Buscá:** El nombre de la mercadería que creaste
-5. **Clic en:** Ícono de editar ✏️
-6. **Editá la unidad de venta:**
+1. **Entrá a:** "Productos"
+2. **Click en:** "Maestro de productos"
+3. **Buscá:** El nombre de la mercadería que creaste
+4. **Clic en:** Acciones
+5. **Clic en:** "Agregar Mercadería"
+6. **Configura lo siguiente:**
 
-🔹 **Nombre del Producto** | Cómo lo vas a vender  
-🔹 **Unidad de Stock** | Unidad de venta individual
-
-### **🔄 Relación automática:**
-```
-Comprás: 1 CAJA (12 unidades) 
-   ↓
-Stock suma: 12 Coca-Colas individuales
-   ↓
-Vendés: 1 Coca-Cola → Stock baja 1 unidad
-```
+🔹 **Nombre de compra** | Cómo viene del proveedor
+🔹 **Unidad de Medida de Compra** | En qué unidad lo comprás
+🔹 **Cantidad que Suma en Stock** | Cuántas unidades individuales trae
 
 ### **✅ Al final:**
-5. **Clic en "Guardar"**
+7. **Clic en "Guardar"**
 
 ---
 
@@ -87,7 +76,7 @@ Vendés: 1 Coca-Cola → Stock baja 1 unidad
     ↓
 📝 2. Creás la MERCADERÍA en "Stock de Mercadería"
     ↓
-🛍️ 3. La convertís en PRODUCTO en "Maestro de Productos"
+🛍️ 3. La convertís en MERCADERIA en "Maestro de Productos"
     ↓
 📦 4. Registrás la COMPRA (entrada de stock)
     ↓
@@ -120,6 +109,16 @@ Es donde vas a registrar manualmente las cantidades reales que tenés de cada me
    - ✅ Recepcionás una compra → **Suma al stock**
    - ✅ Vendés un producto → **Resta del stock**
 3. Una vez por mes, reinicializás el stock para generar correctamente los movimientos
+
+**Los pasos para cargar el stock inicial son los siguientes:**
+1. **Entrá a:** "Stock de Mercaderías"
+2. **Clic en:** "Stockear Mercadería"
+3. **Completá la ficha:**
+
+🔹 **Seleccioná la mercadería** | La que creaste en "Mercaderías"
+🔹 **Cantidad inicial** | La cantidad que tenés físicamente
+🔹 **Stock mínimo** | La cantidad mínima que querés tener
+🔹 **Guardar**
 
 💡 **Importante:** Si la mercadería está bien configurada, solo necesitás hacer esto manualmente al inicio. Después se actualiza solo.
 
@@ -292,42 +291,6 @@ Vino Malbec:
 - 🔍 Robos o pérdidas
 
 💡 **Buena práctica:** Analizá los faltantes recurrentes. Si siempre falta lo mismo, puede haber un problema de proceso o control.
-
----
-
-## 🔄 **Flujo mensual recomendado:**
-
-```
-📅 Día 1 del mes:
-   ↓
-📦 1. Hacer inventario físico (contar todo)
-   ↓
-💻 2. Cargar cantidades reales en Stock Mercaderías
-   ↓
-🔒 3. Reinicializar Stock (se cierra el período anterior)
-   ↓
-📊 4. Revisar Stock Cerrados (ver diferencias)
-   ↓
-🔍 5. Analizar faltantes/sobrantes
-   ↓
-✅ 6. Continuar operando normalmente
-```
-
----
-
-## 🎯 **Consejos para un stock perfecto**
-
-### **📋 Organización:**
-- ✅ **Nombres claros:** "Caja Coca x12" es mejor que "Coca"
-- ✅ **Unidades consistentes:** Siempre usá las mismas unidades
-- ✅ **Verificá cálculos:** Contá físicamente la primera vez
-- ✅ **Probá el flujo:** Comprar → Convertir → Vender
-
-### **📊 Control:**
-- ✅ **Inventario regular:** Contá físicamente cada tanto
-- ✅ **Alertas de stock bajo:** Configurá avisos automáticos
-- ✅ **Reportes:** Revisá qué se vende más y menos
-- ✅ **Costos:** Registrá precios de compra para calcular ganancia
 
 ---
 

@@ -13,7 +13,7 @@
 
 ---
 
-## 💰 **1. Ventas Totales**
+## **1. Ventas Totales**
 
 ### **🎯 ¿Para qué sirve?**
 Para saber si ganás o perdés plata, y ver cómo va tu negocio día a día.
@@ -36,7 +36,7 @@ Para saber si ganás o perdés plata, y ver cómo va tu negocio día a día.
 
 ---
 
-## 📅 **2. Reporte Anual**
+## **2. Reporte Anual**
 
 ### **🎯 ¿Para qué sirve?**
 Para ver cómo te fue en todo el año y planificar el año que viene.
@@ -55,7 +55,7 @@ Para ver cómo te fue en todo el año y planificar el año que viene.
 
 ---
 
-## 👨‍💼 **3. Ventas por Mozo**
+## **3. Ventas por Mozo**
 
 ### **🎯 ¿Para qué sirve?**
 Para saber quién vende más y premiar a los mejores empleados (o ayudar a los que menos venden).
@@ -85,10 +85,86 @@ Para saber quién vende más y premiar a los mejores empleados (o ayudar a los q
 
 ---
 
-## 💳 **4. Ventas por Tipo de Cobro**
+## **4. Ventas por Tipo de Cobro**
 
 ### **🎯 ¿Para qué sirve?**
 Para saber cómo prefieren pagar tus clientes y organizar mejor tu caja.
+
+
+### **5. Productos Vendidos**
+
+> 📈 **¿Qué ves acá?** La tabla completa de todo lo que vendiste, organizada de manera inteligente
+
+#### **🎯 Clasificación ABC (Principio de Pareto):**
+- **🔥 Grupo A (70%)** | Tus productos estrella que más vendés
+- **⭐ Grupo B (20%)** | Productos de venta media  
+- **💤 Grupo C (10%)** | Productos que vendés poco
+
+#### **🔍 Filtros súper útiles:**
+🔹 **Período:** Elegí desde cuándo hasta cuándo  
+🔹 **Categoría:** Solo un tipo de producto  
+🔹 **Mozo:** Qué vendió cada empleado  
+🔹 **Producto específico:** Un solo producto
+
+#### **💡 Cómo usar esta info:**
+- ✅ **Identificá tus best sellers** para nunca quedarte sin stock
+- ✅ **Detectá productos que no se venden** para sacarlos del menú
+- ✅ **Premiá a tus mejores mozos** según sus ventas
+- ✅ **Ajustá precios** de productos que venden poco
+
+---
+
+### **6. Ventas por Turnos**
+
+> ⏰ **¿Qué ves acá?** Un análisis detallado de la rentabilidad y el rendimiento de cada turno configurado en tu negocio.
+
+#### **🎯 ¿Para qué sirve?**
+Para identificar qué turnos son los más productivos y cuáles necesitan optimización. Te permite tomar decisiones informadas sobre la asignación de personal, promociones y horarios de operación.
+
+#### **📊 Información que obtenés:**
+🔹 **Ventas Totales por Turno** | El monto total facturado en cada turno.
+🔹 **Cantidad de Transacciones** | Número de ventas realizadas en cada turno.
+🔹 **Promedio por Venta** | El valor promedio de cada transacción dentro del turno.
+🔹 **Productos Más Vendidos por Turno** | Identifica los artículos estrella en cada franja horaria.
+
+#### **💡 Cómo usar esta data:**
+- ✅ **Optimización de Personal:** Ajustá la cantidad de empleados según la demanda real de cada turno.
+- ✅ **Estrategias de Marketing:** Lanzá promociones específicas en los turnos de menor rendimiento para impulsarlos.
+- ✅ **Ajuste de Horarios:** Considerá modificar los horarios de tus turnos (configurables en `Configuración -> Turnos`) para maximizar la rentabilidad.
+- ✅ **Capacitación:** Identificá turnos con bajo promedio de venta para reforzar técnicas de upselling o cross-selling.
+
+
+### **7. Compras por mercadería**
+
+> 🛒 **¿Qué ves acá?** Todo lo que compraste a tus proveedores en el período que elijas
+
+#### **🔍 Filtros disponibles:**
+🔹 **Fechas:** Desde cuándo hasta cuándo  
+🔹 **Producto:** Un producto específico
+
+#### **💡 Para qué te sirve:**
+- ✅ **Controlá tus gastos** mes a mes
+- ✅ **Negociá mejores precios** con proveedores
+- ✅ **Planificá compras futuras** basándote en históricos
+- ✅ **Detectá aumentos** de precios de proveedores
+
+---
+
+### **8. Rentabilidad de subproductos**     
+
+> 📊 **¿Qué ves acá?** El margen de ganancia de cada ingrediente o componente que usás en tus productos finales.
+
+#### **📈 Información que obtenés:**
+🔹 **Costo por subproducto** | Cuánto te cuesta cada ingrediente  
+🔹 **Uso por período** | Cantidad de cada subproducto consumido  
+🔹 **Contribución a la venta** | Impacto de cada subproducto en el precio final  
+🔹 **Margen bruto** | Ganancia directa de cada componente
+
+#### **💡 Cómo usar esta data:**
+- ✅ **Optimizá tus recetas** para maximizar la rentabilidad
+- ✅ **Identificá ingredientes costosos** y buscá alternativas o negociá precios
+- ✅ **Reducí el desperdicio** al entender el consumo real
+- ✅ **Ajustá precios de venta** de productos finales basándote en el costo de sus componentes
 
 ---
 

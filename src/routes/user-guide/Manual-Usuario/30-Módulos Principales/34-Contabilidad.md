@@ -4,87 +4,16 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Acá manejás todos los gastos de tu negocio: registrás las facturas de proveedores, controlás qué debés, pagás las cuentas, y todo queda ordenado para fin de mes y la contabilidad.
 
----
+--- 
 
-## ⚠️ **SÚPER IMPORTANTE: Configurá antes de empezar**
-
-Antes de cargar tu primera factura, **TENÉS QUE CONFIGURAR** estos 3 elementos básicos:
-
-```
-🏗️ ORDEN DE CONFIGURACIÓN:
-1️⃣ Impuestos (IVA, etc.)
-   ↓
-2️⃣ Clasificaciones (tipos de gastos)
-   ↓
-3️⃣ Proveedores (quién te vende)
-   ↓
-✅ Recién ahí podés cargar facturas
-```
-
-### ** ¿Dónde está la configuración?**
-
-Clasificacion = Configuracion -> Clasificacion de gastos
-
-Proveedores = Compras -> Proveedores
-
----
-
-## 🧾 **1. Configurar Impuestos**
-
-### **🚀 Paso a paso:**
-1. **Entrá a:**  "Módulo Impuestos"
-2. **Clic en:** "Crear Tipo de Impuesto"
-3. **Completá los datos:**
-
-| Campo | Qué poner | Ejemplo |
-|-------|-----------|---------|
-| **Nombre de Impuesto** | Nombre claro | "IVA 21%" |
-| **Porcentaje** | Número sin el % | 21 |
-| **Código ARCA** | Código oficial | 0005 |
-| **Tiene Neto** | ☑️ Si aplica sobre base neta | ✅ |
-| **Tiene Impuesto** | ☑️ Si se calcula sobre impuesto | ❌ |
-
-### **💡 Impuestos comunes que vas a necesitar:**
-- **IVA 21%** (productos normales)
-- **IVA 10.5%** (alimentos básicos)
-- **IVA 27%** (servicios especiales)
-- **Exento** (sin IVA)
-
-### **🔄 Después de crear:**
-4. **Clic en "Guardar"**
-5. **Repetir** para cada tipo de impuesto que uses
-
----
-
-## 📂 **2. Configurar Clasificaciones**
-
-### **🎯 ¿Para qué sirve?**
-Para ordenar tus gastos en categorías y después poder hacer reportes (ej: "¿cuánto gasté en mercadería este mes?")
-
-### **🚀 Paso a paso:**
-1. **Entrá a:** P roja → "Módulo de Listado de Clasificaciones"
-2. **Creá estas categorías básicas:**
-
-| Clasificación | Para qué gastos | Ejemplos |
-|---------------|-----------------|----------|
-| **Mercadería** | Productos para vender | Verduras, carnes, bebidas |
-| **Mano de Obra** | Personal y sueldos | Sueldos, jornales, extras |
-| **Servicios Públicos** | Luz, gas, agua | Edenor, Metrogas, AySA |
-| **Gasto Operativo** | Gastos del día a día | Limpieza, bolsas, servilletas |
-| **Alquileres** | Local, depósito | Alquiler local, cochera |
-
-### **💡 Tip:** Agregá las que necesites para tu tipo de negocio
-
----
-
-## 🏪 **3. Configurar Proveedores**
+## 🏪 **1. Configurar Proveedores**
 
 ### **🎯 ¿Para qué sirve?**
 Para registrar quién te vende qué, y llevar control de lo que debés a cada uno.
 
 ### **🚀 Paso a paso:**
-1. **Entrá a:** Operaciones -> Compras -> Proveedores
-2. **Clic en:** "Crear Proveedores"
+1. **Entrá a:** Compras -> Proveedores
+2. **Clic en:** "Nuevo Proveedor"
 3. **Completá la ficha:**
 
 | Campo | Qué poner | Ejemplo |
@@ -106,7 +35,7 @@ Para registrar quién te vende qué, y llevar control de lo que debés a cada un
 ### **✅ Una vez que tengas todo configurado, podés empezar a cargar gastos:**
 
 ### **🚀 Paso a paso:**
-1. **Desde Administración** → Pestaña "Resumen de Deuda"
+1. **Desde Contabilidad**
 2. **Clic en:** "Nuevo Gasto"
 3. **Completá los datos de la factura:**
 

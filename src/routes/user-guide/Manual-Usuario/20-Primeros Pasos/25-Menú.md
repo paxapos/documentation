@@ -84,7 +84,11 @@ Menú Principal
 
 ## 📋 **Paso a paso - Configurar productos en venta**
 
-### **Paso 1: Acceder a menu**
+### **Paso 1: Acceder al Menu de Productos**
+1. Hacé clic en el **productos** dentro del menu lateral
+2. Dentro de las opciones, buscá **Menú**
+3. Hacé clic en **Menú**
+
 
 ```
 💻 INSTRUCCIONES:
@@ -110,7 +114,7 @@ Menú Principal
 <div id="variantes"></div>
 
 **Paso 1: Crear la variante**
-1. Dentro de Catalogo de ventas, buscá **"Variantes"**
+1. Dentro de Productos, buscá **"Variantes"**
 2. Hacé clic en **"Crear Variante"**
 3. Nombre: "Acompañamiento"
 4. Agregá las opciones:
