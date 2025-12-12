@@ -1,25 +1,20 @@
 ﻿
-# 👨‍💼 Agregar Personal
-<div id="agregar-personal"></div>
+# 👨‍💼 Agregar Empleado
+<div id="agregar-empleado"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a registrar a tus mozos, meseros y vendedores en {{BRAND_NAME}}. Así podés saber quién atendió cada mesa y controlar las ventas por empleado.
 
-## 🔴 **RECORDATORIO - La P roja**
-
-No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
-
 ---
 
-## 📋 **Paso a paso - Agregar tu primer mozo**
-<div id="primer-mozo"></div>
+## 📋 **Paso a paso - Agregar tu primer empleado**
 
-### **Paso 1: Acceder al módulo Mozos**
-1. Hacé clic en la **P roja** 🔴
-2. En la ventana que se abre, buscá **Mozos** o **Equipo**
-3. Hacé clic en **Mozos** 
+### **Paso 1: Acceder al módulo salon**
+1. Hacé clic en el menu hamburguesa (el icono de 3 lineas)
+2. Dentro de las opciones, buscá **Administrar Mozos**
+3. Hacé clic en **Administrar Mozos**
 
-### **Paso 2: Crear un nuevo mozo**
+### **Paso 2: Crear un nuevo empleado**
 4. Hacé clic en el botón **Crear Mozo**
 5. Se va a abrir una ventana para completar datos
 
@@ -31,22 +26,22 @@ No olvides buscar la **P roja** 🔴 para acceder a configuraciones.
 🔹 **Nombre** | Nombre real del empleado (Obligatorio)  
 🔹 **Apellido** | Apellido del empleado (Obligatorio)  
 🔹 **Foto** | Foto del empleado (Opcional)  
-🔹 **Punto de Venta** | En qué sector trabaja (Obligatorio)
+🔹 **Punto de Venta** | En qué sector trabaja (obligatorio)
 
 ### **Paso 4: Configurar visibilidad (MUY IMPORTANTE)**
 Esta parte es clave para organizar tu restaurante:
 
-**Seleccionar Qué Usuarios Puede Ver tu Mozo**
+**Seleccionar Qué Usuarios Puede Ver tu empleado**
 
 **👀 Opciones de visibilidad:**
 
 **🔹 Ver todas las mesas**  
-📌 *Cuándo usarla:* Todos los mozos pueden atender cualquier mesa (Dejar todas las opciones sin marcar) 
+📌 *Cuándo usarla:* Todos los empleados pueden atender cualquier mesa (Dejar todas las opciones sin marcar) 
 📋 *Ejemplo:* Restaurante pequeño, todos ayudan
 
 **🔹 Solo sus mesas asignadas**  
-📌 *Cuándo usarla:* Cada mozo ve solo sus mesas (marcar las opciones correspondientes)
-📋 *Ejemplo:* Restaurante grande, mozos por sector
+📌 *Cuándo usarla:* Cada empleado ve solo sus mesas (marcar las opciones correspondientes)
+📋 *Ejemplo:* Restaurante grande, empleados por sector
 
 ### **Paso 5: Guardar**
 6. Verificá que todos los datos estén correctos

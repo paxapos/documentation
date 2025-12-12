@@ -257,12 +257,9 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, au
 ---
 
 ## 🚨 **¿Problemas comunes?**
-
-| Problema | Solución |
-|----------|----------|
-| **"No tengo clave fiscal nivel 3"** | Debés tramitarla en ARCA primero |
-| **"No aparece el servicio"** | Verificá que estés en la sección correcta de WebServices |
-| **"Error al asignar representante"** | Verificá que el CUIT 20306836268 esté bien escrito |
+- **"No tengo clave fiscal nivel 3"** → Debés tramitarla en ARCA primero
+- **"No aparece el servicio"** → Verificá que estés en la sección correcta de WebServices
+- **"Error al asignar representante"** → Verificá que el CUIT 20306836268 esté bien escrito
 
 ### **📞 ¿Necesitás ayuda?**
 Este proceso es técnico y específico de ARCA. Si tenés dudas, consultá con:

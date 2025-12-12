@@ -6,7 +6,7 @@
 
 ## 📍 **Paso 1: Ingresá a la página web**
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: **{{SYSTEM_URL}}**
+2. En la barra de direcciones, escribí: [**Restodigital.com.ar**](https://restodigital.com.ar)
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
@@ -28,7 +28,7 @@ Vas a ver una pantalla de ingreso como esta:
 └─────────────────────────────┘
 ```
 
-3. **En "Usuario":** Escribí el nombre de usuario que te dieron
+3. **En "Usuario":** Escribí el correo electrónico que te dieron
 4. **En "Contraseña":** Escribí tu contraseña (no se ve por seguridad)
 5. Hacé clic en el botón **"Iniciar sesión"**
 
@@ -58,7 +58,7 @@ Si los datos son correctos, vas a ingresar al **panel principal** donde podés e
 
 ---
 
-## 🚨 **¿Tenés problemas para ingresar?**
+## 🚨 **¿Problemas comunes?**
 
 ### 🔒 **¿Olvidaste tu contraseña?**
 **No te preocupes, es súper fácil recuperarla:**

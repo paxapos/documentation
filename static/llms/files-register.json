@@ -1,22 +1,22 @@
 {
-  "generated_at": "2025-12-01T19:36:00.839Z",
+  "generated_at": "2025-10-27T18:04:13.131Z",
   "total_files": 24,
   "files": [
     "11-introduccion.txt",
     "12-iniciar-sesion.txt",
     "21-agregar-personal.txt",
     "22-tipos-de-pago.txt",
-    "23-crear-usuarios.txt",
+    "23-agregar-empleado.txt",
     "24-configuracion-de-impresoras.txt",
     "25-menu.txt",
-    "26-permisos-por-rol.txt",
+    "31-dashboard-home.txt",
     "32-salon.txt",
-    "33-kitchen-display-system-kds.txt",
+    "33-comandero.txt",
     "34-contabilidad.txt",
     "35-arqueos.txt",
     "36-compras-y-stock.txt",
     "37-arca-y-facturacion.txt",
-    "38-estadisticas.txt",
+    "38-reportes.txt",
     "39-business-intelligence.txt",
     "41-biblioteca-de-drivers.txt",
     "42-sam4s-giant-100.txt",
@@ -41,10 +41,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/10-Comenzamos/12-Iniciar-sesión.md"
     },
     {
-      "txt_file": "21-agregar-personal.txt",
-      "original_md": "21-Agregar-Personal",
-      "title": "Agregar Personal",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/21-Agregar-Personal.md"
+      "txt_file": "21-crear-usuarios.txt",
+      "original_md": "21-Crear-Usuarios",
+      "title": "Crear Usuarios",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/21-Crear-Usuarios.md"
     },
     {
       "txt_file": "22-tipos-de-pago.txt",
@@ -53,10 +53,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/22-Tipos-De-Pago.md"
     },
     {
-      "txt_file": "23-crear-usuarios.txt",
-      "original_md": "23-Crear-Usuarios",
-      "title": "Crear Usuarios",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/23-Crear-Usuarios.md"
+      "txt_file": "23-agregar-empleado.txt",
+      "original_md": "23-Agregar-Empleado",
+      "title": "Agregar Empleado",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/23-Agregar-Empleado.md"
     },
     {
       "txt_file": "24-configuracion-de-impresoras.txt",
@@ -71,10 +71,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/25-Menú.md"
     },
     {
-      "txt_file": "26-permisos-por-rol.txt",
-      "original_md": "26-Permisos-por-rol",
-      "title": "Permisos por rol",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/20-Primeros Pasos/26-Permisos-por-rol.md"
+      "txt_file": "31-dashboard-home.txt",
+      "original_md": "31-Dashboard-Home",
+      "title": "Dashboard Home",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/31-Dashboard-Home.md"
     },
     {
       "txt_file": "32-salon.txt",
@@ -83,10 +83,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/32-Salón.md"
     },
     {
-      "txt_file": "33-kitchen-display-system-kds.txt",
-      "original_md": "33-Kitchen-Display-System-(KDS)",
-      "title": "Kitchen Display System (KDS)",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/33-Kitchen-Display-System-(KDS).md"
+      "txt_file": "33-comandero.txt",
+      "original_md": "33-Comandero",
+      "title": "Comandero",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/33-Comandero.md"
     },
     {
       "txt_file": "34-contabilidad.txt",
@@ -113,10 +113,10 @@
       "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/37-ARCA-y-Facturación.md"
     },
     {
-      "txt_file": "38-estadisticas.txt",
-      "original_md": "38-Estadísticas",
-      "title": "Estadísticas",
-      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/38-Estadísticas.md"
+      "txt_file": "38-reportes.txt",
+      "original_md": "38-Reportes",
+      "title": "Reportes",
+      "generated_from": "/home/santiago/Escritorio/documentation/src/routes/user-guide/Manual-Usuario/30-Módulos Principales/38-Reportes.md"
     },
     {
       "txt_file": "39-business-intelligence.txt",

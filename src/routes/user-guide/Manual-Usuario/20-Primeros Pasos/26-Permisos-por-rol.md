@@ -3,15 +3,11 @@
 <div id="permisos-por-rol"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Vas a configurar qué puede hacer cada tipo de usuario en {{BRAND_NAME}}. Podés decidir si un mozo puede ver reportes, si un cajero puede eliminar productos, etc.
+> Vas a configurar qué puede hacer cada tipo de usuario dentro del sistema. Podés decidir si un mozo puede ver reportes, si un cajero puede eliminar productos, etc.
 
 > [!CAUTION]
 > **⚠️ NO es recomendable modificar este apartado si no entendés del tema**  
 > Si modificás permisos incorrectamente, podés bloquear funciones importantes o dar acceso a información sensible a personas no autorizadas.
-
-## 🔴 **RECORDATORIO - La "P" roja**
-
-Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las configuraciones.
 
 ---
 
@@ -31,13 +27,12 @@ Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las 
 
 ### **Paso 1: Acceder a Roles y Permisos**
 
-1. Hacé clic en la **"P" roja** 🔴
-2. En la ventana que se abre, buscá **"Roles Permisos"**
-3. Hacé clic en **"Roles Permisos"**
+1. Hacé clic en la **Configuración** 🔴
+2. Click en **Permisos por rol**
 
 ### **Paso 2: Seleccionar el rol a configurar**
 
-4. Vas a ver una lista de todos los roles disponibles:
+1. Vas a ver una lista de todos los roles disponibles:
    -  **Dueño**
    -  **Encargado**
    -  **Cajero**
@@ -45,7 +40,7 @@ Acordate de buscar la **"P" roja** 🔴 en la parte superior para acceder a las 
    -  **Adicionista**
    -  **Cocinero**
    -  **Auditor**
-5. Hacé clic en el rol que querés configurar
+2. Hacé clic en el rol que querés configurar
 
 ### **Paso 3: Entender los módulos de permisos**
 
@@ -143,6 +138,6 @@ Dentro de cada módulo, vas a encontrar diferentes opciones. Para cada opción p
 
 Si modificaste permisos y querés volver a como estaba antes:
 
-1. Contactá al soporte técnico de {{BRAND_NAME}}
+1. Contactá al soporte técnico del sistema
 2. Ellos pueden restaurar los permisos predeterminados
 3. **NO intentes hacerlo manualmente** si no estás seguro

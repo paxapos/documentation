@@ -4,15 +4,8 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar todo lo que vendés: comidas, bebidas, postres, etc. Sin el menú configurado, no vas a poder tomar pedidos ni vender nada.
 
-## 🔴 **MUY IMPORTANTE - La "P" roja**
-
-```
-🏪 Software    [ 🔴 P ]    
-                     ↓
-                "Productos"
-```
-
 ---
+
 
 ## 📚 **Conceptos básicos que necesitás conocer**
 
@@ -30,7 +23,7 @@ La lista completa de **TODOS** los productos de tu negocio.
 - Incluye productos en venta, subproductos y mercaderías
 - Es como el "diccionario" de todo lo que existe
 
-#### **🛒 Productos en Venta**
+#### **🛒 Productos**
 Los que aparecen en tus menús y los clientes pueden pedir.
 - **Ejemplos:** Pizza Margarita, Coca-Cola, Helado de Vainilla
 
@@ -38,23 +31,9 @@ Los que aparecen en tus menús y los clientes pueden pedir.
 Productos que **NO se venden ni se compran**. Se usan para preparar otros productos.
 - **Ejemplos:** Salsa Fileto (se usa para hacer Pizza Napolitana)
 
-#### **📦 Mercadería**
-Todo lo que **COMPRAS** a proveedores.
-- **Ejemplos:** Tomates, Queso Mozzarella, Botella de Coca-Cola
-
 ### ⚙️ **3. Variante**
 **¿Qué es?** Un grupo de opciones que modifican un producto.
 - **Ejemplo:** Variante "Tipo de Salsa" para un plato de pasta
-
-### 🎛️ **4. Opciones de Variantes**
-**¿Qué es?** Las elecciones específicas dentro de una variante. Cada opción está vinculada a un producto del Maestro.
-
-**Ejemplos:**
-
-🔹 **Opción "Salsa Fileto"** | Vinculada al subproducto "Salsa Fileto"  
-🔹 **Opción "Coca-Cola"** | Vinculada al producto en venta "Coca-Cola"
-
-> ⚠️ **¡Importante!** Pueden ser subproductos (como salsas) o productos en venta (como bebidas)
 
 ### 🏷️ **5. Categorías**
 **¿Qué es?** Secciones para organizar los productos en tus menús. Pueden tener subsecciones (como un árbol).
@@ -96,14 +75,40 @@ Menú Principal
 
 ### **� ETAPA 1** → **Acceso al sistema de productos**
 
-> **🖥️ Ubicación:** Panel principal
+## 📋 **Paso a paso - Configurar productos en venta**
+
+### **Paso 1: Acceder al Menu de Productos**
+1. Hacé clic en el **productos** dentro del menu lateral
+2. Dentro de las opciones, buscá **Menú**
+3. Hacé clic en **Menú**
+
+
+```
+💻 INSTRUCCIONES:
+┌────────────────────────────────────────────┐
+│ 1️⃣ Presioná "+ Crear Nuevo"               │
+│ 2️⃣ Nombre sugerido: "Menú Principal"      │
+│ 3️⃣ Confirmá con "Guardar"                 │
+└────────────────────────────────────────────┘
+```
+
+> **🎯 Meta:** Crear tu primera carta digital
+
+**💡 Ideas de nombres para menús:**
+- **"Menú Principal"** → Carta completa
+- **"Menú Ejecutivo"** → Opciones rápidas  
+- **"Carta de Bebidas"** → Solo líquidos
+- **"Menú Delivery"** → Para envío
+
+---
+
 
 ### **📋 Cómo crear variantes:**
 <div id="variantes"></div>
 
 **Paso 1: Crear la variante**
 1. Dentro de Productos, buscá **"Variantes"**
-2. Hacé clic en **"+ Nueva Variante"**
+2. Hacé clic en **"Crear Variante"**
 3. Nombre: "Acompañamiento"
 4. Agregá las opciones:
    - Papas fritas - $0
@@ -122,7 +127,7 @@ Menú Principal
 💻 INSTRUCCIONES:
 ┌────────────────────────────────────────┐
 │ 1️⃣ Navegá a "Categorías"              │
-│ 2️⃣ Clic en "+ Nueva Categoría"        │
+│ 2️⃣ Clic en "Crear Categoría"          │
 │ 3️⃣ Escribí nombre: Platos Principales │
 │ 4️⃣ Presioná "Guardar"                 │
 └────────────────────────────────────────┘
@@ -142,25 +147,6 @@ Menú Principal
 
 ---
 
-### **� ETAPA 3** → **Creación del menú base**
-<div id="menu-base"></div>
-
-```
-💻 INSTRUCCIONES:
-┌────────────────────────────────────────────┐
-│ 1️⃣ Presioná "+ Crear Nuevo"               │
-│ 2️⃣ Nombre sugerido: "Menú Principal"      │
-│ 3️⃣ Confirmá con "Guardar"                 │
-└────────────────────────────────────────────┘
-```
-
-**💡 Ideas de nombres para menús:**
-- **"Menú Principal"** → Carta completa
-- **"Menú Ejecutivo"** → Opciones rápidas  
-- **"Carta de Bebidas"** → Solo líquidos
-- **"Menú Delivery"** → Para envío
-
----
 
 ### **�️ ETAPA 4** → **Agregando productos**
 <div id="agregar-productos"></div>
@@ -190,6 +176,9 @@ Menú Principal
 
 🔹 **🎫 Nombre en Ticket** | `OPCIONAL` → Nombre corto (ej: "Mila Napo")
 
+🔹 **Variante** | `OPCIONAL` → Asignarle una variante (ej: "Guarnición")
+
+
 ---
 
 ### **� ETAPA 5** → **Guardado y verificación**
@@ -206,14 +195,14 @@ Menú Principal
 ```
 ---
 
-## 📂 **Funciones adicionales**
-
-### **🗂️ Productos Duplicados**
-Esta sección te permite visualizar y gestionar cualquier producto que {{BRAND_NAME}} identifique como duplicado, ayudándote a mantener la base de datos de tu menú limpia y organizada.
-
+## 💡 **Consejos para un menú perfecto**
+- ✅ **Empezá con lo básico** (5-10 productos más vendidos)
+- ✅ **Usá nombres claros** (evitá nombres rebuscados)
+- ✅ **Organizá por categorías** (facilita encontrar productos)
+- ✅ **Configurá bien las impresoras** (cocina, bar, etc.)
+- ✅ **Probá vender** cada producto después de cargarlo
 
 ## 🚨 **¿Problemas comunes?**
-- **"No encuentro Productos"** → Buscá la "P" roja primero
 - **"No me deja guardar"** → Verificá que tengas nombre, categoría y precio
 - **"No aparece en la venta"** → Verificá que esté en el menú correcto
 - **"Sale en la impresora equivocada"** → Configurá la impresora predeterminada

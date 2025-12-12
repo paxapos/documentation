@@ -112,23 +112,12 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ---
 
-## 🔧 **¿Problemas comunes?**
-
-**🚨 Soluciones a problemas frecuentes:**
-
-**🔹 "No me llegan mensajes"**  
-🔧 *Solución:* Verificá el Chat ID y que el bot esté activo
-
-**🔹 "Llegan demasiados mensajes"**  
-🔧 *Solución:* Ajustá los umbrales y filtros
-
-**🔹 "Alertas falsas de stock"**  
-🔧 *Solución:* Revisá que el inventario esté bien configurado
-
-**🔹 "No funciona fuera del horario"**  
-🔧 *Solución:* Verificá la configuración de horarios permitidos
+## 🚨 **¿Problemas comunes?**
+- **"No me llegan mensajes"** → Verificá el Chat ID y que el bot esté activo
+- **"Llegan demasiados mensajes"** → Ajustá los umbrales y filtros
+- **"Alertas falsas de stock"** → Revisá que el inventario esté bien configurado
+- **"No funciona fuera del horario"** → Verificá la configuración de horarios permitidos
 
 ### **📞 ¿Necesitás ayuda?**
 Contactá a soporte técnico - ellos te ayudan a configurar todo perfectamente según tu tipo de negocio.
 
----

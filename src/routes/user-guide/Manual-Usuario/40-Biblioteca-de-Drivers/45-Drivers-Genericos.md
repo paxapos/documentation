@@ -16,7 +16,7 @@ Descarga el driver oficial para impresoras térmicas genéricas:
 ### 📥 Descarga Disponible
 
 
-📁 **<a href="/POS-Printer-Driver-Setup-V7.17.exe" download="POS-Printer-Driver-Setup-V7.17.exe">Descargar POS Printer Driver Setup V7.17</a>**
+📁 **<a href="/POS-Printer-Driver-Setup-V7.17.zip" download="POS-Printer-Driver-Setup-V7.17.zip">Descargar POS Printer Driver Setup V7.17</a>**
 
 💻 **Compatibilidad:** Windows 7, 8, 10 y 11  
 🖨️ **Soporte:** Impresoras POS 80mm y 58mm

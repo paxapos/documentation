@@ -7,17 +7,130 @@
 
 ---
 
+## 💵 **Gestión de Caja**
+
+<div id="gestion-caja"></div>
+
+> ⚠️ **Importante:** Antes de empezar a trabajar con las mesas, tenés que abrir la caja. Al finalizar el turno, recordá cerrarla.
+
+### **🔓 Abrir Caja (Al inicio del turno)**
+
+<div id="abrir-caja"></div>
+
+**📍 Dónde encontrarlo:** Esquina superior derecha del módulo Salón
+
+**🚀 Paso a paso:**
+
+1. Hacé clic en el botón **"Abrir Caja"** (esquina superior derecha)
+2. Completá los siguientes datos:
+
+**📝 Datos requeridos:**
+
+🔹 **Monto Inicial** | Cantidad de dinero que tenés en la caja al comenzar  
+🔹 **Seleccionar Caja** | Elegí qué caja querés abrir
+
+3. Hacé clic en **"Confirmar"**
+4. ¡Listo! Ya podés empezar a trabajar con las mesas
+
+💡 **Tip:** Contá bien el dinero inicial para que después el arqueo cierre correctamente
+
+---
+
+### **🔒 Cerrar Caja (Al finalizar el turno)**
+
+<div id="cerrar-caja"></div>
+
+**📍 Dónde encontrarlo:** Esquina superior derecha del módulo Salón
+
+**🚀 Paso a paso:**
+
+1. Hacé clic en el botón **"Cerrar Caja"** (esquina superior derecha)
+2. Ingresá la **cantidad de billetes físicos** que tenés en la caja
+
+**💵 Cómo cargar los billetes:**
+
+> ⚠️ **Importante:** Se carga la **cantidad de billetes**, no el monto total
+
+**Ejemplo práctico:**
+
+- Si tenés **$30,000** en la caja
+- Y tenés **3 billetes de $10,000**
+- Ingresás: **3** (cantidad de billetes de $10,000)
+
+**📝 Desglose por denominación:**
+
+🔹 Billetes de **$20,000** | Cantidad de billetes  
+🔹 Billetes de **$10,000** | Cantidad de billetes  
+🔹 Billetes de **$5,000** | Cantidad de billetes  
+🔹 Billetes de **$2,000** | Cantidad de billetes  
+🔹 Billetes de **$1,000** | Cantidad de billetes  
+🔹 Billetes de **$500** | Cantidad de billetes  
+🔹 Billetes de **$200** | Cantidad de billetes  
+🔹 Billetes de **$100** | Cantidad de billetes
+🔹 Billetes de **$50** | Cantidad de billetes
+🔹 Billetes de **$20** | Cantidad de billetes
+🔹 Billetes de **$10** | Cantidad de billetes
+🔹 Billetes de **$1** | Cantidad de billetes
+
+3. Hacé clic en **"Confirmar Cierre"**
+4. El sistema va a calcular si hay diferencias con lo registrado
+
+💡 **Tip:** Contá los billetes por denominación antes de cerrar para agilizar el proceso
+
+---
+
+### **💰 Ingresos y Egresos**
+
+<div id="ingresos-egresos"></div>
+
+**📍 Dónde encontrarlo:** Esquina superior derecha del módulo Salón
+
+**🎯 ¿Para qué sirve?**  
+Para registrar dinero que entra o sale de la caja durante el turno (que no sea por ventas)
+
+#### **📥 Registrar un Ingreso**
+
+**Ejemplos:** Propinas, devoluciones, aportes de efectivo
+
+**🚀 Paso a paso:**
+
+1. Hacé clic en **"Ingresos"** (esquina superior derecha)
+2. Completá los datos:
+
+🔹 **Monto** | Cantidad de dinero que ingresa  
+🔹 **Caja destino** | A qué caja va el dinero  
+🔹 **Concepto** | Motivo del ingreso (opcional)
+
+3. Hacé clic en **"Confirmar"**
+
+#### **📤 Registrar un Egreso**
+
+**Ejemplos:** Gastos menores, vueltos, retiros
+
+**🚀 Paso a paso:**
+
+1. Hacé clic en **"Egresos"** (esquina superior derecha)
+2. Completá los datos:
+
+🔹 **Monto** | Cantidad de dinero que sale  
+🔹 **Caja origen** | De qué caja sale el dinero  
+🔹 **Concepto** | Motivo del egreso (opcional)
+
+3. Hacé clic en **"Confirmar"**
+
+💡 **Tip:** Siempre registrá los ingresos y egresos en el momento para que el arqueo sea exacto
+
+---
+
 ## 📋 **Paso a paso - Atender tu primera mesa**
 
 ### **Paso 1: Acceder al Salón**
-
-1. En los módulos principales, buscá **"Salón"**
+1. En los módulos principales, buscá **"Ventas"**
 2. Hacé clic en **"Salón"**
 3. Vas a ver una lista con todos tus mozos
 
 ### **Paso 2: Crear una nueva mesa**
-
-4. Hacé clic en el **nombre del mozo** que va a atender la mesa
+4. Hacé clic en **Abrir mesa** dentro del mozo que va a atender la mesa
 5. Se va a abrir una ventana para crear la mesa
 6. Completá estos datos:
 
@@ -150,17 +263,16 @@ Para registrar dinero que entra o sale de la caja durante el turno (que no sea p
 
 Una vez que tenés la mesa creada, aparecen estas opciones:
 
-### **📋 1. Agregar Productos (Tomar pedido)**
-
-- **Qué hace:** Abre {{BRAND_NAME}} para cargar el pedido
+### **📋 1. Nueva comanda (Tomar pedido)**
+- **Qué hace:** Abre el sistema de ventas para cargar el pedido
 - **Cuándo usarlo:** Cuando el cliente quiere pedir comida/bebida
-- **Cómo:** Hacé clic en **"Agregar Productos"**
+- **Cómo:** Hacé clic en **"Nueva comanda"**
 
 ### **💰 2. Cobrar la Mesa**
 
 - **Qué hace:** Procesa el pago de todo lo consumido
 - **Cuándo usarlo:** Cuando el cliente quiere pagar la cuenta
-- **Cómo:** Hacé clic en **"Cobrar la Mesa"**
+- **Cómo:** Hacé clic en **"Cerrar"** y luego en **"Cobrar"**
 
 ### **🧾 3. Imprimir Remito**
 
@@ -174,28 +286,28 @@ Una vez que tenés la mesa creada, aparecen estas opciones:
 - **Cuándo usarlo:** Después de cobrar y que se fueron los clientes
 - **Cómo:** Hacé clic en **"Cerrar la Mesa"**
 
-### **🏷️ 5. Agregar Descuento**
+### ⚙️ **Opciones Adicionales**
 
+#### **🏷️ 5. Agregar Descuento**
 - **Qué hace:** Aplica un descuento especial a la cuenta
 - **Cuándo usarlo:** Promociones, clientes especiales, compensaciones
 - **Cómo:** Hacé clic en **"Agregar Descuento"**
 
-### **👤 6. Agregar Cliente**
-
+#### **👤 6. Agregar Cliente**
 - **Qué hace:** Permite registrar un cliente para poder imprimir Facturas Fiscales
 - **Cuándo usarlo:** Cuando necesités emitir una factura fiscal
 - **Cómo:** Hacé clic en **"Agregar Cliente"** y después en **"Crear Cliente"**
 
 **📝 Datos del cliente que te va a pedir:**
 
-🔹 **Nombre o Razón Social** | Nombre completo o empresa  
-🔹 **Dirección** | Domicilio del cliente  
-🔹 **Teléfono** | Número de contacto  
-🔹 **Domicilio de Facturación** | Dirección fiscal  
-🔹 **Email** | Correo electrónico  
-🔹 **Tipo de Documento** | CUIT, CUIL, DNI, Pasaporte, Cédula de Identidad, Sin Identificar  
-🔹 **Descuento** | Porcentaje de descuento (opcional)  
-🔹 **Fecha de Cumpleaños o Inicio de Actividades** | Para registro  
+🔹 **Nombre o Razón Social** | Nombre completo o empresa
+🔹 **Dirección** | Domicilio del cliente
+🔹 **Teléfono** | Número de contacto
+🔹 **Domicilio de Facturación** | Dirección fiscal
+🔹 **Email** | Correo electrónico
+🔹 **Tipo de Documento** | CUIT, CUIL, DNI, Pasaporte, Cédula de Identidad, Sin Identificar
+🔹 **Descuento** | Porcentaje de descuento (opcional)
+🔹 **Fecha de Cumpleaños o Inicio de Actividades** | Para registro
 🔹 **IVA Responsabilidad** | Condición ante IVA
 
 💡 **Tip:** Si el cliente ya existe, podés buscarlo por su número de CUIL o razón social

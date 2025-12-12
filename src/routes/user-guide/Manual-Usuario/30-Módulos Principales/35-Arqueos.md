@@ -6,6 +6,11 @@
 
 ---
 
+## 🔍 **¿Dónde encuentro los arqueos?**
+1. **Clic en:** "Ventas" 
+2. **Click en:** "Arqueo de caja"
+
+
 ## 🔍 **¿Qué vas a ver en Arqueos?**
 
 Cuando entres al módulo, vas a ver todos los **cierres de caja** organizados por día y hora:

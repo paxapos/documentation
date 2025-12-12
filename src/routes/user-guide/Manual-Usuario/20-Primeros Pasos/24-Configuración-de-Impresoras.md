@@ -50,26 +50,41 @@ Con fiscalberry abierto y la impresora conectada, intenta imprimir una factura f
 
 ---
 
-## 🆘 **Solución de Problemas**
+## ✅ **Test de Funcionamiento**
 
-### **⚠️ Errores Comunes**
+### **🧪 Checklist de Pruebas**
 
-| 🚨 **Error** | 🔧 **Solución Rápida** |
-|-------------|----------------------|
-| No imprime nada | Verificar  que fiscalberry este abierto y la impresoras conectadas correctamente|
-| Error Fiscalberry | Reinstalar como administrador |
-| Cajón no abre | Revisar conexión impresora-cajón |
-| Imprime en lugar equivocado | Verificar asignación de impresoras dentro de cada producto |
+**📋 PASO A PASO:**
+
+1. **TEST TICKETS** 🎫
+   ```
+   Crear venta → Cerrar mesa → ¿Imprimió ticket? ✅
+   ```
+
+2. **TEST COMANDAS** 🍽️
+   ```
+   Cargar pedido → Enviar cocina → ¿Salió comanda? ✅
+   ```
+
+3. **TEST FISCAL** 📄
+   ```
+   Crear factura → Imprimir → ¿Factura legal válida? ✅
+   ```
+
+4. **TEST CAJÓN** 💰
+   ```
+   Cobrar efectivo → ¿Se abrió automáticamente? ✅
+   ```
+
+---
+
+## 🚨 **¿Problemas comunes?**
+- **"No imprime nada"** → Verificar encendido + conexión
+- **"Error Fiscalberry"** → Reinstalar como administrador  
+- **"Cajón no abre"** → Revisar conexión impresora-cajón
+- **"Imprime en lugar equivocado"** → Verificar asignación de impresoras
 
 ### **📞 ¿Necesitás ayuda?**
 **WhatsApp directo:** [+1 (786) 755-3113](https://wa.me/17867553113)
 
 ---
-
-## 💡 **Tips de Experto**
-
-> 
-> ✅ **Siempre probá** después de cada configuración  
-> ✅ **Mantené papel** suficiente en todas las impresoras  
-> ✅ **Instalá Fiscalberry** antes del primer día de ventas  
-> ✅ **Etiquetá** físicamente cada impresora con su función
