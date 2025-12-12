@@ -11,7 +11,7 @@
 
 ### **Paso 1: Encontra el menu lateral**
 1. Una vez que lo hayas visualizado, Desplega la opcion **Configuracion**
-2. Hacé clic en la opcion **Usuarios Paxapos**
+2. Hacé clic en la opcion **Usuarios del Sistema**
 3. Se va a abrir una ventana
 
 ### **Paso 2: Ir a Crear Usuarios**
