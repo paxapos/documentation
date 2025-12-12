@@ -6,7 +6,7 @@
 
 ## 📍 **Paso 1: Ingresá a la página web**
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: [**Restodigital.com.ar**](https://restodigital.com.ar)
+2. En la barra de direcciones, escribí: [**restodigital.com.ar**](https://restodigital.com.ar)
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
