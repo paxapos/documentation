@@ -1,116 +1,116 @@
 name: Build and Push Docker Image
 
 on:
-  push:
-    branches: [ main ]  # Solo push a main genera build y push
-    tags: [ 'v*' ]      # O tags con versión
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
-    inputs:
-      brand_name:
-        description: 'Brand Name'
-        required: true
-        default: 'PaxaPOS'
-      system_url:
-        description: 'System URL'
-        required: true
-        default: 'beta.paxapos.com'
-      company_name:
-        description: 'Company Name (optional)'
-        required: false
-        default: ''
+    push:
+        branches: [main] # Solo push a main genera build y push
+        tags: ['v*'] # O tags con versión
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+        inputs:
+            brand_name:
+                description: 'Brand Name'
+                required: true
+                default: 'PaxaPOS'
+            system_url:
+                description: 'System URL'
+                required: true
+                default: 'beta.paxapos.com'
+            company_name:
+                description: 'Company Name (optional)'
+                required: false
+                default: ''
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+    REGISTRY: ghcr.io
+    IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v3
 
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Log in to GitHub Container Registry
+              uses: docker/login-action@v3
+              with:
+                  registry: ${{ env.REGISTRY }}
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+            - name: Log in to Docker Hub
+              uses: docker/login-action@v3
+              with:
+                  username: ${{ secrets.DOCKERHUB_USERNAME }}
+                  password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Extract metadata (GitHub Container Registry)
-        id: meta-ghcr
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
+            - name: Extract metadata (GitHub Container Registry)
+              id: meta-ghcr
+              uses: docker/metadata-action@v5
+              with:
+                  images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+                  tags: |
+                      type=ref,event=branch
+                      type=ref,event=pr
+                      type=semver,pattern={{version}}
+                      type=semver,pattern={{major}}.{{minor}}
 
-      - name: Extract metadata (Docker Hub)
-        id: meta-dockerhub
-        uses: docker/metadata-action@v5
-        with:
-          images: yoalevilar/paxapos-docs
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=raw,value=latest,enable={{is_default_branch}}
+            - name: Extract metadata (Docker Hub)
+              id: meta-dockerhub
+              uses: docker/metadata-action@v5
+              with:
+                  images: yoalevilar/paxapos-docs
+                  tags: |
+                      type=ref,event=branch
+                      type=ref,event=pr
+                      type=semver,pattern={{version}}
+                      type=semver,pattern={{major}}.{{minor}}
+                      type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Set build variables
-        id: vars
-        run: |
-          # Usar variables del workflow dispatch si están disponibles, sino usar variables del repositorio, sino usar valores por defecto
-          BRAND_NAME="${{ github.event.inputs.brand_name || vars.PUBLIC_BRAND_NAME || 'PaxaPOS' }}"
-          SYSTEM_URL="${{ github.event.inputs.system_url || vars.PUBLIC_SYSTEM_URL || 'beta.paxapos.com' }}"
-          COMPANY_NAME="${{ github.event.inputs.company_name || vars.PUBLIC_COMPANY_NAME || '' }}"
-          
-          echo "brand_name=${BRAND_NAME}" >> $GITHUB_OUTPUT
-          echo "system_url=${SYSTEM_URL}" >> $GITHUB_OUTPUT
-          echo "company_name=${COMPANY_NAME}" >> $GITHUB_OUTPUT
+            - name: Set build variables
+              id: vars
+              run: |
+                  # Usar variables del workflow dispatch si están disponibles, sino usar variables del repositorio, sino usar valores por defecto
+                  BRAND_NAME="${{ github.event.inputs.brand_name || vars.PUBLIC_BRAND_NAME || 'PaxaPOS' }}"
+                  SYSTEM_URL="${{ github.event.inputs.system_url || vars.PUBLIC_SYSTEM_URL || 'beta.paxapos.com' }}"
+                  COMPANY_NAME="${{ github.event.inputs.company_name || vars.PUBLIC_COMPANY_NAME || '' }}"
 
-      - name: Build and push to GitHub Container Registry
-        uses: docker/build-push-action@v5
-        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ steps.meta-ghcr.outputs.tags }}
-          labels: ${{ steps.meta-ghcr.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+                  echo "brand_name=${BRAND_NAME}" >> $GITHUB_OUTPUT
+                  echo "system_url=${SYSTEM_URL}" >> $GITHUB_OUTPUT
+                  echo "company_name=${COMPANY_NAME}" >> $GITHUB_OUTPUT
 
-      - name: Build and push to Docker Hub
-        uses: docker/build-push-action@v5
-        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ steps.meta-dockerhub.outputs.tags }}
-          labels: ${{ steps.meta-dockerhub.outputs.labels }}
-          build-args: |
-            PUBLIC_BRAND_NAME=${{ steps.vars.outputs.brand_name }}
-            PUBLIC_SYSTEM_URL=${{ steps.vars.outputs.system_url }}
-            PUBLIC_COMPANY_NAME=${{ steps.vars.outputs.company_name }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+            - name: Build and push to GitHub Container Registry
+              uses: docker/build-push-action@v5
+              if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
+              with:
+                  context: .
+                  platforms: linux/amd64,linux/arm64
+                  push: true
+                  tags: ${{ steps.meta-ghcr.outputs.tags }}
+                  labels: ${{ steps.meta-ghcr.outputs.labels }}
+                  cache-from: type=gha
+                  cache-to: type=gha,mode=max
+
+            - name: Build and push to Docker Hub
+              uses: docker/build-push-action@v5
+              if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
+              with:
+                  context: .
+                  platforms: linux/amd64,linux/arm64
+                  push: true
+                  tags: ${{ steps.meta-dockerhub.outputs.tags }}
+                  labels: ${{ steps.meta-dockerhub.outputs.labels }}
+                  build-args: |
+                      PUBLIC_BRAND_NAME=${{ steps.vars.outputs.brand_name }}
+                      PUBLIC_SYSTEM_URL=${{ steps.vars.outputs.system_url }}
+                      PUBLIC_COMPANY_NAME=${{ steps.vars.outputs.company_name }}
+                  cache-from: type=gha
+                  cache-to: type=gha,mode=max

@@ -1,6 +1,5 @@
 # 🖨️ Drivers Genéricos POS
 
-
 Cómo descargar e instalar el controlador para impresoras térmicas genéricas (POS 80mm y POS 58mm)
 
 En esta guía aprenderás cómo descargar e instalar el controlador (driver) para impresoras térmicas genéricas de 80 mm o 58 mm.
@@ -14,7 +13,6 @@ Si nunca realizaste este tipo de instalación, no te preocupes: aquí te explica
 Descarga el driver oficial para impresoras térmicas genéricas:
 
 ### 📥 Descarga Disponible
-
 
 📁 **<a href="/POS-Printer-Driver-Setup-V7.17.zip" download="POS-Printer-Driver-Setup-V7.17.zip">Descargar POS Printer Driver Setup V7.17</a>**
 
@@ -35,7 +33,6 @@ Acepta los términos marcando la casilla "Acepto el acuerdo" y luego haz clic en
 Vuelve a presionar "Siguiente" en las siguientes pantallas hasta llegar al botón de instalación.
 
 ![Imagen](images/generic/2-ubicacion.webp)
- 
 
 Haz clic en "Instalar".
 
@@ -78,5 +75,3 @@ Haz clic en "Aplicar" para guardar los cambios.
 
 ✅ ¡Listo!
 Tu impresora térmica genérica ya está instalada correctamente en tu computadora.
-
-

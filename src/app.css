@@ -2,122 +2,128 @@
 
 /* Configuración global para modo oscuro/claro automático */
 :root {
-  color-scheme: light dark;
+	color-scheme: light dark;
 }
 
 /* Fallback para navegadores que no soportan prefers-color-scheme */
 html {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
+	background-color: white;
+	color: black;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 }
 
 html.dark {
-  background-color: rgb(17 24 39);
-  color: white;
+	background-color: rgb(17 24 39);
+	color: white;
 }
 
 /* Transiciones suaves para todos los elementos que cambian con el tema */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease;
 }
 
 /* Mejoras para el contenedor global y centrado móvil */
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-size: 16px; /* Prevenir zoom en iOS */
-  -webkit-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-size: 16px; /* Prevenir zoom en iOS */
+	-webkit-text-size-adjust: 100%;
 }
 
 /* Contenedor responsive mejorado */
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Responsive breakpoints */
 @media (max-width: 640px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    max-width: 100%;
-  }
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		max-width: 100%;
+	}
 }
 
 @media (min-width: 641px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+	.container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 }
 
 @media (min-width: 1024px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+	.container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
 
 /* Estilos base para modo claro */
 .markdown-paxapos {
-    padding: clamp(0.75rem, 3vw, 1.5rem);
-    margin-top: clamp(0.5rem, 2vw, 1.875rem);
-    margin-bottom: clamp(0.5rem, 2vw, 1.875rem);
-    background: transparent; /* Fondo transparente para heredar del contenedor */
-    color: rgb(34 34 34); /* gray-800 para modo claro */
-    border-radius: 8px;
-    /* Sin sombra por defecto para integración más suave */
-    line-height: 1.6;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+	padding: clamp(0.75rem, 3vw, 1.5rem);
+	margin-top: clamp(0.5rem, 2vw, 1.875rem);
+	margin-bottom: clamp(0.5rem, 2vw, 1.875rem);
+	background: transparent; /* Fondo transparente para heredar del contenedor */
+	color: rgb(34 34 34); /* gray-800 para modo claro */
+	border-radius: 8px;
+	/* Sin sombra por defecto para integración más suave */
+	line-height: 1.6;
+	font-family:
+		-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .markdown-paxapos h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    line-height: 1.25;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	line-height: 1.25;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
 }
 
 .markdown-paxapos h2 {
-    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
-    font-weight: 600;
-    margin-top: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    line-height: 1.25;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+	font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+	font-weight: 600;
+	margin-top: clamp(1rem, 3vw, 1.5rem);
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	line-height: 1.25;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
 }
 
 .markdown-paxapos h3 {
-    font-size: clamp(1.125rem, 3vw, 1.25rem);
-    font-weight: 600;
-    margin-top: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    line-height: 1.25;
+	font-size: clamp(1.125rem, 3vw, 1.25rem);
+	font-weight: 600;
+	margin-top: clamp(1rem, 3vw, 1.5rem);
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	line-height: 1.25;
 }
 
 .markdown-paxapos h4,
 .markdown-paxapos h5,
 .markdown-paxapos h6 {
-    font-size: clamp(1rem, 2.5vw, 1rem);
-    font-weight: 600;
-    margin-top: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    line-height: 1.25;
+	font-size: clamp(1rem, 2.5vw, 1rem);
+	font-weight: 600;
+	margin-top: clamp(1rem, 3vw, 1.5rem);
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	line-height: 1.25;
 }
 
 .markdown-paxapos h1,
@@ -126,286 +132,288 @@ body {
 .markdown-paxapos h4,
 .markdown-paxapos h5,
 .markdown-paxapos h6 {
-  color: rgb(17 24 39); /* gray-900 */
+	color: rgb(17 24 39); /* gray-900 */
 }
 
 .markdown-paxapos p {
-    margin-top: 0;
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    font-size: clamp(0.875rem, 2vw, 1rem);
+	margin-top: 0;
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .markdown-paxapos ul,
 .markdown-paxapos ol {
-    margin-top: 0;
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    padding-left: clamp(1.5rem, 3vw, 2rem);
+	margin-top: 0;
+	margin-bottom: clamp(0.75rem, 2vw, 1rem);
+	padding-left: clamp(1.5rem, 3vw, 2rem);
 }
 
 .markdown-paxapos li {
-    margin-top: 0.25rem;
-    font-size: clamp(0.875rem, 2vw, 1rem);
+	margin-top: 0.25rem;
+	font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .markdown-paxapos li + li {
-    margin-top: 0.25rem;
+	margin-top: 0.25rem;
 }
 
 .markdown-paxapos p,
 .markdown-paxapos li {
-  color: rgb(75 85 99); /* gray-600 */
+	color: rgb(75 85 99); /* gray-600 */
 }
 
 .markdown-paxapos strong {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .markdown-paxapos em {
-    font-style: italic;
+	font-style: italic;
 }
 
 .markdown-paxapos a {
-  color: rgb(37 99 235); /* blue-600 */
+	color: rgb(37 99 235); /* blue-600 */
 }
 
 .markdown-paxapos a:hover {
-  color: rgb(29 78 216); /* blue-700 */
+	color: rgb(29 78 216); /* blue-700 */
 }
 
 .markdown-paxapos code {
-  background: rgb(243 244 246); /* gray-100 */
-  color: rgb(17 24 39); /* gray-900 */
-  padding: clamp(2px, 1vw, 4px) clamp(4px, 1.5vw, 6px);
-  border-radius: 4px;
-  border: 1px solid rgb(209 213 219); /* gray-300 */
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
-  font-family: 'Courier New', Courier, monospace;
+	background: rgb(243 244 246); /* gray-100 */
+	color: rgb(17 24 39); /* gray-900 */
+	padding: clamp(2px, 1vw, 4px) clamp(4px, 1.5vw, 6px);
+	border-radius: 4px;
+	border: 1px solid rgb(209 213 219); /* gray-300 */
+	font-size: clamp(0.75rem, 2vw, 0.875rem);
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .markdown-paxapos pre {
-  background: rgb(249 250 251); /* gray-50 */
-  border: 1px solid rgb(209 213 219); /* gray-300 */
-  border-radius: 6px;
-  padding: clamp(12px, 3vw, 16px);
-  margin: clamp(12px, 3vw, 16px) 0;
-  overflow-x: auto;
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
+	background: rgb(249 250 251); /* gray-50 */
+	border: 1px solid rgb(209 213 219); /* gray-300 */
+	border-radius: 6px;
+	padding: clamp(12px, 3vw, 16px);
+	margin: clamp(12px, 3vw, 16px) 0;
+	overflow-x: auto;
+	font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
 /* Responsive para código en móviles */
 @media (max-width: 768px) {
-  .markdown-paxapos pre {
-    border-radius: 4px;
-    padding: 12px;
-    margin: 12px 0;
-  }
-  
-  .markdown-paxapos code {
-    font-size: 0.75rem;
-    padding: 2px 4px;
-  }
+	.markdown-paxapos pre {
+		border-radius: 4px;
+		padding: 12px;
+		margin: 12px 0;
+	}
+
+	.markdown-paxapos code {
+		font-size: 0.75rem;
+		padding: 2px 4px;
+	}
 }
 
 .markdown-paxapos pre code {
-  background: transparent;
-  border: none;
-  padding: 0;
+	background: transparent;
+	border: none;
+	padding: 0;
 }
 
 .markdown-paxapos blockquote {
-  border-left: 4px solid rgb(156 163 175); /* gray-400 */
-  background: rgb(243 244 246 / 0.5); /* gray-100 con transparencia */
-  margin: clamp(12px, 3vw, 16px) 0;
-  padding: clamp(8px, 3vw, 12px) clamp(12px, 4vw, 20px);
-  border-radius: 0 6px 6px 0;
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-  line-height: 1.5;
+	border-left: 4px solid rgb(156 163 175); /* gray-400 */
+	background: rgb(243 244 246 / 0.5); /* gray-100 con transparencia */
+	margin: clamp(12px, 3vw, 16px) 0;
+	padding: clamp(8px, 3vw, 12px) clamp(12px, 4vw, 20px);
+	border-radius: 0 6px 6px 0;
+	font-size: clamp(0.875rem, 2.5vw, 1rem);
+	line-height: 1.5;
 }
 
 /* Responsive para blockquotes en móviles */
 @media (max-width: 768px) {
-  .markdown-paxapos blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 12px 16px;
-    border-radius: 0 4px 4px 0;
-  }
+	.markdown-paxapos blockquote {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 12px 16px;
+		border-radius: 0 4px 4px 0;
+	}
 }
 
 /* === TABLAS SIMPLES (SIN RESPONSIVIDAD) === */
 
 /* Contenedor wrapper para tablas responsive */
 .markdown-paxapos .table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: clamp(16px, 4vw, 24px) 0;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin: clamp(16px, 4vw, 24px) 0;
+	border-radius: 8px;
+	box-shadow:
+		0 1px 3px 0 rgb(0 0 0 / 0.1),
+		0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 /* Tablas básicas para casos donde aún aparezcan */
 .markdown-paxapos table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0; /* Remove margin since wrapper handles it */
-  background: rgb(255 255 255); /* bg-white */
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgb(229 231 235); /* gray-200 */
-  font-size: 0.875rem;
-  min-width: 100%;
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0; /* Remove margin since wrapper handles it */
+	background: rgb(255 255 255); /* bg-white */
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid rgb(229 231 235); /* gray-200 */
+	font-size: 0.875rem;
+	min-width: 100%;
 }
 
 .markdown-paxapos th,
 .markdown-paxapos td {
-  border: 1px solid rgb(229 231 235); /* gray-200 */
-  padding: clamp(8px, 2.5vw, 12px) clamp(12px, 3vw, 16px);
-  text-align: left;
-  vertical-align: top;
-  line-height: 1.5;
-  word-wrap: break-word;
+	border: 1px solid rgb(229 231 235); /* gray-200 */
+	padding: clamp(8px, 2.5vw, 12px) clamp(12px, 3vw, 16px);
+	text-align: left;
+	vertical-align: top;
+	line-height: 1.5;
+	word-wrap: break-word;
 }
 
 .markdown-paxapos th {
-  background: rgb(248 250 252); /* gray-50 */
-  color: rgb(15 23 42); /* slate-900 */
-  font-weight: 600;
-  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+	background: rgb(248 250 252); /* gray-50 */
+	color: rgb(15 23 42); /* slate-900 */
+	font-weight: 600;
+	font-size: clamp(0.75rem, 2.5vw, 0.875rem);
 }
 
 .markdown-paxapos td {
-  background: rgb(255 255 255); /* bg-white */
-  color: rgb(51 65 85); /* slate-700 */
+	background: rgb(255 255 255); /* bg-white */
+	color: rgb(51 65 85); /* slate-700 */
 }
 
 /* Modo oscuro para tablas */
 .dark .markdown-paxapos table {
-  background: rgb(31 41 55); /* gray-800 */
-  border: 1px solid rgb(75 85 99); /* gray-600 */
+	background: rgb(31 41 55); /* gray-800 */
+	border: 1px solid rgb(75 85 99); /* gray-600 */
 }
 
 .dark .markdown-paxapos th,
 .dark .markdown-paxapos td {
-  border: 1px solid rgb(75 85 99); /* gray-600 */
+	border: 1px solid rgb(75 85 99); /* gray-600 */
 }
 
 .dark .markdown-paxapos th {
-  background: rgb(55 65 81); /* gray-700 */
-  color: rgb(243 244 246); /* gray-100 */
+	background: rgb(55 65 81); /* gray-700 */
+	color: rgb(243 244 246); /* gray-100 */
 }
 
 .dark .markdown-paxapos td {
-  background: rgb(31 41 55); /* gray-800 */
-  color: rgb(209 213 219); /* gray-300 */
+	background: rgb(31 41 55); /* gray-800 */
+	color: rgb(209 213 219); /* gray-300 */
 }
 
 /* Garantizar que las transiciones funcionen en todos los navegadores */
 @supports (color-scheme: dark) {
-  :root {
-    color-scheme: light dark;
-  }
+	:root {
+		color-scheme: light dark;
+	}
 }
 
 /* Fallback para navegadores muy antiguos */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  html.dark {
-    background-color: #111827 !important;
-    color: white !important;
-  }
-  
-  html:not(.dark) {
-    background-color: white !important;
-    color: black !important;
-  }
+	html.dark {
+		background-color: #111827 !important;
+		color: white !important;
+	}
+
+	html:not(.dark) {
+		background-color: white !important;
+		color: black !important;
+	}
 }
 
 /* Fallback para navegadores que no soportan prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
-  .markdown-paxapos {
-    background: transparent;
-    color: rgb(255 255 255);
-    border: none;
-    box-shadow: none;
-  }
-  
-  .markdown-paxapos h1 {
-    border-bottom-color: rgb(75 85 99);
-  }
-  
-  .markdown-paxapos h2 {
-    border-bottom-color: rgb(75 85 99);
-  }
-  
-  .markdown-paxapos h1,
-  .markdown-paxapos h2,
-  .markdown-paxapos h3,
-  .markdown-paxapos h4,
-  .markdown-paxapos h5,
-  .markdown-paxapos h6 {
-    color: rgb(255 255 255);
-  }
-  
-  .markdown-paxapos p,
-  .markdown-paxapos li {
-    color: rgb(229 231 235);
-  }
-  
-  .markdown-paxapos a {
-    color: rgb(96 165 250);
-  }
-  
-  .markdown-paxapos a:hover {
-    color: rgb(147 197 253);
-  }
-  
-  .markdown-paxapos code {
-    background: rgb(55 65 81 / 0.4);
-    color: rgb(243 244 246);
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  .markdown-paxapos pre {
-    background: rgb(17 24 39 / 0.4);
-    border: none;
-    border-radius: 6px;
-  }
-  
-  .markdown-paxapos pre code {
-    background: transparent;
-    border: none;
-    padding: 0;
-  }
-  
-  .markdown-paxapos blockquote {
-    border-left: 4px solid rgb(75 85 99);
-    background: rgb(55 65 81 / 0.2);
-    margin: 16px 0;
-    padding: 12px 20px;
-    border-radius: 0 6px 6px 0;
-  }
-  
-  .markdown-paxapos table {
-    border-collapse: collapse;
-    border: 1px solid rgb(75 85 99 / 0.4);
-  }
-  
-  .markdown-paxapos th,
-  .markdown-paxapos td {
-    border: 1px solid rgb(75 85 99 / 0.4);
-    padding: 8px 12px;
-  }
-  
-  .markdown-paxapos th {
-    background: rgb(55 65 81 / 0.3);
-    color: rgb(255 255 255);
-  }
-  
-  .markdown-paxapos hr {
-    border-color: rgb(75 85 99 / 0.4);
-  }
+	.markdown-paxapos {
+		background: transparent;
+		color: rgb(255 255 255);
+		border: none;
+		box-shadow: none;
+	}
+
+	.markdown-paxapos h1 {
+		border-bottom-color: rgb(75 85 99);
+	}
+
+	.markdown-paxapos h2 {
+		border-bottom-color: rgb(75 85 99);
+	}
+
+	.markdown-paxapos h1,
+	.markdown-paxapos h2,
+	.markdown-paxapos h3,
+	.markdown-paxapos h4,
+	.markdown-paxapos h5,
+	.markdown-paxapos h6 {
+		color: rgb(255 255 255);
+	}
+
+	.markdown-paxapos p,
+	.markdown-paxapos li {
+		color: rgb(229 231 235);
+	}
+
+	.markdown-paxapos a {
+		color: rgb(96 165 250);
+	}
+
+	.markdown-paxapos a:hover {
+		color: rgb(147 197 253);
+	}
+
+	.markdown-paxapos code {
+		background: rgb(55 65 81 / 0.4);
+		color: rgb(243 244 246);
+		padding: 2px 6px;
+		border-radius: 4px;
+		border: none;
+	}
+
+	.markdown-paxapos pre {
+		background: rgb(17 24 39 / 0.4);
+		border: none;
+		border-radius: 6px;
+	}
+
+	.markdown-paxapos pre code {
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
+
+	.markdown-paxapos blockquote {
+		border-left: 4px solid rgb(75 85 99);
+		background: rgb(55 65 81 / 0.2);
+		margin: 16px 0;
+		padding: 12px 20px;
+		border-radius: 0 6px 6px 0;
+	}
+
+	.markdown-paxapos table {
+		border-collapse: collapse;
+		border: 1px solid rgb(75 85 99 / 0.4);
+	}
+
+	.markdown-paxapos th,
+	.markdown-paxapos td {
+		border: 1px solid rgb(75 85 99 / 0.4);
+		padding: 8px 12px;
+	}
+
+	.markdown-paxapos th {
+		background: rgb(55 65 81 / 0.3);
+		color: rgb(255 255 255);
+	}
+
+	.markdown-paxapos hr {
+		border-color: rgb(75 85 99 / 0.4);
+	}
 }
 
 /* ==========================================
@@ -414,203 +422,203 @@ body {
 
 /* Mejoras específicas para dispositivos móviles */
 @media (max-width: 768px) {
-  /* Asegurar contenido centrado en móvil */
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  /* Contenedor principal mobile-first */
-  main {
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  /* Contenedor interno centrado */
-  .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Mejoras para markdown container */
-  .markdown-paxapos {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0.75rem;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-  }
-  
-  /* Títulos optimizados para móvil */
-  .markdown-paxapos h1 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-    word-break: break-word;
-  }
-  
-  .markdown-paxapos h2 {
-    font-size: 1.25rem;
-    line-height: 1.3;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    word-break: break-word;
-  }
-  
-  .markdown-paxapos h3 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Párrafos móvil */
-  .markdown-paxapos p {
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin-bottom: 0.75rem;
-    word-wrap: break-word;
-    hyphens: auto;
-  }
-  
-  /* Listas móvil */
-  .markdown-paxapos ul,
-  .markdown-paxapos ol {
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .markdown-paxapos li {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-top: 0.25rem;
-    word-wrap: break-word;
-  }
-  
-  /* Código móvil */
-  .markdown-paxapos pre {
-    font-size: 0.75rem;
-    padding: 0.75rem;
-    margin: 0.75rem 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .markdown-paxapos code {
-    font-size: 0.75rem;
-    padding: 2px 4px;
-  }
-  
-  /* Tablas responsive */
-  .markdown-paxapos .table-wrapper {
-    margin: 0.75rem 0;
-    border-radius: 6px;
-  }
-  
-  .markdown-paxapos table {
-    font-size: 0.75rem;
-    border-radius: 6px;
-  }
-  
-  .markdown-paxapos th,
-  .markdown-paxapos td {
-    padding: 6px 8px;
-    font-size: 0.75rem;
-  }
-  
-  /* Imágenes responsive */
-  .markdown-paxapos img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0.75rem auto;
-  }
-  
-  /* Elementos interactivos móviles */
-  button,
-  [role="button"],
-  input,
-  textarea {
-    min-height: 44px; /* iOS touch target minimum */
-    font-size: 16px; /* Prevent zoom on iOS */
-  }
+	/* Asegurar contenido centrado en móvil */
+	body {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+
+	/* Contenedor principal mobile-first */
+	main {
+		width: 100%;
+		max-width: 100vw;
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+
+	/* Contenedor interno centrado */
+	.container {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		box-sizing: border-box;
+	}
+
+	/* Mejoras para markdown container */
+	.markdown-paxapos {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0.75rem;
+		box-sizing: border-box;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	/* Títulos optimizados para móvil */
+	.markdown-paxapos h1 {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		margin-bottom: 0.75rem;
+		word-break: break-word;
+	}
+
+	.markdown-paxapos h2 {
+		font-size: 1.25rem;
+		line-height: 1.3;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		word-break: break-word;
+	}
+
+	.markdown-paxapos h3 {
+		font-size: 1.125rem;
+		line-height: 1.3;
+		margin-top: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Párrafos móvil */
+	.markdown-paxapos p {
+		font-size: 0.875rem;
+		line-height: 1.6;
+		margin-bottom: 0.75rem;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	/* Listas móvil */
+	.markdown-paxapos ul,
+	.markdown-paxapos ol {
+		padding-left: 1.25rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.markdown-paxapos li {
+		font-size: 0.875rem;
+		line-height: 1.5;
+		margin-top: 0.25rem;
+		word-wrap: break-word;
+	}
+
+	/* Código móvil */
+	.markdown-paxapos pre {
+		font-size: 0.75rem;
+		padding: 0.75rem;
+		margin: 0.75rem 0;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.markdown-paxapos code {
+		font-size: 0.75rem;
+		padding: 2px 4px;
+	}
+
+	/* Tablas responsive */
+	.markdown-paxapos .table-wrapper {
+		margin: 0.75rem 0;
+		border-radius: 6px;
+	}
+
+	.markdown-paxapos table {
+		font-size: 0.75rem;
+		border-radius: 6px;
+	}
+
+	.markdown-paxapos th,
+	.markdown-paxapos td {
+		padding: 6px 8px;
+		font-size: 0.75rem;
+	}
+
+	/* Imágenes responsive */
+	.markdown-paxapos img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0.75rem auto;
+	}
+
+	/* Elementos interactivos móviles */
+	button,
+	[role='button'],
+	input,
+	textarea {
+		min-height: 44px; /* iOS touch target minimum */
+		font-size: 16px; /* Prevent zoom on iOS */
+	}
 }
 
 /* Mejoras para pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  
-  .markdown-paxapos {
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .markdown-paxapos h1 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .markdown-paxapos h2 {
-    font-size: 1.125rem;
-    margin-top: 0.75rem;
-    margin-bottom: 0.375rem;
-  }
-  
-  .markdown-paxapos p {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Tablas en pantallas muy pequeñas */
-  .markdown-paxapos .table-wrapper {
-    margin: 0.5rem 0;
-    border-radius: 4px;
-  }
-  
-  .markdown-paxapos table {
-    font-size: 0.6875rem; /* 11px */
-    border-radius: 4px;
-  }
-  
-  .markdown-paxapos th,
-  .markdown-paxapos td {
-    padding: 4px 6px;
-    font-size: 0.6875rem;
-  }
+	.container {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.markdown-paxapos {
+		padding: 0.5rem;
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.markdown-paxapos h1 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.markdown-paxapos h2 {
+		font-size: 1.125rem;
+		margin-top: 0.75rem;
+		margin-bottom: 0.375rem;
+	}
+
+	.markdown-paxapos p {
+		font-size: 0.875rem;
+		line-height: 1.5;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Tablas en pantallas muy pequeñas */
+	.markdown-paxapos .table-wrapper {
+		margin: 0.5rem 0;
+		border-radius: 4px;
+	}
+
+	.markdown-paxapos table {
+		font-size: 0.6875rem; /* 11px */
+		border-radius: 4px;
+	}
+
+	.markdown-paxapos th,
+	.markdown-paxapos td {
+		padding: 4px 6px;
+		font-size: 0.6875rem;
+	}
 }
 
 /* Mejoras para dispositivos con hover limitado (touch) */
 @media (hover: none) and (pointer: coarse) {
-  /* Elementos clickeables más grandes */
-  .btn,
-  .link,
-  [role="button"] {
-    padding: 12px 16px;
-    margin: 4px;
-    min-height: 44px;
-    min-width: 44px;
-  }
-  
-  /* Eliminar efectos hover problemáticos en touch */
-  .markdown-paxapos a:hover {
-    color: inherit;
-  }
+	/* Elementos clickeables más grandes */
+	.btn,
+	.link,
+	[role='button'] {
+		padding: 12px 16px;
+		margin: 4px;
+		min-height: 44px;
+		min-width: 44px;
+	}
+
+	/* Eliminar efectos hover problemáticos en touch */
+	.markdown-paxapos a:hover {
+		color: inherit;
+	}
 }

@@ -5,25 +5,28 @@
 	import { autoReplaceBrand } from '$lib/helpers/textReplacer';
 	import { onMount } from 'svelte';
 	import { initThemeStore } from '$lib/stores/theme';
-	
+
 	let { children } = $props();
-	
+
 	// Inicializar el manejo de temas al montar el componente
 	onMount(() => {
 		const cleanup = initThemeStore();
-		
+
 		// Cleanup function
 		return cleanup;
 	});
 </script>
 
-<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200" use:autoReplaceBrand>
+<div
+	class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"
+	use:autoReplaceBrand
+>
 	<!-- Navigation -->
-	<Navigation/>
+	<Navigation />
 
 	<!-- Main content -->
-	<main class="bg-white dark:bg-gray-900 w-full max-w-full overflow-x-hidden">
-		<div class="w-full mx-auto max-w-7xl px-0 sm:px-4 lg:px-8">
+	<main class="w-full max-w-full overflow-x-hidden bg-white dark:bg-gray-900">
+		<div class="mx-auto w-full max-w-7xl px-0 sm:px-4 lg:px-8">
 			{@render children()}
 		</div>
 	</main>
@@ -38,12 +41,12 @@
 		line-height: 1.6;
 		color: rgb(55 65 81); /* gray-700 */
 	}
-	
+
 	/* Modo oscuro */
 	:global(.dark .markdown-content) {
 		color: rgb(209 213 219); /* gray-300 */
 	}
-	
+
 	/* Eliminar márgenes laterales en móvil */
 	@media (max-width: 640px) {
 		main {
@@ -52,7 +55,7 @@
 			margin-left: 0 !important;
 			margin-right: 0 !important;
 		}
-		
+
 		main > div {
 			padding-left: 0 !important;
 			padding-right: 0 !important;

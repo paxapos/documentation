@@ -5,16 +5,14 @@
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a configurar qué puede hacer cada tipo de usuario dentro del sistema. Podés decidir si un mozo puede ver reportes, si un cajero puede eliminar productos, etc.
 
-> [!CAUTION]
-> **⚠️ NO es recomendable modificar este apartado si no entendés del tema**  
+> [!CAUTION] > **⚠️ NO es recomendable modificar este apartado si no entendés del tema**  
 > Si modificás permisos incorrectamente, podés bloquear funciones importantes o dar acceso a información sensible a personas no autorizadas.
 
 ---
 
 ## ⚠️ **MUY IMPORTANTE - Antes de empezar**
 
-> [!WARNING]
-> **Si vas a modificar permisos, tenés que configurar TODOS los roles**  
+> [!WARNING] > **Si vas a modificar permisos, tenés que configurar TODOS los roles**  
 > No podés modificar solo un rol. Si cambiás los permisos del Encargado, también tenés que revisar y configurar los permisos del Dueño, Mozo, Cajero, Adicionista, etc.
 
 **¿Por qué?** Porque el sistema necesita tener todos los roles configurados correctamente para funcionar bien. Si modificás uno solo, podés generar inconsistencias.
@@ -33,13 +31,13 @@
 ### **Paso 2: Seleccionar el rol a configurar**
 
 1. Vas a ver una lista de todos los roles disponibles:
-   -  **Dueño**
-   -  **Encargado**
-   -  **Cajero**
-   -  **Mozo**
-   -  **Adicionista**
-   -  **Cocinero**
-   -  **Auditor**
+    - **Dueño**
+    - **Encargado**
+    - **Cajero**
+    - **Mozo**
+    - **Adicionista**
+    - **Cocinero**
+    - **Auditor**
 2. Hacé clic en el rol que querés configurar
 
 ### **Paso 3: Entender los módulos de permisos**
@@ -69,8 +67,8 @@ Dentro de cada módulo, vas a encontrar diferentes opciones. Para cada opción p
 **Ejemplo práctico:**
 
 - Si querés que un **Cajero** pueda ver los reportes de ventas pero NO modificarlos:
-  - ✅ Marcá **"Ver"** en Reportes → Ventas
-  - ❌ NO marques **"Crear"**, **"Editar"** ni **"Eliminar"**
+    - ✅ Marcá **"Ver"** en Reportes → Ventas
+    - ❌ NO marques **"Crear"**, **"Editar"** ni **"Eliminar"**
 
 ### **Paso 5: Guardar los cambios**
 

@@ -12,13 +12,13 @@ This is a **SvelteKit 2.0 static documentation site** for PaxaPOS (a restaurant 
 
 1. **Source:** Markdown files in `src/routes/user-guide/Manual-Usuario/` organized by numbered folders (e.g., `10-Comenzamos/`, `20-Primeros Pasos/`)
 2. **Discovery:** `src/lib/utils/markdownDetector.js` scans folders via Vite's `import.meta.glob()` and auto-generates:
-   - Slugs (filename → URL-friendly format, removing number prefixes)
-   - Titles (extracted from first `# heading` or filename)
-   - Categories (based on parent folder structure)
-   - SEO metadata (auto-generated from content)
+    - Slugs (filename → URL-friendly format, removing number prefixes)
+    - Titles (extracted from first `# heading` or filename)
+    - Categories (based on parent folder structure)
+    - SEO metadata (auto-generated from content)
 3. **Build Scripts:** Two critical pre-build scripts in `scripts/`:
-   - `generate-seo-files.mjs` → Creates `static/urls.txt`, `content-index.json`, `ai-metadata.json`
-   - `generate-ai-files.mjs` → Generates cleaned `.txt` files in `static/llms/` for LLM consumption (strips markdown, HTML, fixes encoding issues)
+    - `generate-seo-files.mjs` → Creates `static/urls.txt`, `content-index.json`, `ai-metadata.json`
+    - `generate-ai-files.mjs` → Generates cleaned `.txt` files in `static/llms/` for LLM consumption (strips markdown, HTML, fixes encoding issues)
 4. **Rendering:** `[slug]` dynamic route loads markdown, converts to HTML via `marked`, applies brand replacement via `textReplacer.ts`
 
 **Critical File:** `src/lib/utils/markdownDetector.js` - Handles all content discovery. Modify the `categorizeByFolder()` function when adding new folder categories.
@@ -54,6 +54,7 @@ Markdown files follow a consistent pattern:
 
 ```markdown
 # 💳 Title with Emoji
+
 <div id="anchor-id"></div>
 
 > 🎯 **Purpose callout**
@@ -61,6 +62,7 @@ Markdown files follow a consistent pattern:
 ## 📋 Section Heading
 
 ### Step 1: Action
+
 - Details
 - More details
 
@@ -141,17 +143,19 @@ The `scripts/generate-ai-files.mjs` script performs aggressive cleaning:
 
 1. **Don't manually add routes** - The system auto-discovers markdown files. Adding routes in `src/routes/` bypasses content generation.
 
-2. **Slug generation rules:** 
-   - Removes number prefix (`22-Tipos-De-Pago.md` → `tipos-de-pago`)
-   - Lowercases and strips accents
-   - Spaces/underscores → hyphens
-   - Study `fileNameToSlug()` in `markdownDetector.js` before renaming files
+2. **Slug generation rules:**
+
+    - Removes number prefix (`22-Tipos-De-Pago.md` → `tipos-de-pago`)
+    - Lowercases and strips accents
+    - Spaces/underscores → hyphens
+    - Study `fileNameToSlug()` in `markdownDetector.js` before renaming files
 
 3. **Prerender entries:** Dynamic routes like `[slug]` auto-generate via `entries()` function - DON'T manually list them in `svelte.config.js` unless they're API endpoints.
 
 4. **Markdown rendering order:**
-   - Load markdown → Convert via `marked()` → Apply brand replacement → Fix image paths → Highlight search terms → Add header icons
-   - See `$effect()` in `[slug]/+page.svelte` for full pipeline
+
+    - Load markdown → Convert via `marked()` → Apply brand replacement → Fix image paths → Highlight search terms → Add header icons
+    - See `$effect()` in `[slug]/+page.svelte` for full pipeline
 
 5. **Build script execution:** Always run `npm run dev` or `npm run build` (includes generation scripts). Running `vite dev` directly skips content generation.
 
@@ -159,15 +163,15 @@ The `scripts/generate-ai-files.mjs` script performs aggressive cleaning:
 
 ## 🔍 Key Files Reference
 
-| File | Purpose |
-|------|---------|
-| `src/lib/utils/markdownDetector.js` | Content discovery, slug generation, SEO metadata |
-| `scripts/generate-ai-files.mjs` | Creates LLM-optimized `.txt` files |
-| `scripts/generate-seo-files.mjs` | Generates sitemap, content index, metadata |
-| `src/routes/user-guide/[slug]/+page.js` | Loads markdown content dynamically |
-| `src/routes/user-guide/[slug]/+page.server.js` | Generates static routes via `entries()` |
-| `src/lib/helpers/textReplacer.ts` | Brand name replacement system |
-| `svelte.config.js` | Adapter config, prerender settings |
+| File                                           | Purpose                                          |
+| ---------------------------------------------- | ------------------------------------------------ |
+| `src/lib/utils/markdownDetector.js`            | Content discovery, slug generation, SEO metadata |
+| `scripts/generate-ai-files.mjs`                | Creates LLM-optimized `.txt` files               |
+| `scripts/generate-seo-files.mjs`               | Generates sitemap, content index, metadata       |
+| `src/routes/user-guide/[slug]/+page.js`        | Loads markdown content dynamically               |
+| `src/routes/user-guide/[slug]/+page.server.js` | Generates static routes via `entries()`          |
+| `src/lib/helpers/textReplacer.ts`              | Brand name replacement system                    |
+| `svelte.config.js`                             | Adapter config, prerender settings               |
 
 ## 🚀 Deployment Notes
 

@@ -1,4 +1,5 @@
 # 🍽️ Configuración del Menú
+
 <div id="configurar-menu"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
@@ -6,54 +7,66 @@
 
 ---
 
-
 ## 📚 **Conceptos básicos que necesitás conocer**
 
 ### 🍽️ **1. Menú**
+
 **¿Qué es?** La carta que ven tus clientes, con todos los platos, bebidas y precios que ofreces.
 
 > 💡 **¿Sabías que...?**  
 > El nombre "Menú" es configurable. Podés cambiarlo a "Lista de Precios", "Carta", "Tarifario" o como prefieras. Un hotel lo llamó "Tarifario" porque vende comidas, revistas y paquetes turísticos.
 
 ### 🥘 **2. Producto**
+
 **¿Qué es?** Cualquier cosa que vendes, usas o compras en tu negocio. Se divide en 4 tipos:
 
 #### **📋 Maestro de Productos**
+
 La lista completa de **TODOS** los productos de tu negocio.
+
 - Incluye productos en venta, subproductos y mercaderías
 - Es como el "diccionario" de todo lo que existe
 
 #### **🛒 Productos**
+
 Los que aparecen en tus menús y los clientes pueden pedir.
+
 - **Ejemplos:** Pizza Margarita, Coca-Cola, Helado de Vainilla
 
 #### **🧩 Subproductos**
+
 Productos que **NO se venden ni se compran**. Se usan para preparar otros productos.
+
 - **Ejemplos:** Salsa Fileto (se usa para hacer Pizza Napolitana)
 
 ### ⚙️ **3. Variante**
+
 **¿Qué es?** Un grupo de opciones que modifican un producto.
+
 - **Ejemplo:** Variante "Tipo de Salsa" para un plato de pasta
 
 ### 🏷️ **5. Categorías**
+
 **¿Qué es?** Secciones para organizar los productos en tus menús. Pueden tener subsecciones (como un árbol).
 
 **Ejemplo de estructura:**
+
 ```
-Menú Principal  
-├── **Entradas**  
-├── **Pastas**  
+Menú Principal
+├── **Entradas**
+├── **Pastas**
 │   ├── Tallarines
 │   └── Ravioles
-└── **Bebidas**  
-    ├── **Con Alcohol** 
-    │   └── Cerveza 
-    └── **Sin Alcohol**  
+└── **Bebidas**
+    ├── **Con Alcohol**
+    │   └── Cerveza
+    └── **Sin Alcohol**
         ├── Coca Cola
         └── Sprite
 ```
 
 ### 👨‍🍳 **6. Recetas**
+
 **¿Qué es?** La "fórmula" para preparar un producto o subproducto. Detalla qué ingredientes se usan y en qué cantidad.
 
 **¿Dónde se usa?**
@@ -62,6 +75,7 @@ Menú Principal
 🔹 **En Subproductos** | Receta de "Salsa Fileto" (tomates + cebolla + hierbas)
 
 ### 🥕 **7. Ingredientes**
+
 **¿Qué es?** Los productos que se usan en una receta. Pueden ser:
 
 🔹 **Mercaderías** | Harina, leche, aceite  
@@ -70,18 +84,18 @@ Menú Principal
 ---
 
 ## 🎯 **Paso a paso - Configurar tu primer menú**
-<div id="configurar-menu"></div>
----
+
+## <div id="configurar-menu"></div>
 
 ### **� ETAPA 1** → **Acceso al sistema de productos**
 
 ## 📋 **Paso a paso - Configurar productos en venta**
 
 ### **Paso 1: Acceder al Menu de Productos**
+
 1. Hacé clic en el **productos** dentro del menu lateral
 2. Dentro de las opciones, buscá **Menú**
 3. Hacé clic en **Menú**
-
 
 ```
 💻 INSTRUCCIONES:
@@ -95,49 +109,54 @@ Menú Principal
 > **🎯 Meta:** Crear tu primera carta digital
 
 **💡 Ideas de nombres para menús:**
+
 - **"Menú Principal"** → Carta completa
-- **"Menú Ejecutivo"** → Opciones rápidas  
+- **"Menú Ejecutivo"** → Opciones rápidas
 - **"Carta de Bebidas"** → Solo líquidos
 - **"Menú Delivery"** → Para envío
 
 ---
 
-
 ### **📋 Cómo crear variantes:**
+
 <div id="variantes"></div>
 
 **Paso 1: Crear la variante**
+
 1. Dentro de Productos, buscá **"Variantes"**
 2. Hacé clic en **"Crear Variante"**
 3. Nombre: "Acompañamiento"
 4. Agregá las opciones:
-   - Papas fritas - $0
-   - Puré de papa - $100
-   - Ensalada mixta - $150
+    - Papas fritas - $0
+    - Puré de papa - $100
+    - Ensalada mixta - $150
 
 **Paso 2: Asignar variante al producto**
+
 1. Editá tu producto (ej: Milanesa)
 2. Buscá **"Asignar Variante"**
 3. Seleccioná "Acompañamiento"
 4. Guardá
 
 ### **� ETAPA 2** → **Configuración de categorías**
+
 <div id="categorias"></div>
 
 💻 INSTRUCCIONES:
 ┌────────────────────────────────────────┐
-│ 1️⃣ Navegá a "Categorías"              │
-│ 2️⃣ Clic en "Crear Categoría"          │
+│ 1️⃣ Navegá a "Categorías" │
+│ 2️⃣ Clic en "Crear Categoría" │
 │ 3️⃣ Escribí nombre: Platos Principales │
-│ 4️⃣ Presioná "Guardar"                 │
+│ 4️⃣ Presioná "Guardar" │
 └────────────────────────────────────────┘
+
 ```
 
 **🗂️ Categorías recomendadas para empezar:**
 
 🔹 **🍽️ Entradas** | Platos para empezar → Empanadas, provoleta, tabla de fiambres
 
-🔹 **🥘 Platos Principales** | Comida principal → Milanesas, pastas, carnes a la parrilla  
+🔹 **🥘 Platos Principales** | Comida principal → Milanesas, pastas, carnes a la parrilla
 
 🔹 **🍺 Bebidas con Alcohol** | Cervezas, vinos, tragos → Vino tinto, cerveza artesanal, fernet
 
@@ -153,18 +172,20 @@ Menú Principal
 
 
 ```
+
 � INSTRUCCIONES:
 ┌─────────────────────────────────────────┐
-│ 1️⃣ Dentro del menú → "Nuevo Producto"  │
+│ 1️⃣ Dentro del menú → "Nuevo Producto" │
 │ 2️⃣ Completá todos los campos requeridos│
 └─────────────────────────────────────────┘
+
 ```
 
 **📝 Formulario de producto - Lista de verificación:**
 
 🔹 **�📛 Nombre** | `OBLIGATORIO` → Nombre visible al cliente (ej: "Milanesa Napolitana")
 
-🔹 **�🗂️ Categoría** | `OBLIGATORIO` → Clasificación del producto (ej: "Platos Principales") 
+🔹 **�🗂️ Categoría** | `OBLIGATORIO` → Clasificación del producto (ej: "Platos Principales")
 
 🔹 **�💰 Precio** | `OBLIGATORIO` → Costo para el cliente (ej: $2500)
 
@@ -186,12 +207,14 @@ Menú Principal
 > **✅ Último paso:** Asegurar que todo esté correcto
 
 ```
+
 � INSTRUCCIONES:
 ┌────────────────────────────────────────┐
-│ 1️⃣ Revisá todos los datos ingresados   │
-│ 2️⃣ Hacé clic en "Guardar"             │
-│ 3️⃣ ¡Confirmación exitosa! 🎉          │
+│ 1️⃣ Revisá todos los datos ingresados │
+│ 2️⃣ Hacé clic en "Guardar" │
+│ 3️⃣ ¡Confirmación exitosa! 🎉 │
 └────────────────────────────────────────┘
+
 ```
 ---
 
@@ -208,3 +231,4 @@ Menú Principal
 - **"Sale en la impresora equivocada"** → Configurá la impresora predeterminada
 - **"No sale impreso en la comanda"** → Asignale una impresora
 
+```

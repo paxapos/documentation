@@ -1,4 +1,5 @@
 # 🖨️ Configuración de Impresoras
+
 <div id="configurar-impresoras"></div>
 
 > 🎯 **Tu objetivo:** Configurar todas las impresoras para tickets, comandas y facturas fiscales en menos de 10 minutos.
@@ -11,17 +12,18 @@ Si querés ajustar configuraciones específicas:
 
 ### **🎛️ Panel de Control de Impresoras**
 
-| 🎯 **Función** | � **Descripción** | 🔧 **Configuración** |
-|----------------|-------------------|---------------------|
-| **Impresora Fiscal por defecto** | Facturas legales para AFIP | Seleccionar impresora fiscal |
-| **Imprimir por fiscal al hacer checkout si no se imprimio antes** | Imprime factura al cerrar mesa | ✅ Recomendado ON |
-| **Al cerrar, o facturar mesa, sacar un remito o imprimir directo en la fiscal** | Fiscal o Remito al cerrar | Fiscal = Legal / Remito = Simple |
-| **Impresora de Remitos por Defecto** | Comprobantes de caja | Impresora de mostrador |
-| **Seleccione impresora para abrir el cajón de dinero** | Abre cajón automático | Impresora conectada al cajón |
+| 🎯 **Función**                                                                  | � **Descripción**              | 🔧 **Configuración**             |
+| ------------------------------------------------------------------------------- | ------------------------------ | -------------------------------- |
+| **Impresora Fiscal por defecto**                                                | Facturas legales para AFIP     | Seleccionar impresora fiscal     |
+| **Imprimir por fiscal al hacer checkout si no se imprimio antes**               | Imprime factura al cerrar mesa | ✅ Recomendado ON                |
+| **Al cerrar, o facturar mesa, sacar un remito o imprimir directo en la fiscal** | Fiscal o Remito al cerrar      | Fiscal = Legal / Remito = Simple |
+| **Impresora de Remitos por Defecto**                                            | Comprobantes de caja           | Impresora de mostrador           |
+| **Seleccione impresora para abrir el cajón de dinero**                          | Abre cajón automático          | Impresora conectada al cajón     |
 
 ---
 
 ## 🔧 **¿Qué es Fiscalberry? (IMPORTANTE)**
+
 <div id="que-es-fiscalberry"></div>
 
 > 🚨 **CRÍTICO:** Sin Fiscalberry NO podrás emitir facturas legales
@@ -42,10 +44,10 @@ Con la pestaña de fiscalberry abierta en la PC, dirigite al modulo de impresora
 **4️⃣ PROBAR**
 Con fiscalberry abierto y la impresora conectada, intenta imprimir una factura fiscal desde {{BRAND_NAME}}.
 
-
 ### **🔍 ¿Qué hace exactamente?**
+
 - 🔄 **Traduce** comandos de {{BRAND_NAME}} → Impresora fiscal
-- ✅ **Garantiza** cumplimiento AFIP/ARCA  
+- ✅ **Garantiza** cumplimiento AFIP/ARCA
 - 🔧 **Compatible** con todas las marcas
 
 ---
@@ -57,34 +59,39 @@ Con fiscalberry abierto y la impresora conectada, intenta imprimir una factura f
 **📋 PASO A PASO:**
 
 1. **TEST TICKETS** 🎫
-   ```
-   Crear venta → Cerrar mesa → ¿Imprimió ticket? ✅
-   ```
+
+    ```
+    Crear venta → Cerrar mesa → ¿Imprimió ticket? ✅
+    ```
 
 2. **TEST COMANDAS** 🍽️
-   ```
-   Cargar pedido → Enviar cocina → ¿Salió comanda? ✅
-   ```
+
+    ```
+    Cargar pedido → Enviar cocina → ¿Salió comanda? ✅
+    ```
 
 3. **TEST FISCAL** 📄
-   ```
-   Crear factura → Imprimir → ¿Factura legal válida? ✅
-   ```
+
+    ```
+    Crear factura → Imprimir → ¿Factura legal válida? ✅
+    ```
 
 4. **TEST CAJÓN** 💰
-   ```
-   Cobrar efectivo → ¿Se abrió automáticamente? ✅
-   ```
+    ```
+    Cobrar efectivo → ¿Se abrió automáticamente? ✅
+    ```
 
 ---
 
 ## 🚨 **¿Problemas comunes?**
+
 - **"No imprime nada"** → Verificar encendido + conexión
-- **"Error Fiscalberry"** → Reinstalar como administrador  
+- **"Error Fiscalberry"** → Reinstalar como administrador
 - **"Cajón no abre"** → Revisar conexión impresora-cajón
 - **"Imprime en lugar equivocado"** → Verificar asignación de impresoras
 
 ### **📞 ¿Necesitás ayuda?**
+
 **WhatsApp directo:** [+1 (786) 755-3113](https://wa.me/17867553113)
 
 ---

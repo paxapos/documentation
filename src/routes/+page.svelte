@@ -12,25 +12,37 @@
 <svelte:head>
 	<!-- Meta tags básicos -->
 	<title>PaxaPOS - Manual de Usuario</title>
-	<meta name="description" content="Manual de usuario completo de PaxaPOS. Aprende a usar todas las funcionalidades del sistema de gestión más completo para comercios." />
-	<meta name="keywords" content="PaxaPOS, manual, usuario, tutorial, guía, sistema de gestión, punto de venta, POS" />
+	<meta
+		name="description"
+		content="Manual de usuario completo de PaxaPOS. Aprende a usar todas las funcionalidades del sistema de gestión más completo para comercios."
+	/>
+	<meta
+		name="keywords"
+		content="PaxaPOS, manual, usuario, tutorial, guía, sistema de gestión, punto de venta, POS"
+	/>
 	<meta name="author" content="PaxaPOS" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://doc.paxapos.com/" />
 	<meta property="og:title" content="PaxaPOS - Manual de Usuario" />
-	<meta property="og:description" content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso." />
+	<meta
+		property="og:description"
+		content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso."
+	/>
 	<meta property="og:site_name" content="PaxaPOS Documentation" />
-	
+
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://doc.paxapos.com/" />
 	<meta property="twitter:title" content="PaxaPOS - Manual de Usuario" />
-	<meta property="twitter:description" content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso." />
-	
+	<meta
+		property="twitter:description"
+		content="Manual completo para aprender a usar todas las funcionalidades de PaxaPOS paso a paso."
+	/>
+
 	<!-- Schema.org JSON-LD -->
 	<script type="application/ld+json">
 		{
@@ -51,9 +63,11 @@
 </svelte:head>
 
 <!-- Cargando mientras redirige -->
-<div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
+<div class="flex min-h-screen items-center justify-center bg-white dark:bg-gray-900">
 	<div class="text-center">
-		<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+		<div
+			class="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-blue-600"
+		></div>
 		<p class="text-gray-600 dark:text-gray-400">Cargando manual de usuario...</p>
 	</div>
 </div>

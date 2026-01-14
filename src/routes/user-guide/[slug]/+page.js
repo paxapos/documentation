@@ -11,43 +11,44 @@ export const prerender = true;
  * @returns {string} HTML limpio sin divs vacíos
  */
 function cleanHtmlForSEO(html) {
-    return html
-        // Remover divs vacíos con ID (como <div id="arca-facturacion"></div>)
-        .replace(/<div\s+id="[^"]*">\s*<\/div>\s*/g, '')
-        // Remover comentarios HTML
-        .replace(/<!--[\s\S]*?-->/g, '')
-        // Limpiar espacios en blanco excesivos
-        .replace(/\s+/g, ' ')
-        .trim();
+	return (
+		html
+			// Remover divs vacíos con ID (como <div id="arca-facturacion"></div>)
+			.replace(/<div\s+id="[^"]*">\s*<\/div>\s*/g, '')
+			// Remover comentarios HTML
+			.replace(/<!--[\s\S]*?-->/g, '')
+			// Limpiar espacios en blanco excesivos
+			.replace(/\s+/g, ' ')
+			.trim()
+	);
 }
 export async function load({ params }) {
-    const { slug } = params;
-    
-    try {
-        // Usar la utilidad automatizada para obtener el archivo
-        const markdownData = await getMarkdownFile(slug);
-        
-        if (!markdownData) {
-            throw error(404, 'Módulo no encontrado');
-        }
+	const { slug } = params;
 
-        // Convertir markdown a HTML
-        const htmlContent = await marked(markdownData.content);
+	try {
+		// Usar la utilidad automatizada para obtener el archivo
+		const markdownData = await getMarkdownFile(slug);
 
-        // Crear una versión limpia para SEO sin divs vacíos
-        const cleanContentForSEO = cleanHtmlForSEO(htmlContent);
+		if (!markdownData) {
+			throw error(404, 'Módulo no encontrado');
+		}
 
-        return {
-            slug,
-            title: markdownData.title,
-            content: htmlContent,
-            cleanContent: cleanContentForSEO,
-            rawMarkdown: markdownData.content,
-            seo: markdownData.seo
-        };
-        
-    } catch (err) {
-        console.error('Error loading module:', err);
-        throw error(500, 'Error al cargar el módulo');
-    }
+		// Convertir markdown a HTML
+		const htmlContent = await marked(markdownData.content);
+
+		// Crear una versión limpia para SEO sin divs vacíos
+		const cleanContentForSEO = cleanHtmlForSEO(htmlContent);
+
+		return {
+			slug,
+			title: markdownData.title,
+			content: htmlContent,
+			cleanContent: cleanContentForSEO,
+			rawMarkdown: markdownData.content,
+			seo: markdownData.seo,
+		};
+	} catch (err) {
+		console.error('Error loading module:', err);
+		throw error(500, 'Error al cargar el módulo');
+	}
 }

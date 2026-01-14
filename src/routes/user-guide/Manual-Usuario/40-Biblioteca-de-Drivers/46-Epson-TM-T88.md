@@ -42,4 +42,4 @@ Haz clic en 'Next'.
 ![Imagen](images/Epson-t88/8-default.webp)
 
 ✅ ¡Listo!
-Tu impresora Epson TM-T88V ya está instalada correctamente en tu computadora. 
+Tu impresora Epson TM-T88V ya está instalada correctamente en tu computadora.

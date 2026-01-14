@@ -58,17 +58,20 @@ src/
 ## Funcionalidades
 
 ### Búsqueda
+
 - Búsqueda en tiempo real mientras escribes
 - Filtrado por tipo de contenido (API, Usuario, Admin, etc.)
 - Navegación directa a secciones específicas
 
 ### Navegación
+
 - Menú principal responsive
 - Navegación lateral en páginas de documentación
 - Breadcrumbs en páginas secundarias
 - Enlaces de ancla para secciones
 
 ### Responsive Design
+
 - Optimizado para móviles, tablets y escritorio
 - Menú hamburguesa en dispositivos móviles
 - Búsqueda adaptativa

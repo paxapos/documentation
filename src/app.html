@@ -2,19 +2,24 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="google-site-verification" content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
 		<link rel="icon" href="%sveltekit.assets%/favicon.png?v=2025" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="light dark" />
 		<script>
 			// Detección y aplicación inmediata del tema para evitar flash
-			(function() {
+			(function () {
 				function setTheme() {
 					const html = document.documentElement;
-					
+
 					// Detectar preferencia del usuario/sistema
-					const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-					
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 					// Aplicar clase dark si prefiere modo oscuro
 					if (prefersDark) {
 						html.classList.add('dark');
@@ -24,17 +29,17 @@
 						html.style.colorScheme = 'light';
 					}
 				}
-				
+
 				// Aplicar tema inmediatamente
 				setTheme();
-				
+
 				// Escuchar cambios en las preferencias del sistema
 				if (window.matchMedia) {
 					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 					// Para navegadores modernos
 					if (mediaQuery.addEventListener) {
 						mediaQuery.addEventListener('change', setTheme);
-					} 
+					}
 					// Para navegadores más antiguos
 					else if (mediaQuery.addListener) {
 						mediaQuery.addListener(setTheme);

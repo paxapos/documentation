@@ -1,24 +1,25 @@
-﻿
-# 👥 Crear Usuarios
+﻿# 👥 Crear Usuarios
+
 <div id="crear-usuarios"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Vas a crear cuentas SOLO para los dueños, encargados y cajeros que van a usar {{BRAND_NAME}}. Cada usuario tendrá su usuario y contraseña personal.
 
-
-
 ## 📋 **Paso a paso - Crear tu primer usuario**
 
 ### **Paso 1: Encontra el menu lateral**
+
 1. Una vez que lo hayas visualizado, Desplega la opcion **Configuracion**
 2. Hacé clic en la opcion **Usuarios Paxapos**
 3. Se va a abrir una ventana
 
 ### **Paso 2: Ir a Crear Usuarios**
+
 4. En la ventana que se abrió, buscá la opción **"Crear Usuarios"**
 5. Hacé clic en **"Crear Usuarios"**
 
 ### **Paso 3: Completar los datos del nuevo usuario**
+
 Ahora vas a completar la información de la persona que va a usar el sistema:
 
 **📝 Datos del usuario:**
@@ -29,6 +30,7 @@ Ahora vas a completar la información de la persona que va a usar el sistema:
 🔹 **Rol** | Qué puede hacer en el sistema
 
 ### **Paso 4: Asignar rol**
+
 En **Rol de Dicho Mozo** elegí:
 
 **👥 Roles disponibles:**
@@ -37,9 +39,10 @@ En **Rol de Dicho Mozo** elegí:
 **🔹 Vendedor**  
 **🔹 Encargado**  
 **🔹 Auditor**  
-**🔹 Dueño** 
+**🔹 Dueño**
 
 ### **Paso 5: Guardar el usuario**
+
 7. Verificá que todos los datos estén correctos
 8. Hacé clic en **"Guardar"** o **"Confirmar"**
 9. ¡Listo! Ya creaste tu primer usuario
@@ -56,6 +59,7 @@ En **Rol de Dicho Mozo** elegí:
 ---
 
 ## �� **Consejos importantes para no tener problemas**
+
 - ✅ **Creá usuarios solo para personas que son dueños, encargados y cajeros**
 - ✅ **Usá contraseñas diferentes para cada usuario** (nunca la misma para todos)
 - ✅ **Asigná el rol correcto** - No des permisos de administrador a todos
@@ -70,15 +74,17 @@ En **Rol de Dicho Mozo** elegí:
 > Es un método más rápido para que los mozos y cocineros accedan al sistema sin tener que recordar usuario y contraseña. Todos usan el mismo PIN (ejemplo: 1111).
 
 ### **¿Cuándo usar este método?**
+
 - ✅ **Para mozos que cambian de turno frecuentemente**
-- ✅ **Cuando tenés muchos mozos temporales**  
+- ✅ **Cuando tenés muchos mozos temporales**
 - ✅ **Para agilizar el cambio de turno**
 
-
 ### **Paso a paso - Configurar usuario con PIN**
+
 <div id="usuario-con-pin"></div>
 
 #### **Paso 1: Configurar el PIN**
+
 4. Hacé clic en **"Configuracion"**
 5. Buscá la opción **"Usuarios con PIN"**
 6. Hacé clic en **"Crear Usuario"**
@@ -92,12 +98,15 @@ En **Rol de Dicho Mozo** elegí:
 8. Hacé clic en **"Guardar"**
 
 ### **¿Cómo van a ingresar los usuarios?**
+
 Una vez configurado, los usuarios van a poder:
+
 1. En la pantalla de login, elegir **"Ingresar con PIN"**
 2. Escribir el PIN (ejemplo: **1111**)
 3. ¡Listo! Ya están dentro de {{BRAND_NAME}}
 
 ### **💡 Consejos para el PIN**
+
 - ✅ **Usá un PIN fácil de recordar** pero no obvio (evitá 0000 o 1234)
 - ✅ **Comunicá el PIN solo a los usuarios** autorizados
 - ✅ **Cambiá el PIN periódicamente** si tenés mucha rotación de personal
@@ -106,6 +115,7 @@ Una vez configurado, los usuarios van a poder:
 ---
 
 ## 🚨 **¿Problemas comunes?**
+
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
 - **"No aparece la opción de PIN en el login"** → Verificá que hayas creado el usuario con PIN correctamente
 - **"El PIN no funciona"** → Asegurate de haber ingresado el pin correctamente

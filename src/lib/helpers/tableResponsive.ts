@@ -3,6 +3,6 @@
  */
 
 export function makeTablesResponsive() {
-    // Las tablas son responsive automáticamente con CSS
-    // Este archivo se mantiene para compatibilidad
+	// Las tablas son responsive automáticamente con CSS
+	// Este archivo se mantiene para compatibilidad
 }

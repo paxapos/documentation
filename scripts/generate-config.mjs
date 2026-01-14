@@ -18,36 +18,38 @@ const COMPANY_NAME = process.env.PUBLIC_COMPANY_NAME || process.env.COMPANY_NAME
 
 // Validar que las variables estén definidas (solo para GitHub Pages)
 if (isGitHubPages) {
-    const missingVars = [];
-    if (!BRAND_NAME) missingVars.push('PUBLIC_BRAND_NAME');
-    if (!SYSTEM_URL) missingVars.push('PUBLIC_SYSTEM_URL');
-    if (!COMPANY_NAME) missingVars.push('PUBLIC_COMPANY_NAME');
-    
-    if (missingVars.length > 0) {
-        console.error('❌ ERROR: Variables de entorno requeridas no definidas:');
-        missingVars.forEach(v => console.error(`   - ${v}`));
-        console.error('\n📋 Para configurarlas en GitHub:');
-        console.error('   Settings → Secrets and variables → Actions → Variables');
-        process.exit(1);
-    }
+	const missingVars = [];
+	if (!BRAND_NAME) missingVars.push('PUBLIC_BRAND_NAME');
+	if (!SYSTEM_URL) missingVars.push('PUBLIC_SYSTEM_URL');
+	if (!COMPANY_NAME) missingVars.push('PUBLIC_COMPANY_NAME');
+
+	if (missingVars.length > 0) {
+		console.error('❌ ERROR: Variables de entorno requeridas no definidas:');
+		missingVars.forEach((v) => console.error(`   - ${v}`));
+		console.error('\n📋 Para configurarlas en GitHub:');
+		console.error('   Settings → Secrets and variables → Actions → Variables');
+		process.exit(1);
+	}
 }
 
 console.log('🔧 Generando config.js...');
-console.log(`📦 Entorno: ${isGitHubPages ? 'GitHub Pages' : isDockerBuild ? 'Docker Build' : 'Local (sin variables)'}`);
+console.log(
+	`📦 Entorno: ${isGitHubPages ? 'GitHub Pages' : isDockerBuild ? 'Docker Build' : 'Local (sin variables)'}`,
+);
 
 if (isGitHubPages) {
-    console.log(`🏷️  BRAND_NAME: ${BRAND_NAME}`);
-    console.log(`🌐 SYSTEM_URL: ${SYSTEM_URL}`);
-    console.log(`🏢 COMPANY_NAME: ${COMPANY_NAME}`);
+	console.log(`🏷️  BRAND_NAME: ${BRAND_NAME}`);
+	console.log(`🌐 SYSTEM_URL: ${SYSTEM_URL}`);
+	console.log(`🏢 COMPANY_NAME: ${COMPANY_NAME}`);
 } else {
-    console.log('📝 Generando con placeholders para runtime');
+	console.log('📝 Generando con placeholders para runtime');
 }
 
 let configContent;
 
 if (isGitHubPages) {
-    // Para GitHub Pages: valores reales en tiempo de build
-    configContent = `// Configuración para GitHub Pages - Generado en build time
+	// Para GitHub Pages: valores reales en tiempo de build
+	configContent = `// Configuración para GitHub Pages - Generado en build time
 window.__APP_CONFIG__ = {
     BRAND_NAME: '${BRAND_NAME}',
     SYSTEM_URL: '${SYSTEM_URL}',
@@ -55,8 +57,8 @@ window.__APP_CONFIG__ = {
 };
 `;
 } else {
-    // Para Docker: mantener placeholders para runtime replacement
-    configContent = `// Script para inyectar variables de entorno en runtime
+	// Para Docker: mantener placeholders para runtime replacement
+	configContent = `// Script para inyectar variables de entorno en runtime
 // Nginx reemplazara estos placeholders con sub_filter
 window.__APP_CONFIG__ = {
     BRAND_NAME: '{{BRAND_NAME}}',
@@ -71,4 +73,6 @@ const outputPath = join(__dirname, '..', 'static', 'config.js');
 writeFileSync(outputPath, configContent, 'utf-8');
 
 console.log(`✅ config.js generado en: ${outputPath}`);
-console.log(`📝 Tipo: ${isGitHubPages ? 'Valores reales (GitHub Pages)' : 'Placeholders (Docker)'}`);
+console.log(
+	`📝 Tipo: ${isGitHubPages ? 'Valores reales (GitHub Pages)' : 'Placeholders (Docker)'}`,
+);

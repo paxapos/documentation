@@ -125,11 +125,13 @@ Para registrar dinero que entra o sale de la caja durante el turno (que no sea p
 ## 📋 **Paso a paso - Atender tu primera mesa**
 
 ### **Paso 1: Acceder al Salón**
+
 1. En los módulos principales, buscá **"Ventas"**
 2. Hacé clic en **"Salón"**
 3. Vas a ver una lista con todos tus mozos
 
 ### **Paso 2: Crear una nueva mesa**
+
 4. Hacé clic en **Abrir mesa** dentro del mozo que va a atender la mesa
 5. Se va a abrir una ventana para crear la mesa
 6. Completá estos datos:
@@ -264,6 +266,7 @@ Para registrar dinero que entra o sale de la caja durante el turno (que no sea p
 Una vez que tenés la mesa creada, aparecen estas opciones:
 
 ### **📋 1. Nueva comanda (Tomar pedido)**
+
 - **Qué hace:** Abre el sistema de ventas para cargar el pedido
 - **Cuándo usarlo:** Cuando el cliente quiere pedir comida/bebida
 - **Cómo:** Hacé clic en **"Nueva comanda"**
@@ -289,11 +292,13 @@ Una vez que tenés la mesa creada, aparecen estas opciones:
 ### ⚙️ **Opciones Adicionales**
 
 #### **🏷️ 5. Agregar Descuento**
+
 - **Qué hace:** Aplica un descuento especial a la cuenta
 - **Cuándo usarlo:** Promociones, clientes especiales, compensaciones
 - **Cómo:** Hacé clic en **"Agregar Descuento"**
 
 #### **👤 6. Agregar Cliente**
+
 - **Qué hace:** Permite registrar un cliente para poder imprimir Facturas Fiscales
 - **Cuándo usarlo:** Cuando necesités emitir una factura fiscal
 - **Cómo:** Hacé clic en **"Agregar Cliente"** y después en **"Crear Cliente"**

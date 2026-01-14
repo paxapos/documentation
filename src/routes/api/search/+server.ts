@@ -83,7 +83,7 @@ async function readMarkdownFiles(dir: string, baseDir: string = dir): Promise<Se
 						href: '/user-guide',
 						type: 'Manual de Usuario',
 						id,
-						content: cleanedContent
+						content: cleanedContent,
 					});
 				} catch (error) {
 					console.error(`Error leyendo archivo ${fullPath}:`, error);
@@ -144,7 +144,8 @@ export async function GET({ url }: RequestEvent) {
 
 			// Bonus por múltiples ocurrencias en contenido
 			const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-			const matches = (item.content.toLowerCase().match(new RegExp(escapedTerm, 'g')) || []).length;
+			const matches = (item.content.toLowerCase().match(new RegExp(escapedTerm, 'g')) || [])
+				.length;
 			score += matches * 0.5;
 
 			// Crear preview del contenido
@@ -171,7 +172,7 @@ export async function GET({ url }: RequestEvent) {
 				preview,
 				title: replaceWithVariables(item.title),
 				type: replaceWithVariables(item.type),
-				content: item.content ? replaceWithVariables(item.content) : undefined
+				content: item.content ? replaceWithVariables(item.content) : undefined,
 			});
 		}
 	}

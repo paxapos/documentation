@@ -253,9 +253,9 @@ Esta sección contiene las consultas más comunes sobre {{BRAND_NAME}} y sus sol
 
 1. **Registrar inmediatamente:** Andá a la esquina superior derecha del módulo Salón y hacé clic en **"Ingresos"** o **"Egresos"** según corresponda.
 2. **Ingresar datos correctos:**
-   - **Monto:** La cantidad exacta que ingresó o salió
-   - **Caja:** Seleccioná la caja correcta
-   - **Concepto:** Describí brevemente el motivo (ej: "Compra de cambio", "Pago delivery", "Retiro para banco")
+    - **Monto:** La cantidad exacta que ingresó o salió
+    - **Caja:** Seleccioná la caja correcta
+    - **Concepto:** Describí brevemente el motivo (ej: "Compra de cambio", "Pago delivery", "Retiro para banco")
 3. **Verificar el registro:** Revisá en el módulo de Arqueos que el movimiento haya quedado registrado.
 
 💡 **Tip:** Creá el hábito de registrar los movimientos en el momento en que ocurren para evitar olvidos.
@@ -270,7 +270,7 @@ Esta sección contiene las consultas más comunes sobre {{BRAND_NAME}} y sus sol
 
 **Solución:**
 ⚠️ **Importante:** dirijite al listado de mesas dentro de arqueos y ubica la mesa que necesitas recuperar, una vez allí selecciona la mesa y haz clic en "Re abrir".
- 
+
 ---
 
 ### 19. **Los ingresos/egresos no aparecen en el arqueo**
@@ -295,6 +295,5 @@ Esta sección contiene las consultas más comunes sobre {{BRAND_NAME}} y sus sol
 
 Si tu problema no está listado aquí o necesitás información adicional para las consultas pendientes, no dudes en contactarnos:
 
-*¡Click para chatear directamente con nuestro soporte tecnico!*
- <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
-
+_¡Click para chatear directamente con nuestro soporte tecnico!_
+<a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
