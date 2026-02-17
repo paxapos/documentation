@@ -114,6 +114,7 @@ Una vez configurado, los usuarios van a poder:
 
 ---
 
+
 ## 🚨 **¿Problemas comunes?**
 
 - **"No me deja guardar"** → Verificá que hayas completado todos los campos obligatorios
