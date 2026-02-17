@@ -7,6 +7,12 @@
 	import { processGroupedContent } from '$lib/helpers/textReplacer';
 	import { page } from '$app/stores';
 	import SEOHead from '$lib/components/SEOHead.svelte';
+	import {
+		addLinkIconsToHeaders,
+		highlightTextInHtml,
+		copyToClipboard,
+		fileNameToSlug,
+	} from '$lib/utils/contentUtils';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -363,81 +369,23 @@
 		}, 100);
 	}
 
-	// Función para agregar íconos de enlace a los títulos H1, H2, H3, etc.
-	function addLinkIconsToHeaders(html: string): string {
-		// Buscar títulos H1, H2, H3, H4, H5, H6 seguidos de un div con id
-		// El contenido del título puede incluir HTML como <strong>, <em>, etc.
-		const headerWithIdRegex =
-			/<(h[1-6])>([^<>]*(?:<[^>]+>[^<>]*<\/[^>]+>)*[^<>]*)<\/(h[1-6])>\s*<div id="([^"]+)"><\/div>/g;
-
-		return html.replace(
-			headerWithIdRegex,
-			(match, headerTag, titleContent, closingTag, idValue) => {
-				return `<${headerTag} class="relative">
-                ${titleContent}
-                <button 
-                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
-                    onclick="copyLinkToSection('${idValue}')"
-                    title="Copiar enlace a esta sección"
-                    aria-label="Copiar enlace a esta sección"
-                >
-                    🔗
-                </button>
-            </${headerTag}>
-            <div id="${idValue}"></div>`;
-			},
-		);
-	}
-
 	// Función para copiar el enlace de una sección específica
 	function copyLinkToSection(sectionId: string) {
-		const currentUrl = window.location.href.split('#')[0]; // URL sin hash
+		const currentUrl = window.location.href.split('#')[0];
 		const linkWithHash = `${currentUrl}#${sectionId}`;
 
-		navigator.clipboard
-			.writeText(linkWithHash)
-			.then(() => {
-				// Mostrar mensaje de confirmación temporal
-				showCopyConfirmation();
-			})
-			.catch((err) => {
-				console.error('Error al copiar enlace:', err);
-				// Fallback para navegadores que no soportan clipboard API
-				fallbackCopyToClipboard(linkWithHash);
-			});
-	}
-
-	// Función fallback para copiar al portapapeles
-	function fallbackCopyToClipboard(text: string) {
-		const textArea = document.createElement('textarea');
-		textArea.value = text;
-		textArea.style.position = 'fixed';
-		textArea.style.left = '-999999px';
-		textArea.style.top = '-999999px';
-		document.body.appendChild(textArea);
-		textArea.focus();
-		textArea.select();
-
-		try {
-			document.execCommand('copy');
-			showCopyConfirmation();
-		} catch (err) {
-			console.error('Error al copiar:', err);
-		} finally {
-			document.body.removeChild(textArea);
-		}
+		copyToClipboard(linkWithHash).then((success) => {
+			if (success) {
+				showCopyMessage = true;
+				setTimeout(() => {
+					showCopyMessage = false;
+				}, 2000);
+			}
+		});
 	}
 
 	// Variable para el mensaje de confirmación
 	let showCopyMessage = $state(false);
-
-	// Función para mostrar confirmación de copia
-	function showCopyConfirmation() {
-		showCopyMessage = true;
-		setTimeout(() => {
-			showCopyMessage = false;
-		}, 2000);
-	}
 
 	// Función para buscar en qué módulo está una sección específica
 	function findModuleWithSection(sectionId: string): ContentItem | null {
@@ -490,32 +438,7 @@
 		}
 	}
 
-	// Función para resaltar texto en HTML de manera más elegante
-	function highlightTextInHtml(html: string, searchTerm: string): string {
-		if (!searchTerm || !html) return html;
-
-		// Escapar caracteres especiales del término de búsqueda
-		const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-		// Crear regex con flag global para encontrar todas las coincidencias
-		const regex = new RegExp(`(${escapedTerm})`, 'gi');
-
-		// Limitar a máximo 4 resaltados para evitar sobrecarga visual
-		let matchCount = 0;
-		const maxMatches = 4;
-
-		return html.replace(regex, (match) => {
-			if (matchCount >= maxMatches) {
-				return match; // Devolver sin resaltar si ya llegamos al límite
-			}
-			matchCount++;
-			return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
-		});
-	}
-
 	function handleLLMIntegration(moduleId: string, moduleName: string) {
-		// Usar archivo TXT estático del módulo específico
-		// Normalizar: pasar a minúsculas, remover diacríticos y convertir espacios a guiones
 		const txtFileName =
 			moduleId
 				.toLowerCase()
@@ -524,23 +447,12 @@
 				.replace(/\s+/g, '-')
 				.replace(/[()]/g, '') + '.txt';
 		const staticUrl = `${base}/llms/${txtFileName}`;
-
-		// Abrir en nueva pestaña la URL estática
 		window.open(staticUrl, '_blank');
-
-		console.log('Opening static LLM file for:', moduleName, 'at:', staticUrl);
 	}
 
 	// Función para convertir IDs a slugs para URLs
 	function getSlugFromId(id: string): string {
-		return id
-			.toLowerCase()
-			.replace(/^\d+-/, '') // Remover números del inicio
-			.replace(/[()]/g, '') // Remover paréntesis
-			.replace(/\s+/g, '-') // Espacios a guiones
-			.normalize('NFD')
-			.replace(/[\u0300-\u036f]/g, '') // Remover acentos
-			.replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
+		return fileNameToSlug(id);
 	}
 
 	// Función para manejar el selector dropdown (móvil)

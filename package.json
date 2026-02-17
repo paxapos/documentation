@@ -4,9 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "npm run generate:ai && npm run generate:seo && vite dev",
+		"dev": "pnpm run generate:ai && pnpm run generate:seo && pnpm run generate:search && vite dev",
 		"dev:clean": "vite dev",
-		"build": "npm run generate:seo && npm run generate:ai && npx vite build",
+		"build": "pnpm run generate:seo && pnpm run generate:ai && pnpm run generate:search && npx vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -15,7 +15,8 @@
 		"lint": "prettier --check . && eslint .",
 		"generate:ai": "node scripts/generate-ai-files.mjs",
 		"generate:seo": "node scripts/generate-seo-files.mjs",
-		"seo:analyze": "npm run generate:seo && echo 'SEO files ready for analysis'"
+		"generate:search": "node scripts/generate-search-index.mjs",
+		"seo:analyze": "pnpm run generate:seo && echo 'SEO files ready for analysis'"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

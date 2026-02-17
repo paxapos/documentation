@@ -112,15 +112,18 @@ export async function getMarkdownFiles() {
 				const title = extractTitle(content, fileName);
 				const categoryInfo = categorizeByFolder(path);
 
+				// Remover el título del contenido para evitar duplicación visual
+				const contentWithoutTitle = content.replace(/^#\s+.+(\r?\n)?/, '').trim();
+
 				// Crear entrada para el file mapping
 				markdownFiles[slug] = {
 					fileName,
 					path,
 					title,
-					content,
+					content: contentWithoutTitle, // Usar contenido sin título
 					category: categoryInfo.category,
 					categoryOrder: categoryInfo.order,
-					seo: generateSEO(title, content, slug),
+					seo: generateSEO(title, content, slug), // SEO usa contenido completo (lo limpia internamente)
 				};
 
 				// Crear entrada para prerender
