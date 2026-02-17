@@ -276,20 +276,21 @@ body {
 }
 
 .markdown-paxapos th {
-	background: rgb(248 250 252); /* gray-50 */
+	background: transparent; /* Antes: rgb(248 250 252) */
 	color: rgb(15 23 42); /* slate-900 */
 	font-weight: 600;
 	font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+	border-bottom: 2px solid rgb(229 231 235); /* Borde más grueso para separar */
 }
 
 .markdown-paxapos td {
-	background: rgb(255 255 255); /* bg-white */
+	background: transparent; /* Antes: bg-white */
 	color: rgb(51 65 85); /* slate-700 */
 }
 
 /* Modo oscuro para tablas */
 .dark .markdown-paxapos table {
-	background: rgb(31 41 55); /* gray-800 */
+	background: transparent; /* Antes: gray-800 */
 	border: 1px solid rgb(75 85 99); /* gray-600 */
 }
 
@@ -299,12 +300,103 @@ body {
 }
 
 .dark .markdown-paxapos th {
-	background: rgb(55 65 81); /* gray-700 */
+	background: transparent; /* Antes: gray-700 */
 	color: rgb(243 244 246); /* gray-100 */
+	border-bottom: 2px solid rgb(75 85 99); /* Separador */
 }
 
 .dark .markdown-paxapos td {
 	background: rgb(31 41 55); /* gray-800 */
+	color: rgb(209 213 219); /* gray-300 */
+}
+
+/* Modo oscuro para texto markdown general */
+.dark .markdown-paxapos h1,
+.dark .markdown-paxapos h2,
+.dark .markdown-paxapos h3,
+.dark .markdown-paxapos h4,
+.dark .markdown-paxapos h5,
+.dark .markdown-paxapos h6 {
+	color: rgb(243 244 246); /* gray-100 */
+	border-bottom-color: rgb(75 85 99); /* gray-600 */
+}
+
+.dark .markdown-paxapos p,
+.dark .markdown-paxapos li {
+	color: rgb(209 213 219); /* gray-300 */
+}
+
+.dark .markdown-paxapos strong {
+	color: rgb(243 244 246); /* gray-100 */
+}
+
+.dark .markdown-paxapos a {
+	color: rgb(96 165 250); /* blue-400 */
+}
+
+.dark .markdown-paxapos a:hover {
+	color: rgb(147 197 253); /* blue-300 */
+}
+
+/* === ESTILOS PARA CÓDIGO === */
+
+/* Código en línea (inline) */
+.markdown-paxapos :not(pre) > code {
+	background-color: rgb(243 244 246); /* gray-100 */
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.25rem;
+	font-family:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
+	font-size: 0.875rem;
+	color: rgb(220 38 38); /* red-600 */
+	border: 1px solid rgb(229 231 235); /* gray-200 */
+}
+
+/* Bloques de código (ASCII Art, Code Blocks) */
+.markdown-paxapos pre {
+	background-color: rgb(248 250 252); /* gray-50 (Fondo claro por defecto) */
+	color: rgb(31 41 55); /* gray-800 */
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+	font-family:
+		'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+		monospace; /* Fuentes con ligaduras y buen soporte ASCII */
+	font-size: 0.875rem;
+	line-height: 1.5;
+	border: 1px solid rgb(229 231 235); /* gray-200 */
+	white-space: pre; /* Mantiene formato exacto */
+}
+
+/* El código DENTRO del bloque pre debe ser transparente y sin estilos extra */
+.markdown-paxapos pre code {
+	background-color: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+	color: inherit !important; /* Hereda el blanco del pre */
+	font-family: inherit !important;
+	box-shadow: none !important;
+}
+
+/* Modo oscuro ajustes (aunque forzamos dark en pre, ajustamos inline) */
+.dark .markdown-paxapos :not(pre) > code {
+	background-color: rgb(55 65 81); /* gray-700 */
+	color: rgb(248 113 113); /* red-400 */
+	border-color: rgb(75 85 99); /* gray-600 */
+}
+
+/* Asegurar texto blanco en code block dark mode y fondo oscuro */
+.dark .markdown-paxapos pre,
+.dark .markdown-paxapos pre code {
+	background-color: rgb(15 23 42) !important; /* slate-900 */
+	color: rgb(248 250 252) !important; /* gray-50 */
+	border-color: rgb(51 65 85); /* slate-700 */
+}
+
+.dark .markdown-paxapos blockquote {
+	border-left-color: rgb(107 114 128); /* gray-500 */
+	background: rgb(55 65 81 / 0.5); /* gray-700 transparent */
 	color: rgb(209 213 219); /* gray-300 */
 }
 
@@ -328,92 +420,16 @@ body {
 	}
 }
 
-/* Fallback para navegadores que no soportan prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-	.markdown-paxapos {
-		background: transparent;
-		color: rgb(255 255 255);
-		border: none;
-		box-shadow: none;
-	}
+/* Dark mode para .markdown-paxapos se maneja via la clase .dark del html (ver theme.ts) */
+/* Los estilos dark: de Tailwind y .dark .markdown-paxapos se encargan de esto */
 
-	.markdown-paxapos h1 {
-		border-bottom-color: rgb(75 85 99);
-	}
+/* Correcciones manuales para el layout principal en modo oscuro */
+.dark main {
+	background-color: rgb(17 24 39) !important; /* gray-900 force */
+}
 
-	.markdown-paxapos h2 {
-		border-bottom-color: rgb(75 85 99);
-	}
-
-	.markdown-paxapos h1,
-	.markdown-paxapos h2,
-	.markdown-paxapos h3,
-	.markdown-paxapos h4,
-	.markdown-paxapos h5,
-	.markdown-paxapos h6 {
-		color: rgb(255 255 255);
-	}
-
-	.markdown-paxapos p,
-	.markdown-paxapos li {
-		color: rgb(229 231 235);
-	}
-
-	.markdown-paxapos a {
-		color: rgb(96 165 250);
-	}
-
-	.markdown-paxapos a:hover {
-		color: rgb(147 197 253);
-	}
-
-	.markdown-paxapos code {
-		background: rgb(55 65 81 / 0.4);
-		color: rgb(243 244 246);
-		padding: 2px 6px;
-		border-radius: 4px;
-		border: none;
-	}
-
-	.markdown-paxapos pre {
-		background: rgb(17 24 39 / 0.4);
-		border: none;
-		border-radius: 6px;
-	}
-
-	.markdown-paxapos pre code {
-		background: transparent;
-		border: none;
-		padding: 0;
-	}
-
-	.markdown-paxapos blockquote {
-		border-left: 4px solid rgb(75 85 99);
-		background: rgb(55 65 81 / 0.2);
-		margin: 16px 0;
-		padding: 12px 20px;
-		border-radius: 0 6px 6px 0;
-	}
-
-	.markdown-paxapos table {
-		border-collapse: collapse;
-		border: 1px solid rgb(75 85 99 / 0.4);
-	}
-
-	.markdown-paxapos th,
-	.markdown-paxapos td {
-		border: 1px solid rgb(75 85 99 / 0.4);
-		padding: 8px 12px;
-	}
-
-	.markdown-paxapos th {
-		background: rgb(55 65 81 / 0.3);
-		color: rgb(255 255 255);
-	}
-
-	.markdown-paxapos hr {
-		border-color: rgb(75 85 99 / 0.4);
-	}
+.dark .min-h-screen {
+	background-color: rgb(17 24 39) !important; /* gray-900 force */
 }
 
 /* ==========================================

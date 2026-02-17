@@ -40,22 +40,18 @@
 
 	const selectSearchResult = (item: SearchableItem) => {
 		try {
-			console.log('Navegando a:', item);
 			const currentSearchQuery = searchQuery;
 			searchQuery = '';
 			showSearchResults = false;
 			searchResults = [];
-			showMobileSearch = false; // Cerrar el campo de búsqueda móvil
+			showMobileSearch = false;
 
-			// Si tiene ID específico y es de documentación del usuario, navegar a la página individual
 			if (item.id && item.href === '/user-guide') {
 				const slug = getSlugFromModuleId(item.id);
 				const url = `${base}/user-guide/${slug}?highlight=${encodeURIComponent(currentSearchQuery)}`;
-				console.log('URL generada para user-guide:', url);
 				goto(url);
 			} else {
 				const url = `${base}${item.href}?highlight=${encodeURIComponent(currentSearchQuery)}`;
-				console.log('URL generada genérica:', url);
 				goto(url);
 			}
 		} catch (error) {

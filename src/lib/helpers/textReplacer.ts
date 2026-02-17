@@ -6,120 +6,78 @@ function getConfig() {
 	if (browser && typeof window !== 'undefined' && (window as any).__APP_CONFIG__) {
 		const config = (window as any).__APP_CONFIG__;
 
-		// Validar que las variables no sean placeholders
 		if (config.BRAND_NAME && config.BRAND_NAME.includes('{{')) {
 			console.error('❌ ERROR: Variables de configuración no reemplazadas');
-			console.error('   Las variables aún contienen placeholders:', config);
-			console.error(
-				'   Verifica que el contenedor Docker tenga las variables de entorno definidas',
-			);
 		}
 
 		return config;
 	}
 
-	// Si no hay config, retornar objeto vacío (forzará errores visibles)
-	console.warn('⚠️ ADVERTENCIA: window.__APP_CONFIG__ no está definido');
 	return {
 		BRAND_NAME: '',
 		SYSTEM_URL: '',
-		COMPANY_NAME: '',
 	};
 }
 
 const config = getConfig();
 const REPLACEMENT_WORD = config.BRAND_NAME || '{{BRAND_NAME}}';
 const DEFAULT_SYSTEM_URL = config.SYSTEM_URL || '{{SYSTEM_URL}}';
-// const DEFAULT_COMPANY_NAME = config.COMPANY_NAME || "{{COMPANY_NAME}}"; // Opcional: descomenta para usar nombre de empresa
 
 export const brandName = writable(REPLACEMENT_WORD);
 export const systemUrl = writable(DEFAULT_SYSTEM_URL);
-// export const companyName = writable(DEFAULT_COMPANY_NAME); // Opcional: descomenta para usar nombre de empresa
 
 // Variables seguras usando placeholder format
 const BRAND_VARIABLE = /\{\{BRAND_NAME\}\}/g;
 const SYSTEM_URL_VARIABLE = /\{\{SYSTEM_URL\}\}/g;
-// const COMPANY_VARIABLE = /\{\{COMPANY_NAME\}\}/g; // Opcional: descomenta para usar nombre de empresa
 
-// Función principal usando variables seguras
-function replaceVariables(
-	content: string,
-	brand: string,
-	url: string /*, company?: string*/,
-): string {
+function replaceVariables(content: string, brand: string, url: string): string {
 	if (!content) return content;
 
 	let result = content;
-
-	// Reemplazar variables seguras
 	result = result.replace(BRAND_VARIABLE, brand || REPLACEMENT_WORD);
 	result = result.replace(SYSTEM_URL_VARIABLE, url || DEFAULT_SYSTEM_URL);
-	// result = result.replace(COMPANY_VARIABLE, company || DEFAULT_COMPANY_NAME); // Opcional: descomenta para usar nombre de empresa
-
 	return result;
 }
 
-// Store derivado que reacciona a cambios (usando variables seguras)
+// Store derivado que reacciona a cambios
 export const brandReplacer = derived([brandName, systemUrl], ([$brandName, $systemUrl]) => ({
 	replace: (content: string): string => {
-		return replaceVariables(content, $brandName, $systemUrl /*, $companyName*/);
+		return replaceVariables(content, $brandName, $systemUrl);
 	},
 }));
 
-// export const fullReplacer = derived([brandName, systemUrl, companyName], ([$brandName, $systemUrl, $companyName]) => ({
-//     replace: (content: string): string => {
-//         return replaceVariables(content, $brandName, $systemUrl, $companyName);
-//     }
-// })); // Opcional: descomenta para usar con nombre de empresa
-
-// Función principal usando variables (recomendada)
-export function replaceWithVariables(
-	content: string,
-	brand?: string,
-	url?: string /*, company?: string*/,
-): string {
+// Función principal para reemplazo de variables
+export function replaceWithVariables(content: string, brand?: string, url?: string): string {
 	const currentBrand = brand || get(brandName);
 	const currentUrl = url || get(systemUrl);
-	// const currentCompany = company || get(companyName); // Opcional: descomenta para usar nombre de empresa
-
-	return replaceVariables(content, currentBrand, currentUrl /*, currentCompany*/);
+	return replaceVariables(content, currentBrand, currentUrl);
 }
 
-// Función para procesar contenido agrupado (usando variables)
+// Función para procesar contenido agrupado
 export function processGroupedContent(
 	groupedContent: any[],
 	newWord?: string,
-	newUrl?: string /*, newCompany?: string*/,
+	newUrl?: string,
 ): any[] {
 	return groupedContent.map((group) => ({
 		...group,
-		folder: group.folder
-			? replaceWithVariables(group.folder, newWord, newUrl /*, newCompany*/)
-			: group.folder,
+		folder: group.folder ? replaceWithVariables(group.folder, newWord, newUrl) : group.folder,
 		items: group.items
 			? group.items.map((item: any) => ({
 					...item,
-					title: item.title
-						? replaceWithVariables(item.title, newWord, newUrl /*, newCompany*/)
-						: item.title,
-					html: item.html
-						? replaceWithVariables(item.html, newWord, newUrl /*, newCompany*/)
-						: item.html,
+					title: item.title ? replaceWithVariables(item.title, newWord, newUrl) : item.title,
+					html: item.html ? replaceWithVariables(item.html, newWord, newUrl) : item.html,
 					rawMarkdown: item.rawMarkdown
-						? replaceWithVariables(item.rawMarkdown, newWord, newUrl /*, newCompany*/)
+						? replaceWithVariables(item.rawMarkdown, newWord, newUrl)
 						: item.rawMarkdown,
 				}))
 			: group.items,
 	}));
 }
 
-// Función para preparar contenido para exportación (usando variables)
-export function prepareForExport(
-	markdownContent: string,
-	newWord?: string,
-	newUrl?: string /*, newCompany?: string*/,
-): string {
-	return replaceWithVariables(markdownContent, newWord, newUrl /*, newCompany*/);
+// Función para preparar contenido para exportación
+export function prepareForExport(markdownContent: string, newWord?: string, newUrl?: string): string {
+	return replaceWithVariables(markdownContent, newWord, newUrl);
 }
 
 // Funciones de utilidad
@@ -131,10 +89,6 @@ export function setSystemUrlGlobally(newUrl: string) {
 	systemUrl.set(newUrl);
 }
 
-// export function setCompanyGlobally(newCompany: string) {
-//     companyName.set(newCompany);
-// } // Opcional: descomenta para usar nombre de empresa
-
 export function getBrandName(): string {
 	return get(brandName);
 }
@@ -142,10 +96,6 @@ export function getBrandName(): string {
 export function getSystemUrl(): string {
 	return get(systemUrl);
 }
-
-// export function getCompanyName(): string {
-//     return get(companyName);
-// } // Opcional: descomenta para usar nombre de empresa
 
 // Action para reemplazar automáticamente en toda la página
 export function autoReplaceBrand(node: HTMLElement) {
@@ -158,7 +108,6 @@ export function autoReplaceBrand(node: HTMLElement) {
 				const parent = textNode.parentElement;
 				if (!parent) return NodeFilter.FILTER_REJECT;
 
-				// Excluir elementos que no deben cambiar
 				const tagName = parent.tagName.toLowerCase();
 				if (['script', 'style', 'code', 'pre'].includes(tagName)) {
 					return NodeFilter.FILTER_REJECT;
@@ -185,15 +134,12 @@ export function autoReplaceBrand(node: HTMLElement) {
 		});
 	}
 
-	// Procesar inmediatamente
 	processTextNodes();
 
-	// Reaccionar a cambios de marca
 	unsubscribe = brandReplacer.subscribe(() => {
 		processTextNodes();
 	});
 
-	// Observer para contenido dinámico
 	const observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
 			if (mutation.type === 'childList') {
