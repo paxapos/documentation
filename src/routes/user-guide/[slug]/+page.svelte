@@ -6,6 +6,7 @@
 	import { processGroupedContent } from '$lib/helpers/textReplacer';
 	import SEOHead from '$lib/components/SEOHead.svelte';
 	import { getModuleCategories } from '$lib/utils/markdownDetector.js';
+	import { addLinkIconsToHeaders, highlightTextInHtml, copyToClipboard } from '$lib/utils/contentUtils';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -30,7 +31,6 @@
 	// Procesar contenido de manera reactiva cuando cambien los datos
 	$effect(() => {
 		if (data) {
-			console.log('Datos cambiaron - procesando:', data.slug, data.title);
 			const mockGroupedContent = [
 				{
 					folder: 'temp',
@@ -65,8 +65,6 @@
 			// Agregar íconos de enlace a los títulos
 			processedContent = addLinkIconsToHeaders(htmlContent);
 
-			console.log('Contenido actualizado para:', data.slug);
-
 			// Manejar hash y visibilidad después de actualizar el contenido
 			setTimeout(() => {
 				handleHashNavigation();
@@ -76,7 +74,6 @@
 	});
 
 	onMount(() => {
-		console.log('Componente montado para:', data.slug, data.title);
 		// Hacer funciones accesibles globalmente para onClick en HTML
 		(window as any).copyLinkToSection = copyLinkToSection;
 
@@ -118,30 +115,6 @@
 		}
 	}
 
-	// Función para agregar íconos de enlace a los títulos
-	function addLinkIconsToHeaders(html: string): string {
-		const headerWithIdRegex =
-			/<(h[1-6])>([^<>]*(?:<[^>]+>[^<>]*<\/[^>]+>)*[^<>]*)<\/(h[1-6])>\s*<div id="([^"]+)"><\/div>/g;
-
-		return html.replace(
-			headerWithIdRegex,
-			(match, headerTag, titleContent, closingTag, idValue) => {
-				return `<${headerTag} class="relative">
-                ${titleContent}
-                <button 
-                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
-                    onclick="copyLinkToSection('${idValue}')"
-                    title="Copiar enlace a esta sección"
-                    aria-label="Copiar enlace a esta sección"
-                >
-                    🔗
-                </button>
-            </${headerTag}>
-            <div id="${idValue}"></div>`;
-			},
-		);
-	}
-
 	// Función para corregir rutas de imágenes
 	function fixImagePaths(html: string): string {
 		// Buscar imágenes con rutas relativas que empiecen con "images/"
@@ -167,11 +140,7 @@
 		});
 	}
 
-	// Función para ocultar el div principal cuando hay hash en la URL
-	function hideMainDivWhenHash(html: string): string {
-		// Esta función ya no es necesaria, la lógica se maneja dinámicamente
-		return html;
-	}
+
 
 	// Función para manejar la visibilidad del div principal dinámicamente
 	function handleMainDivVisibility() {
@@ -202,91 +171,30 @@
 
 	// Función para copiar el enlace de una sección específica
 	function copyLinkToSection(sectionId: string) {
-		// Construir URL completa incluyendo el prefijo base
 		const baseUrl = window.location.origin;
 		const currentPath = `${base}/user-guide/${data.slug}`;
 		const linkWithHash = sectionId
 			? `${baseUrl}${currentPath}#${sectionId}`
 			: `${baseUrl}${currentPath}`;
 
-		navigator.clipboard
-			.writeText(linkWithHash)
-			.then(() => {
-				showCopyConfirmation();
-			})
-			.catch((err) => {
-				console.error('Error al copiar enlace:', err);
-				fallbackCopyToClipboard(linkWithHash);
-			});
-	}
-
-	// Función fallback para copiar al portapapeles
-	function fallbackCopyToClipboard(text: string) {
-		const textArea = document.createElement('textarea');
-		textArea.value = text;
-		textArea.style.position = 'fixed';
-		textArea.style.left = '-999999px';
-		textArea.style.top = '-999999px';
-		document.body.appendChild(textArea);
-		textArea.focus();
-		textArea.select();
-
-		try {
-			document.execCommand('copy');
-			showCopyConfirmation();
-		} catch (err) {
-			console.error('Error al copiar:', err);
-		} finally {
-			document.body.removeChild(textArea);
-		}
-	}
-
-	// Función para mostrar confirmación de copia
-	function showCopyConfirmation() {
-		showCopyMessage = true;
-		setTimeout(() => {
-			showCopyMessage = false;
-		}, 2000);
-	}
-
-	// Función para resaltar texto en HTML de manera más elegante
-	function highlightTextInHtml(html: string, searchTerm: string): string {
-		if (!searchTerm || !html) return html;
-
-		// Escapar caracteres especiales del término de búsqueda
-		const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-		// Crear regex con flag global para encontrar todas las coincidencias
-		const regex = new RegExp(`(${escapedTerm})`, 'gi');
-
-		// Limitar a máximo 4 resaltados para evitar sobrecarga visual
-		let matchCount = 0;
-		const maxMatches = 4;
-
-		return html.replace(regex, (match) => {
-			if (matchCount >= maxMatches) {
-				return match; // Devolver sin resaltar si ya llegamos al límite
+		copyToClipboard(linkWithHash).then((success) => {
+			if (success) {
+				showCopyMessage = true;
+				setTimeout(() => { showCopyMessage = false; }, 2000);
 			}
-			matchCount++;
-			return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
 		});
 	}
 
 	// Función para abrir el archivo LLM en una nueva pestaña
 	async function openLLMPage() {
 		try {
-			// Importar la utilidad de mapeo dinámico
 			const { getTxtFileForSlug } = await import('$lib/utils/slugMapping.js');
-
-			// Obtener el archivo TXT correspondiente al slug actual
 			const fileName = await getTxtFileForSlug(data.slug);
 
 			if (fileName) {
 				const llmUrl = `${base}/llms/${fileName}`;
 				window.open(llmUrl, '_blank');
 			} else {
-				console.warn(`No se encontró archivo TXT para el slug: ${data.slug}`);
-				// Fallback: intentar construcción manual
 				const fallbackFileName = `${data.slug.replace(/[^a-z0-9-]/g, '')}.txt`;
 				const fallbackUrl = `${base}/llms/${fallbackFileName}`;
 				window.open(fallbackUrl, '_blank');
@@ -294,25 +202,6 @@
 		} catch (error) {
 			console.error('Error abriendo archivo LLM:', error);
 		}
-	}
-
-	// Función para manejar la descarga de archivos LLM
-	function handleLLMIntegration(moduleSlug: string, moduleName: string, type: 'single' | 'all') {
-		if (type === 'single' && moduleSlug) {
-			// Descargar archivo individual del módulo actual
-			const link = document.createElement('a');
-			link.href = `/llms/${moduleSlug}.txt`;
-			link.download = `${moduleSlug}.txt`;
-			link.click();
-		} else if (type === 'all') {
-			// Abrir índice completo de archivos LLM
-			window.open('/llms/', '_blank');
-		}
-	}
-
-	// Función para generar índice de IA
-	function generateAIIndex() {
-		window.open('/ai-metadata.json', '_blank');
 	}
 
 	// Calcular el módulo actual para navegación móvil
@@ -431,7 +320,7 @@
 				</header>
 
 				<!-- Contenido del módulo -->
-				<div class="p-2 sm:p-3 md:p-1">
+				<div class="p-2 sm:p-3 md:p-6">
 					<div
 						class="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 markdown-paxapos max-w-none"
 					>
