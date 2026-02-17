@@ -1,4 +1,4 @@
-# 🏪 Módulo de Salón
+# Módulo de Salón
 
 <div id="salon"></div>
 

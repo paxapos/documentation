@@ -1,4 +1,4 @@
-# 📊 Módulo de Contabilidad
+# Módulo de Contabilidad
 
 <div id="contabilidad"></div>
 

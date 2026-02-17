@@ -1,4 +1,4 @@
-﻿# 👨‍💼 Agregar Empleado
+# Agregar Empleado
 
 <div id="agregar-empleado"></div>
 

@@ -1,4 +1,4 @@
-# 🔐 Configuración de Permisos por Rol
+# Configuración de Permisos por Rol
 
 <div id="permisos-por-rol"></div>
 

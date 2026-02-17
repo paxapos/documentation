@@ -1,4 +1,4 @@
-# 🖨️ Epson TM-T20
+# Epson TM-T20
 
 En el [siguiente enlace](https://support.epson.net/setupnavi/?PINF=swlist&OSC=WS&LG2=ES&MKN=TM-T20) podrás descargar el driver (controlador) de la impresora de comandas marca Epson modelo TM -T20/T20II/T20III/T20IIIL.
 

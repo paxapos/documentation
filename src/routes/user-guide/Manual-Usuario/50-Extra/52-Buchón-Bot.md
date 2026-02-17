@@ -1,4 +1,4 @@
-# 🤖 Buchón Bot
+# Buchón Bot
 
 <div id="buchon-bot"></div>
 

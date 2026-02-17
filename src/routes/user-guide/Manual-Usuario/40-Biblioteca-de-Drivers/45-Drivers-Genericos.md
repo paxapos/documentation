@@ -1,4 +1,4 @@
-# 🖨️ Drivers Genéricos POS
+# Drivers Genéricos POS
 
 Cómo descargar e instalar el controlador para impresoras térmicas genéricas (POS 80mm y POS 58mm)
 

@@ -1,4 +1,4 @@
-# 📦 Compras y Gestión de Stock
+# Compras y Gestión de Stock
 
 <div id="compras-stock"></div>
 

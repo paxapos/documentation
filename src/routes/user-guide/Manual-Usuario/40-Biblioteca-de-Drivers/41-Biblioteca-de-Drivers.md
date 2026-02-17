@@ -1,4 +1,4 @@
-# 🖨️ Biblioteca de Drivers
+# Biblioteca de Drivers
 
 ## 📋 **Guía de Instalación Rápida de drivers**
 

@@ -1,4 +1,4 @@
-# 📊 Reportes
+# Reportes
 
 <div id="estadisticas"></div>
 

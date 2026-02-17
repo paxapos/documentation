@@ -1,4 +1,4 @@
-# 👨‍🍳 Comandero
+# Comandero
 
 <div id="comandero"></div>
 

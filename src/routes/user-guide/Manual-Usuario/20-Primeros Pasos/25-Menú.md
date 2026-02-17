@@ -1,4 +1,4 @@
-# 🍽️ Configuración del Menú
+# Configuración del Menú
 
 <div id="configurar-menu"></div>
 

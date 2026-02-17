@@ -1,4 +1,4 @@
-# 🖨️ Configuración de Impresoras
+# Configuración de Impresoras
 
 <div id="configurar-impresoras"></div>
 

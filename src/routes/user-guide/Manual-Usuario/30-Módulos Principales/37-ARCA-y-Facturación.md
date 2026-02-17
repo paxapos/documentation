@@ -1,4 +1,4 @@
-# 🏛️ ARCA y Facturación Electrónica
+# ARCA y Facturación Electrónica
 
 <div id="arca-facturacion"></div>
 

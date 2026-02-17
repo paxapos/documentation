@@ -1,4 +1,4 @@
-# 💰 Módulo de Arqueos
+# Módulo de Arqueos
 
 <div id="arqueos"></div>
 

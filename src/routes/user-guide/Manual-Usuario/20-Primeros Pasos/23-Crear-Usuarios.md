@@ -1,4 +1,4 @@
-﻿# 👥 Crear Usuarios
+# Crear Usuarios
 
 <div id="crear-usuarios"></div>
 

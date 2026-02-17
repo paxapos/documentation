@@ -1,4 +1,4 @@
-# 🔑 Cómo Iniciar Sesión
+# Cómo Iniciar Sesión
 
 <div id="iniciar-sesion"></div>
 

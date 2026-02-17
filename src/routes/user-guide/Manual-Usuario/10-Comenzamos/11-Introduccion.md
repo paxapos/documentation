@@ -2,13 +2,11 @@
 
 <div id="introduccion"></div>
 
+## 🎯 ¿Qué es esta plataforma de gestión?
+
 Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.
 
 Este es {{BRAND_NAME}}, tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
-
-## 🎯 ¿Qué es esta plataforma de gestión?
-
-Imagínate tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece esta **solución empresarial avanzada**.
 
 Desde un solo lugar, permite administrar:
 
