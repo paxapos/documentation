@@ -34,31 +34,52 @@ const BASE_URLS = ['/', '/user-guide'];
 
 // Función para generar sitemap dinámico
 function generateSitemap() {
-	const baseUrl = 'https://paxapos.github.io/documentation';
+	const baseUrl = 'https://doc.paxapos.com';
 	const contentIndex = loadContentIndex();
 
-	// URLs base
-	let urls = [...BASE_URLS];
-
-	// Agregar URLs del content-index si existe
+	// Construir mapa de lastmod por archivo desde content-index.json
+	const lastModMap: Record<string, string> = {};
 	if (contentIndex?.sections?.user_guide?.files) {
-		const userGuideUrls = contentIndex.sections.user_guide.files.map(
-			(file: any) => `/user-guide#${file.id}`,
-		);
-		urls.push(...userGuideUrls);
+		for (const file of contentIndex.sections.user_guide.files) {
+			if (file.last_modified) {
+				lastModMap[file.id] = file.last_modified.split('T')[0]; // YYYY-MM-DD
+			}
+		}
+	}
+
+	// Fecha de generación del índice como fallback
+	const indexDate = contentIndex?.generated_at
+		? contentIndex.generated_at.split('T')[0]
+		: new Date().toISOString().split('T')[0];
+
+	// URLs base
+	const sitemapEntries = [
+		{ url: '/', lastmod: indexDate, priority: '1.0' },
+		{ url: '/user-guide', lastmod: indexDate, priority: '0.9' },
+	];
+
+	// Agregar URLs del content-index con lastmod real por archivo
+	if (contentIndex?.sections?.user_guide?.files) {
+		for (const file of contentIndex.sections.user_guide.files) {
+			sitemapEntries.push({
+				url: `/user-guide#${file.id}`,
+				lastmod: lastModMap[file.id] || indexDate,
+				priority: '0.8',
+			});
+		}
 	}
 
 	// Solo incluimos URLs del manual de usuario
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
+${sitemapEntries
 	.map(
-		(url: string) => `  <url>
-    <loc>${baseUrl}${url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+		(entry) => `  <url>
+    <loc>${baseUrl}${entry.url}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${url === '/' ? '1.0' : '0.8'}</priority>
+    <priority>${entry.priority}</priority>
   </url>`,
 	)
 	.join('\n')}
@@ -84,8 +105,8 @@ function generateMetadata() {
 		features: aiMetadata?.indexing_instructions?.focus_areas || [],
 		commonQueries: aiMetadata?.indexing_instructions?.common_user_questions || [],
 		documentation: {
-			url: 'https://paxapos.github.io/documentation',
-			userGuide: 'https://paxapos.github.io/documentation/user-guide',
+			url: 'https://doc.paxapos.com',
+			userGuide: 'https://doc.paxapos.com/user-guide',
 		},
 		contentStatistics: aiMetadata?.content_statistics || {},
 		lastUpdated: aiMetadata?.last_updated || new Date().toISOString(),
@@ -132,13 +153,14 @@ export const GET: RequestHandler = async ({ url }) => {
 		case 'ai-urls':
 			// Lista de URLs dinámicas para indexación por IA
 			try {
-				// Obtener lista de módulos desde el endpoint dinámico
-				const response = await fetch(`${url.origin}/documentation/llms?type=list`);
+				// Obtener lista de módulos desde manifiesto estático
+				const response = await fetch(`${url.origin}/llms/files-register.json`);
 				if (response.ok) {
-					const modules = await response.json();
+					const register = await response.json();
+					const modules = register?.detailed_files || [];
 					const urls = [
-						`${url.origin}/documentation/llms`,
-						...modules.map((m: any) => `${url.origin}/documentation/llms/${m.id}`),
+						`${url.origin}/llms/index.txt`,
+						...modules.map((m: any) => `${url.origin}/llms/${m.txt_file}`),
 					];
 					return new Response(urls.join('\n'), {
 						headers: {
@@ -154,9 +176,9 @@ export const GET: RequestHandler = async ({ url }) => {
 			}
 
 		case 'ai-index':
-			// Redirigir al endpoint dinámico del manual completo
+			// Leer manual completo estático para IA
 			try {
-				const response = await fetch(`${url.origin}/documentation/llms`);
+				const response = await fetch(`${url.origin}/llms/index.txt`);
 				if (response.ok) {
 					const content = await response.text();
 					return new Response(content, {
@@ -211,14 +233,14 @@ Crawl-delay: 1
 
 # Archivos específicos para indexación por IA
 # Manual completo indexado estáticamente
-Allow: /documentation/llms/
+Allow: /llms/
 
 # URLs importantes para SEO
-Sitemap: https://paxapos.github.io/documentation/seo?type=sitemap
+Sitemap: https://doc.paxapos.com/sitemap.xml
 
 # URLs específicas para IA
 # Lista completa de archivos indexables
-${url.origin}/seo?type=ai-urls
+${url.origin}/llms.txt
 # Contenido completo para IA
 ${url.origin}/seo?type=ai-index
 # Metadatos estructurados

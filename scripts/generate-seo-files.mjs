@@ -1,71 +1,50 @@
 #!/usr/bin/env node
 
 /**
- * Script para generar archivos optimizados para SEO e indexación AI
- * Se ejecuta automáticamente durante el build
+ * Genera archivos SEO: content-index.json, ai-metadata.json, urls.txt.
+ * Lee el manifiesto de generate-ai-files.mjs para archivos TXT.
+ * Importa utilidades de shared-utils.mjs.
  */
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import {
+	findAllMarkdownFiles,
+	fileNameToSlug,
+	MANUAL_DIR,
+	STATIC_DIR,
+	LLM_DIR,
+	BASE_SITE_URL,
+} from './shared-utils.mjs';
 
 console.log('Generando archivos optimizados para SEO e IA...');
 
-// Directorios de contenido
-const userGuideDir = path.join(__dirname, '../src/routes/user-guide/Manual-Usuario');
-const staticDir = path.join(__dirname, '../static');
-
-// Crear directorio static si no existe
-if (!fs.existsSync(staticDir)) {
-	fs.mkdirSync(staticDir, { recursive: true });
+if (!fs.existsSync(STATIC_DIR)) {
+	fs.mkdirSync(STATIC_DIR, { recursive: true });
 }
 
-/**
- * Función recursiva para obtener todos los archivos .md
- */
-function getAllMdFiles(dir, basePath = '') {
-	const files = [];
-
-	if (!fs.existsSync(dir)) {
-		console.warn(` Directorio no encontrado: ${dir}`);
-		return files;
-	}
-
-	const items = fs.readdirSync(dir);
-
-	for (const item of items) {
-		const fullPath = path.join(dir, item);
-		const stat = fs.statSync(fullPath);
-
-		if (stat.isDirectory()) {
-			// Recursión para subdirectorios
-			files.push(...getAllMdFiles(fullPath, path.join(basePath, item)));
-		} else if (item.endsWith('.md')) {
-			files.push({
-				name: item,
-				path: fullPath,
-				relativePath: path.join(basePath, item),
-				id: item.replace('.md', ''),
-				section: basePath || 'root',
-			});
-		}
-	}
-
-	return files;
+/** Obtiene archivos MD con metadata del filesystem */
+function getAllMdFilesWithMeta() {
+	const mdPaths = findAllMarkdownFiles(MANUAL_DIR);
+	return mdPaths.map((fullPath) => {
+		const relativePath = path.relative(MANUAL_DIR, fullPath);
+		const name = path.basename(fullPath);
+		return {
+			name,
+			path: fullPath,
+			relativePath,
+			id: name.replace('.md', ''),
+			section: path.dirname(relativePath) || 'root',
+		};
+	});
 }
 
-/**
- * Obtener archivos TXT generados automáticamente
- */
+/** Carga manifiesto TXT generado por generate-ai-files.mjs */
 function getTxtFiles() {
 	try {
-		const registerPath = path.join(staticDir, 'llms', 'files-register.json');
+		const registerPath = path.join(LLM_DIR, 'files-register.json');
 		if (fs.existsSync(registerPath)) {
-			const registerContent = fs.readFileSync(registerPath, 'utf-8');
-			const register = JSON.parse(registerContent);
+			const register = JSON.parse(fs.readFileSync(registerPath, 'utf-8'));
 			return register.detailed_files || [];
 		}
 	} catch (error) {
@@ -80,7 +59,7 @@ function getTxtFiles() {
 function generateContentIndex() {
 	console.log(' Generando índice de contenido...');
 
-	const userGuideFiles = getAllMdFiles(userGuideDir);
+	const userGuideFiles = getAllMdFilesWithMeta();
 	const txtFiles = getTxtFiles();
 
 	const contentIndex = {
@@ -94,10 +73,11 @@ function generateContentIndex() {
 				base_url: '/user-guide',
 				files: userGuideFiles.map((file) => ({
 					id: file.id,
+					slug: fileNameToSlug(file.name),
 					title: file.name.replace(/^\d+-/, '').replace('.md', '').replace(/-/g, ' '),
 					filename: file.name,
 					section: file.section,
-					url: `/user-guide#${file.id}`, // Cambiar a hash navigation
+					url: `/user-guide/${fileNameToSlug(file.name)}`,
 					seo_keywords: generateSEOKeywords(file.name, 'user'),
 					last_modified: fs.statSync(file.path).mtime.toISOString(),
 				})),
@@ -120,7 +100,7 @@ function generateContentIndex() {
 	};
 
 	// Guardar índice de contenido
-	const indexPath = path.join(staticDir, 'content-index.json');
+	const indexPath = path.join(STATIC_DIR, 'content-index.json');
 	fs.writeFileSync(indexPath, JSON.stringify(contentIndex, null, 2));
 	console.log(` Índice de contenido generado: ${indexPath}`);
 
@@ -157,7 +137,7 @@ function generateSEOKeywords(filename, section) {
 function generateURLList(contentIndex) {
 	console.log(' Generando lista de URLs...');
 
-	const baseURL = 'https://paxapos.github.io/documentation';
+	const baseURL = BASE_SITE_URL;
 	const urls = [baseURL, `${baseURL}/user-guide`];
 
 	// Agregar URLs de cada archivo con hash navigation
@@ -171,11 +151,103 @@ function generateURLList(contentIndex) {
 	});
 
 	// Guardar lista de URLs
-	const urlsPath = path.join(staticDir, 'urls.txt');
+	const urlsPath = path.join(STATIC_DIR, 'urls.txt');
 	fs.writeFileSync(urlsPath, urls.join('\n'));
 	console.log(` Lista de URLs generada: ${urlsPath} (${urls.length} URLs)`);
 
 	return urls;
+}
+
+/**
+ * Generar sitemap.xml estático con rutas canónicas indexables
+ */
+function generateSitemap(contentIndex) {
+	console.log(' Generando sitemap.xml...');
+
+	const baseURL = BASE_SITE_URL;
+	const generatedDate = contentIndex.generated_at.split('T')[0];
+	const entries = [
+		{ url: `${baseURL}/`, lastmod: generatedDate, changefreq: 'weekly', priority: '1.0' },
+		{ url: `${baseURL}/user-guide`, lastmod: generatedDate, changefreq: 'weekly', priority: '0.9' },
+		{ url: `${baseURL}/llms/index.txt`, lastmod: generatedDate, changefreq: 'daily', priority: '0.8' },
+	];
+
+	for (const file of contentIndex.sections.user_guide.files) {
+		entries.push({
+			url: `${baseURL}${file.url}`,
+			lastmod: file.last_modified.split('T')[0],
+			changefreq: 'weekly',
+			priority: '0.8',
+		});
+	}
+
+	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries
+	.map(
+		(entry) => `  <url>
+    <loc>${entry.url}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`,
+	)
+	.join('\n')}
+</urlset>`;
+
+	const sitemapPath = path.join(STATIC_DIR, 'sitemap.xml');
+	fs.writeFileSync(sitemapPath, sitemap);
+	console.log(` Sitemap generado: ${sitemapPath} (${entries.length} URLs)`);
+}
+
+/**
+ * Generar robots.txt estático apuntando al sitemap canónico
+ */
+function generateRobotsTxt() {
+	console.log(' Generando robots.txt...');
+
+	const robots = `User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: ${BASE_SITE_URL}/sitemap.xml
+`;
+
+	const robotsPath = path.join(STATIC_DIR, 'robots.txt');
+	fs.writeFileSync(robotsPath, robots);
+	console.log(` Robots generado: ${robotsPath}`);
+}
+
+/**
+ * Genera un índice simple de recursos LLM para crawlers especializados
+ */
+function generateLlmsTxt(contentIndex) {
+	console.log(' Generando llms.txt...');
+
+	const lines = [
+		'# PaxaPOS LLM Index',
+		`# Updated: ${contentIndex.generated_at}`,
+		`${BASE_SITE_URL}/llms/index.txt`,
+	];
+
+	for (const file of contentIndex.sections.txt_files.files) {
+		lines.push(`${BASE_SITE_URL}${file.url}`);
+	}
+
+	const llmsPath = path.join(STATIC_DIR, 'llms.txt');
+	fs.writeFileSync(llmsPath, `${lines.join('\n')}\n`);
+	console.log(` llms.txt generado: ${llmsPath}`);
 }
 
 /**
@@ -229,7 +301,7 @@ function generateAIMetadata(contentIndex) {
 	};
 
 	// Guardar metadatos para AI
-	const aiPath = path.join(staticDir, 'ai-metadata.json');
+	const aiPath = path.join(STATIC_DIR, 'ai-metadata.json');
 	fs.writeFileSync(aiPath, JSON.stringify(aiMetadata, null, 2));
 	console.log(` Metadatos IA generados: ${aiPath}`);
 
@@ -246,6 +318,9 @@ function main() {
 		const contentIndex = generateContentIndex();
 		const urls = generateURLList(contentIndex);
 		const aiMetadata = generateAIMetadata(contentIndex);
+		generateSitemap(contentIndex);
+		generateRobotsTxt();
+		generateLlmsTxt(contentIndex);
 
 		console.log('\n Resumen de generación:');
 		console.log(`    Total de archivos: ${contentIndex.total_files}`);

@@ -1,0 +1,26 @@
+# PaxaPOS LLM Index
+# Updated: 2026-03-23T16:18:54.428Z
+https://doc.paxapos.com/llms/index.txt
+https://doc.paxapos.com/llms/11-introduccion.txt
+https://doc.paxapos.com/llms/12-iniciar-sesion.txt
+https://doc.paxapos.com/llms/21-agregar-personal.txt
+https://doc.paxapos.com/llms/23-crear-usuarios.txt
+https://doc.paxapos.com/llms/24-configuracion-de-impresoras.txt
+https://doc.paxapos.com/llms/25-menu.txt
+https://doc.paxapos.com/llms/26-permisos-por-rol.txt
+https://doc.paxapos.com/llms/31-dashboard-home.txt
+https://doc.paxapos.com/llms/32-salon.txt
+https://doc.paxapos.com/llms/33-comandero.txt
+https://doc.paxapos.com/llms/34-contabilidad.txt
+https://doc.paxapos.com/llms/35-arqueos.txt
+https://doc.paxapos.com/llms/36-compras-y-stock.txt
+https://doc.paxapos.com/llms/37-arca-y-facturacion.txt
+https://doc.paxapos.com/llms/38-reportes.txt
+https://doc.paxapos.com/llms/41-biblioteca-de-drivers.txt
+https://doc.paxapos.com/llms/42-sam4s-giant-100.txt
+https://doc.paxapos.com/llms/43-citizen-ct-s310ii.txt
+https://doc.paxapos.com/llms/44-epson-tm-t20.txt
+https://doc.paxapos.com/llms/45-drivers-genericos.txt
+https://doc.paxapos.com/llms/46-epson-tm-t88.txt
+https://doc.paxapos.com/llms/51-preguntas-frecuentes.txt
+https://doc.paxapos.com/llms/52-buchon-bot.txt
