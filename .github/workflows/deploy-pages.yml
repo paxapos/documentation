@@ -37,13 +37,30 @@ jobs:
             - name: Prepare SvelteKit
               run: pnpm run prepare
 
+            - name: Create .env for CI
+              run: |
+                  cat > .env <<EOF
+                  BRAND_NAME=${{ vars.PUBLIC_BRAND_NAME }}
+                  SYSTEM_URL=${{ vars.PUBLIC_SYSTEM_URL }}
+                  COMPANY_NAME=${{ vars.PUBLIC_COMPANY_NAME }}
+                  EOF
+
+            - name: Load env vars from .env
+              run: |
+                  set -a
+                  source .env
+                  set +a
+                  echo "PUBLIC_BRAND_NAME=$BRAND_NAME" >> "$GITHUB_ENV"
+                  echo "PUBLIC_SYSTEM_URL=$SYSTEM_URL" >> "$GITHUB_ENV"
+                  echo "PUBLIC_COMPANY_NAME=$COMPANY_NAME" >> "$GITHUB_ENV"
+
             - name: Generate config.js for GitHub Pages
               run: node scripts/generate-config.mjs
               env:
                   GITHUB_ACTIONS: true
-                  PUBLIC_BRAND_NAME: ${{ vars.PUBLIC_BRAND_NAME }}
-                  PUBLIC_SYSTEM_URL: ${{ vars.PUBLIC_SYSTEM_URL }}
-                  PUBLIC_COMPANY_NAME: ${{ vars.PUBLIC_COMPANY_NAME }}
+                  PUBLIC_BRAND_NAME: ${{ env.PUBLIC_BRAND_NAME }}
+                  PUBLIC_SYSTEM_URL: ${{ env.PUBLIC_SYSTEM_URL }}
+                  PUBLIC_COMPANY_NAME: ${{ env.PUBLIC_COMPANY_NAME }}
 
             - name: Build
               run: pnpm run build
