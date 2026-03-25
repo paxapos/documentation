@@ -15,33 +15,10 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'warn',
-			entries: [
-				'*',
-				// Agregar rutas explícitas para los endpoints LLM
-				'/api/llm/introduccion',
-				'/api/llm/iniciar-sesion',
-				'/api/llm/crear-usuarios',
-				'/api/llm/tipos-de-pago',
-				'/api/llm/agregar-personal',
-				'/api/llm/configuracion-de-impresoras',
-				'/api/llm/menu',
-				'/api/llm/salon',
-				'/api/llm/kds',
-				'/api/llm/contabilidad',
-				'/api/llm/arqueos',
-				'/api/llm/compras-stock',
-				'/api/llm/arca-facturacion',
-				'/api/llm/estadisticas',
-				'/api/llm/business-intelligence',
-				'/api/llm/biblioteca-de-drivers',
-				'/api/llm/sam4s-giant-100',
-				'/api/llm/citizen-ct-s310ii',
-				'/api/llm/epson-tm-t20',
-				'/api/llm/drivers-genericos',
-				'/api/llm/epson-tm-t88',
-				'/api/llm/preguntas-frecuentes',
-				'/api/llm/buchon-bot',
-			],
+			// Las rutas /api/llm/* se generan dinámicamente via entries() en +server.ts
+			// Las rutas /user-guide/[slug] se generan via entries() en +page.server.js
+			// '*' cubre todas las rutas estáticas descubiertas por el crawler
+			entries: ['*'],
 		},
 		// Path base removido para dominio personalizado
 		// Si necesitas volver a GitHub Pages sin dominio, descomenta:

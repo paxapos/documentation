@@ -1,4 +1,4 @@
-import { getAllSlugs } from '$lib/utils/markdownDetector.js';
+import { getAllSlugs } from '$lib/utils/markdownDetector';
 
 // Generar automáticamente todas las rutas basándose en archivos MD
 export async function entries() {

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { getModuleCategories } from '$lib/utils/markdownDetector.js';
+import { getModuleCategories } from '$lib/utils/markdownDetector';
 
 export const prerender = true;
 

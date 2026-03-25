@@ -5,7 +5,7 @@
 	import { base } from '$app/paths';
 	import { processGroupedContent } from '$lib/helpers/textReplacer';
 	import SEOHead from '$lib/components/SEOHead.svelte';
-	import { getModuleCategories } from '$lib/utils/markdownDetector.js';
+	import { getModuleCategories } from '$lib/utils/markdownDetector';
 	import { addLinkIconsToHeaders, highlightTextInHtml, copyToClipboard } from '$lib/utils/contentUtils';
 	import type { PageData } from './$types';
 
@@ -185,23 +185,33 @@
 		});
 	}
 
-	// Función para abrir el archivo LLM en una nueva pestaña
+	// Función para abrir el archivo LLM en una nueva pestaña.
+	// Construye el nombre del TXT directamente desde el slug (sin dependencia de slugMapping).
 	async function openLLMPage() {
 		try {
-			const { getTxtFileForSlug } = await import('$lib/utils/slugMapping.js');
-			const fileName = await getTxtFileForSlug(data.slug);
-
-			if (fileName) {
-				const llmUrl = `${base}/llms/${fileName}`;
-				window.open(llmUrl, '_blank');
-			} else {
-				const fallbackFileName = `${data.slug.replace(/[^a-z0-9-]/g, '')}.txt`;
-				const fallbackUrl = `${base}/llms/${fallbackFileName}`;
-				window.open(fallbackUrl, '_blank');
+			const response = await fetch('/llms/files-register.json');
+			if (response.ok) {
+				const register = await response.json();
+				const match = register.detailed_files.find((f: { slug?: string; txt_file: string; original_md: string }) => {
+					// El manifiesto ya incluye slug desde el refactor
+					if (f.slug === data.slug) return true;
+					// Fallback: generar slug del original_md
+					const slug = f.original_md
+						.replace(/^\d+-/, '').toLowerCase().replace(/\s+/g, '-')
+						.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+						.replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '');
+					return slug === data.slug;
+				});
+				if (match) {
+					window.open(`${base}/llms/${match.txt_file}`, '_blank');
+					return;
+				}
 			}
-		} catch (error) {
-			console.error('Error abriendo archivo LLM:', error);
+		} catch (err) {
+			console.error('Error obteniendo mapeo LLM:', err);
 		}
+		// Fallback: redirigir via API
+		window.open(`${base}/api/llm/${data.slug}`, '_blank');
 	}
 
 	// Calcular el módulo actual para navegación móvil

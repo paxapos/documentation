@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
-import { getMarkdownFile } from '$lib/utils/markdownDetector.js';
+import { getMarkdownFile } from '$lib/utils/markdownDetector';
 
 export const prerender = true;
 
