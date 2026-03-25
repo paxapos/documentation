@@ -39,5 +39,7 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-.pnpm-cache/metadata/registry.npmjs.org/pnpm.json
-.pnpm-state/pnpm-state.json
+
+# pnpm cache
+.pnpm-cache/
+.pnpm-state/
