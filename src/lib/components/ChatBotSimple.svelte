@@ -1,26 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { isDarkMode } from '$lib/stores/theme';
-	import { prepareForExport } from '$lib/helpers/textReplacer';
+	import { fileNameToSlug } from '$lib/utils/contentUtils';
 	import { base } from '$app/paths';
 
-	let isOpen = false;
-	let messages: Array<{ text: string; isUser: boolean; timestamp: Date }> = [];
-	let currentMessage = '';
+	let isOpen = $state(false);
+	let messages: Array<{ text: string; isUser: boolean; timestamp: Date }> = $state([]);
+	let currentMessage = $state('');
 	let chatContainer: HTMLElement;
-	let manualContent: any[] = [];
-	let isLoading = false;
+	let manualContent: Array<{ id: string; title: string; folder: string; rawText: string }> = $state([]);
+	let isLoading = $state(false);
+	let initialized = $state(false);
 
 	// Función para convertir IDs a slugs para URLs reales
 	function getSlugFromId(id: string): string {
-		return id
-			.toLowerCase()
-			.replace(/^\d+-/, '') // Remover números del inicio
-			.replace(/[()]/g, '') // Remover paréntesis
-			.replace(/\s+/g, '-') // Espacios a guiones
-			.normalize('NFD')
-			.replace(/[\u0300-\u036f]/g, '') // Remover acentos
-			.replace(/[^a-z0-9-]/g, ''); // Solo letras, números y guiones
+		return fileNameToSlug(id);
 	}
 
 	// FAQ optimizado como fallback
@@ -141,53 +133,31 @@ Administra accesos al sistema:
 🔗 **[Ver Guía Completa: Crear Usuarios](${base}/user-guide/crear-usuarios)**`,
 	};
 
-	onMount(async () => {
-		// Cargar todo el manual usando la misma lógica que user-guide
+	// Cargar contenido lazy al abrir el chatbot por primera vez
+	async function ensureLoaded() {
+		if (initialized) return;
+		initialized = true;
 		await loadManualContent();
-
 		addMessage(
 			'¡Hola! 👋 Soy tu asistente del sistema gastronómico.\n\n**Puedo ayudarte con:**\n• Buscar información específica en el manual\n• Configuración de impresoras\n• Gestión de personal y mozos\n• Administración del salón\n• Sistema de cocina (KDS)\n• Facturación y AFIP\n• ¡Y mucho más!\n\n**Pregúntame algo específico:** "¿cómo configurar impresoras?" o "crear mozo"',
 			false,
 		);
-	});
+	}
 
 	async function loadManualContent() {
 		try {
-			const modules = import.meta.glob('/src/routes/user-guide/Manual-Usuario/**/*.md', {
-				query: '?raw',
-				import: 'default',
-			});
+			const response = await fetch('/search-index.json');
+			if (!response.ok) throw new Error(`HTTP ${response.status}`);
+			const searchIndex: Array<{ id: string; slug: string; title: string; content: string; type: string }> = await response.json();
 
-			const files = Object.entries(modules);
-			const content = [];
+			manualContent = searchIndex.map((item) => ({
+				id: item.id,
+				title: item.title,
+				folder: item.type,
+				rawText: item.content,
+			}));
 
-			for (const [path, loader] of files) {
-				const markdownText = (await loader()) as string;
-				const fileName = path.split('/').pop();
-				const folderName = path.split('/').slice(-2, -1)[0];
-
-				if (!fileName) continue;
-
-				const cleanTitle = fileName
-					.replace(/^\d+-/, '')
-					.replace('.md', '')
-					.replace(/-/g, ' ');
-				const id = fileName.replace('.md', '');
-
-				// Aplicar prepareForExport para obtener texto limpio
-				const cleanText = prepareForExport(markdownText);
-
-				content.push({
-					id,
-					title: cleanTitle,
-					folder: folderName.replace(/^\d+-/, '').replace(/-/g, ' '),
-					rawText: cleanText,
-					path: path,
-				});
-			}
-
-			manualContent = content;
-			console.log(`📚 Manual cargado: ${content.length} módulos`);
+			console.log(`📚 Manual cargado: ${manualContent.length} módulos`);
 		} catch (error) {
 			console.error('Error cargando manual:', error);
 		}
@@ -389,13 +359,14 @@ Administra accesos al sistema:
 
 	function toggleChat() {
 		isOpen = !isOpen;
+		if (isOpen) ensureLoaded();
 	}
 </script>
 
 <!-- Botón flotante -->
 {#if !isOpen}
 	<button
-		on:click={toggleChat}
+		onclick={toggleChat}
 		class="group fixed right-4 bottom-4 z-50 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 p-3 text-white shadow-xl transition-all duration-300 hover:from-blue-700 hover:to-blue-800 hover:shadow-2xl md:right-6 md:bottom-6 md:p-4"
 		aria-label="Abrir ChatBot de soporte"
 	>
@@ -442,7 +413,7 @@ Administra accesos al sistema:
 				</div>
 			</div>
 			<button
-				on:click={toggleChat}
+				onclick={toggleChat}
 				class="rounded-lg p-1.5 transition-colors hover:bg-white/20 md:p-2"
 				aria-label="Cerrar ChatBot"
 			>
@@ -555,7 +526,7 @@ Administra accesos al sistema:
 				<div class="relative flex-1">
 					<textarea
 						bind:value={currentMessage}
-						on:keydown={handleKeyDown}
+						onkeydown={handleKeyDown}
 						placeholder="Pregúntame sobre el software..."
 						class="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-900 placeholder-gray-500 transition-all focus:border-transparent focus:bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none md:px-4 md:py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:bg-gray-600"
 						rows="1"
@@ -563,7 +534,7 @@ Administra accesos al sistema:
 					></textarea>
 				</div>
 				<button
-					on:click={sendMessage}
+					onclick={sendMessage}
 					disabled={!currentMessage.trim() || isLoading}
 					class="rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-3 py-2 text-white shadow-sm transition-all duration-200 hover:from-blue-700 hover:to-blue-800 hover:shadow-md disabled:cursor-not-allowed disabled:from-gray-300 disabled:to-gray-300 md:px-4 md:py-3 dark:from-blue-700 dark:to-blue-800 dark:hover:from-blue-800 dark:hover:to-blue-900 dark:disabled:from-gray-600 dark:disabled:to-gray-600"
 				>

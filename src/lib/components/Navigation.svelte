@@ -7,13 +7,13 @@
 		getSlugFromModuleId,
 	} from '$lib/helpers/constants';
 
-	let searchQuery = '';
-	let showSearchResults = false;
-	let searchResults: SearchableItem[] = [];
-	let isSearching = false;
+	let searchQuery = $state('');
+	let showSearchResults = $state(false);
+	let searchResults: SearchableItem[] = $state([]);
+	let isSearching = $state(false);
 	let searchInputDesktop: HTMLInputElement;
 	let searchInputMobile: HTMLInputElement;
-	let showMobileSearch = false;
+	let showMobileSearch = $state(false);
 
 	const handleSearch = async (event: Event) => {
 		const target = event.target as HTMLInputElement;
@@ -117,9 +117,9 @@
 						placeholder="Buscar en el manual..."
 						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
 						bind:value={searchQuery}
-						on:input={handleSearch}
-						on:focus={handleSearchFocus}
-						on:blur={handleSearchBlur}
+						oninput={handleSearch}
+						onfocus={handleSearchFocus}
+						onblur={handleSearchBlur}
 					/>
 					<div
 						class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
@@ -198,7 +198,7 @@
 									<button
 										type="button"
 										class="w-full border-b border-gray-100 px-4 py-4 text-left transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-										on:click={() => selectSearchResult(result)}
+								onclick={() => selectSearchResult(result)}
 									>
 										<div class="font-semibold text-gray-900 dark:text-white">
 											{result.title}
@@ -243,7 +243,7 @@
 				<button
 					type="button"
 					class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-gray-400"
-					on:click={toggleMobileSearch}
+					onclick={toggleMobileSearch}
 				>
 					<span class="sr-only">Buscar</span>
 					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -268,9 +268,9 @@
 						placeholder="Buscar en el manual..."
 						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
 						bind:value={searchQuery}
-						on:input={handleSearch}
-						on:focus={handleSearchFocus}
-						on:blur={handleSearchBlur}
+						oninput={handleSearch}
+						onfocus={handleSearchFocus}
+						onblur={handleSearchBlur}
 					/>
 					<div
 						class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
@@ -350,7 +350,7 @@
 								<button
 									type="button"
 									class="w-full border-b border-gray-100 px-4 py-3 text-left text-sm transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-									on:click={() => selectSearchResult(result)}
+							onclick={() => selectSearchResult(result)}
 								>
 									<div class="font-medium text-gray-900 dark:text-white">
 										{result.title}

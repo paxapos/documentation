@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import type { Snippet } from 'svelte';
 
-	let { children }: { children: any } = $props();
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <div class="flex min-h-screen bg-gray-100 dark:bg-gray-900">
