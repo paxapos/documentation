@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
-	import ChatBotSimple from '$lib/components/ChatBotSimple.svelte';
 	import { autoReplaceBrand } from '$lib/helpers/textReplacer';
 	import { onMount } from 'svelte';
 	import { initThemeStore } from '$lib/stores/theme';
@@ -31,8 +30,6 @@
 		</div>
 	</main>
 
-	<!-- ChatBot simple y optimizado -->
-	<ChatBotSimple />
 </div>
 
 <style>
