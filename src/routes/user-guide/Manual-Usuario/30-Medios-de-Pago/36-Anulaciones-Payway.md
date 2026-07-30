@@ -1,0 +1,43 @@
+# Anulaciones Payway
+
+> **¿Dónde está en el sistema?:** Menú principal → **Medios de Pago** → **Anulaciones Payway**  
+> **¿Quién lo usa?:** Encargados de Local y Cajeros  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite anular una transacción cobrada por error el mismo día antes de que se realice el cierre de lote diario:
+
+1. **Cancelación inmediata:** Cancela el cobro en el acto sin generar cargos en la tarjeta del comprador.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Contar con el permiso de **Anulación de Transacciones de Cobro** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 🚫 **Anular Transacción** | Al lado de la transacción | Anula inmediatamente el cobro registrado. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Anular un cobro del día
+1. Ubicá la transacción realizada por error en la lista de cobros del día.
+2. Tocá el botón **Anular Transacción**.
+3. Confirmá la operación introduciendo el motivo.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| No permite anular el cobro. | El lote ya fue cerrado. | Utilizá la opción de **Reembolsos** en lugar de Anulaciones. |

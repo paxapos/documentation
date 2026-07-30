@@ -38,12 +38,13 @@ let markdownCache: MarkdownDetectorResult | null = null;
 // ─── Helpers ─────────────────────────────────────────────────
 
 function categorizeByFolder(path: string): { category: string; order: number } {
-	if (path.includes('/10-Comenzamos/')) return { category: 'Primeros Pasos', order: 1 };
-	if (path.includes('/20-Primeros Pasos/')) return { category: 'Configuración', order: 2 };
-	if (path.includes('/30-M')) return { category: 'Operaciones', order: 3 };
-	if (path.includes('/40-Biblioteca')) return { category: 'Biblioteca de Drivers', order: 4 };
-	if (path.includes('/50-Extra/')) return { category: 'Extra', order: 5 };
-	return { category: 'Otros', order: 6 };
+	const match = path.match(/\/Manual-Usuario\/(\d+)-([^\/]+)\//);
+	if (match) {
+		const order = parseInt(match[1], 10);
+		const rawName = match[2].replace(/-/g, ' ');
+		return { category: rawName, order };
+	}
+	return { category: 'Otros', order: 999 };
 }
 
 function generateSEO(

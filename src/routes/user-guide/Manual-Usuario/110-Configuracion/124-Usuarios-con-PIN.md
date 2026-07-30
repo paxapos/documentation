@@ -1,0 +1,43 @@
+# Usuarios con PIN
+
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Usuarios con PIN**  
+> **¿Quién lo usa?:** Encargados de Salón y Administradores  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite administrar códigos PIN numéricos rápidos para que mozos y cajeros inicien sesión o autoricen operaciones en pantallas táctiles sin ingresar contraseña completa:
+
+1. **Acceso rápido por pantalla táctil:** Marcación de PIN de 4 dígitos para agilizar la atención en el salón de ventas.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Asignación de PINs de Acceso Rápido** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 🔢 **Asignar PIN** | Al lado del usuario | Establece la clave numérica de acceso rápido. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Asignar o cambiar PIN
+1. Buscá al operador en la lista.
+2. Ingresá el nuevo **PIN de 4 dígitos**.
+3. Tocá **Guardar**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Indica PIN duplicado. | El código numérico ya lo utiliza otro compañero. | Asigná una combinación de 4 dígitos diferente. |

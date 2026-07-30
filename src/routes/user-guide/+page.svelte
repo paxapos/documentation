@@ -7,6 +7,7 @@
 	import { processGroupedContent } from '$lib/helpers/textReplacer';
 	import { page } from '$app/stores';
 	import SEOHead from '$lib/components/SEOHead.svelte';
+	import Icon from '@iconify/svelte';
 	import {
 		addLinkIconsToHeaders,
 		highlightTextInHtml,
@@ -28,6 +29,7 @@
 
 	// Usar datos dinámicos cargados desde +page.js
 	const modulesList: ModuleInfo[] = data.modulesList || [];
+	const categoryIconsMap: Record<string, string> = (data.categoryIcons as Record<string, string>) || {};
 
 	// Agrupar módulos por categoría
 	const groupedModules = modulesList.reduce(
@@ -552,9 +554,15 @@
 							{#each Object.entries(groupedModules) as [categoryName, categoryModules]}
 								<section>
 									<h2
-										class="mb-6 border-b border-gray-200 pb-3 text-xl font-semibold text-gray-900 sm:text-2xl dark:border-gray-700 dark:text-white"
+										class="mb-6 flex items-center gap-2.5 border-b border-gray-200 pb-3 text-xl font-semibold text-gray-900 sm:text-2xl dark:border-gray-700 dark:text-white"
 									>
-										{categoryName}
+										{#if categoryIconsMap[categoryName]}
+											<Icon
+												icon={categoryIconsMap[categoryName]}
+												class="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 dark:text-blue-400"
+											/>
+										{/if}
+										<span>{categoryName}</span>
 									</h2>
 
 									<div
@@ -567,9 +575,16 @@
 											>
 												<div class="mb-3 flex items-start">
 													<div
-														class="mr-3 flex-shrink-0 text-xl transition-transform duration-200 group-hover:scale-110 sm:text-2xl"
+														class="mr-3 flex flex-shrink-0 items-center justify-center text-xl transition-transform duration-200 group-hover:scale-110 sm:text-2xl"
 													>
-														{module.icon}
+														{#if module.icon?.includes(':')}
+															<Icon
+																icon={module.icon}
+																class="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 dark:text-blue-400"
+															/>
+														{:else}
+															{module.icon}
+														{/if}
 													</div>
 													<div class="min-w-0 flex-1 overflow-hidden">
 														<h3

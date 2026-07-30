@@ -1,0 +1,43 @@
+# Estados de Ítems de Comanda
+
+> **¿Dónde está en el sistema?:** Menú principal → **Comandero** → **General** → **Estados de Items**  
+> **¿Quién lo usa?:** Administradores  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite administrar los estados individuales de cada plato dentro de una comanda (ejemplo: *Marchando, Emplatado, Entregado, Anulado*):
+
+1. **Control plato por plato:** Permite que la cocina marque un plato listo de la mesa mientras los demás siguen en preparación.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Configuración de Estados de Platos e Ítems** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ **Nuevo Estado de Ítem** | Esquina superior | Registra un nuevo estado para platos individuales. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Configurar estado de ítem
+1. Tocá el botón **Nuevo Estado de Ítem**.
+2. Asignale un nombre descriptivo.
+3. Tocá **Guardar**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El mozo no ve qué platos de la mesa están listos. | El estado de ítem no tiene activada la notificación visual. | Editá el estado y activá la casilla **Notificar al Mozo**. |

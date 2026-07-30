@@ -1,0 +1,42 @@
+# Configuración Avanzada
+
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Config Avanzada**  
+> **¿Quién lo usa?:** Administradores del Sistema  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite activar o desactivar parámetros técnicos avanzados de funcionamiento de la aplicación:
+
+1. **Parámetros operativos:** Habilitación de propina obligatoria/sugerida, cobro de cubierto, apertura automática de cajón monedero y tiempos de vencimiento de sesión.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Edición de Parámetros Avanzados del Sistema** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+| Campo / Botón | ¿Dónde está? | ¿Qué hace al activar / desactivar? |
+|---|---|---|
+| 🔘 **Cobro de Cubierto** | Formulario | Habilita o deshabilita la carga automática del concepto cubierto por comensal. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Modificar parámetros avanzados
+1. Marcá o desmarcá la casilla correspondiente.
+2. Tocá **Guardar Cambios**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Se desconfiguraron comportamientos del cobro. | Modificación accidental de parámetros avanzados. | Revisá cada interruptor antes de confirmar. |
