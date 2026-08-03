@@ -11,4 +11,4 @@ export async function entries() {
 	}
 }
 
-export { prerender } from './+page.js';
+export const prerender = true;

@@ -25,18 +25,15 @@
 		return data.content;
 	});
 
-	// Cargar categorías y manejar navegación por hash con cleanup
+	// Cargar categorías al montar
 	$effect(() => {
-		if (moduleCategories.length === 0) {
-			getModuleCategories()
-				.then((cats) => {
-					moduleCategories = cats;
-				})
-				.catch((error) => {
-					console.error('Error cargando categorías:', error);
-					moduleCategories = [];
-				});
-		}
+		getModuleCategories()
+			.then((cats) => {
+				moduleCategories = cats;
+			})
+			.catch((error) => {
+				console.error('Error cargando categorías:', error);
+			});
 
 		const handleHashNavigation = () => {
 			const hash = window.location.hash;
