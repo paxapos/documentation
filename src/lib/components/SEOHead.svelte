@@ -1,78 +1,87 @@
 <script lang="ts">
-	export let title: string = '';
-	export let description: string = '';
-	export let keywords: string = '';
-	export let url: string = '';
-	export let type: string = 'article';
-	export let section: string = '';
-	export let published: string = '';
-	export let modified: string = '';
-	export let author: string = 'PaxaPOS';
-	export let image: string = '';
+	let {
+		title = '',
+		description = '',
+		keywords = '',
+		url = '',
+		type = 'article',
+		section = '',
+		published = '',
+		modified = '',
+		author = 'PaxaPOS',
+		image = '',
+	}: {
+		title?: string;
+		description?: string;
+		keywords?: string;
+		url?: string;
+		type?: string;
+		section?: string;
+		published?: string;
+		modified?: string;
+		author?: string;
+		image?: string;
+	} = $props();
 
-	// URLs base
 	const baseUrl = 'https://paxapos.github.io/documentation';
-	const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
-	const defaultImage = `${baseUrl}/static/paxapos-social.png`;
-	const finalImage = image || defaultImage;
+	let fullUrl = $derived(url ? `${baseUrl}${url}` : baseUrl);
+	let defaultImage = `${baseUrl}/static/paxapos-social.png`;
+	let finalImage = $derived(image || defaultImage);
 
-	// Schema.org structured data
-	const structuredData: any = {
-		'@context': 'https://schema.org',
-		'@type': type === 'faq' ? 'FAQPage' : 'TechArticle',
-		headline: title,
-		description: description,
-		url: fullUrl,
-		datePublished: published || '2025-01-01',
-		dateModified: modified || new Date().toISOString().split('T')[0],
-		author: {
-			'@type': 'Organization',
-			name: 'PaxaPOS',
-			url: 'https://paxapos.com',
-			logo: {
-				'@type': 'ImageObject',
-				url: `${baseUrl}/favicon.png`,
-			},
-		},
-		publisher: {
-			'@type': 'Organization',
-			name: 'PaxaPOS',
-			logo: {
-				'@type': 'ImageObject',
-				url: `${baseUrl}/favicon.png`,
-			},
-		},
-		mainEntityOfPage: {
-			'@type': 'WebPage',
-			'@id': fullUrl,
-		},
-		image: {
-			'@type': 'ImageObject',
-			url: finalImage,
-			width: 1200,
-			height: 630,
-		},
-		inLanguage: 'es-AR',
-		isPartOf: {
-			'@type': 'WebSite',
-			name: 'PaxaPOS Documentation',
-			'@id': baseUrl,
-		},
-	};
-
-	// Agregar datos específicos según el tipo
-	if (section) {
-		structuredData['articleSection'] = section;
-	}
-
-	if (type === 'faq') {
-		structuredData['@type'] = 'FAQPage';
-	}
-
-	// Keywords adicionales para PaxaPOS
 	const paxaposKeywords =
 		'PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS';
-	const finalKeywords = keywords ? `${keywords}, ${paxaposKeywords}` : paxaposKeywords;
+	let finalKeywords = $derived(keywords ? `${keywords}, ${paxaposKeywords}` : paxaposKeywords);
+
+	let structuredData = $derived.by(() => {
+		const data: Record<string, any> = {
+			'@context': 'https://schema.org',
+			'@type': type === 'faq' ? 'FAQPage' : 'TechArticle',
+			headline: title,
+			description: description,
+			url: fullUrl,
+			datePublished: published || '2025-01-01',
+			dateModified: modified || new Date().toISOString().split('T')[0],
+			author: {
+				'@type': 'Organization',
+				name: 'PaxaPOS',
+				url: 'https://paxapos.com',
+				logo: {
+					'@type': 'ImageObject',
+					url: `${baseUrl}/favicon.png`,
+				},
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'PaxaPOS',
+				logo: {
+					'@type': 'ImageObject',
+					url: `${baseUrl}/favicon.png`,
+				},
+			},
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': fullUrl,
+			},
+			image: {
+				'@type': 'ImageObject',
+				url: finalImage,
+				width: 1200,
+				height: 630,
+			},
+			inLanguage: 'es-AR',
+			isPartOf: {
+				'@type': 'WebSite',
+				name: 'PaxaPOS Documentation',
+				'@id': baseUrl,
+			},
+		};
+
+		if (section) {
+			data['articleSection'] = section;
+		}
+
+		return data;
+	});
 </script>
 
 <svelte:head>

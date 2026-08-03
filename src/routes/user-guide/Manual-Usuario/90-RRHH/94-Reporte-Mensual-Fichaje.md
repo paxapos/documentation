@@ -1,0 +1,45 @@
+# Reporte Mensual de Fichaje
+
+> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Reporte Mensual**  
+> **¿Quién lo usa?:** Recursos Humanos, Liquidadores de Sueldos y Gerentes  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Consolida el total de horas trabajadas, llegadas tarde, ausencias y horas extras del personal durante todo el mes:
+
+1. **Insumo para liquidación de sueldos:** Cálculo automático de horas normales y adicionales acumuladas.
+2. **Exportación de planillas:** Descarga en formato Excel para el área contable o liquidadora.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Exportación de Reportes Mensuales de Horas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 📅 **Mes / Año** | Encabezado | Selecciona el período a consultar. |
+| 📊 **Exportar Excel** | Esquina superior | Descarga la grilla mensual consolidada. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Generar el informe mensual de horas
+1. Seleccioná el mes (ejemplo: *Mayo 2026*).
+2. Revisá la columna **Total Horas Trabajadas**.
+3. Tocá **Exportar Excel**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Un empleado figura con menos horas de las reales. | Faltan marcaciones de salida en algunos días del mes. | Revisá el **Registro Diario** y completá las marcas faltantes antes de exportar. |

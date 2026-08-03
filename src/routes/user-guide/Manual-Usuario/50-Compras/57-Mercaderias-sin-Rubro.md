@@ -1,0 +1,43 @@
+# Mercaderías sin Rubro
+
+> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Catálogo** → **Mercaderías sin Rubro**  
+> **¿Quién lo usa?:** Encargados de Compras y Contadores  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite listar e identificar rápidamente aquellas mercaderías o insumos creados que no fueron clasificados dentro de un rubro de compra:
+
+1. **Ordenamiento de inventario:** Herramienta de auditoría para evitar insumos huérfanos o sin categoría asignada.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Asignación de Rubros a Mercaderías** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 📁 **Asignar Rubro** | Al lado de cada insumo | Abre el selector desplegable para asignar la categoría correspondiente. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Clasificar mercaderías sin rubro
+1. Revisá el listado de insumos sin clasificar.
+2. Seleccioná el **Rubro** en el desplegable (ejemplo: *Verdulería*).
+3. Tocá **Guardar Cambios**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El rubro deseado no aparece en la lista. | El rubro no fue dado de alta en la configuración. | Registrá el rubro en **Rubros de Compras** en la sección de Configuración. |

@@ -1,0 +1,43 @@
+# Gestión de Depósitos
+
+> **¿Dónde está en el sistema?:** Menú principal → **Stock** → **Depósitos y Reportes** → **Depósitos**  
+> **¿Quién lo usa?:** Administradores y Encargados de Logística  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite administrar los distintos lugares o espacios físicos de almacenamiento del establecimiento (ejemplo: *Depósito Central, Barra Principal, Cámara Frigorífica, Depósito Seco*):
+
+1. **Estructura de almacenes:** Alta y modificación de depósitos para segmentar el inventario.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Administración de Depósitos y Almacenes** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 🏢 **Nuevo Depósito** | Esquina superior | Registra un nuevo espacio físico de almacenamiento. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Crear un nuevo depósito
+1. Tocá **Nuevo Depósito**.
+2. Escribí el nombre (ejemplo: *Cámara de Bebidas*).
+3. Tocá **Guardar**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| No podés eliminar un depósito. | Contiene mercaderías con stock acumulado. | Traspasá toda la mercadería a otro depósito antes de darlo de baja. |

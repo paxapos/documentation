@@ -1,173 +1,70 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
-	import { page } from '$app/stores';
+	import { tick } from 'svelte';
+	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { processGroupedContent } from '$lib/helpers/textReplacer';
 	import SEOHead from '$lib/components/SEOHead.svelte';
 	import { getModuleCategories } from '$lib/utils/markdownDetector';
-	import { addLinkIconsToHeaders, highlightTextInHtml, copyToClipboard } from '$lib/utils/contentUtils';
+	import { highlightTextInHtml, copyToClipboard } from '$lib/utils/contentUtils';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 
-	let processedContent = $state('');
 	let showCopyMessage = $state(false);
 	let moduleCategories: Array<{
 		title: string;
 		modules: Array<{ slug: string; title: string }>;
 	}> = $state([]);
 
-	// Cargar categorías dinámicamente
-	onMount(async () => {
-		try {
-			moduleCategories = await getModuleCategories();
-		} catch (error) {
-			console.error('Error cargando categorías:', error);
-			moduleCategories = [];
+	// Derivar contenido procesado (highlighting si existe el query param)
+	let processedContent = $derived.by(() => {
+		const highlightParam = page.url.searchParams.get('highlight');
+		if (highlightParam) {
+			return highlightTextInHtml(data.content, highlightParam);
 		}
+		return data.content;
 	});
 
-	// Procesar contenido de manera reactiva cuando cambien los datos
+	// Cargar categorías y manejar navegación por hash con cleanup
 	$effect(() => {
-		if (data) {
-			const mockGroupedContent = [
-				{
-					folder: 'temp',
-					items: [
-						{
-							id: data.slug,
-							title: data.title,
-							html: data.content,
-							rawMarkdown: data.rawMarkdown,
-						},
-					],
-				},
-			];
-
-			const processed = processGroupedContent(mockGroupedContent);
-			let htmlContent = processed[0].items[0].html;
-
-			// Corregir rutas de imágenes
-			htmlContent = fixImagePaths(htmlContent);
-
-			// Envolver tablas para responsive
-			htmlContent = wrapTablesForResponsive(htmlContent);
-
-			// Manejar highlighting si existe el parámetro
-			const urlParams = new URLSearchParams($page.url.search);
-			const highlightParam = urlParams.get('highlight');
-
-			if (highlightParam) {
-				htmlContent = highlightTextInHtml(htmlContent, highlightParam);
-			}
-
-			// Agregar íconos de enlace a los títulos
-			processedContent = addLinkIconsToHeaders(htmlContent);
-
-			// Manejar hash y visibilidad después de actualizar el contenido
-			setTimeout(() => {
-				handleHashNavigation();
-				handleMainDivVisibility();
-			}, 150);
+		if (moduleCategories.length === 0) {
+			getModuleCategories()
+				.then((cats) => {
+					moduleCategories = cats;
+				})
+				.catch((error) => {
+					console.error('Error cargando categorías:', error);
+					moduleCategories = [];
+				});
 		}
-	});
 
-	onMount(() => {
-		// Hacer funciones accesibles globalmente para onClick en HTML
-		(window as any).copyLinkToSection = copyLinkToSection;
+		const handleHashNavigation = () => {
+			const hash = window.location.hash;
+			if (hash) {
+				tick().then(() => {
+					try {
+						const element = document.querySelector(hash);
+						if (element) {
+							element.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start',
+								inline: 'nearest',
+							});
+						}
+					} catch (error) {
+						console.warn('Error en navegación por hash:', error);
+					}
+				});
+			}
+		};
 
-		// Manejar hash inicial y cambios de hash
 		handleHashNavigation();
 		window.addEventListener('hashchange', handleHashNavigation);
 
-		// Manejar visibilidad del div principal al cargar y cambiar hash
-		handleMainDivVisibility();
-		window.addEventListener('hashchange', handleMainDivVisibility);
-	});
-
-	onDestroy(() => {
-		if (typeof window !== 'undefined') {
+		return () => {
 			window.removeEventListener('hashchange', handleHashNavigation);
-			window.removeEventListener('hashchange', handleMainDivVisibility);
-		}
+		};
 	});
-
-	// Función para manejar navegación por hash
-	function handleHashNavigation() {
-		try {
-			const hash = window.location.hash;
-			if (hash) {
-				// Esperar un momento para que el contenido se renderice
-				setTimeout(() => {
-					const element = document.querySelector(hash);
-					if (element) {
-						element.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start',
-							inline: 'nearest',
-						});
-					}
-				}, 100);
-			}
-		} catch (error) {
-			console.warn('Error en navegación por hash:', error);
-		}
-	}
-
-	// Función para corregir rutas de imágenes
-	function fixImagePaths(html: string): string {
-		// Buscar imágenes con rutas relativas que empiecen con "images/"
-		const imgRegex = /<img([^>]*)\ssrc\s*=\s*["'](?!https?:\/\/)(?!\/)([^"']+)["']([^>]*)>/gi;
-
-		return html.replace(imgRegex, (match, beforeSrc, src, afterSrc) => {
-			// Si la imagen empieza con "images/", agregar el prefijo base
-			if (src.startsWith('images/')) {
-				const newSrc = `${base}/${src}`;
-				return `<img${beforeSrc} src="${newSrc}"${afterSrc}>`;
-			}
-			return match;
-		});
-	}
-
-	// Función para envolver tablas en un contenedor responsive
-	function wrapTablesForResponsive(html: string): string {
-		// Buscar todas las tablas que no estén ya envueltas
-		const tableRegex = /<table(?![^>]*class[^>]*table-wrapper)[^>]*>[\s\S]*?<\/table>/gi;
-
-		return html.replace(tableRegex, (match) => {
-			return `<div class="table-wrapper">${match}</div>`;
-		});
-	}
-
-
-
-	// Función para manejar la visibilidad del div principal dinámicamente
-	function handleMainDivVisibility() {
-		try {
-			// Buscar automáticamente el primer div vacío con ID en el contenido
-			// Estos suelen ser los divs principales de cada página
-			const mainContent = document.querySelector('.prose');
-			if (mainContent) {
-				const firstEmptyDiv = mainContent.querySelector('div[id]:empty');
-
-				if (firstEmptyDiv) {
-					const hasHash = window.location.hash && window.location.hash.length > 1;
-					const divElement = firstEmptyDiv as HTMLElement;
-
-					if (hasHash) {
-						// Ocultar el div cuando hay hash
-						divElement.style.display = 'none';
-					} else {
-						// Mostrar el div cuando no hay hash
-						divElement.style.display = '';
-					}
-				}
-			}
-		} catch (error) {
-			console.warn('Error manejando visibilidad del div principal:', error);
-		}
-	}
 
 	// Función para copiar el enlace de una sección específica
 	function copyLinkToSection(sectionId: string) {
@@ -180,28 +77,34 @@
 		copyToClipboard(linkWithHash).then((success) => {
 			if (success) {
 				showCopyMessage = true;
-				setTimeout(() => { showCopyMessage = false; }, 2000);
+				setTimeout(() => {
+					showCopyMessage = false;
+				}, 2000);
 			}
 		});
 	}
 
-	// Función para abrir el archivo LLM en una nueva pestaña.
-	// Construye el nombre del TXT directamente desde el slug (sin dependencia de slugMapping).
+	// Función para abrir el archivo LLM en una nueva pestaña
 	async function openLLMPage() {
 		try {
 			const response = await fetch('/llms/files-register.json');
 			if (response.ok) {
 				const register = await response.json();
-				const match = register.detailed_files.find((f: { slug?: string; txt_file: string; original_md: string }) => {
-					// El manifiesto ya incluye slug desde el refactor
-					if (f.slug === data.slug) return true;
-					// Fallback: generar slug del original_md
-					const slug = f.original_md
-						.replace(/^\d+-/, '').toLowerCase().replace(/\s+/g, '-')
-						.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-						.replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '');
-					return slug === data.slug;
-				});
+				const match = register.detailed_files.find(
+					(f: { slug?: string; txt_file: string; original_md: string }) => {
+						if (f.slug === data.slug) return true;
+						const slug = f.original_md
+							.replace(/^\d+-/, '')
+							.toLowerCase()
+							.replace(/\s+/g, '-')
+							.normalize('NFD')
+							.replace(/[\u0300-\u036f]/g, '')
+							.replace(/[^a-z0-9-]/g, '')
+							.replace(/-+/g, '-')
+							.replace(/^-|-$/g, '');
+						return slug === data.slug;
+					},
+				);
 				if (match) {
 					window.open(`${base}/llms/${match.txt_file}`, '_blank');
 					return;
@@ -210,12 +113,30 @@
 		} catch (err) {
 			console.error('Error obteniendo mapeo LLM:', err);
 		}
-		// Fallback: redirigir via API
 		window.open(`${base}/api/llm/${data.slug}`, '_blank');
 	}
 
 	// Calcular el módulo actual para navegación móvil
-	let currentSlug = $derived($page.params.slug);
+	let currentSlug = $derived(page.params.slug);
+
+	let openCategories = $state<Record<string, boolean>>({});
+
+	function isOpen(
+		categoryTitle: string,
+		modules: Array<{ slug: string; title: string }>,
+	): boolean {
+		if (openCategories[categoryTitle] !== undefined) {
+			return openCategories[categoryTitle];
+		}
+		return modules.some((m) => m.slug === currentSlug);
+	}
+
+	function toggleCategory(
+		categoryTitle: string,
+		modules: Array<{ slug: string; title: string }>,
+	) {
+		openCategories[categoryTitle] = !isOpen(categoryTitle, modules);
+	}
 </script>
 
 <!-- SEO dinámico por módulo -->
@@ -263,9 +184,9 @@
 						}}
 					>
 						<option value="">Seleccionar módulo...</option>
-						{#each moduleCategories as category}
+						{#each moduleCategories as category (category.title)}
 							<optgroup label={category.title}>
-								{#each category.modules as module}
+								{#each category.modules as module (module.slug)}
 									<option value={module.slug}>{module.title}</option>
 								{/each}
 							</optgroup>
@@ -275,26 +196,47 @@
 
 				<!-- Lista de navegación para escritorio -->
 				<div class="hidden space-y-2 sm:space-y-3 lg:block">
-					{#each moduleCategories as category}
+					{#each moduleCategories as category (category.title)}
+						{@const catOpen = isOpen(category.title, category.modules)}
 						<div class="space-y-1 sm:space-y-2">
-							<h4
-								class="border-b border-gray-200 pb-1 text-xs font-semibold tracking-wider text-gray-600 uppercase sm:text-sm dark:border-gray-600 dark:text-gray-300"
+							<button
+								type="button"
+								onclick={() => toggleCategory(category.title, category.modules)}
+								class="flex w-full items-center justify-between border-b border-gray-200 pb-1 text-left text-xs font-semibold tracking-wider text-gray-600 uppercase transition-colors hover:text-blue-600 sm:text-sm dark:border-gray-600 dark:text-gray-300 dark:hover:text-blue-400"
+								aria-expanded={catOpen}
 							>
-								{category.title}
-							</h4>
-							<div class="space-y-1">
-								{#each category.modules as module}
-									<a
-										href="{base}/user-guide/{module.slug}"
-										class="block w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-200 sm:px-3 sm:py-2 sm:text-sm {currentSlug ===
-										module.slug
-											? 'border-l-2 border-blue-500 bg-blue-100 font-medium text-blue-900 dark:bg-blue-900 dark:text-blue-100'
-											: 'text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700'}"
-									>
-										{module.title}
-									</a>
-								{/each}
-							</div>
+								<span>{category.title}</span>
+								<svg
+									class="h-4 w-4 transform text-gray-400 transition-transform duration-200 dark:text-gray-400 {catOpen
+										? 'rotate-180'
+										: ''}"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</button>
+							{#if catOpen}
+								<div class="space-y-1">
+									{#each category.modules as module (module.slug)}
+										<a
+											href="{base}/user-guide/{module.slug}"
+											class="block w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-200 sm:px-3 sm:py-2 sm:text-sm {currentSlug ===
+											module.slug
+												? 'border-l-2 border-blue-500 bg-blue-100 font-medium text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+												: 'text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700'}"
+										>
+											{module.title}
+										</a>
+									{/each}
+								</div>
+							{/if}
 						</div>
 					{/each}
 				</div>
@@ -333,6 +275,14 @@
 				<div class="p-2 sm:p-3 md:p-6">
 					<div
 						class="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 markdown-paxapos max-w-none"
+						onclick={(e) => {
+							const target = e.target as HTMLElement;
+							const btn = target.closest('[data-copy-section]');
+							if (btn) {
+								const sectionId = btn.getAttribute('data-copy-section') || '';
+								copyLinkToSection(sectionId);
+							}
+						}}
 					>
 						{@html processedContent}
 					</div>

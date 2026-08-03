@@ -1,0 +1,42 @@
+# Configuración de Impresión
+
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Impresoras** → **Config de Impresión**  
+> **¿Quién lo usa?:** Administradores  
+
+---
+
+## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+Permite definir opciones globales de formato de ticket e impresión (ejemplo: *Ancho del papel 80mm/58mm, cortar papel automáticamente, imprimir copia de comanda*):
+
+1. **Parámetros de formato:** Formato visual de comandas y comprobantes.
+
+---
+
+## 🔑 Requisitos para empezar a usarlo
+
+- Tener el permiso de **Configuración de Parámetros de Impresión** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+| Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
+|---|---|---|
+| 📏 **Ancho de Papel** | Formulario | Selecciona entre 80mm y 58mm. |
+
+---
+
+## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+### Paso 1: Configurar ancho de papel
+1. Seleccioná el ancho de papel de tus impresoras.
+2. Tocá **Guardar**.
+
+---
+
+## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El texto sale cortado a la derecha. | Se seleccionó 80mm pero la impresora usa papel angosto de 58mm. | Cambiá la configuración a 58mm. |
