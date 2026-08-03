@@ -1,25 +1,15 @@
-// Theme store para manejo global del tema
-import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-// Función para detectar si el usuario prefiere modo oscuro
-function getInitialTheme(): boolean {
-	if (!browser) return false; // Default para SSR
+let isDarkState = false;
 
-	// Detectar preferencia del usuario
-	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		return true;
-	}
-
-	return false;
+export function getIsDarkMode(): boolean {
+	return isDarkState;
 }
-
-// Store reactivo para el tema
-export const isDarkMode = writable<boolean>(getInitialTheme());
 
 // Función para aplicar el tema al DOM
 export function applyThemeToDOM(dark: boolean) {
 	if (!browser) return;
+	isDarkState = dark;
 
 	const html = document.documentElement;
 
@@ -32,7 +22,7 @@ export function applyThemeToDOM(dark: boolean) {
 	}
 }
 
-// Función para inicializar el theme store
+// Función para inicializar el tema
 export function initThemeStore() {
 	if (!browser) return;
 
@@ -40,14 +30,11 @@ export function initThemeStore() {
 
 	// Aplicar tema inicial
 	const initialDark = mediaQuery.matches;
-	isDarkMode.set(initialDark);
 	applyThemeToDOM(initialDark);
 
 	// Escuchar cambios en las preferencias del sistema
 	function handleChange(e: MediaQueryListEvent) {
-		const newDark = e.matches;
-		isDarkMode.set(newDark);
-		applyThemeToDOM(newDark);
+		applyThemeToDOM(e.matches);
 	}
 
 	// Compatibilidad con diferentes navegadores

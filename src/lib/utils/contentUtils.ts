@@ -35,7 +35,7 @@ export function addLinkIconsToHeaders(html: string): string {
                 ${titleContent}
                 <button 
                     class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
-                    onclick="copyLinkToSection('${idValue}')"
+                    data-copy-section="${idValue}"
                     title="Copiar enlace a esta sección"
                     aria-label="Copiar enlace a esta sección"
                 >

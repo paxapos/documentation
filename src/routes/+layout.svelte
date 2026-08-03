@@ -2,24 +2,19 @@
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import ChatBotSimple from '$lib/components/ChatBotSimple.svelte';
-	import { autoReplaceBrand } from '$lib/helpers/textReplacer';
-	import { onMount } from 'svelte';
 	import { initThemeStore } from '$lib/stores/theme';
 
 	let { children } = $props();
 
 	// Inicializar el manejo de temas al montar el componente
-	onMount(() => {
+	$effect(() => {
 		const cleanup = initThemeStore();
-
-		// Cleanup function
 		return cleanup;
 	});
 </script>
 
 <div
 	class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"
-	use:autoReplaceBrand
 >
 	<!-- Navigation -->
 	<Navigation />

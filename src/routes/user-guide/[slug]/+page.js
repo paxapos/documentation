@@ -1,6 +1,9 @@
 import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
+import { base } from '$app/paths';
 import { getMarkdownFile } from '$lib/utils/markdownDetector';
+import { addLinkIconsToHeaders } from '$lib/utils/contentUtils';
+import { replaceWithVariables } from '$lib/helpers/textReplacer';
 
 export const prerender = true;
 
@@ -22,6 +25,25 @@ function cleanHtmlForSEO(html) {
 			.trim()
 	);
 }
+
+function fixImagePaths(html) {
+	const imgRegex = /<img([^>]*)\ssrc\s*=\s*["'](?!https?:\/\/)(?!\/)([^"']+)["']([^>]*)>/gi;
+	return html.replace(imgRegex, (match, beforeSrc, src, afterSrc) => {
+		if (src.startsWith('images/')) {
+			const newSrc = `${base}/${src}`;
+			return `<img${beforeSrc} src="${newSrc}"${afterSrc}>`;
+		}
+		return match;
+	});
+}
+
+function wrapTablesForResponsive(html) {
+	const tableRegex = /<table(?![^>]*class[^>]*table-wrapper)[^>]*>[\s\S]*?<\/table>/gi;
+	return html.replace(tableRegex, (match) => {
+		return `<div class="table-wrapper">${match}</div>`;
+	});
+}
+
 export async function load({ params }) {
 	const { slug } = params;
 
@@ -34,7 +56,13 @@ export async function load({ params }) {
 		}
 
 		// Convertir markdown a HTML
-		const htmlContent = await marked(markdownData.content);
+		let htmlContent = await marked(markdownData.content);
+
+		// Aplicar transformaciones estáticas de HTML server-side
+		htmlContent = fixImagePaths(htmlContent);
+		htmlContent = wrapTablesForResponsive(htmlContent);
+		htmlContent = replaceWithVariables(htmlContent);
+		htmlContent = addLinkIconsToHeaders(htmlContent);
 
 		// Crear una versión limpia para SEO sin divs vacíos
 		const cleanContentForSEO = cleanHtmlForSEO(htmlContent);
