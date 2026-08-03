@@ -3,9 +3,11 @@
 <div id="iniciar-sesion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de {{BRAND_NAME}}.
+> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de PaxaPOS.
 
 ## 📍 **Paso 1: Ingresá a la página web**
+
+<div id="paso-1-ingresa-a-la-pagina-web"></div>
 
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
 2. En la barra de direcciones, escribí: [**Restodigital.com.ar**](https://restodigital.com.ar)
@@ -14,6 +16,8 @@
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
 
 ## 📝 **Paso 2: Completá tus datos**
+
+<div id="paso-2-completa-tus-datos"></div>
 
 Vas a ver una pantalla de ingreso como esta:
 
@@ -36,6 +40,8 @@ Vas a ver una pantalla de ingreso como esta:
 
 ## ✅ **¡Perfecto!**
 
+<div id="perfecto"></div>
+
 Si los datos son correctos, vas a ingresar al **panel principal** donde podés empezar a trabajar.
 
 ---
@@ -49,46 +55,20 @@ Si los datos son correctos, vas a ingresar al **panel principal** donde podés e
 
 ### **¿Cómo funciona?**
 
+<div id="como-funciona"></div>
+
 1. En la pantalla de login, visualiza la opción **"Ingresar con PIN"**
 2. Escribí el **PIN** que te dió tu administrador (ejemplo: 1111)
-3. ¡Listo! Ya estás dentro de {{BRAND_NAME}}
+3. ¡Listo! Ya estás dentro de PaxaPOS
 
 ### **¿Para quién está pensado esto?**
+
+<div id="para-quien-esta-pensado-esto"></div>
 
 - ✅ **Mozos** que cambian de turno frecuentemente
 - ✅ **Personal temporal** que necesita acceso rápido
 - ✅ **Equipos grandes** donde es difícil recordar credenciales
 
 > 🔗 **¿Querés saber cómo configurar esto?**  
-> Revisá la sección **"Método alternativo - Usuario con PIN"** en [📋 Crear Usuarios](/user-guide?module=21-Crear-Usuarios)
+> Revisá la sección **"Método alternativo - Usuario con PIN"** en [📋 Usuarios con PIN](/user-guide/usuarios-con-pin)
 
----
-
-## 🚨 **¿Problemas comunes?**
-
-### 🔒 **¿Olvidaste tu contraseña?**
-
-**No te preocupes, es súper fácil recuperarla:**
-
-1. En la pantalla de login, hacé clic en **"¿Olvidaste tu contraseña?"**
-2. Escribí tu **dirección de email**
-3. Hacé clic en **"Enviar"**
-4. **¡MUY IMPORTANTE!** Revisá tu **bandeja de entrada** de emails
-5. **TAMBIÉN** revisá la carpeta de **SPAM/No deseados**
-6. Abrí el email y seguí las instrucciones
-
-### ❌ **¿El sistema no te acepta?**
-
-**Verificá estos puntos:**
-
-- ✅ ¿Está bien escrito el **usuario**? (sin espacios extras)
-- ✅ ¿Está bien escrita la **contraseña**? (cuidado con mayúsculas/minúsculas)
-- ✅ ¿Tenés **conexión a internet**?
-- ✅ Probá **refrescar la página** (tecla F5)
-
-### 📞 **¿Seguís sin poder entrar?**
-
-- Contactá a tu **administrador del sistema**
-- O escribí al **soporte técnico**
-
----

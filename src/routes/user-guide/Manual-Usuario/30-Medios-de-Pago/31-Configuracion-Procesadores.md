@@ -1,11 +1,15 @@
 # Configuración de Procesadores de Pago
 
+<div id="configuracion-de-procesadores-de-pago"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Medios de Pago** → **Configuración de Procesadores**  
 > **¿Quién lo usa?:** Administradores del Comercio  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Esta pantalla permite vincular y configurar las pasarelas y procesadores de pago digitales (ejemplo: *Prisma Payway, Mercado Pago, Macro Click*):
 
@@ -16,11 +20,15 @@ Esta pantalla permite vincular y configurar las pasarelas y procesadores de pago
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Configuración de Pasarelas de Pago** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+<div id="botones-y-campos-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo / completarlo? |
 |---|---|---|
@@ -31,7 +39,12 @@ Esta pantalla permite vincular y configurar las pasarelas y procesadores de pago
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Activar un procesador de pago
+
+<div id="paso-1-activar-un-procesador-de-pago"></div>
+
 1. Buscá el procesador en la lista (ejemplo: *Payway*).
 2. Tocá **Configurar**.
 3. Ingresá las credenciales o claves otorgadas por la entidad financiera.
@@ -40,6 +53,8 @@ Esta pantalla permite vincular y configurar las pasarelas y procesadores de pago
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

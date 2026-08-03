@@ -1,11 +1,15 @@
 # Transacciones Macro Click de Pagos
 
+<div id="transacciones-macro-click-de-pagos"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Medios de Pago** → **Transacciones MacroClick**  
 > **¿Quién lo usa?:** Cajeros y Contadores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Muestra el detalle y control de las operaciones de pago realizadas mediante el botón o pasarela de pago **Macro Click de Pagos** (Banco Macro):
 
@@ -16,11 +20,15 @@ Muestra el detalle y control de las operaciones de pago realizadas mediante el b
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Consulta de Transacciones MacroClick** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+<div id="botones-y-filtros-que-es-cada-cosa"></div>
 
 | Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,13 +39,20 @@ Muestra el detalle y control de las operaciones de pago realizadas mediante el b
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Verificar un pago de MacroClick
+
+<div id="paso-1-verificar-un-pago-de-macroclick"></div>
+
 1. Ingresá el número de orden o referencia en la casilla de búsqueda.
 2. Tocá **Actualizar Estado** si la venta aún figura en proceso.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

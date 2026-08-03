@@ -1,11 +1,15 @@
 # Terminales de Pago (Prisma Payway)
 
+<div id="terminales-de-pago-prisma-payway"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Medios de Pago** → **Terminales Payway**  
 > **¿Quién lo usa?:** Cajeros y Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite administrar y vincular las posnets/terminales físicas inteligentes (POS Smart Payway) asignadas a las cajas del comercio:
 
@@ -16,12 +20,16 @@ Permite administrar y vincular las posnets/terminales físicas inteligentes (POS
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Contar con las terminales físicas Payway conectadas a la red WiFi del local.
 - Tener el permiso de **Administración de Terminales POS** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -32,7 +40,12 @@ Permite administrar y vincular las posnets/terminales físicas inteligentes (POS
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Vincular una terminal Payway
+
+<div id="paso-1-vincular-una-terminal-payway"></div>
+
 1. Tocá el botón **Vincular Terminal**.
 2. Ingresá el **Número de Serie (N/S)** o **IP** que figura en la posnet.
 3. Seleccioná a qué **Caja** del local pertenece.
@@ -41,6 +54,8 @@ Permite administrar y vincular las posnets/terminales físicas inteligentes (POS
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

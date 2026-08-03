@@ -1,11 +1,15 @@
 # Crear Orden de Compra
 
+<div id="crear-orden-de-compra"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Órdenes de Compra** → **Crear OC**  
 > **¿Quién lo usa?:** Compradores y Encargados de Stock  
 
 ---
 
 ## 🎯 ¿Qué es y para me sirve esta pantalla?
+
+<div id="que-es-y-para-me-sirve-esta-pantalla"></div>
 
 Permite confeccionar una nueva solicitud de pedido formal para enviar a un proveedor determinado:
 
@@ -16,12 +20,16 @@ Permite confeccionar una nueva solicitud de pedido formal para enviar a un prove
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener registrados los proveedores y las mercaderías en el sistema.
 - Tener el permiso de **Emisión de Órdenes de Compra** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+<div id="botones-y-campos-que-es-cada-cosa"></div>
 
 | Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
 |---|---|---|
@@ -33,7 +41,12 @@ Permite confeccionar una nueva solicitud de pedido formal para enviar a un prove
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Generar una Orden de Compra
+
+<div id="paso-1-generar-una-orden-de-compra"></div>
+
 1. Seleccioná el **Proveedor** de la lista desplegable.
 2. Elegí el **Depósito** receptor.
 3. En la lista de mercaderías, agregá los ítems a pedir con su **Cantidad** y **Precio Unitario**.
@@ -42,6 +55,8 @@ Permite confeccionar una nueva solicitud de pedido formal para enviar a un prove
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

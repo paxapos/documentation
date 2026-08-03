@@ -1,11 +1,15 @@
 # Stock de Mercaderías
 
+<div id="stock-de-mercaderias"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Stock** → **Inventario** → **Stock Mercaderías**  
 > **¿Quién lo usa?:** Depósito y Encargados de Compras  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Detalla las existencias actuales exclusivamente de materias primas e insumos comprados a proveedores:
 
@@ -16,11 +20,15 @@ Detalla las existencias actuales exclusivamente de materias primas e insumos com
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Control de Existencias de Mercaderías** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+<div id="botones-y-filtros-que-es-cada-cosa"></div>
 
 | Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -30,13 +38,20 @@ Detalla las existencias actuales exclusivamente de materias primas e insumos com
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Consultar stock de un insumo
+
+<div id="paso-1-consultar-stock-de-un-insumo"></div>
+
 1. Escribí el nombre de la materia prima en la casilla de búsqueda.
 2. Verificá la columna **Stock Actual** y la ubicación en el depósito.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

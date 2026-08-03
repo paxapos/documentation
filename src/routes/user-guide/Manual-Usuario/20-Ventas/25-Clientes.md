@@ -1,11 +1,15 @@
 # Clientes
 
+<div id="clientes"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Clientes**  
 > **¿Quién lo usa?:** Cajeros, Recepcionistas y Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 El módulo de **Clientes** permite gestionar la base de datos de comensales y compradores del local:
 
@@ -17,11 +21,15 @@ El módulo de **Clientes** permite gestionar la base de datos de comensales y co
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Contar con el permiso de **Gestión de Clientes** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -34,7 +42,12 @@ El módulo de **Clientes** permite gestionar la base de datos de comensales y co
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Registrar un nuevo cliente
+
+<div id="paso-1-registrar-un-nuevo-cliente"></div>
+
 1. Tocá el botón **Nuevo Cliente**.
 2. Completa los campos obligatorios:
    - **Nombre:** Escribí el nombre y apellido.
@@ -43,12 +56,17 @@ El módulo de **Clientes** permite gestionar la base de datos de comensales y co
 3. Tocá el botón **Guardar**.
 
 ### Paso 2: Buscar y asignar a una venta
+
+<div id="paso-2-buscar-y-asignar-a-una-venta"></div>
+
 1. En la casilla **Buscar**, escribí el teléfono o nombre del cliente.
 2. Al seleccionarlo, se vinculará a la venta activa.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

@@ -1,11 +1,15 @@
 # Salón de Ventas (Adición)
 
+<div id="salon-de-ventas-adicion"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Salón de Ventas**  
 > **¿Quién lo usa?:** Cajeros, Mozos y Encargados de Salón  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 El **Salón de Ventas** es la pantalla principal de atención donde se gestiona todo lo que ocurre con las mesas y los clientes en el local:
 
@@ -18,12 +22,16 @@ El **Salón de Ventas** es la pantalla principal de atención donde se gestiona 
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener abierto un arqueo de caja activo para poder registrar cobranzas.
 - Contar con el permiso de **Operación de Salón y Adición** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Ícono | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -38,13 +46,21 @@ El **Salón de Ventas** es la pantalla principal de atención donde se gestiona 
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Abrir una mesa y cargar un pedido
+
+<div id="paso-1-abrir-una-mesa-y-cargar-un-pedido"></div>
+
 1. En la grilla principal, tocá el número de la mesa que se acaba de ocupar.
 2. Seleccioná el **Mozo** a cargo en la lista desplegable.
 3. En el catálogo de productos, tocá los productos que los clientes pidieron (ejemplo: Empanadas, Cerveza).
 4. Tocá **Enviar Comanda** para que se imprima la orden en la cocina o barra.
 
 ### Paso 2: Imprimir la cuenta y cobrar
+
+<div id="paso-2-imprimir-la-cuenta-y-cobrar"></div>
+
 1. Cuando el cliente pida la cuenta, abrí la mesa y tocá **Adición** para imprimir el pré-ticket.
 2. Una vez que el cliente entrega el dinero o tarjeta, tocá **Cobrar**.
 3. Seleccioná la forma de pago (Efectivo, Tarjeta de Débito/Crédito, Mercado Pago).
@@ -54,6 +70,8 @@ El **Salón de Ventas** es la pantalla principal de atención donde se gestiona 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

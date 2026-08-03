@@ -1,11 +1,15 @@
 # Maestro de Productos
 
+<div id="maestro-de-productos"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Productos** → **Gestión Avanzada** → **Maestro de Productos**  
 > **¿Quién lo usa?:** Administradores y Encargados de Compras / Costos  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 El **Maestro de Productos** es la base de datos centralizada de todos los artículos, insumos y platos del establecimiento:
 
@@ -16,11 +20,15 @@ El **Maestro de Productos** es la base de datos centralizada de todos los artíc
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener otorgado el permiso de **Administración de Maestro de Productos** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -32,7 +40,12 @@ El **Maestro de Productos** es la base de datos centralizada de todos los artíc
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Crear un producto nuevo
+
+<div id="paso-1-crear-un-producto-nuevo"></div>
+
 1. Tocá el botón **Nuevo Producto**.
 2. Completa los datos principales:
    - **Nombre:** Nombre descriptivo.
@@ -44,6 +57,8 @@ El **Maestro de Productos** es la base de datos centralizada de todos los artíc
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

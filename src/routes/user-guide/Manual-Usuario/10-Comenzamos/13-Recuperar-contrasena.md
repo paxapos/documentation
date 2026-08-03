@@ -3,11 +3,13 @@
 <div id="recuperar-contrasena"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Si te olvidaste tu clave de acceso o no podés ingresar a {{BRAND_NAME}}, seguí estos simples pasos para restablecer tu contraseña en pocos minutos.
+> Si te olvidaste tu clave de acceso o no podés ingresar a PaxaPOS, seguí estos simples pasos para restablecer tu contraseña en pocos minutos.
 
 ---
 
 ## 📍 **Paso a Paso para Recuperar la Contraseña**
+
+<div id="paso-a-paso-para-recuperar-la-contrasena"></div>
 
 1. Abrí la pantalla principal de acceso a la plataforma.
 2. En la parte inferior del formulario de ingreso, tocá la opción **"¿Olvidaste tu contraseña?"**.
@@ -18,6 +20,8 @@
 
 ## 📧 **Revisá tu Correo Electrónico**
 
+<div id="revisa-tu-correo-electronico"></div>
+
 1. Abrí tu casilla de correo personal o laboral.
 2. Buscá el mensaje enviado por el sistema con el asunto **"Restablecer contraseña"**.
 3. **¡IMPORTANTE!** Si no lo ves en tu bandeja de entrada principal, revisá la carpeta de **SPAM o Correo No Deseado**.
@@ -27,6 +31,8 @@
 ---
 
 ## ⚠️ **¿Qué hacer si no recibís el correo?**
+
+<div id="que-hacer-si-no-recibis-el-correo"></div>
 
 | ¿Qué ocurre? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

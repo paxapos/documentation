@@ -1,11 +1,15 @@
 # Sugerencias de Compra con IA
 
+<div id="sugerencias-de-compra-con-ia"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Stock** → **Depósitos y Reportes** → **Sugerencias de Compra IA**  
 > **¿Quién lo usa?:** Encargados de Compras y Gerentes  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Utiliza modelos predictivos e inteligencia artificial para calcular las cantidades óptimas de insumos que debe comprar el local:
 
@@ -16,12 +20,16 @@ Utiliza modelos predictivos e inteligencia artificial para calcular las cantidad
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener activado el módulo de Inteligencia Artificial en la configuración del sistema.
 - Tener el permiso de **Consulta de Sugerencias de Compra con IA** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -32,7 +40,12 @@ Utiliza modelos predictivos e inteligencia artificial para calcular las cantidad
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Generar sugerencia de compra inteligente
+
+<div id="paso-1-generar-sugerencia-de-compra-inteligente"></div>
+
 1. Seleccioná para cuántos días querés calcular la reposición (ejemplo: *7 Días*).
 2. Tocá **Calcular Sugerencia**.
 3. Verificá las cantidades sugeridas por la IA y presioná **Generar Orden de Compra**.
@@ -40,6 +53,8 @@ Utiliza modelos predictivos e inteligencia artificial para calcular las cantidad
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

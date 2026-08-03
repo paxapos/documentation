@@ -1,11 +1,15 @@
 # Flujo de Compras
 
+<div id="flujo-de-compras"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Flujo de Compras**  
 > **¿Quién lo usa?:** Encargados de Compras, Depósito y Gerentes  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 El **Flujo de Compras** ofrece un mapa de control del ciclo completo de abastecimiento de mercaderías e insumos del local:
 
@@ -16,11 +20,15 @@ El **Flujo de Compras** ofrece un mapa de control del ciclo completo de abasteci
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Contar con el permiso de **Gestión de Flujo de Compras** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Columna | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,7 +39,12 @@ El **Flujo de Compras** ofrece un mapa de control del ciclo completo de abasteci
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Seguir el circuito de compra
+
+<div id="paso-1-seguir-el-circuito-de-compra"></div>
+
 1. Revisá el tablero de estados.
 2. Al llegar un proveedor, buscá la Orden de Compra y tocá **Recibir Mercadería**.
 3. Verificá que las cantidades coincidan con el remito entregado.
@@ -39,6 +52,8 @@ El **Flujo de Compras** ofrece un mapa de control del ciclo completo de abasteci
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

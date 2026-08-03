@@ -1,11 +1,15 @@
 # Catálogo de Mercaderías
 
+<div id="catalogo-de-mercaderias"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Catálogo** → **Mercaderías**  
 > **¿Quién lo usa?:** Compradores, Depósito y Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Es el catálogo maestro de insumos, materias primas y artículos comprados a proveedores (ejemplo: *Harina 0000, Carne Lomo, Aceite de Girasol, Servilletas, Detergente*):
 
@@ -16,11 +20,15 @@ Es el catálogo maestro de insumos, materias primas y artículos comprados a pro
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Gestión de Catálogo de Mercaderías** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,7 +39,12 @@ Es el catálogo maestro de insumos, materias primas y artículos comprados a pro
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Registrar una mercadería
+
+<div id="paso-1-registrar-una-mercaderia"></div>
+
 1. Tocá **Nueva Mercadería**.
 2. Escribí el **Nombre**, asigná un **Rubro** y fijá la **Unidad de Medida** (ejemplo: *Kilogramos*).
 3. Ingresá el **Costo Ultima Compra**.
@@ -40,6 +53,8 @@ Es el catálogo maestro de insumos, materias primas y artículos comprados a pro
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

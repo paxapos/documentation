@@ -4,9 +4,11 @@
 
 ## 🎯 ¿Qué es esta plataforma de gestión?
 
+<div id="que-es-esta-plataforma-de-gestion"></div>
+
 Imagináte tener todo tu restaurante, bar o café controlado desde una sola pantalla. Eso es lo que te ofrece.
 
-Este es {{BRAND_NAME}}, tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
+Este es PaxaPOS, tu **sistema gastronómico integral** pensado para adaptarse a las necesidades de tu comercio.
 
 Desde un solo lugar, permite administrar:
 
@@ -21,6 +23,8 @@ Todo de forma **clara**, **rápida** y **sin complicaciones**.
 Con una interfaz moderna e intuitiva, acompaña el trabajo diario, ayudando a reducir errores, optimizar tiempos y mantener una visión ordenada del funcionamiento general del negocio.
 
 ## ✅ ¿Qué podés hacer?
+
+<div id="que-podes-hacer"></div>
 
 🔹 **Gestión de ventas** | Cobra más rápido, sin errores  
 🔹 **Control de inventario** | Nunca te quedés sin stock  
