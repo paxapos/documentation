@@ -1,11 +1,15 @@
 # Estados de Comanda
 
+<div id="estados-de-comanda"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Comandero** → **General** → **Estados de Comanda**  
 > **¿Quién lo usa?:** Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite personalizar los estados por los cuales transita una orden de pedido completa (ejemplo: *Ingresada, En Marcha, Lista para Servir, Entregada*):
 
@@ -15,11 +19,15 @@ Permite personalizar los estados por los cuales transita una orden de pedido com
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Personalización de Estados de Comanda** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -29,7 +37,12 @@ Permite personalizar los estados por los cuales transita una orden de pedido com
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Configurar un estado
+
+<div id="paso-1-configurar-un-estado"></div>
+
 1. Tocá el estado a editar.
 2. Seleccioná el nombre y el color distintivo.
 3. Tocá **Guardar**.
@@ -37,6 +50,8 @@ Permite personalizar los estados por los cuales transita una orden de pedido com
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

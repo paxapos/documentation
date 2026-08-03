@@ -1,11 +1,15 @@
 # Mis Sesiones Activas
 
+<div id="mis-sesiones-activas"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Mis Sesiones Activas**  
 > **¿Quién lo usa?:** Todos los Usuarios del Sistema  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite visualizar todas las sesiones abiertas con tu cuenta de usuario en diferentes navegadores, computadoras o dispositivos móviles:
 
@@ -16,12 +20,16 @@ Permite visualizar todas las sesiones abiertas con tu cuenta de usuario en difer
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Estar logueado en el sistema.
 - Tener el permiso de **Consulta y Cierre de Sesiones de Usuario** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -32,13 +40,20 @@ Permite visualizar todas las sesiones abiertas con tu cuenta de usuario en difer
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Cerrar sesiones abiertas en otros equipos
+
+<div id="paso-1-cerrar-sesiones-abiertas-en-otros-equipos"></div>
+
 1. Revisá el listado de dispositivos activos.
 2. Tocá **Cerrar Todas las Demás Sesiones**.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

@@ -1,11 +1,15 @@
 # Registro Diario de Fichaje
 
+<div id="registro-diario-de-fichaje"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Registro Diario**  
 > **¿Quién lo usa?:** Recursos Humanos y Encargados  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Muestra el historial detallado de marcas de entrada y salida registradas en una fecha específica:
 
@@ -16,11 +20,15 @@ Muestra el historial detallado de marcas de entrada y salida registradas en una 
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Auditoría y Edición de Fichajes Diarios** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+<div id="botones-y-filtros-que-es-cada-cosa"></div>
 
 | Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,7 +39,12 @@ Muestra el historial detallado de marcas de entrada y salida registradas en una 
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Corregir un fichaje omitido
+
+<div id="paso-1-corregir-un-fichaje-omitido"></div>
+
 1. Buscá al empleado en la fecha elegida.
 2. Tocá **Editar Fichaje**.
 3. Ingresá la hora correcta de salida.
@@ -40,6 +53,8 @@ Muestra el historial detallado de marcas de entrada y salida registradas en una 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

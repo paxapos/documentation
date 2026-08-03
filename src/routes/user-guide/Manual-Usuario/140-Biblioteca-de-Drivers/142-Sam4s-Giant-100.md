@@ -1,5 +1,7 @@
 # Sam4S Giant - 100
 
+<div id="sam4s-giant-100"></div>
+
 En el [siguiente enlace](http://www.sam4s.com/eng/asp/products_detail.asp?seq=41) podrás descargar el driver (controlador) de la impresora de comandas marca Sam4s modelo Giant - 100:
 
 Una vez allí, en el apartado 'Downloads' seleccionar la descarga del siguiente archivo:

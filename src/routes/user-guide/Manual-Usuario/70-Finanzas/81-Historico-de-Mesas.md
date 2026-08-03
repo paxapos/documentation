@@ -1,11 +1,15 @@
 # Histórico de Mesas
 
+<div id="historico-de-mesas"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Facturación AFIP** → **Histórico de Mesas**  
 > **¿Quién lo usa?:** Encargados de Salón, Cajeros y Auditores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Muestra el registro de todas las mesas cerradas y cobradas en fechas pasadas:
 
@@ -16,11 +20,15 @@ Muestra el registro de todas las mesas cerradas y cobradas en fechas pasadas:
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Consulta y Refacturación de Histórico de Mesas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+<div id="botones-y-filtros-que-es-cada-cosa"></div>
 
 | Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,7 +39,12 @@ Muestra el registro de todas las mesas cerradas y cobradas en fechas pasadas:
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Reemitir o facturar una mesa pasada
+
+<div id="paso-1-reemitir-o-facturar-una-mesa-pasada"></div>
+
 1. Buscá la mesa por fecha y número.
 2. Tocá **Facturar**.
 3. Ingresá el CUIT y la Razón Social del cliente si requiere Factura A.
@@ -40,6 +53,8 @@ Muestra el registro de todas las mesas cerradas y cobradas en fechas pasadas:
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

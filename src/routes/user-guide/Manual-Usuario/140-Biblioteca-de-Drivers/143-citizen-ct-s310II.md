@@ -1,5 +1,7 @@
 # Citizen CT-S310II
 
+<div id="citizen-ct-s310ii"></div>
+
 En el [siguiente enlace](https://www.citizen-systems.com/es/support/drivers-and-tools) podrás descargar el driver (controlador) de la impresora de comandas marca Citizen modelo CT-S310II.
 
 ✅ Paso 1: Buscar el driver

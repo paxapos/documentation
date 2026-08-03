@@ -1,11 +1,15 @@
 # Módulo Delivery (Pedidos Online)
 
+<div id="modulo-delivery-pedidos-online"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Módulo Delivery**  
 > **¿Quién lo usa?:** Encargados de Delivery y Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite configurar las reglas de recepción de pedidos a domicilio y la integración con Mercado Pago Delivery o Pedímelo Online (menu.paxapos.com):
 
@@ -16,11 +20,15 @@ Permite configurar las reglas de recepción de pedidos a domicilio y la integrac
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Configuración de Parámetros de Delivery** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+<div id="botones-y-campos-que-es-cada-cosa"></div>
 
 | Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
 |---|---|---|
@@ -31,7 +39,12 @@ Permite configurar las reglas de recepción de pedidos a domicilio y la integrac
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Configurar tarifa y zona de entrega
+
+<div id="paso-1-configurar-tarifa-y-zona-de-entrega"></div>
+
 1. Ingresá el **Costo de Envío Base**.
 2. Fijá el **Monto Mínimo de Pedido**.
 3. Tocá **Guardar**.
@@ -39,6 +52,8 @@ Permite configurar las reglas de recepción de pedidos a domicilio y la integrac
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

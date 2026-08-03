@@ -1,5 +1,7 @@
 # Epson TM-T88V
 
+<div id="epson-tm-t88v"></div>
+
 En el [siguiente enlace](https://support.epson.net/setupnavi/?PINF=swlist&OSC=WS&LG2=ES&MKN=TM-T88V) podrás descargar el driver (controlador) de la impresora de comandas marca Epson modelo TM-T88V.
 
 ✅ Paso 1: Aceptar licencia

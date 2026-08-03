@@ -1,11 +1,15 @@
 # Permisos por Rol (Matriz de Seguridad)
 
+<div id="permisos-por-rol-matriz-de-seguridad"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Permisos por Rol**  
 > **¿Quién lo usa?:** Administradores del Sistema  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 La pantalla de **Permisos por Rol** es la matriz central de control de seguridad del sistema PaxaPOS:
 
@@ -17,12 +21,16 @@ La pantalla de **Permisos por Rol** es la matriz central de control de seguridad
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener la sesión iniciada con una cuenta que posea perfil **Administrador Principal**.
 - Tener creados los roles de usuario en el módulo de [Roles](/user-guide/roles).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo / cambiarlo? |
 |---|---|---|
@@ -36,22 +44,35 @@ La pantalla de **Permisos por Rol** es la matriz central de control de seguridad
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Seleccionar el rol a configurar
+
+<div id="paso-1-seleccionar-el-rol-a-configurar"></div>
+
 1. En la parte superior de la pantalla, elegí el **Rol** que querés editar en el listado desplegable (ejemplo: *Mozo*).
 2. La matriz mostrará todas las secciones del sistema (Ventas, Compras, Stock, Finanzas, Reportes, Configuración).
 
 ### Paso 2: Activar o desactivar permisos específicos
+
+<div id="paso-2-activar-o-desactivar-permisos-especificos"></div>
+
 1. Navegá por los módulos de la matriz.
 2. Marcá la casilla ☑️ en los módulos donde querés dar acceso.
 3. Desmarcá la casilla ☐ en las funciones restringidas (ejemplo: desmarcar *Anulaciones de Venta* para el mozo).
 
 ### Paso 3: Guardar y aplicar los cambios
+
+<div id="paso-3-guardar-y-aplicar-los-cambios"></div>
+
 1. Tocá el botón verde **Guardar Matriz de Permisos** en el pie de la pantalla.
 2. Los cambios se aplicarán de inmediato para todos los usuarios pertenecientes a ese rol.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

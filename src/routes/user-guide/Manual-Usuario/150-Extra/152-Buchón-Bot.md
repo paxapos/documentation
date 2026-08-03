@@ -9,11 +9,15 @@
 
 ## ⚠️ **IMPORTANTE: Solo para el dueño**
 
+<div id="importante-solo-para-el-dueno"></div>
+
 Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a esta función.
 
 ---
 
 ## 📱 **¿Cómo funciona?**
+
+<div id="como-funciona"></div>
 
 ```
 🚨 Pasa algo raro en el sistema
@@ -29,7 +33,11 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ## 🔍 **¿Qué tipo de cosas te avisa?**
 
+<div id="que-tipo-de-cosas-te-avisa"></div>
+
 ### **📦 Alertas de Stock:**
+
+<div id="alertas-de-stock"></div>
 
 **📋 Situaciones que detecta:**
 
@@ -49,14 +57,20 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ## ⚙️ **¿Cómo configurarlo?**
 
+<div id="como-configurarlo"></div>
+
 ### **📲 Paso 1: Conectar Telegram**
 
+<div id="paso-1-conectar-telegram"></div>
+
 1. **Abrir Telegram** en tu celular
-2. **Buscar el bot** de {{BRAND_NAME}} (te lo da soporte técnico)
+2. **Buscar el bot** de PaxaPOS (te lo da soporte técnico)
 3. **Escribir /start** para activarlo
 4. **Copiar tu Chat ID** (aparece automáticamente)
 
 ### **🔧 Paso 2: Configurar alertas**
+
+<div id="paso-2-configurar-alertas"></div>
 
 1. **Entrá al sistema** con tu usuario de propietario
 2. **Ir a:** Configuración → Buchón Bot
@@ -83,6 +97,8 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ### **🎯 Paso 3: Ajustar umbrales**
 
+<div id="paso-3-ajustar-umbrales"></div>
+
 **⚙️ Configuraciones importantes:**
 
 **🔹 Stock mínimo**  
@@ -101,7 +117,11 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ## 💡 **Casos de uso prácticos**
 
+<div id="casos-de-uso-practicos"></div>
+
 ### **🏪 Para un restaurante:**
+
+<div id="para-un-restaurante"></div>
 
 ```
 📲 "⚠️ Quedan 3 milanesas - Stock crítico"
@@ -110,6 +130,8 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 ```
 
 ### **🍕 Para una pizzería:**
+
+<div id="para-una-pizzeria"></div>
 
 ```
 📲 "🍅 Se acabó salsa de tomate!"
@@ -120,11 +142,15 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 ## 🚨 **¿Problemas comunes?**
 
+<div id="problemas-comunes"></div>
+
 - **"No me llegan mensajes"** → Verificá el Chat ID y que el bot esté activo
 - **"Llegan demasiados mensajes"** → Ajustá los umbrales y filtros
 - **"Alertas falsas de stock"** → Revisá que el inventario esté bien configurado
 - **"No funciona fuera del horario"** → Verificá la configuración de horarios permitidos
 
 ### **📞 ¿Necesitás ayuda?**
+
+<div id="necesitas-ayuda"></div>
 
 Contactá a soporte técnico - ellos te ayudan a configurar todo perfectamente según tu tipo de negocio.

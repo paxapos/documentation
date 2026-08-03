@@ -1,6 +1,10 @@
 # Biblioteca de Drivers
 
+<div id="biblioteca-de-drivers"></div>
+
 ## 📋 **Guía de Instalación Rápida de drivers**
+
+<div id="guia-de-instalacion-rapida-de-drivers"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
 > Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas. Cada driver incluye instrucciones detalladas e instaladores oficiales.
@@ -9,7 +13,11 @@
 
 ## 📦 **Drivers Disponibles**
 
+<div id="drivers-disponibles"></div>
+
 ### **🏷️ Drivers con Guía Completa**
+
+<div id="drivers-con-guia-completa"></div>
 
 > 📚 **Estos modelos incluyen documentación paso a paso detallada:**
 
@@ -18,12 +26,14 @@
 | **SAM4S**         | Giant 100           | 7/8/10/11      | [📄 Ver Guía](/user-guide/sam4s-giant-100)   |
 | **CITIZEN**       | CT-S310II           | 10+            | [📄 Ver Guía](/user-guide/citizen-ct-s310ii) |
 | **EPSON**         | TM-T20/T20II/T20III | 7/8/10/11      | [📄 Ver Guía](/user-guide/epson-tm-t20)      |
-| **EPSON**         | TM-T88V             | 7/8/10/11      | [📄 Ver Guía](/user-guide/epson-tm-t88v)     |
+| **EPSON**         | TM-T88V             | 7/8/10/11      | [📄 Ver Guía](/user-guide/epson-tm-t88)      |
 | **Genérico POS**  | 80mm / 58mm         | 7/8/10/11      | [📄 Ver Guía](/user-guide/drivers-genericos) |
 
 ---
 
 ### **⬇️ Descarga Directa de Drivers**
+
+<div id="descarga-directa-de-drivers"></div>
 
 > 💾 **Drivers disponibles para descarga inmediata sin guía paso a paso:**
 
@@ -41,7 +51,11 @@
 
 ## 📋 **Guía de Instalación Rápida**
 
+<div id="guia-de-instalacion-rapida"></div>
+
 ### **🔧 Antes de Empezar**
+
+<div id="antes-de-empezar"></div>
 
 > ⚠️ **REQUISITOS PREVIOS:**
 >
@@ -50,6 +64,8 @@
 > - ✅ Antivirus temporalmente desactivado
 
 ### **🚀 Proceso de Instalación**
+
+<div id="proceso-de-instalacion"></div>
 
 **1️⃣ Descargar**
 
@@ -69,17 +85,21 @@
 
 ### **✅ Verificación Post-Instalación**
 
+<div id="verificacion-post-instalacion"></div>
+
 | Verificar         | Cómo Hacerlo                      |
 | ----------------- | --------------------------------- |
 | **🔄 Reiniciar**  | Reinicia la impresora físicamente |
 | **🖨️ Probar**     | Realiza una impresión de prueba   |
 | **⚙️ Configurar** | Ajusta la configuración           |
 
-> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/configuracion-de-impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
+> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/impresoras#que-es-fiscalberry)** para completar la integración con el sistema tributario.
 
 ---
 
 ## 🚨 **¿Problemas comunes?**
+
+<div id="problemas-comunes"></div>
 
 - **"Impresora no detectada"** → Verificar conexión USB, reinstalar driver, cambiar puerto USB
 - **"Caracteres extraños"** → Verificar codificación, actualizar driver, configurar idioma
@@ -91,10 +111,14 @@
 
 ## 🆘 **Soporte Técnico Especializado**
 
+<div id="soporte-tecnico-especializado"></div>
+
 > 💬 **¿Necesitás ayuda personalizada?**  
 > Nuestro equipo técnico está disponible para asistirte con cualquier problema de instalación o configuración.
 
 ### **📞 Contacto Directo**
+
+<div id="contacto-directo"></div>
 
 **💬 WhatsApp Business**
 

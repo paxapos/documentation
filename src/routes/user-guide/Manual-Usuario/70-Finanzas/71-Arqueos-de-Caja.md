@@ -1,11 +1,15 @@
 # Arqueos de Caja
 
+<div id="arqueos-de-caja"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Caja** → **Arqueos de Caja**  
 > **¿Quién lo usa?:** Cajeros, Encargados de Turno y Contadores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite controlar las aperturas, retiros de dinero, ingresos y cierres ciegos de caja de cada turno de trabajo:
 
@@ -17,11 +21,15 @@ Permite controlar las aperturas, retiros de dinero, ingresos y cierres ciegos de
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Apertura y Cierre de Arqueos de Caja** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -34,13 +42,21 @@ Permite controlar las aperturas, retiros de dinero, ingresos y cierres ciegos de
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Abrir la caja al iniciar el turno
+
+<div id="paso-1-abrir-la-caja-al-iniciar-el-turno"></div>
+
 1. Tocá el botón **Abrir Caja**.
 2. Seleccioná la **Caja** física (ejemplo: *Caja Principal*).
 3. Ingresá el **Monto Inicial** en efectivo disponible.
 4. Tocá **Confirmar Apertura**.
 
 ### Paso 2: Cerrar la caja al finalizar el turno
+
+<div id="paso-2-cerrar-la-caja-al-finalizar-el-turno"></div>
+
 1. Tocá el botón **Cerrar Caja**.
 2. Ingresá la cantidad de billetes o el monto total contado en efectivo.
 3. Tocá **Finalizar Arqueo**. El sistema emitirá el reporte Z / resumen de cierre.
@@ -48,6 +64,8 @@ Permite controlar las aperturas, retiros de dinero, ingresos y cierres ciegos de
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

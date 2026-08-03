@@ -9,6 +9,8 @@
 
 ## ⚠️ **REQUISITO OBLIGATORIO**
 
+<div id="requisito-obligatorio"></div>
+
 > **Recordá que para realizar este trámite debés poseer clave fiscal de nivel 3 en ARCA.**
 
 ---
@@ -22,6 +24,8 @@
 <div id="ingreso-arca"></div>
 
 #### **📋 Paso a paso:**
+
+<div id="paso-a-paso"></div>
 
 **🔹 PASO 1:** **Ingresar en el sitio de ARCA** (www.afip.gob.ar) y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
@@ -44,6 +48,8 @@ _Menú principal con opción de Administrador de Relaciones_
 <div id="crear-relacion"></div>
 
 #### **📋 Paso a paso:**
+
+<div id="paso-a-paso-1"></div>
 
 **🔹 PASO 1:** **Seleccionar** "Nueva Relación"
 
@@ -70,6 +76,8 @@ _Menú desplegable de ARCA mostrando WebServices_
 
 #### **🎯 Tipos de servicios disponibles:**
 
+<div id="tipos-de-servicios-disponibles"></div>
+
 | Tipo de Factura                          | Servicio que debés buscar                |
 | ---------------------------------------- | ---------------------------------------- |
 | **Facturas electrónicas A, B, C o M**    | "Facturación Electrónica"                |
@@ -77,6 +85,8 @@ _Menú desplegable de ARCA mostrando WebServices_
 | **Facturas electrónicas T de turismo**   | "Web Service Comprobantes T"             |
 
 #### **⚠️ Importante:**
+
+<div id="importante"></div>
 
 _Si necesitás realizar distintos tipos de facturas (por Ej. A y E) debe repetir los pasos del 1.3A al 1.9 seleccionando en cada caso el servicio que corresponda al tipo de factura._
 
@@ -87,6 +97,8 @@ _Si necesitás realizar distintos tipos de facturas (por Ej. A y E) debe repetir
 <div id="asignar-representante"></div>
 
 #### **📋 Paso a paso:**
+
+<div id="paso-a-paso-2"></div>
 
 **🔹 PASO 1:** **Seleccionar** "Buscar" en la opción "Representante"
 
@@ -102,6 +114,8 @@ _Ingreso del CUIT del representante autorizado_
 
 #### **⚠️ Nota importante:**
 
+<div id="nota-importante"></div>
+
 _Ignorá el mensaje de ARCA en rojo sobre el computador fiscal y la "Advertencia del Sistema" que aparece debajo sobre la delegación del servicio._
 
 ---
@@ -111,6 +125,8 @@ _Ignorá el mensaje de ARCA en rojo sobre el computador fiscal y la "Advertencia
 <div id="confirmar-relacion"></div>
 
 #### **📋 Paso final:**
+
+<div id="paso-final"></div>
 
 **🔹 PASO FINAL:** **Presione confirmar** nuevamente
 
@@ -125,6 +141,8 @@ _Botón de confirmación final de la relación_
 
 ### **🎯 Objetivo:**
 
+<div id="objetivo"></div>
+
 Habilitar la opción "Administración de puntos de venta y domicilios".
 
 ---
@@ -134,6 +152,8 @@ Habilitar la opción "Administración de puntos de venta y domicilios".
 <div id="adherir-servicio"></div>
 
 #### **📋 Paso a paso:**
+
+<div id="paso-a-paso-3"></div>
 
 **🔹 PASO 1:** **Ingresar a** "Administrador de Relaciones de Clave Fiscal"
 
@@ -166,6 +186,8 @@ _Confirmación de adhesión al servicio_
 
 #### **📋 Paso a paso:**
 
+<div id="paso-a-paso-4"></div>
+
 **🔹 PASO 1:** **Para que este nuevo servicio quede habilitado** deberás salir del sitio de ARCA e ingresar nuevamente en www.afip.gob.ar y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a https://auth.afip.gob.ar/contribuyente/
 
 ![Reingresar ARCA](images/afip/1-Inicio-sesion.webp)
@@ -188,6 +210,8 @@ _Lista de servicios habilitados mostrando la nueva opción_
 
 #### **📋 Paso a paso:**
 
+<div id="paso-a-paso-5"></div>
+
 **🔹 PASO 1:** **Seleccionar** "Agregar…"
 
 **🔹 PASO 2:** **Ingresar los siguientes datos:**
@@ -204,6 +228,8 @@ _Formulario completo para crear punto de venta_
 
 #### **🏛️ Opciones para el campo "Sistema":**
 
+<div id="opciones-para-el-campo-sistema"></div>
+
 | Tu condición fiscal        | Opción que debés seleccionar                       |
 | -------------------------- | -------------------------------------------------- |
 | **MONOTRIBUTISTA**         | "Factura Electrónica - Monotributo - Web Services" |
@@ -211,6 +237,8 @@ _Formulario completo para crear punto de venta_
 | **FACTURA DE EXPORTACIÓN** | "Comprobantes de Exportación - Web Services"       |
 
 #### **⚠️ Importante:**
+
+<div id="importante-1"></div>
 
 _Asegurate de seleccionar la opción correcta en el campo "Sistema 1":_
 
@@ -226,6 +254,8 @@ _Asegurate de seleccionar la opción correcta en el campo "Sistema 1":_
 
 #### **📋 Paso final:**
 
+<div id="paso-final-1"></div>
+
 **🔹 PASO FINAL:** **Seleccionar** "Aceptar" para confirmar la operación
 
 ---
@@ -234,15 +264,23 @@ _Asegurate de seleccionar la opción correcta en el campo "Sistema 1":_
 
 ### **📞 2.5 Notificar al soporte técnico**
 
+<div id="25-notificar-al-soporte-tecnico"></div>
+
 #### **📋 Paso obligatorio:**
+
+<div id="paso-obligatorio"></div>
 
 **🔹 IMPORTANTE:** **Una vez completados todos los pasos anteriores en ARCA**, deberás **notificarnos inmediatamente** para que podamos configurar el PVD (Punto de Venta) en tu comercio.
 
 #### **📧 ¿Cómo notificar?**
 
+<div id="como-notificar"></div>
+
 - **WhatsApp:** <a href="https://wa.me/17867553113?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+1 (786) 755-3113</a> _¡Click para chatear directamente en nueva pestaña!_
 
 #### **📋 Información que debés proporcionar:**
+
+<div id="informacion-que-debes-proporcionar"></div>
 
 - ✅ **CUIT del comercio**
 - ✅ **Número del punto de venta creado** (ej: 3)
@@ -251,13 +289,19 @@ _Asegurate de seleccionar la opción correcta en el campo "Sistema 1":_
 
 #### **⏱️ Tiempo de configuración:**
 
+<div id="tiempo-de-configuracion"></div>
+
 Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en **24-48 horas hábiles**.
 
 #### **⚠️ Recordá:**
 
+<div id="recorda"></div>
+
 Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, aunque hayas completado todos los pasos en ARCA.
 
 ## 🎯 **Resumen del proceso completo**
+
+<div id="resumen-del-proceso-completo"></div>
 
 ```
 🏛️ 1. Entrás a ARCA con clave fiscal nivel 3
@@ -277,11 +321,15 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, au
 
 ## 🚨 **¿Problemas comunes?**
 
+<div id="problemas-comunes"></div>
+
 - **"No tengo clave fiscal nivel 3"** → Debés tramitarla en ARCA primero
 - **"No aparece el servicio"** → Verificá que estés en la sección correcta de WebServices
 - **"Error al asignar representante"** → Verificá que el CUIT 20306836268 esté bien escrito
 
 ### **📞 ¿Necesitás ayuda?**
+
+<div id="necesitas-ayuda"></div>
 
 Este proceso es técnico y específico de ARCA. Si tenés dudas, consultá con:
 

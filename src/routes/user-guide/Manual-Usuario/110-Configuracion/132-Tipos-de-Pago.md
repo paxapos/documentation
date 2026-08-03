@@ -1,11 +1,15 @@
 # Tipos de Pago
 
+<div id="tipos-de-pago"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Tipos de Pago**  
 > **¿Quién lo usa?:** Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite administrar la lista de métodos de pago aceptados en la caja (ejemplo: *Efectivo, Tarjeta Débito, Tarjeta Crédito, Mercado Pago, Cuenta Corriente*):
 
@@ -15,11 +19,15 @@ Permite administrar la lista de métodos de pago aceptados en la caja (ejemplo: 
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Configuración de Tabla de Tipos de Pago** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -29,7 +37,12 @@ Permite administrar la lista de métodos de pago aceptados en la caja (ejemplo: 
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Registrar una opción de cobro
+
+<div id="paso-1-registrar-una-opcion-de-cobro"></div>
+
 1. Tocá **Nuevo Tipo de Pago**.
 2. Escribí el nombre (ejemplo: *Voucher Empresa X*).
 3. Tocá **Guardar**.
@@ -37,6 +50,8 @@ Permite administrar la lista de métodos de pago aceptados en la caja (ejemplo: 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

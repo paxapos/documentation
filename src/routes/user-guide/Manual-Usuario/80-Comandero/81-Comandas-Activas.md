@@ -1,11 +1,15 @@
 # Comandas Activas (KDS - Pantalla de Cocina)
 
+<div id="comandas-activas-kds-pantalla-de-cocina"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Comandero** → **General** → **Comandas Activas**  
 > **¿Quién lo usa?:** Cocineros, Barmanes y Jefes de Cocina  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 La pantalla de **Comandas Activas** (Kitchen Display System / KDS) reemplaza las tiras de papel impresas en la cocina por una pantalla táctil interactiva:
 
@@ -17,12 +21,16 @@ La pantalla de **Comandas Activas** (Kitchen Display System / KDS) reemplaza las
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener asignado un puesto de comandero (ejemplo: *Cocina Caliente, Parrilla, Barra*).
 - Tener el permiso de **Operación de Pantalla KDS de Cocina** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Tarjetas: ¿Qué es cada cosa?
+
+<div id="botones-y-tarjetas-que-es-cada-cosa"></div>
 
 | Botón / Elemento | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -35,7 +43,12 @@ La pantalla de **Comandas Activas** (Kitchen Display System / KDS) reemplaza las
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Procesar un pedido en cocina
+
+<div id="paso-1-procesar-un-pedido-en-cocina"></div>
+
 1. Al ingresar un pedido nuevo, sonará la alerta auditiva y la tarjeta aparecerá en pantalla.
 2. Tocá **Iniciar Preparación** para avisar que la cocina está trabajando el plato.
 3. Al finalizar la cocción, tocá **Terminar**. La tarjeta desaparecerá del KDS y se guardará en comandas terminadas.
@@ -43,6 +56,8 @@ La pantalla de **Comandas Activas** (Kitchen Display System / KDS) reemplaza las
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por me puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

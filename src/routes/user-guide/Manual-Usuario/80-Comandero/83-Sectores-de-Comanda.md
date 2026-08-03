@@ -1,11 +1,15 @@
 # Sectores de Comanda
 
+<div id="sectores-de-comanda"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Comandero** → **General** → **Sectores de Comanda**  
 > **¿Quién lo usa?:** Encargados de Operación y Administradores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Permite administrar los sectores geográficos de preparación de alimentos dentro del local (ejemplo: *Cocina Caliente, Cocina Fría, Parrilla, Barra de Tragos, Postres*):
 
@@ -15,11 +19,15 @@ Permite administrar los sectores geográficos de preparación de alimentos dentr
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Configuración de Sectores de Comanda** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+
+<div id="botones-y-pantallas-que-es-cada-cosa"></div>
 
 | Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -29,7 +37,12 @@ Permite administrar los sectores geográficos de preparación de alimentos dentr
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Crear un sector de comanda
+
+<div id="paso-1-crear-un-sector-de-comanda"></div>
+
 1. Tocá el botón **Nuevo Sector**.
 2. Escribí el nombre (ejemplo: *Parrilla Exterior*).
 3. Asigná la impresora o pantalla KDS asociada.
@@ -38,6 +51,8 @@ Permite administrar los sectores geográficos de preparación de alimentos dentr
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

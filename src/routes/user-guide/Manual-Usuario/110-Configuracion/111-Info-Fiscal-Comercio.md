@@ -1,11 +1,15 @@
 # Información Fiscal del Comercio
 
+<div id="informacion-fiscal-del-comercio"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Info Fiscal Comercio**  
 > **¿Quién lo usa?:** Administradores del Comercio y Contadores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Es el asistente de configuración fiscal donde se registran los datos impositivos del comercio ante AFIP/ARCA:
 
@@ -16,11 +20,15 @@ Es el asistente de configuración fiscal donde se registran los datos impositivo
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Poseer el permiso de **Configuración Fiscal y Certificados AFIP** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Campos: ¿Qué es cada cosa?
+
+<div id="botones-y-campos-que-es-cada-cosa"></div>
 
 | Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
 |---|---|---|
@@ -32,7 +40,12 @@ Es el asistente de configuración fiscal donde se registran los datos impositivo
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Configurar los datos fiscales
+
+<div id="paso-1-configurar-los-datos-fiscales"></div>
+
 1. Ingresá el **CUIT** sin guiones.
 2. Seleccioná la **Condición frente al IVA** (ejemplo: *Responsable Inscripto*).
 3. Subí el archivo del **Certificado Digital** y la **Clave Privada**.
@@ -41,6 +54,8 @@ Es el asistente de configuración fiscal donde se registran los datos impositivo
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
