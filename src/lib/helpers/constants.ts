@@ -1,4 +1,3 @@
-import { replaceWithVariables } from './textReplacer';
 import { fileNameToSlug } from '$lib/utils/contentUtils';
 
 export interface SearchableItem {
@@ -91,8 +90,8 @@ export async function searchContent(query: string, limit: number = 8): Promise<S
 				score,
 				preview,
 				href: '/user-guide',
-				title: replaceWithVariables(item.title),
-				type: replaceWithVariables(item.type),
+				title: item.title,
+				type: item.type,
 			});
 		}
 	}

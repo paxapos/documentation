@@ -8,15 +8,7 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
-
-	// Configuración de runtime inyectada via config.js
-	interface Window {
-		__APP_CONFIG__?: {
-			BRAND_NAME: string;
-			SYSTEM_URL: string;
-			COMPANY_NAME: string;
-		};
-	}
 }
 
 export {};
+

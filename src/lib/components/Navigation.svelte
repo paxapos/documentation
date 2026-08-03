@@ -11,31 +11,38 @@
 	let showSearchResults = $state(false);
 	let searchResults: SearchableItem[] = $state([]);
 	let isSearching = $state(false);
-	let searchInputDesktop: HTMLInputElement;
-	let searchInputMobile: HTMLInputElement;
+	let searchInputDesktop = $state<HTMLInputElement>();
+	let searchInputMobile = $state<HTMLInputElement>();
 	let showMobileSearch = $state(false);
 
-	const handleSearch = async (event: Event) => {
+	let searchTimeout: ReturnType<typeof setTimeout>;
+
+	const handleSearch = (event: Event) => {
 		const target = event.target as HTMLInputElement;
 		searchQuery = target.value;
+
+		if (searchTimeout) clearTimeout(searchTimeout);
 
 		if (searchQuery.length < 2) {
 			showSearchResults = false;
 			searchResults = [];
+			isSearching = false;
 			return;
 		}
 
 		isSearching = true;
 		showSearchResults = true;
 
-		try {
-			searchResults = await searchContent(searchQuery, 8);
-		} catch (error) {
-			console.error('Error en búsqueda:', error);
-			searchResults = [];
-		} finally {
-			isSearching = false;
-		}
+		searchTimeout = setTimeout(async () => {
+			try {
+				searchResults = await searchContent(searchQuery, 8);
+			} catch (error) {
+				console.error('Error en búsqueda:', error);
+				searchResults = [];
+			} finally {
+				isSearching = false;
+			}
+		}, 300);
 	};
 
 	const selectSearchResult = (item: SearchableItem) => {
@@ -81,9 +88,9 @@
 			if (showMobileSearch && searchInputMobile) {
 				// Pequeño delay para asegurar que el input esté renderizado
 				setTimeout(() => {
-					searchInputMobile.focus();
+					searchInputMobile?.focus();
 					// Scroll suave hacia el campo de búsqueda
-					searchInputMobile.scrollIntoView({ behavior: 'smooth', block: 'center' });
+					searchInputMobile?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 				}, 100);
 			}
 		} catch (error) {

@@ -16,12 +16,12 @@
 		id: string;
 	}
 
-	const modulesList: ModuleInfo[] = data.modulesList || [];
-	const categoryIconsMap: Record<string, string> = (data.categoryIcons as Record<string, string>) || {};
+	const categoryIconsMap = $derived((data.categoryIcons as Record<string, string>) || {});
 
 	// Agrupar módulos por categoría
-	const groupedModules = $derived(
-		modulesList.reduce(
+	const groupedModules = $derived.by(() => {
+		const modulesList: ModuleInfo[] = data.modulesList || [];
+		return modulesList.reduce(
 			(acc, module) => {
 				if (!acc[module.category]) {
 					acc[module.category] = [];
@@ -30,8 +30,8 @@
 				return acc;
 			},
 			{} as Record<string, ModuleInfo[]>,
-		),
-	);
+		);
+	});
 
 	function navigateToModule(slug: string) {
 		goto(`${base}/user-guide/${slug}`);

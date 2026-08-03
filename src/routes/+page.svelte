@@ -1,10 +1,8 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { onMount } from 'svelte';
 
-	// Redirigir automáticamente al manual de usuario
-	onMount(() => {
+	$effect(() => {
 		goto(`${base}/user-guide`);
 	});
 </script>

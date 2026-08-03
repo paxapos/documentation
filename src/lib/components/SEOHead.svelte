@@ -23,9 +23,9 @@
 		image?: string;
 	} = $props();
 
-	const baseUrl = 'https://paxapos.github.io/documentation';
+	const baseUrl = 'https://doc.paxapos.com';
 	let fullUrl = $derived(url ? `${baseUrl}${url}` : baseUrl);
-	let defaultImage = `${baseUrl}/static/paxapos-social.png`;
+	const defaultImage = `${baseUrl}/paxapos-social.png`;
 	let finalImage = $derived(image || defaultImage);
 
 	const paxaposKeywords =
@@ -82,6 +82,21 @@
 
 		return data;
 	});
+
+	const orgStructuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'PaxaPOS',
+		url: 'https://paxapos.com',
+		logo: `${baseUrl}/favicon.png`,
+		description:
+			'Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina',
+		address: {
+			'@type': 'PostalAddress',
+			addressCountry: 'AR',
+		},
+		sameAs: [baseUrl],
+	};
 </script>
 
 <svelte:head>
@@ -142,19 +157,5 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 
 	<!-- Datos de la organización -->
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "PaxaPOS",
-			"url": "https://paxapos.com",
-			"logo": "{baseUrl}/favicon.png",
-			"description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
-			"address": {
-				"@type": "PostalAddress",
-				"addressCountry": "AR"
-			},
-			"sameAs": ["https://paxapos.github.io/documentation"]
-		}
-	</script>
+	{@html `<script type="application/ld+json">${JSON.stringify(orgStructuredData, null, 2)}</script>`}
 </svelte:head>

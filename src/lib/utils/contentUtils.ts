@@ -25,13 +25,16 @@ export function fileNameToSlug(fileName: string): string {
  * Busca patterns como: <h2>Título</h2><div id="ancla"></div>
  */
 export function addLinkIconsToHeaders(html: string): string {
-	const headerWithIdRegex =
-		/<(h[1-6])>([^<>]*(?:<[^>]+>[^<>]*<\/[^>]+>)*[^<>]*)<\/(h[1-6])>\s*<div id="([^"]+)"><\/div>/g;
+	const headerWithIdRegex = /<(h[1-6])\b([^>]*)>([\s\S]*?)<\/\1>\s*<div id="([^"]+)"><\/div>/gi;
 
 	return html.replace(
 		headerWithIdRegex,
-		(_match, headerTag, titleContent, _closingTag, idValue) => {
-			return `<${headerTag} class="relative">
+		(_match, tag, attrs, titleContent, idValue) => {
+			const existingClass = (attrs.match(/class=["']([^"']+)["']/) || [])[1] || '';
+			const newClass = existingClass ? `${existingClass} relative` : 'relative';
+			const cleanedAttrs = attrs.replace(/class=["']([^"']+)["']/, '');
+
+			return `<${tag}${cleanedAttrs} class="${newClass}">
                 ${titleContent}
                 <button 
                     class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
@@ -41,19 +44,12 @@ export function addLinkIconsToHeaders(html: string): string {
                 >
                     🔗
                 </button>
-            </${headerTag}>
+            </${tag}>
             <div id="${idValue}"></div>`;
 		},
 	);
 }
 
-/**
- * Resalta un término de búsqueda en el HTML renderizado.
- * Limita a maxMatches ocurrencias para evitar sobrecarga visual.
- *
- * NOTA: esta implementación es simple y puede resaltar dentro de atributos HTML.
- * Para un sitio de documentación con contenido controlado esto es aceptable.
- */
 export function highlightTextInHtml(
 	html: string,
 	searchTerm: string,
@@ -65,14 +61,22 @@ export function highlightTextInHtml(
 	const regex = new RegExp(`(${escapedTerm})`, 'gi');
 
 	let matchCount = 0;
+	const parts = html.split(/(<[^>]+>)/g);
 
-	return html.replace(regex, (match) => {
-		if (matchCount >= maxMatches) {
-			return match;
-		}
-		matchCount++;
-		return `<span class="bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium border-b border-gray-400 dark:border-gray-400">${match}</span>`;
-	});
+	return parts
+		.map((part) => {
+			if (part.startsWith('<') && part.endsWith('>')) {
+				return part;
+			}
+			return part.replace(regex, (match) => {
+				if (matchCount >= maxMatches) {
+					return match;
+				}
+				matchCount++;
+				return `<span class="bg-yellow-200 dark:bg-yellow-800 text-gray-900 dark:text-gray-100 px-1 py-0.5 rounded-sm font-medium">${match}</span>`;
+			});
+		})
+		.join('');
 }
 
 /**

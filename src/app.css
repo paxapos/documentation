@@ -1,17 +1,16 @@
 @import 'tailwindcss';
 
-/* Configuración global para modo oscuro/claro automático */
+@source "./**/*.{html,js,svelte,ts}";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Configuración global para modo oscuro/claro */
 :root {
 	color-scheme: light dark;
 }
 
-/* Fallback para navegadores que no soportan prefers-color-scheme */
 html {
 	background-color: white;
-	color: black;
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+	color: rgb(17 24 39);
 }
 
 html.dark {
@@ -19,68 +18,29 @@ html.dark {
 	color: white;
 }
 
-/* Transiciones suaves para todos los elementos que cambian con el tema */
-* {
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease,
-		border-color 0.3s ease;
-}
-
-/* Mejoras para el contenedor global y centrado móvil */
 body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	font-size: 16px; /* Prevenir zoom en iOS */
+	font-size: 16px;
 	-webkit-text-size-adjust: 100%;
 }
 
-/* Contenedor responsive mejorado */
-.container {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+/* Transición suave para cambio de tema en elementos principales */
+body, main, nav, article, aside {
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Responsive breakpoints */
-@media (max-width: 640px) {
-	.container {
-		padding-left: 0;
-		padding-right: 0;
-		margin-left: 0;
-		margin-right: 0;
-		width: 100%;
-		max-width: 100%;
-	}
-}
-
-@media (min-width: 641px) {
-	.container {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-	}
-}
-
-@media (min-width: 1024px) {
-	.container {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-}
-
-/* Estilos base para modo claro */
+/* Estilos base para contenido Markdown */
 .markdown-paxapos {
 	padding: clamp(0.75rem, 3vw, 1.5rem);
 	margin-top: clamp(0.5rem, 2vw, 1.875rem);
 	margin-bottom: clamp(0.5rem, 2vw, 1.875rem);
-	background: transparent; /* Fondo transparente para heredar del contenedor */
-	color: rgb(34 34 34); /* gray-800 para modo claro */
+	background: transparent;
+	color: rgb(34 34 34);
 	border-radius: 8px;
-	/* Sin sombra por defecto para integración más suave */
 	line-height: 1.6;
-	font-family:
-		-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
@@ -95,7 +55,8 @@ body {
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
 	padding-bottom: 0.3em;
-	border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+	border-bottom: 1px solid rgb(209 213 219);
+	color: rgb(17 24 39);
 }
 
 .markdown-paxapos h2 {
@@ -105,7 +66,8 @@ body {
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
 	padding-bottom: 0.3em;
-	border-bottom: 1px solid rgb(209 213 219); /* gray-300 */
+	border-bottom: 1px solid rgb(209 213 219);
+	color: rgb(17 24 39);
 }
 
 .markdown-paxapos h3 {
@@ -114,6 +76,7 @@ body {
 	margin-top: clamp(1rem, 3vw, 1.5rem);
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
+	color: rgb(17 24 39);
 }
 
 .markdown-paxapos h4,
@@ -124,21 +87,22 @@ body {
 	margin-top: clamp(1rem, 3vw, 1.5rem);
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
-}
-
-.markdown-paxapos h1,
-.markdown-paxapos h2,
-.markdown-paxapos h3,
-.markdown-paxapos h4,
-.markdown-paxapos h5,
-.markdown-paxapos h6 {
-	color: rgb(17 24 39); /* gray-900 */
+	color: rgb(17 24 39);
 }
 
 .markdown-paxapos p {
 	margin-top: 0;
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	font-size: clamp(0.875rem, 2vw, 1rem);
+	color: rgb(75 85 99);
+}
+
+.markdown-paxapos ul {
+	list-style-type: disc;
+}
+
+.markdown-paxapos ol {
+	list-style-type: decimal;
 }
 
 .markdown-paxapos ul,
@@ -151,15 +115,7 @@ body {
 .markdown-paxapos li {
 	margin-top: 0.25rem;
 	font-size: clamp(0.875rem, 2vw, 1rem);
-}
-
-.markdown-paxapos li + li {
-	margin-top: 0.25rem;
-}
-
-.markdown-paxapos p,
-.markdown-paxapos li {
-	color: rgb(75 85 99); /* gray-600 */
+	color: rgb(75 85 99);
 }
 
 .markdown-paxapos strong {
@@ -171,56 +127,16 @@ body {
 }
 
 .markdown-paxapos a {
-	color: rgb(37 99 235); /* blue-600 */
+	color: rgb(37 99 235);
 }
 
 .markdown-paxapos a:hover {
-	color: rgb(29 78 216); /* blue-700 */
-}
-
-.markdown-paxapos code {
-	background: rgb(243 244 246); /* gray-100 */
-	color: rgb(17 24 39); /* gray-900 */
-	padding: clamp(2px, 1vw, 4px) clamp(4px, 1.5vw, 6px);
-	border-radius: 4px;
-	border: 1px solid rgb(209 213 219); /* gray-300 */
-	font-size: clamp(0.75rem, 2vw, 0.875rem);
-	font-family: 'Courier New', Courier, monospace;
-}
-
-.markdown-paxapos pre {
-	background: rgb(249 250 251); /* gray-50 */
-	border: 1px solid rgb(209 213 219); /* gray-300 */
-	border-radius: 6px;
-	padding: clamp(12px, 3vw, 16px);
-	margin: clamp(12px, 3vw, 16px) 0;
-	overflow-x: auto;
-	font-size: clamp(0.75rem, 2vw, 0.875rem);
-}
-
-/* Responsive para código en móviles */
-@media (max-width: 768px) {
-	.markdown-paxapos pre {
-		border-radius: 4px;
-		padding: 12px;
-		margin: 12px 0;
-	}
-
-	.markdown-paxapos code {
-		font-size: 0.75rem;
-		padding: 2px 4px;
-	}
-}
-
-.markdown-paxapos pre code {
-	background: transparent;
-	border: none;
-	padding: 0;
+	color: rgb(29 78 216);
 }
 
 .markdown-paxapos blockquote {
-	border-left: 4px solid rgb(156 163 175); /* gray-400 */
-	background: rgb(243 244 246 / 0.5); /* gray-100 con transparencia */
+	border-left: 4px solid rgb(156 163 175);
+	background: rgb(243 244 246 / 0.5);
 	margin: clamp(12px, 3vw, 16px) 0;
 	padding: clamp(8px, 3vw, 12px) clamp(12px, 4vw, 20px);
 	border-radius: 0 6px 6px 0;
@@ -228,46 +144,65 @@ body {
 	line-height: 1.5;
 }
 
-/* Responsive para blockquotes en móviles */
-@media (max-width: 768px) {
-	.markdown-paxapos blockquote {
-		margin-left: 0;
-		margin-right: 0;
-		padding: 12px 16px;
-		border-radius: 0 4px 4px 0;
-	}
+/* Código Inline */
+.markdown-paxapos :not(pre) > code {
+	background-color: rgb(243 244 246);
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.25rem;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 0.875rem;
+	color: rgb(220 38 38);
+	border: 1px solid rgb(229 231 235);
 }
 
-/* === TABLAS SIMPLES (SIN RESPONSIVIDAD) === */
+/* Bloques de código (ASCII Art, Code Blocks) */
+.markdown-paxapos pre {
+	background-color: rgb(248 250 252);
+	color: rgb(31 41 55);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+	font-family: 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	border: 1px solid rgb(229 231 235);
+	white-space: pre;
+}
 
-/* Contenedor wrapper para tablas responsive */
+.markdown-paxapos pre code {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	box-shadow: none;
+}
+
+/* Wrapper y estilos para tablas */
 .markdown-paxapos .table-wrapper {
 	width: 100%;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	margin: clamp(16px, 4vw, 24px) 0;
 	border-radius: 8px;
-	box-shadow:
-		0 1px 3px 0 rgb(0 0 0 / 0.1),
-		0 1px 2px -1px rgb(0 0 0 / 0.1);
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
 }
 
-/* Tablas básicas para casos donde aún aparezcan */
 .markdown-paxapos table {
 	border-collapse: collapse;
 	width: 100%;
-	margin: 0; /* Remove margin since wrapper handles it */
-	background: rgb(255 255 255); /* bg-white */
+	margin: 0;
+	background: rgb(255 255 255);
 	border-radius: 8px;
 	overflow: hidden;
-	border: 1px solid rgb(229 231 235); /* gray-200 */
+	border: 1px solid rgb(229 231 235);
 	font-size: 0.875rem;
 	min-width: 100%;
 }
 
 .markdown-paxapos th,
 .markdown-paxapos td {
-	border: 1px solid rgb(229 231 235); /* gray-200 */
+	border: 1px solid rgb(229 231 235);
 	padding: clamp(8px, 2.5vw, 12px) clamp(12px, 3vw, 16px);
 	text-align: left;
 	vertical-align: top;
@@ -276,365 +211,93 @@ body {
 }
 
 .markdown-paxapos th {
-	background: transparent; /* Antes: rgb(248 250 252) */
-	color: rgb(15 23 42); /* slate-900 */
+	background: transparent;
+	color: rgb(15 23 42);
 	font-weight: 600;
 	font-size: clamp(0.75rem, 2.5vw, 0.875rem);
-	border-bottom: 2px solid rgb(229 231 235); /* Borde más grueso para separar */
+	border-bottom: 2px solid rgb(229 231 235);
 }
 
 .markdown-paxapos td {
-	background: transparent; /* Antes: bg-white */
-	color: rgb(51 65 85); /* slate-700 */
+	background: transparent;
+	color: rgb(51 65 85);
 }
 
-/* Modo oscuro para tablas */
-.dark .markdown-paxapos table {
-	background: transparent; /* Antes: gray-800 */
-	border: 1px solid rgb(75 85 99); /* gray-600 */
-}
-
-.dark .markdown-paxapos th,
-.dark .markdown-paxapos td {
-	border: 1px solid rgb(75 85 99); /* gray-600 */
-}
-
-.dark .markdown-paxapos th {
-	background: transparent; /* Antes: gray-700 */
-	color: rgb(243 244 246); /* gray-100 */
-	border-bottom: 2px solid rgb(75 85 99); /* Separador */
-}
-
-.dark .markdown-paxapos td {
-	background: rgb(31 41 55); /* gray-800 */
-	color: rgb(209 213 219); /* gray-300 */
-}
-
-/* Modo oscuro para texto markdown general */
+/* Modo oscuro para Markdown */
 .dark .markdown-paxapos h1,
 .dark .markdown-paxapos h2,
 .dark .markdown-paxapos h3,
 .dark .markdown-paxapos h4,
 .dark .markdown-paxapos h5,
 .dark .markdown-paxapos h6 {
-	color: rgb(243 244 246); /* gray-100 */
-	border-bottom-color: rgb(75 85 99); /* gray-600 */
+	color: rgb(243 244 246);
+	border-bottom-color: rgb(75 85 99);
 }
 
 .dark .markdown-paxapos p,
 .dark .markdown-paxapos li {
-	color: rgb(209 213 219); /* gray-300 */
+	color: rgb(209 213 219);
 }
 
 .dark .markdown-paxapos strong {
-	color: rgb(243 244 246); /* gray-100 */
+	color: rgb(243 244 246);
 }
 
 .dark .markdown-paxapos a {
-	color: rgb(96 165 250); /* blue-400 */
+	color: rgb(96 165 250);
 }
 
 .dark .markdown-paxapos a:hover {
-	color: rgb(147 197 253); /* blue-300 */
-}
-
-/* === ESTILOS PARA CÓDIGO === */
-
-/* Código en línea (inline) */
-.markdown-paxapos :not(pre) > code {
-	background-color: rgb(243 244 246); /* gray-100 */
-	padding: 0.2rem 0.4rem;
-	border-radius: 0.25rem;
-	font-family:
-		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-		monospace;
-	font-size: 0.875rem;
-	color: rgb(220 38 38); /* red-600 */
-	border: 1px solid rgb(229 231 235); /* gray-200 */
-}
-
-/* Bloques de código (ASCII Art, Code Blocks) */
-.markdown-paxapos pre {
-	background-color: rgb(248 250 252); /* gray-50 (Fondo claro por defecto) */
-	color: rgb(31 41 55); /* gray-800 */
-	padding: 1rem;
-	border-radius: 0.5rem;
-	overflow-x: auto;
-	font-family:
-		'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
-		monospace; /* Fuentes con ligaduras y buen soporte ASCII */
-	font-size: 0.875rem;
-	line-height: 1.5;
-	border: 1px solid rgb(229 231 235); /* gray-200 */
-	white-space: pre; /* Mantiene formato exacto */
-}
-
-/* El código DENTRO del bloque pre debe ser transparente y sin estilos extra */
-.markdown-paxapos pre code {
-	background-color: transparent !important;
-	border: none !important;
-	padding: 0 !important;
-	color: inherit !important; /* Hereda el blanco del pre */
-	font-family: inherit !important;
-	box-shadow: none !important;
-}
-
-/* Modo oscuro ajustes (aunque forzamos dark en pre, ajustamos inline) */
-.dark .markdown-paxapos :not(pre) > code {
-	background-color: rgb(55 65 81); /* gray-700 */
-	color: rgb(248 113 113); /* red-400 */
-	border-color: rgb(75 85 99); /* gray-600 */
-}
-
-/* Asegurar texto blanco en code block dark mode y fondo oscuro */
-.dark .markdown-paxapos pre,
-.dark .markdown-paxapos pre code {
-	background-color: rgb(15 23 42) !important; /* slate-900 */
-	color: rgb(248 250 252) !important; /* gray-50 */
-	border-color: rgb(51 65 85); /* slate-700 */
+	color: rgb(147 197 253);
 }
 
 .dark .markdown-paxapos blockquote {
-	border-left-color: rgb(107 114 128); /* gray-500 */
-	background: rgb(55 65 81 / 0.5); /* gray-700 transparent */
-	color: rgb(209 213 219); /* gray-300 */
+	border-left-color: rgb(107 114 128);
+	background: rgb(55 65 81 / 0.5);
+	color: rgb(209 213 219);
 }
 
-/* Garantizar que las transiciones funcionen en todos los navegadores */
-@supports (color-scheme: dark) {
-	:root {
-		color-scheme: light dark;
-	}
+.dark .markdown-paxapos :not(pre) > code {
+	background-color: rgb(55 65 81);
+	color: rgb(248 113 113);
+	border-color: rgb(75 85 99);
 }
 
-/* Fallback para navegadores muy antiguos */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-	html.dark {
-		background-color: #111827 !important;
-		color: white !important;
-	}
-
-	html:not(.dark) {
-		background-color: white !important;
-		color: black !important;
-	}
+.dark .markdown-paxapos pre {
+	background-color: rgb(15 23 42);
+	color: rgb(248 250 252);
+	border-color: rgb(51 65 85);
 }
 
-/* Dark mode para .markdown-paxapos se maneja via la clase .dark del html (ver theme.ts) */
-/* Los estilos dark: de Tailwind y .dark .markdown-paxapos se encargan de esto */
-
-/* Correcciones manuales para el layout principal en modo oscuro */
-.dark main {
-	background-color: rgb(17 24 39) !important; /* gray-900 force */
+.dark .markdown-paxapos table {
+	background: transparent;
+	border: 1px solid rgb(75 85 99);
 }
 
-.dark .min-h-screen {
-	background-color: rgb(17 24 39) !important; /* gray-900 force */
+.dark .markdown-paxapos th,
+.dark .markdown-paxapos td {
+	border: 1px solid rgb(75 85 99);
 }
 
-/* ==========================================
- * MEJORAS RESPONSIVE MÓVIL - CENTRADO Y LAYOUT
- * ========================================== */
+.dark .markdown-paxapos th {
+	color: rgb(243 244 246);
+	border-bottom: 2px solid rgb(75 85 99);
+}
 
-/* Mejoras específicas para dispositivos móviles */
+.dark .markdown-paxapos td {
+	background: rgb(31 41 55);
+	color: rgb(209 213 219);
+}
+
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-	/* Asegurar contenido centrado en móvil */
-	body {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		overflow-x: hidden;
-	}
-
-	/* Contenedor principal mobile-first */
-	main {
-		width: 100%;
-		max-width: 100vw;
-		margin: 0;
-		padding: 0;
-		overflow-x: hidden;
-	}
-
-	/* Contenedor interno centrado */
-	.container {
-		width: 100%;
-		max-width: 100%;
-		margin: 0;
-		padding-left: 0;
-		padding-right: 0;
-		box-sizing: border-box;
-	}
-
-	/* Mejoras para markdown container */
 	.markdown-paxapos {
-		width: 100%;
-		max-width: 100%;
-		margin-left: 0;
-		margin-right: 0;
 		padding: 0.75rem;
-		box-sizing: border-box;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-		hyphens: auto;
 	}
 
-	/* Títulos optimizados para móvil */
-	.markdown-paxapos h1 {
-		font-size: 1.5rem;
-		line-height: 1.3;
-		margin-bottom: 0.75rem;
-		word-break: break-word;
-	}
-
-	.markdown-paxapos h2 {
-		font-size: 1.25rem;
-		line-height: 1.3;
-		margin-top: 1rem;
-		margin-bottom: 0.5rem;
-		word-break: break-word;
-	}
-
-	.markdown-paxapos h3 {
-		font-size: 1.125rem;
-		line-height: 1.3;
-		margin-top: 0.75rem;
-		margin-bottom: 0.5rem;
-	}
-
-	/* Párrafos móvil */
-	.markdown-paxapos p {
-		font-size: 0.875rem;
-		line-height: 1.6;
-		margin-bottom: 0.75rem;
-		word-wrap: break-word;
-		hyphens: auto;
-	}
-
-	/* Listas móvil */
-	.markdown-paxapos ul,
-	.markdown-paxapos ol {
-		padding-left: 1.25rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.markdown-paxapos li {
-		font-size: 0.875rem;
-		line-height: 1.5;
-		margin-top: 0.25rem;
-		word-wrap: break-word;
-	}
-
-	/* Código móvil */
-	.markdown-paxapos pre {
-		font-size: 0.75rem;
-		padding: 0.75rem;
-		margin: 0.75rem 0;
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.markdown-paxapos code {
-		font-size: 0.75rem;
-		padding: 2px 4px;
-	}
-
-	/* Tablas responsive */
-	.markdown-paxapos .table-wrapper {
-		margin: 0.75rem 0;
-		border-radius: 6px;
-	}
-
-	.markdown-paxapos table {
-		font-size: 0.75rem;
-		border-radius: 6px;
-	}
-
-	.markdown-paxapos th,
-	.markdown-paxapos td {
-		padding: 6px 8px;
-		font-size: 0.75rem;
-	}
-
-	/* Imágenes responsive */
-	.markdown-paxapos img {
-		max-width: 100%;
-		height: auto;
-		display: block;
-		margin: 0.75rem auto;
-	}
-
-	/* Elementos interactivos móviles */
-	button,
-	[role='button'],
-	input,
-	textarea {
-		min-height: 44px; /* iOS touch target minimum */
-		font-size: 16px; /* Prevent zoom on iOS */
-	}
-}
-
-/* Mejoras para pantallas muy pequeñas */
-@media (max-width: 480px) {
-	.container {
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-	}
-
-	.markdown-paxapos {
-		padding: 0.5rem;
-		margin-top: 0.25rem;
-		margin-bottom: 0.25rem;
-	}
-
-	.markdown-paxapos h1 {
-		font-size: 1.25rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.markdown-paxapos h2 {
-		font-size: 1.125rem;
-		margin-top: 0.75rem;
-		margin-bottom: 0.375rem;
-	}
-
-	.markdown-paxapos p {
-		font-size: 0.875rem;
-		line-height: 1.5;
-		margin-bottom: 0.5rem;
-	}
-
-	/* Tablas en pantallas muy pequeñas */
-	.markdown-paxapos .table-wrapper {
-		margin: 0.5rem 0;
-		border-radius: 4px;
-	}
-
-	.markdown-paxapos table {
-		font-size: 0.6875rem; /* 11px */
-		border-radius: 4px;
-	}
-
-	.markdown-paxapos th,
-	.markdown-paxapos td {
-		padding: 4px 6px;
-		font-size: 0.6875rem;
-	}
-}
-
-/* Mejoras para dispositivos con hover limitado (touch) */
-@media (hover: none) and (pointer: coarse) {
-	/* Elementos clickeables más grandes */
-	.btn,
-	.link,
-	[role='button'] {
-		padding: 12px 16px;
-		margin: 4px;
-		min-height: 44px;
-		min-width: 44px;
-	}
-
-	/* Eliminar efectos hover problemáticos en touch */
-	.markdown-paxapos a:hover {
-		color: inherit;
-	}
+	.markdown-paxapos h1 { font-size: 1.5rem; }
+	.markdown-paxapos h2 { font-size: 1.25rem; }
+	.markdown-paxapos h3 { font-size: 1.125rem; }
+	.markdown-paxapos p, .markdown-paxapos li { font-size: 0.875rem; }
+	.markdown-paxapos pre, .markdown-paxapos code { font-size: 0.75rem; }
 }
