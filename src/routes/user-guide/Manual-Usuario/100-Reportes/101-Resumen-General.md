@@ -1,11 +1,15 @@
 # Resumen General de Ventas
 
+<div id="resumen-general-de-ventas"></div>
+
 > **¿Dónde está en el sistema?:** Menú principal → **Reportes** → **Análisis Ventas** → **Resumen General**  
 > **¿Quién lo usa?:** Dueños de Local, Gerentes y Contadores  
 
 ---
 
 ## 🎯 ¿Qué es y para qué sirve esta pantalla?
+
+<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
 Ofrece un tablero de indicadores ejecutivos con la facturación total y métricas principales del comercio:
 
@@ -16,11 +20,15 @@ Ofrece un tablero de indicadores ejecutivos con la facturación total y métrica
 
 ## 🔑 Requisitos para empezar a usarlo
 
+<div id="requisitos-para-empezar-a-usarlo"></div>
+
 - Tener el permiso de **Acceso a Tablero de Control y KPIs de Ventas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
 ## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+
+<div id="botones-y-filtros-que-es-cada-cosa"></div>
 
 | Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
 |---|---|---|
@@ -31,13 +39,20 @@ Ofrece un tablero de indicadores ejecutivos con la facturación total y métrica
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
 
+<div id="guia-paso-a-paso-como-se-usa"></div>
+
 ### Paso 1: Analizar la facturación del día o mes
+
+<div id="paso-1-analizar-la-facturacion-del-dia-o-mes"></div>
+
 1. Seleccioná el rango de fechas en el filtro superior.
 2. Revisá las tarjetas de totales: **Ventas Totales**, **Ticket Promedio** y **Cantidad de Mesas**.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
