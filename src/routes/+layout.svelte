@@ -26,8 +26,6 @@
 		</div>
 	</main>
 
-	<!-- ChatBot simple y optimizado -->
-	<ChatBotSimple />
 </div>
 
 <style>
