@@ -136,6 +136,43 @@ function generateUrls() {
 	console.log(`🌐 URLs generado: ${urlsPath}`);
 }
 
+function generateGlossaryTxt() {
+	const glossaryPath = join(process.cwd(), 'scripts', 'ai-domain-glossary.json');
+	if (!existsSync(glossaryPath)) return null;
+
+	try {
+		const raw = readFileSync(glossaryPath, 'utf8');
+		const data = JSON.parse(raw);
+
+		let content = `# ${data.system} - Glosario Categórico del Dominio (IA GEO)\n\n`;
+		content += `${data.description}\n\n`;
+
+		for (const entity of data.entities) {
+			content += `=== Entidad: ${entity.name} (${entity.category}) ===\n`;
+			content += `Definición: ${entity.definition}\n`;
+			content += `Prerrequisito Bloqueante: ${entity.blocking_prerequisites}\n`;
+			content += `Estados Válidos: ${entity.states.join(', ')}\n\n`;
+		}
+
+		const txtName = 'glosario-del-dominio.txt';
+		const txtPath = join(LLM_DIR, txtName);
+		safeWriteFile(txtPath, content, true);
+		console.log(`📖 Glosario de IA generado: ${txtPath}`);
+
+		return {
+			txtName,
+			originalMd: '05-Glosario-del-Dominio',
+			title: 'Glosario Categórico del Dominio PaxaPOS',
+			path: glossaryPath,
+			content: content,
+			cleanContent: content,
+		};
+	} catch (err) {
+		console.warn('⚠️ No se pudo generar el glosario de IA:', err.message);
+		return null;
+	}
+}
+
 function cleanOrphans(processedFiles) {
 	if (!existsSync(LLM_DIR)) return;
 
@@ -167,8 +204,12 @@ function main() {
 	const mdFiles = discoverFiles();
 	if (mdFiles.length === 0) return;
 
-	// Limpiar huérfanos antes de generar
 	const processedFiles = mdFiles.map(processFile).filter(Boolean);
+	const glossaryFile = generateGlossaryTxt();
+	if (glossaryFile) {
+		processedFiles.unshift(glossaryFile);
+	}
+
 	cleanOrphans(processedFiles);
 
 	// Generar todo
@@ -181,3 +222,4 @@ function main() {
 }
 
 main();
+

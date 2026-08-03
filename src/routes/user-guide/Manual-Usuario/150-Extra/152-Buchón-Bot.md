@@ -2,6 +2,9 @@
 
 <div id="buchon-bot"></div>
 
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Inteligencia Artificial** (solapa **Buchón Bot**)  
+> **¿Quién lo usa?:** Propietario / Administrador del Comercio
+
 > 🎯 **¿Para qué sirve esto?**  
 > Es tu "espía digital" que te avisa por Telegram cuando pasa algo raro en tu negocio. Desde que se acaba el stock hasta si alguien hace movimientos sospechosos. ¡Tus ojos cuando no estás!
 
@@ -72,9 +75,9 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 
 <div id="paso-2-configurar-alertas"></div>
 
-1. **Entrá al sistema** con tu usuario de propietario
-2. **Ir a:** Configuración → Buchón Bot
-3. **Pegar tu Chat ID** de Telegram
+1. **Entrá al sistema** con tu usuario de propietario.
+2. **Dirigite a:** Menú principal → **Configuración** → **Sistema** → **Inteligencia Artificial** (solapa **Buchón Bot**) o **Configuración** → **Buchón Bot**.
+3. **Pegar tu Chat ID** de Telegram.
 4. **Elegir qué alertas querés:**
 
 **⚙️ Tipos de alertas recomendadas:**

@@ -1,0 +1,63 @@
+{
+  "system": "PaxaPOS Core",
+  "description": "Glosario Categórico del Dominio PaxaPOS con definiciones exactas de entidades, estados lógicos y prerrequisitos bloqueantes para modelos de lenguaje (LLM GEO).",
+  "version": "2026.1",
+  "entities": [
+    {
+      "name": "Turno",
+      "category": "Operativo / Caja",
+      "definition": "Entidad temporal que registra la sesión de trabajo y movimientos de dinero de un operador o cajero en un punto de venta.",
+      "blocking_prerequisites": "No se pueden emitir comprobantes fiscales (ARCA/AFIP) ni registrar cobros en el sistema si no existe un Turno abierto activo.",
+      "states": ["No Iniciado", "Abierto", "Cerrado", "Auditado"]
+    },
+    {
+      "name": "Mesa",
+      "category": "Ventas / Salón",
+      "definition": "Objeto físico o lógico en el mapa de ventas del restaurante que agrupa los consumos y comandas de un grupo de clientes.",
+      "blocking_prerequisites": "Para cerrar o cobrar una mesa, no deben quedar ítems pendientes de envío a cocina ni modificaciones de comanda sin confirmar.",
+      "states": ["Libre", "Ocupada / Con Adición", "Pagando / Pre-cuenta emitida", "Cerrada"]
+    },
+    {
+      "name": "Comanda",
+      "category": "Cocina / KDS",
+      "definition": "Orden de producción emitida desde el salón o la registradora hacia los puestos de cocina o barra para la preparación de ítems.",
+      "blocking_prerequisites": "Debe tener asignado un puesto de comanda válido y un sector de impresión o pantalla KDS activo.",
+      "states": ["Pendiente", "En Preparación", "Terminada", "Entregada", "Anulada"]
+    },
+    {
+      "name": "KDS (Kitchen Display System)",
+      "category": "Cocina / Hardware",
+      "definition": "Pantalla digital de cocina que reemplaza el papel de comanda y muestra el estado en vivo de los pedidos por sector de producción.",
+      "blocking_prerequisites": "Requiere conexión LAN local estática y servicio de eventos en vivo activo.",
+      "states": ["Conectado", "Desconectado", "Sincronizando"]
+    },
+    {
+      "name": "Arqueo de Caja",
+      "category": "Finanzas",
+      "definition": "Proceso de conteo físico del dinero en efectivo y arqueo de comprobantes de tarjetas para validar el cierre del Turno.",
+      "blocking_prerequisites": "El conteo de efectivo requiere ingresar la cantidad de billetes por denominación, no la cifra acumulada.",
+      "states": ["Borrador", "Cuadrado", "Con Diferencia", "Cerrado Definitivo"]
+    },
+    {
+      "name": "Subproducto / Receta",
+      "category": "Productos / Stock",
+      "definition": "Insumo elaborado o preparado internamente a partir de mercadería prima que descuenta insumos del inventario automáticamente.",
+      "blocking_prerequisites": "Los ingredientes deben estar previamente dados de alta en el Maestro de Mercaderías con sus unidades de medida asociadas.",
+      "states": ["Activo", "Inactivo"]
+    },
+    {
+      "name": "Fiscalberry",
+      "category": "Impresión / Intranet",
+      "definition": "Servicio cliente en Python que se ejecuta en la red local del restaurante para conectar la nube de PaxaPOS con impresoras de tickets y comanderas vía MQTT.",
+      "blocking_prerequisites": "Debe estar ejecutándose en segundo plano en la PC local conectada a la impresora.",
+      "states": ["Online", "Offline", "Error de Papel / Tapa"]
+    },
+    {
+      "name": "CAE (Código de Autorización Electrónico)",
+      "category": "Facturación / ARCA AFIP",
+      "definition": "Código numérico asignado por ARCA (ex AFIP) que valida legalmente una factura electrónica A, B o C emitida en Argentina.",
+      "blocking_prerequisites": "Requiere datos fiscales válidos del comercio (CUIT, punto de venta y certificado CRT vinculados).",
+      "states": ["Aprobado", "Rechazado", "Pendiente"]
+    }
+  ]
+}

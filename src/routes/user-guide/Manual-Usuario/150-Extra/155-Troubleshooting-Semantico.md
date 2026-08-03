@@ -1,0 +1,130 @@
+# 📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)
+
+> **¿Dónde está en el sistema?:** Menú principal → **Ayuda** → **Resolución de Problemas**  
+> **¿Quién lo usa?:** Cajeros, Mozos, Cocineros, Encargados y Dueños de local
+
+---
+
+## 🎯 ¿Para qué sirve esta guía?
+
+Esta es la guía definitiva de soluciones a problemas en PaxaPOS. Si en la pantalla te aparece un mensaje de error, si una impresora no saca ticket, o si la pantalla de la cocina no recibe los pedidos, buscá acá el error exacto. Cada problema tiene su **enlace directo** que podés copiar y enviar a tu equipo o a soporte técnico.
+
+---
+
+## 🔑 Requisitos antes de revisar un error
+
+- [ ] Tener acceso a la pantalla donde ocurrió el problema (celular, tablet, computadora o POS).
+- [ ] Verificar que el equipo esté encendido y conectado a la red Wi-Fi o cable de red del local.
+- [ ] Verificar que la caja tenga un **Turno Abierto** con usuario activo.
+
+---
+
+## 🚨 Índice Directo de Errores Comunes
+
+Toca cualquier error para ir directamente a su solución:
+
+- [1. Error de AFIP / ARCA al emitir factura (AFIP Timeout / Error 500)](#error-afip-arca)
+- [2. La pantalla de cocina (KDS) no recibe las comandas](#error-kds-desconectado)
+- [3. El Posnet / Terminal Payway no responde o dice Sin Conexión](#error-payway-terminal)
+- [4. La impresora de comandas o de tickets no imprime](#error-impresora-comandera)
+- [5. No puedo cerrar la mesa porque da error de Turno o Caja](#error-turno-no-abierto)
+- [6. MercadoPago QR no genera el código en la pantalla](#error-mercadopago-qr)
+- [7. Error de credenciales o clave incorrecta al iniciar sesión](#error-login-credenciales)
+- [8. El lector de huella o fichaje de personal no reconoce al empleado](#error-fichaje-empleado)
+
+---
+
+## 🛠️ Matriz de Solución de Errores
+
+---
+
+### <a id="error-afip-arca"></a> 1. Error de Facturación Electrónica ARCA / AFIP (`ERR_AFIP_TIMEOUT`)
+
+<div id="error-afip-arca"></div>
+
+| ¿Qué ves en la pantalla?                                            | ¿Por qué sucede esto?                                                                                | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                       | ¿Cómo comprobar que se arregló?                                                                                                                                                                         | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                                             |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| _"Error de comunicación con ARCA/AFIP"_ o _"AFIP Timeout (5000ms)"_ | El servicio del gobierno (ARCA/AFIP) está demorado o el local se quedó momentáneamente sin internet. | 1. Revisá que la computadora o tablet tenga internet (abriendo cualquier página web en el navegador).<br>2. Esperá 1 minuto y tocá el botón **Reintentar Facturar**.<br>3. Si el sistema te ofrece emitir **Comprobante X / Ticket Interno**, aceptalo para no demorar al cliente. La factura quedará guardada para enviarse automáticamente cuando vuelva el servicio. | En el menú **Finanzas** → **Facturación AFIP** → **Tickets Fiscales** (o en el histórico de **Ventas** → **Salón de Ventas**), verás que el ticket cambia al estado **Facturado** con su número de CAE. | _"Hola Soporte, me sale error de AFIP al facturar. Ya revisé que tengo internet en el local pero sigue rebotando las facturas en pendientes."_ |
+
+---
+
+### <a id="error-kds-desconectado"></a> 2. La pantalla de cocina (KDS) no recibe los pedidos (`KDS_DISCONNECTED`)
+
+<div id="error-kds-desconectado"></div>
+
+| ¿Qué ves en la pantalla?                                                                                          | ¿Por me sucede esto?                                                                                                           | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                                                         | ¿Cómo comprobar que se arregló?                                                                                                                                                                                                   | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mensaje rojo _"Pantalla de cocina sin conexión"_ o los mozos envían comanda y no aparece en el monitor de cocina. | Se interrumpió el cable de red o la conexión Wi-Fi entre la tablet/pantalla de la cocina y el sistema central del restaurante. | 1. En la pantalla de la cocina (**Comandero** → **General** → **Comandas Activas**), tocá el botón **Recargar Pantalla** o reiniciá la aplicación de la tablet.<br>2. Verificá que la tablet o TV de la cocina esté conectada al Wi-Fi del local.<br>3. Desde la administración, verificá en **Menú principal** → **Comandero** → **General** → **Puestos de Comanda** que el monitor esté bien asignado. | En la esquina superior de la pantalla de cocina (**Comandero** → **General** → **Comandas Activas**) aparecerá un punto verde con la leyenda **Conectado en Vivo**. Hacé una comanda de prueba desde la caja para ver si aparece. | _"Hola Soporte, la pantalla de cocina no recibe comandas. Ya reiniciamos la tablet y el Wi-Fi, pero sigue apareciendo el cartel rojo sin conexión."_ |
+
+---
+
+### <a id="error-payway-terminal"></a> 3. El Posnet / Terminal Payway no responde (`PAYWAY_TERMINAL_OFFLINE`)
+
+<div id="error-payway-terminal"></div>
+
+| ¿Qué ves en la pantalla?                                                                   | ¿Por qué sucede esto?                                                                                  | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                                                                   | ¿Cómo comprobar que se arregló?                                                                                             | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                              |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| _"No se pudo conectar con la terminal Payway"_ o _"Cobro cancelado por tiempo de espera"_. | El posnet físico está apagado, sin batería, fuera de la base cargadora o desconectado de la red Wi-Fi. | 1. Verificá que el Posnet Payway esté encendido y con pantalla activa.<br>2. Si es por Wi-Fi, asegurate de que tenga señal.<br>3. En PaxaPOS (**Ventas** → **Salón de Ventas**), tocá **Reintentar Cobro con Payway**.<br>4. Si requerís verificar la terminal o realizar cobro manual, consultá **Menú principal** → **Medios de Pago** → **Prisma Payway** → **Terminales de Pago** (o **Transacciones Payway**). | Al presionar **Cobrar**, la terminal Payway se iluminará automáticamente pidiendo que el cliente acerque o pase su tarjeta. | _"Hola Soporte, PaxaPOS no se envía a la terminal Payway. Ya reiniciamos la terminal pero el sistema no se conecta al posnet."_ |
+
+---
+
+### <a id="error-impresora-comandera"></a> 4. La impresora de comandas o de tickets no imprime (`PRINTER_NOT_FOUND`)
+
+<div id="error-impresora-comandera"></div>
+
+| ¿Qué ves en la pantalla?                                                                                 | ¿Por qué sucede esto?                                                                                                                     | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                        | ¿Cómo comprobar que se arregló?                                                                 | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                                            |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cartel en rojo _"Error al enviar a impresora"_ o la comanda queda en estado enviando sin salir en papel. | La impresora se quedó sin papel, tiene la tapa abierta, el cable de red/USB se desconectó, o el programa Fiscalberry de la caja se cerró. | 1. Revisá que la impresora tenga rollo de papel térmico colocado correctamente y la luz esté en verde.<br>2. Revisá que el cable de energía y red/USB estén bien firmes.<br>3. Verificá la configuración en **Menú principal** → **Configuración** → **Impresoras** → **Impresoras** (y **Config de Impresión**).<br>4. Tocá el botón **Reimprimir Comanda** en PaxaPOS. | La impresora emitirá un pitido o sacará inmediatamente el ticket de prueba/comanda reintentada. | _"Hola Soporte, la impresora de cocina no saca papel. Tiene rollo nuevo y luz verde, pero desde PaxaPOS nos dice 'Impresora no encontrada'."_ |
+
+---
+
+### <a id="error-turno-no-abierto"></a> 5. No puedo cerrar la mesa porque da error de Turno o Caja (`NO_OPEN_SHIFT`)
+
+<div id="error-turno-no-abierto"></div>
+
+| ¿Qué ves en la pantalla?                                                            | ¿Por qué sucede esto?                                                                                              | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                               | ¿Cómo comprobar que se arregló?                                                                                                                | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| _"No se puede emitir cobro: No existe un turno abierto para este cajero/operador"_. | Intentás cobrar una mesa o registrar una venta sin haber abierto primero el turno o la caja diaria con tu usuario. | 1. Dirigite a **Menú principal** → **Finanzas** → **Caja** → **Arqueos de Caja**.<br>2. Ingresá el monto de dinero inicial (monto de cambio o caja chica) y tocá **Abrir Turno**.<br>3. Regresá a **Ventas** → **Salón de Ventas** y presioná **Cobrar** nuevamente en la mesa correspondiente. | El sistema te dejará ingresar a la pantalla de cobro y seleccionar los medios de pago (efectivo, débito, MP) sin mostrar el cartel de bloqueo. | _"Hola Soporte, intento cobrar una mesa y me dice que no hay turno abierto, pero ya hice la apertura de caja hoy temprano."_ |
+
+---
+
+### <a id="error-mercadopago-qr"></a> 6. MercadoPago QR no genera el código en la pantalla (`MP_QR_GENERATE_ERROR`)
+
+<div id="error-mercadopago-qr"></div>
+
+| ¿Qué ves en la pantalla?                                                                       | ¿Por qué sucede esto?                                                                                       | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                                                    | ¿Cómo comprobar que se arregló?                                                                      | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                          |
+| ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| _"Error al generar código QR de MercadoPago"_ o la pantalla gira infinitamente cargando el QR. | La cuenta de MercadoPago del restaurante requiere revalidación o hubo un microcorte de internet en la caja. | 1. Tocá el botón **Cancelar** en la ventana de cobro.<br>2. Verificá que la computadora tenga internet.<br>3. Seleccioná nuevamente **Cobrar con MercadoPago QR**.<br>4. Si el problema persiste, revisá la vinculación en **Menú principal** → **Medios de Pago** → **General** → **Configuración de Procesadores** (o en **Configuración** → **Sistema** → **Módulo Delivery** / **MercadoPago**). | Aparecerá en la pantalla el código QR cuadrado con el monto exacto de la cuenta listo para escanear. | _"Hola Soporte, al elegir cobro con QR MercadoPago se queda cargando y dice error de token o vinculación."_ |
+
+---
+
+### <a id="error-login-credenciales"></a> 7. Error de credenciales o clave incorrecta al iniciar sesión (`AUTH_INVALID_CREDENTIALS`)
+
+<div id="error-login-credenciales"></div>
+
+| ¿Qué ves en la pantalla?                                           | ¿Por qué sucede esto?                                                                                                                | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                                                                                             | ¿Cómo comprobar que se arregló?                                                                            | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                                       |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| _"Usuario o contraseña incorrectos"_ o _"PIN de acceso inválido"_. | Se ingresó una letra en mayúscula sin querer (bloq mayús), un espacio extra o el PIN numérico no coincide con el perfil del usuario. | 1. Verificá la tecla **Bloq Mayús** de tu teclado.<br>2. Escribí tu nombre de usuario y contraseña lentamente.<br>3. Si usás ingreso por PIN de 4 dígitos, asegurate de seleccionar tu nombre de la lista de operadores primero.<br>4. Si olvidaste tu clave, pedile al Administrador que te asigne una nueva ingresando a **Menú principal** → **Configuración** → **Acceso/Seguridad** → **Usuarios del Sistema** (o **Usuarios con PIN**). | Al colocar los datos correctamente, el sistema ingresará de inmediato al mapa de ventas o panel principal. | _"Hola Soporte, se me bloqueó la clave de mi usuario administrador y ningún encargado puede ingresar para blanquearla."_ |
+
+---
+
+### <a id="error-fichaje-empleado"></a> 8. El reloj de fichaje o cámara no reconoce al empleado (`FICHAJE_FACE_NOT_MATCH`)
+
+<div id="error-fichaje-empleado"></div>
+
+| ¿Qué ves en la pantalla?                                                                    | ¿Por qué sucede esto?                                                                                                      | Pasos sencillos para solucionarlo                                                                                                                                                                                                                                                                                                                                                                                                                                                           | ¿Cómo comprobar que se arregló?                                                                            | ¿Qué decirle a Soporte Técnico si no se soluciona?                                                       |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| _"Rostro no identificado, intente nuevamente"_ o _"Error de cámara en aplicación Fichaje"_. | Poca iluminación en el área del reloj de fichaje, uso de gorras/barbijos, o la lente de la cámara de la tablet está sucia. | 1. Limpiá suavemente la cámara frontal de la tablet con un paño seco.<br>2. Ubicate de frente a la pantalla con buena luz en el rostro (evitá sombras fuertes).<br>3. Si el sistema no reconoce tu rostro tras 2 intentos, usá la opción **Ingresar con Legajo y PIN**.<br>4. Informale al encargado de RRHH para verificar los datos en **Menú principal** → **RRHH** → **General** → **Empleados** (o los horarios en **Configuración** → **Fichaje** → **Tipos de Jornada / Horarios**). | La pantalla emitirá un sonido de confirmación verde mostrando la hora exacta de ingreso/egreso registrada. | _"Hola Soporte, la tablet de fichaje de empleados se queda con la cámara en negro y no permite fichar."_ |
+
+---
+
+## 📞 ¿Cómo comunicarse con el Soporte Técnico de PaxaPOS?
+
+Si realizaste los pasos sugeridos y el problema persiste, comunicate con nuestro equipo de atención:
+
+- 📱 **WhatsApp de Soporte**: +54 9 11 XXXX-XXXX (Atención prioritaria para locales en servicio).
+- 📧 **Correo Electrónico**: soporte@paxapos.com
+- 📋 **Datos que tenés que tener a mano antes de llamar**:
+    1. Nombre de tu local gastronómico (Tenant/Comercio).
+    2. ¿Qué pantalla o impresora está fallando?
+    3. El nombre del error o la foto del cartel que ves en la pantalla.

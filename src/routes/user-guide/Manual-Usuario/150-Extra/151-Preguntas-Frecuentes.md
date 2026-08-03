@@ -1,303 +1,136 @@
-# Preguntas Frecuentes
+# Preguntas Frecuentes y Guías Rápidas por Rol
 
 <div id="preguntas-frecuentes"></div>
 
-Esta sección contiene las consultas más comunes sobre PaxaPOS y sus soluciones técnicas. Encontrarás tanto problemas resueltos como consultas donde necesitamos más información específica de tu configuración.
+> **¿Dónde está en el sistema?:** Menú principal → **Ayuda** → **Preguntas Frecuentes**  
+> **¿Quién lo usa?:** Cajeros, Mozos, Cocineros, Encargados de local y Administradores
 
 ---
 
-## ⚠️ **ADVERTENCIA IMPORTANTE - Solución Universal**
+## 🚨 Regla de Oro: La Solución Inicial para Todo
 
 <div id="solucion-universal"></div>
 
-> 🚨 **ANTES DE REVISAR LOS PROBLEMAS ESPECÍFICOS:**
->
-> Si experimentás **cualquier error raro**, **problema de carga**, **pantalla en blanco** o **comportamiento inesperado**, **SIEMPRE probá primero estas soluciones básicas:**
->
-> ### 🔄 **Solución Rápida:**
->
-> 1. **Cerrá completamente**
-> 2. **Volvé a abrir**
-> 3. **Intentá nuevamente la operación**
->
-> ### 🖥️ **Solución Completa:**
->
-> 1. **Cerrá sesión**
-> 2. **Reiniciá el dispositivo** (PC, tablet, etc.)
-> 3. **Volvé a iniciar sesión**
->
-> **💡 ¿Por qué funciona esto?**  
-> Muchos problemas se deben a memoria temporalmente sobrecargada, conexiones de red intermitentes o datos en caché corruptos. Un reinicio limpia todo esto.
->
-> **✅ Si el problema persiste** después del reinicio, entonces sí revisá las soluciones específicas de abajo.
+Si la pantalla se queda congelada, no carga los datos o no muestra las mesas, probá siempre estos dos pasos antes de consultar con soporte:
+
+1. **Paso 1 (Cierre rápido):** Cerrá la pantalla o pestaña de PaxaPOS, volvé a abrirla e intentá la operación.
+2. **Paso 2 (Reinicio completo):** Cerrá la sesión de tu usuario, reiniciá el dispositivo (computadora, tablet o celular) y volvé a ingresar.
 
 ---
 
-## 🔧 Problemas Técnicos Resueltos
-
-<div id="problemas-tecnicos-resueltos"></div>
-
-### 1. **Los tipos de pago no aparecen al cobrar una mesa**
-
-<div id="tipos-pago-no-aparecen"></div>
-
-**Problema:** Configuré los tipos de pago pero cuando voy a cobrar no veo las opciones de Visa, MercadoPago, etc.
-
-**Solución:**
-
-1. **Verificar casillas:** Ve a la **P roja** → _Tipos de Pago_ y asegurate de que tengas marcada la casilla **"Para Cobros"** en cada método.
-2. **Revisar nombres:** Verificá que los nombres no tengan caracteres especiales o espacios al principio/final.
-3. **Reiniciar sesión:** Cerrá completamente y volvé a abrir para que tome los cambios.
+## 🧑‍🍳 Guías Rápidas para Mozos y Personal de Atención
 
 ---
 
-### 2. **Los mozos no ven todas las mesas que deberían ver**
+### <a id="mozo-mesas-faltantes"></a> Cómo solucionar si no ves las mesas del salón que te corresponden (Perfil: Mozo)
 
-<div id="mozos-no-ven-mesas"></div>
+<div id="mozo-mesas-faltantes"></div>
 
-**Problema:** Configuré un mozo pero solo ve algunas mesas o no ve ninguna.
-
-**Solución:**
-
-1. **Revisar visibilidad:** En **P roja** → _Mozos_ → [Mozo] → editá y verificá la sección **"Qué Usuarios Puede Ver"**.
-2. **Configuración por sectores:** Si querés que vea todas las mesas, dejá todas las opciones **sin marcar**. Si querés sectores específicos, marcá solo las que corresponden.
-3. **Verificar rol:** Asegurate de que tenga el rol correcto (Mozo, Vendedor, etc.).
-4. **Reiniciar el módulo Salón:** Cerrá y volvé a abrir el módulo de Salón.
+1. Dirigite a **Menú principal** → **Configuración** → **Tablas Sistema** → **Mozos**.
+2. Seleccioná tu usuario y presioná el botón **Editar**.
+3. Revisá la opción **Qué Usuarios Puede Ver**. Si querés ver todo el local, asegurate de dejar los sectores **desmarcados**.
+4. Presioná **Guardar**.
+5. Volvé al menú **Ventas** → **Operación Diaria** → **Salón de Ventas** para ver el mapa de mesas actualizado.
 
 ---
 
-### 3. **Las comandas no salen en la impresora de cocina**
+### <a id="mozo-recuperar-mesa"></a> Cómo reabrir una mesa que se anuló por equivocación (Perfil: Mozo / Encargado)
 
-<div id="comandas-no-imprimen"></div>
+<div id="mozo-recuperar-mesa"></div>
 
-**Problema:** Tomo el pedido pero la impresora de cocina no imprime la comanda.
-
-**Solución:**
-
-1. **Verificar asignación:** En configuración de impresoras, asegurate de que tengas asignada la **impresora de comandas** correctamente.
-2. **Revisar impresora configurada:** Los productos pueden tener impresoras asignadas que les indican por qué comandera van a imprimirse. Verificá en _Productos en venta → [Tu producto] → printer_ que la impresora esté bien seleccionada.
-3. **Probar impresora:** Hacé una **impresión de prueba** desde el panel de impresoras para verificar conectividad.
-4. **Verificar papel:** Asegurate de que la impresora tenga papel y esté encendida.
+1. Dirigite a **Menú principal** → **Finanzas** → **Caja** → **Arqueos de Caja** (o **Finanzas** → **Facturación AFIP** → **Histórico de Mesas**).
+2. En la solapa de movimientos o historial, buscá la mesa que se cerró o anuló.
+3. Hacé clic sobre la línea de la mesa para seleccionar sus detalles.
+4. Tocá el botón verde **Reabrir Mesa**.
+5. **Resultado:** La mesa volverá a estar activa con todos sus productos originales en el mapa del salón (**Ventas** → **Operación Diaria** → **Salón de Ventas**).
 
 ---
 
-### 4. **No imprime facturas fiscales o aparece "Error de Fiscalberry"**
+### <a id="mozo-variantes-sabores"></a> Cómo hacer si un producto no muestra sus opciones o sabores al cargarlo (Perfil: Mozo)
 
-<div id="error-fiscalberry"></div>
+<div id="mozo-variantes-sabores"></div>
 
-**Problema:** Al intentar imprimir una factura fiscal no sale nada o aparece "Error de Fiscalberry".
-
-**Solución:**
-
-1. **¡PRIMERO Y MÁS IMPORTANTE!** Verificá que **Fiscalberry esté abierto y funcionando** en la PC con la impresora fiscal. Es el error más común: Fiscalberry debe estar ejecutándose en segundo plano.
-2. **Revisar conexión:** Verificá que la impresora fiscal esté encendida y conectada correctamente (USB/Serie).
-3. **Test de impresión:** Abrí el modulo impresoras y hacé un **test de impresión** directo para verificar que la comunicación funciona.
+1. Pedile al encargado que ingrese a **Menú principal** → **Productos** → **Gestión Avanzada** → **Maestro de Productos** (o a **Productos** → **General** → **Variantes**).
+2. Al editar el producto (ejemplo: _"Pizza Gigante"_), verificar que la casilla **Asignar Variante** esté activada con la lista de sabores (_"Muzzarella", "Napolitana"_).
+3. Guardá los cambios y tocá el botón **Actualizar Menú** en la pantalla del salón.
 
 ---
 
-### 5. **El stock de mercadería no coincide con la realidad**
-
-<div id="stock-incorrecto"></div>
-
-**Problema:** Compré 12 botellas pero el sistema muestra números incorrectos en stock.
-
-**Solución:**
-
-1. **Verificar "Cantidad que suma":** En la mercadería, revisá que el campo **"Cantidad que Suma en Stock"** esté bien calculado (si comprás 1 caja de 12, debe decir 12).
-2. **Revisar unidades:** Asegurate de que las unidades de compra y venta sean consistentes (no mezclar cajas con unidades).
-3. **Revisar conversión:** Verificá en _Maestro de Productos_ que la conversión entre mercadería y producto esté correcta.
+## 💵 Guías Rápidas para Cajeros y Operadores de Venta
 
 ---
 
-### 6. **No puedo crear una factura A porque falta el cliente**
+### <a id="cajero-factura-a"></a> Cómo emitir una Factura A cuando falta cargar los datos del cliente (Perfil: Cajero)
 
-<div id="falta-cliente-factura"></div>
+<div id="cajero-factura-a"></div>
 
-**Problema:** Al querer facturar aparece error porque no está cargado el cliente.
-
-**Solución:**
-
-1. **Agregar cliente en la mesa:** En el Salón, seleccioná la mesa y hacé clic en **"Agregar Cliente"**.
-2. **Crear cliente nuevo:** Clic en **"Crear Cliente"** y completá todos los datos obligatorios (CUIT, razón social, dirección).
-3. **Verificar tipo de documento:** Asegurate de seleccionar el tipo correcto (CUIT para empresas, CUIL para personas).
-4. **Condición IVA:** Seleccioná la condición ante IVA correcta del cliente.
-
----
-
-### 7. **El arqueo no cierra: hay diferencia entre sistema y caja real**
-
-<div id="arqueo-no-cierra"></div>
-
-**Problema:** El sistema dice que debería haber $50.000 pero en la caja física hay $48.500.
-
-**Solución:**
-
-1. **Revisar movimientos del día:** Ve a _Arqueo → Movimientos_ y verificá todas las transacciones: ventas, pagos, ingresos y egresos.
-2. **Verificar propinas:** Asegurate de que las propinas estén registradas correctamente (no como ventas adicionales).
-3. **Revisar pagos a proveedores:** Confirmá que todos los pagos realizados estén cargados en el sistema.
-4. **Contar nuevamente:** Volvé a contar el efectivo físico, separando billetes por denominación.
+1. En la pantalla de cobro de la mesa o caja rápida (**Ventas** → **Operación Diaria** → **Salón de Ventas** / **Caja Rápida**), tocá el botón **Agregar Cliente** (también podés cargarlo antes desde **Menú principal** → **Ventas** → **Clientes** → **Clientes**).
+2. Si el cliente no está en la lista, tocá **Crear Nuevo Cliente**.
+3. Ingresá los datos obligatorios:
+    - **CUIT / CUIL:** Escribí los 11 números sin guiones.
+    - **Nombre o Razón Social:** El nombre completo o nombre de la empresa.
+    - **Condición ante el IVA:** Seleccioná _Responsable Inscripto_ para Factura A.
+4. Tocá **Guardar Cliente**.
+5. Ahora seleccioná el medio de pago y presioná **Emitir Factura A**.
 
 ---
 
-### 8. **Los productos con variantes no se cargan correctamente**
+### <a id="cajero-ingreso-egreso-caja"></a> Cómo registrar cuando entra o sale dinero del cajón (Perfil: Cajero)
 
-<div id="variantes-no-funcionan"></div>
+<div id="cajero-ingreso-egreso-caja"></div>
 
-**Problema:** Configuré variantes (como "tipo de salsa") pero al tomar el pedido no aparecen las opciones.
-
-**Solución:**
-
-1. **Verificar asignación:** En _Productos → [Tu producto] → Editar_ asegurate de tener asignada la variante en **"Asignar Variante"**.
-2. **Revisar opciones:** Cada opción de la variante debe estar vinculada a un producto del Maestro (subproducto o producto en venta).
-3. **Probar desde el menú:** Ve al módulo de ventas y verificá que al seleccionar el producto aparezcan las opciones.
-4. **Reiniciar menú:** Cerrá y volvé a abrir PaxaPOS.
+1. En la parte superior de la pantalla de ventas (**Ventas** → **Operación Diaria** → **Salón de Ventas** / **Caja Rápida**) o en **Menú principal** → **Finanzas** → **Caja** → **Arqueos de Caja**, tocá el botón **Ingresos** (si ponés dinero extra) o **Egresos** (si sacás dinero para pagar algo).
+2. Escribí el **Monto en pesos** exacto.
+3. En la casilla **Motivo o Concepto**, escribí para qué se usó el dinero (ejemplo: _"Pago de delivery"_, _"Cambio inicial"_).
+4. Tocá **Confirmar Movimiento**.
+5. **Resultado:** El movimiento quedará guardado para que no haya faltantes cuando hagas el cierre de caja.
 
 ---
 
-### 9. **Las estadísticas muestran números que no coinciden con la realidad**
+### <a id="cajero-tipos-pago"></a> Cómo activar un medio de pago que no aparece al momento de cobrar (Perfil: Cajero / Administrador)
 
-<div id="estadisticas-incorrectas"></div>
+<div id="cajero-tipos-pago"></div>
 
-**Problema:** En Business Intelligence veo que vendí $100.000 pero en el arqueo tengo menos dinero.
-
-**Solución:**
-
-1. **Revisar tipos de pago:** En _Estadísticas → Ventas por Tipo de Cobro_ verificá cuánto fue efectivo vs tarjetas/transferencias.
-2. **Verificar período:** Asegurate de que estés viendo el mismo período en estadísticas y arqueo.
-3. **Incluir todos los gastos:** Los pagos a proveedores reducen el efectivo pero no las ventas.
+1. Dirigite a **Menú principal** → **Configuración** → **Tablas Sistema** → **Tipos de Pago** (o a **Medios de Pago** → **General** → **Instrumentos de Pago Manual**).
+2. Buscá el método de pago que querés activar (ejemplo: _MercadoPago, Tarjeta de Débito, Transferencia_).
+3. Hacé clic en **Editar**.
+4. Asegurate de que la casilla **"Usar para Cobros"** esté marcada con un tilde.
+5. Presioná **Guardar**.
 
 ---
 
-### 10. **El KDS no muestra los pedidos de algunas categorías**
-
-<div id="kds-categorias-faltantes"></div>
-
-**Problema:** Los platos principales aparecen en la pantalla de cocina pero las ensaladas no.
-
-**Solución:**
-
-1. **Verificar configuración del KDS:** Asegurate de haber configurado todos los **Puestos de cocina** (fríos, calientes, bar, etc.).
-2. **Asignar productos:** Cada producto debe estar asignado al puesto correcto (_Ensaladas → Puesto Fríos_).
-3. **Revisar categorías:** Los productos deben tener categorías bien definidas y asignadas.
-4. **Reiniciar KDS:** Refrescá la pantalla del Kitchen Display System (F5).
+## 👨‍🍳 Guías Rápidas para Cocina y Despacho
 
 ---
 
-### 11. **PaxaPOS funciona lento en mi configuración**
+### <a id="cocina-kds-pedidos"></a> Cómo arreglar si las comandas no se ven en la pantalla de la cocina (Perfil: Cocinero)
 
-<div id="software-lento"></div>
+<div id="cocina-kds-pedidos"></div>
 
-**Problema:** La plataforma tarda mucho en cargar o responder.
-
-**Solución:**
-
-1. **Limpiar caché:** Borra la caché del navegador y los datos temporales, apretando ctrl + F5 para forzar recarga o ctrl + R.
-2. **Cerrar aplicaciones:** Cierra otras aplicaciones que puedan estar consumiendo recursos.
-3. **Verificar conexión a internet:** Asegurate de tener una conexión estable y rápida.
+1. Verificá si en la pantalla de la cocina (KDS) aparece el punto de estado verde **Conectado**.
+2. Si el punto está rojo o no llegan los pedidos, tocá el botón **Refrescar Pantalla** en la esquina superior.
+3. Si solo faltan ciertos platos (ejemplo: las ensaladas o los postres), pedile al administrador que revise en **Menú principal** → **Comandero** → **General** → **Puestos de Comanda** si esos productos están asignados al monitor de la cocina.
 
 ---
 
-### 12. **¿Cómo manejo inventario con múltiples depósitos?**
-
-<div id="multiples-depositos"></div>
-
-**Problema:** Tengo varios depósitos y no sé cómo gestionar el inventario entre ellos.
-
-**Solución:**
-
-1. **Configurar depósitos:** Ve a _P roja → Depósitos_ y crea todos los depósitos que necesites.
-2. **Asignar productos a depósitos:** Al crear o editar un producto, asignalo al depósito correspondiente.
+## 📊 Guías Rápidas para Encargados y Supervisores
 
 ---
 
-### 13. **No puedo abrir la caja al inicio del turno**
+### <a id="supervisor-diferencia-arqueo"></a> Cómo auditar y solucionar un cierre de caja con diferencias (Perfil: Supervisor)
 
-<div id="no-puedo-abrir-caja"></div>
+<div id="supervisor-diferencia-arqueo"></div>
 
-**Problema:** Cuando intento abrir la caja desde el módulo Salón, no pasa nada o aparece un error.
-
-**Solución:**
-
-1. **Verificar que no esté abierta:** Revisá si la caja ya está abierta desde otro usuario o turno anterior.
-2. **Cerrar caja anterior:** Si quedó una caja abierta del turno anterior, primero tenés que cerrarla.
-3. **Verificar permisos:** Asegurate de que tu usuario tenga permisos para gestionar cajas.
-4. **Reiniciar el módulo:** Cerrá completamente el módulo Salón y volvé a abrirlo.
-5. **Verificar configuración de cajas:** En **P roja** → _Cajas_ verificá que las cajas estén correctamente configuradas.
+1. Al momento del arqueo, ingresá a **Menú principal** → **Finanzas** → **Caja** → **Arqueos de Caja** y tocá **Ver Detalle de Movimientos**.
+2. Compará el monto de **Ventas en Efectivo** contra los comprobantes y billetes físicos del cajón.
+3. Verificá si hubo compras de insumos o retiros de dinero no anotados ingresando a la pestaña **Egresos del Día**.
+4. Recordá que al cargar el dinero físico tenés que escribir la **cantidad de billetes**, no la suma total en pesos (ejemplo: si hay 5 billetes de $10.000, colocá **5**).
+5. Si encontrás un gasto que no se había cargado, registralo como **Egreso de Caja** antes de confirmar el cierre final.
 
 ---
 
-### 14. **El arqueo no coincide al cerrar la caja**
+## 📞 ¿Necesitás ayuda personalizada?
 
-<div id="arqueo-cierre-caja"></div>
+Si aplicaste los pasos indicados y continuás con dudas, podés escribir directamente a nuestro equipo de atención:
 
-**Problema:** Al cerrar la caja, el sistema me dice que hay diferencia entre lo que cuento y lo que debería haber.
-
-**Solución:**
-
-1. **Contar correctamente los billetes:** Recordá que se ingresa la **cantidad de billetes**, no el monto total. Si tenés $30,000 en 3 billetes de $10,000, ingresás **3**, no 30000.
-2. **Revisar todas las denominaciones:** Asegurate de contar y cargar todas las denominaciones (desde $20,000 hasta $1).
-3. **Verificar ingresos y egresos:** Revisá que hayas registrado todos los ingresos y egresos del día en el sistema.
-4. **Revisar pagos mixtos:** Verificá que los pagos con tarjeta, transferencia, etc. no estén contabilizados como efectivo.
-5. **Revisar monto inicial:** Confirmá que el monto inicial con el que abriste la caja sea correcto.
-6. **Contar nuevamente:** Volvé a contar físicamente el dinero, separando por denominación.
-
-💡 **Tip:** Llevá un registro manual durante el día de ingresos y egresos extraordinarios para comparar al cierre.
-
----
-
-### 15. **Olvidé registrar un ingreso o egreso de caja**
-
-<div id="olvide-registrar-movimiento"></div>
-
-**Problema:** Me di cuenta que saqué o puse dinero en la caja pero no lo registré en el sistema.
-
-**Solución:**
-
-1. **Registrar inmediatamente:** Andá a la esquina superior derecha del módulo Salón y hacé clic en **"Ingresos"** o **"Egresos"** según corresponda.
-2. **Ingresar datos correctos:**
-    - **Monto:** La cantidad exacta que ingresó o salió
-    - **Caja:** Seleccioná la caja correcta
-    - **Concepto:** Describí brevemente el motivo (ej: "Compra de cambio", "Pago delivery", "Retiro para banco")
-3. **Verificar el registro:** Revisá en el módulo de Arqueos que el movimiento haya quedado registrado.
-
-💡 **Tip:** Creá el hábito de registrar los movimientos en el momento en que ocurren para evitar olvidos.
-
----
-
-### 16. **Anulé una mesa por error y necesito recuperarla**
-
-<div id="recuperar-mesa-anulada"></div>
-
-**Problema:** Usé la opción "Anular Mesa" pero era la mesa equivocada o la necesito recuperar.
-
-**Solución:**
-⚠️ **Importante:** dirijite al listado de mesas dentro de arqueos y ubica la mesa que necesitas recuperar, una vez allí selecciona la mesa y haz clic en "Re abrir".
-
----
-
-### 19. **Los ingresos/egresos no aparecen en el arqueo**
-
-<div id="ingresos-egresos-no-aparecen"></div>
-
-**Problema:** Registré ingresos o egresos pero no los veo reflejados en el arqueo de caja.
-
-**Solución:**
-
-1. **Verificar la caja correcta:** Asegurate de que hayas seleccionado la caja correcta al registrar el movimiento.
-2. **Verificar la fecha:** Confirmá que estés viendo el arqueo del día correcto.
-3. **Actualizar la vista:** Refrescá la pantalla del módulo Arqueos (F5).
-4. **Revisar el registro:** Ve a _Arqueo → Movimientos_ y buscá el movimiento por fecha y monto.
-5. **Verificar permisos:** Asegurate de que tengas permisos para ver todos los movimientos de caja.
-
-💡 **Tip:** Si el movimiento no aparece, puede que se haya registrado en otra caja o con otra fecha.
-
----
-
-## 📞 ¿No encontraste tu respuesta?
-
-<div id="no-encontraste-tu-respuesta"></div>
-
-Si tu problema no está listado aquí o necesitás información adicional para las consultas pendientes, no dudes en contactarnos:
-
-_¡Click para chatear directamente con nuestro soporte tecnico!_
-<a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
+- 📱 **Soporte Directo WhatsApp**: <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>

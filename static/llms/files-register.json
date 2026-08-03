@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T01:15:18.598Z",
-  "total_files": 122,
+  "generated_at": "2026-08-03T22:50:59.281Z",
+  "total_files": 123,
   "files": [
     "101-resumen-general.txt",
     "102-ventas-por-mozo.txt",
@@ -18,7 +18,6 @@
     "113-config-del-comercio.txt",
     "114-config-avanzada.txt",
     "115-archivos-multimedia.txt",
-    "116-app-store-modulos.txt",
     "117-modulo-delivery.txt",
     "118-inteligencia-artificial.txt",
     "119-configuracion-email.txt",
@@ -51,6 +50,7 @@
     "146-epson-tm-t88.txt",
     "151-preguntas-frecuentes.txt",
     "152-buchon-bot.txt",
+    "155-troubleshooting-semantico.txt",
     "21-salon-de-ventas.txt",
     "22-caja-rapida.txt",
     "23-mapa-de-mesas.txt",
@@ -123,9 +123,17 @@
     "95-departamentos.txt",
     "96-turnos-y-horarios-fichaje.txt",
     "97-sueldos-y-jornales.txt",
-    "98-datos-de-acceso-app.txt"
+    "98-datos-de-acceso-app.txt",
+    "glosario-del-dominio.txt"
   ],
   "detailed_files": [
+    {
+      "txt_file": "glosario-del-dominio.txt",
+      "original_md": "05-Glosario-del-Dominio",
+      "title": "Glosario Categórico del Dominio PaxaPOS",
+      "slug": "glosario-del-dominio",
+      "generated_from": "/mnt/datos/repos/core/packages/documentation/scripts/ai-domain-glossary.json"
+    },
     {
       "txt_file": "11-introduccion.txt",
       "original_md": "11-Introduccion",
@@ -251,13 +259,6 @@
       "title": "Archivos Multimedia",
       "slug": "archivos-multimedia",
       "generated_from": "/mnt/datos/repos/core/packages/documentation/src/routes/user-guide/Manual-Usuario/110-Configuracion/115-Archivos-Multimedia.md"
-    },
-    {
-      "txt_file": "116-app-store-modulos.txt",
-      "original_md": "116-App-Store-Modulos",
-      "title": "App Store Modulos",
-      "slug": "app-store-modulos",
-      "generated_from": "/mnt/datos/repos/core/packages/documentation/src/routes/user-guide/Manual-Usuario/110-Configuracion/116-App-Store-Modulos.md"
     },
     {
       "txt_file": "117-modulo-delivery.txt",
@@ -468,6 +469,13 @@
       "title": "Buchón Bot",
       "slug": "buchon-bot",
       "generated_from": "/mnt/datos/repos/core/packages/documentation/src/routes/user-guide/Manual-Usuario/150-Extra/152-Buchón-Bot.md"
+    },
+    {
+      "txt_file": "155-troubleshooting-semantico.txt",
+      "original_md": "155-Troubleshooting-Semantico",
+      "title": "Troubleshooting Semantico",
+      "slug": "troubleshooting-semantico",
+      "generated_from": "/mnt/datos/repos/core/packages/documentation/src/routes/user-guide/Manual-Usuario/150-Extra/155-Troubleshooting-Semantico.md"
     },
     {
       "txt_file": "21-salon-de-ventas.txt",

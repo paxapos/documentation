@@ -191,6 +191,7 @@ export const load: PageLoad = async () => {
 
 			// 150-Extra
 			'preguntas-frecuentes': 'lucide:help-circle',
+			'troubleshooting-semantico': 'lucide:wrench',
 			'buchon-bot': 'lucide:bot',
 		};
 

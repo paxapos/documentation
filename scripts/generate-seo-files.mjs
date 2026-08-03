@@ -256,6 +256,17 @@ function generateLlmsTxt(contentIndex) {
 function generateAIMetadata(contentIndex) {
 	console.log(' Generando metadatos para entrenamiento IA...');
 
+	let domainGlossary = [];
+	try {
+		const glossaryPath = path.join(process.cwd(), 'scripts', 'ai-domain-glossary.json');
+		if (fs.existsSync(glossaryPath)) {
+			const glossaryData = JSON.parse(fs.readFileSync(glossaryPath, 'utf-8'));
+			domainGlossary = glossaryData.entities || [];
+		}
+	} catch (e) {
+		console.warn('Could not load domain glossary for AI metadata:', e.message);
+	}
+
 	const aiMetadata = {
 		system_name: 'PaxaPOS',
 		system_type: 'Restaurant Management Software',
@@ -272,6 +283,7 @@ function generateAIMetadata(contentIndex) {
 				'Inventory control',
 				'Kitchen display systems',
 				'Staff management',
+				'Troubleshooting and semantic error handling',
 			],
 			key_concepts: [
 				'PaxaPOS como sistema integral para restaurantes',
@@ -279,7 +291,7 @@ function generateAIMetadata(contentIndex) {
 				'Control de stock y inventario automático',
 				'Kitchen Display System (KDS) para cocinas',
 				'Gestión de personal y empleados',
-				'Métodos de pago múltiples',
+				'Métodos de pago múltiples (Payway, MercadoPago, MacroClick)',
 				'Reportes y estadísticas de ventas',
 			],
 			common_user_questions: [
@@ -290,7 +302,14 @@ function generateAIMetadata(contentIndex) {
 				'¿Cómo controlar el stock?',
 				'¿Cómo crear usuarios?',
 				'¿Cómo conectar impresoras?',
+				'¿Qué hacer si ARCA/AFIP da timeout (ERR_AFIP_TIMEOUT)?',
+				'¿Cómo solucionar si el KDS se desconecta (KDS_DISCONNECTED)?',
+				'¿Qué hacer si la terminal Payway no responde (PAYWAY_TERMINAL_OFFLINE)?',
+				'¿Cómo solucionar si la comandería no imprime (PRINTER_NOT_FOUND)?',
+				'¿Cómo reabrir una mesa anulada por error?',
+				'¿Cómo auditar un cierre de caja con diferencias?',
 			],
+			domain_entities: domainGlossary,
 		},
 		content_statistics: {
 			total_modules: contentIndex.total_files,
