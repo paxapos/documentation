@@ -10,7 +10,7 @@
 <div id="paso-1-ingresa-a-la-pagina-web"></div>
 
 1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: [**restodigital.com.ar**](https://restodigital.com.ar)
+2. En la barra de direcciones, escribí: [**www.paxapos.com**](https://www.paxapos.com)
 3. Presioná **Enter**
 
 > 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
