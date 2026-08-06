@@ -14,6 +14,7 @@ import {
 	MANUAL_DIR,
 	STATIC_DIR,
 } from './shared-utils.mjs';
+import { applyContactPlaceholders } from '../src/lib/config/contact.js';
 import { join } from 'path';
 
 /** Limpia markdown para indexación (más conservador que cleanContentForTxt) */
@@ -49,7 +50,7 @@ const searchIndex = [];
 
 for (const filePath of mdFiles) {
 	try {
-		const rawContent = readFileSync(filePath, 'utf8');
+		const rawContent = applyContactPlaceholders(readFileSync(filePath, 'utf8'));
 		const fileName = basename(filePath);
 		const id = fileName.replace('.md', '');
 		const slug = fileNameToSlug(fileName);

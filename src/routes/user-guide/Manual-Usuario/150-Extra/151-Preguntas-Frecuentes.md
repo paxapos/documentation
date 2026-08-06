@@ -133,4 +133,4 @@ Si la pantalla se queda congelada, no carga los datos o no muestra las mesas, pr
 
 Si aplicaste los pasos indicados y continuás con dudas, podés escribir directamente a nuestro equipo de atención:
 
-- 📱 **Soporte Directo WhatsApp**: <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
+- 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

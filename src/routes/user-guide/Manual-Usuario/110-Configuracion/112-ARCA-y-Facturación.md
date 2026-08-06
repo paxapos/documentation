@@ -276,7 +276,7 @@ _Asegurate de seleccionar la opción correcta en el campo "Sistema 1":_
 
 <div id="como-notificar"></div>
 
-- **WhatsApp:** <a href="https://wa.me/17867553113?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+1 (786) 755-3113</a> _¡Click para chatear directamente en nueva pestaña!_
+- **WhatsApp:** <a href="{{WHATSAPP_URL}}?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">{{WHATSAPP_DISPLAY}}</a> _¡Click para chatear directamente en nueva pestaña!_
 
 #### **📋 Información que debés proporcionar:**
 

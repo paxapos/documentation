@@ -19,6 +19,7 @@ import {
 	STATIC_DIR,
 	BASE_URL_GITHUB,
 } from './shared-utils.mjs';
+import { applyContactPlaceholders } from '../src/lib/config/contact.js';
 
 const BOM = '\uFEFF';
 
@@ -59,7 +60,7 @@ function discoverFiles() {
 }
 
 function processFile(filePath) {
-	const rawContent = readFileSync(filePath, 'utf8');
+	const rawContent = applyContactPlaceholders(readFileSync(filePath, 'utf8'));
 	const fileName = basename(filePath, '.md');
 	const cleanContent = cleanContentForTxt(rawContent);
 

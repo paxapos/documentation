@@ -122,7 +122,7 @@
 
 **💬 WhatsApp Business**
 
-- **Número:** <a href="https://wa.me/17867553113?" target="_blank">+1 (786) 755-3113</a>
+- **Número:** <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>
 - **Horario:** Lunes a Viernes de 9:00 a 18:00 hs
 - **Respuesta:** Inmediata durante horario de atención
 

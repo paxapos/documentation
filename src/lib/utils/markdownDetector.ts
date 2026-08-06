@@ -1,5 +1,6 @@
 import { dev } from '$app/environment';
 import { fileNameToSlug, extractMarkdownTitle } from './contentUtils';
+import { applyContactPlaceholders } from '$lib/config/contact';
 
 // ─── Tipos ───────────────────────────────────────────────────
 
@@ -96,7 +97,7 @@ export async function getMarkdownFiles(): Promise<MarkdownDetectorResult> {
 
 		for (const [path, moduleLoader] of Object.entries(modules)) {
 			try {
-				const content = String(await moduleLoader());
+				const content = applyContactPlaceholders(String(await moduleLoader()));
 				const fileName = path.split('/').pop();
 				if (!fileName) continue;
 
