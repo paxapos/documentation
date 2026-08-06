@@ -46,8 +46,8 @@ Podés crear **tantos menús como necesites**. Los motivos los define cada comer
 
 | # | Botón | Qué hace |
 |---|---|---|
-| 1 | ➕ **Agregar Producto** | Añade un producto nuevo a este menú. Es la vía principal para crear productos de venta. → ver [Agregar un producto al menú](#agregar-un-producto-al-menú) |
-| 2 | ✏️ **Configurar Menú** | Edita los parámetros con los que se creó el menú: nombre, imagen, visibilidad y opciones. → ver [Configurar el menú](#configurar-el-menú) |
+| 1 | ➕ **Agregar Producto** | Añade un producto nuevo a este menú. Es la vía principal para crear productos de venta. |
+| 2 | ✏️ **Configurar Menú** | Edita los parámetros con los que se creó el menú: nombre, imagen, visibilidad y opciones. |
 | 3 | ⬇️ **Exportar Productos** | Descarga la lista de productos en formato CSV/Excel. |
 | 4 | ⬆️ **Importar Productos** | Carga productos desde CSV, Excel u otro PaxaPos. |
 
@@ -96,7 +96,7 @@ Cada fila es un producto publicado en este menú. Varias columnas se **editan di
 | **Cant. Variantes** | Cuántas variantes tiene asignadas el producto. Se configuran en [Variantes](/user-guide/variantes-grupo-sabores). | — |
 | **Orden** | Orden de aparición en el ticket. **Menor número = aparece primero.** | ✅ |
 | **Impuesto** | La alícuota de IVA configurada para el producto. | — |
-| **Acciones** | Ver, editar o eliminar el producto. → ver [Las acciones](#las-acciones-de-cada-producto) | — |
+| **Acciones** | Ver, editar o eliminar el producto. Se explican más abajo. | — |
 
 > 💡 **Impresora y Puesto no son lo mismo.** La **impresora** saca la comanda en papel; el **puesto** la muestra en una pantalla KDS en cocina. Un producto puede usar uno, el otro, o los dos.
 
@@ -132,8 +132,8 @@ Arriba de la tabla tenés además un **buscador de productos** y los botones **F
 
 | Botón | Qué hace |
 |---|---|
-| 👁️ **Ver** | Abre la vista detallada del producto. → ver [La vista detallada](#la-vista-detallada-de-un-producto) |
-| ✏️ **Editar** | Edita los parámetros con los que se cargó el producto, **y también el producto maestro**. → ver [Agregar un producto al menú](#agregar-un-producto-al-menú), donde se explica cada campo en detalle |
+| 👁️ **Ver** | Abre la vista detallada del producto. Se explica en el apartado siguiente. |
+| ✏️ **Editar** | Edita los parámetros con los que se cargó el producto, **y también el producto maestro**. Usa el mismo formulario que **Agregar Producto**. |
 | 🗑️ **Eliminar** | Borra el producto **de forma permanente**. |
 
 ---
