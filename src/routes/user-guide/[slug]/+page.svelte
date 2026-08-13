@@ -11,9 +11,14 @@
 	let { data }: { data: PageData } = $props();
 
 	let showCopyMessage = $state(false);
+	type SidebarModule = {
+		slug: string;
+		title: string;
+		children?: Array<{ slug: string; title: string }>;
+	};
 	let moduleCategories: Array<{
 		title: string;
-		modules: Array<{ slug: string; title: string }>;
+		modules: SidebarModule[];
 	}> = $state([]);
 
 	// Derivar contenido procesado (highlighting si existe el query param)
@@ -121,21 +126,41 @@
 
 	let openCategories = $state<Record<string, boolean>>({});
 
-	function isOpen(
-		categoryTitle: string,
-		modules: Array<{ slug: string; title: string }>,
-	): boolean {
+	function categoryHasCurrent(modules: SidebarModule[]): boolean {
+		return modules.some(
+			(m) =>
+				m.slug === currentSlug ||
+				(m.children ?? []).some((c) => c.slug === currentSlug),
+		);
+	}
+
+	function isOpen(categoryTitle: string, modules: SidebarModule[]): boolean {
 		if (openCategories[categoryTitle] !== undefined) {
 			return openCategories[categoryTitle];
 		}
-		return modules.some((m) => m.slug === currentSlug);
+		return categoryHasCurrent(modules);
 	}
 
-	function toggleCategory(
-		categoryTitle: string,
-		modules: Array<{ slug: string; title: string }>,
-	) {
+	function toggleCategory(categoryTitle: string, modules: SidebarModule[]) {
 		openCategories[categoryTitle] = !isOpen(categoryTitle, modules);
+	}
+
+	// Plegado/desplegado de submódulos (hijos) por módulo padre
+	let openModules = $state<Record<string, boolean>>({});
+
+	function isModuleOpen(module: SidebarModule): boolean {
+		if (openModules[module.slug] !== undefined) {
+			return openModules[module.slug];
+		}
+		// Por defecto, abierto si el padre o alguno de sus hijos es la página actual
+		return (
+			module.slug === currentSlug ||
+			(module.children ?? []).some((c) => c.slug === currentSlug)
+		);
+	}
+
+	function toggleModule(module: SidebarModule) {
+		openModules[module.slug] = !isModuleOpen(module);
 	}
 </script>
 
@@ -188,6 +213,9 @@
 							<optgroup label={category.title}>
 								{#each category.modules as module (module.slug)}
 									<option value={module.slug}>{module.title}</option>
+									{#each module.children ?? [] as child (child.slug)}
+										<option value={child.slug}>&nbsp;&nbsp;└ {child.title}</option>
+									{/each}
 								{/each}
 							</optgroup>
 						{/each}
@@ -225,15 +253,61 @@
 							{#if catOpen}
 								<div class="space-y-1">
 									{#each category.modules as module (module.slug)}
-										<a
-											href="{base}/user-guide/{module.slug}"
-											class="block w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-200 sm:px-3 sm:py-2 sm:text-sm {currentSlug ===
-											module.slug
-												? 'border-l-2 border-blue-500 bg-blue-100 font-medium text-blue-900 dark:bg-blue-900 dark:text-blue-100'
-												: 'text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700'}"
-										>
-											{module.title}
-										</a>
+										{@const hasChildren = !!(module.children && module.children.length)}
+										{@const modOpen = isModuleOpen(module)}
+										<div class="flex items-stretch gap-1">
+											<a
+												href="{base}/user-guide/{module.slug}"
+												class="block flex-1 rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-200 sm:px-3 sm:py-2 sm:text-sm {currentSlug ===
+												module.slug
+													? 'border-l-2 border-blue-500 bg-blue-100 font-medium text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+													: 'text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700'}"
+											>
+												{module.title}
+											</a>
+											{#if hasChildren}
+												<button
+													type="button"
+													onclick={() => toggleModule(module)}
+													class="flex flex-shrink-0 items-center justify-center rounded-md px-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-blue-400"
+													aria-expanded={modOpen}
+													aria-label="Mostrar u ocultar subpáginas de {module.title}"
+												>
+													<svg
+														class="h-3.5 w-3.5 transform transition-transform duration-200 {modOpen
+															? 'rotate-180'
+															: ''}"
+														fill="none"
+														stroke="currentColor"
+														viewBox="0 0 24 24"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="2"
+															d="M19 9l-7 7-7-7"
+														/>
+													</svg>
+												</button>
+											{/if}
+										</div>
+										{#if hasChildren && modOpen}
+											<div
+												class="ml-3 space-y-1 border-l border-gray-200 pl-2 dark:border-gray-600"
+											>
+												{#each module.children ?? [] as child (child.slug)}
+													<a
+														href="{base}/user-guide/{child.slug}"
+														class="block w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors duration-200 sm:px-3 sm:py-2 sm:text-sm {currentSlug ===
+														child.slug
+															? 'border-l-2 border-blue-500 bg-blue-100 font-medium text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+															: 'text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700'}"
+													>
+														{child.title}
+													</a>
+												{/each}
+											</div>
+										{/if}
 									{/each}
 								</div>
 							{/if}

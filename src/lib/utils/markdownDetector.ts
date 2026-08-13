@@ -10,6 +10,7 @@ interface MarkdownFileData {
 	content: string;
 	category: string;
 	categoryOrder: number;
+	parentSlug: string | null;
 	seo: { title: string; description: string; keywords: string };
 }
 
@@ -17,6 +18,8 @@ interface ModuleEntry {
 	slug: string;
 	title: string;
 	fileName: string;
+	parentSlug?: string | null;
+	children?: ModuleEntry[];
 }
 
 interface ModuleCategory {
@@ -45,6 +48,19 @@ function categorizeByFolder(path: string): { category: string; order: number } {
 		return { category: rawName, order };
 	}
 	return { category: 'Otros', order: 999 };
+}
+
+/**
+ * Deriva el slug del módulo padre a partir de la ruta.
+ * Un hijo vive en una subcarpeta con el mismo nombre que su archivo padre:
+ *   .../Manual-Usuario/40-Productos/41-Menu/50-Agregar-Producto.md
+ * → padre = fileNameToSlug('41-Menu') = 'menu'
+ * Devuelve null para módulos de primer nivel.
+ */
+function extractParentSlug(path: string): string | null {
+	const match = path.match(/\/Manual-Usuario\/\d+-[^\/]+\/(\d+-[^\/]+)\/[^\/]+\.md$/);
+	if (match) return fileNameToSlug(match[1]);
+	return null;
 }
 
 function generateSEO(
@@ -103,6 +119,7 @@ export async function getMarkdownFiles(): Promise<MarkdownDetectorResult> {
 				const slug = fileNameToSlug(fileName);
 				const title = extractMarkdownTitle(content);
 				const categoryInfo = categorizeByFolder(path);
+				const parentSlug = extractParentSlug(path);
 				const contentWithoutTitle = content.replace(/^#\s+.+(\r?\n)?/, '').trim();
 
 				markdownFiles[slug] = {
@@ -112,6 +129,7 @@ export async function getMarkdownFiles(): Promise<MarkdownDetectorResult> {
 					content: contentWithoutTitle,
 					category: categoryInfo.category,
 					categoryOrder: categoryInfo.order,
+					parentSlug,
 					seo: generateSEO(title, content, slug),
 				};
 
@@ -129,14 +147,39 @@ export async function getMarkdownFiles(): Promise<MarkdownDetectorResult> {
 					slug,
 					title,
 					fileName,
+					parentSlug,
 				});
 			} catch (err) {
 				console.warn(`Error procesando ${path}:`, err);
 			}
 		}
 
+		// Anidar hijos bajo su módulo padre dentro de cada categoría.
 		Object.values(categorizedModules).forEach((cat) => {
-			cat.modules.sort((a, b) => a.fileName.localeCompare(b.fileName));
+			const all = cat.modules;
+			const topLevel = all.filter((m) => !m.parentSlug);
+			const topSlugs = new Set(topLevel.map((m) => m.slug));
+
+			const childrenByParent = new Map<string, ModuleEntry[]>();
+			for (const m of all) {
+				if (!m.parentSlug) continue;
+				if (!childrenByParent.has(m.parentSlug)) childrenByParent.set(m.parentSlug, []);
+				childrenByParent.get(m.parentSlug)!.push(m);
+			}
+
+			for (const parent of topLevel) {
+				const kids = childrenByParent.get(parent.slug);
+				if (kids) {
+					parent.children = kids.sort((a, b) => a.fileName.localeCompare(b.fileName));
+				}
+			}
+
+			// Hijos sin padre encontrado: se muestran como primer nivel para no perderlos.
+			const orphans = all.filter((m) => m.parentSlug && !topSlugs.has(m.parentSlug));
+
+			cat.modules = topLevel
+				.concat(orphans)
+				.sort((a, b) => a.fileName.localeCompare(b.fileName));
 		});
 
 		const moduleCategories = Object.values(categorizedModules).sort(

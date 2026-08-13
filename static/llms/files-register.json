@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T15:20:50.564Z",
-  "total_files": 121,
+  "generated_at": "2026-08-13T12:06:48.310Z",
+  "total_files": 122,
   "files": [
     "101-resumen-general.txt",
     "102-ventas-por-mozo.txt",
@@ -75,6 +75,7 @@
     "47-tags-de-productos.txt",
     "48-analisis-duplicados.txt",
     "49-notas-de-comanda.txt",
+    "50-agregar-producto.txt",
     "50-notas-de-producto.txt",
     "51-flujo-de-compras.txt",
     "52-todas-las-ordenes-compra.txt",
@@ -572,6 +573,13 @@
       "title": "Transacciones MacroClick",
       "slug": "transacciones-macroclick",
       "generated_from": "C:\\Dev\\documentation\\.claude\\worktrees\\paxapos-user-manual-products-df002c\\src\\routes\\user-guide\\Manual-Usuario\\30-Medios-de-Pago\\38-Transacciones-MacroClick.md"
+    },
+    {
+      "txt_file": "50-agregar-producto.txt",
+      "original_md": "50-Agregar-Producto",
+      "title": "Agregar Producto",
+      "slug": "agregar-producto",
+      "generated_from": "C:\\Dev\\documentation\\.claude\\worktrees\\paxapos-user-manual-products-df002c\\src\\routes\\user-guide\\Manual-Usuario\\40-Productos\\41-Menu\\50-Agregar-Producto.md"
     },
     {
       "txt_file": "41-menu.txt",

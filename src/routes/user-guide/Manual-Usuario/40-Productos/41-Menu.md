@@ -46,7 +46,7 @@ Podés crear **tantos menús como necesites**. Los motivos los define cada comer
 
 | # | Botón | Qué hace |
 |---|---|---|
-| 1 | ➕ **Agregar Producto** | Añade un producto nuevo a este menú. Es la vía principal para crear productos de venta. |
+| 1 | ➕ **Agregar Producto** | Añade un producto nuevo a este menú. Es la vía principal para crear productos de venta. → guía completa: [Agregar Producto al Menú](/user-guide/agregar-producto) |
 | 2 | ✏️ **Configurar Menú** | Edita los parámetros con los que se creó el menú: nombre, imagen, visibilidad y opciones. |
 | 3 | ⬇️ **Exportar Productos** | Descarga la lista de productos en formato CSV/Excel. |
 | 4 | ⬆️ **Importar Productos** | Carga productos desde CSV, Excel u otro PaxaPos. |
