@@ -1,6 +1,7 @@
 # PaxaPOS LLM Index
-# Updated: 2026-07-30T01:15:18.204Z
+# Updated: 2026-08-13T19:15:14.355Z
 https://doc.paxapos.com/llms/index.txt
+https://doc.paxapos.com/llms/glosario-del-dominio.txt
 https://doc.paxapos.com/llms/11-introduccion.txt
 https://doc.paxapos.com/llms/12-iniciar-sesion.txt
 https://doc.paxapos.com/llms/13-recuperar-contrasena.txt
@@ -49,6 +50,7 @@ https://doc.paxapos.com/llms/145-drivers-genericos.txt
 https://doc.paxapos.com/llms/146-epson-tm-t88.txt
 https://doc.paxapos.com/llms/151-preguntas-frecuentes.txt
 https://doc.paxapos.com/llms/152-buchon-bot.txt
+https://doc.paxapos.com/llms/155-troubleshooting-semantico.txt
 https://doc.paxapos.com/llms/21-salon-de-ventas.txt
 https://doc.paxapos.com/llms/22-caja-rapida.txt
 https://doc.paxapos.com/llms/23-mapa-de-mesas.txt

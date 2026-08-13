@@ -15,6 +15,7 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'warn',
+			handleMissingId: 'warn', // anclas rotas en contenido md = warning, no abortar el build
 			// Las rutas /api/llm/* se generan dinámicamente via entries() en +server.ts
 			// Las rutas /user-guide/[slug] se generan via entries() en +page.server.js
 			// '*' cubre todas las rutas estáticas descubiertas por el crawler

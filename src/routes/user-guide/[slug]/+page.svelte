@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { tick } from 'svelte';
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
@@ -16,8 +17,15 @@
 		modules: Array<{ slug: string; title: string }>;
 	}> = $state([]);
 
-	// Derivar contenido procesado (highlighting si existe el query param)
+	// Derivar contenido procesado (highlighting si existe el query param).
+	// url.searchParams NO está disponible durante el prerender (sitio 100%
+	// estático — acceder tira "Cannot access url.searchParams on a page with
+	// prerendering enabled" y rompía TODAS las páginas de la guía): el
+	// highlight es una mejora solo-cliente, en SSR se sirve el contenido tal cual.
 	let processedContent = $derived.by(() => {
+		if (!browser) {
+			return data.content;
+		}
 		const highlightParam = page.url.searchParams.get('highlight');
 		if (highlightParam) {
 			return highlightTextInHtml(data.content, highlightParam);
