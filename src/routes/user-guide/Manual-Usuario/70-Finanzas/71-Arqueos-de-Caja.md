@@ -70,3 +70,6 @@ Permite controlar las aperturas, retiros de dinero, ingresos y cierres ciegos de
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
 | Hay un faltante de caja al cerrar. | Se realizó un retiro de efectivo sin registrarlo en el sistema. | Verificá con el botón **Retiro** si se abonaron proveedores con dinero de caja. |
+| El resumen de ventas muestra un importe en rojo entre "Facturado Total Mesas" y "Abiertas Por Usuario". | Cobraste mesas abiertas por otros compañeros, de turnos anteriores, o tenés mesas abiertas sin cobrar. | Es un comportamiento normal en la operación. Leé la guía detallada en el [FAQ de Diferencias en Arqueo](/user-guide/151-08-faq-cajero-diferencia-facturado-vs-abiertas). |
+
+
