@@ -46,9 +46,9 @@
       "states": ["Activo", "Inactivo"]
     },
     {
-      "name": "Fiscalberry",
+      "name": "Servicio de Impresión (FiscalBerry)",
       "category": "Impresión / Intranet",
-      "definition": "Servicio cliente en Python que se ejecuta en la red local del restaurante para conectar la nube de PaxaPOS con impresoras de tickets y comanderas vía MQTT.",
+      "definition": "Servicio cliente en Python que se ejecuta en la red local del restaurante para conectar la nube de PaxaPOS con impresoras de tickets y comanderas vía MQTT. En la interfaz de usuario se lo nombra 'Servicio de Impresión'.",
       "blocking_prerequisites": "Debe estar ejecutándose en segundo plano en la PC local conectada a la impresora.",
       "states": ["Online", "Offline", "Error de Papel / Tapa"]
     },

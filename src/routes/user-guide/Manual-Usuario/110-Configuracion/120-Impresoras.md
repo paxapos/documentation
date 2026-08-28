@@ -11,7 +11,7 @@
 
 <div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
-Permite registrar y administrar las impresoras térmicas de comanda y fiscalberry instaladas en el local:
+Permite registrar y administrar las impresoras térmicas de comanda instaladas en el local:
 
 1. **Configuración de impresoras:** Alta de impresoras de red (IP), USB o Bluetooth para barra, cocina y caja.
 
@@ -22,7 +22,26 @@ Permite registrar y administrar las impresoras térmicas de comanda y fiscalberr
 <div id="requisitos-para-empezar-a-usarlo"></div>
 
 - Las impresoras deben estar conectadas a la red del local.
+- Tener instalado y corriendo en la PC o Raspberry del local el **Servicio de Impresión** (conocido también como *FiscalBerry*): es el programa que conecta PaxaPOS en la nube con tus impresoras físicas.
 - Tener el permiso de **Administración de Impresoras del Sistema** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+---
+
+## ⬇️ Descargar el Servicio de Impresión
+
+<div id="descargar-el-servicio-de-impresion"></div>
+
+> 💾 **¿Todavía no lo instalaste?** Descargá la última versión según tu sistema operativo:
+
+| 🖥️ **Sistema Operativo** | ⬇️ **Descarga** |
+|---|---|
+| **Windows (con interfaz)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-windows-gui.zip) |
+| **Windows (línea de comandos)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-windows-cli.zip) |
+| **Linux (con interfaz)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-linux-gui.tar.gz) |
+| **Linux (línea de comandos / Raspberry Pi)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-linux-cli.tar.gz) |
+| **Android** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-android-gui.apk) |
+
+> 🔗 Ver todas las versiones disponibles en la [página de descargas del Servicio de Impresión](https://github.com/paxapos/fiscalberry/releases/latest).
 
 ---
 
