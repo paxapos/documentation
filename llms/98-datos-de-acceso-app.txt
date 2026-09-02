@@ -1,0 +1,28 @@
+﻿# Datos de Acceso App
+
+Datos de Acceso App de Fichaje
+¿Dónde está en el sistema?: Menú principal → RRHH → General → Datos de Acceso App
+¿Quién lo usa?: Administradores de RRHH
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Muestra los códigos QR y credenciales de conexión para vincular tablets o teléfonos móviles con la aplicación móvil de fichaje por reconocimiento facial:
+1. Vincular dispositivos de fichaje: Escaneo de código QR para autorizar a una tablet colocada en el ingreso al local.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Vincular Dispositivos de Fichaje Facial configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 📱 Generar QR de Conexión | Encabezado | Muestra el código QR para escanear con la cámara del dispositivo móvil. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Configurar una tablet de fichaje
+1. Abrí la app móvil de fichaje en la tablet.
+2. Tocá Generar QR de Conexión en la pantalla del sistema.
+3. Escaneá el código QR con la tablet.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| La tablet no lee el código QR. | Brillo de pantalla bajo o reflejo sobre el monitor. | Aumentá el brillo de la pantalla y volvé a enfocar la cámara. |

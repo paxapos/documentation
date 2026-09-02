@@ -1,0 +1,28 @@
+﻿# Clasificacion de Gastos
+
+Clasificación de Gastos
+¿Dónde está en el sistema?: Menú principal → Configuración → Tablas Sistema → Clasif. de Gastos
+¿Quién lo usa?: Contadores y Administradores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite administrar el plan de cuentas de gastos y egresos del comercio (ejemplo: Servicios Públicos, Alquileres, Mantenimiento, Papelería, Honorarios):
+1. Rubros de egreso: Categorización de comprobantes para análisis de resultados contables.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Configuración de Plan de Cuentas de Gastos configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ Nueva Clasificación | Esquina superior | Registra una categoría de egreso. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Crear una categoría de gasto
+1. Tocá Nueva Clasificación.
+2. Escribí el nombre (ejemplo: Mantenimiento de Equipos).
+3. Tocá Guardar.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| No figura la categoría al cargar una factura. | La categoría está deshabilitada. | Verificá que la casilla Activa esté seleccionada. |

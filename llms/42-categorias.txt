@@ -1,0 +1,31 @@
+﻿# Categorias
+
+Categorías de Productos
+¿Dónde está en el sistema?: Menú principal → Productos → Categorías
+¿Quién lo usa?: Encargados y Administradores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite clasificar y ordenar los productos del local en familias o rubros (ejemplo: Entradas, Platos Principales, Bebidas sin Alcohol, Postres):
+1. Estructura de la carta: Agrupa los productos para facilitar la búsqueda en las pantallas de venta.
+2. Orden visual: Define el orden en que se muestran los rubros en las comanderas y en la carta.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Administración de Categorías de Productos configurado en Permisos por Rol.
+---
+🎨 Botones y Campos: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo / completarlo? |
+|---|---|---|
+| ➕ Nueva Categoría | Esquina superior | Abre el formulario para registrar un rubro nuevo. |
+| 🔢 Orden | Columna Orden | Cambia la prioridad de aparición de la categoría en pantalla. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Crear una categoría nueva
+1. Tocá el botón Nueva Categoría.
+2. Escribí el Nombre (ejemplo: Cervezas Tiradas).
+3. Asigná un color o ícono identificatorio.
+4. Tocá Guardar.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| No podés eliminar una categoría. | Contiene productos asociados. | Reubicá los productos en otra categoría antes de eliminarla. |

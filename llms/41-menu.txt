@@ -1,0 +1,32 @@
+﻿# Menu
+
+Menú de Productos (Carta Digital)
+¿Dónde está en el sistema?: Menú principal → Productos → Menú
+¿Quién lo usa?: Encargados de Carta, Mozos y Administradores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+El módulo Menú permite organizar la carta o menú de venta del local:
+1. Organización del catálogo vendible: Selección de qué productos aparecen disponibles en el salón, delivery o takeaway.
+2. Precios y visibilidad: Cambio rápido de precios y activación o desactivación de artículos fuera de carta.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Gestión de Carta y Precios configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ Agregar al Menú | Esquina superior | Incorpora un producto del maestro a la carta actual. |
+| 👁️ Mostrar / Ocultar | Columna Visibilidad | Muestra u oculta el producto en la pantalla de adición de los mozos. |
+| 💵 Precio | En la tabla | Permite modificar el precio de venta al público directamente. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Cambiar el precio de un producto
+1. Buscá el producto en el listado de la carta.
+2. Hacé clic en la casilla Precio.
+3. Ingresá el nuevo importe.
+4. Tocá Guardar. El nuevo precio se actualizará inmediatamente en todas las pantallas de cobro.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El mozo no encuentra un producto en la mesa. | El producto está marcado como oculto o sin stock. | Verificá que el ícono de visibilidad 👁️ esté activo. |

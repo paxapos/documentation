@@ -1,0 +1,26 @@
+﻿# Preguntas Frecuentes
+
+Preguntas Frecuentes y Guías Rápidas por Rol
+¿Dónde está en el sistema?: Menú principal → Ayuda → Preguntas Frecuentes
+¿Quién lo usa?: Cajeros, Mozos, Cocineros, Encargados de local y Administradores
+---
+🎯 Índice de Preguntas Frecuentes (FAQ)
+Seleccioná la guía rápida según tu función o el problema que necesités resolver:
+🚨 Regla de Oro
+• ⚡ Solución Inicial si la Pantalla se Congela o no Carga
+---
+🧑‍🍳 Mozos y Personal de Atención
+• 🔄 Cómo Reabrir una Mesa Anulada o Cerrada por Error
+---
+💵 Cajeros y Operadores de Venta
+• 📄 Cómo Emitir una Factura A Cargando Datos del Cliente
+• 💸 Cómo Registrar Entradas y Salidas de Dinero del Cajón
+• 💳 Cómo Activar un Medio de Pago que no Aparece al Cobrar
+• 📊 Diferencia entre "Facturado Total Mesas" y "Abiertas Por Usuario" en Caja
+---
+📈 Encargados y Supervisores
+• 🔍 Cómo Auditar y Solucionar Diferencias en el Cierre de Caja
+---
+📞 ¿Necesitás ayuda personalizada?
+Si aplicaste los pasos indicados en las guías y continuás con dudas, podés escribir directamente a nuestro equipo de atención:
+• 📱 Soporte Directo WhatsApp: +54 2254 62-9000

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.OsjyMfZO.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BbDj_Enl.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/bKGmF80q.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BqndPGr3.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.C3UHbOtH.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DOowTg6l.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dbt91rn3.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BoDQOwTx.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2oVRnTb.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CMWiRswa.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/5Unz4TqZ.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.CnyHTiuZ.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CuqdT-Db.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BOoUdasN.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.B-HPFF5c.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CtJ8Xb1h.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/RidO43On.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/KddvmjYx.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BOiueTUb.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Ayuda → Resolución de Problemas  
+ ¿Quién lo usa?: Cajeros, Mozos, Cocineros, Encargados y Du..."/> <meta name="keywords" content="troubleshooting semantico, paxapos, 📖 guía única de resolución de problemas y errores (troubleshooting), tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting) - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Ayuda → Resolución de Problemas  
+ ¿Quién lo usa?: Cajeros, Mozos, Cocineros, Encargados y Du..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/paxapos-social.png"/> <meta property="og:image:alt" content="📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting) - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting) - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Ayuda → Resolución de Problemas  
+ ¿Quién lo usa?: Cajeros, Mozos, Cocineros, Encargados y Du..."/> <meta name="twitter:image" content="https://doc.paxapos.com/paxapos-social.png"/> <meta name="twitter:site" content="@paxapos"/> <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting) - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Ayuda → Resolución de Problemas  \n ¿Quién lo usa?: Cajeros, Mozos, Cocineros, Encargados y Du...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-02",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/paxapos-social.png",
+    "width": 1200,
+    "height": 630
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/> <link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/> <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting) - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.DSAlSQMl.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 shadow-sm backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/80"><div class="mx-auto w-full max-w-7xl px-0 sm:px-4 lg:px-8"><div class="flex h-16 w-full items-center justify-between px-4 sm:px-0"><div class="min-w-0 flex-shrink-0"><a href="../user-guide" class="truncate text-lg font-bold text-gray-900 sm:text-xl dark:text-white">📚 Centro de Documentación</a></div> <div class="mx-8 hidden max-w-lg flex-1 md:block"><div class="relative"><input type="text" placeholder="Buscar en el manual..." class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--></div> <!--[-1--><!--]--></div></div> <div class="flex items-center md:hidden"><button type="button" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-gray-400"><span class="sr-only">Buscar</span> <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button></div></div> <!--[-1--><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-hidden bg-white dark:bg-gray-900"><div class="mx-auto w-full max-w-7xl px-0 sm:px-4 lg:px-8"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 overflow-auto bg-white dark:bg-gray-900"><div class="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8"><!--[--><!----> <!--[-1--><!--]--> <div class="relative z-10 mx-auto min-h-screen max-w-7xl overflow-x-hidden bg-white px-2 py-2 sm:px-4 md:px-6 lg:px-8 dark:bg-gray-900"><div class="flex flex-col gap-2 sm:gap-6 md:gap-8 lg:flex-row"><aside class="relative z-20 flex-shrink-0 lg:w-64"><div class="rounded-lg border border-gray-200 bg-white p-2 shadow-sm sm:p-4 md:p-5 dark:border-gray-700 dark:bg-gray-800"><h3 class="mb-2 text-xs font-bold text-gray-900 sm:mb-4 sm:text-base md:text-lg dark:text-white">Manual de Usuario</h3> <div class="mb-2 block sm:mb-4 lg:hidden"><select class="w-full rounded-md border border-gray-300 bg-white px-2 py-1.5 text-xs text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 sm:px-3 sm:py-2 sm:text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"><option value="">Seleccionar módulo...</option><!--[--><!--]--></select></div> <div class="hidden space-y-2 sm:space-y-3 lg:block"><!--[--><!--]--></div></div></aside> <main class="relative z-10 min-w-0 flex-1"><article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"><header class="bg-gradient-to-r from-blue-500 to-purple-600 p-3 text-white sm:p-6 md:p-8"><h1 class="text-lg leading-tight font-bold sm:text-2xl md:text-3xl lg:text-4xl">📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)</h1> <div class="mt-2 flex flex-wrap items-center gap-1 text-xs opacity-90 sm:gap-2 sm:text-sm"><span class="rounded-full bg-white/20 px-2 py-1">Manual de Usuario</span> <span class="rounded-full bg-white/20 px-2 py-1">ID: troubleshooting-semantico</span> <button class="rounded-full bg-white/20 px-2 py-1 transition-colors hover:bg-white/30" title="Compartir esta página">🔗 Compartir</button></div></header> <div class="p-2 sm:p-3 md:p-6"><div class="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 markdown-paxapos max-w-none"><!----><blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Ayuda</strong> → <strong>Resolución de Problemas</strong><br><strong>¿Quién lo usa?:</strong> Cajeros, Mozos, Cocineros, Encargados y Dueños de local</p>
+</blockquote>
+<hr>
+<h2>🎯 ¿Para qué sirve esta guía?</h2>
+<p>Esta es la guía definitiva de soluciones a problemas en PaxaPOS. Si en la pantalla te aparece un mensaje de error, si una impresora no saca ticket, o si la pantalla de la cocina no recibe los pedidos, buscá acá el error exacto. Cada problema tiene su <strong>enlace directo</strong> que podés copiar y enviar a tu equipo o a soporte técnico.</p>
+<hr>
+<h2>🔑 Requisitos antes de revisar un error</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Tener acceso a la pantalla donde ocurrió el problema (celular, tablet, computadora o POS).</li>
+<li><input disabled="" type="checkbox"> Verificar que el equipo esté encendido y conectado a la red Wi-Fi o cable de red del local.</li>
+<li><input disabled="" type="checkbox"> Verificar que la caja tenga un <strong>Turno Abierto</strong> con usuario activo.</li>
+</ul>
+<hr>
+<h2>🚨 Índice Directo de Errores Comunes</h2>
+<p>Toca cualquier error para ir directamente a su solución:</p>
+<ul>
+<li><a href="#error-afip-arca">1. Error de AFIP / ARCA al emitir factura (AFIP Timeout / Error 500)</a></li>
+<li><a href="#error-kds-desconectado">2. La pantalla de cocina (KDS) no recibe las comandas</a></li>
+<li><a href="#error-payway-terminal">3. El Posnet / Terminal Payway no responde o dice Sin Conexión</a></li>
+<li><a href="#error-impresora-comandera">4. La impresora de comandas o de tickets no imprime</a></li>
+<li><a href="#error-turno-no-abierto">5. No puedo cerrar la mesa porque da error de Turno o Caja</a></li>
+<li><a href="#error-mercadopago-qr">6. MercadoPago QR no genera el código en la pantalla</a></li>
+<li><a href="#error-login-credenciales">7. Error de credenciales o clave incorrecta al iniciar sesión</a></li>
+<li><a href="#error-fichaje-empleado">8. El lector de huella o fichaje de personal no reconoce al empleado</a></li>
+</ul>
+<hr>
+<h2>🛠️ Matriz de Solución de Errores</h2>
+<hr>
+<h3 class="relative">
+                <a id="error-afip-arca"></a> 1. Error de Facturación Electrónica ARCA / AFIP (<code>ERR_AFIP_TIMEOUT</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-afip-arca"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-afip-arca"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;Error de comunicación con ARCA/AFIP&quot;</em> o <em>&quot;AFIP Timeout (5000ms)&quot;</em></td>
+<td>El servicio del gobierno (ARCA/AFIP) está demorado o el local se quedó momentáneamente sin internet.</td>
+<td>1. Revisá que la computadora o tablet tenga internet (abriendo cualquier página web en el navegador).<br>2. Esperá 1 minuto y tocá el botón <strong>Reintentar Facturar</strong>.<br>3. Si el sistema te ofrece emitir <strong>Comprobante X / Ticket Interno</strong>, aceptalo para no demorar al cliente. La factura quedará guardada para enviarse automáticamente cuando vuelva el servicio.</td>
+<td>En el menú <strong>Finanzas</strong> → <strong>Facturación AFIP</strong> → <strong>Tickets Fiscales</strong> (o en el histórico de <strong>Ventas</strong> → <strong>Salón de Ventas</strong>), verás que el ticket cambia al estado <strong>Facturado</strong> con su número de CAE.</td>
+<td><em>&quot;Hola Soporte, me sale error de AFIP al facturar. Ya revisé que tengo internet en el local pero sigue rebotando las facturas en pendientes.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-kds-desconectado"></a> 2. La pantalla de cocina (KDS) no recibe los pedidos (<code>KDS_DISCONNECTED</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-kds-desconectado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-kds-desconectado"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por me sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mensaje rojo <em>&quot;Pantalla de cocina sin conexión&quot;</em> o los mozos envían comanda y no aparece en el monitor de cocina.</td>
+<td>Se interrumpió el cable de red o la conexión Wi-Fi entre la tablet/pantalla de la cocina y el sistema central del restaurante.</td>
+<td>1. En la pantalla de la cocina (<strong>Comandero</strong> → <strong>General</strong> → <strong>Comandas Activas</strong>), tocá el botón <strong>Recargar Pantalla</strong> o reiniciá la aplicación de la tablet.<br>2. Verificá que la tablet o TV de la cocina esté conectada al Wi-Fi del local.<br>3. Desde la administración, verificá en <strong>Menú principal</strong> → <strong>Comandero</strong> → <strong>General</strong> → <strong>Puestos de Comanda</strong> que el monitor esté bien asignado.</td>
+<td>En la esquina superior de la pantalla de cocina (<strong>Comandero</strong> → <strong>General</strong> → <strong>Comandas Activas</strong>) aparecerá un punto verde con la leyenda <strong>Conectado en Vivo</strong>. Hacé una comanda de prueba desde la caja para ver si aparece.</td>
+<td><em>&quot;Hola Soporte, la pantalla de cocina no recibe comandas. Ya reiniciamos la tablet y el Wi-Fi, pero sigue apareciendo el cartel rojo sin conexión.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-payway-terminal"></a> 3. El Posnet / Terminal Payway no responde (<code>PAYWAY_TERMINAL_OFFLINE</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-payway-terminal"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-payway-terminal"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;No se pudo conectar con la terminal Payway&quot;</em> o <em>&quot;Cobro cancelado por tiempo de espera&quot;</em>.</td>
+<td>El posnet físico está apagado, sin batería, fuera de la base cargadora o desconectado de la red Wi-Fi.</td>
+<td>1. Verificá que el Posnet Payway esté encendido y con pantalla activa.<br>2. Si es por Wi-Fi, asegurate de que tenga señal.<br>3. En PaxaPOS (<strong>Ventas</strong> → <strong>Salón de Ventas</strong>), tocá <strong>Reintentar Cobro con Payway</strong>.<br>4. Si requerís verificar la terminal o realizar cobro manual, consultá <strong>Menú principal</strong> → <strong>Medios de Pago</strong> → <strong>Prisma Payway</strong> → <strong>Terminales de Pago</strong> (o <strong>Transacciones Payway</strong>).</td>
+<td>Al presionar <strong>Cobrar</strong>, la terminal Payway se iluminará automáticamente pidiendo que el cliente acerque o pase su tarjeta.</td>
+<td><em>&quot;Hola Soporte, PaxaPOS no se envía a la terminal Payway. Ya reiniciamos la terminal pero el sistema no se conecta al posnet.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-impresora-comandera"></a> 4. La impresora de comandas o de tickets no imprime (<code>PRINTER_NOT_FOUND</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-impresora-comandera"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-impresora-comandera"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cartel en rojo <em>&quot;Error al enviar a impresora&quot;</em> o la comanda queda en estado enviando sin salir en papel.</td>
+<td>La impresora se quedó sin papel, tiene la tapa abierta, el cable de red/USB se desconectó, o el Servicio de Impresión (FiscalBerry) de la caja se cerró.</td>
+<td>1. Revisá que la impresora tenga rollo de papel térmico colocado correctamente y la luz esté en verde.<br>2. Revisá que el cable de energía y red/USB estén bien firmes.<br>3. Verificá que el <strong>Servicio de Impresión</strong> (FiscalBerry) esté abierto y en verde en la PC o Raspberry del local, y revisá la configuración en <strong>Menú principal</strong> → <strong>Configuración</strong> → <strong>Impresoras</strong> → <strong>Impresoras</strong> (y <strong>Config de Impresión</strong>).<br>4. Tocá el botón <strong>Reimprimir Comanda</strong> en PaxaPOS.</td>
+<td>La impresora emitirá un pitido o sacará inmediatamente el ticket de prueba/comanda reintentada.</td>
+<td><em>&quot;Hola Soporte, la impresora de cocina no saca papel. Tiene rollo nuevo y luz verde, pero desde PaxaPOS nos dice &#39;Impresora no encontrada&#39;.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-turno-no-abierto"></a> 5. No puedo cerrar la mesa porque da error de Turno o Caja (<code>NO_OPEN_SHIFT</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-turno-no-abierto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-turno-no-abierto"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;No se puede emitir cobro: No existe un turno abierto para este cajero/operador&quot;</em>.</td>
+<td>Intentás cobrar una mesa o registrar una venta sin haber abierto primero el turno o la caja diaria con tu usuario.</td>
+<td>1. Dirigite a <strong>Menú principal</strong> → <strong>Finanzas</strong> → <strong>Caja</strong> → <strong>Arqueos de Caja</strong>.<br>2. Ingresá el monto de dinero inicial (monto de cambio o caja chica) y tocá <strong>Abrir Turno</strong>.<br>3. Regresá a <strong>Ventas</strong> → <strong>Salón de Ventas</strong> y presioná <strong>Cobrar</strong> nuevamente en la mesa correspondiente.</td>
+<td>El sistema te dejará ingresar a la pantalla de cobro y seleccionar los medios de pago (efectivo, débito, MP) sin mostrar el cartel de bloqueo.</td>
+<td><em>&quot;Hola Soporte, intento cobrar una mesa y me dice que no hay turno abierto, pero ya hice la apertura de caja hoy temprano.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-mercadopago-qr"></a> 6. MercadoPago QR no genera el código en la pantalla (<code>MP_QR_GENERATE_ERROR</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-mercadopago-qr"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-mercadopago-qr"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;Error al generar código QR de MercadoPago&quot;</em> o la pantalla gira infinitamente cargando el QR.</td>
+<td>La cuenta de MercadoPago del restaurante requiere revalidación o hubo un microcorte de internet en la caja.</td>
+<td>1. Tocá el botón <strong>Cancelar</strong> en la ventana de cobro.<br>2. Verificá que la computadora tenga internet.<br>3. Seleccioná nuevamente <strong>Cobrar con MercadoPago QR</strong>.<br>4. Si el problema persiste, revisá la vinculación en <strong>Menú principal</strong> → <strong>Medios de Pago</strong> → <strong>General</strong> → <strong>Configuración de Procesadores</strong> (o en <strong>Configuración</strong> → <strong>Sistema</strong> → <strong>Módulo Delivery</strong> / <strong>MercadoPago</strong>).</td>
+<td>Aparecerá en la pantalla el código QR cuadrado con el monto exacto de la cuenta listo para escanear.</td>
+<td><em>&quot;Hola Soporte, al elegir cobro con QR MercadoPago se queda cargando y dice error de token o vinculación.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-login-credenciales"></a> 7. Error de credenciales o clave incorrecta al iniciar sesión (<code>AUTH_INVALID_CREDENTIALS</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-login-credenciales"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-login-credenciales"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;Usuario o contraseña incorrectos&quot;</em> o <em>&quot;PIN de acceso inválido&quot;</em>.</td>
+<td>Se ingresó una letra en mayúscula sin querer (bloq mayús), un espacio extra o el PIN numérico no coincide con el perfil del usuario.</td>
+<td>1. Verificá la tecla <strong>Bloq Mayús</strong> de tu teclado.<br>2. Escribí tu nombre de usuario y contraseña lentamente.<br>3. Si usás ingreso por PIN de 4 dígitos, asegurate de seleccionar tu nombre de la lista de operadores primero.<br>4. Si olvidaste tu clave, pedile al Administrador que te asigne una nueva ingresando a <strong>Menú principal</strong> → <strong>Configuración</strong> → <strong>Acceso/Seguridad</strong> → <strong>Usuarios del Sistema</strong> (o <strong>Usuarios con PIN</strong>).</td>
+<td>Al colocar los datos correctamente, el sistema ingresará de inmediato al mapa de ventas o panel principal.</td>
+<td><em>&quot;Hola Soporte, se me bloqueó la clave de mi usuario administrador y ningún encargado puede ingresar para blanquearla.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <a id="error-fichaje-empleado"></a> 8. El reloj de fichaje o cámara no reconoce al empleado (<code>FICHAJE_FACE_NOT_MATCH</code>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="error-fichaje-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="error-fichaje-empleado"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué ves en la pantalla?</th>
+<th>¿Por qué sucede esto?</th>
+<th>Pasos sencillos para solucionarlo</th>
+<th>¿Cómo comprobar que se arregló?</th>
+<th>¿Qué decirle a Soporte Técnico si no se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>&quot;Rostro no identificado, intente nuevamente&quot;</em> o <em>&quot;Error de cámara en aplicación Fichaje&quot;</em>.</td>
+<td>Poca iluminación en el área del reloj de fichaje, uso de gorras/barbijos, o la lente de la cámara de la tablet está sucia.</td>
+<td>1. Limpiá suavemente la cámara frontal de la tablet con un paño seco.<br>2. Ubicate de frente a la pantalla con buena luz en el rostro (evitá sombras fuertes).<br>3. Si el sistema no reconoce tu rostro tras 2 intentos, usá la opción <strong>Ingresar con Legajo y PIN</strong>.<br>4. Informale al encargado de RRHH para verificar los datos en <strong>Menú principal</strong> → <strong>RRHH</strong> → <strong>General</strong> → <strong>Empleados</strong> (o los horarios en <strong>Configuración</strong> → <strong>Fichaje</strong> → <strong>Tipos de Jornada / Horarios</strong>).</td>
+<td>La pantalla emitirá un sonido de confirmación verde mostrando la hora exacta de ingreso/egreso registrada.</td>
+<td><em>&quot;Hola Soporte, la tablet de fichaje de empleados se queda con la cámara en negro y no permite fichar.&quot;</em></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>📞 ¿Cómo comunicarse con el Soporte Técnico de PaxaPOS?</h2>
+<p>Si realizaste los pasos sugeridos y el problema persiste, comunicate con nuestro equipo de atención:</p>
+<ul>
+<li>📱 <strong>WhatsApp de Soporte</strong>: +54 9 11 XXXX-XXXX (Atención prioritaria para locales en servicio).</li>
+<li>📧 <strong>Correo Electrónico</strong>: <a href="mailto:soporte@paxapos.com">soporte@paxapos.com</a></li>
+<li>📋 <strong>Datos que tenés que tener a mano antes de llamar</strong>:<ol>
+<li>Nombre de tu local gastronómico (Tenant/Comercio).</li>
+<li>¿Qué pantalla o impresora está fallando?</li>
+<li>El nombre del error o la foto del cartel que ves en la pantalla.</li>
+</ol>
+</li>
+</ul>
+<!----></div></div> <div class="border-t border-gray-200 p-3 pt-0 sm:p-4 md:p-6 dark:border-gray-700"><div class="flex items-center justify-between"><a href="../user-guide" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"><svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver al índice</a> <button class="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2 py-1 text-[10px] font-medium text-blue-600 transition-colors hover:bg-blue-100 sm:px-3 sm:py-1.5 sm:text-xs dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30"><svg class="mr-1 h-2.5 w-2.5 sm:mr-1.5 sm:h-3 sm:w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg> Ver archivo LLMs</button></div></div></article></main></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_sv8b04 = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.OsjyMfZO.js"),
+						import("../_app/immutable/entry/app.C3UHbOtH.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,null,{type:"data",data:null,uses:{}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

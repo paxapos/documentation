@@ -1,0 +1,30 @@
+﻿# Cierres Payway
+
+Cierres de Lote (Prisma Payway)
+¿Dónde está en el sistema?: Menú principal → Medios de Pago → Cierres Payway
+¿Quién lo usa?: Cajeros, Encargados de Cierre y Contadores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite realizar y auditar los cierres de lote diarios de las terminales de pago Payway:
+1. Cierre de lote posnet: Envío de transacciones a la procesadora de tarjetas para la liquidación de fondos en la cuenta bancaria.
+2. Resumen de totales: Conciliación entre tarjetas de crédito, débito y total liquidado.
+---
+🔑 Requisitos para empezar a usarlo
+• Poseer el permiso de Cierre de Lote de Posnets configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 📑 Cerrar Lote | Esquina superior | Ejecuta la orden de cierre de lote a las terminales seleccionadas. |
+| 🖨️ Imprimir Resumen | Al lado de cada cierre | Imprime el reporte de cierre de lote en la comandería o impresora fiscal. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Realizar el cierre de lote al finalizar el día
+1. Verificá que no queden ventas pendientes de cobro en las terminales.
+2. Tocá el botón Cerrar Lote.
+3. El sistema emitirá el comprobante de cierre de lote liquidado.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| La posnet no responde al cierre. | Pérdida momentánea de señal o internet. | Reiniciá la posnet o realizá el cierre manual desde el teclado físico de la terminal. |
