@@ -93,7 +93,7 @@
 | **🖨️ Probar**     | Realiza una impresión de prueba   |
 | **⚙️ Configurar** | Ajusta la configuración           |
 
-> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora fiscal con nuestra **[📄 Guía de FiscalBerry](/user-guide/impresoras)** para completar la integración con el sistema tributario.
+> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora con nuestra **[📄 Guía del Servicio de Impresión](/user-guide/impresoras)** (conocido también como _FiscalBerry_) para completar la integración con el sistema.
 
 ---
 

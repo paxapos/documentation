@@ -1,10 +1,11 @@
 # PaxaPOS LLM Index
-# Updated: 2026-08-13T19:15:14.355Z
+# Updated: 2026-08-28T03:31:26.191Z
 https://doc.paxapos.com/llms/index.txt
 https://doc.paxapos.com/llms/glosario-del-dominio.txt
 https://doc.paxapos.com/llms/11-introduccion.txt
 https://doc.paxapos.com/llms/12-iniciar-sesion.txt
 https://doc.paxapos.com/llms/13-recuperar-contrasena.txt
+https://doc.paxapos.com/llms/14-guia-de-inicio-rapido.txt
 https://doc.paxapos.com/llms/101-resumen-general.txt
 https://doc.paxapos.com/llms/102-ventas-por-mozo.txt
 https://doc.paxapos.com/llms/103-ventas-por-tipo-de-pago.txt
@@ -48,6 +49,13 @@ https://doc.paxapos.com/llms/143-citizen-ct-s310ii.txt
 https://doc.paxapos.com/llms/144-epson-tm-t20.txt
 https://doc.paxapos.com/llms/145-drivers-genericos.txt
 https://doc.paxapos.com/llms/146-epson-tm-t88.txt
+https://doc.paxapos.com/llms/151-01-faq-solucion-inicial-pantalla-congelada.txt
+https://doc.paxapos.com/llms/151-03-faq-mozo-reabrir-mesa-anulada.txt
+https://doc.paxapos.com/llms/151-05-faq-cajero-emitir-factura-a.txt
+https://doc.paxapos.com/llms/151-06-faq-cajero-ingreso-egreso-cajon.txt
+https://doc.paxapos.com/llms/151-07-faq-cajero-activar-medio-pago.txt
+https://doc.paxapos.com/llms/151-08-faq-cajero-diferencia-facturado-vs-abiertas.txt
+https://doc.paxapos.com/llms/151-10-faq-supervisor-cierre-caja-diferencias.txt
 https://doc.paxapos.com/llms/151-preguntas-frecuentes.txt
 https://doc.paxapos.com/llms/152-buchon-bot.txt
 https://doc.paxapos.com/llms/155-troubleshooting-semantico.txt
@@ -67,6 +75,7 @@ https://doc.paxapos.com/llms/35-reembolsos-payway.txt
 https://doc.paxapos.com/llms/36-anulaciones-payway.txt
 https://doc.paxapos.com/llms/37-cierres-payway.txt
 https://doc.paxapos.com/llms/38-transacciones-macroclick.txt
+https://doc.paxapos.com/llms/39-configuracion-banco-macro.txt
 https://doc.paxapos.com/llms/41-menu.txt
 https://doc.paxapos.com/llms/42-categorias.txt
 https://doc.paxapos.com/llms/43-variantes-grupo-sabores.txt
