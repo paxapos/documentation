@@ -7,19 +7,6 @@ on:
     pull_request:
         branches: [main]
     workflow_dispatch:
-        inputs:
-            brand_name:
-                description: 'Brand Name'
-                required: true
-                default: 'PaxaPOS'
-            system_url:
-                description: 'System URL'
-                required: true
-                default: 'beta.paxapos.com'
-            company_name:
-                description: 'Company Name (optional)'
-                required: false
-                default: ''
 
 env:
     REGISTRY: ghcr.io
@@ -35,23 +22,6 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
-
-            - name: Create .env for CI
-              run: |
-                  cat > .env <<EOF
-                  BRAND_NAME=${{ vars.PUBLIC_BRAND_NAME }}
-                  SYSTEM_URL=${{ vars.PUBLIC_SYSTEM_URL }}
-                  COMPANY_NAME=${{ vars.PUBLIC_COMPANY_NAME }}
-                  EOF
-
-            - name: Load env vars from .env
-              run: |
-                  set -a
-                  source .env
-                  set +a
-                  echo "PUBLIC_BRAND_NAME=$BRAND_NAME" >> "$GITHUB_ENV"
-                  echo "PUBLIC_SYSTEM_URL=$SYSTEM_URL" >> "$GITHUB_ENV"
-                  echo "PUBLIC_COMPANY_NAME=$COMPANY_NAME" >> "$GITHUB_ENV"
 
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
@@ -92,19 +62,6 @@ jobs:
                       type=semver,pattern={{major}}.{{minor}}
                       type=raw,value=latest,enable={{is_default_branch}}
 
-            - name: Set build variables
-              id: vars
-              run: |
-                  # Usar variables del workflow_dispatch si están disponibles.
-                  # Caso contrario, usar .env cargado en GITHUB_ENV.
-                  BRAND_NAME="${{ github.event.inputs.brand_name || env.PUBLIC_BRAND_NAME || 'PaxaPOS' }}"
-                  SYSTEM_URL="${{ github.event.inputs.system_url || env.PUBLIC_SYSTEM_URL || 'beta.paxapos.com' }}"
-                  COMPANY_NAME="${{ github.event.inputs.company_name || env.PUBLIC_COMPANY_NAME || '' }}"
-
-                  echo "brand_name=${BRAND_NAME}" >> $GITHUB_OUTPUT
-                  echo "system_url=${SYSTEM_URL}" >> $GITHUB_OUTPUT
-                  echo "company_name=${COMPANY_NAME}" >> $GITHUB_OUTPUT
-
             - name: Build and push to GitHub Container Registry
               uses: docker/build-push-action@v5
               if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
@@ -126,9 +83,5 @@ jobs:
                   push: true
                   tags: ${{ steps.meta-dockerhub.outputs.tags }}
                   labels: ${{ steps.meta-dockerhub.outputs.labels }}
-                  build-args: |
-                      PUBLIC_BRAND_NAME=${{ steps.vars.outputs.brand_name }}
-                      PUBLIC_SYSTEM_URL=${{ steps.vars.outputs.system_url }}
-                      PUBLIC_COMPANY_NAME=${{ steps.vars.outputs.company_name }}
                   cache-from: type=gha
                   cache-to: type=gha,mode=max

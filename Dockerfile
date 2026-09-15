@@ -3,49 +3,29 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Actualizar npm y verificar instalación
-RUN npm install -g npm@latest patch-package && npm --version
+RUN corepack enable && corepack prepare pnpm@9 --activate
 
-# Copiar archivos de dependencias
-COPY package*.json ./
-RUN npm install
+# El paquete se buildea aislado del monorepo: no hay lockfile propio.
+COPY package.json ./
+RUN pnpm install --no-frozen-lockfile
 
-# Copiar codigo fuente
 COPY . .
-
-# Generar config.js con placeholders para Docker
-RUN DOCKER_BUILD=true node scripts/generate-config.mjs
-
-# Build generico (sin variables de entorno)
-RUN npm run build
+RUN pnpm run build
 
 # Etapa final con nginx
 FROM nginx:1.27-alpine3.20
 
 LABEL maintainer="PaxaPOS Team"
-LABEL version="2.3.0"
-LABEL description="Imagen generica de documentacion - Requiere variables de entorno"
+LABEL version="3.0.0"
+LABEL description="Manual de usuario PaxaPOS (sitio estático prerendereado)"
 
-# NO definir valores por defecto - DEBEN venir del docker-compose
-# Esto asegura que cada deploy tenga su configuracion explicita
-ENV BRAND_NAME=""
-ENV SYSTEM_URL=""
-ENV COMPANY_NAME=""
 ENV TZ=America/Argentina/Buenos_Aires
 
 RUN apk update && apk upgrade && apk add --no-cache tzdata
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
-
-# Copiar build
 COPY --from=builder /app/build /usr/share/nginx/html
-
-# Copiar configuracion de nginx con templates
-COPY nginx-runtime.conf /etc/nginx/templates/default.conf.template
+COPY nginx-runtime.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=10s CMD wget --quiet --tries=1 --spider http://localhost:8080/health || exit 1
-
-ENTRYPOINT ["/docker-entrypoint.sh"]

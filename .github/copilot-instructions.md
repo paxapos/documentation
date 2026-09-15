@@ -1,186 +1,56 @@
-# PaxaPOS Documentation - AI Coding Guidelines
+# PaxaPOS Documentation — guía para agentes
 
-## 🎯 Project Overview
+Sitio SvelteKit 2 + Svelte 5 + Tailwind v4, **100 % prerendereado** con `@sveltejs/adapter-static` y servido por nginx desde `build/`. El contenido son archivos Markdown descubiertos en build time; agregar un `.md` crea automáticamente ruta, entrada de navegación, SEO, índice de búsqueda y archivo TXT para LLMs. No hay servidor Node en runtime.
 
-This is a **SvelteKit 2.0 static documentation site** for PaxaPOS (a restaurant management system). The site is fully prerendered as static HTML and deployed via nginx. Content lives in markdown files, is auto-discovered at build time, and generates both human-readable docs and AI-optimized text files for LLM consumption.
+## Pipeline de contenido
 
-**Key Architectural Decision:** This project uses a **folder-based content discovery system** rather than manual route definitions. Adding a new markdown file automatically creates routes, navigation entries, SEO metadata, and LLM-friendly text files.
+1. **Fuente:** `src/routes/user-guide/Manual-Usuario/<NN>-<Categoría>/<NN>-<Módulo>.md`. La carpeta define la categoría y su orden; el archivo define el orden dentro de la categoría. El primer `# H1` es el título.
+2. **Descubrimiento (SvelteKit, solo server):** `src/lib/server/markdown.ts` hace `import.meta.glob(?raw)` de los `.md`, genera slug (`fileNameToSlug`), título, categoría y SEO. Se cachea una vez por build.
+3. **Render:** `user-guide/[slug]/+page.server.ts` → `marked` → `fixImagePaths` → `wrapTablesForResponsive` → `addLinkIconsToHeaders`. El HTML va prerendereado; el cliente solo aplica `?highlight=` (búsqueda) y copia de enlaces.
+4. **Navegación:** `user-guide/+layout.server.ts` entrega las categorías al sidebar; `user-guide/+page.server.ts` arma las tarjetas del índice con **íconos SVG inline** resueltos en build desde `@iconify-json/lucide` (`src/lib/server/icons.ts`). Nada se pide a servidores externos en runtime.
+5. **Scripts de build (`pnpm generate`, orden obligatorio):**
+    - `generate:ai` → `static/llms/*.txt`, `index.txt`, `files-register.json` (manifiesto slug → txt)
+    - `generate:seo` → `sitemap.xml`, `robots.txt`, `llms.txt`, `urls.txt`, `content-index.json`, `ai-metadata.json` (lee el manifiesto anterior)
+    - `generate:search` → `static/search-index.json` (búsqueda client-side, fetch lazy)
+    Todo lo generado está en `.gitignore`. Lógica compartida en `scripts/shared-utils.mjs`; su equivalente TS es `src/lib/utils/contentUtils.ts` (mismo algoritmo de slug — si cambia uno, cambia el otro).
 
-## 🏗️ Architecture & Data Flow
+## Reglas
 
-### Content Processing Pipeline
+- **Nunca importar `$lib/server/*` desde componentes o loaders universales** (`+page.ts`): todo el Markdown debe resolverse en `+page.server.ts` / `+layout.server.ts`, si no el bundle cliente arrastra los `.md` y `marked`.
+- **Íconos:** agregar el slug al mapa `moduleIcons` en `src/lib/server/icons.ts` con nombre `lucide:*`. Si el nombre no existe el build avisa `[icons] "..." no existe` y usa `lucide:file-text`.
+- **Svelte 5 runes** (`$props`, `$state`, `$derived`, `$effect`). **Tailwind v4** configurado en `src/app.css` (sin `tailwind.config.js`). Estilos del Markdown en `.markdown-paxapos` (app.css).
+- **Contacto/WhatsApp:** los `.md` usan `{{WHATSAPP_URL}}`, `{{WHATSAPP_NUMBER}}`, `{{WHATSAPP_DISPLAY}}`; el valor vive solo en `src/lib/config/contact.js`.
+- **Anclas:** `<div id="..."></div>` después de un header genera el botón de copiar enlace.
+- Rutas dinámicas se prerenderizan vía `entries()`; no listar rutas a mano en `svelte.config.js`.
 
-1. **Source:** Markdown files in `src/routes/user-guide/Manual-Usuario/` organized by numbered folders (e.g., `10-Comenzamos/`, `20-Primeros Pasos/`)
-2. **Discovery:** `src/lib/utils/markdownDetector.js` scans folders via Vite's `import.meta.glob()` and auto-generates:
-    - Slugs (filename → URL-friendly format, removing number prefixes)
-    - Titles (extracted from first `# heading` or filename)
-    - Categories (based on parent folder structure)
-    - SEO metadata (auto-generated from content)
-3. **Build Scripts:** Two critical pre-build scripts in `scripts/`:
-    - `generate-seo-files.mjs` → Creates `static/urls.txt`, `content-index.json`, `ai-metadata.json`
-    - `generate-ai-files.mjs` → Generates cleaned `.txt` files in `static/llms/` for LLM consumption (strips markdown, HTML, fixes encoding issues)
-4. **Rendering:** `[slug]` dynamic route loads markdown, converts to HTML via `marked`, applies brand replacement via `textReplacer.ts`
-
-**Critical File:** `src/lib/utils/markdownDetector.js` - Handles all content discovery. Modify the `categorizeByFolder()` function when adding new folder categories.
-
-### Prerendering & Static Generation
-
-- **All routes are prerendered** (`export const prerender = true` in `src/routes/+layout.js`)
-- `svelte.config.js` explicitly lists prerender entries (required for dynamic routes)
-- Build output in `build/` is served by nginx (see `Dockerfile` multi-stage build)
-- **No server-side rendering at runtime** - everything is static HTML
-
-## 🎨 UI Patterns & Conventions
-
-### Brand Replacement System
-
-The site has a **global brand name replacement feature** allowing white-labeling:
-
-- `src/lib/helpers/textReplacer.ts` exports `replacePaxaPOS()` and reactive stores
-- Regex pattern `/\b(?:pax[aá][\s\-_]*pos|paxa[\s\-_]*pos|pax[aá]pos|paxapos|PaxaPos)\b/gi` matches all variations
-- Use `use:autoReplaceBrand` Svelte action on DOM nodes for automatic replacement (see `+layout.svelte`)
-- When rendering markdown: always run through `processGroupedContent()` before displaying
-
-### Theme System
-
-- **Dark mode:** Class-based (`class="dark"`) via `src/lib/stores/theme.ts`
-- Auto-detects system preference with `prefers-color-scheme: dark` media query
-- Initialized in `+layout.svelte` with `initThemeStore()` - watches for system theme changes
-- CSS uses Tailwind's `dark:` variant (e.g., `bg-white dark:bg-gray-900`)
-
-### Markdown Content Structure
-
-Markdown files follow a consistent pattern:
-
-```markdown
-# 💳 Title with Emoji
-
-<div id="anchor-id"></div>
-
-> 🎯 **Purpose callout**
-
-## 📋 Section Heading
-
-### Step 1: Action
-
-- Details
-- More details
-
----
-
-## 💡 Tips
-```
-
-**Important:** First `<div id="...">` becomes the anchor for deep linking. Headers auto-generate link icons via `addLinkIconsToHeaders()` in `[slug]/+page.svelte`.
-
-## 🔧 Development Workflows
-
-### Local Development
+## Comandos
 
 ```bash
-npm run dev           # Runs generate scripts + starts vite dev server
-npm run dev:clean     # Skip generation, just vite dev (faster iteration)
-npm run build         # Full production build with all generation
-npm run preview       # Preview build output locally
+pnpm dev          # generate + vite dev
+pnpm dev:clean    # vite dev sin regenerar
+pnpm build        # generate + vite build → build/
+pnpm check        # svelte-check
+pnpm test         # vitest (src/lib/utils/__tests__)
+pnpm lint
 ```
 
-**Build sequence matters:** SEO generation must run before AI generation (AI scripts depend on generated metadata).
+Instalar dependencias **siempre desde la raíz del monorepo** con `pnpm install` (nunca `--filter`).
 
-### Adding New Documentation
+## Deploy
 
-1. Create markdown file in appropriate `Manual-Usuario/` subfolder (e.g., `30-Módulos Principales/38-new-feature.md`)
-2. Use numbered prefix for ordering within folder (38 comes after 37)
-3. Add first-level heading with emoji: `# 🚀 New Feature`
-4. No code changes needed - next build auto-discovers and generates routes
-5. **Verify** `svelte.config.js` doesn't need manual prerender entry (usually only for LLM API routes)
+`Dockerfile` multi-stage (node:22 + pnpm → nginx). `nginx-runtime.conf`: `/` → 301 `/user-guide`, fallback `$uri.html`, cache 1 año para assets con hash y 1 h para índices generados, headers de seguridad y CSP `connect-src 'self'`. `docker-compose.yml` publica 3000 → 8080 detrás de Traefik. No requiere variables de entorno.
 
-### Working with Styles
+## Archivos clave
 
-- **Global styles:** `src/app.css` (imported in `+layout.svelte`)
-- **Component styles:** Scoped `<style>` blocks in `.svelte` files
-- **Tailwind:** Uses Tailwind v4 via `@tailwindcss/vite` plugin - NO `postcss.config.js` needed
-- Special class `.markdown-content` for styled markdown output (defined in `+layout.svelte`)
-
-## 🤖 LLM/AI Integration Specifics
-
-### AI-Optimized Text Generation
-
-The `scripts/generate-ai-files.mjs` script performs aggressive cleaning:
-
-- Removes ALL HTML tags and markdown syntax (links, bold, code blocks)
-- Fixes UTF-8 encoding issues (`Ã¡` → `á`, etc.) - see `fixProblemCharacters()`
-- Normalizes whitespace (max 2 consecutive newlines)
-- Strips emojis from titles
-- Outputs plain text optimized for token efficiency
-
-**Output:** `static/llms/{slug}.txt` + `static/llms/index.txt` (full concatenated content)
-
-### ChatBot Integration
-
-- `src/lib/components/ChatBotSimple.svelte` loads markdown content dynamically
-- FAQ-based fallback when search fails
-- Uses `prepareForExport()` for brand replacement before displaying
-- Converts module IDs to slugs via `getSlugFromId()` for proper URL generation
-
-## 📦 Dependencies & Tools
-
-### Core Stack
-
-- **SvelteKit 2.16** with `@sveltejs/adapter-static` (static site generation)
-- **Svelte 5** (uses new `$state()`, `$effect()` runes - NOT Svelte 3/4 syntax)
-- **Vite 6.2** as build tool
-- **Tailwind CSS 4** via `@tailwindcss/vite` plugin
-- **marked 15.0** for markdown → HTML conversion (NOT mdsvex for routes)
-
-### Build Tooling
-
-- **Node 20+ required** (uses ES modules, `import.meta.glob`)
-- **pnpm** preferred (though npm works)
-- Multi-stage Docker build: Node builder → nginx production image
-- Nginx serves from `build/` directory on port 8080
-
-## ⚠️ Common Pitfalls
-
-1. **Don't manually add routes** - The system auto-discovers markdown files. Adding routes in `src/routes/` bypasses content generation.
-
-2. **Slug generation rules:**
-
-    - Removes number prefix (`22-Tipos-De-Pago.md` → `tipos-de-pago`)
-    - Lowercases and strips accents
-    - Spaces/underscores → hyphens
-    - Study `fileNameToSlug()` in `markdownDetector.js` before renaming files
-
-3. **Prerender entries:** Dynamic routes like `[slug]` auto-generate via `entries()` function - DON'T manually list them in `svelte.config.js` unless they're API endpoints.
-
-4. **Markdown rendering order:**
-
-    - Load markdown → Convert via `marked()` → Apply brand replacement → Fix image paths → Highlight search terms → Add header icons
-    - See `$effect()` in `[slug]/+page.svelte` for full pipeline
-
-5. **Build script execution:** Always run `npm run dev` or `npm run build` (includes generation scripts). Running `vite dev` directly skips content generation.
-
-6. **Svelte 5 syntax:** This uses runes (`$state`, `$effect`, `$props`) not stores for local state. Only use stores for global state (theme, brand name).
-
-## 🔍 Key Files Reference
-
-| File                                           | Purpose                                          |
-| ---------------------------------------------- | ------------------------------------------------ |
-| `src/lib/utils/markdownDetector.js`            | Content discovery, slug generation, SEO metadata |
-| `scripts/generate-ai-files.mjs`                | Creates LLM-optimized `.txt` files               |
-| `scripts/generate-seo-files.mjs`               | Generates sitemap, content index, metadata       |
-| `src/routes/user-guide/[slug]/+page.js`        | Loads markdown content dynamically               |
-| `src/routes/user-guide/[slug]/+page.server.js` | Generates static routes via `entries()`          |
-| `src/lib/helpers/textReplacer.ts`              | Brand name replacement system                    |
-| `svelte.config.js`                             | Adapter config, prerender settings               |
-
-## 🚀 Deployment Notes
-
-- Production builds to `build/` as fully static site
-- Nginx configuration in `nginx.conf` (health check on `/health`, SPA fallback)
-- Docker Compose setup in `docker-compose.yml` exposes port 3000 → 8080
-- No environment variables needed (all content baked into build)
-- Custom domain via `CNAME` file (docs.paxapos.com)
-
----
-
-**When in doubt:** Check `markdownDetector.js` for content logic, `[slug]/+page.svelte` for rendering pipeline, and build scripts for generation behavior.
+| Archivo | Rol |
+| --- | --- |
+| `src/lib/server/markdown.ts` | Descubrimiento de `.md`, slugs, categorías, SEO, mapeo a TXT LLM |
+| `src/lib/server/icons.ts` | Mapa slug/categoría → ícono y resolución a SVG inline |
+| `src/lib/utils/contentUtils.ts` | Utilidades puras (slug, título, highlight, copiar) — testeadas |
+| `src/lib/types.ts` | Tipos compartidos server ↔ componentes |
+| `src/routes/user-guide/+layout.server.ts` | Categorías para el sidebar |
+| `src/routes/user-guide/+page.server.ts` | Índice del manual (tarjetas + íconos) |
+| `src/routes/user-guide/[slug]/+page.server.ts` | Render de cada módulo + `entries()` |
+| `src/lib/components/Navigation.svelte` | Barra superior con búsqueda (`search-index.json`) |
+| `src/lib/components/SEOHead.svelte` | Meta tags, Open Graph, JSON-LD |
+| `scripts/*.mjs` | Generadores de TXT/SEO/búsqueda |

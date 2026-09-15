@@ -1,127 +1,68 @@
-# Plataforma de Gestión Empresarial - Documentation
+# PaxaPOS — Manual de Usuario
 
-Sitio web de documentación oficial de nuestra solución integral de gestión, construido con SvelteKit y Tailwind CSS.
+Sitio de documentación de PaxaPOS (`doc.paxapos.com`). SvelteKit 2 + Svelte 5 + Tailwind v4, prerendereado a HTML estático y servido por nginx.
 
-## Descripción
-
-Este proyecto contiene la documentación completa del sistema de gestión, incluyendo:
-
-- **API Reference**: Documentación de todas las APIs y endpoints
-- **Manual de Usuario**: Guías paso a paso para usuarios finales
-- **Guía de Administrador**: Configuración y administración del sistema
-- **Guías de Integración**: Conexiones con servicios externos
-- **SDKs**: Librerías y herramientas para desarrolladores
-- **Troubleshooting**: Solución de problemas comunes
-
-## Características
-
-- ✅ Navegación responsive con menú móvil
-- ✅ Búsqueda en tiempo real
-- ✅ Diseño moderno con Tailwind CSS
-- ✅ Estructura modular y escalable
-- ✅ Optimizado para SEO
+El contenido son archivos Markdown: agregar un `.md` en `src/routes/user-guide/Manual-Usuario/` crea automáticamente la página, la entrada en el índice y el sidebar, el SEO, el índice de búsqueda y el archivo TXT para LLMs.
 
 ## Desarrollo
 
-Para ejecutar el servidor de desarrollo:
-
 ```bash
-# Instalar dependencias (requiere Node.js 20+)
-pnpm install
-
-# Ejecutar servidor de desarrollo
-pnpm dev
-
-# Con host expuesto para acceso desde red
-pnpm dev --host
+pnpm install        # desde la raíz del monorepo
+pnpm dev            # regenera índices y levanta vite en http://localhost:5173
+pnpm dev:clean      # solo vite dev (sin regenerar)
+pnpm check          # svelte-check
+pnpm test           # vitest
+pnpm lint
 ```
 
-El servidor estará disponible en `http://localhost:5173` (o el puerto disponible).
+## Agregar o editar contenido
 
-## Estructura del Proyecto
+1. Crear el archivo en la carpeta de su categoría: `Manual-Usuario/<NN>-<Categoria>/<NN>-<Nombre-Del-Modulo>.md`.
+   El número ordena; el nombre (sin número) define la URL: `21-Salon-de-Ventas.md` → `/user-guide/salon-de-ventas`.
+2. Empezar con un `# Título` (es el título de la página).
+3. Para anclas compartibles, poner `<div id="mi-ancla"></div>` debajo del header.
+4. Imágenes en `static/images/...` y referenciarlas como `images/...`.
+5. Contacto: usar `{{WHATSAPP_URL}}`, `{{WHATSAPP_NUMBER}}`, `{{WHATSAPP_DISPLAY}}` (valor en `src/lib/config/contact.js`).
+6. Ícono de la tarjeta (opcional): agregar el slug en `moduleIcons` de `src/lib/server/icons.ts` con un nombre de [Lucide](https://lucide.dev/icons/).
 
-```txt
+## Estructura
+
+```
 src/
+├── lib/
+│   ├── server/          # markdown.ts (descubrimiento de .md), icons.ts (SVG inline)
+│   ├── utils/           # contentUtils.ts (slug, título, highlight) + tests
+│   ├── components/      # Navigation (búsqueda), SEOHead
+│   ├── config/          # contact.js (WhatsApp)
+│   └── types.ts
 ├── routes/
-│   ├── +layout.svelte          # Layout principal con navegación
-│   ├── +page.svelte            # Página de inicio
-│   ├── api/+page.svelte        # Documentación de API
-│   ├── user-guide/+page.svelte # Manual de usuario
-│   ├── admin-guide/+page.svelte # Guía de administrador
-│   ├── integration/+page.svelte # Guías de integración
-│   ├── sdk/+page.svelte        # SDKs y librerías
-│   └── troubleshooting/+page.svelte # Solución de problemas
-├── app.css                     # Estilos globales
-└── app.html                    # Template HTML base
+│   ├── +layout.svelte / +page.server.ts        # redirect / → /user-guide
+│   └── user-guide/
+│       ├── +layout.server.ts                   # categorías (sidebar)
+│       ├── +page.server.ts / +page.svelte      # índice con tarjetas
+│       ├── [slug]/+page.server.ts / +page.svelte
+│       └── Manual-Usuario/**/*.md              # CONTENIDO
+scripts/
+├── generate-ai-files.mjs     # static/llms/*.txt + files-register.json
+├── generate-seo-files.mjs    # sitemap.xml, robots.txt, llms.txt, content-index.json…
+├── generate-search-index.mjs # static/search-index.json
+├── standardize-headers.mjs   # pnpm content:normalize (limpia BOM/espacios en .md)
+└── shared-utils.mjs
+static/                       # favicon, images/, drivers/ + generados (gitignored)
 ```
 
-## Funcionalidades
-
-### Búsqueda
-
-- Búsqueda en tiempo real mientras escribes
-- Filtrado por tipo de contenido (API, Usuario, Admin, etc.)
-- Navegación directa a secciones específicas
-
-### Navegación
-
-- Menú principal responsive
-- Navegación lateral en páginas de documentación
-- Breadcrumbs en páginas secundarias
-- Enlaces de ancla para secciones
-
-### Responsive Design
-
-- Optimizado para móviles, tablets y escritorio
-- Menú hamburguesa en dispositivos móviles
-- Búsqueda adaptativa
-
-## Compilación
-
-Para crear una versión de producción:
+## Build y deploy
 
 ```bash
-pnpm build
-```
-
-Esto generará los archivos estáticos en el directorio `build/`.
-
-Para previsualizar la compilación de producción:
-
-```bash
+pnpm build          # generate + vite build → build/
 pnpm preview
 ```
 
-## Tasks de VS Code
+Docker (imagen nginx, puerto 8080):
 
-Se incluyen las siguientes tasks configuradas:
+```bash
+docker build -t paxapos-docs .
+docker run -p 8080:8080 paxapos-docs
+```
 
-- **DEV Documentation Site**: Ejecuta el servidor de desarrollo
-- Usa `Ctrl+Shift+P` → `Tasks: Run Task` para ejecutarlas
-
-## Contribuir
-
-1. Las páginas están en `src/routes/`
-2. Cada página es un componente Svelte independiente
-3. Se usa Tailwind CSS para estilos
-4. La navegación se configura en `+layout.svelte`
-5. Los contenidos de búsqueda en `searchableContent` del layout
-
-## Tecnologías
-
-- **SvelteKit**: Framework principal
-- **Tailwind CSS**: Estilos y diseño
-- **TypeScript**: Tipado estático
-- **Vite**: Build tool y dev server
-- **pnpm**: Package manager
-
-## Despliegue
-
-El sitio puede desplegarse en cualquier plataforma que soporte sitios estáticos:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-
-Simplemente ejecuta `pnpm build` y despliega el contenido del directorio `build/`.
+`docker-compose.yml` publica el servicio detrás de Traefik. La imagen se construye en CI con `.github/workflows/docker-build.yml`. No requiere variables de entorno.

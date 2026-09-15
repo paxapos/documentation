@@ -10,7 +10,7 @@
  */
 
 import { readdirSync, statSync } from 'fs';
-import { join, extname, basename } from 'path';
+import { join, extname } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -23,8 +23,6 @@ export const STATIC_DIR = join(__dirname, '..', 'static');
 export const LLM_DIR = join(STATIC_DIR, 'llms');
 export const BASE_SITE_URL =
 	process.env.DOCUMENTATION_BASE_URL?.trim() || 'https://doc.paxapos.com';
-// Compatibilidad hacia atrás en scripts existentes
-export const BASE_URL_GITHUB = BASE_SITE_URL;
 
 // ─── Slug (Familia B — NFD normalize, estándar Unicode) ─────
 /**
@@ -70,34 +68,7 @@ export function extractTitle(content) {
 	return 'Sin título';
 }
 
-// ─── Categorización por número de archivo ────────────────────
-export function categorizeByFileName(fileName) {
-	const num = parseInt(fileName.split('-')[0]);
 
-	if (num >= 10 && num <= 19) return { category: 'Primeros Pasos', order: 1 };
-	if (num >= 20 && num <= 29) return { category: 'Configuración', order: 2 };
-	if (num >= 30 && num <= 39) return { category: 'Operaciones', order: 3 };
-	if (num >= 40 && num <= 49) return { category: 'Biblioteca de Drivers', order: 4 };
-	if (num >= 50 && num <= 99) return { category: 'Extra', order: 5 };
-
-	return { category: 'Otros', order: 6 };
-}
-
-// ─── SEO automático ──────────────────────────────────────────
-export function generateSEO(title, content, slug) {
-	const description = content
-		.replace(/[#*`]/g, '')
-		.split('\n')
-		.find((line) => line.trim().length > 50)
-		?.trim()
-		.substring(0, 160) || `Documentación sobre ${title}`;
-
-	return {
-		title: `${title} - Manual`,
-		description,
-		keywords: `PaxaPOS, ${title.toLowerCase()}, restaurant, punto de venta, ${slug.replace(/-/g, ', ')}`,
-	};
-}
 
 // ─── Búsqueda recursiva de archivos MD ───────────────────────
 export function findAllMarkdownFiles(dir) {

@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest';
 import {
 	fileNameToSlug,
 	extractMarkdownTitle,
-	cleanMarkdownContent,
 	highlightTextInHtml,
 } from '../contentUtils';
 
@@ -75,24 +74,6 @@ describe('extractMarkdownTitle', () => {
 
 	it('ignora H3+', () => {
 		expect(extractMarkdownTitle('### Tercer nivel\n\nTexto')).toBe('Sin título');
-	});
-});
-
-describe('cleanMarkdownContent', () => {
-	it('remueve headers markdown', () => {
-		expect(cleanMarkdownContent('## Título\n\nTexto')).toBe('Título\n\nTexto');
-	});
-
-	it('remueve bold/italic', () => {
-		expect(cleanMarkdownContent('**negrita** y *cursiva*')).toBe('negrita y cursiva');
-	});
-
-	it('extrae texto de links', () => {
-		expect(cleanMarkdownContent('[texto](https://url.com)')).toBe('texto');
-	});
-
-	it('remueve código inline', () => {
-		expect(cleanMarkdownContent('usa `comando` aquí')).toBe('usa comando aquí');
 	});
 });
 

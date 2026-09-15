@@ -6,26 +6,18 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-			// default options are fine for most cases
-			pages: 'build', // Directorio de salida
-			assets: 'build', // Directorio de salida
-			fallback: undefined, // No fallback - fully prerendered static site
+			pages: 'build',
+			assets: 'build',
+			fallback: undefined, // sitio 100% prerendereado
 			precompress: false,
-			strict: false, // Permitir rutas dinámicas no prerenderizadas
+			strict: true,
 		}),
 		prerender: {
 			handleHttpError: 'warn',
 			handleMissingId: 'warn', // anclas rotas en contenido md = warning, no abortar el build
-			// Las rutas /api/llm/* se generan dinámicamente via entries() en +server.ts
-			// Las rutas /user-guide/[slug] se generan via entries() en +page.server.js
-			// '*' cubre todas las rutas estáticas descubiertas por el crawler
+			// /user-guide/[slug] se genera via entries() en su +page.server.ts
 			entries: ['*'],
 		},
-		// Path base removido para dominio personalizado
-		// Si necesitas volver a GitHub Pages sin dominio, descomenta:
-		// paths: {
-		//     base: '/documentation'
-		// }
 	},
 };
 

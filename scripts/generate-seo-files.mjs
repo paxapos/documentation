@@ -336,7 +336,7 @@ function main() {
 
 		const contentIndex = generateContentIndex();
 		const urls = generateURLList(contentIndex);
-		const aiMetadata = generateAIMetadata(contentIndex);
+		generateAIMetadata(contentIndex);
 		generateSitemap(contentIndex);
 		generateRobotsTxt();
 		generateLlmsTxt(contentIndex);

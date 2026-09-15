@@ -25,7 +25,7 @@
 
 	const baseUrl = 'https://doc.paxapos.com';
 	let fullUrl = $derived(url ? `${baseUrl}${url}` : baseUrl);
-	const defaultImage = `${baseUrl}/paxapos-social.png`;
+	const defaultImage = `${baseUrl}/favicon.png`;
 	let finalImage = $derived(image || defaultImage);
 
 	const paxaposKeywords =
@@ -33,7 +33,7 @@
 	let finalKeywords = $derived(keywords ? `${keywords}, ${paxaposKeywords}` : paxaposKeywords);
 
 	let structuredData = $derived.by(() => {
-		const data: Record<string, any> = {
+		const data: Record<string, unknown> = {
 			'@context': 'https://schema.org',
 			'@type': type === 'faq' ? 'FAQPage' : 'TechArticle',
 			headline: title,
@@ -65,8 +65,6 @@
 			image: {
 				'@type': 'ImageObject',
 				url: finalImage,
-				width: 1200,
-				height: 630,
 			},
 			inLanguage: 'es-AR',
 			isPartOf: {
@@ -97,6 +95,9 @@
 		},
 		sameAs: [baseUrl],
 	};
+
+	const jsonLd = (data: unknown) =>
+		`<script type="application/ld+json">${JSON.stringify(data, null, 2)}</` + 'script>';
 </script>
 
 <svelte:head>
@@ -137,7 +138,8 @@
 	<meta name="twitter:site" content="@paxapos" />
 
 	<!-- Schema.org JSON-LD -->
-	{@html `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON generado localmente -->
+	{@html jsonLd(structuredData)}
 
 	<!-- Datos adicionales para motores de búsqueda -->
 	<meta name="article:publisher" content="PaxaPOS" />
@@ -153,9 +155,8 @@
 
 	<!-- Preload de recursos importantes -->
 	<link rel="preload" href="/favicon.png" as="image" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 
 	<!-- Datos de la organización -->
-	{@html `<script type="application/ld+json">${JSON.stringify(orgStructuredData, null, 2)}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON generado localmente -->
+	{@html jsonLd(orgStructuredData)}
 </svelte:head>

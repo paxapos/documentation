@@ -4,38 +4,36 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "pnpm run generate:ai && pnpm run generate:seo && pnpm run generate:search && vite dev",
+		"dev": "pnpm run generate && vite dev",
 		"dev:clean": "vite dev",
-		"build": "pnpm run generate:seo && pnpm run generate:ai && pnpm run generate:search && vite build",
+		"build": "pnpm run generate && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
+		"generate": "pnpm run generate:ai && pnpm run generate:seo && pnpm run generate:search",
 		"generate:ai": "node scripts/generate-ai-files.mjs",
 		"generate:seo": "node scripts/generate-seo-files.mjs",
 		"generate:search": "node scripts/generate-search-index.mjs",
-		"seo:analyze": "pnpm run generate:seo && echo 'SEO files ready for analysis'",
+		"content:normalize": "node scripts/standardize-headers.mjs",
 		"test": "vitest run"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
-		"@iconify/svelte": "5.2.1",
-		"@sveltejs/adapter-auto": "^6.0.0",
+		"@iconify-json/lucide": "^1.2.0",
+		"@iconify/utils": "^2.3.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"@tailwindcss/forms": "^0.5.9",
-		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.0",
 		"@types/node": "^24.2.0",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
 		"globals": "^16.0.0",
-		"mdsvex": "^0.12.3",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
@@ -48,8 +46,6 @@
 		"vitest": "^4.1.0"
 	},
 	"dependencies": {
-		"github-markdown-css": "^5.8.1",
-		"highlight.js": "^11.11.1",
 		"marked": "^15.0.12"
 	}
 }

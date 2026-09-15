@@ -1,48 +1,31 @@
 <script lang="ts">
 	import { tick } from 'svelte';
-	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import SEOHead from '$lib/components/SEOHead.svelte';
-	import { getModuleCategories } from '$lib/utils/markdownDetector';
 	import { highlightTextInHtml, copyToClipboard } from '$lib/utils/contentUtils';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 
 	let showCopyMessage = $state(false);
-	let moduleCategories: Array<{
-		title: string;
-		modules: Array<{ slug: string; title: string }>;
-	}> = $state([]);
+	let moduleCategories = $derived(data.moduleCategories);
 
-	// Derivar contenido procesado (highlighting si existe el query param).
-	// url.searchParams NO está disponible durante el prerender (sitio 100%
-	// estático — acceder tira "Cannot access url.searchParams on a page with
-	// prerendering enabled" y rompía TODAS las páginas de la guía): el
-	// highlight es una mejora solo-cliente, en SSR se sirve el contenido tal cual.
-	let processedContent = $derived.by(() => {
-		if (!browser) {
-			return data.content;
-		}
+	// Highlight del término buscado (?highlight=) — mejora solo-cliente.
+	// url.searchParams no está disponible durante el prerender, y en la
+	// hidratación {@html} reutiliza el HTML del servidor sin recomparar, así
+	// que el resaltado se aplica en un $effect (post-hidratación) como state.
+	let processedContent = $state(data.content);
+
+	$effect(() => {
 		const highlightParam = page.url.searchParams.get('highlight');
-		if (highlightParam) {
-			return highlightTextInHtml(data.content, highlightParam);
-		}
-		return data.content;
+		processedContent = highlightParam
+			? highlightTextInHtml(data.content, highlightParam)
+			: data.content;
 	});
 
-	// Cargar categorías al montar
 	$effect(() => {
-		getModuleCategories()
-			.then((cats) => {
-				moduleCategories = cats;
-			})
-			.catch((error) => {
-				console.error('Error cargando categorías:', error);
-			});
-
 		const handleHashNavigation = () => {
 			const hash = window.location.hash;
 			if (hash) {
@@ -89,39 +72,8 @@
 		});
 	}
 
-	// Función para abrir el archivo LLM en una nueva pestaña
-	async function openLLMPage() {
-		try {
-			const response = await fetch('/llms/files-register.json');
-			if (response.ok) {
-				const register = await response.json();
-				const match = register.detailed_files.find(
-					(f: { slug?: string; txt_file: string; original_md: string }) => {
-						if (f.slug === data.slug) return true;
-						const slug = f.original_md
-							.replace(/^\d+-/, '')
-							.toLowerCase()
-							.replace(/\s+/g, '-')
-							.normalize('NFD')
-							.replace(/[\u0300-\u036f]/g, '')
-							.replace(/[^a-z0-9-]/g, '')
-							.replace(/-+/g, '-')
-							.replace(/^-|-$/g, '');
-						return slug === data.slug;
-					},
-				);
-				if (match) {
-					window.open(`${base}/llms/${match.txt_file}`, '_blank');
-					return;
-				}
-			}
-		} catch (err) {
-			console.error('Error obteniendo mapeo LLM:', err);
-		}
-		window.open(`${base}/api/llm/${data.slug}`, '_blank');
-	}
+	let llmUrl = $derived(data.llmTxtFile ? `${base}/llms/${data.llmTxtFile}` : null);
 
-	// Calcular el módulo actual para navegación móvil
 	let currentSlug = $derived(page.params.slug);
 
 	let openCategories = $state<Record<string, boolean>>({});
@@ -279,7 +231,7 @@
 				<!-- Contenido del módulo -->
 				<div class="p-2 sm:p-3 md:p-6">
 					<div
-						class="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 markdown-paxapos max-w-none"
+						class="markdown-paxapos max-w-none"
 						onclick={(e) => {
 							const target = e.target as HTMLElement;
 							const btn = target.closest('[data-copy-section]');
@@ -289,6 +241,7 @@
 							}
 						}}
 					>
+						<!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML renderizado con marked desde los .md del repo -->
 						{@html processedContent}
 					</div>
 				</div>
@@ -316,8 +269,11 @@
 							Volver al índice
 						</a>
 
-						<button
-							onclick={openLLMPage}
+						{#if llmUrl}
+						<a
+							href={llmUrl}
+							target="_blank"
+							rel="noopener"
 							class="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2 py-1 text-[10px] font-medium text-blue-600 transition-colors hover:bg-blue-100 sm:px-3 sm:py-1.5 sm:text-xs dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30"
 						>
 							<svg
@@ -334,7 +290,8 @@
 								></path>
 							</svg>
 							Ver archivo LLMs
-						</button>
+						</a>
+						{/if}
 					</div>
 				</div>
 			</article>

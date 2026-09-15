@@ -100,6 +100,7 @@ export async function searchContent(query: string, limit: number = 8): Promise<S
 	results.sort((a, b) => b.score - a.score);
 
 	// Remover el score del resultado final
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	return results.slice(0, limit).map(({ score, ...item }) => item);
 }
 

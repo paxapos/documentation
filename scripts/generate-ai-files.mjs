@@ -16,8 +16,6 @@ import {
 	cleanContentForTxt,
 	MANUAL_DIR,
 	LLM_DIR,
-	STATIC_DIR,
-	BASE_URL_GITHUB,
 } from './shared-utils.mjs';
 import { applyContactPlaceholders } from '../src/lib/config/contact.js';
 
@@ -127,16 +125,6 @@ function generateManifest(processedFiles) {
 	return manifest;
 }
 
-function generateUrls() {
-	const basePublic = BASE_URL_GITHUB + '/llms/';
-	const filesInDir = readdirSync(LLM_DIR).filter((f) => f.endsWith('.txt'));
-	filesInDir.sort();
-	const urlsContent = filesInDir.map((f) => basePublic + encodeURIComponent(f)).join('\n') + '\n';
-	const urlsPath = join(STATIC_DIR, 'urls.txt');
-	safeWriteFile(urlsPath, urlsContent, false);
-	console.log(`🌐 URLs generado: ${urlsPath}`);
-}
-
 function generateGlossaryTxt() {
 	const glossaryPath = join(process.cwd(), 'scripts', 'ai-domain-glossary.json');
 	if (!existsSync(glossaryPath)) return null;
@@ -217,7 +205,6 @@ function main() {
 	generateTxtFiles(processedFiles);
 	generateIndex(processedFiles);
 	generateManifest(processedFiles);
-	generateUrls();
 
 	console.log(`\n🎉 Completado: ${processedFiles.length} archivos procesados`);
 }

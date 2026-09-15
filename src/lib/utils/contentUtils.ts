@@ -115,22 +115,6 @@ function fallbackCopyToClipboard(text: string): boolean {
 }
 
 /**
- * Limpia contenido markdown removiendo sintaxis para obtener texto plano.
- */
-export function cleanMarkdownContent(content: string): string {
-	return content
-		.replace(/<!--[\s\S]*?-->/g, '') // Comentarios HTML
-		.replace(/<[^>]*>/g, '') // Tags HTML
-		.replace(/^#+\s+/gm, '') // Headers
-		.replace(/[*_]{1,2}([^*_]+)[*_]{1,2}/g, '$1') // Bold/italic
-		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Links
-		.replace(/`([^`]+)`/g, '$1') // Código inline
-		.replace(/^[•\-*]\s+/gm, '') // Bullets
-		.replace(/\n{3,}/g, '\n\n') // Líneas vacías múltiples
-		.trim();
-}
-
-/**
  * Extrae el título (primer H1 o H2) de un contenido markdown.
  */
 export function extractMarkdownTitle(content: string): string {

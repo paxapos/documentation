@@ -12,11 +12,7 @@ services:
         container_name: paxapos-docs
         restart: unless-stopped
 
-        # Variables de entorno para PaxaPOS
         environment:
-            - BRAND_NAME=PaxaPOS
-            - SYSTEM_URL=beta.paxapos.com
-            - COMPANY_NAME=PaxaPOS
             - TZ=America/Argentina/Buenos_Aires
 
         ports:

@@ -201,11 +201,11 @@
 									</div>
 								</div>
 							{:else if searchResults.length > 0}
-								{#each searchResults as result}
+								{#each searchResults as result (result.id ?? result.href)}
 									<button
 										type="button"
 										class="w-full border-b border-gray-100 px-4 py-4 text-left transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-								onclick={() => selectSearchResult(result)}
+										onclick={() => selectSearchResult(result)}
 									>
 										<div class="font-semibold text-gray-900 dark:text-white">
 											{result.title}
@@ -353,11 +353,11 @@
 								</div>
 							</div>
 						{:else if searchResults.length > 0}
-							{#each searchResults as result}
+							{#each searchResults as result (result.id ?? result.href)}
 								<button
 									type="button"
 									class="w-full border-b border-gray-100 px-4 py-3 text-left text-sm transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-							onclick={() => selectSearchResult(result)}
+									onclick={() => selectSearchResult(result)}
 								>
 									<div class="font-medium text-gray-900 dark:text-white">
 										{result.title}

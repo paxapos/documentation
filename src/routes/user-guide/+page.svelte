@@ -2,34 +2,19 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import SEOHead from '$lib/components/SEOHead.svelte';
-	import Icon from '@iconify/svelte';
+	import type { ModuleCard } from '$lib/types';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 
-	interface ModuleInfo {
-		slug: string;
-		title: string;
-		description: string;
-		category: string;
-		icon: string;
-		id: string;
-	}
-
-	const categoryIconsMap = $derived((data.categoryIcons as Record<string, string>) || {});
-
 	// Agrupar módulos por categoría
 	const groupedModules = $derived.by(() => {
-		const modulesList: ModuleInfo[] = data.modulesList || [];
-		return modulesList.reduce(
+		return data.modulesList.reduce(
 			(acc, module) => {
-				if (!acc[module.category]) {
-					acc[module.category] = [];
-				}
-				acc[module.category].push(module);
+				(acc[module.category] ??= []).push(module);
 				return acc;
 			},
-			{} as Record<string, ModuleInfo[]>,
+			{} as Record<string, ModuleCard[]>,
 		);
 	});
 
@@ -73,16 +58,14 @@
 
 					<!-- Módulos organizados por categorías -->
 					<div class="space-y-8">
-						{#each Object.entries(groupedModules) as [categoryName, categoryModules]}
+						{#each Object.entries(groupedModules) as [categoryName, categoryModules] (categoryName)}
 							<section>
 								<h2
 									class="mb-6 flex items-center gap-2.5 border-b border-gray-200 pb-3 text-xl font-semibold text-gray-900 sm:text-2xl dark:border-gray-700 dark:text-white"
 								>
-									{#if categoryIconsMap[categoryName]}
-										<Icon
-											icon={categoryIconsMap[categoryName]}
-											class="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 dark:text-blue-400"
-										/>
+									{#if data.categoryIconSvg[categoryName]}
+										<!-- eslint-disable-next-line svelte/no-at-html-tags -- SVG generado en build desde @iconify-json -->
+										{@html data.categoryIconSvg[categoryName]}
 									{/if}
 									<span>{categoryName}</span>
 								</h2>
@@ -90,23 +73,17 @@
 								<div
 									class="grid grid-cols-1 gap-3 overflow-x-hidden sm:grid-cols-2 sm:gap-4 xl:grid-cols-3"
 								>
-									{#each categoryModules as module}
+									{#each categoryModules as module (module.slug)}
 										<button
 											onclick={() => navigateToModule(module.slug)}
 											class="group flex min-h-[120px] w-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-4 text-left transition-all duration-200 hover:border-blue-300 hover:shadow-lg sm:p-6 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-600"
 										>
 											<div class="mb-3 flex items-start">
 												<div
-													class="mr-3 flex flex-shrink-0 items-center justify-center text-xl transition-transform duration-200 group-hover:scale-110 sm:text-2xl"
+													class="mr-3 flex flex-shrink-0 items-center justify-center transition-transform duration-200 group-hover:scale-110"
 												>
-													{#if module.icon?.includes(':')}
-														<Icon
-															icon={module.icon}
-															class="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 dark:text-blue-400"
-														/>
-													{:else}
-														{module.icon}
-													{/if}
+													<!-- eslint-disable-next-line svelte/no-at-html-tags -- SVG generado en build desde @iconify-json -->
+													{@html module.iconSvg}
 												</div>
 												<div class="min-w-0 flex-1 overflow-hidden">
 													<h3
