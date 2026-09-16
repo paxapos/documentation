@@ -3,72 +3,84 @@
 <div id="iniciar-sesion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Este es tu primer paso. Necesitás ingresar al sistema para poder usar todas las funciones de PaxaPOS.
-
-## 📍 **Paso 1: Ingresá a la página web**
-
-<div id="paso-1-ingresa-a-la-pagina-web"></div>
-
-1. Abrí tu navegador favorito (Chrome, Firefox, Safari, Edge)
-2. En la barra de direcciones, escribí: [**www.paxapos.com**](https://www.paxapos.com)
-3. Presioná **Enter**
-
-> 💡 **TIP IMPORTANTE:** Agregá esta página a favoritos para acceder más rápido la próxima vez
-
-## 📝 **Paso 2: Completá tus datos**
-
-<div id="paso-2-completa-tus-datos"></div>
-
-Vas a ver una pantalla de ingreso como esta:
-
-```
-┌─────────────────────────────┐
-│                             │
-│  Usuario: [____________]    │
-│                             │
-│  Contraseña: [_________]    │
-│                             │
-│  [ Iniciar sesión ]         │
-│                             │
-│  ¿Olvidaste tu contraseña?  │
-└─────────────────────────────┘
-```
-
-3. **En "Usuario":** Escribí el correo electrónico que te dieron
-4. **En "Contraseña":** Escribí tu contraseña (no se ve por seguridad)
-5. Hacé clic en el botón **"Iniciar sesión"**
-
-## ✅ **¡Perfecto!**
-
-<div id="perfecto"></div>
-
-Si los datos son correctos, vas a ingresar al **panel principal** donde podés empezar a trabajar.
+> Este es tu primer paso para operar en PaxaPOS. Aprenderás las dos modalidades de acceso: ingreso rápido mediante **PIN numérico** (ideal para mozos y personal de salón) e ingreso completo con **Correo Electrónico y Contraseña** (para administradores, cajeros y gestión integral).
 
 ---
 
-## 📱 **Método alternativo - Ingreso con PIN (Para mozos)**
+## 📍 **Paso 1: Accedé a la dirección del sistema**
 
-<div id="Usuario-pin"></div>
+<div id="paso-1-accede-a-la-direccion-del-sistema"></div>
 
-> 💡 **¿Sabías que hay otra forma de ingresar?**  
-> Si tu administrador configuró un **usuario con PIN**, los mozos pueden ingresar de forma más rápida sin recordar usuario y contraseña.
+1. Abrí tu navegador web de preferencia (Google Chrome recomendado, Mozilla Firefox, Microsoft Edge o Safari).
+2. En la barra de direcciones superior, escribí la URL exclusiva asignada a tu local:  
+   `https://www.paxapos.com/{nombre-de-tu-local}` o `https://{tudominio}.paxapos.com`.
+3. Presioná **Enter**.
 
-### **¿Cómo funciona?**
+> 💡 **Consejo útil:** Guardá esta dirección en los **Marcadores o Favoritos** de tu navegador, o creá un acceso directo en el escritorio para abrir el sistema con un solo clic al iniciar tu jornada.
 
-<div id="como-funciona"></div>
+---
 
-1. En la pantalla de login, visualiza la opción **"Ingresar con PIN"**
-2. Escribí el **PIN** que te dió tu administrador (ejemplo: 1111)
-3. ¡Listo! Ya estás dentro de PaxaPOS
+## 🔢 **Método 1: Ingreso rápido con PIN (Recomendado para salón y mozos)**
 
-### **¿Para quién está pensado esto?**
+<div id="metodo-1-ingreso-rapido-con-pin"></div>
 
-<div id="para-quien-esta-pensado-esto"></div>
+Al abrir la página de inicio, por defecto se presenta el teclado táctil numérico de acceso rápido:
 
-- ✅ **Mozos** que cambian de turno frecuentemente
-- ✅ **Personal temporal** que necesita acceso rápido
-- ✅ **Equipos grandes** donde es difícil recordar credenciales
+![Pantalla de ingreso rápido por PIN](images/manual/10-comenzamos/02-login-pin.png)
 
-> 🔗 **¿Querés saber cómo configurar esto?**  
-> Revisá la sección **"Método alternativo - Usuario con PIN"** en [📋 Usuarios con PIN](/user-guide/usuarios-con-pin)
+### **Instrucciones paso a paso:**
+
+1. Verificá que la solapa superior activa sea **"PIN"** (seleccionada por defecto).
+2. Ingresá los **4 dígitos de tu PIN personal** asignado:
+   - Podés hacer clic o pulsar directamente sobre los números del **teclado numérico en pantalla** (1 al 9, y 0).
+   - O bien podés tipear los 4 números desde el teclado físico de tu computadora o terminal POS.
+3. Cada dígito ingresado completará una de las cuatro casillas seguras en pantalla.
+4. Si te equivocás al presionar un número, usá la tecla con la flecha de retroceso `⌫` para borrar el último dígito ingresado.
+5. Al completar el cuarto dígito, el sistema valida tus credenciales de manera inmediata y automática sin necesidad de presionar ningún botón adicional.
+
+> ⚡ **¿Para quién está pensado el acceso por PIN?**
+> - **Mozos y camareros:** Permite registrar pedidos y comandas en segundos sin demoras.
+> - **Personal de turnos rotativos:** Facilita el cambio de operador ágil en terminales táctiles compartidas.
+
+---
+
+## ✉️ **Método 2: Ingreso con Correo Electrónico y Contraseña**
+
+<div id="metodo-2-ingreso-con-correo-y-contrasena"></div>
+
+Para usuarios con perfil de Administrador, Cajero o Encargado, o cuando se requiera gestionar configuraciones, reportes y compras:
+
+![Formulario de inicio de sesión con correo y contraseña](images/manual/10-comenzamos/01-login-formulario.png)
+
+### **Instrucciones paso a paso:**
+
+1. En la parte superior de la ventana de acceso, hacé clic en la pestaña **"Usuario y contraseña"**.
+2. **Campo "Email":** Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: `gerencia@milocal.com`).
+3. **Campo "Contraseña":** Ingresá tu clave de seguridad (los caracteres se ocultarán automáticamente con puntos por protección).
+4. Hacé clic en el botón azul **"Iniciar sesión"**.
+
+---
+
+## 🚀 **Ingreso al Panel Principal**
+
+<div id="ingreso-al-panel-principal"></div>
+
+Una vez validadas tus credenciales (por PIN o por correo), el sistema abrirá la pantalla principal según los permisos de tu perfil:
+
+![Panel principal de PaxaPOS](images/manual/10-comenzamos/03-panel-principal.png)
+
+- Si tu usuario tiene perfil de salón, accederás directamente a la **vista de mesas y adición**.
+- Si tenés rol administrativo o de caja, ingresarás al **panel de control y menú principal**, desde donde podrás monitorear ventas, abrir turnos de caja y acceder a todos los módulos de gestión.
+
+---
+
+## ❓ **Preguntas Frecuentes y Solución de Inconvenientes**
+
+<div id="preguntas-frecuentes-y-solucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| **"PIN o datos incorrectos"** | Se ingresó un número erróneo o el usuario fue deshabilitado. | Borrá los números con `⌫` y reintentá. Si persiste, solicitale al administrador del local que verifique o reasigne tu PIN. |
+| **Olvidé mi contraseña de administrador** | No recuerdas la clave asignada a tu correo. | Hacé clic en el enlace **"¿Olvidaste tu contraseña?"** debajo del botón de ingreso (ver guía: [Recuperar Contraseña](/user-guide/recuperar-contrasena)). |
+| **La página no carga** | Falta de conexión a internet o error en la URL del local. | Verificá que la terminal tenga conexión a internet activa y que el nombre del local en la barra de direcciones esté bien escrito. |
 
