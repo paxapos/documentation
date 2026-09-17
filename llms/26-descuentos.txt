@@ -1,0 +1,31 @@
+﻿# Descuentos
+
+Descuentos y Promociones
+¿Dónde está en el sistema?: Menú principal → Ventas → Descuentos
+¿Quién lo usa?: Encargados de Local y Administradores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+El módulo de Descuentos permite configurar promociones, bonificaciones y porcentajes de descuento predefinidos:
+1. Descuentos rápidos en caja: Permite crear botones con porcentajes fijos (ejemplo: 10% Empleados, 15% Efectivo).
+2. Control de autorizaciones: Define qué descuentos requieren clave o autorización del encargado al aplicarse en una mesa.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Aplicación y Configuración de Descuentos configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ Nuevo Descuento | Esquina superior | Abre el panel para dar de alta una bonificación. |
+| 🏷️ Porcentaje (%) | En la grilla | Porcentaje que se descontará sobre el total de la cuenta. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Crear un descuento predefinido
+1. Tocá el botón Nuevo Descuento.
+2. Escribí el Nombre (ejemplo: Descuento Cliente VIP).
+3. Ingresá el valor en el campo Porcentaje (ejemplo: 15).
+4. Tocá Guardar. Quedará disponible en la pantalla de cobro.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por me puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El cajero no puede aplicar el descuento. | El descuento requiere clave de supervisor. | Ingresá la clave de encargado o revisá los permisos de rol. |

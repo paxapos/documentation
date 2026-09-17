@@ -1,0 +1,28 @@
+﻿# Productos Mas Vendidos
+
+Productos Más Vendidos (Ranking ABC)
+¿Dónde está en el sistema?: Menú principal → Reportes → Análisis Ventas → Más Vendidos
+¿Quién lo usa?: Chefs, Encargados de Carta y Gerentes
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Muestra el ranking de artículos y platos con mayor cantidad de unidades vendidas y recaudación acumulada:
+1. Análisis de carta (Ranking ABC): Identifica las "estrellas" del menú y los platos de baja rotación.
+2. Optimización de compras: Ayuda a enfocar el abastecimiento de materias primas en los platos más requeridos.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Consulta de Ranking de Productos Más Vendidos configurado en Permisos por Rol.
+---
+🎨 Botones y Filtros: ¿Qué es cada cosa?
+| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 🥇 Ordenar por Unidades / Recaudación | Encabezado | Cambia el criterio del ranking entre volumen de platos y facturación. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Identificar los platos más populares
+1. Seleccioná el rango de fechas.
+2. Ordená por Unidades Vendidas para conocer los platos preferidos por los clientes.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Un plato no figura en la lista. | No registró ninguna venta en el período seleccionado. | Ampliá el rango de fechas del filtro. |

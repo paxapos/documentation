@@ -1,0 +1,28 @@
+﻿# Centros de Costo
+
+Centros de Costo
+¿Dónde está en el sistema?: Menú principal → Configuración → Tablas Sistema → Centros de Costo
+¿Quién lo usa?: Contadores y Gerentes de Finanzas
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite imputar ingresos y egresos a unidades de negocio o sucursales específicas (ejemplo: Local Centro, Sucursal Palermo, Eventos / Catering):
+1. Segmentación contable: Permite conocer la rentabilidad por unidad de negocio o centro de beneficio.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Configuración de Centros de Costo configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ Nuevo Centro de Costo | Esquina superior | Registra una nueva unidad contable. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Configurar un centro de costo
+1. Tocá Nuevo Centro de Costo.
+2. Escribí el nombre (ejemplo: Servicio de Catering).
+3. Tocá Guardar.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Las compras no se imputan al centro de costo. | No se seleccionó la unidad al ingresar la factura de gasto. | Seleccioná el centro de costo correspondiente en la pantalla de carga manual de gastos. |

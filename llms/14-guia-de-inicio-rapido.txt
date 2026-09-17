@@ -1,0 +1,49 @@
+﻿# Guia de Inicio Rapido
+
+Guía de Inicio Rápido
+🎯 ¿Para qué sirve esta guía?
+Si acabás de recibir tu cuenta de PaxaPOS, esta es la hoja de ruta con lo principal para dejar tu local funcionando y hacer tu primera venta. Cada paso te lleva a la guía completa del tema.
+---
+✅ Checklist de los primeros pasos
+• [ ] Paso 1: Iniciar sesión
+• [ ] Paso 2: Cargar los datos fiscales del comercio
+• [ ] Paso 3: Cargar tu menú (categorías y productos)
+• [ ] Paso 4: Configurar tus impresoras
+• [ ] Paso 5: Activar tus medios de pago
+• [ ] Paso 6: Crear usuarios para tu equipo
+• [ ] Paso 7: Abrir la caja y hacer tu primera venta
+---
+📍 Paso 1: Iniciar sesión
+Entrá a www.paxapos.com con el usuario y contraseña que te dieron.
+🔗 Guía completa: Cómo Iniciar Sesión
+---
+🧾 Paso 2: Cargar los datos fiscales del comercio
+Antes de vender, cargá el CUIT, la razón social y el punto de venta de tu comercio en Configuración → Info Fiscal del Comercio. Es lo que necesita el sistema para poder facturar.
+🔗 Guía completa: Info Fiscal del Comercio
+---
+🍔 Paso 3: Cargar tu menú (categorías y productos)
+1. Creá tus categorías (ej: Entradas, Platos, Bebidas) en Productos → Categorías.
+2. Cargá cada producto con precio y categoría en Productos → Maestro de Productos.
+3. Armá el menú que vas a mostrar en el salón en Productos → Menú.
+🔗 Guías completas: Maestro de Productos · Menú
+---
+🖨️ Paso 4: Configurar tus impresoras
+1. Instalá el Servicio de Impresión (FiscalBerry) en la PC o Raspberry conectada a tus impresoras.
+2. Dá de alta cada impresora (comanda, cocina, caja) en Configuración → Impresoras.
+🔗 Guía completa: Gestión de Impresoras
+---
+💳 Paso 5: Activar tus medios de pago
+Vinculá las credenciales de tus pasarelas de pago (Prisma Payway, Mercado Pago, Macro Click) en Medios de Pago → Configuración de Procesadores.
+🔗 Guías completas: Configuración de Procesadores de Pago · Configuración de Banco Macro
+---
+👥 Paso 6: Crear usuarios para tu equipo
+Dale acceso a mozos, cajeros y encargados creando sus usuarios (o PIN, para un ingreso más rápido) en Configuración → Usuarios del Sistema.
+🔗 Guías completas: Usuarios del Sistema · Usuarios con PIN
+---
+🛎️ Paso 7: Abrir la caja y hacer tu primera venta
+1. Abrí el turno con el monto inicial de efectivo en Finanzas → Arqueos de Caja.
+2. Registrá tu primera venta desde Ventas → Salón de Ventas (o Caja Rápida si es mostrador).
+🔗 Guías completas: Arqueos de Caja · Salón de Ventas · Caja Rápida
+---
+🆘 ¿Necesitás ayuda?
+Si te trabaste en algún paso, mirá la Guía Única de Resolución de Problemas o escribinos por WhatsApp: +54 2254 62-9000.

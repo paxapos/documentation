@@ -1,0 +1,28 @@
+﻿# Listado de Cajas
+
+Listado de Cajas
+¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Listado de Cajas
+¿Quién lo usa?: Administradores y Tesoreros
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite administrar la estructura de cajas físicas o virtuales del establecimiento (ejemplo: Caja Barra, Caja Mostrador, Caja Fuerte, MercadoPago Virtual):
+1. Configuración de cajas: Definición de cajas habilitadas para la operación diaria.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Administración de Estructura de Cajas configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ➕ Nueva Caja | Esquina superior | Registra una nueva caja física o cuenta contable. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Dar de alta una caja
+1. Tocá el botón Nueva Caja.
+2. Escribí el nombre (ejemplo: Caja Terraza).
+3. Tocá Guardar.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| No podés eliminar una caja. | La caja tiene arqueos históricos asociados. | Podés marcarla como Inactiva para que no figure en las aperturas. |

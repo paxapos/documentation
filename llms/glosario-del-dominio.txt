@@ -1,0 +1,44 @@
+﻿# PaxaPOS Core - Glosario Categórico del Dominio (IA GEO)
+
+Glosario Categórico del Dominio PaxaPOS con definiciones exactas de entidades, estados lógicos y prerrequisitos bloqueantes para modelos de lenguaje (LLM GEO).
+
+=== Entidad: Turno (Operativo / Caja) ===
+Definición: Entidad temporal que registra la sesión de trabajo y movimientos de dinero de un operador o cajero en un punto de venta.
+Prerrequisito Bloqueante: No se pueden emitir comprobantes fiscales (ARCA/AFIP) ni registrar cobros en el sistema si no existe un Turno abierto activo.
+Estados Válidos: No Iniciado, Abierto, Cerrado, Auditado
+
+=== Entidad: Mesa (Ventas / Salón) ===
+Definición: Objeto físico o lógico en el mapa de ventas del restaurante que agrupa los consumos y comandas de un grupo de clientes.
+Prerrequisito Bloqueante: Para cerrar o cobrar una mesa, no deben quedar ítems pendientes de envío a cocina ni modificaciones de comanda sin confirmar.
+Estados Válidos: Libre, Ocupada / Con Adición, Pagando / Pre-cuenta emitida, Cerrada
+
+=== Entidad: Comanda (Cocina / KDS) ===
+Definición: Orden de producción emitida desde el salón o la registradora hacia los puestos de cocina o barra para la preparación de ítems.
+Prerrequisito Bloqueante: Debe tener asignado un puesto de comanda válido y un sector de impresión o pantalla KDS activo.
+Estados Válidos: Pendiente, En Preparación, Terminada, Entregada, Anulada
+
+=== Entidad: KDS (Kitchen Display System) (Cocina / Hardware) ===
+Definición: Pantalla digital de cocina que reemplaza el papel de comanda y muestra el estado en vivo de los pedidos por sector de producción.
+Prerrequisito Bloqueante: Requiere conexión LAN local estática y servicio de eventos en vivo activo.
+Estados Válidos: Conectado, Desconectado, Sincronizando
+
+=== Entidad: Arqueo de Caja (Finanzas) ===
+Definición: Proceso de conteo físico del dinero en efectivo y arqueo de comprobantes de tarjetas para validar el cierre del Turno.
+Prerrequisito Bloqueante: El conteo de efectivo requiere ingresar la cantidad de billetes por denominación, no la cifra acumulada.
+Estados Válidos: Borrador, Cuadrado, Con Diferencia, Cerrado Definitivo
+
+=== Entidad: Subproducto / Receta (Productos / Stock) ===
+Definición: Insumo elaborado o preparado internamente a partir de mercadería prima que descuenta insumos del inventario automáticamente.
+Prerrequisito Bloqueante: Los ingredientes deben estar previamente dados de alta en el Maestro de Mercaderías con sus unidades de medida asociadas.
+Estados Válidos: Activo, Inactivo
+
+=== Entidad: Servicio de Impresión (FiscalBerry) (Impresión / Intranet) ===
+Definición: Servicio cliente en Python que se ejecuta en la red local del restaurante para conectar la nube de PaxaPOS con impresoras de tickets y comanderas vía MQTT. En la interfaz de usuario se lo nombra 'Servicio de Impresión'.
+Prerrequisito Bloqueante: Debe estar ejecutándose en segundo plano en la PC local conectada a la impresora.
+Estados Válidos: Online, Offline, Error de Papel / Tapa
+
+=== Entidad: CAE (Código de Autorización Electrónico) (Facturación / ARCA AFIP) ===
+Definición: Código numérico asignado por ARCA (ex AFIP) que valida legalmente una factura electrónica A, B o C emitida en Argentina.
+Prerrequisito Bloqueante: Requiere datos fiscales válidos del comercio (CUIT, punto de venta y certificado CRT vinculados).
+Estados Válidos: Aprobado, Rechazado, Pendiente
+

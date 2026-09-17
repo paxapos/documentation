@@ -1,0 +1,30 @@
+﻿# Epson TM T20
+
+Epson TM-T20
+En el siguiente enlace podrás descargar el driver (controlador) de la impresora de comandas marca Epson modelo TM -T20/T20II/T20III/T20IIIL.
+✅ Paso 1: Aceptar licencia y descargar
+Una vez allí:
+Marcar la casilla 'Aceptar la licencia de software'.
+!Imagen
+En el listado buscar 'EPSON Advanced Printer Driver 5 for TM -T20/T20II/T20III/T20IIIL. (Windows)'.
+Hacer clic en 'Descargar'.
+✅ Paso 2: Abrir el instalador
+Selecciona el ícono de 'Descargas' en tu navegador y haz clic en ''Mostrar en carpeta' para abrir el archivo del instalador.
+!Imagen
+✅ Paso 3: Iniciar instalación
+Abre el instalador, y haz clic en 'Next'.
+!Imagen
+Haz clic en Agree y luego clic en 'Install'.
+!Imagen
+Haz clic en 'Next'.
+!Imagen
+✅ Paso 4: Configurar la impresora
+Se abrirá la siguiente ventana de configuración de impresora:
+!Imagen
+En 'Port Type' haz clic en el desplegable y selecciona 'USB', luego haz clic en 'Set as Default Printer'.
+!Imagen
+✅ Paso 5: Finalizar configuración
+Haz clic en 'Next'.
+!Imagen
+✅ ¡Listo!
+Tu impresora Epson TM-T20/T20II/T20III/T20IIIL ya está instalada correctamente en tu computadora.

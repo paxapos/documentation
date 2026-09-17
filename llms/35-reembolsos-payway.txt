@@ -1,0 +1,30 @@
+﻿# Reembolsos Payway
+
+Reembolsos Payway
+¿Dónde está en el sistema?: Menú principal → Medios de Pago → Reembolsos Payway
+¿Quién lo usa?: Encargados de Local y Contadores
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Permite procesar devoluciones parciales o totales de cobros efectuados mediante tarjetas procesadas por Payway una vez cerrado el lote:
+1. Devolución de dinero: Reembolsa el saldo correspondiente a la tarjeta del cliente.
+2. Historial de reembolsos: Registro detallado de operaciones devueltas y sus motivos.
+---
+🔑 Requisitos para empezar a usarlo
+• Contar con el permiso de Procesamiento de Reembolsos y Devoluciones configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| 🔄 Solicitar Reembolso | Al lado de la transacción elegida | Inicia el proceso de devolución electrónica del importe. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Procesar una devolución
+1. Buscá la operación original en la tabla por número de cupón o fecha.
+2. Tocá Solicitar Reembolso.
+3. Ingresá el Monto a Devolver (puede ser parcial o total).
+4. Tocá Confirmar Reembolso.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| Error al procesar el reembolso. | La tarjeta del cliente fue dada de baja o expiró. | Contactá con el soporte de Payway. |

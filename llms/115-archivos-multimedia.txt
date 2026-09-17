@@ -1,0 +1,28 @@
+﻿# Archivos Multimedia
+
+Archivos Multimedia
+¿Dónde está en el sistema?: Menú principal → Configuración → Sistema → Archivos Multimedia
+¿Quién lo usa?: Administradores y Diseñadores de Menú
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+Es el repositorio central de imágenes, fotos de platos, banners y archivos multimedia utilizados en la carta digital:
+1. Gestión de imágenes: Subida y optimización de fotos de productos para el menú online.
+---
+🔑 Requisitos para empezar a usarlo
+• Tener el permiso de Gestión de Galería y Archivos Multimedia configurado en Permisos por Rol.
+---
+🎨 Botones y Pantallas: ¿Qué es cada cosa?
+| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+|---|---|---|
+| ⬆️ Subir Imagen | Esquina superior | Carga una nueva foto a la biblioteca. |
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Subir fotos de platos
+1. Tocá Subir Imagen.
+2. Seleccioná el archivo desde tu computadora o dispositivo.
+3. Tocá Guardar.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El archivo supera el tamaño máximo. | La foto pesa más de 5MB. | Reducí el tamaño o resolución de la imagen antes de subirla. |
