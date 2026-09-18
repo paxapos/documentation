@@ -1,73 +1,82 @@
-# Clientes
+# Cómo Gestionar los Clientes
 
-<div id="clientes"></div>
+<div id="gestion-de-clientes"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Clientes**  
-> **¿Quién lo usa?:** Cajeros, Recepcionistas y Administradores  
-
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-El módulo de **Clientes** permite gestionar la base de datos de comensales y compradores del local:
-
-1. **Fidelización e historial:** Registro de datos personales, teléfono, domicilio y CUIT para Facturación A/B.
-2. **Descuentos personalizados:** Asignación de categorías de clientes habituales o VIP.
-3. **Búsqueda rápida en ventas:** Permite asociar una venta o pedido de delivery a un cliente registrado previamente.
+> 🎯 **¿Para qué sirve esto?**
+> Desde la sección de Clientes podés crear, buscar, editar y eliminar la base de datos de clientes de tu comercio. Tener los clientes cargados te permite asociarlos a mesas, emitir facturas con sus datos fiscales, aplicar descuentos personalizados y enviar notificaciones.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 📍 **Paso 1: Accedé al listado de Clientes**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-1-accede-al-listado-de-clientes"></div>
 
-- Contar con el permiso de **Gestión de Clientes** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+1. Desde el menú principal, tocá **Clientes** → **Clientes**.
+2. Se abrirá el listado con todos los clientes cargados.
+
+![Listado de clientes con formulario de búsqueda, tabla de resultados y botón Crear Nuevo Cliente](images/manual/20-ventas/10-clientes-listado.png)
+
+En esta pantalla vas a encontrar:
+- El botón verde **"Crear Nuevo Cliente"** arriba a la derecha.
+- Un formulario de búsqueda con filtros por **Código**, **Nombre**, **Mail**, **Nº Documento**, **Teléfono**, **Domicilio**, **Tipo de Documento**, **Responsabilidad IVA**, **Descuento** y **Tag**.
+- La tabla con las columnas: Codigo, Nombre, Mail, Tipo Documento, Nrodocumento, Telefono, Iva Responsabilidad, Descuento, Domicilio y las acciones (Ver, Editar, Borrar).
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## ➕ **Paso 2: Creá un nuevo cliente**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-2-crea-un-nuevo-cliente"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+1. Tocá el botón verde **"Crear Nuevo Cliente"**.
+2. Completá los campos del formulario, agrupados en tres secciones:
+
+![Formulario de alta de nuevo cliente con las secciones Datos personales, Contacto y Comercial](images/manual/20-ventas/11-clientes-nuevo-formulario.png)
+
+   - **Datos personales:** Nombre, Responsabilidad IVA (por defecto "Consumidor Final"), Tipo de Documento y Número de Documento.
+   - **Contacto:** Correo Electrónico, Teléfono y Domicilio de facturación.
+   - **Comercial:** Descuento asignado y Código interno del cliente.
+
+3. Tocá **"Guardar"** para crear el cliente.
+
+> 💡 **Consejo útil:** Si cargás al menos el **teléfono**, **mail** o **DNI**, el sistema podrá evitar que se creen clientes duplicados en futuras reservas o pedidos.
+
+---
+
+## 🔍 **Paso 3: Buscá un cliente existente**
+
+<div id="paso-3-busca-un-cliente-existente"></div>
+
+1. Usá los campos de búsqueda en la parte superior del listado.
+2. Podés filtrar por cualquier combinación de campos: nombre, teléfono, mail, documento, etc.
+3. Tocá **"Buscar"** para aplicar los filtros.
+4. Tocá **"Limpiar"** para reiniciar la búsqueda.
+5. También podés filtrar por **Tag** si tenés etiquetas asignadas a los clientes.
+
+---
+
+## ✏️ **Paso 4: Editá o eliminá un cliente**
+
+<div id="paso-4-edita-o-elimina-un-cliente"></div>
+
+En la columna de acciones de cada fila:
+
+![Botones de acción Ver, Editar y Borrar de un cliente](images/manual/20-ventas/39-clientes-botones-accion.png)
+
+- Tocá el ícono del **ojo** 👁️ para ver el detalle completo del cliente.
+- Tocá el ícono del **lápiz** ✏️ para editar sus datos.
+- Tocá el ícono de la **papelera** 🗑️ para eliminarlo (el sistema pedirá confirmación antes).
+
+> ⚠️ **Atención:** Eliminar un cliente es irreversible. Si el cliente tiene historial de pedidos o facturas, considerá desactivarlo en lugar de borrarlo.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Cliente** | Esquina superior derecha | Abre el formulario para dar de alta un nuevo cliente. |
-| 🔍 **Buscar** | Barra superior de filtrado | Busca clientes por nombre, teléfono o CUIT. |
-| ✏️ **Editar** | Al lado de cada cliente en la tabla | Abre los datos cargados para modificarlos o actualizar dirección. |
-| 🗑️ **Eliminar** | Al lado de cada cliente | Borra el registro del cliente. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Registrar un nuevo cliente
-
-<div id="paso-1-registrar-un-nuevo-cliente"></div>
-
-1. Tocá el botón **Nuevo Cliente**.
-2. Completa los campos obligatorios:
-   - **Nombre:** Escribí el nombre y apellido.
-   - **Teléfono:** Número de contacto (clave para pedidos delivery).
-   - **CUIT/DNI:** Necesario para emitir comprobantes fiscales.
-3. Tocá el botón **Guardar**.
-
-### Paso 2: Buscar y asignar a una venta
-
-<div id="paso-2-buscar-y-asignar-a-una-venta"></div>
-
-1. En la casilla **Buscar**, escribí el teléfono o nombre del cliente.
-2. Al seleccionarlo, se vinculará a la venta activa.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El CUIT da error al guardar. | El número tiene un formato o cantidad de dígitos incorrectos. | Verificá que el CUIT contenga 11 dígitos sin guiones extraños. |
+| **No encuentro al cliente en la lista** | El cliente no fue dado de alta o se aplicó un filtro de búsqueda. | Tocá **"Limpiar"** para resetear los filtros y buscá por teléfono o documento. |
+| **Se crearon clientes duplicados** | Se cargó el mismo cliente sin teléfono ni DNI, y el sistema no pudo detectar la duplicación. | Editá o borrá el duplicado y completá los datos de contacto del cliente principal. |
+| **No puedo asignar un descuento al cliente** | No hay descuentos creados en el sistema. | Creá primero un descuento desde **Clientes → Descuentos** (ver artículo 26). |
+| **No me deja borrar un cliente** | Tu usuario no tiene permisos de eliminación. | Pedile al administrador que revise los permisos de tu rol en **Configuración → Roles y Permisos**. |

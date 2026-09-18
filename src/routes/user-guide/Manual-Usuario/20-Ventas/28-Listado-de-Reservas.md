@@ -1,61 +1,69 @@
-# Listado de Reservas
+# Cómo Usar el Listado de Reservas
 
 <div id="listado-de-reservas"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Reservas** → **Listado de Reservas**  
-> **¿Quién lo usa?:** Recepcionistas y Encargados de Salón  
+> 🎯 **¿Para qué sirve esto?**
+> El Listado de Reservas te muestra un calendario con todas las reservas cargadas, para que puedas ver de un vistazo qué clientes vienen cada día, recepcionarlos cuando lleguen o cancelar una reserva si avisan que no van a venir.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 📍 **Paso 1: Accedé al Listado de Reservas**
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="paso-1-accede-al-listado-de-reservas"></div>
 
-El **Listado de Reservas** muestra todas las reservas programadas para el día u otras fechas:
+1. Desde el menú principal, tocá **Ventas** → **Listado de Reservas**.
+2. Se abrirá el calendario con las reservas del día.
 
-1. **Control de asistencia:** Permite marcar reservas como *Confirmadas*, *Presentes (Comensales Sentados)* o *Canceladas*.
-2. **Filtros por fecha:** Visualización por día, semana o turno.
+![Calendario de reservas con la leyenda de colores por estado](images/manual/20-ventas/15-listado-reservas.png)
+
+En esta pantalla vas a encontrar:
+- El botón verde **"Crear Reserva"** para cargar una nueva (ver [Nueva Reserva](/user-guide/nueva-reserva)).
+- El botón **"Turnos"** para configurar los horarios de atención.
+- El botón **"Configuración"** para ajustar las reglas de reservas.
+- La referencia de colores: 🔵 **Reservada**, 🟢 **Recepcionada**, ⚪ **Cancelada**.
+- El número en cada día muestra la ocupación (cubiertos reservados / capacidad del salón).
+- El checkbox **"Ver canceladas"** para mostrar u ocultar las reservas anuladas.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 👁️ **Paso 2: Consultá el detalle de una reserva**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-2-consulta-el-detalle-de-una-reserva"></div>
 
-- Poseer el permiso de **Consulta y Recepción de Reservas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+1. Tocá sobre cualquier reserva del calendario.
+2. Se abrirá una ventana con el detalle: **Turno**, **Ocupación**, **Mozo**, **Estado**, **Teléfono** (con acceso directo a WhatsApp) y **Observación**.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## ✅ **Paso 3: Recepcioná a un cliente con reserva**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-3-recepciona-a-un-cliente-con-reserva"></div>
 
-| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+1. Cuando el cliente llega al local, buscá su reserva en el calendario y tocála para abrir el detalle.
+2. Tocá el botón **"Recepcionar"**.
+3. El sistema marca la reserva como recepcionada y, si tenía una mesa del salón asignada, la pasa a estado ocupada.
+
+---
+
+## ❌ **Paso 4: Cancelá una reserva**
+
+<div id="paso-4-cancela-una-reserva"></div>
+
+1. Abrí el detalle de la reserva que querés anular.
+2. Tocá el botón **"Cancelar reserva"**.
+3. Confirmá la cancelación. La reserva queda marcada en gris y solo se vuelve a ver si activás el checkbox **"Ver canceladas"**.
+
+> 💡 **Consejo útil:** Desde el mismo detalle también podés tocar **"Editar"** para corregir la fecha, la hora o la cantidad de comensales sin tener que cancelar y volver a cargar la reserva.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 📅 **Filtro Fecha** | Encabezado | Cambia el día visualizado en la lista. |
-| ✅ **Sentar / Ocupar** | Al lado de cada reserva | Abre la mesa correspondiente y la marca como ocupada en el salón. |
-| ❌ **Cancelar** | Al lado de cada reserva | Anula la reserva indicando el motivo. |
+| **La reserva no aparece en el calendario** | Está cargada en otro día o fue cancelada. | Navegá a otros días del calendario o activá **"Ver canceladas"**. |
+| **No veo el botón "Recepcionar"** | La reserva ya fue recepcionada o cancelada previamente. | Verificá el estado de la reserva en el detalle antes de intentar recepcionarla de nuevo. |
+| **No puedo cancelar una reserva** | Tu usuario no tiene permiso de gestión de reservas. | Pedile al administrador que revise tus permisos en **Configuración → Roles y Permisos**. |
 
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Recepcionar a un cliente con reserva
-
-<div id="paso-1-recepcionar-a-un-cliente-con-reserva"></div>
-
-1. Buscá al cliente por su nombre en el listado del día.
-2. Cuando el cliente llega al local, tocá el botón **Sentar**.
-3. El sistema asignará la mesa prevista en el mapa de salón y pasará su estado a ocupada.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| La reserva no aparece en el listado. | La fecha seleccionada en el filtro es diferente a la agendada. | Cambiá el filtro de fecha para verificar días futuros o pasados. |

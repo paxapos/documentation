@@ -1,61 +1,68 @@
-# Descuentos y Promociones
+# Cómo Configurar Descuentos
 
-<div id="descuentos-y-promociones"></div>
+<div id="descuentos"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Descuentos**  
-> **¿Quién lo usa?:** Encargados de Local y Administradores  
-
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-El módulo de **Descuentos** permite configurar promociones, bonificaciones y porcentajes de descuento predefinidos:
-
-1. **Descuentos rápidos en caja:** Permite crear botones con porcentajes fijos (ejemplo: 10% Empleados, 15% Efectivo).
-2. **Control de autorizaciones:** Define qué descuentos requieren clave o autorización del encargado al aplicarse en una mesa.
+> 🎯 **¿Para qué sirve esto?**
+> Desde Descuentos podés crear porcentajes de bonificación predefinidos (ej: "10% Empleados", "Cliente VIP") para aplicarlos rápido sobre una mesa o una venta, sin tener que calcular el importe a mano cada vez.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 📍 **Paso 1: Accedé al listado de Descuentos**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-1-accede-al-listado-de-descuentos"></div>
 
-- Tener el permiso de **Aplicación y Configuración de Descuentos** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+1. Desde el menú principal, tocá **Ventas** → **Descuentos**.
+2. Se abrirá el listado con todos los descuentos ya creados.
+
+![Listado de descuentos con formulario de búsqueda por nombre y tabla de resultados](images/manual/20-ventas/12-descuentos-listado.png)
+
+En esta pantalla vas a encontrar:
+- El botón verde **"Crear Descuento"** arriba a la derecha.
+- Un campo de búsqueda por **Nombre del Descuento**.
+- La tabla con las columnas: Nombre, Descripción, Porcentaje, Creado y las acciones (Editar, Borrar).
+
+> 💡 **Consejo útil:** El porcentaje máximo que un mozo puede aplicar sin autorización se define en **Configuración → Parámetros del Sistema** (umbral de descuento). Por encima de ese valor, se necesita el permiso **"Aplicación y Configuración de Descuentos"**.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## ➕ **Paso 2: Creá un nuevo descuento**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-2-crea-un-nuevo-descuento"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+1. Tocá el botón verde **"Crear Descuento"**.
+2. Completá el formulario:
+
+![Formulario de alta de un nuevo descuento con nombre, descripción y porcentaje](images/manual/20-ventas/13-descuentos-nuevo-formulario.png)
+
+   - **Nombre:** Un título corto para identificarlo (ej: "10%").
+   - **Descripción:** Un detalle opcional (ej: "Descuento para empleados").
+   - **Porcentaje:** Solo el número, sin el signo `%` (ej: `10`).
+3. Tocá **"Agregar"** para guardarlo, o **"Cancelar"** para volver sin guardar.
+
+> ⚠️ **Atención:** El porcentaje se descuenta sobre el total de la cuenta al aplicarlo desde el Salón de Ventas o la Caja Rápida.
+
+---
+
+## ✏️ **Paso 3: Editá o eliminá un descuento**
+
+<div id="paso-3-edita-o-elimina-un-descuento"></div>
+
+En la columna de acciones de cada fila del listado:
+
+![Botones de acción Editar y Borrar de un descuento](images/manual/20-ventas/40-descuentos-botones-accion.png)
+
+- Tocá **"Editar"** para modificar el nombre, la descripción o el porcentaje.
+- Tocá **"Borrar"** para eliminarlo. El sistema te pedirá confirmación antes de hacerlo.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Descuento** | Esquina superior | Abre el panel para dar de alta una bonificación. |
-| 🏷️ **Porcentaje (%)** | En la grilla | Porcentaje que se descontará sobre el total de la cuenta. |
+| **No veo el botón "Crear Descuento"** | Tu usuario no tiene el permiso de gestión de clientes/descuentos. | Pedile al administrador que revise tus permisos en **Configuración → Roles y Permisos**. |
+| **El mozo no puede aplicar el descuento** | El porcentaje supera el umbral máximo permitido para su rol. | Pedile a un encargado con el permiso **"Aplicación y Configuración de Descuentos"** que lo aplique. |
+| **El listado solo muestra algunos descuentos** | Tu rol tiene un tope de porcentaje configurado y los descuentos mayores quedan ocultos. | Iniciá sesión con un usuario que tenga el permiso de aplicar descuentos sin tope. |
 
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Crear un descuento predefinido
-
-<div id="paso-1-crear-un-descuento-predefinido"></div>
-
-1. Tocá el botón **Nuevo Descuento**.
-2. Escribí el **Nombre** (ejemplo: *Descuento Cliente VIP*).
-3. Ingresá el valor en el campo **Porcentaje** (ejemplo: 15).
-4. Tocá **Guardar**. Quedará disponible en la pantalla de cobro.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por me puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El cajero no puede aplicar el descuento. | El descuento requiere clave de supervisor. | Ingresá la clave de encargado o revisá los permisos de rol. |

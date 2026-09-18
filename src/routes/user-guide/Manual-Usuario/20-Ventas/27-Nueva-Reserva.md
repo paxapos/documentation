@@ -1,64 +1,64 @@
-# Nueva Reserva
+# Cómo Cargar una Nueva Reserva
 
 <div id="nueva-reserva"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Reservas** → **Nueva Reserva**  
-> **¿Quién lo usa?:** Recepcionistas, Mozos y Encargados  
+> 🎯 **¿Para qué sirve esto?**
+> Nueva Reserva te permite agendar la llegada de un cliente a futuro: quién viene, cuántos son, qué día y a qué hora, y si ya sabés en qué mesa del salón los vas a ubicar.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 📍 **Paso 1: Accedé al formulario de Nueva Reserva**
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="paso-1-accede-al-formulario-de-nueva-reserva"></div>
 
-La pantalla de **Nueva Reserva** sirve para registrar turnos de comensales a futuro:
+1. Desde el menú principal, tocá **Ventas** → **Nueva Reserva**.
+2. Se abrirá el formulario de alta.
 
-1. **Agendado previo:** Permite guardar nombre del cliente, día, horario, cantidad de personas y observaciones especiales (ejemplo: *cumpleaños, silla de bebé*).
-2. **Asignación anticipada de mesa:** Permite reservar una mesa o sector específico.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Contar con el permiso de **Gestión de Reservas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+![Formulario de nueva reserva con datos del cliente, comensales, fecha y hora](images/manual/20-ventas/14-nueva-reserva-formulario.png)
 
 ---
 
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
+## 👤 **Paso 2: Completá los datos del cliente**
 
-<div id="botones-y-campos-que-es-cada-cosa"></div>
+<div id="paso-2-completa-los-datos-del-cliente"></div>
 
-| Campo / Botón | ¿Dónde está? | ¿Qué hace al tocarlo / completarlo? |
+1. En el campo **Cliente**, escribí el nombre para buscarlo por nombre, DNI, mail o teléfono.
+2. Si aparece en los resultados, tocálo para autocompletar sus datos.
+3. Si es un cliente nuevo, completá al menos uno de estos campos para evitar duplicados:
+   - **Teléfono**
+   - **Email**
+   - **DNI** (opcional)
+
+> ⚠️ **Atención:** Si guardás la reserva sin teléfono, mail ni DNI, el sistema te va a pedir una confirmación extra antes de crear un cliente sin datos de contacto.
+
+---
+
+## 📅 **Paso 3: Completá los datos de la reserva**
+
+<div id="paso-3-completa-los-datos-de-la-reserva"></div>
+
+1. **Comensales:** cantidad de personas que asistirán.
+2. **Fecha, Hora y Minuto:** cuándo va a llegar el cliente.
+3. **Observación:** cualquier pedido especial (ej: "cumpleaños", "silla de bebe").
+4. Opcionalmente, completá:
+   - **Mesa del Salón:** si ya sabés dónde vas a ubicarlos (solo si tu comercio tiene el mapa de mesas configurado).
+   - **Número:** un número de mesa de referencia.
+   - **Mozo:** el mozo que va a atenderlos.
+5. Si tu comercio tiene el asistente de IA habilitado, podés tocar **"Consultar a la IA si conviene"** para que analice las reglas de reservas antes de confirmar.
+6. Tocá **"Guardar"** para registrar la reserva.
+
+> 💡 **Consejo útil:** El sistema no te va a dejar pisar otra reserva de la misma mesa física si el horario está muy cerca de otra ya cargada. Si aparece un aviso de conflicto, elegí otro horario o mesa.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 📅 **Fecha y Hora** | Formulario principal | Define la fecha y el horario previsto de llegada. |
-| 👥 **Comensales** | Formulario principal | Indica la cantidad de personas que asistirán. |
-| 👤 **Cliente** | Formulario principal | Permite buscar un cliente existente o registrar uno nuevo. |
-| 💾 **Guardar Reserva** | Botón inferior | Confirma y registra la reserva en el sistema. |
+| **"No se pudo procesar la reserva en este momento"** | Dos personas intentaron reservar la misma mesa al mismo tiempo. | Reintentá la carga en unos segundos. |
+| **Aviso de conflicto con otra reserva** | Ya hay otra reserva muy cercana en horario para la misma mesa física. | Elegí otro horario u otra mesa del salón. |
+| **No aparece el campo "Mesa del Salón"** | Tu comercio no tiene el mapa de mesas configurado. | Configurá el mapa desde [Mapa de Mesas](/user-guide/mapa-de-mesas) o dejá el campo vacío y asigná la mesa manualmente al recepcionar. |
+| **Se pide confirmar "cliente sin datos de contacto"** | No cargaste teléfono, mail ni DNI del cliente. | Volvé y completá al menos un dato de contacto, o tocá "Guardar igual" si es intencional. |
 
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Cargar una reserva
-
-<div id="paso-1-cargar-una-reserva"></div>
-
-1. Ingresá la **Fecha** y el **Horario**.
-2. Indicá la cantidad de personas en **Comensales**.
-3. Escribí el nombre y teléfono del cliente en la sección **Cliente**.
-4. En **Observaciones**, anotá cualquier pedido especial.
-5. Tocá **Guardar Reserva**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| No hay mesas disponibles en el horario elegido. | El sector está completo. | Seleccioná otro horario o agregá una mesa adicional al sector. |
