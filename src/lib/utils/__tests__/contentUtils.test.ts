@@ -1,9 +1,38 @@
 import { describe, it, expect } from 'vitest';
 import {
+	addLinkIconsToHeaders,
 	fileNameToSlug,
 	extractMarkdownTitle,
 	highlightTextInHtml,
+	prepareArticleContent,
+	stripEmojis,
 } from '../contentUtils';
+
+describe('stripEmojis', () => {
+	it('remueve emojis simples al inicio, medio y fin', () => {
+		expect(stripEmojis('🎯 Primer paso')).toBe('Primer paso');
+		expect(stripEmojis('Paso 1 🚀')).toBe('Paso 1');
+		expect(stripEmojis('Paso ☕ y galletita')).toBe('Paso y galletita');
+	});
+
+	it('remueve secuencias con variación y ZWJ', () => {
+		expect(stripEmojis('✔ Listo')).toBe('Listo');
+		expect(stripEmojis('📖 Manual de Usuario: Solución Inicial')).toBe(
+			'Manual de Usuario: Solución Inicial',
+		);
+		expect(stripEmojis('👩‍💻 Soporte técnico')).toBe('Soporte técnico');
+	});
+
+	it('normaliza múltiples espacios tras remover emojis', () => {
+		expect(stripEmojis('  🎯   ¿Qué es esto?  ')).toBe('¿Qué es esto?');
+	});
+
+	it('mantiene caracteres especiales válidos y acentos', () => {
+		expect(stripEmojis('Configuración & Parámetros (2026) - Versión 1.0')).toBe(
+			'Configuración & Parámetros (2026) - Versión 1.0',
+		);
+	});
+});
 
 describe('fileNameToSlug', () => {
 	it('convierte nombre de archivo con prefijo numérico y extensión', () => {
@@ -93,5 +122,40 @@ describe('highlightTextInHtml', () => {
 
 	it('devuelve input sin cambios si searchTerm vacío', () => {
 		expect(highlightTextInHtml('<p>texto</p>', '')).toBe('<p>texto</p>');
+	});
+});
+
+describe('prepareArticleContent', () => {
+	it('extrae H2 y H3 con ancla en orden y limpia el markup del título y los emojis', () => {
+		const html = [
+			'<h1>Título</h1><div id="titulo"></div>',
+			'<h2>🎯 <strong>Primer paso &amp; alcance</strong></h2><div id="primer-paso"></div>',
+			'<h3>Detalle <code>rápido</code></h3><div id="detalle-rapido"></div>',
+			'<h4>No visible</h4><div id="no-visible"></div>',
+			'<h2>Sin ancla</h2>',
+		].join('');
+
+		const result = prepareArticleContent(html);
+
+		expect(result.tableOfContents).toEqual([
+			{ id: 'primer-paso', title: 'Primer paso & alcance', level: 2 },
+			{ id: 'detalle-rapido', title: 'Detalle rápido', level: 3 },
+		]);
+	});
+
+	it('conserva anclas y agrega controles para copiar enlaces', () => {
+		const result = prepareArticleContent(
+			'<h2 class="existente">Sección</h2><div id="seccion"></div>',
+		);
+
+		expect(result.content).toContain('class="existente relative"');
+		expect(result.content).toContain('data-copy-section="seccion"');
+		expect(result.content).toContain('<div id="seccion"></div>');
+	});
+
+	it('mantiene compatible addLinkIconsToHeaders', () => {
+		const html = '<h2>Sección</h2><div id="seccion"></div>';
+
+		expect(addLinkIconsToHeaders(html)).toBe(prepareArticleContent(html).content);
 	});
 });

@@ -27,20 +27,27 @@ body {
 }
 
 /* Transición suave para cambio de tema en elementos principales */
-body, main, nav, article, aside {
-	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+body,
+main,
+nav,
+article,
+aside {
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		border-color 0.2s ease;
 }
 
 /* Estilos base para contenido Markdown */
 .markdown-paxapos {
-	padding: clamp(0.75rem, 3vw, 1.5rem);
-	margin-top: clamp(0.5rem, 2vw, 1.875rem);
-	margin-bottom: clamp(0.5rem, 2vw, 1.875rem);
+	padding: 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	background: transparent;
 	color: rgb(34 34 34);
-	border-radius: 8px;
 	line-height: 1.6;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+	font-family:
+		-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
@@ -65,8 +72,6 @@ body, main, nav, article, aside {
 	margin-top: clamp(1rem, 3vw, 1.5rem);
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
-	padding-bottom: 0.3em;
-	border-bottom: 1px solid rgb(209 213 219);
 	color: rgb(17 24 39);
 }
 
@@ -88,6 +93,18 @@ body, main, nav, article, aside {
 	margin-bottom: clamp(0.75rem, 2vw, 1rem);
 	line-height: 1.25;
 	color: rgb(17 24 39);
+}
+
+.markdown-paxapos h2,
+.markdown-paxapos h3,
+.markdown-paxapos div[id] {
+	scroll-margin-top: 8rem;
+}
+
+.markdown-paxapos img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .markdown-paxapos p {
@@ -162,7 +179,8 @@ body, main, nav, article, aside {
 	padding: 1rem;
 	border-radius: 0.5rem;
 	overflow-x: auto;
-	font-family: 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
+	font-family:
+		'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
 	font-size: 0.875rem;
 	line-height: 1.5;
 	border: 1px solid rgb(229 231 235);
@@ -292,12 +310,24 @@ body, main, nav, article, aside {
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
 	.markdown-paxapos {
-		padding: 0.75rem;
+		padding: 0;
 	}
 
-	.markdown-paxapos h1 { font-size: 1.5rem; }
-	.markdown-paxapos h2 { font-size: 1.25rem; }
-	.markdown-paxapos h3 { font-size: 1.125rem; }
-	.markdown-paxapos p, .markdown-paxapos li { font-size: 0.875rem; }
-	.markdown-paxapos pre, .markdown-paxapos code { font-size: 0.75rem; }
+	.markdown-paxapos h1 {
+		font-size: 1.5rem;
+	}
+	.markdown-paxapos h2 {
+		font-size: 1.25rem;
+	}
+	.markdown-paxapos h3 {
+		font-size: 1.125rem;
+	}
+	.markdown-paxapos p,
+	.markdown-paxapos li {
+		font-size: 0.875rem;
+	}
+	.markdown-paxapos pre,
+	.markdown-paxapos code {
+		font-size: 0.75rem;
+	}
 }

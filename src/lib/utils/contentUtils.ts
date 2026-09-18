@@ -21,20 +21,57 @@ export function fileNameToSlug(fileName: string): string {
 }
 
 /**
+ * Remueve emojis y símbolos pictográficos de un texto, normalizando los espacios.
+ * Útil para índices, sidebars y tablas de contenido limpias.
+ */
+export function stripEmojis(text: string): string {
+	return text
+		.replace(/[\p{Extended_Pictographic}\p{Emoji_Presentation}\uFE0F\uFE0E\u200D\u200C]/gu, '')
+		.replace(/\s+/g, ' ')
+		.trim();
+}
+
+/**
  * Agrega botones de "copiar enlace" a los headers del HTML renderizado.
  * Busca patterns como: <h2>Título</h2><div id="ancla"></div>
  */
-export function addLinkIconsToHeaders(html: string): string {
+import type { ArticleHeading } from '$lib/types';
+
+function headingTextToPlainText(html: string): string {
+	return html
+		.replace(/<[^>]+>/g, '')
+		.replace(/&nbsp;/g, ' ')
+		.replace(/&amp;/g, '&')
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&quot;/g, '"')
+		.replace(/&#39;/g, "'")
+		.replace(/\s+/g, ' ')
+		.trim();
+}
+
+export function prepareArticleContent(html: string): {
+	content: string;
+	tableOfContents: ArticleHeading[];
+} {
+	const tableOfContents: ArticleHeading[] = [];
 	const headerWithIdRegex = /<(h[1-6])\b([^>]*)>([\s\S]*?)<\/\1>\s*<div id="([^"]+)"><\/div>/gi;
 
-	return html.replace(
-		headerWithIdRegex,
-		(_match, tag, attrs, titleContent, idValue) => {
-			const existingClass = (attrs.match(/class=["']([^"']+)["']/) || [])[1] || '';
-			const newClass = existingClass ? `${existingClass} relative` : 'relative';
-			const cleanedAttrs = attrs.replace(/class=["']([^"']+)["']/, '');
+	const content = html.replace(headerWithIdRegex, (_match, tag, attrs, titleContent, idValue) => {
+		const level = Number(tag.slice(1));
+		if (level === 2 || level === 3) {
+			tableOfContents.push({
+				id: idValue,
+				title: stripEmojis(headingTextToPlainText(titleContent)),
+				level,
+			});
+		}
 
-			return `<${tag}${cleanedAttrs} class="${newClass}">
+		const existingClass = (attrs.match(/class=["']([^"']+)["']/) || [])[1] || '';
+		const newClass = existingClass ? `${existingClass} relative` : 'relative';
+		const cleanedAttrs = attrs.replace(/class=["']([^"']+)["']/, '');
+
+		return `<${tag}${cleanedAttrs} class="${newClass}">
                 ${titleContent}
                 <button 
                     class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
@@ -46,8 +83,13 @@ export function addLinkIconsToHeaders(html: string): string {
                 </button>
             </${tag}>
             <div id="${idValue}"></div>`;
-		},
-	);
+	});
+
+	return { content, tableOfContents };
+}
+
+export function addLinkIconsToHeaders(html: string): string {
+	return prepareArticleContent(html).content;
 }
 
 export function highlightTextInHtml(

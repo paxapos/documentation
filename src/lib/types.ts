@@ -16,6 +16,12 @@ export interface ModuleSeo {
 	keywords: string;
 }
 
+export interface ArticleHeading {
+	id: string;
+	title: string;
+	level: 2 | 3;
+}
+
 /** Tarjeta del índice del manual (ícono ya resuelto a SVG inline). */
 export interface ModuleCard {
 	slug: string;

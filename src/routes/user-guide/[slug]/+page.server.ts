@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
 import { base } from '$app/paths';
 import { getAllSlugs, getMarkdownFile, getLlmTxtFile } from '$lib/server/markdown';
-import { addLinkIconsToHeaders } from '$lib/utils/contentUtils';
+import { prepareArticleContent } from '$lib/utils/contentUtils';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -37,12 +37,13 @@ export const load: PageServerLoad = async ({ params }) => {
 	let htmlContent = await marked(markdownData.content);
 	htmlContent = fixImagePaths(htmlContent);
 	htmlContent = wrapTablesForResponsive(htmlContent);
-	htmlContent = addLinkIconsToHeaders(htmlContent);
+	const articleContent = prepareArticleContent(htmlContent);
 
 	return {
 		slug,
 		title: markdownData.title,
-		content: htmlContent,
+		content: articleContent.content,
+		tableOfContents: articleContent.tableOfContents,
 		seo: markdownData.seo,
 		llmTxtFile: getLlmTxtFile(slug),
 	};

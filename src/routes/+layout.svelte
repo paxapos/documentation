@@ -12,8 +12,8 @@
 	<Navigation />
 
 	<!-- Main content -->
-	<main class="w-full max-w-full overflow-x-hidden bg-white dark:bg-gray-900">
-		<div class="mx-auto w-full max-w-7xl px-0 sm:px-4 lg:px-8">
+	<main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900">
+		<div class="w-full">
 			{@render children()}
 		</div>
 	</main>
