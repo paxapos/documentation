@@ -37,7 +37,7 @@ Entrá a [www.paxapos.com](https://www.paxapos.com) con el usuario y contraseña
 
 Antes de vender, cargá el CUIT, la razón social y el punto de venta de tu comercio en **Configuración** → **Info Fiscal del Comercio**. Es lo que necesita el sistema para poder facturar.
 
-> 🔗 Guía completa: [Info Fiscal del Comercio](/user-guide/info-fiscal-comercio)
+> 🔗 Guía completa: [Fiscal y ARCA](/user-guide/fiscal-y-arca)
 
 ---
 
