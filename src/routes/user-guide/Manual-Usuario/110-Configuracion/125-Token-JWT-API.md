@@ -2,7 +2,7 @@
 
 <div id="mi-token-jwt-api"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Mi Token JWT API**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Mi Token JWT API**  
 > **¿Quién lo usa?:** Desarrolladores e Integradores  
 
 ---

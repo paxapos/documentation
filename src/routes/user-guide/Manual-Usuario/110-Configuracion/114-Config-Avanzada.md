@@ -2,56 +2,17 @@
 
 <div id="configuracion-avanzada"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Config Avanzada**  
-> **¿Quién lo usa?:** Administradores del Sistema  
+> Esta pantalla se dividió en varias secciones de la nueva **Configuración unificada**, para que cada ajuste esté donde lo esperás en vez de todos mezclados en un único formulario largo.
 
----
+Buscá el ajuste que necesitás en:
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+- [Configuración General](/user-guide/configuracion-general) — índice con las 16 secciones y el buscador de ajustes.
+- [Ventas y salón](/user-guide/ventas-y-salon) — terminología, comportamiento de la adición, cortes de día.
+- [Impresión](/user-guide/configuracion-impresion) — comportamiento al imprimir, impresoras por defecto.
+- [Compras y stock](/user-guide/compras-y-stock) — aprobación de OC, columnas del flujo, retenciones, stock automático.
+- [Caja](/user-guide/caja) — arqueo de caja.
+- [Usuarios y acceso](/user-guide/usuarios-y-acceso) — seguridad de acceso por PIN.
+- [Reservas](/user-guide/reservas) — grilla hotelera (si tu comercio es un hotel).
+- [Fiscal y ARCA](/user-guide/fiscal-y-arca) — concepto de factura (AFIP).
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Permite activar o desactivar parámetros técnicos avanzados de funcionamiento de la aplicación:
-
-1. **Parámetros operativos:** Habilitación de propina obligatoria/sugerida, cobro de cubierto, apertura automática de cajón monedero y tiempos de vencimiento de sesión.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Edición de Parámetros Avanzados del Sistema** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
-
----
-
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
-
-<div id="botones-y-campos-que-es-cada-cosa"></div>
-
-| Campo / Botón | ¿Dónde está? | ¿Qué hace al activar / desactivar? |
-|---|---|---|
-| 🔘 **Cobro de Cubierto** | Formulario | Habilita o deshabilita la carga automática del concepto cubierto por comensal. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Modificar parámetros avanzados
-
-<div id="paso-1-modificar-parametros-avanzados"></div>
-
-1. Marcá o desmarcá la casilla correspondiente.
-2. Tocá **Guardar Cambios**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| Se desconfiguraron comportamientos del cobro. | Modificación accidental de parámetros avanzados. | Revisá cada interruptor antes de confirmar. |
+> 💡 Si no encontrás un campo puntual, usá el **buscador** de [Configuración General](/user-guide/configuracion-general): escribí el nombre del ajuste y te lleva directo a la sección correcta.

@@ -2,7 +2,7 @@
 
 <div id="clasificacion-de-gastos"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Clasif. de Gastos**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Clasif. de Gastos**  
 > **¿Quién lo usa?:** Contadores y Administradores  
 
 ---

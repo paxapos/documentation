@@ -3,7 +3,8 @@
 <div id="arca-facturacion"></div>
 
 > 🎯 **¿Para qué sirve esto?**  
-> Para poder comenzar a facturar necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado.
+> Para poder comenzar a facturar necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado.  
+> Una vez hecho este trámite, los datos fiscales del comercio (razón social, CUIT, punto de venta, etc.) se cargan en **Configuración → [Fiscal y ARCA](/user-guide/fiscal-y-arca)**.
 
 ---
 

@@ -2,7 +2,7 @@
 
 <div id="permisos-por-rol-matriz-de-seguridad"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Permisos por Rol**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Permisos por Rol**  
 > **¿Quién lo usa?:** Administradores del Sistema  
 
 ---

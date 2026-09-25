@@ -2,7 +2,7 @@
 
 <div id="usuarios-con-pin"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Usuarios con PIN**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Usuarios con PIN**  
 > **¿Quién lo usa?:** Encargados de Salón y Administradores  
 
 ---

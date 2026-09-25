@@ -2,7 +2,7 @@
 
 <div id="mis-sesiones-activas"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Mis Sesiones Activas**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Mis Sesiones Activas**  
 > **¿Quién lo usa?:** Todos los Usuarios del Sistema  
 
 ---

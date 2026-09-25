@@ -2,7 +2,7 @@
 
 <div id="buchon-bot"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Inteligencia Artificial** (solapa **Buchón Bot**)  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Canales e IA** → **Mensajería** (bloque **Alertas del Buchón**)  
 > **¿Quién lo usa?:** Propietario / Administrador del Comercio
 
 > 🎯 **¿Para qué sirve esto?**  
@@ -76,7 +76,7 @@ Este módulo es **exclusivo del propietario**. Los empleados NO pueden acceder a
 <div id="paso-2-configurar-alertas"></div>
 
 1. **Entrá al sistema** con tu usuario de propietario.
-2. **Dirigite a:** Menú principal → **Configuración** → **Sistema** → **Inteligencia Artificial** (solapa **Buchón Bot**) o **Configuración** → **Buchón Bot**.
+2. **Dirigite a:** Menú principal → **Configuración** → **Canales e IA** → **Mensajería** (bloque **Alertas del Buchón**).
 3. **Pegar tu Chat ID** de Telegram.
 4. **Elegir qué alertas querés:**
 

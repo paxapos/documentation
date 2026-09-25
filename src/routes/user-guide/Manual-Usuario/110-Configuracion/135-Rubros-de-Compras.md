@@ -2,7 +2,7 @@
 
 <div id="rubros-de-compras"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Rubros de Compras**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Rubros de Compras**  
 > **¿Quién lo usa?:** Compradores y Administradores  
 
 ---

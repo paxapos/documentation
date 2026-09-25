@@ -2,7 +2,7 @@
 
 <div id="mozos-del-salon"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Mozos**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Mozos**  
 > **¿Quién lo usa?:** Encargados de Salón y Administradores  
 
 ---

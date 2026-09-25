@@ -2,7 +2,7 @@
 
 <div id="gestion-de-impresoras"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Impresoras** → **Impresoras**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Impresión y multimedia** → **Impresoras**  
 > **¿Quién lo usa?:** Administradores y Soporte Técnico  
 
 ---

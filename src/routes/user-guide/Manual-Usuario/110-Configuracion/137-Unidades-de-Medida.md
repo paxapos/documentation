@@ -2,7 +2,7 @@
 
 <div id="unidades-de-medida"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Unidades de Medida**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Unidades de Medida**  
 > **¿Quién lo usa?:** Compradores y Encargados de Recetas  
 
 ---
