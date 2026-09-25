@@ -2,7 +2,7 @@
 
 <div id="tipos-de-impuesto"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Tipos de Impuesto**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Tipos de Impuesto**  
 > **¿Quién lo usa?:** Contadores y Administradores  
 
 ---

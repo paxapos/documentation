@@ -2,7 +2,7 @@
 
 <div id="usuarios-del-sistema"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Usuarios del Sistema**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Usuarios del Sistema**  
 > **¿Quién lo usa?:** Administradores  
 
 ---

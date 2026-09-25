@@ -2,7 +2,7 @@
 
 <div id="perfiles-de-impresion"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Impresoras** → **Perfiles de Impresión**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Operación** → **Impresión** → **Perfiles de impresión**  
 > **¿Quién lo usa?:** Administradores  
 
 ---

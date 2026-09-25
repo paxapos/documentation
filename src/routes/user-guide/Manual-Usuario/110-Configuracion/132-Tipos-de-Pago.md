@@ -2,7 +2,7 @@
 
 <div id="tipos-de-pago"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Tipos de Pago**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Tipos de Pago**  
 > **¿Quién lo usa?:** Administradores  
 
 ---

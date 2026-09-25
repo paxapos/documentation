@@ -2,7 +2,7 @@
 
 <div id="turnos-de-mesa"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Turnos**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Turnos**  
 > **¿Quién lo usa?:** Encargados de Salón y Administradores  
 
 ---

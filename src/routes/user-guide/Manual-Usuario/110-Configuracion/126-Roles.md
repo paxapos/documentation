@@ -2,7 +2,7 @@
 
 <div id="roles-del-sistema"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Acceso/Seguridad** → **Roles**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Roles**  
 > **¿Quién lo usa?:** Administradores  
 
 ---

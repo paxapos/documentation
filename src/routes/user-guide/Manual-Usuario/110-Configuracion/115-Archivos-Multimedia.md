@@ -2,7 +2,7 @@
 
 <div id="archivos-multimedia"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Sistema** → **Archivos Multimedia**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Impresión y multimedia** → **Archivos Multimedia**  
 > **¿Quién lo usa?:** Administradores y Diseñadores de Menú  
 
 ---

@@ -2,7 +2,7 @@
 
 <div id="centros-de-costo"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Centros de Costo**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Centros de Costo**  
 > **¿Quién lo usa?:** Contadores y Gerentes de Finanzas  
 
 ---

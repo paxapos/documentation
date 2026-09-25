@@ -2,7 +2,7 @@
 
 <div id="tipos-de-jornada"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Fichaje** → **Tipos de Jornada**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Fichaje** → **Tipos de Jornada**  
 > **¿Quién lo usa?:** Recursos Humanos y Administradores  
 
 ---

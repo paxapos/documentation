@@ -4,6 +4,8 @@
 
 > **¿Dónde está en el sistema?:** Menú principal → **Medios de Pago** → **Configuración de Procesadores** → **Macro Click de Pagos**
 > **¿Quién lo usa?:** Administradores del Comercio
+>
+> También se accede desde **Configuración → [Cobros y pagos](/user-guide/cobros-y-pagos)**.
 
 ---
 

@@ -2,7 +2,7 @@
 
 <div id="tipos-de-documento"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Tipos de Documento**  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Tipos de Documento**  
 > **¿Quién lo usa?:** Administradores  
 
 ---
