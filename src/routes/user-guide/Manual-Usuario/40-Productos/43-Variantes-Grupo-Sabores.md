@@ -3,7 +3,7 @@
 <div id="variantes-y-grupos-de-sabores"></div>
 
 > **¿Dónde está en el sistema?:** Menú principal → **Productos** → **Variantes**  
-> **¿Quién lo usa?:** Encargados de Menú y Administradores  
+> **¿Quién lo usa?:** Encargados de Menú y Administradores
 
 ---
 
@@ -11,10 +11,16 @@
 
 <div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
-Permite gestionar grupos de opciones, sabores o agregados que el cliente puede elegir al pedir un producto (ejemplo: *Sabores de helado, Punto de la carne, Guarnición incluida, Talle/Variante*):
+Una **variante** agrupa **opciones** que el cliente elige al pedir un producto. Por ejemplo:
+- *Gustos de helado* (Chocolate, Frutilla, Dulce de leche…).
+- *Punto de la carne* (Jugoso, A punto, Bien cocido).
+- *Guarnición* (Papas fritas, Ensalada, Puré).
 
-1. **Selección múltiple o simple:** Define límites de sabores (ejemplo: *Elegir hasta 4 sabores para 1Kg de Helado*).
-2. **Adicionales con costo:** Permite configurar opciones que suman un costo extra al precio base.
+Cada variante tiene una **Cantidad Mínima** y una **Cantidad Máxima**: cuántas opciones **tiene que** y **puede** elegir el cliente. Por ejemplo, *1 kg de helado: mínimo 1, máximo 4 gustos*.
+
+> 🧭 **Primeros pasos para armar tu menú:**
+> 1. Crear las **variantes** (esta guía) y las **categorías** ([Categorías](/user-guide/categorias)). No importa cuál hacés primero.
+> 2. Cargar los **productos en el menú** ([Menú de Productos](/user-guide/menu)). Ahí le asignás a cada producto sus variantes.
 
 ---
 
@@ -26,14 +32,19 @@ Permite gestionar grupos de opciones, sabores o agregados que el cliente puede e
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 🎨 Botones y Campos: ¿Qué es cada cosa?
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="botones-y-campos-que-es-cada-cosa"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+| Botón / Campo | ¿Dónde está? | ¿Qué hace? |
 |---|---|---|
-| ➕ **Nuevo Grupo de Sabores** | Esquina superior | Crea un grupo de opciones (ejemplo: *Punto de Cocción*). |
-| ➕ **Agregar Sabor / Opción** | Dentro del grupo | Agrega las opciones individuales (ejemplo: *Jugoso, A punto, Bien cocido*). |
+| ➕ **Crear Variante** | Arriba de la pantalla | Abre el formulario para crear una variante. |
+| **Nombre de la Variante** | Formulario | El nombre del grupo de opciones (ejemplo: *Gustos de helado*). |
+| **Cantidad Mínima** | Formulario | Mínimo de opciones que **debe** elegir el cliente. |
+| **Cantidad Máxima** | Formulario | Máximo de opciones que **puede** elegir el cliente. |
+| **Variante Privada** | Formulario | Si la marcás, **no se muestra en pedimelo.online**. |
+| **Mostrar cada opción como producto independiente en KDS** | Formulario | Si la marcás, cada opción se muestra como un ítem aparte en la pantalla de cocina. |
+| ➕ **Agregar Opción** | Formulario, sección **Opciones de la Variante** | Suma una opción a la variante (ejemplo: *Chocolate*). |
 
 ---
 
@@ -41,14 +52,32 @@ Permite gestionar grupos de opciones, sabores o agregados que el cliente puede e
 
 <div id="guia-paso-a-paso-como-se-usa"></div>
 
-### Paso 1: Configurar un grupo de opciones
+### Paso 1: Crear una variante con sus opciones
 
-<div id="paso-1-configurar-un-grupo-de-opciones"></div>
+<div id="paso-1-crear-una-variante-con-sus-opciones"></div>
 
-1. Tocá **Nuevo Grupo de Sabores**.
-2. Escribí el nombre del grupo y fijá la cantidad mínima y máxima de opciones permitidas.
-3. Agregá los ítems pertenecientes al grupo.
-4. Vinculá el grupo al producto correspondiente.
+1. Andá a **Productos** → **Variantes**.
+<!-- FOTO: 43-01-menu-variantes -->
+2. Tocá **Crear Variante**.
+<!-- FOTO: 43-02-boton-crear-variante -->
+3. Escribí el **Nombre de la Variante** (ejemplo: *Gustos de helado*).
+<!-- FOTO: 43-03-campo-nombre-variante -->
+4. Completá **Cantidad Mínima** y **Cantidad Máxima** (ejemplo: mínimo *1*, máximo *4*).
+<!-- FOTO: 43-04-campos-cantidad-minima-maxima -->
+5. En **Opciones de la Variante**, tocá **Agregar Opción** y escribí cada opción (ejemplo: *Chocolate*, *Frutilla*, *Dulce de leche*).
+<!-- FOTO: 43-05-boton-agregar-opcion -->
+6. Tocá **Agregar Variante** para guardarla.
+<!-- FOTO: 43-06-boton-agregar-variante -->
+
+### Paso 2: Asignar la variante a un producto
+
+<div id="paso-2-asignar-la-variante-a-un-producto"></div>
+
+La variante se asigna **cuando cargás el producto en el menú**, en la sección **PASO 2 · Variantes del Producto** del formulario.
+
+> 🔗 Ver cómo: [Menú de Productos](/user-guide/menu)
+
+> ➡️ **Siguiente paso:** si todavía no lo hiciste, creá las [Categorías](/user-guide/categorias). Después [cargá los productos en el menú](/user-guide/menu).
 
 ---
 
@@ -58,4 +87,6 @@ Permite gestionar grupos de opciones, sabores o agregados que el cliente puede e
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
-| El mozo no puede seleccionar más de 1 opción. | El límite máximo de elecciones se fijó en 1. | Editá el grupo de sabores y aumentá el número máximo permitido. |
+| El mozo no puede elegir más de una opción. | La **Cantidad Máxima** es 1. | Editá la variante y subí la **Cantidad Máxima**. |
+| El sistema obliga a elegir una opción que el cliente no quiere. | La **Cantidad Mínima** es mayor a 0. | Si la opción es opcional, poné **Cantidad Mínima** en 0. |
+| La variante no aparece al cargar el producto. | Todavía no la guardaste, o no la tildaste en el producto. | Revisá que exista en **Productos → Variantes** y tildala en **Variantes del Producto** al editar el producto. |

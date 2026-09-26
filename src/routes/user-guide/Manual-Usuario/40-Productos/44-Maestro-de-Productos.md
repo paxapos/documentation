@@ -11,10 +11,15 @@
 
 <div id="que-es-y-para-que-sirve-esta-pantalla"></div>
 
-El **Maestro de Productos** es la base de datos centralizada de todos los artículos, insumos y platos del establecimiento:
+El **Maestro de Productos** es la lista **completa** de productos del comercio:
 
-1. **Ficha técnica completa:** Nombre, código de barras, categoría, costo, precio de venta, alícuota de IVA e impresoras de destino.
-2. **Definición de comportamiento:** Indica si el producto descuenta stock, si se vende por peso/unidad o si es un insumo de cocina.
+- **Productos vendibles:** los que están en el menú y se venden en el salón.
+- **Productos comprables:** los que se le compran a los proveedores.
+- **Subproductos:** preparaciones propias que se usan en otros productos (por ejemplo, una salsa).
+
+> 💡 **¿Estás cargando tu carta por primera vez?** No empieces por acá. Los productos que vendés se cargan desde el **Menú**, donde les asignás categoría, precio, variantes e impresora. Ver [Menú de Productos](/user-guide/menu).
+>
+> La diferencia: el **Menú** tiene solo los productos **vendibles**; el **Maestro** tiene **todos** (vendibles, comprables y subproductos).
 
 ---
 

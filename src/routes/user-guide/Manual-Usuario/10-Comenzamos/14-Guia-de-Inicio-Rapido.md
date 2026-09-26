@@ -35,9 +35,13 @@ Entrá a [www.paxapos.com](https://www.paxapos.com) con el usuario y contraseña
 
 <div id="paso-2-cargar-los-datos-fiscales-del-comercio"></div>
 
-Antes de vender, cargá el CUIT, la razón social y el punto de venta de tu comercio en **Configuración** → **Info Fiscal del Comercio**. Es lo que necesita el sistema para poder facturar.
+Para poder facturar necesitás tus datos fiscales y un **punto de venta** de ARCA cargados en PaxaPOS:
 
-> 🔗 Guía completa: [Info Fiscal del Comercio](/user-guide/info-fiscal-comercio)
+1. Cargá el CUIT, la razón social y el domicilio fiscal en **Configuración** → **Fiscal y ARCA**.
+2. Hacé el trámite en ARCA y creá tu punto de venta: [ARCA y Facturación Electrónica](/user-guide/arca-y-facturacion).
+3. Con el PDF del alta del punto de venta, cargalo en **Configuración** → **Fiscal y ARCA** → **Puntos de venta** y avisá a soporte.
+
+> 🔗 Guías completas: [Puntos de Venta](/user-guide/puntos-de-venta-pdv) · [Fiscal y ARCA](/user-guide/fiscal-y-arca)
 
 ---
 
@@ -45,11 +49,15 @@ Antes de vender, cargá el CUIT, la razón social y el punto de venta de tu come
 
 <div id="paso-3-cargar-tu-menu-categorias-y-productos"></div>
 
-1. Creá tus categorías (ej: Entradas, Platos, Bebidas) en **Productos** → **Categorías**.
-2. Cargá cada producto con precio y categoría en **Productos** → **Maestro de Productos**.
-3. Armá el menú que vas a mostrar en el salón en **Productos** → **Menú**.
+Tu comercio ya arranca con un menú creado: solo tenés que cargarle los productos.
 
-> 🔗 Guías completas: [Maestro de Productos](/user-guide/maestro-de-productos) · [Menú](/user-guide/menu)
+1. Creá tus **categorías** (ej: Entradas, Platos, Bebidas) en **Productos** → **Categorías**.
+2. Si algún producto tiene opciones (ej: gustos de helado), creá sus **variantes** en **Productos** → **Variantes**. No importa si hacés primero las categorías o las variantes.
+3. Cargá cada producto en **Productos** → **Menú**: ahí le elegís la categoría, el precio, las variantes y **la impresora por donde sale la comanda**.
+
+> 💡 Para elegir la impresora de cada producto, primero tenés que darla de alta (Paso 4). Si todavía no lo hiciste, podés cargar los productos ahora y elegir la impresora después, editando cada producto.
+
+> 🔗 Guías completas: [Categorías](/user-guide/categorias) · [Variantes](/user-guide/variantes-grupo-sabores) · [Menú](/user-guide/menu)
 
 ---
 
@@ -57,8 +65,9 @@ Antes de vender, cargá el CUIT, la razón social y el punto de venta de tu come
 
 <div id="paso-4-configurar-tus-impresoras"></div>
 
-1. Instalá el **Servicio de Impresión** (FiscalBerry) en la PC o Raspberry conectada a tus impresoras.
-2. Dá de alta cada impresora (comanda, cocina, caja) en **Configuración** → **Impresoras**.
+1. Conectá cada impresora por **USB** (con su driver) o por **Ethernet** (a la misma red).
+2. Instalá **Fiscalberry**, el programa que imprime, y dejalo **siempre abierto**: [Windows](/user-guide/fiscalberry-windows) · [Linux](/user-guide/fiscalberry-linux) · [Android](/user-guide/fiscalberry-android).
+3. Dá de alta cada impresora (cocina, barra, caja) en **Configuración** → **Tablas maestras** → **Impresión y multimedia** → **Impresoras**.
 
 > 🔗 Guía completa: [Gestión de Impresoras](/user-guide/impresoras)
 
@@ -89,7 +98,9 @@ Dale acceso a mozos, cajeros y encargados creando sus usuarios (o PIN, para un i
 <div id="paso-7-abrir-la-caja-y-hacer-tu-primera-venta"></div>
 
 1. Abrí el turno con el monto inicial de efectivo en **Finanzas** → **Arqueos de Caja**.
-2. Registrá tu primera venta desde **Ventas** → **Salón de Ventas** (o **Caja Rápida** si es mostrador).
+2. Registrá tu primera venta desde **Ventas** → **Salón de Ventas** (o **Caja Rápida** si es mostrador). En el salón, cada mesa sigue este recorrido: abrir mesa → cargar productos → **Comandar** → **Cerrar** → **Cobrar** → **Emitir** factura (si hace falta) → **Checkout**.
+
+> 💡 Antes de abrir la primera mesa, creá tus **mozos** en **Configuración** → **Tablas maestras** → **Mozos** (ver [Salón de Ventas](/user-guide/salon-de-ventas#antes-de-empezar-configurar-los-mozos)).
 
 > 🔗 Guías completas: [Arqueos de Caja](/user-guide/arqueos-de-caja) · [Salón de Ventas](/user-guide/salon-de-ventas) · [Caja Rápida](/user-guide/caja-rapida)
 
