@@ -95,11 +95,11 @@ Para que el mozo entre al sistema con un código numérico, creale un **usuario 
 
 <div id="paso-1-entra-al-salon-de-ventas"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/21-00a-menu-grupo-ventas.png)
+<!-- FOTO: 21-00a-menu-grupo-ventas — Grupo Ventas del menú lateral · recorte · #globalSidebar .sidebar-module[data-module="ventas"] .sidebar-module-header -->
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Salón de Ventas dentro del grupo Ventas](images/manual/20-ventas/21-00b-menu-opcion-adicionar.png)
+<!-- FOTO: 21-00b-menu-opcion-adicionar — Opción Salón de Ventas dentro del grupo Ventas · recorte · #globalSidebar a[href*="aditions/aditions/adicionar"] (con el grupo Ventas desplegado) -->
 
 2. Tocá **Salón de Ventas**.
 3. Vas a ver las mesas abiertas, agrupadas por mozo.
@@ -119,24 +119,27 @@ En esta pantalla vas a ver:
 
 Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón **Abrir Caja**.
 
-![Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo](images/manual/20-ventas/21-205-donde-esta-boton-abrir-caja.png)
+<!-- FOTO: 21-205-donde-esta-boton-abrir-caja — Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo · pantalla con recuadro rojo · #btn-cashregister (visible solo con la caja cerrada) -->
 
-![Botón Abrir Caja](images/manual/20-ventas/21-206-boton-abrir-caja.png)
+<!-- FOTO: 21-206-boton-abrir-caja — Botón Abrir Caja · recorte · #btn-cashregister -->
 
 1. Tocá **Abrir Caja**. Está arriba, en el encabezado del salón.
 2. Si tenés más de una caja, elegí cuál abrir y tocá **Continuar**.
 3. Se abre la ventana **Iniciar Caja**.
 
-![Ventana Iniciar Caja con la lista de billetes](images/manual/20-ventas/21-207-dialogo-iniciar-caja.png)
+<!-- FOTO: 21-207-dialogo-iniciar-caja — Ventana Iniciar Caja con la lista de billetes · pantalla completa · ventana SweetAlert "Iniciar Caja" (.swal-billete-input) con 2 billetes cargados -->
 
-![Casillero para la cantidad de billetes](images/manual/20-ventas/21-208-campo-billetes.png)
+<!-- FOTO: 21-208-campo-billetes — Casillero para la cantidad de billetes · recorte · fila del primer .swal-billete-input -->
 
 4. Al lado de cada billete, escribí cuántos hay en la caja. Por ejemplo: *2* billetes de *$ 1.000*.
 5. Arriba se suma solo el **Total en Caja**.
 
-![Botón verde Abrir Caja para confirmar](images/manual/20-ventas/21-209-boton-confirmar-abrir-caja.png)
+<!-- FOTO: 21-209-boton-confirmar-abrir-caja — Botón verde Abrir Caja para confirmar · recorte · .swal2-confirm "Abrir Caja" (dueño: se puede confirmar) -->
 
 6. Tocá el botón verde **Abrir Caja**.
+
+<!-- FOTO: 21-210-caja-abierta — Mensaje Caja Abierta con el importe inicial · recorte · .swal2-popup con título "¡Caja Abierta!" -->
+
 7. Vas a ver el mensaje **¡Caja Abierta!**. Ahora en el encabezado está el botón para cerrarla.
 
 > 💡 Si no ves el botón **Abrir Caja**, la caja ya está abierta. Seguí con el paso siguiente.
@@ -147,7 +150,7 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 <div id="paso-3-abri-una-mesa"></div>
 
-![Listado de mesas con el botón Abrir Mesa marcado en rojo](images/manual/20-ventas/21-42-donde-esta-boton-abrir.png)
+<!-- FOTO: 21-42-donde-esta-boton-abrir — Listado de mesas con el botón Abrir Mesa marcado en rojo · pantalla con recuadro rojo · .btn-nueva-mesa -->
 
 1. Tocá **"+ Abrir Mesa"**.
 
@@ -159,9 +162,9 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 ![Diálogo para abrir una mesa nueva con cantidad de cubiertos](images/manual/20-ventas/17-salon-dialogo-abrir-mesa.png)
 
-![Casillero Descripción de la mesa](images/manual/20-ventas/21-195-campo-descripcion-mesa.png)
+<!-- FOTO: 21-195-campo-descripcion-mesa — Casillero Descripción de la mesa · recorte · #swal-mesa-numero -->
 
-![Casillero Cantidad de cubiertos](images/manual/20-ventas/21-196-campo-cubiertos.png)
+<!-- FOTO: 21-196-campo-cubiertos — Casillero Cantidad de cubiertos · recorte · #swal-mesa-cubiertos -->
 
 ![Botón Guardar de la ventana Abrir Mesa](images/manual/20-ventas/17b-salon-boton-guardar-mesa.png)
 
@@ -177,7 +180,7 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 <div id="paso-4-carga-los-productos-y-comanda"></div>
 
-![Mesa abierta con el botón Nueva Comanda marcado en rojo](images/manual/20-ventas/21-148-donde-esta-boton-nueva-comanda.png)
+<!-- FOTO: 21-148-donde-esta-boton-nueva-comanda — Mesa abierta con el botón Nueva Comanda marcado en rojo · pantalla con recuadro rojo · #btn-add-products-main -->
 
 1. Dentro de la mesa, tocá **"+ Nueva Comanda"**.
 
@@ -187,15 +190,15 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 ![Catálogo de productos del menú activo](images/manual/20-ventas/20-salon-catalogo-productos.png)
 
-![Casillero para buscar productos por nombre](images/manual/20-ventas/21-187-campo-buscar-por-nombre-abrev-o-codigo.png)
+<!-- FOTO: 21-187-campo-buscar-por-nombre-abrev-o-codigo — Casillero para buscar productos por nombre · recorte · #buscadorProductos -->
 
-![Botón de un producto del catálogo](images/manual/20-ventas/21-197-boton-producto.png)
+<!-- FOTO: 21-197-boton-producto — Botón de un producto del catálogo · recorte · primer .ul-productos:visible a -->
 
-![Producto agregado a la lista de productos seleccionados](images/manual/20-ventas/21-salon-producto-agregado.png)
+<!-- FOTO: 21-salon-producto-agregado — Producto agregado a la lista de productos seleccionados · pantalla completa · catálogo con 1 producto en Productos Seleccionados -->
 
 3. Si el producto tiene **variantes** (por ejemplo, gustos de helado), elegí las opciones que te pide.
 <!-- FOTO: 21-06-elegir-variantes -->
-![Catálogo con el botón Comandar marcado en rojo](images/manual/20-ventas/21-198-donde-esta-boton-comandar.png)
+<!-- FOTO: 21-198-donde-esta-boton-comandar — Catálogo con el botón Comandar marcado en rojo · pantalla con recuadro rojo · .comanda-add-guardar-primary -->
 
 4. Cuando terminaste, tocá **Comandar**. El pedido sale impreso en cocina o barra.
 
@@ -216,9 +219,9 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 Asignar un cliente es **opcional**, pero es **obligatorio para hacer una Factura A**. Lo podés hacer **en cualquier momento**, mientras la mesa esté abierta o después de cerrarla.
 
 1. Dentro de la mesa, tocá **⚙️ Opciones** (arriba a la derecha).
-![Mesa con el botón Opciones marcado en rojo](images/manual/20-ventas/21-115-donde-esta-boton-opciones.png)
+<!-- FOTO: 21-115-donde-esta-boton-opciones — Mesa con el botón Opciones marcado en rojo · pantalla con recuadro rojo · #btn-mas-opciones -->
 
-![Botón Opciones](images/manual/20-ventas/21-116-boton-opciones.png)
+<!-- FOTO: 21-116-boton-opciones — Botón Opciones · recorte · #btn-mas-opciones -->
 2. Tocá **Cliente**.
 <!-- FOTO: 21-08-opcion-cliente -->
 3. Se abre la ventana **Seleccionar Cliente**. Escribí el nombre, teléfono o email en el buscador.
@@ -253,7 +256,7 @@ Asignar un cliente es **opcional**, pero es **obligatorio para hacer una Factura
 
 Cuando el cliente pide la cuenta:
 
-![Mesa con el botón Cerrar marcado en rojo](images/manual/20-ventas/21-119-donde-esta-boton-cerrar.png)
+<!-- FOTO: 21-119-donde-esta-boton-cerrar — Mesa con el botón Cerrar marcado en rojo · pantalla con recuadro rojo · #btn-cerrar-mesa -->
 
 1. Tocá **🔒 Cerrar**, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.
 
@@ -263,7 +266,7 @@ Cuando el cliente pide la cuenta:
 
 ![Vista de Remito con el detalle de la mesa cerrada](images/manual/20-ventas/25-salon-remito.png)
 
-![Remito con el botón Imprimir marcado en rojo](images/manual/20-ventas/21-154-donde-esta-boton-imprimir.png)
+<!-- FOTO: 21-154-donde-esta-boton-imprimir — Remito con el botón Imprimir marcado en rojo · pantalla con recuadro rojo · #btn-print-remito (SOLO foto, no tocar) -->
 
 3. Si el remito **no salió impreso solo**, tocá **Imprimir** en la sección **🖨️ Remito**.
 
@@ -272,9 +275,9 @@ Cuando el cliente pide la cuenta:
 > 💡 El **remito** es la cuenta para el cliente: dice **"Documento no válido como factura"**. No es una factura.
 > Desde la misma sección también podés **Descargar Img** o **Descargar PDF A4** para mandarlo por WhatsApp o mail.
 
-![Mesa cerrada con el botón Reabrir marcado en rojo](images/manual/20-ventas/21-121-donde-esta-boton-reabrir.png)
+<!-- FOTO: 21-121-donde-esta-boton-reabrir — Mesa cerrada con el botón Reabrir marcado en rojo · pantalla con recuadro rojo · #mesa-reabrir (mesa cerrada) -->
 
-![Botón Reabrir](images/manual/20-ventas/21-122-boton-reabrir.png)
+<!-- FOTO: 21-122-boton-reabrir — Botón Reabrir · recorte · #mesa-reabrir -->
 
 > 🔓 ¿Cerraste por error? Tocá **🔓 Reabrir** y la mesa vuelve a estar abierta.
 
@@ -285,24 +288,24 @@ Cuando el cliente pide la cuenta:
 <div id="paso-7-cobra-la-mesa"></div>
 
 1. En la vista **Remito**, tocá **💰 Cobrar**.
-![Remito con el botón Cobrar marcado en rojo](images/manual/20-ventas/21-150-donde-esta-boton-cobrar.png)
+<!-- FOTO: 21-150-donde-esta-boton-cobrar — Remito con el botón Cobrar marcado en rojo · pantalla con recuadro rojo · #btn-start-payment-main -->
 
-![Botón Cobrar](images/manual/20-ventas/27-salon-boton-cobrar.png)
+<!-- FOTO: 27-salon-boton-cobrar — Botón Cobrar · recorte · #btn-start-payment-main -->
 2. Se abre la pantalla de cobro con el **Total a cobrar**. En **¿Cómo paga?** elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá **Más métodos de pago...**
-![Pantalla de cobro con el total y los medios de pago](images/manual/20-ventas/28-salon-pantalla-cobro.png)
+<!-- FOTO: 28-salon-pantalla-cobro — Pantalla de cobro con el total y los medios de pago · pantalla completa · .checkout-container recién abierto -->
 
-![Botón del medio de pago Efectivo](images/manual/20-ventas/21-200-boton-metodo-efectivo.png)
+<!-- FOTO: 21-200-boton-metodo-efectivo — Botón del medio de pago Efectivo · recorte · .checkout-method-btn[data-method="efectivo"] -->
 3. **Si paga en efectivo:** en **💵 ¿Con cuánto paga el cliente?** escribí el billete que te dio. El sistema te muestra el **Vuelto**. Si paga justo, tocá **✓ Monto exacto**.
-![Casillero Con cuánto paga el cliente](images/manual/20-ventas/21-201-campo-con-cuanto-paga.png)
+<!-- FOTO: 21-201-campo-con-cuanto-paga — Casillero Con cuánto paga el cliente · recorte · #checkout-efectivo-vuelto con monto escrito en #checkout-efectivo-monto -->
 
-![Pantalla de cobro con Efectivo elegido y el vuelto calculado](images/manual/20-ventas/21-202-pantalla-cobro-efectivo.png)
-![Botón verde para confirmar el cobro](images/manual/20-ventas/21-203-boton-confirmar-cobro.png)
+<!-- FOTO: 21-202-pantalla-cobro-efectivo — Pantalla de cobro con Efectivo elegido y el vuelto calculado · pantalla completa · checkout con Efectivo elegido y vuelto calculado -->
+<!-- FOTO: 21-203-boton-confirmar-cobro — Botón verde para confirmar el cobro · recorte · #checkout-pay-btn (SOLO foto, cobra de verdad) -->
 
 4. Tocá el botón verde de abajo para confirmar el pago.
 
 > ⚠️ **Atención:** El botón verde cobra de verdad. Revisá la mesa y el total antes de tocarlo. Si te equivocaste de mesa, tocá **← Volver a la mesa** y no se cobra nada.
 
-![Botón Volver a la mesa](images/manual/20-ventas/21-204-boton-volver-a-la-mesa.png)
+<!-- FOTO: 21-204-boton-volver-a-la-mesa — Botón Volver a la mesa · recorte · #checkout-back-btn -->
 
 #### Si paga con varios medios
 
@@ -369,7 +372,7 @@ Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** 
 
 El botón **⚙️ Opciones** (arriba a la derecha de la mesa) tiene más acciones. Algunas solo funcionan con la mesa **abierta**:
 
-![Ventana Opciones de la mesa](images/manual/20-ventas/21-199-dialogo-opciones.png)
+<!-- FOTO: 21-199-dialogo-opciones — Ventana Opciones de la mesa · recorte · .swal-mas-opciones-popup (cerrar con .swal2-cancel) -->
 
 - **👤 Mozo:** cambiá el mozo de la mesa. Se abre una ventana para **Seleccionar** el nuevo mozo.
 - **✏️ Número:** cambiá la descripción o número de la mesa.
