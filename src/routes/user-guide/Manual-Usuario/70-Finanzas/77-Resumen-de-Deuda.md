@@ -2,58 +2,204 @@
 
 <div id="resumen-de-deuda"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Gastos y Pagos** → **Resumen de Deuda**  
-> **¿Quién lo usa?:** Tesoreros, Gerentes de Finanzas y Contadores  
+> **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Facturas y Pagos** → **Resumen de Deuda**
+> **¿Quién lo usa?:** Encargados de Cuentas a Pagar, Tesoreros y Contadores
+
+> 🎯 **¿Para qué sirve esto?**
+> Te muestra cuánta plata le debés a cada proveedor y hace cuánto tiempo.
+> Desde acá llegás a las facturas que faltan pagar y las pagás.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Muestra el estado consolida de deudas impagas y saldos pendientes con cada uno de los proveedores del comercio:
-
-1. **Cuentas por pagar:** Resumen global de facturas vencidas y a vencer.
-2. **Programación de pagos:** Facilita la planificación del flujo de fondos de la semana.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Consulta de Cuentas a Pagar a Proveedores** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tu usuario tiene que tener el permiso de **Finanzas** en [Permisos por Rol](/user-guide/permisos-por-rol).
+- La deuda sale de las facturas cargadas sin pagar. Mirá [Factura Manual](/user-guide/factura-manual).
+- Para pagar una factura, tu usuario también necesita permiso de pagos. Mirá [Pagos (Egresos)](/user-guide/pagos).
 
 ---
 
-## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+## 📍 Paso 1: Entrá a la pantalla
 
-<div id="botones-y-filtros-que-es-cada-cosa"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Menú lateral con el grupo Finanzas marcado en rojo](images/manual/70-finanzas/77-00a-menu-grupo-finanzas.png)
+
+1. En el menú de la izquierda, tocá **Finanzas**.
+
+![Opción Resumen de Deuda marcada en rojo, debajo del título Facturas y Pagos](images/manual/70-finanzas/77-00b-menu-opcion-resumen-de-deuda.png)
+
+2. Tocá **Resumen de Deuda**. Está debajo del título **FACTURAS Y PAGOS**.
+
+![Pantalla Resumen de Deuda con el total de deuda arriba, tarjetas, aging y la tabla por proveedor](images/manual/70-finanzas/77-01-pantalla-resumen-de-deuda.png)
+
+Así se ve la pantalla. Arriba, al lado del título, está la deuda total. Por ejemplo: **Resumen de Deuda: $1.500,00**.
+
+---
+
+## 🔘 Paso 2: Conocé los botones de arriba
+
+<div id="paso-2-conoce-los-botones-de-arriba"></div>
+
+![Tres botones juntos: Nuevo Gasto en verde, Gasto Manual y Descargar](images/manual/70-finanzas/77-02-botones-de-arriba.png)
+
+- **Nuevo Gasto**: abre la pantalla para subir la foto de una factura y cargar sus datos.
+- **Gasto Manual**: abre [Factura Manual](/user-guide/factura-manual), para escribir los datos a mano.
+- **Descargar**: baja esta tabla en una planilla de Excel.
+
+---
+
+## 📊 Paso 3: Leé los números
+
+<div id="paso-3-lee-los-numeros"></div>
+
+![Recuadro Deuda por PDV / Centro de costo con un casillero por cada local y el monto de deuda de cada uno](images/manual/70-finanzas/77-03-deuda-por-centro-de-costo.png)
+
+Este recuadro aparece si tu comercio usa **PDV / Centro de costo**. Muestra cuánto se debe en cada uno.
+
+- Tocá un nombre para ver la tabla solo de ese local.
+- **Sin centro** junta las facturas que no tienen local asignado.
+- Para volver a ver todo, tocá **Quitar filtro**.
+
+![Cuatro tarjetas y el cuadro Aging de deuda con los rangos 0-30, 31-60, 61-90 y mayor a 90](images/manual/70-finanzas/77-04-tarjetas-y-aging.png)
+
+Las tarjetas de arriba dicen:
+
+- **Proveedores con deuda**: a cuántos proveedores les debés hoy.
+- **Deuda promedio**: cuánto le debés en promedio a cada uno.
+- **Mayor deudor**: el proveedor al que más le debés, y cuánto.
+- **Deuda vencida (+30)**: lo que tiene más de 30 días, y qué parte del total es.
+
+El cuadro **Aging de deuda** separa la deuda por antigüedad de la factura:
+
+- **0-30**: de hasta 30 días.
+- **31-60**: de 31 a 60 días.
+- **61-90**: de 61 a 90 días.
+- **>90**: de más de 90 días.
+
+> 💡 **Consejo útil:** mientras más plata hay en **>90**, más atrasado estás con tus proveedores.
+
+---
+
+## 📋 Paso 4: Mirá la deuda de cada proveedor
+
+<div id="paso-4-mira-la-deuda-de-cada-proveedor"></div>
+
+![Tabla con una fila del proveedor Distribuidora Ejemplo: importe total 1500, pagado 0, deuda 1500 en rojo](images/manual/70-finanzas/77-05-tabla-por-proveedor.png)
+
+Hay un renglón por cada proveedor con deuda. Las columnas dicen:
+
+- **Nombre** y **CUIT**: quién es el proveedor.
+- **Importe Sin Imp.**: lo que suman sus facturas sin impuestos.
+- **Importe Total**: lo que suman sus facturas con impuestos.
+- **Pagado**: lo que ya le pagaste.
+- **Deuda**: lo que todavía le debés. Va en rojo.
+- **% Deuda/Total**: qué parte de tu deuda total es de este proveedor.
+- **0-30**, **31-60**, **61-90** y **>90**: su deuda separada por antigüedad.
+
+Si un proveedor tiene saldo a favor, aparece en verde y arriba se muestra **Saldo a favor** y **Deuda neta**. Un proveedor sin deuda no aparece.
+
+---
+
+## 🧾 Paso 5: Abrí las facturas pendientes de un proveedor
+
+<div id="paso-5-abri-las-facturas-pendientes-de-un-proveedor"></div>
+
+![Tabla de deuda con el nombre azul Distribuidora Ejemplo marcado en rojo](images/manual/70-finanzas/77-06-donde-esta-link-proveedor.png)
+
+1. Tocá el nombre del proveedor, en azul. Por ejemplo: **Distribuidora Ejemplo**.
+2. Se abre **Pendientes de Pago**, con las facturas sin pagar de ese proveedor.
+
+![Pantalla Pendientes de Pago del proveedor Distribuidora Ejemplo con los filtros y una factura](images/manual/70-finanzas/77-07-pantalla-pendientes-de-pago.png)
+
+Abajo del título se lee el nombre del proveedor que estás mirando.
+
+![Panel de filtros con Estado, Con Deuda, Proveedor, Clasificacion, Tipo Factura, Num Factura, Neto, Total, N° de OC, Desde, Hasta y los botones Descargar Excel y Buscar](images/manual/70-finanzas/77-08-filtros-pendientes.png)
+
+Para buscar una factura usá los filtros y tocá **Buscar**:
+
+- **Estado**: facturas **Abierto** o **Cerrado** (cerradas por un cierre contable).
+- **Con Deuda**, **Sin Clasificar** y **Sin OC**: tildalos para ver solo esas.
+- **Proveedor**: elegí otro proveedor.
+- **Clasificacion** y **Tipo Factura**: el tipo de gasto y la letra de la factura.
+- **CAPEX/OPEX** y **Tipo Costo**: si es inversión o gasto operativo, y si el costo es fijo o variable.
+- **Num Factura**, **Neto** y **Total**: escribí el dato exacto.
+- **N° de OC**: el número de la orden de compra.
+- **Desde** y **Hasta**: el rango de fechas de la factura.
+- **Descargar Excel**: baja el resultado en una planilla.
+
+Abajo del buscador está la lista (se ve en la primera foto de este paso). Cada renglón muestra la fecha, lo que falta pagar, el tipo, el número, el proveedor, la observación y el botón **Acciones**.
+
+---
+
+## 💸 Paso 6: Pagá una factura
+
+<div id="paso-6-paga-una-factura"></div>
+
+En esta pantalla no hay un botón **Registrar Pago**. El pago se hace con el link **Pagar** del menú **Acciones**.
+
+![Menú Acciones abierto con Pagar marcado en rojo, y debajo Ver, Añadir items, Editar, Duplicar y Borrar](images/manual/70-finanzas/77-10-menu-acciones-abierto.png)
+
+1. En el renglón de la factura, tocá **Acciones**.
+2. Se abre una lista. Tocá **Pagar**.
+
+Las otras opciones de la lista son:
+
+- **Ver**: muestra el detalle de la factura.
+- **Añadir items**: carga lo que compraste en esa factura.
+- **Editar**: corrige los datos de la factura.
+- **Duplicar**: hace una copia para cargar otra parecida.
+- **Borrar**: elimina la factura.
+
+> ⚠️ **Atención:** **Borrar** saca la factura y su deuda. Usalo solo si la cargaste por error.
+
+![Ventanita Nuevo Pago con fecha de pago, método, importe 1500, retenciones y el botón verde Pagar Ahora](images/manual/70-finanzas/77-11-ventanita-pagar.png)
+
+Se abre la ventanita **Nuevo Pago**. Ya trae el importe que falta pagar.
+
+- **Fecha de Pago**: cuándo pagaste. Si la dejás vacía, se crea una orden de pago que necesita aprobación.
+- **Fecha Programada**: solo para cheques o pagarés que se cobran más adelante.
+- **Método**: cómo pagás. Por ejemplo: efectivo o transferencia.
+- **Importe**: cuánto pagás. Podés escribir menos si pagás una parte.
+- **ID Pago (opcional)**: el número del cheque o de la tarjeta.
+- **Comprobante**: adjuntá la foto o el PDF del comprobante.
+- **Observaciones**: cualquier detalle que quieras anotar.
+- **Retenciones**: si el proveedor tiene retenciones, aparecen acá.
+- **Pagar Ahora**: confirma el pago.
+
+> ⚠️ **Atención:** **Pagar Ahora** registra el pago de verdad y baja la deuda. Revisá el **Método** y el **Importe** antes de tocarlo.
+
+Para cerrar la ventanita sin pagar, tocá la **×** de arriba a la derecha.
+
+Más detalles del pago en [Pagos (Egresos)](/user-guide/pagos).
+
+---
+
+## ☑️ Paso 7: Pagá varias facturas juntas
+
+<div id="paso-7-paga-varias-facturas-juntas"></div>
+
+![Pantalla con la casilla Seleccionar Todos tildada y el botón azul Pagar 1.500 marcado en rojo](images/manual/70-finanzas/77-12-donde-esta-boton-pagar-seleccionados.png)
+
+1. Tildá la casilla de cada factura que querés pagar. O tocá **Seleccionar Todos**.
+2. Aparece el botón azul **Pagar** con el total. Por ejemplo: **Pagar $1.500**.
+3. Tocalo para abrir la pantalla de pago de esas facturas.
+
+> ⚠️ **Atención:** revisá qué facturas tildaste antes de tocar **Pagar**. El total del botón es la suma de todas.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 💳 **Registrar Pago** | Al lado del saldo del proveedor | Abre la pantalla de emisión de órdenes de pago o egresos. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Consultar cuánto se le debe a un proveedor
-
-<div id="paso-1-consultar-cuanto-se-le-debe-a-un-proveedor"></div>
-
-1. Buscá al proveedor en la lista.
-2. Revisá el saldo en la columna **Deuda Total**.
-3. Tocá **Registrar Pago** si se abonará la cuenta.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| La deuda no disminuyó tras hacer un pago. | El pago no fue vinculado a la factura correspondiente. | Imputá el comprobante de pago en la orden de egreso. |
+| **El proveedor no aparece en la tabla** | No tiene deuda. Los proveedores saldados no se muestran. | Buscá sus facturas en [Historial de Facturas](/user-guide/historial-de-facturas). |
+| **La deuda total es $0,00** | Todas las facturas están pagas o no hay ninguna cargada. | Cargá una en [Factura Manual](/user-guide/factura-manual). |
+| **Cargué una factura y no suma deuda** | La factura se guardó con **Guardar y Pagar** y ya se pagó. | Miralo en [Historial de Facturas](/user-guide/historial-de-facturas), columna **Falta pagar**. |
+| **No veo el link Pagar en Acciones** | Tu usuario no tiene permiso de pagos. | Pedile a un administrador que lo active en [Permisos por Rol](/user-guide/permisos-por-rol). |
+| **Pendientes de Pago dice "No hay gastos pendientes de pago"** | El proveedor no tiene facturas sin pagar. | Tocá **Buscar** con los filtros vacíos, o volvé al **Resumen de Deuda**. |
+| **Quiero ver la deuda de un solo local** | Estás mirando el total de todos. | Tocá el nombre del local en el recuadro **Deuda por PDV / Centro de costo**. |
