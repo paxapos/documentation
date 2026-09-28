@@ -31,7 +31,7 @@ El **Salón de Ventas** (también llamado **Adición**) es la pantalla donde se 
 
 - Tener al menos un **mozo** creado (ver [Antes de empezar: configurar los mozos](#antes-de-empezar-configurar-los-mozos)).
 - Tener productos cargados en el menú (ver [Menú de Productos](/user-guide/menu)).
-- Para cobrar en efectivo o con tarjeta cargada a mano, tener un **arqueo de caja abierto** (ver [Arqueos de Caja](/user-guide/arqueos-de-caja)).
+- Para cobrar en efectivo o con tarjeta cargada a mano, tener la **caja abierta** (ver [Paso 2: Abrí la caja](#paso-2-abri-la-caja)).
 - Para imprimir comandas, remitos y facturas, tener **Fiscalberry** abierto en la computadora del local (ver [Gestión de Impresoras](/user-guide/impresoras)).
 - Para facturar electrónicamente, tener el **punto de venta** cargado (ver [Puntos de Venta](/user-guide/puntos-de-venta-pdv)).
 
@@ -95,8 +95,14 @@ Para que el mozo entre al sistema con un código numérico, creale un **usuario 
 
 <div id="paso-1-entra-al-salon-de-ventas"></div>
 
-1. Desde el menú principal, tocá **Ventas** → **Salón de Ventas**.
-2. Vas a ver las mesas abiertas, agrupadas por mozo.
+![Grupo Ventas del menú lateral](images/manual/20-ventas/21-00a-menu-grupo-ventas.png)
+
+1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
+
+![Opción Salón de Ventas dentro del grupo Ventas](images/manual/20-ventas/21-00b-menu-opcion-adicionar.png)
+
+2. Tocá **Salón de Ventas**.
+3. Vas a ver las mesas abiertas, agrupadas por mozo.
 
 ![Listado de mesas del salón con mesas abiertas en rojo y el botón Abrir Mesa](images/manual/20-ventas/01-salon-listado-mesas.png)
 
@@ -107,9 +113,41 @@ En esta pantalla vas a ver:
 
 ---
 
-### Paso 2: Abrí una mesa
+### Paso 2: Abrí la caja
 
-<div id="paso-2-abri-una-mesa"></div>
+<div id="paso-2-abri-la-caja"></div>
+
+Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón **Abrir Caja**.
+
+![Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo](images/manual/20-ventas/21-205-donde-esta-boton-abrir-caja.png)
+
+![Botón Abrir Caja](images/manual/20-ventas/21-206-boton-abrir-caja.png)
+
+1. Tocá **Abrir Caja**. Está arriba, en el encabezado del salón.
+2. Si tenés más de una caja, elegí cuál abrir y tocá **Continuar**.
+3. Se abre la ventana **Iniciar Caja**.
+
+![Ventana Iniciar Caja con la lista de billetes](images/manual/20-ventas/21-207-dialogo-iniciar-caja.png)
+
+![Casillero para la cantidad de billetes](images/manual/20-ventas/21-208-campo-billetes.png)
+
+4. Al lado de cada billete, escribí cuántos hay en la caja. Por ejemplo: *2* billetes de *$ 1.000*.
+5. Arriba se suma solo el **Total en Caja**.
+
+![Botón verde Abrir Caja para confirmar](images/manual/20-ventas/21-209-boton-confirmar-abrir-caja.png)
+
+6. Tocá el botón verde **Abrir Caja**.
+7. Vas a ver el mensaje **¡Caja Abierta!**. Ahora en el encabezado está el botón para cerrarla.
+
+> 💡 Si no ves el botón **Abrir Caja**, la caja ya está abierta. Seguí con el paso siguiente.
+
+---
+
+### Paso 3: Abrí una mesa
+
+<div id="paso-3-abri-una-mesa"></div>
+
+![Listado de mesas con el botón Abrir Mesa marcado en rojo](images/manual/20-ventas/21-42-donde-esta-boton-abrir.png)
 
 1. Tocá **"+ Abrir Mesa"**.
 
@@ -121,6 +159,12 @@ En esta pantalla vas a ver:
 
 ![Diálogo para abrir una mesa nueva con cantidad de cubiertos](images/manual/20-ventas/17-salon-dialogo-abrir-mesa.png)
 
+![Casillero Descripción de la mesa](images/manual/20-ventas/21-195-campo-descripcion-mesa.png)
+
+![Casillero Cantidad de cubiertos](images/manual/20-ventas/21-196-campo-cubiertos.png)
+
+![Botón Guardar de la ventana Abrir Mesa](images/manual/20-ventas/17b-salon-boton-guardar-mesa.png)
+
 4. Tocá **Guardar**. Se abre la mesa, vacía.
 
 ![Mesa recién abierta, sin productos cargados](images/manual/20-ventas/18-salon-mesa-abierta.png)
@@ -129,9 +173,11 @@ En esta pantalla vas a ver:
 
 ---
 
-### Paso 3: Cargá los productos y comandá
+### Paso 4: Cargá los productos y comandá
 
-<div id="paso-3-carga-los-productos-y-comanda"></div>
+<div id="paso-4-carga-los-productos-y-comanda"></div>
+
+![Mesa abierta con el botón Nueva Comanda marcado en rojo](images/manual/20-ventas/21-148-donde-esta-boton-nueva-comanda.png)
 
 1. Dentro de la mesa, tocá **"+ Nueva Comanda"**.
 
@@ -141,8 +187,16 @@ En esta pantalla vas a ver:
 
 ![Catálogo de productos del menú activo](images/manual/20-ventas/20-salon-catalogo-productos.png)
 
+![Casillero para buscar productos por nombre](images/manual/20-ventas/21-187-campo-buscar-por-nombre-abrev-o-codigo.png)
+
+![Botón de un producto del catálogo](images/manual/20-ventas/21-197-boton-producto.png)
+
+![Producto agregado a la lista de productos seleccionados](images/manual/20-ventas/21-salon-producto-agregado.png)
+
 3. Si el producto tiene **variantes** (por ejemplo, gustos de helado), elegí las opciones que te pide.
 <!-- FOTO: 21-06-elegir-variantes -->
+![Catálogo con el botón Comandar marcado en rojo](images/manual/20-ventas/21-198-donde-esta-boton-comandar.png)
+
 4. Cuando terminaste, tocá **Comandar**. El pedido sale impreso en cocina o barra.
 
 ![Botón Comandar para enviar la comanda](images/manual/20-ventas/22-salon-boton-comandar.png)
@@ -155,14 +209,16 @@ En esta pantalla vas a ver:
 
 ---
 
-### Paso 4: Asigná un cliente (o creá uno nuevo)
+### Paso 5: Asigná un cliente (o creá uno nuevo)
 
-<div id="paso-4-asigna-un-cliente-o-crea-uno-nuevo"></div>
+<div id="paso-5-asigna-un-cliente-o-crea-uno-nuevo"></div>
 
 Asignar un cliente es **opcional**, pero es **obligatorio para hacer una Factura A**. Lo podés hacer **en cualquier momento**, mientras la mesa esté abierta o después de cerrarla.
 
 1. Dentro de la mesa, tocá **⚙️ Opciones** (arriba a la derecha).
-<!-- FOTO: 21-07-boton-opciones -->
+![Mesa con el botón Opciones marcado en rojo](images/manual/20-ventas/21-115-donde-esta-boton-opciones.png)
+
+![Botón Opciones](images/manual/20-ventas/21-116-boton-opciones.png)
 2. Tocá **Cliente**.
 <!-- FOTO: 21-08-opcion-cliente -->
 3. Se abre la ventana **Seleccionar Cliente**. Escribí el nombre, teléfono o email en el buscador.
@@ -191,11 +247,13 @@ Asignar un cliente es **opcional**, pero es **obligatorio para hacer una Factura
 
 ---
 
-### Paso 5: Cerrá la mesa e imprimí el remito
+### Paso 6: Cerrá la mesa e imprimí el remito
 
-<div id="paso-5-cerra-la-mesa-e-imprimi-el-remito"></div>
+<div id="paso-6-cerra-la-mesa-e-imprimi-el-remito"></div>
 
 Cuando el cliente pide la cuenta:
+
+![Mesa con el botón Cerrar marcado en rojo](images/manual/20-ventas/21-119-donde-esta-boton-cerrar.png)
 
 1. Tocá **🔒 Cerrar**, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.
 
@@ -205,6 +263,8 @@ Cuando el cliente pide la cuenta:
 
 ![Vista de Remito con el detalle de la mesa cerrada](images/manual/20-ventas/25-salon-remito.png)
 
+![Remito con el botón Imprimir marcado en rojo](images/manual/20-ventas/21-154-donde-esta-boton-imprimir.png)
+
 3. Si el remito **no salió impreso solo**, tocá **Imprimir** en la sección **🖨️ Remito**.
 
 ![Botón Imprimir del remito](images/manual/20-ventas/26-salon-boton-imprimir-remito.png)
@@ -212,21 +272,37 @@ Cuando el cliente pide la cuenta:
 > 💡 El **remito** es la cuenta para el cliente: dice **"Documento no válido como factura"**. No es una factura.
 > Desde la misma sección también podés **Descargar Img** o **Descargar PDF A4** para mandarlo por WhatsApp o mail.
 
+![Mesa cerrada con el botón Reabrir marcado en rojo](images/manual/20-ventas/21-121-donde-esta-boton-reabrir.png)
+
+![Botón Reabrir](images/manual/20-ventas/21-122-boton-reabrir.png)
+
 > 🔓 ¿Cerraste por error? Tocá **🔓 Reabrir** y la mesa vuelve a estar abierta.
 
 ---
 
-### Paso 6: Cobrá la mesa
+### Paso 7: Cobrá la mesa
 
-<div id="paso-6-cobra-la-mesa"></div>
+<div id="paso-7-cobra-la-mesa"></div>
 
 1. En la vista **Remito**, tocá **💰 Cobrar**.
-<!-- FOTO: 21-12-boton-cobrar -->
+![Remito con el botón Cobrar marcado en rojo](images/manual/20-ventas/21-150-donde-esta-boton-cobrar.png)
+
+![Botón Cobrar](images/manual/20-ventas/27-salon-boton-cobrar.png)
 2. Se abre la pantalla de cobro con el **Total a cobrar**. En **¿Cómo paga?** elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá **Más métodos de pago...**
-<!-- FOTO: 21-13-pantalla-como-paga -->
+![Pantalla de cobro con el total y los medios de pago](images/manual/20-ventas/28-salon-pantalla-cobro.png)
+
+![Botón del medio de pago Efectivo](images/manual/20-ventas/21-200-boton-metodo-efectivo.png)
 3. **Si paga en efectivo:** en **💵 ¿Con cuánto paga el cliente?** escribí el billete que te dio. El sistema te muestra el **Vuelto**. Si paga justo, tocá **✓ Monto exacto**.
-<!-- FOTO: 21-14-efectivo-vuelto -->
-4. Confirmá el pago.
+![Casillero Con cuánto paga el cliente](images/manual/20-ventas/21-201-campo-con-cuanto-paga.png)
+
+![Pantalla de cobro con Efectivo elegido y el vuelto calculado](images/manual/20-ventas/21-202-pantalla-cobro-efectivo.png)
+![Botón verde para confirmar el cobro](images/manual/20-ventas/21-203-boton-confirmar-cobro.png)
+
+4. Tocá el botón verde de abajo para confirmar el pago.
+
+> ⚠️ **Atención:** El botón verde cobra de verdad. Revisá la mesa y el total antes de tocarlo. Si te equivocaste de mesa, tocá **← Volver a la mesa** y no se cobra nada.
+
+![Botón Volver a la mesa](images/manual/20-ventas/21-204-boton-volver-a-la-mesa.png)
 
 #### Si paga con varios medios
 
@@ -252,9 +328,9 @@ Los medios de pago se dan de alta en **Configuración** → **Tablas maestras** 
 
 ---
 
-### Paso 7: Emití la factura (solo si hace falta)
+### Paso 8: Emití la factura (solo si hace falta)
 
-<div id="paso-7-emiti-la-factura"></div>
+<div id="paso-8-emiti-la-factura"></div>
 
 Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** de la vista **Remito**:
 
@@ -267,7 +343,7 @@ Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** 
 
 <div id="como-hacer-una-factura-a"></div>
 
-1. Asigná a la mesa un cliente con **Condición IVA: Responsable Inscripto** y su **CUIT** (ver [Paso 4](#paso-4-asigna-un-cliente-o-crea-uno-nuevo)).
+1. Asigná a la mesa un cliente con **Condición IVA: Responsable Inscripto** y su **CUIT** (ver [Paso 5](#paso-5-asigna-un-cliente-o-crea-uno-nuevo)).
 2. En **🧾 Factura Fiscal**, tocá **Imprimir** o **Emitir**.
 3. Como el cliente es **Responsable Inscripto**, la factura sale **A**. Si la mesa no tiene cliente, o el cliente no es Responsable Inscripto, la factura **no** sale A.
 
@@ -275,9 +351,9 @@ Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** 
 
 ---
 
-### Paso 8: Hacé el Checkout (liberá la mesa)
+### Paso 9: Hacé el Checkout (liberá la mesa)
 
-<div id="paso-8-hace-el-checkout"></div>
+<div id="paso-9-hace-el-checkout"></div>
 
 1. Cuando la mesa está **totalmente cobrada**, en la vista **Remito** aparece el botón **👋 Checkout**.
 <!-- FOTO: 21-17-boton-checkout -->
@@ -293,10 +369,12 @@ Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** 
 
 El botón **⚙️ Opciones** (arriba a la derecha de la mesa) tiene más acciones. Algunas solo funcionan con la mesa **abierta**:
 
+![Ventana Opciones de la mesa](images/manual/20-ventas/21-199-dialogo-opciones.png)
+
 - **👤 Mozo:** cambiá el mozo de la mesa. Se abre una ventana para **Seleccionar** el nuevo mozo.
 - **✏️ Número:** cambiá la descripción o número de la mesa.
 - **🍽️ Cubiertos:** cambiá la cantidad de cubiertos.
-- **Cliente:** asigná o cambiá el cliente (ver [Paso 4](#paso-4-asigna-un-cliente-o-crea-uno-nuevo)).
+- **Cliente:** asigná o cambiá el cliente (ver [Paso 5](#paso-5-asigna-un-cliente-o-crea-uno-nuevo)).
 - **Observación:** una nota sobre la mesa.
 - **💸 Descuento:** aplicá un descuento a la mesa.
 - **✂️ Dividir Mesa:** separá consumos en otra mesa.
@@ -314,7 +392,7 @@ El botón **⚙️ Opciones** (arriba a la derecha de la mesa) tiene más accion
 |---|---|---|
 | El mozo no aparece para abrir la mesa. | El mozo está **inactivo**, o tu usuario no está en su **Visibilidad por Usuarios**. | Editá el mozo en **Configuración → Tablas maestras → Mozos** y revisá esas dos opciones. |
 | No sale impresa la comanda ni el remito. | **Fiscalberry** está cerrado, o la impresora está apagada o sin papel. | Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver [Gestión de Impresoras](/user-guide/impresoras). |
-| El sistema no me deja cobrar en efectivo. | No hay un **arqueo de caja abierto**. | Abrí la caja en [Arqueos de Caja](/user-guide/arqueos-de-caja) y volvé a cobrar. |
+| El sistema no me deja cobrar en efectivo. | No hay un **arqueo de caja abierto**. | Tocá **Abrir Caja** arriba en el salón (ver [Paso 2](#paso-2-abri-la-caja)) y volvé a cobrar. |
 | No aparece el botón **Cobrar**. | La mesa todavía está abierta, o ya está totalmente cobrada. | Primero tocá **🔒 Cerrar**. Si ya está cobrada, tocá **👋 Checkout**. |
 | No aparece el botón **Checkout**. | Todavía falta cobrar una parte. | Tocá **💰 Agregar Pago** y cobrá lo que falta. |
 | La factura no salió **A** y el cliente la quería A. | El cliente no tiene la **Condición IVA: Responsable Inscripto**, o no estaba asignado a la mesa. | Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa. |
