@@ -2,91 +2,209 @@
 
 <div id="variantes-y-grupos-de-sabores"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Productos** → **Variantes**  
-> **¿Quién lo usa?:** Encargados de Menú y Administradores
+> **¿Dónde está en el sistema?:** Menú principal → **Productos** → **Variantes**
+> **¿Quién lo usa?:** Encargados del menú y administradores
 
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Una **variante** agrupa **opciones** que el cliente elige al pedir un producto. Por ejemplo:
-- *Gustos de helado* (Chocolate, Frutilla, Dulce de leche…).
-- *Punto de la carne* (Jugoso, A punto, Bien cocido).
-- *Guarnición* (Papas fritas, Ensalada, Puré).
-
-Cada variante tiene una **Cantidad Mínima** y una **Cantidad Máxima**: cuántas opciones **tiene que** y **puede** elegir el cliente. Por ejemplo, *1 kg de helado: mínimo 1, máximo 4 gustos*.
+> 🎯 **¿Para qué sirve esto?**
+> Una variante es un grupo de opciones que el cliente elige al pedir. Por ejemplo: *Gustos de helado* (Chocolate, Frutilla, Dulce de leche).
+> También sirve para el punto de la carne, la guarnición o el tamaño de un plato.
 
 > 🧭 **Primeros pasos para armar tu menú:**
-> 1. Crear las **variantes** (esta guía) y las **categorías** ([Categorías](/user-guide/categorias)). No importa cuál hacés primero.
-> 2. Cargar los **productos en el menú** ([Menú de Productos](/user-guide/menu)). Ahí le asignás a cada producto sus variantes.
+> 1. Creá las **variantes** (esta guía) y las [Categorías](/user-guide/categorias). No importa el orden.
+> 2. Cargá los productos en el [Menú](/user-guide/menu). Ahí le asignás a cada producto sus variantes.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 Antes de empezar
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Contar con el permiso de **Configuración de Variantes y Sabores** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
-
----
-
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
-
-<div id="botones-y-campos-que-es-cada-cosa"></div>
-
-| Botón / Campo | ¿Dónde está? | ¿Qué hace? |
-|---|---|---|
-| ➕ **Crear Variante** | Arriba de la pantalla | Abre el formulario para crear una variante. |
-| **Nombre de la Variante** | Formulario | El nombre del grupo de opciones (ejemplo: *Gustos de helado*). |
-| **Cantidad Mínima** | Formulario | Mínimo de opciones que **debe** elegir el cliente. |
-| **Cantidad Máxima** | Formulario | Máximo de opciones que **puede** elegir el cliente. |
-| **Variante Privada** | Formulario | Si la marcás, **no se muestra en pedimelo.online**. |
-| **Mostrar cada opción como producto independiente en KDS** | Formulario | Si la marcás, cada opción se muestra como un ítem aparte en la pantalla de cocina. |
-| ➕ **Agregar Opción** | Formulario, sección **Opciones de la Variante** | Suma una opción a la variante (ejemplo: *Chocolate*). |
+- Tu usuario tiene que tener el permiso de **Variantes** en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
+## 📍 Paso 1: Entrá a la pantalla
 
-<div id="guia-paso-a-paso-como-se-usa"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-### Paso 1: Crear una variante con sus opciones
+![Menú lateral con el grupo Productos marcado en rojo](images/manual/40-productos/43-00a-menu-grupo-productos.png)
 
-<div id="paso-1-crear-una-variante-con-sus-opciones"></div>
+1. En el menú de la izquierda, tocá **Productos**.
 
-1. Andá a **Productos** → **Variantes**.
-<!-- FOTO: 43-01-menu-variantes -->
-2. Tocá **Crear Variante**.
-<!-- FOTO: 43-02-boton-crear-variante -->
-3. Escribí el **Nombre de la Variante** (ejemplo: *Gustos de helado*).
-<!-- FOTO: 43-03-campo-nombre-variante -->
-4. Completá **Cantidad Mínima** y **Cantidad Máxima** (ejemplo: mínimo *1*, máximo *4*).
-<!-- FOTO: 43-04-campos-cantidad-minima-maxima -->
-5. En **Opciones de la Variante**, tocá **Agregar Opción** y escribí cada opción (ejemplo: *Chocolate*, *Frutilla*, *Dulce de leche*).
-<!-- FOTO: 43-05-boton-agregar-opcion -->
-6. Tocá **Agregar Variante** para guardarla.
-<!-- FOTO: 43-06-boton-agregar-variante -->
+![Opción Variantes marcada en rojo en el menú lateral](images/manual/40-productos/43-00b-menu-opcion-grupo-sabores.png)
 
-### Paso 2: Asignar la variante a un producto
+2. Tocá **Variantes**.
 
-<div id="paso-2-asignar-la-variante-a-un-producto"></div>
+![Pantalla Variantes con la variante Gustos de helado](images/manual/40-productos/43-01-pantalla-index.png)
 
-La variante se asigna **cuando cargás el producto en el menú**, en la sección **PASO 2 · Variantes del Producto** del formulario.
+Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 
-> 🔗 Ver cómo: [Menú de Productos](/user-guide/menu)
+![Pantalla con el botón de ayuda marcado en rojo](images/manual/40-productos/43-22-donde-esta-boton-ayuda.png)
+
+![Botón de ayuda con un signo de pregunta](images/manual/40-productos/43-23-boton-ayuda.png)
+
+> 💡 **Consejo útil:** si tocás el botón **?** de arriba, aparece una explicación corta.
+
+![Explicación ¿Qué es una Variante? abierta debajo del botón de ayuda](images/manual/40-productos/43-24-ayuda-abierta.png)
+
+---
+
+## ➕ Paso 2: Creá una variante
+
+<div id="paso-2-crea-una-variante"></div>
+
+![Pantalla con el botón azul Crear Variante marcado en rojo](images/manual/40-productos/43-20-donde-esta-boton-crear-variante.png)
+
+![Botón azul Crear Variante con un signo más](images/manual/40-productos/43-21-boton-crear-variante.png)
+
+1. Tocá el botón azul **Crear Variante**. Está arriba a la izquierda.
+2. Se abre una ventana.
+
+![Ventana Crear Variante con los datos de Gustos de helado](images/manual/40-productos/43-25-ventana-crear-variante.png)
+
+![Casillero Nombre de la Variante con Gustos de helado escrito](images/manual/40-productos/43-06-campo-nombre-de-la-variante.png)
+
+3. En **Nombre de la Variante**, escribí el nombre. Por ejemplo: *Gustos de helado*.
+
+![Casillero Cantidad Mínima con el número 1](images/manual/40-productos/43-07-campo-cantidad-minima.png)
+
+4. En **Cantidad Mínima**, poné cuántas opciones **tiene que** elegir el cliente. Por ejemplo: *1*.
+
+![Casillero Cantidad Máxima con el número 3](images/manual/40-productos/43-08-campo-cantidad-maxima.png)
+
+5. En **Cantidad Máxima**, poné cuántas opciones **puede** elegir como mucho. Por ejemplo: *3*.
+
+![Casilla Variante Privada sin marcar](images/manual/40-productos/43-09-campo-variante-privada.png)
+
+6. Marcá **Variante Privada** solo si no querés que se vea en el menú online.
+
+![Casilla Mostrar cada opción como producto independiente en KDS sin marcar](images/manual/40-productos/43-10-campo-mostrar-cada-opcion-como-product.png)
+
+7. Marcá **Mostrar cada opción como producto independiente en KDS** si querés que la cocina vea cada opción en un renglón aparte.
+
+---
+
+## 🍦 Paso 3: Agregá las opciones
+
+<div id="paso-3-agrega-las-opciones"></div>
+
+![Ventana con el botón azul Agregar Opción marcado en rojo](images/manual/40-productos/43-11-donde-esta-boton-agregar-opcion.png)
+
+![Botón azul Agregar Opción](images/manual/40-productos/43-12-boton-agregar-opcion.png)
+
+1. Tocá el botón azul **Agregar Opción**. Aparece un renglón nuevo.
+
+![Renglón de una opción: nombre Chocolate, precio, impresora, puesto y botón Eliminar](images/manual/40-productos/43-17-campo-sabor.png)
+
+2. En **Nombre de la Opción**, escribí la opción. Por ejemplo: *Chocolate*.
+3. En **Precio**, poné cuánto se cobra de más. Si no cuesta extra, dejá *0*.
+4. Repetí con cada opción. Por ejemplo: *Frutilla* y *Dulce de leche*.
+
+> 💡 **Consejo útil:** si la opción no existe como producto, el sistema la crea sola al guardar.
+
+![Ventana con el botón rojo Eliminar de una opción marcado en rojo](images/manual/40-productos/43-18-donde-esta-boton-eliminar.png)
+
+![Botón rojo Eliminar con un tacho](images/manual/40-productos/43-19-boton-eliminar.png)
+
+5. Si te equivocaste en una opción, tocá el botón rojo **Eliminar** de ese renglón.
+
+---
+
+## 💾 Paso 4: Guardá la variante
+
+<div id="paso-4-guarda-la-variante"></div>
+
+![Ventana con el botón verde Agregar Variante marcado en rojo](images/manual/40-productos/43-13-donde-esta-boton-agregar-variante.png)
+
+![Botón verde Agregar Variante](images/manual/40-productos/43-14-boton-agregar-variante.png)
+
+1. Tocá el botón verde **Agregar Variante**. Está abajo de todo.
+2. La variante aparece en la lista.
+
+![Ventana con el botón Volver al Listado marcado en rojo](images/manual/40-productos/43-26-donde-esta-boton-volver-al-listado.png)
+
+![Botón Volver al Listado con una flecha](images/manual/40-productos/43-27-boton-volver-al-listado.png)
+
+> 💡 **Consejo útil:** si te arrepentiste, tocá **Volver al Listado**. No se guarda nada.
+
+---
+
+## ✏️ Paso 5: Cambiá una variante
+
+<div id="paso-5-cambia-una-variante"></div>
+
+![Recuadro de la variante Gustos de helado con sus opciones y los botones Editar y Borrar](images/manual/40-productos/43-28-tarjeta-variante.png)
+
+Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué productos se usa.
+
+![Pantalla con el botón Editar de la variante marcado en rojo](images/manual/40-productos/43-29-donde-esta-boton-editar.png)
+
+![Botón Editar](images/manual/40-productos/43-30-boton-editar.png)
+
+1. Tocá **Editar**, a la derecha de la variante.
+
+![Ventana Editar Gustos de helado con los datos cargados](images/manual/40-productos/43-31-ventana-editar-variante.png)
+
+2. Se abre la ventana con los datos. Cambiá lo que necesites.
+
+![Ventana con el botón verde Actualizar Variante marcado en rojo](images/manual/40-productos/43-15-donde-esta-boton-actualizar-variante.png)
+
+![Botón verde Actualizar Variante](images/manual/40-productos/43-16-boton-actualizar-variante.png)
+
+3. Tocá el botón verde **Actualizar Variante**.
+
+---
+
+## 🗑️ Paso 6: Borrá una variante
+
+<div id="paso-6-borra-una-variante"></div>
+
+> ⚠️ **Atención:** si borrás una variante, los productos que la usan dejan de ofrecer esas opciones.
+
+![Pantalla con el botón rojo Borrar de la variante marcado en rojo](images/manual/40-productos/43-04-donde-esta-boton-borrar.png)
+
+![Botón rojo Borrar](images/manual/40-productos/43-05-boton-borrar.png)
+
+1. Tocá el botón rojo **Borrar**, a la derecha de la variante.
+2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarla.
+
+---
+
+## 📋 Paso 7: Mirá todas las opciones juntas (opcional)
+
+<div id="paso-7-mira-todas-las-opciones-juntas-opcional"></div>
+
+![Pantalla con el botón Listado de Opciones marcado en rojo](images/manual/40-productos/43-02-donde-esta-boton-listado-de-opciones.png)
+
+![Botón Listado de Opciones](images/manual/40-productos/43-03-boton-listado-de-opciones.png)
+
+1. Tocá **Listado de Opciones**, arriba a la derecha.
+
+![Pantalla Listado de Opciones en Variantes con Chocolate, Frutilla y Dulce de leche](images/manual/40-productos/43-32-pantalla-listado-de-opciones.png)
+
+2. Ves todas las opciones de todas las variantes en una sola lista, con su precio.
+
+---
+
+## 🔗 Paso 8: Asigná la variante a un producto
+
+<div id="paso-8-asigna-la-variante-a-un-producto"></div>
+
+La variante se asigna cuando cargás el producto en el menú, en la parte **Variantes del Producto**.
+Mirá cómo en [Menú de Productos](/user-guide/menu).
 
 > ➡️ **Siguiente paso:** si todavía no lo hiciste, creá las [Categorías](/user-guide/categorias). Después [cargá los productos en el menú](/user-guide/menu).
 
 ---
 
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+## ⚠️ Resolución de Inconvenientes
 
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
+<div id="resolucion-de-inconvenientes"></div>
 
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| El mozo no puede elegir más de una opción. | La **Cantidad Máxima** es 1. | Editá la variante y subí la **Cantidad Máxima**. |
-| El sistema obliga a elegir una opción que el cliente no quiere. | La **Cantidad Mínima** es mayor a 0. | Si la opción es opcional, poné **Cantidad Mínima** en 0. |
-| La variante no aparece al cargar el producto. | Todavía no la guardaste, o no la tildaste en el producto. | Revisá que exista en **Productos → Variantes** y tildala en **Variantes del Producto** al editar el producto. |
+| **El mozo no puede elegir más de una opción** | La **Cantidad Máxima** es 1. | Tocá **Editar** y subí la **Cantidad Máxima**. |
+| **El sistema obliga a elegir una opción** | La **Cantidad Mínima** es mayor a 0. | Si la opción no es obligatoria, poné **Cantidad Mínima** en 0. |
+| **Al guardar sale una pantalla "Database Error"** | Es una falla del sistema, no un error tuyo. | Avisale a soporte de PaxaPOS con el nombre de la variante. |
+| **La variante no aparece al cargar el producto** | No se guardó, o no la marcaste en el producto. | Revisá que esté en esta lista y marcala en **Variantes del Producto**. |
+| **La variante no se ve en el menú online** | Está marcada como **Variante Privada**. | Tocá **Editar**, desmarcala y tocá **Actualizar Variante**. |
