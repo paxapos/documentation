@@ -14,11 +14,11 @@
 
 <div id="paso-1-entra-al-listado-de-clientes"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/25-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/25-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Clientes dentro del grupo Ventas](images/manual/20-ventas/25-00b-menu-opcion-clientes.png)
+![Opción Clientes dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/25-00b-menu-opcion-clientes.png)
 
 2. Bajá hasta la parte **Clientes** y tocá **Clientes**.
 3. Se abre el listado con todos los clientes.

@@ -14,11 +14,11 @@
 
 <div id="paso-1-entra-a-nueva-reserva"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/27-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/27-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Nueva Reserva dentro del grupo Ventas](images/manual/20-ventas/27-00b-menu-opcion-reservas-add.png)
+![Opción Nueva Reserva dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/27-00b-menu-opcion-reservas-add.png)
 
 2. Bajá hasta la parte **Reservas** y tocá **Nueva Reserva**.
 3. Se abre la pantalla para cargar la reserva.

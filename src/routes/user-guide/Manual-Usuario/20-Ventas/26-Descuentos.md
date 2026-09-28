@@ -14,11 +14,11 @@
 
 <div id="paso-1-entra-al-listado-de-descuentos"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/26-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/26-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Descuentos dentro del grupo Ventas](images/manual/20-ventas/26-00b-menu-opcion-descuentos.png)
+![Opción Descuentos dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/26-00b-menu-opcion-descuentos.png)
 
 2. Bajá hasta la parte **Clientes** y tocá **Descuentos**.
 3. Se abre el listado con los descuentos que ya existen.

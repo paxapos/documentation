@@ -71,11 +71,11 @@ Para que el mozo entre al sistema con un código numérico, creale un **usuario 
 
 <div id="paso-1-entra-al-salon-de-ventas"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/21-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/21-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Salón de Ventas dentro del grupo Ventas](images/manual/20-ventas/21-00b-menu-opcion-adicionar.png)
+![Opción Salón de Ventas dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/21-00b-menu-opcion-adicionar.png)
 
 2. Tocá **Salón de Ventas**.
 3. Vas a ver las mesas abiertas, agrupadas por mozo.

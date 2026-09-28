@@ -25,11 +25,11 @@
 
 <div id="paso-1-entra-a-mozos"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/24-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/24-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Mozos dentro del grupo Ventas](images/manual/20-ventas/24-00b-menu-opcion-mozos.png)
+![Opción Mozos dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/24-00b-menu-opcion-mozos.png)
 
 2. Bajá hasta la parte **Reservas Hoteleras** y tocá **Mozos**.
 3. Se abre la lista de mozos.

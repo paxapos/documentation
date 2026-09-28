@@ -16,11 +16,11 @@
 
 <div id="paso-1-entra-a-la-grilla-de-reservas"></div>
 
-![Grupo Ventas del menú lateral](images/manual/20-ventas/29-00a-menu-grupo-ventas.png)
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/29-00a-menu-grupo-ventas.png)
 
 1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
-![Opción Grilla de Reservas dentro del grupo Ventas](images/manual/20-ventas/29-00b-menu-opcion-grilla-de-reservas.png)
+![Opción Grilla de Reservas dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/29-00b-menu-opcion-grilla-de-reservas.png)
 
 2. Bajá hasta la parte **Reservas Hoteleras** y tocá **Grilla de Reservas**.
 3. Se abre la grilla, centrada en el día de hoy.
