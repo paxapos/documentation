@@ -42,25 +42,17 @@ En esta pantalla vas a ver:
 
 ![Grilla con el botón de semana anterior marcado en rojo](images/manual/20-ventas/29-02-donde-esta-boton-semana-anterior.png)
 
-![Botón con la flecha para ir a la semana anterior](images/manual/20-ventas/29-03-boton-semana-anterior.png)
-
 - Tocá **‹** para ir a la semana anterior.
 
 ![Grilla con el botón de semana siguiente marcado en rojo](images/manual/20-ventas/29-06-donde-esta-boton-semana-siguiente.png)
-
-![Botón con la flecha para ir a la semana siguiente](images/manual/20-ventas/29-07-boton-semana-siguiente.png)
 
 - Tocá **›** para ir a la semana siguiente.
 
 ![Grilla con el botón Hoy marcado en rojo](images/manual/20-ventas/29-04-donde-esta-boton-hoy.png)
 
-![Botón azul Hoy](images/manual/20-ventas/29-05-boton-hoy.png)
-
 - Tocá **Hoy** para volver al día de hoy.
 
 ![Grilla con el botón de actualizar marcado en rojo](images/manual/20-ventas/29-08-donde-esta-boton-actualizar.png)
-
-![Botón con la flecha circular para actualizar](images/manual/20-ventas/29-09-boton-actualizar.png)
 
 - Tocá **↻** para traer las reservas que cargaron otras personas.
 
@@ -90,8 +82,6 @@ En esta pantalla vas a ver:
 <div id="paso-4-abri-una-reserva"></div>
 
 ![Grilla con una reserva marcada en rojo](images/manual/20-ventas/29-12-donde-esta-boton-reserva.png)
-
-![Barrita naranja de una reserva con su número](images/manual/20-ventas/29-13-boton-reserva.png)
 
 1. Tocá la barrita de la reserva.
 2. A la derecha se abre el panel **Detalle de reserva**.
@@ -124,15 +114,11 @@ En esta pantalla vas a ver:
 
 ![Panel con el botón Guardar cambios marcado en rojo](images/manual/20-ventas/29-36-donde-esta-boton-guardar-cambios.png)
 
-![Botón azul Guardar cambios](images/manual/20-ventas/29-37-boton-guardar-cambios.png)
-
 3. Tocá el botón azul **Guardar cambios**, abajo del panel.
 
 ### Recibir al huésped
 
 ![Panel con el botón Recepcionar marcado en rojo](images/manual/20-ventas/29-29-donde-esta-boton-recepcionar.png)
-
-![Botón verde Recepcionar](images/manual/20-ventas/29-30-boton-recepcionar.png)
 
 - Cuando llegan, tocá el botón verde **Recepcionar**. La reserva pasa a estar ocupada.
 
@@ -140,15 +126,11 @@ En esta pantalla vas a ver:
 
 ![Panel con el botón Ver marcado en rojo](images/manual/20-ventas/29-38-donde-esta-boton-ver.png)
 
-![Botón Ver](images/manual/20-ventas/29-39-boton-ver.png)
-
 - Tocá **Ver** para abrir la reserva en la pantalla clásica, con todos sus datos.
 
 ### Cerrar el panel
 
 ![Panel con la cruz de cerrar marcada en rojo](images/manual/20-ventas/29-42-donde-esta-boton-cerrar-panel.png)
-
-![Botón con una cruz para cerrar el panel](images/manual/20-ventas/29-43-boton-cerrar-panel.png)
 
 - Tocá la **✕** de arriba a la derecha para cerrar el panel sin cambiar nada.
 
@@ -160,15 +142,11 @@ En esta pantalla vas a ver:
 
 ![Panel con el botón Cancelar marcado en rojo](images/manual/20-ventas/29-33-donde-esta-boton-cancelar-reserva.png)
 
-![Botón rojo Cancelar](images/manual/20-ventas/29-34-boton-cancelar-reserva.png)
-
 - Si el huésped avisa que no viene, tocá el botón rojo **Cancelar**. La reserva queda cancelada.
 
 > ⚠️ **Atención:** **Eliminar reserva** la borra para siempre. Usalo solo si la cargaste por error. Si el cliente no viene, usá **Cancelar**.
 
 ![Panel con el botón Eliminar reserva marcado en rojo](images/manual/20-ventas/29-40-donde-esta-boton-eliminar-reserva.png)
-
-![Botón rojo Eliminar reserva](images/manual/20-ventas/29-41-boton-eliminar-reserva.png)
 
 - Para borrarla, tocá **Eliminar reserva**, abajo de todo.
 
@@ -179,8 +157,6 @@ En esta pantalla vas a ver:
 <div id="paso-6-mas-opciones"></div>
 
 ![Grilla con el botón de los tres puntos marcado en rojo](images/manual/20-ventas/29-10-donde-esta-boton-opciones.png)
-
-![Botón con tres puntos](images/manual/20-ventas/29-11-boton-opciones.png)
 
 1. Tocá el botón **⋮**, arriba a la derecha.
 2. Se abre un menú:

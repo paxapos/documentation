@@ -39,8 +39,6 @@ En esta pantalla vas a ver:
 
 ![Listado de clientes con el botón Crear Nuevo Cliente marcado en rojo](images/manual/20-ventas/25-02-donde-esta-boton-crear-nuevo-s.png)
 
-![Botón verde Crear Nuevo Cliente](images/manual/20-ventas/25-03-boton-crear-nuevo-s.png)
-
 1. Tocá el botón verde **Crear Nuevo Cliente**, arriba a la derecha.
 2. Se abre la pantalla **Agregar Cliente**, con los datos en tres partes.
 
@@ -92,14 +90,10 @@ En esta pantalla vas a ver:
 
 ![Pantalla Agregar Cliente con el botón Agregar marcado en rojo abajo a la derecha](images/manual/20-ventas/25-31-donde-esta-boton-actualizar-agregar.png)
 
-![Botón azul Agregar](images/manual/20-ventas/25-32-boton-actualizar-agregar.png)
-
 12. Tocá el botón azul **Agregar**, abajo a la derecha.
 13. El cliente queda guardado y volvés al listado.
 
 ![Pantalla Agregar Cliente con el botón Cancelar marcado en rojo abajo a la izquierda](images/manual/20-ventas/25-29-donde-esta-boton-cancelar.png)
-
-![Botón Cancelar](images/manual/20-ventas/25-30-boton-cancelar.png)
 
 - Si no querés guardar, tocá **Cancelar**, abajo a la izquierda.
 
@@ -133,16 +127,12 @@ En esta pantalla vas a ver:
 
 ![Listado con el botón Buscar marcado en rojo](images/manual/20-ventas/25-14-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/20-ventas/25-15-boton-buscar.png)
-
 2. Tocá el botón azul **Buscar**.
 3. La tabla muestra solo los clientes que coinciden.
 
 ![Tabla de clientes filtrada por la búsqueda](images/manual/20-ventas/25-69-resultado-busqueda.png)
 
 ![Listado con el botón Limpiar marcado en rojo](images/manual/20-ventas/25-16-donde-esta-boton-limpiar.png)
-
-![Botón azul Limpiar](images/manual/20-ventas/25-17-boton-limpiar.png)
 
 4. Para volver a ver todos los clientes, tocá **Limpiar**.
 
@@ -159,8 +149,6 @@ A la derecha de cada cliente hay tres botones:
 ### Ver la ficha
 
 ![Tabla de clientes con el botón del ojo marcado en rojo](images/manual/20-ventas/25-21-donde-esta-boton-ver.png)
-
-![Botón con el ícono del ojo](images/manual/20-ventas/25-22-boton-ver.png)
 
 1. Tocá el botón del **ojo** 👁️.
 2. Se abre la ficha del cliente.
@@ -181,15 +169,11 @@ En la ficha vas a ver:
 
 ![Ficha del cliente con el botón Editar marcado en rojo](images/manual/20-ventas/25-33-donde-esta-boton-editar-ficha.png)
 
-![Botón azul Editar de la ficha](images/manual/20-ventas/25-34-boton-editar-ficha.png)
-
 - Para corregir sus datos desde la ficha, tocá **Editar**, arriba a la derecha.
 
 ### Corregir los datos
 
 ![Tabla de clientes con el botón del lápiz marcado en rojo](images/manual/20-ventas/25-23-donde-esta-boton-editar.png)
-
-![Botón con el ícono del lápiz](images/manual/20-ventas/25-24-boton-editar.png)
 
 1. Tocá el botón del **lápiz** ✏️.
 2. Se abren los datos del cliente. Cambiá lo que haga falta.
@@ -200,8 +184,6 @@ En la ficha vas a ver:
 > ⚠️ **Atención:** Borrar un cliente no se puede deshacer. Revisá bien que sea el cliente correcto.
 
 ![Tabla de clientes con el botón rojo de la papelera marcado](images/manual/20-ventas/25-25-donde-esta-boton-borrar.png)
-
-![Botón rojo con el ícono de la papelera](images/manual/20-ventas/25-26-boton-borrar.png)
 
 1. Tocá el botón rojo de la **papelera** 🗑️.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarlo.

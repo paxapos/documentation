@@ -97,8 +97,6 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 ![Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo](images/manual/20-ventas/21-205-donde-esta-boton-abrir-caja.png)
 
-![Botón Abrir Caja](images/manual/20-ventas/21-206-boton-abrir-caja.png)
-
 1. Tocá **Abrir Caja**. Está arriba, en el encabezado del salón.
 2. Si tenés más de una caja, elegí cuál abrir y tocá **Continuar**.
 3. Se abre la ventana **Iniciar Caja**.
@@ -130,8 +128,6 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 1. Tocá **"+ Abrir Mesa"**.
 
-![Botón + Abrir Mesa en la parte superior del listado](images/manual/20-ventas/16-salon-boton-abrir-mesa.png)
-
 2. Si te lo pide, elegí el **mozo** que va a atender la mesa.
 <!-- FOTO: 21-05-elegir-mozo -->
 3. Escribí la **descripción** de la mesa (por ejemplo, el número: *12*) y la **cantidad de cubiertos**.
@@ -160,8 +156,6 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 1. Dentro de la mesa, tocá **"+ Nueva Comanda"**.
 
-![Botón + para agregar productos a la comanda](images/manual/20-ventas/19-salon-boton-agregar-productos.png)
-
 2. Se abre el catálogo. Buscá o tocá los productos que pidió el cliente. Cada uno se suma a la lista con su precio.
 
 ![Catálogo de productos del menú activo](images/manual/20-ventas/20-salon-catalogo-productos.png)
@@ -184,8 +178,6 @@ Tocá el producto. Se suma a la comanda de la izquierda.
 
 4. Cuando terminaste, tocá **Comandar**. El pedido sale impreso en cocina o barra.
 
-![Botón Comandar para enviar la comanda](images/manual/20-ventas/22-salon-boton-comandar.png)
-
 5. La mesa vuelve a su vista principal, con la comanda cargada.
 
 ![Mesa con la comanda cargada tras comandar](images/manual/20-ventas/23-salon-comanda-cargada.png)
@@ -203,7 +195,6 @@ Asignar un cliente es **opcional**, pero es **obligatorio para hacer una Factura
 1. Dentro de la mesa, tocá **⚙️ Opciones** (arriba a la derecha).
 ![Mesa con el botón Opciones marcado en rojo](images/manual/20-ventas/21-115-donde-esta-boton-opciones.png)
 
-![Botón Opciones](images/manual/20-ventas/21-116-boton-opciones.png)
 2. Tocá **Cliente**.
 <!-- FOTO: 21-08-opcion-cliente -->
 3. Se abre la ventana **Seleccionar Cliente**. Escribí el nombre, teléfono o email en el buscador.
@@ -242,8 +233,6 @@ Cuando el cliente pide la cuenta:
 
 1. Tocá **🔒 Cerrar**, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.
 
-![Botón Cerrar de la mesa](images/manual/20-ventas/24-salon-boton-cerrar-mesa.png)
-
 2. La pantalla cambia a la vista **🧾 Remito**: el detalle de todo lo consumido, con el total.
 
 ![Vista de Remito con el detalle de la mesa cerrada](images/manual/20-ventas/25-salon-remito.png)
@@ -252,14 +241,10 @@ Cuando el cliente pide la cuenta:
 
 3. Si el remito **no salió impreso solo**, tocá **Imprimir** en la sección **🖨️ Remito**.
 
-![Botón Imprimir del remito](images/manual/20-ventas/26-salon-boton-imprimir-remito.png)
-
 > 💡 El **remito** es la cuenta para el cliente: dice **"Documento no válido como factura"**. No es una factura.
 > Desde la misma sección también podés **Descargar Img** o **Descargar PDF A4** para mandarlo por WhatsApp o mail.
 
 ![Mesa cerrada con el botón Reabrir marcado en rojo](images/manual/20-ventas/21-121-donde-esta-boton-reabrir.png)
-
-![Botón Reabrir](images/manual/20-ventas/21-122-boton-reabrir.png)
 
 > 🔓 ¿Cerraste por error? Tocá **🔓 Reabrir** y la mesa vuelve a estar abierta.
 
@@ -272,7 +257,6 @@ Cuando el cliente pide la cuenta:
 1. En la vista **Remito**, tocá **💰 Cobrar**.
 ![Remito con el botón Cobrar marcado en rojo](images/manual/20-ventas/21-150-donde-esta-boton-cobrar.png)
 
-![Botón Cobrar](images/manual/20-ventas/27-salon-boton-cobrar.png)
 2. Se abre la pantalla de cobro con el **Total a cobrar**. En **¿Cómo paga?** elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá **Más métodos de pago...**
 ![Pantalla de cobro con el total y los medios de pago](images/manual/20-ventas/28-salon-pantalla-cobro.png)
 

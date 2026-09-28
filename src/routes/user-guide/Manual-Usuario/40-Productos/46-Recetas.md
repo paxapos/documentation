@@ -60,8 +60,6 @@ Cada tarjeta muestra el nombre, cuánto **rinde** la receta, los ingredientes y 
 
 ![Tarjeta con el botón Ver marcado en rojo](images/manual/40-productos/46-04-donde-esta-boton-ver.png)
 
-![Botón Ver con un ojo](images/manual/40-productos/46-05-boton-ver.png)
-
 1. Tocá **Ver**, arriba a la derecha de la tarjeta.
 2. Se abre la ficha del producto. Mirá [Maestro de Productos](/user-guide/maestro-de-productos#paso-5-mira-la-ficha-de-un-producto).
 
@@ -72,8 +70,6 @@ Cada tarjeta muestra el nombre, cuánto **rinde** la receta, los ingredientes y 
 <div id="paso-4-cambia-una-receta"></div>
 
 ![Tarjeta con el botón Editar marcado en rojo](images/manual/40-productos/46-06-donde-esta-boton-editar.png)
-
-![Botón Editar con un lápiz](images/manual/40-productos/46-07-boton-editar.png)
 
 1. Tocá **Editar**, arriba a la derecha de la tarjeta.
 
@@ -115,8 +111,6 @@ Cada renglón es un ingrediente. De izquierda a derecha:
 
 ![Formulario con el botón Agregar Ingrediente marcado en rojo](images/manual/40-productos/46-22-donde-esta-boton-agregar-ingrediente.png)
 
-![Botón + Agregar Ingrediente](images/manual/40-productos/46-23-boton-agregar-ingrediente.png)
-
 9. Para sumar un ingrediente, tocá **+ Agregar Ingrediente**, debajo de la lista.
 
 ![Renglón nuevo vacío, con Seleccione producto](images/manual/40-productos/46-24-ingrediente-nuevo-vacio.png)
@@ -124,8 +118,6 @@ Cada renglón es un ingrediente. De izquierda a derecha:
 10. Aparece un renglón vacío. Completalo como en los pasos 5 a 8.
 
 ![Formulario con el tacho del primer ingrediente marcado en rojo](images/manual/40-productos/46-20-donde-esta-boton-quitar-ingrediente.png)
-
-![Botón rojo del tacho](images/manual/40-productos/46-21-boton-quitar-ingrediente.png)
 
 11. Para sacar un ingrediente, tocá el tacho rojo 🗑️ de ese renglón.
 
@@ -135,13 +127,9 @@ Cada renglón es un ingrediente. De izquierda a derecha:
 
 ![Formulario con el botón verde Guardar marcado en rojo](images/manual/40-productos/46-25-donde-esta-boton-guardar.png)
 
-![Botón verde Guardar](images/manual/40-productos/46-26-boton-guardar.png)
-
 12. Tocá el botón verde **Guardar**, abajo a la izquierda.
 
 ![Formulario con el botón rojo Eliminar marcado en rojo](images/manual/40-productos/46-27-donde-esta-boton-eliminar.png)
-
-![Botón rojo Eliminar](images/manual/40-productos/46-28-boton-eliminar.png)
 
 > ⚠️ **Atención:** el botón rojo **Eliminar**, abajo a la derecha, borra la receta entera. El producto queda sin receta.
 
@@ -155,13 +143,9 @@ Cada renglón es un ingrediente. De izquierda a derecha:
 
 ![Pantalla con el botón Imprimir Manual marcado en rojo](images/manual/40-productos/46-02-donde-esta-boton-imprimir-manual.png)
 
-![Botón Imprimir Manual con una impresora](images/manual/40-productos/46-03-boton-imprimir-manual.png)
-
 1. Para imprimir **todas** las recetas, tocá **Imprimir Manual**, arriba a la derecha.
 
 ![Tarjeta con el botón Imprimir marcado en rojo](images/manual/40-productos/46-08-donde-esta-boton-imprimir.png)
-
-![Botón celeste Imprimir](images/manual/40-productos/46-09-boton-imprimir.png)
 
 2. Para imprimir **una sola** receta, tocá **Imprimir** en su tarjeta.
 3. Se abre la ventana de impresión de tu computadora. Elegí la impresora y tocá **Imprimir**.

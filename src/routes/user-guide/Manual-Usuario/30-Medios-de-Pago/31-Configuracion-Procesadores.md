@@ -84,8 +84,6 @@ Así se ve la pantalla. Arriba hay tres tarjetas, una por cada forma de cobrar.
 
 ![Pantalla con el botón azul Guardar Configuración marcado en rojo, debajo de las tarjetas](images/manual/30-medios-de-pago/31-05-donde-esta-boton-guardar-configuracion.png)
 
-![Botón azul Guardar Configuración](images/manual/30-medios-de-pago/31-06-boton-guardar-configuracion.png)
-
 1. Tocá el botón azul **Guardar Configuración**. Está debajo de las tres tarjetas.
 2. La pantalla se vuelve a cargar con lo que elegiste.
 3. Más abajo aparece una solapa por cada procesador que elegiste.
@@ -104,8 +102,6 @@ Después de guardar, en la parte de abajo hay una solapa por cada procesador que
 
 ![Pantalla con el botón naranja Vincular con MercadoPago marcado en rojo](images/manual/30-medios-de-pago/31-11-donde-esta-boton-vincular-mercadopago.png)
 
-![Botón naranja Vincular con MercadoPago](images/manual/30-medios-de-pago/31-12-boton-vincular-mercadopago.png)
-
 1. Tocá el botón naranja **Vincular con MercadoPago**.
 2. Se abre la página de MercadoPago.
 3. Entrá con tu usuario de MercadoPago y aceptá darle permiso a PaxaPOS.
@@ -119,8 +115,6 @@ Después de guardar, en la parte de abajo hay una solapa por cada procesador que
 
 ![Pantalla con el botón azul Configurar Credenciales marcado en rojo](images/manual/30-medios-de-pago/31-09-donde-esta-boton-configurar-credenciales.png)
 
-![Botón azul Configurar Credenciales](images/manual/30-medios-de-pago/31-10-boton-configurar-credenciales.png)
-
 1. Tocá el botón azul **Configurar Credenciales**.
 2. Se abre la pantalla de ese procesador.
 
@@ -131,8 +125,6 @@ Después de guardar, en la parte de abajo hay una solapa por cada procesador que
 5. En **Canales de cobro** ves con qué cobra hoy cada forma de pago.
 
 ![Pantalla MercadoPago con el botón Volver a medios de pago marcado en rojo](images/manual/30-medios-de-pago/31-16-donde-esta-boton-volver-a-medios-de-pago.png)
-
-![Botón Volver a medios de pago](images/manual/30-medios-de-pago/31-17-boton-volver-a-medios-de-pago.png)
 
 6. Cuando termines, tocá **Volver a medios de pago**. Está abajo de todo.
 
@@ -152,8 +144,6 @@ Normalmente no necesitás tocar esto. Sirve si el soporte del procesador te pide
 ![Sección avanzada abierta con las direcciones de MacroClick, Mercado Pago y Payway](images/manual/30-medios-de-pago/31-14-configuracion-avanzada-abierta.png)
 
 ![Pantalla con el botón de copiar marcado en rojo al lado de la dirección](images/manual/30-medios-de-pago/31-07-donde-esta-boton-copy-btn.png)
-
-![Dirección de aviso con el botón de copiar a la derecha](images/manual/30-medios-de-pago/31-08-boton-copy-btn.png)
 
 3. Tocá el botón del portapapeles 📋 a la derecha de la dirección.
 4. La dirección queda copiada. Pegala donde te pidió el procesador.

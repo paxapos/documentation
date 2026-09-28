@@ -47,8 +47,6 @@ Así se ve la pantalla. Arriba están los botones. Abajo, la lista de tus catego
 
 ![Pantalla con el botón azul Nueva Categoría marcado en rojo](images/manual/40-productos/42-06-donde-esta-boton-nueva-categoria.png)
 
-![Botón azul Nueva Categoría con un signo más](images/manual/40-productos/42-07-boton-nueva-categoria.png)
-
 1. Tocá el botón azul **Nueva Categoría**. Está arriba a la izquierda.
 2. Se abre el formulario.
 
@@ -80,16 +78,12 @@ Así se ve la pantalla. Arriba están los botones. Abajo, la lista de tus catego
 
 ![Formulario con el botón verde Crear Categoría marcado en rojo](images/manual/40-productos/42-20-donde-esta-boton-crear-categoria.png)
 
-![Botón verde Crear Categoría](images/manual/40-productos/42-21-boton-crear-categoria.png)
-
 9. Tocá el botón verde **Crear Categoría**.
 10. Volvés a la lista, con la categoría nueva.
 
 > 💡 **Consejo útil:** si te arrepentiste, tocá **Cancelar**. No se guarda nada.
 
 ![Formulario con el botón Cancelar marcado en rojo](images/manual/40-productos/42-24-donde-esta-boton-cancelar.png)
-
-![Botón Cancelar](images/manual/40-productos/42-25-boton-cancelar.png)
 
 ---
 
@@ -119,8 +113,6 @@ Una subcategoría va dentro de otra. Por ejemplo: *Cervezas* dentro de *Bebidas*
 
 ![Pantalla con el botón azul Buscar marcado en rojo](images/manual/40-productos/42-09-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/40-productos/42-10-boton-buscar.png)
-
 2. Tocá el botón azul **Buscar**.
 
 ![Lista con las dos categorías que empiezan con Sandw](images/manual/40-productos/42-31-resultado-busqueda.png)
@@ -141,8 +133,6 @@ Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú
 
 ![Lista de categorías con el lápiz de Bebidas marcado en rojo](images/manual/40-productos/42-11-donde-esta-boton-editar.png)
 
-![Botón del lápiz](images/manual/40-productos/42-12-boton-editar.png)
-
 1. Pasá el mouse por el renglón de la categoría. A la derecha aparecen un lápiz y un tacho.
 2. Tocá el lápiz ✏️.
 
@@ -151,8 +141,6 @@ Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú
 3. Se abre el formulario con los datos de la categoría. Cambiá lo que necesites.
 
 ![Formulario con el botón azul Guardar Cambios marcado en rojo](images/manual/40-productos/42-22-donde-esta-boton-guardar-cambios.png)
-
-![Botón azul Guardar Cambios](images/manual/40-productos/42-23-boton-guardar-cambios.png)
 
 4. Tocá el botón azul **Guardar Cambios**.
 
@@ -165,8 +153,6 @@ Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú
 > ⚠️ **Atención:** borrar una categoría no se puede deshacer. Antes, pasá sus productos a otra categoría.
 
 ![Lista de categorías con el tacho de Bebidas marcado en rojo](images/manual/40-productos/42-28-donde-esta-boton-eliminar.png)
-
-![Botón del tacho de basura](images/manual/40-productos/42-29-boton-eliminar.png)
 
 1. Pasá el mouse por el renglón y tocá el tacho 🗑️.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarla.
@@ -183,8 +169,6 @@ Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú
 
 ![Pantalla con el botón Ordenar A-Z marcado en rojo](images/manual/40-productos/42-02-donde-esta-boton-ordenar-a-z.png)
 
-![Botón Ordenar A-Z](images/manual/40-productos/42-03-boton-ordenar-a-z.png)
-
 4. Si preferís el orden alfabético, tocá **Ordenar A-Z**.
 
 > ⚠️ **Atención:** **Ordenar A-Z** cambia el orden de **todas** las categorías de una vez. El orden que armaste a mano se pierde.
@@ -196,8 +180,6 @@ Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú
 <div id="paso-8-arregla-la-lista-si-se-ve-mal-opcional"></div>
 
 ![Pantalla con el botón Reparar árbol marcado en rojo](images/manual/40-productos/42-04-donde-esta-boton-reparar-arbol.png)
-
-![Botón Reparar árbol](images/manual/40-productos/42-05-boton-reparar-arbol.png)
 
 1. Si las subcategorías aparecen en un lugar raro, tocá **Reparar árbol**.
 2. El sistema acomoda cada categoría debajo de la que le corresponde.

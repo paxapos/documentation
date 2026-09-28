@@ -54,8 +54,6 @@ Así se ve la pantalla. Arriba están los botones. Abajo, la lista de productos 
 
 ![Pantalla con el botón azul Agregar Producto marcado en rojo](images/manual/40-productos/41-55-donde-esta-boton-agregar-producto.png)
 
-![Botón azul Agregar Producto con un signo más](images/manual/40-productos/41-56-boton-agregar-producto.png)
-
 1. Tocá el botón azul **Agregar Producto**.
 2. Se abre la pantalla **Agregar Producto al Menú**.
 
@@ -102,8 +100,6 @@ Tiene varias partes. Las importantes son **PASO 1**, **PASO 2** y **PASO 3**.
 
 ![Pantalla con el botón naranja Administrar Variantes marcado en rojo](images/manual/40-productos/41-82-donde-esta-boton-administrar-variantes.png)
 
-![Botón naranja Administrar Variantes](images/manual/40-productos/41-83-boton-administrar-variantes.png)
-
 10. Si no está la que necesitás, tocá **Administrar Variantes** para crearla. Mirá [Variantes](/user-guide/variantes-grupo-sabores).
 
 ### PASO 3 · Configuración Operativa (impresora)
@@ -123,8 +119,6 @@ Tiene varias partes. Las importantes son **PASO 1**, **PASO 2** y **PASO 3**.
 
 ![Pantalla con el botón Mostrar/Ocultar de Opciones Adicionales marcado en rojo](images/manual/40-productos/41-85-donde-esta-boton-mostrar-ocultar.png)
 
-![Botón Mostrar/Ocultar con una flechita](images/manual/40-productos/41-86-boton-mostrar-ocultar.png)
-
 13. Si querés, tocá **Mostrar/Ocultar** en **Opciones Adicionales**.
 
 ![Opciones Adicionales abiertas: Orden y Nombre en Ticket](images/manual/40-productos/41-87-seccion-opcional-abierta.png)
@@ -137,14 +131,10 @@ Tiene varias partes. Las importantes son **PASO 1**, **PASO 2** y **PASO 3**.
 
 ![Pantalla con el botón azul Guardar Producto marcado en rojo](images/manual/40-productos/41-88-donde-esta-boton-guardar-producto.png)
 
-![Botón azul Guardar Producto](images/manual/40-productos/41-89-boton-guardar-producto.png)
-
 15. Tocá el botón azul **Guardar Producto**, abajo de todo.
 16. El producto aparece en la lista. Los mozos ya lo pueden cargar en el [Salón de Ventas](/user-guide/salon-de-ventas).
 
 ![Pantalla con el botón Cancelar marcado en rojo](images/manual/40-productos/41-90-donde-esta-boton-cancelar.png)
-
-![Botón Cancelar con una cruz](images/manual/40-productos/41-91-boton-cancelar.png)
 
 > 💡 **Consejo útil:** si te arrepentiste, tocá **Cancelar**, debajo de **Guardar Producto**. No se guarda nada.
 
@@ -173,8 +163,6 @@ Tiene varias partes. Las importantes son **PASO 1**, **PASO 2** y **PASO 3**.
 
 ![Lista con el lápiz de un producto marcado en rojo, a la derecha](images/manual/40-productos/41-49-donde-esta-boton-icono.png)
 
-![Botón del lápiz](images/manual/40-productos/41-50-boton-icono.png)
-
 1. Tocá el lápiz ✏️ a la derecha del producto. Si no lo ves, mové la lista hacia la derecha.
 2. Se abre la misma pantalla que al agregarlo, con sus datos. Cambiá lo que necesites.
 3. Tocá **Guardar Producto**.
@@ -192,8 +180,6 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 <div id="paso-5-saca-un-producto-del-menu"></div>
 
 ![Lista con el tacho de un producto marcado en rojo](images/manual/40-productos/41-51-donde-esta-boton-js-delete-producto.png)
-
-![Botón del tacho de basura](images/manual/40-productos/41-52-boton-js-delete-producto.png)
 
 1. Tocá el tacho 🗑️ a la derecha del producto.
 2. El sistema te pregunta si estás seguro. Confirmá para sacarlo.
@@ -216,13 +202,9 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Pantalla con la cruz para borrar la búsqueda marcada en rojo](images/manual/40-productos/41-05-donde-esta-boton-icono.png)
 
-![Casillero de búsqueda con la cruz a la derecha](images/manual/40-productos/41-06-boton-icono.png)
-
 3. Para ver todo de nuevo, tocá la cruz ⊗ dentro del casillero.
 
 ![Pantalla sin resultados con el botón Limpiar búsqueda marcado en rojo](images/manual/40-productos/41-47-donde-esta-boton-limpiar-busqueda.png)
-
-![Botón Limpiar búsqueda](images/manual/40-productos/41-48-boton-limpiar-busqueda.png)
 
 4. Si no encuentra nada, tocá **Limpiar búsqueda**.
 
@@ -233,8 +215,6 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 <div id="paso-7-filtra-la-lista"></div>
 
 ![Pantalla con el botón Filtros marcado en rojo](images/manual/40-productos/41-66-donde-esta-boton-filtros.png)
-
-![Botón Filtros con un embudo](images/manual/40-productos/41-67-boton-filtros.png)
 
 1. Tocá **Filtros**, arriba a la derecha.
 
@@ -270,13 +250,9 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Panel de filtros con el botón Limpiar filtros marcado en rojo](images/manual/40-productos/41-32-donde-esta-boton-limpiar-filtros.png)
 
-![Botón Limpiar filtros](images/manual/40-productos/41-33-boton-limpiar-filtros.png)
-
 4. Para sacar todos los filtros, tocá **Limpiar filtros**.
 
 ![Panel de filtros con la cruz de cerrar marcada en rojo](images/manual/40-productos/41-07-donde-esta-boton-close.png)
-
-![Cruz para cerrar el panel](images/manual/40-productos/41-08-boton-close.png)
 
 5. Para cerrar el panel, tocá la cruz **×** de arriba a la derecha.
 
@@ -296,8 +272,6 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Pantalla con el botón Categoría de la barra marcado en rojo](images/manual/40-productos/41-34-donde-esta-boton-flecha.png)
 
-![Botón Categoría con una flechita](images/manual/40-productos/41-35-boton-flecha.png)
-
 3. Tocá lo que querés cambiar. Por ejemplo: **Categoría**.
 
 ![Lista de categorías abierta sobre la barra](images/manual/40-productos/41-72-accion-masiva-abierta.png)
@@ -310,29 +284,19 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Ventana con el botón Confirmar marcado en rojo](images/manual/40-productos/41-44-donde-esta-boton-bulk-confirm-ok.png)
 
-![Botón azul Confirmar](images/manual/40-productos/41-45-boton-bulk-confirm-ok.png)
-
 6. Si está bien, tocá **Confirmar**.
 
 ![Ventana con el botón Cancelar marcado en rojo](images/manual/40-productos/41-42-donde-esta-boton-icono.png)
 
-![Botón Cancelar](images/manual/40-productos/41-43-boton-icono.png)
-
 ![Ventana con la cruz de cerrar marcada en rojo](images/manual/40-productos/41-40-donde-esta-boton-times.png)
-
-![Cruz para cerrar la ventana](images/manual/40-productos/41-41-boton-times.png)
 
 7. Si no, tocá **Cancelar** o la cruz **×**. No cambia nada.
 
 ![Barra con el botón rojo Eliminar marcado en rojo](images/manual/40-productos/41-36-donde-esta-boton-flecha.png)
 
-![Botón rojo Eliminar con un tacho](images/manual/40-productos/41-37-boton-flecha.png)
-
 > ⚠️ **Atención:** el botón rojo **Eliminar** de la barra saca del menú **todos** los productos tildados.
 
 ![Barra con la cruz para destildar marcada en rojo](images/manual/40-productos/41-38-donde-esta-boton-flecha.png)
-
-![Cruz para destildar todo](images/manual/40-productos/41-39-boton-flecha.png)
 
 8. Para destildar todo, tocá la cruz **×** al final de la barra.
 
@@ -344,33 +308,23 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Pantalla con el botón Menú: Catálogo marcado en rojo](images/manual/40-productos/41-11-donde-esta-boton-dropdown-toggle.png)
 
-![Botón Menú: Catálogo con una flechita](images/manual/40-productos/41-12-boton-dropdown-toggle.png)
-
 - **Menú: Catálogo**: si tenés más de un menú, lo cambiás acá. También podés crear uno nuevo.
 
 ![Lista de menús abierta con Catálogo y Nuevo Menú](images/manual/40-productos/41-54-selector-de-menu-abierto.png)
 
 ![Pantalla con el botón Importar marcado en rojo](images/manual/40-productos/41-57-donde-esta-boton-importar.png)
 
-![Botón Importar](images/manual/40-productos/41-58-boton-importar.png)
-
 - **Importar**: carga muchos productos juntos desde un Excel.
 
 ![Pantalla con el botón Exportar marcado en rojo](images/manual/40-productos/41-59-donde-esta-boton-exportar.png)
-
-![Botón Exportar](images/manual/40-productos/41-60-boton-exportar.png)
 
 - **Exportar**: descarga la lista de productos en un Excel.
 
 ![Pantalla con el botón Configurar marcado en rojo](images/manual/40-productos/41-61-donde-esta-boton-configurar.png)
 
-![Botón Configurar con un engranaje](images/manual/40-productos/41-62-boton-configurar.png)
-
 - **Configurar**: cambia el nombre, la foto y cómo se ve este menú.
 
 ![Pantalla con el botón de ayuda de precios marcado en rojo](images/manual/40-productos/41-17-donde-esta-boton-ayuda-precios.png)
-
-![Botón de ayuda con un signo de pregunta](images/manual/40-productos/41-18-boton-ayuda-precios.png)
 
 - **?**: explica cómo funcionan los precios y el **Precio Futuro**.
 
@@ -378,15 +332,11 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Pantalla con el botón de más opciones marcado en rojo](images/manual/40-productos/41-19-donde-esta-boton-dropdown-toggle.png)
 
-![Botón con tres puntitos](images/manual/40-productos/41-20-boton-dropdown-toggle.png)
-
 - **⋯** (tres puntitos): ver el menú online, su código QR y **Aplicar precios futuros**.
 
 ![Lista de más opciones abierta](images/manual/40-productos/41-64-mas-opciones-abierto.png)
 
 ![Lista de más opciones con Eliminar Menú marcado en rojo](images/manual/40-productos/41-21-donde-esta-boton-text-danger.png)
-
-![Opción roja Eliminar Menú](images/manual/40-productos/41-22-boton-text-danger.png)
 
 > ⚠️ **Atención:** **Eliminar Menú** borra el menú entero con todos sus productos. No se puede deshacer.
 

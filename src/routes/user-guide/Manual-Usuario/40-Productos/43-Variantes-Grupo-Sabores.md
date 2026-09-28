@@ -41,8 +41,6 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 
 ![Pantalla con el botón de ayuda marcado en rojo](images/manual/40-productos/43-22-donde-esta-boton-ayuda.png)
 
-![Botón de ayuda con un signo de pregunta](images/manual/40-productos/43-23-boton-ayuda.png)
-
 > 💡 **Consejo útil:** si tocás el botón **?** de arriba, aparece una explicación corta.
 
 ![Explicación ¿Qué es una Variante? abierta debajo del botón de ayuda](images/manual/40-productos/43-24-ayuda-abierta.png)
@@ -54,8 +52,6 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 <div id="paso-2-crea-una-variante"></div>
 
 ![Pantalla con el botón azul Crear Variante marcado en rojo](images/manual/40-productos/43-20-donde-esta-boton-crear-variante.png)
-
-![Botón azul Crear Variante con un signo más](images/manual/40-productos/43-21-boton-crear-variante.png)
 
 1. Tocá el botón azul **Crear Variante**. Está arriba a la izquierda.
 2. Se abre una ventana.
@@ -90,8 +86,6 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 
 ![Ventana con el botón azul Agregar Opción marcado en rojo](images/manual/40-productos/43-11-donde-esta-boton-agregar-opcion.png)
 
-![Botón azul Agregar Opción](images/manual/40-productos/43-12-boton-agregar-opcion.png)
-
 1. Tocá el botón azul **Agregar Opción**. Aparece un renglón nuevo.
 
 ![Renglón de una opción: nombre Chocolate, precio, impresora, puesto y botón Eliminar](images/manual/40-productos/43-17-campo-sabor.png)
@@ -104,8 +98,6 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 
 ![Ventana con el botón rojo Eliminar de una opción marcado en rojo](images/manual/40-productos/43-18-donde-esta-boton-eliminar.png)
 
-![Botón rojo Eliminar con un tacho](images/manual/40-productos/43-19-boton-eliminar.png)
-
 5. Si te equivocaste en una opción, tocá el botón rojo **Eliminar** de ese renglón.
 
 ---
@@ -116,14 +108,10 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 
 ![Ventana con el botón verde Agregar Variante marcado en rojo](images/manual/40-productos/43-13-donde-esta-boton-agregar-variante.png)
 
-![Botón verde Agregar Variante](images/manual/40-productos/43-14-boton-agregar-variante.png)
-
 1. Tocá el botón verde **Agregar Variante**. Está abajo de todo.
 2. La variante aparece en la lista.
 
 ![Ventana con el botón Volver al Listado marcado en rojo](images/manual/40-productos/43-26-donde-esta-boton-volver-al-listado.png)
-
-![Botón Volver al Listado con una flecha](images/manual/40-productos/43-27-boton-volver-al-listado.png)
 
 > 💡 **Consejo útil:** si te arrepentiste, tocá **Volver al Listado**. No se guarda nada.
 
@@ -139,8 +127,6 @@ Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué
 
 ![Pantalla con el botón Editar de la variante marcado en rojo](images/manual/40-productos/43-29-donde-esta-boton-editar.png)
 
-![Botón Editar](images/manual/40-productos/43-30-boton-editar.png)
-
 1. Tocá **Editar**, a la derecha de la variante.
 
 ![Ventana Editar Gustos de helado con los datos cargados](images/manual/40-productos/43-31-ventana-editar-variante.png)
@@ -148,8 +134,6 @@ Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué
 2. Se abre la ventana con los datos. Cambiá lo que necesites.
 
 ![Ventana con el botón verde Actualizar Variante marcado en rojo](images/manual/40-productos/43-15-donde-esta-boton-actualizar-variante.png)
-
-![Botón verde Actualizar Variante](images/manual/40-productos/43-16-boton-actualizar-variante.png)
 
 3. Tocá el botón verde **Actualizar Variante**.
 
@@ -163,8 +147,6 @@ Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué
 
 ![Pantalla con el botón rojo Borrar de la variante marcado en rojo](images/manual/40-productos/43-04-donde-esta-boton-borrar.png)
 
-![Botón rojo Borrar](images/manual/40-productos/43-05-boton-borrar.png)
-
 1. Tocá el botón rojo **Borrar**, a la derecha de la variante.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarla.
 
@@ -175,8 +157,6 @@ Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué
 <div id="paso-7-mira-todas-las-opciones-juntas-opcional"></div>
 
 ![Pantalla con el botón Listado de Opciones marcado en rojo](images/manual/40-productos/43-02-donde-esta-boton-listado-de-opciones.png)
-
-![Botón Listado de Opciones](images/manual/40-productos/43-03-boton-listado-de-opciones.png)
 
 1. Tocá **Listado de Opciones**, arriba a la derecha.
 

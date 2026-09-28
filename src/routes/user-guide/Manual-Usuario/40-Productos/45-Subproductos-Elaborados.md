@@ -64,8 +64,6 @@ En cada renglón ves:
 
 ![Pantalla con el botón azul Buscar marcado en rojo](images/manual/40-productos/45-03-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/40-productos/45-04-boton-buscar.png)
-
 2. Tocá el botón azul **Buscar**.
 
 ![Lista con los subproductos que tienen CREMA en el nombre](images/manual/40-productos/45-13-resultado-busqueda.png)
@@ -73,8 +71,6 @@ En cada renglón ves:
 3. La lista muestra solo los que coinciden.
 
 ![Pantalla No se encontraron sub-productos con el botón Limpiar búsqueda marcado en rojo](images/manual/40-productos/45-07-donde-esta-boton-limpiar-busqueda.png)
-
-![Botón Limpiar búsqueda](images/manual/40-productos/45-08-boton-limpiar-busqueda.png)
 
 4. Si dice **No se encontraron sub-productos**, tocá **Limpiar búsqueda** para ver todos.
 
@@ -85,8 +81,6 @@ En cada renglón ves:
 <div id="paso-3-mira-la-ficha-de-un-subproducto"></div>
 
 ![Lista con el ojo de BASE SANDWICH marcado en rojo](images/manual/40-productos/45-05-donde-esta-boton-icono.png)
-
-![Botón del ojo](images/manual/40-productos/45-06-boton-icono.png)
 
 1. Tocá el ojo 👁️ a la derecha del subproducto.
 2. Se abre su ficha en otra pestaña.
@@ -103,8 +97,6 @@ En cada renglón ves:
 
 ![Lista con el botón de receta de BASE SANDWICH marcado en rojo](images/manual/40-productos/45-16-donde-esta-boton-receta.png)
 
-![Botón de la receta, con el dibujo de una hoja con renglones](images/manual/40-productos/45-17-boton-receta.png)
-
 1. Tocá el botón de la hoja con renglones 📋, a la derecha del subproducto.
 2. Se abre el formulario de la receta en otra pestaña.
 3. Cargá los ingredientes y las cantidades. Mirá cómo en [Recetas](/user-guide/recetas#paso-4-cambia-una-receta).
@@ -116,8 +108,6 @@ En cada renglón ves:
 <div id="paso-5-cambia-los-datos-del-subproducto"></div>
 
 ![Lista con el lápiz de BASE SANDWICH marcado en rojo](images/manual/40-productos/45-14-donde-esta-boton-editar.png)
-
-![Botón del lápiz](images/manual/40-productos/45-15-boton-editar.png)
 
 1. Tocá el lápiz ✏️, a la derecha del subproducto.
 2. Se abre el formulario. Cambiá lo que necesites. Por ejemplo: la unidad en que lo contás.
@@ -132,8 +122,6 @@ En cada renglón ves:
 > ⚠️ **Atención:** si lo borrás, las recetas que lo usan quedan sin ese ingrediente.
 
 ![Lista con el tacho de BASE SANDWICH marcado en rojo](images/manual/40-productos/45-18-donde-esta-boton-borrar.png)
-
-![Botón del tacho de basura](images/manual/40-productos/45-19-boton-borrar.png)
 
 1. Tocá el tacho 🗑️, a la derecha del subproducto.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarlo.

@@ -56,19 +56,13 @@ Cada grupo junta productos que el sistema cree repetidos. El título dice **por 
 
 ![Grupo con el botón Ver del primer producto marcado en rojo](images/manual/40-productos/48-02-donde-esta-boton-ver.png)
 
-![Botón Ver con un ojo](images/manual/40-productos/48-03-boton-ver.png)
-
 1. Para ver un producto, tocá **Ver** en su renglón. Se abre su ficha.
 
 ![Grupo con el botón Duplicados del primer producto marcado en rojo](images/manual/40-productos/48-04-donde-esta-boton-duplicados.png)
 
-![Botón azul Duplicados con una lupa](images/manual/40-productos/48-05-boton-duplicados.png)
-
 2. Para ver con qué productos se parece, tocá **Duplicados** en su renglón (Paso 3).
 
 ![Grupo con el botón Analizar duplicados marcado en rojo, debajo de la lista](images/manual/40-productos/48-06-donde-esta-boton-analizar-duplicados.png)
-
-![Botón azul Analizar duplicados](images/manual/40-productos/48-07-boton-analizar-duplicados.png)
 
 3. **Analizar duplicados**, debajo de cada grupo, hace lo mismo con el primer producto del grupo.
 
@@ -92,14 +86,10 @@ Arriba ves el producto elegido. Abajo, los productos parecidos. La columna **Sim
 
 ![Pantalla con el botón azul Unificar productos marcado en rojo](images/manual/40-productos/48-18-donde-esta-boton-unificar-productos.png)
 
-![Botón azul Unificar productos](images/manual/40-productos/48-19-boton-unificar-productos.png)
-
 1. Si **todos** los productos de la lista son el mismo, tocá **Unificar productos**.
 2. Queda un solo producto.
 
 ![Pantalla del grupo con el botón naranja Unificar ahora marcado en rojo](images/manual/40-productos/48-08-donde-esta-boton-unificar-ahora.png)
-
-![Botón naranja Unificar ahora](images/manual/40-productos/48-09-boton-unificar-ahora.png)
 
 3. También podés tocar **Unificar ahora**, debajo de cada grupo. Junta todo el grupo en el primer producto.
 
@@ -113,19 +103,13 @@ Arriba ves el producto elegido. Abajo, los productos parecidos. La columna **Sim
 
 ![Pantalla con el botón Ejecutar nuevo análisis marcado en rojo, abajo de todo](images/manual/40-productos/48-10-donde-esta-boton-ejecutar-nuevo-analisis.png)
 
-![Botón azul Ejecutar nuevo análisis](images/manual/40-productos/48-11-boton-ejecutar-nuevo-analisis.png)
-
 1. Después de unificar, tocá **Ejecutar nuevo análisis**, abajo de todo. El sistema revisa de nuevo.
 
 ![Pantalla con el botón Volver al listado marcado en rojo](images/manual/40-productos/48-14-donde-esta-boton-volver-al-listado.png)
 
-![Botón Volver al listado con una flecha](images/manual/40-productos/48-15-boton-volver-al-listado.png)
-
 2. Tocá **Volver al listado** para ir al [Maestro de Productos](/user-guide/maestro-de-productos).
 
 ![Pantalla de duplicados de un producto con Volver al listado marcado en rojo](images/manual/40-productos/48-25-donde-esta-boton-volver-al-listado-producto.png)
-
-![Botón Volver al listado](images/manual/40-productos/48-26-boton-volver-al-listado-producto.png)
 
 3. En la pantalla de un producto, **Volver al listado** también te lleva al Maestro de Productos.
 

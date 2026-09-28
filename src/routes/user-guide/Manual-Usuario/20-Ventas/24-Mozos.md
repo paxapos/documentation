@@ -50,8 +50,6 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 
 ![Lista de mozos con el botón Buscar marcado en rojo](images/manual/20-ventas/24-03-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/20-ventas/24-04-boton-buscar.png)
-
 2. Tocá el botón azul **Buscar**.
 
 ---
@@ -61,8 +59,6 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 <div id="paso-3-carga-un-mozo-nuevo"></div>
 
 ![Lista de mozos con el botón Crear Mozo marcado en rojo arriba a la derecha](images/manual/20-ventas/24-05-donde-esta-boton-crear-mozo.png)
-
-![Botón verde Crear Mozo](images/manual/20-ventas/24-06-boton-crear-mozo.png)
 
 1. Tocá el botón verde **Crear Mozo**, arriba a la derecha.
 2. Se abre una ventanita **Nuevo Mozo**. Bajá con la ruedita del mouse para ver todo.
@@ -123,16 +119,12 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 
 ![Ventanita con el botón Crear Mozo marcado en rojo abajo a la derecha](images/manual/20-ventas/24-28-donde-esta-boton-guardar.png)
 
-![Botón verde Crear Mozo para guardar](images/manual/20-ventas/24-29-boton-guardar.png)
-
 13. Tocá el botón verde **Crear Mozo**, abajo a la derecha.
 14. Vas a ver un mensaje verde y el mozo aparece en la lista.
 
 ![Lista de mozos con el mozo nuevo marcado en rojo](images/manual/20-ventas/24-31-lista-con-mozo-prueba.png)
 
 ![Ventanita con el botón Cancelar marcado en rojo abajo a la izquierda](images/manual/20-ventas/24-26-donde-esta-boton-cancelar.png)
-
-![Botón Cancelar](images/manual/20-ventas/24-27-boton-cancelar.png)
 
 - Si no querés guardarlo, tocá **Cancelar**, abajo a la izquierda.
 
@@ -148,16 +140,12 @@ A la derecha de cada mozo hay tres botones.
 
 ![Lista con el botón del lápiz marcado en rojo](images/manual/20-ventas/24-07-donde-esta-boton-editar.png)
 
-![Botón con el ícono del lápiz](images/manual/20-ventas/24-08-boton-editar.png)
-
 1. Tocá el **lápiz** ✏️. Se abre la misma ventanita con sus datos.
 2. Cambiá lo que haga falta y tocá **Guardar Cambios**.
 
 ### Activar o desactivar
 
 ![Lista con el botón del ojo marcado en rojo](images/manual/20-ventas/24-09-donde-esta-boton-activar-desactivar.png)
-
-![Botón con el ícono del ojo](images/manual/20-ventas/24-10-boton-activar-desactivar.png)
 
 - Tocá el **ojo** 👁️ para desactivar a un mozo que ya no trabaja. Tocalo de nuevo para activarlo.
 - El mozo desactivado no aparece para abrir mesas, pero no se pierde nada.
@@ -167,8 +155,6 @@ A la derecha de cada mozo hay tres botones.
 > ⚠️ **Atención:** Borrar un mozo **borra todo su historial**. Si el mozo dejó de trabajar, mejor **desactivalo** con el ojo.
 
 ![Lista con el botón rojo de la papelera marcado](images/manual/20-ventas/24-11-donde-esta-boton-eliminar.png)
-
-![Botón rojo con el ícono de la papelera](images/manual/20-ventas/24-12-boton-eliminar.png)
 
 1. Tocá el botón rojo de la **papelera** 🗑️.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** solo si de verdad querés borrarlo.

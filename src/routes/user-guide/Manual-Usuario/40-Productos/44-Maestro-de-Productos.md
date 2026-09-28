@@ -78,14 +78,10 @@ La columna **Tipo** te dice qué es cada producto:
 
 ![Pantalla con el botón azul Buscar marcado en rojo](images/manual/40-productos/44-05-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/40-productos/44-06-boton-buscar.png)
-
 6. Tocá el botón azul **Buscar**.
 7. La lista muestra solo los productos que coinciden.
 
 ![Pantalla No se encontraron productos con el botón Limpiar búsqueda marcado en rojo](images/manual/40-productos/44-13-donde-esta-boton-limpiar-busqueda.png)
-
-![Botón Limpiar búsqueda](images/manual/40-productos/44-14-boton-limpiar-busqueda.png)
 
 8. Si dice **No se encontraron productos**, tocá **Limpiar búsqueda** para ver la lista completa.
 
@@ -98,8 +94,6 @@ La columna **Tipo** te dice qué es cada producto:
 <div id="paso-3-crea-un-producto"></div>
 
 ![Pantalla con el botón azul Crear Nuevo Producto marcado en rojo](images/manual/40-productos/44-81-donde-esta-boton-crear-nuevo-producto.png)
-
-![Botón azul Crear Nuevo Producto con un signo más](images/manual/40-productos/44-82-boton-crear-nuevo-producto.png)
 
 1. Tocá el botón azul **Crear Nuevo Producto**. Está arriba a la derecha.
 2. Se abre una ventana.
@@ -132,8 +126,6 @@ La columna **Tipo** te dice qué es cada producto:
 
 ![Ventana con el botón verde Agregar marcado en rojo](images/manual/40-productos/44-73-donde-esta-boton-agregar.png)
 
-![Botón verde Agregar](images/manual/40-productos/44-74-boton-agregar.png)
-
 9. Tocá el botón verde **Agregar**.
 10. El producto aparece en la lista.
 
@@ -146,8 +138,6 @@ La columna **Tipo** te dice qué es cada producto:
 Si ya hay un producto con un nombre muy parecido, el sistema no lo guarda. Te muestra nombres parecidos para elegir.
 
 ![Pantalla con una sugerencia de nombre marcada en rojo](images/manual/40-productos/44-66-donde-esta-boton-flecha.png)
-
-![Botón con el nombre sugerido CHOCOLATE Especial](images/manual/40-productos/44-67-boton-flecha.png)
 
 1. Tocá uno de los nombres sugeridos. Se copia en el casillero **Nombre**.
 2. Tocá **Agregar** de nuevo.
@@ -162,8 +152,6 @@ Si ya hay un producto con un nombre muy parecido, el sistema no lo guarda. Te mu
 
 ![Lista con el botón Acciones de un producto marcado en rojo](images/manual/40-productos/44-09-donde-esta-boton-dropdown-toggle.png)
 
-![Botón Acciones con una flechita](images/manual/40-productos/44-10-boton-dropdown-toggle.png)
-
 1. Tocá **Acciones**, a la derecha del producto.
 
 ![Menú de Acciones abierto con Ver Detalle, Agregar Mercadería, Crear Receta, Editar y Eliminar](images/manual/40-productos/44-83-menu-acciones-abierto.png)
@@ -176,8 +164,6 @@ Si ya hay un producto con un nombre muy parecido, el sistema no lo guarda. Te mu
    - **Editar**: abre el formulario del producto.
 
 ![Menú de Acciones con Eliminar marcado en rojo](images/manual/40-productos/44-11-donde-esta-boton-eliminar.png)
-
-![Opción Eliminar con una cruz roja](images/manual/40-productos/44-12-boton-eliminar.png)
 
 > ⚠️ **Atención:** **Eliminar** borra el producto. El sistema te pregunta si estás seguro antes. Si te equivocaste, buscalo con **Incluir productos eliminados** y tocá **Restaurar**.
 
@@ -197,25 +183,17 @@ La ficha muestra todo sobre el producto. Arriba están los botones. Abajo, una s
 
 ![Ficha con el botón Editar marcado en rojo](images/manual/40-productos/44-21-donde-esta-boton-editar.png)
 
-![Botón Editar](images/manual/40-productos/44-22-boton-editar.png)
-
 - **Editar**: abre el formulario del producto (Paso 6).
 
 ![Ficha con el botón Agregar Costo marcado en rojo](images/manual/40-productos/44-88-donde-esta-boton-agregar-costo.png)
-
-![Botón Agregar Costo (P. Unitario)](images/manual/40-productos/44-89-boton-agregar-costo.png)
 
 - **Agregar Costo (P. Unitario)**: para cargar a mano cuánto te cuesta, si no lo comprás por el sistema.
 
 ![Ficha del producto Frutilla con el botón Agregar Receta marcado en rojo](images/manual/40-productos/44-90-donde-esta-boton-agregar-receta.png)
 
-![Botón Agregar Receta](images/manual/40-productos/44-91-boton-agregar-receta.png)
-
 - **Agregar Receta** (o **Editar Receta**): para cargar los ingredientes. Mirá [Recetas](/user-guide/recetas).
 
 ![Ficha con el botón rojo Borrar marcado en rojo](images/manual/40-productos/44-29-donde-esta-boton-borrar.png)
-
-![Botón rojo Borrar](images/manual/40-productos/44-30-boton-borrar.png)
 
 - **Borrar**: borra el producto. El sistema te pregunta si estás seguro antes.
 
@@ -227,13 +205,9 @@ Aparece si el producto está en algún menú. Muestra el precio, la categoría y
 
 ![Ficha con el botón Ver en Menú marcado en rojo](images/manual/40-productos/44-31-donde-esta-boton-ver-en.png)
 
-![Botón azul Ver en Menú con un ojo](images/manual/40-productos/44-32-boton-ver-en.png)
-
 - **Ver en Menú**: te lleva al producto dentro del menú, para cambiar el precio.
 
 ![Ficha con el botón verde Agregar a otro menú marcado en rojo](images/manual/40-productos/44-33-donde-esta-boton-agregar-a-otro-menu.png)
-
-![Botón verde Agregar a otro menú](images/manual/40-productos/44-34-boton-agregar-a-otro-menu.png)
 
 - **Agregar a otro menú**: para venderlo también en otro menú. Por ejemplo: en el de delivery.
 
@@ -245,13 +219,9 @@ Aparece si el producto tiene receta. Muestra los ingredientes y cuánto cuesta p
 
 ![Ficha con el botón Editar receta marcado en rojo](images/manual/40-productos/44-51-donde-esta-boton-editar-receta.png)
 
-![Botón azul Editar receta con un lápiz](images/manual/40-productos/44-52-boton-editar-receta.png)
-
 - **Editar receta**: para cambiar los ingredientes o las cantidades.
 
 ![Solapa Mi Receta con el nombre de un ingrediente marcado en rojo](images/manual/40-productos/44-57-donde-esta-boton-producto-name.png)
-
-![Nombre del ingrediente PALETA COCIDA](images/manual/40-productos/44-58-boton-producto-name.png)
 
 - Abajo, en la solapa **Mi Receta**, tocá el nombre de un ingrediente para abrir su ficha.
 
@@ -265,13 +235,9 @@ Aparece si el producto se compra, o si no se vende. Cada renglón es una **merca
 
 ![Ficha con el botón Crear nueva mercadería marcado en rojo](images/manual/40-productos/44-39-donde-esta-boton-crear-nueva-mercaderia-para-este.png)
 
-![Botón azul Crear nueva mercadería para este producto](images/manual/40-productos/44-40-boton-crear-nueva-mercaderia-para-este.png)
-
 - **Crear nueva mercadería para este producto**: por ejemplo, si ahora lo comprás en otra presentación.
 
 ![Ficha de Frutilla con el botón Crear primera mercadería marcado en rojo](images/manual/40-productos/44-35-donde-esta-boton-crear-primera-mercaderia-para-es.png)
-
-![Botón azul Crear primera mercadería para este producto](images/manual/40-productos/44-36-boton-crear-primera-mercaderia-para-es.png)
 
 - **Crear primera mercadería para este producto**: aparece si todavía no lo comprás a nadie.
 
@@ -281,8 +247,6 @@ Aparece si el producto se compra, o si no se vende. Cada renglón es una **merca
 
 ![Sección En qué recetas se usa este producto con el botón Ver marcado en rojo](images/manual/40-productos/44-53-donde-esta-boton-ver.png)
 
-![Botón Ver con un ojo](images/manual/40-productos/44-54-boton-ver.png)
-
 - Aparece si el producto es ingrediente de otros. Tocá **Ver** para abrir el producto que lo usa.
 
 ### Este producto es Variante (Sabor)
@@ -290,8 +254,6 @@ Aparece si el producto se compra, o si no se vende. Cada renglón es una **merca
 <div id="este-producto-es-variante-sabor"></div>
 
 ![Sección Este producto es Variante con el botón Editar Sabor marcado en rojo](images/manual/40-productos/44-55-donde-esta-boton-editar-sabor.png)
-
-![Botón Editar Sabor con un lápiz](images/manual/40-productos/44-56-boton-editar-sabor.png)
 
 - Aparece si el producto es una opción de una variante. Tocá **Editar Sabor** para cambiar su precio en esa variante. Mirá [Variantes](/user-guide/variantes-grupo-sabores).
 
@@ -308,8 +270,6 @@ Aparece si el producto se compra, o si no se vende. Cada renglón es una **merca
 2. Se abre el formulario con los datos del producto. Cambiá lo que necesites.
 
 ![Formulario con el botón verde Actualizar marcado en rojo](images/manual/40-productos/44-75-donde-esta-boton-actualizar.png)
-
-![Botón verde Actualizar](images/manual/40-productos/44-76-boton-actualizar.png)
 
 3. Tocá el botón verde **Actualizar**.
 

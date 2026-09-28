@@ -43,8 +43,6 @@ En esta pantalla vas a ver:
 
 ![Listado con el botón Buscar marcado en rojo](images/manual/20-ventas/26-05-donde-esta-boton-buscar.png)
 
-![Botón azul Buscar](images/manual/20-ventas/26-06-boton-buscar.png)
-
 2. Tocá el botón azul **Buscar**.
 3. La tabla muestra solo los descuentos que coinciden.
 
@@ -55,8 +53,6 @@ En esta pantalla vas a ver:
 <div id="paso-3-crea-un-descuento-nuevo"></div>
 
 ![Listado con el botón Crear Descuento marcado en rojo](images/manual/20-ventas/26-02-donde-esta-boton-crear-descuento.png)
-
-![Botón verde Crear Descuento](images/manual/20-ventas/26-03-boton-crear-descuento.png)
 
 1. Tocá el botón verde **Crear Descuento**, arriba a la derecha.
 2. Se abre la pantalla **Crear Descuento**.
@@ -77,14 +73,10 @@ En esta pantalla vas a ver:
 
 ![Pantalla Crear Descuento con el botón Agregar marcado en rojo](images/manual/20-ventas/26-14-donde-esta-boton-agregar.png)
 
-![Botón verde Agregar](images/manual/20-ventas/26-15-boton-agregar.png)
-
 6. Tocá el botón verde **Agregar**, abajo a la izquierda.
 7. El descuento queda guardado y aparece en el listado.
 
 ![Pantalla Crear Descuento con el botón Cancelar marcado en rojo](images/manual/20-ventas/26-16-donde-esta-boton-cancelar.png)
-
-![Botón Cancelar](images/manual/20-ventas/26-17-boton-cancelar.png)
 
 - Si no querés guardarlo, tocá **Cancelar**, abajo a la derecha.
 
@@ -104,8 +96,6 @@ A la derecha de cada descuento hay dos botones:
 
 ![Listado con el botón Editar marcado en rojo](images/manual/20-ventas/26-07-donde-esta-boton-editar.png)
 
-![Botón Editar](images/manual/20-ventas/26-08-boton-editar.png)
-
 1. Tocá **Editar** en el descuento que querés cambiar.
 2. Cambiá el nombre, la descripción o el porcentaje.
 3. Tocá el botón verde **Actualizar** para guardar.
@@ -115,8 +105,6 @@ A la derecha de cada descuento hay dos botones:
 > ⚠️ **Atención:** Borrar un descuento no se puede deshacer.
 
 ![Listado con el botón rojo Borrar marcado](images/manual/20-ventas/26-09-donde-esta-boton-borrar.png)
-
-![Botón rojo Borrar](images/manual/20-ventas/26-10-boton-borrar.png)
 
 1. Tocá el botón rojo **Borrar**.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarlo.

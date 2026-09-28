@@ -58,8 +58,6 @@ En esta pantalla vas a ver:
 
 ![Pantalla Nuevo Arqueo con el botón Abrir Arqueo marcado en rojo](images/manual/20-ventas/22-72-donde-esta-boton-abrir-arqueo.png)
 
-![Botón azul Abrir Arqueo](images/manual/20-ventas/22-73-boton-abrir-arqueo.png)
-
 5. Tocá el botón azul **Abrir Arqueo**.
 6. La caja queda abierta y aparecen los productos.
 
@@ -75,27 +73,19 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 ![Registradora con el botón Cerrar Caja marcado en rojo](images/manual/20-ventas/22-12-donde-esta-boton-cerrar-caja-s.png)
 
-![Botón azul Cerrar Caja](images/manual/20-ventas/22-13-boton-cerrar-caja-s.png)
-
 - **Cerrar Caja:** se usa al terminar el turno, para contar la plata y cerrar la caja.
 
 > ⚠️ **Atención:** Cerrar la caja termina el turno. Después no vas a poder vender hasta abrirla de nuevo.
 
 ![Registradora con el botón Retiro marcado en rojo](images/manual/20-ventas/22-14-donde-esta-boton-retiro.png)
 
-![Botón Retiro](images/manual/20-ventas/22-15-boton-retiro.png)
-
 - **Retiro:** anotá cuando sacás plata del cajón. Por ejemplo, para pagarle a un proveedor.
 
 ![Registradora con el botón Ingreso marcado en rojo](images/manual/20-ventas/22-16-donde-esta-boton-ingreso.png)
 
-![Botón Ingreso](images/manual/20-ventas/22-17-boton-ingreso.png)
-
 - **Ingreso:** anotá cuando ponés plata en el cajón. Por ejemplo, cambio extra.
 
 ![Registradora con el botón Ayuda marcado en rojo](images/manual/20-ventas/22-18-donde-esta-boton-ayuda-h.png)
-
-![Botón celeste Ayuda (H)](images/manual/20-ventas/22-19-boton-ayuda-h.png)
 
 - **Ayuda (H):** abre una guía rápida de la pantalla y los atajos de teclado. También se abre con la tecla **H**.
 
@@ -111,8 +101,6 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 ![Registradora con el producto Café marcado en rojo](images/manual/20-ventas/22-21-donde-esta-boton-producto.png)
 
-![Botón del producto Café](images/manual/20-ventas/06-registradora-boton-producto.png)
-
 2. Tocá el producto. Por ejemplo, **Café**.
 3. En el medio aparece un teclado con números.
 
@@ -124,19 +112,13 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 ![Teclado con el botón de la flecha marcado en rojo](images/manual/20-ventas/22-48-donde-esta-boton-borrar-ultimo.png)
 
-![Botón con la flecha para borrar el último número](images/manual/20-ventas/22-49-boton-borrar-ultimo.png)
-
 - Si te equivocaste en un número, tocá la **flecha ←**. Borra el último número.
 
 ![Teclado con el botón C marcado en rojo](images/manual/20-ventas/22-50-donde-esta-boton-c.png)
 
-![Botón C para borrar todo el importe](images/manual/20-ventas/22-51-boton-c.png)
-
 - Para empezar de nuevo, tocá **C**. Borra todo el importe.
 
 ![Teclado con el botón Agregar marcado en rojo](images/manual/20-ventas/22-52-donde-esta-boton-agregar.png)
-
-![Botón verde Agregar](images/manual/20-ventas/22-53-boton-agregar.png)
 
 5. Tocá el botón verde **AGREGAR**.
 6. El producto aparece en la lista de la derecha. El **Total a pagar** se actualiza.
@@ -162,8 +144,6 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 ![Registradora con el botón Vaciar marcado en rojo](images/manual/20-ventas/22-54-donde-esta-boton-vaciar.png)
 
-![Botón rojo Vaciar](images/manual/20-ventas/22-55-boton-vaciar.png)
-
 - Para **borrar toda la lista**, tocá **Vaciar**. El sistema te pide que confirmes.
 
 ---
@@ -173,8 +153,6 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 <div id="paso-5-cobra-la-venta"></div>
 
 ![Registradora con el botón Cobrar marcado en rojo abajo de todo](images/manual/20-ventas/22-61-donde-esta-boton-cobrar.png)
-
-![Botón verde Cobrar](images/manual/20-ventas/30-registradora-boton-cobrar.png)
 
 1. Revisá el **Total a pagar**.
 2. Tocá el botón verde **COBRAR**, abajo de todo.
@@ -192,15 +170,11 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 ![Pantalla de cobro con el botón Más medios de pago marcado en rojo](images/manual/20-ventas/22-59-donde-esta-boton-mas-medios-de-pago.png)
 
-![Botón Más medios de pago](images/manual/20-ventas/22-60-boton-mas-medios-de-pago.png)
-
 - Si no ves el medio de pago, tocá **Más medios de pago**. Aparecen los demás.
 
 ![Pantalla de cobro con todos los medios de pago a la vista](images/manual/20-ventas/22-76-pantalla-mas-medios-de-pago.png)
 
 ![Pantalla de cobro con el botón Volver marcado en rojo](images/manual/20-ventas/22-56-donde-esta-boton-volver.png)
-
-![Botón Volver](images/manual/20-ventas/22-57-boton-volver.png)
 
 - Si todavía no querés cobrar, tocá **← Volver**. Volvés a la lista sin cobrar nada.
 

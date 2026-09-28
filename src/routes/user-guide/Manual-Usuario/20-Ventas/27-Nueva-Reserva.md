@@ -101,8 +101,6 @@
 
 ![Pantalla Nueva Reserva con el botón Guardar marcado en rojo](images/manual/20-ventas/27-16-donde-esta-boton-guardar.png)
 
-![Botón verde Guardar](images/manual/20-ventas/27-17-boton-guardar.png)
-
 2. Tocá el botón verde **Guardar**, abajo a la izquierda.
 3. La reserva queda guardada y aparece en el calendario del [Listado de Reservas](/user-guide/listado-de-reservas).
 
@@ -113,8 +111,6 @@
 Aparece si el cliente es nuevo y no cargaste teléfono, mail ni DNI. Todavía no se guardó nada.
 
 ![Ventanita con el botón Volver y completar marcado en rojo](images/manual/20-ventas/27-20-donde-esta-boton-volver-y-completar.png)
-
-![Botón Volver y completar](images/manual/20-ventas/27-21-boton-volver-y-completar.png)
 
 - Tocá **Volver y completar** para cargar el teléfono, el mail o el DNI. **Es lo recomendado.**
 

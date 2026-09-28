@@ -35,19 +35,13 @@
 
 ![Pantalla de reservas con el botón Crear Reserva marcado en rojo](images/manual/20-ventas/28-02-donde-esta-boton-crear-reserva.png)
 
-![Botón verde Crear Reserva](images/manual/20-ventas/28-03-boton-crear-reserva.png)
-
 - **Crear Reserva:** abre la pantalla para cargar una reserva nueva (ver [Nueva Reserva](/user-guide/nueva-reserva)).
 
 ![Pantalla de reservas con el botón Turnos marcado en rojo](images/manual/20-ventas/28-04-donde-esta-boton-turnos.png)
 
-![Botón Turnos](images/manual/20-ventas/28-05-boton-turnos.png)
-
 - **Turnos:** para ver y cambiar los horarios de atención (por ejemplo, *Almuerzo* y *Cena*).
 
 ![Pantalla de reservas con el botón Configuración marcado en rojo](images/manual/20-ventas/28-06-donde-esta-boton-configuracion.png)
-
-![Botón Configuración](images/manual/20-ventas/28-07-boton-configuracion.png)
 
 - **Configuración:** para cambiar las reglas de las reservas. Lo usa el encargado.
 
@@ -105,8 +99,6 @@ En la ventanita vas a ver:
 
 ![Ventanita con el botón Cerrar marcado en rojo](images/manual/20-ventas/28-17-donde-esta-boton-cerrar.png)
 
-![Botón Cerrar](images/manual/20-ventas/28-18-boton-cerrar.png)
-
 3. Para salir sin hacer nada, tocá **Cerrar**.
 
 ---
@@ -116,8 +108,6 @@ En la ventanita vas a ver:
 <div id="paso-4-recibi-al-cliente-cuando-llega"></div>
 
 ![Ventanita con el botón Recepcionar marcado en rojo](images/manual/20-ventas/28-11-donde-esta-boton-recepcionar.png)
-
-![Botón verde Recepcionar](images/manual/20-ventas/28-12-boton-recepcionar.png)
 
 1. Abrí la reserva del cliente que llegó.
 2. Tocá el botón verde **Recepcionar**.
@@ -130,8 +120,6 @@ En la ventanita vas a ver:
 <div id="paso-5-cambia-una-reserva"></div>
 
 ![Ventanita con el botón Editar marcado en rojo](images/manual/20-ventas/28-15-donde-esta-boton-editar.png)
-
-![Botón azul Editar](images/manual/20-ventas/28-16-boton-editar.png)
 
 1. Abrí la reserva.
 2. Tocá el botón azul **Editar**.
@@ -148,8 +136,6 @@ En la ventanita vas a ver:
 > ⚠️ **Atención:** Usalo solo si el cliente avisó que no viene.
 
 ![Ventanita con el botón Cancelar reserva marcado en rojo](images/manual/20-ventas/28-13-donde-esta-boton-cancelar-reserva.png)
-
-![Botón rojo Cancelar reserva](images/manual/20-ventas/28-14-boton-cancelar-reserva.png)
 
 1. Abrí la reserva.
 2. Tocá el botón rojo **Cancelar reserva**.

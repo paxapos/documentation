@@ -104,8 +104,6 @@ Completá solo los casilleros que necesites. Los demás dejalos como están.
 
 ![Pantalla con el botón azul Filtrar marcado en rojo](images/manual/30-medios-de-pago/32-12-donde-esta-boton-filtrar.png)
 
-![Botón azul Filtrar con una lupa](images/manual/30-medios-de-pago/32-13-boton-filtrar.png)
-
 10. Tocá el botón azul **Filtrar**.
 11. La lista de abajo muestra solo los cobros que coinciden.
 
@@ -116,8 +114,6 @@ Completá solo los casilleros que necesites. Los demás dejalos como están.
 <div id="paso-4-borra-los-filtros"></div>
 
 ![Pantalla con el botón Limpiar marcado en rojo al lado de Filtrar](images/manual/30-medios-de-pago/32-14-donde-esta-boton-limpiar.png)
-
-![Botón Limpiar con una cruz](images/manual/30-medios-de-pago/32-15-boton-limpiar.png)
 
 1. Tocá el botón **Limpiar**. Está al lado de **Filtrar**.
 2. Se borran todos los filtros.
@@ -131,8 +127,6 @@ Completá solo los casilleros que necesites. Los demás dejalos como están.
 <div id="paso-5-mira-el-detalle-de-un-cobro"></div>
 
 ![Lista de cobros con el botón del ojo marcado en rojo, a la derecha del renglón](images/manual/30-medios-de-pago/32-16-donde-esta-boton-icono.png)
-
-![Botón con el dibujo de un ojo](images/manual/30-medios-de-pago/32-17-boton-icono.png)
 
 1. Buscá el cobro en la lista.
 2. Tocá el botón del ojo 👁️. Está a la derecha del renglón, en **Acciones**.
@@ -157,14 +151,10 @@ En esta pantalla ves:
 
 ![Detalle del cobro con el botón azul de la mesa marcado en rojo](images/manual/30-medios-de-pago/32-22-donde-esta-boton-icono-mesa.png)
 
-![Botón azul con el número de la mesa](images/manual/30-medios-de-pago/32-23-boton-icono-mesa.png)
-
 1. Para ver qué se consumió, tocá el botón azul con el número de la mesa.
 2. Se abre la mesa con sus productos.
 
 ![Detalle del cobro con el botón verde Arqueo marcado en rojo](images/manual/30-medios-de-pago/32-24-donde-esta-boton-arqueo.png)
-
-![Botón verde Arqueo con el número de caja](images/manual/30-medios-de-pago/32-25-boton-arqueo.png)
 
 3. Para ver la caja donde entró el cobro, tocá el botón verde **Arqueo**.
 4. Se abre el arqueo de esa caja.
@@ -176,8 +166,6 @@ En esta pantalla ves:
 <div id="paso-7-volve-a-la-lista"></div>
 
 ![Detalle del cobro con el botón Volver al listado marcado en rojo, arriba a la derecha](images/manual/30-medios-de-pago/32-20-donde-esta-boton-volver-al-listado.png)
-
-![Botón Volver al listado con una flecha](images/manual/30-medios-de-pago/32-21-boton-volver-al-listado.png)
 
 1. Tocá **Volver al listado**. Está arriba a la derecha.
 2. Volvés a la lista de cobros.
