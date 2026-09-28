@@ -41,17 +41,16 @@ Así se ve la pantalla. Cada renglón es una mercadería de una orden de compra.
 
 <div id="paso-2-filtra-lo-que-buscas"></div>
 
-![Recuadro de filtros: número de orden, mercadería y proveedor](images/manual/50-compras/59-02-panel-filtros.png)
+![Recuadro de filtros: número de orden, mercadería, proveedor y el botón Filtrar](images/manual/50-compras/59-02-panel-filtros.png)
 
-En el recuadro de filtros podés elegir:
+En el recuadro de filtros tenés:
 
 - **Nº Orden de Compra**: el número de una orden.
 - **Seleccionar**: una mercadería. Por ejemplo: *Harina 0000 x 25 kg*.
 - **Todos**: un proveedor. Por ejemplo: *Distribuidora Ejemplo*.
+- **Filtrar**: el botón azul, que aplica los filtros.
 
-![Pantalla con el botón azul Filtrar marcado en rojo](images/manual/50-compras/59-05-donde-esta-boton-filtrar.png)
-
-1. Elegí lo que necesites y tocá el botón azul **Filtrar**.
+1. Elegí lo que necesites y tocá **Filtrar**.
 2. La lista muestra solo lo que coincide.
 
 ---
@@ -60,28 +59,17 @@ En el recuadro de filtros podés elegir:
 
 <div id="paso-3-lee-cada-renglon"></div>
 
-![Renglón de la orden con Harina 0000 x 25 kg, su precio y el proveedor](images/manual/50-compras/59-07-renglon-compra.png)
+![Renglón de la orden con Harina 0000 x 25 kg, su precio, el botón editar y el proveedor](images/manual/50-compras/59-07-renglon-compra.png)
 
 De izquierda a derecha:
 
-1. **#Orden**: el número de la orden de compra.
+1. **#Orden**: el número de la orden de compra. Tocalo para abrir la orden completa. Mirá [Órdenes de Compra](/user-guide/todas-las-ordenes-compra).
 2. **Fecha** y **Usuario**: cuándo y quién la hizo.
 3. **Cantidad** y **Precio de Compra**: cuánto pediste y el total del renglón.
-4. **Mercadería** y **Costo Unitario**: qué es y cuánto te sale cada unidad. Por ejemplo: *$ 480 el kilo*.
-5. **Fecha Recepción** y **Cantidad Recibida**: cuándo y cuánto llegó.
-6. **Proveedor** y **Rubro**.
-
-![Lista con el número de orden marcado en rojo](images/manual/50-compras/59-10-donde-esta-boton-orden.png)
-
-- Tocá el **número de orden** para abrir la orden completa. Mirá [Órdenes de Compra](/user-guide/todas-las-ordenes-compra).
-
-![Lista con el nombre de la mercadería marcado en rojo](images/manual/50-compras/59-08-donde-esta-boton-mercaderia.png)
-
-- Tocá el **nombre de la mercadería** para ver su detalle.
-
-![Lista con el botón editar marcado en rojo](images/manual/50-compras/59-09-donde-esta-boton-editar.png)
-
-- Tocá **editar** para corregir ese renglón.
+4. **Mercadería**: tocá el nombre para ver su detalle. El botón **editar** corrige ese renglón.
+5. **Costo Unitario**: cuánto te sale cada unidad. Por ejemplo: *$ 480 el kilo*.
+6. **Fecha Recepción** y **Cantidad Recibida**: cuándo y cuánto llegó.
+7. **Proveedor** y **Rubro**.
 
 ---
 

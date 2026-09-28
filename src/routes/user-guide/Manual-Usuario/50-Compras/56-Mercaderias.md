@@ -38,11 +38,15 @@ Así se ve la pantalla. Cada renglón es una mercadería, con su unidad de compr
 
 > 💡 **Consejo útil:** hacé clic en una celda de la lista (por ejemplo, el costo) para cambiarla al instante.
 
-![Pantalla con el botón de ayuda marcado en rojo](images/manual/50-compras/56-26-donde-esta-boton-ayuda.png)
+![Botones de arriba: Nuevo Mercadería, ayuda y Descargar Excel](images/manual/50-compras/56-43-encabezado.png)
+
+Arriba tenés tres botones:
+
+- **Nuevo Mercadería**: carga una mercadería nueva (Paso 3).
+- **?**: muestra una explicación corta de la pantalla.
+- **Descargar Excel**: baja la lista a una planilla.
 
 ![Explicación de la pantalla abierta debajo del botón de ayuda](images/manual/50-compras/56-27-ayuda-abierta.png)
-
-Tocá el botón **?** para ver una explicación corta.
 
 ---
 
@@ -57,18 +61,13 @@ En el recuadro de búsqueda tenés:
 - **Buscar por nombre...**: escribí parte del nombre. Por ejemplo: *Harina 0000*.
 - **Todos los proveedores**: mostrá solo lo que le comprás a un proveedor.
 - **Todos los rubros**: mostrá solo un rubro. Por ejemplo: *Almacén*.
+- **Buscar**: el botón azul de la derecha, que aplica la búsqueda.
 
-![Pantalla con el botón azul Buscar marcado en rojo](images/manual/50-compras/56-06-donde-esta-boton-buscar.png)
-
-1. Completá lo que necesites y tocá el botón azul **Buscar**.
+1. Completá lo que necesites y tocá **Buscar**.
 
 ![Lista con la mercadería Harina 0000 x 25 kg](images/manual/50-compras/56-33-resultado-busqueda.png)
 
 2. La lista muestra solo las que coinciden.
-
-![Pantalla con el botón Descargar Excel marcado en rojo](images/manual/50-compras/56-02-donde-esta-boton-descargarexcel.png)
-
-> 💡 **Consejo útil:** **Descargar Excel**, arriba a la derecha, baja la lista a una planilla.
 
 ---
 
@@ -76,91 +75,36 @@ En el recuadro de búsqueda tenés:
 
 <div id="paso-3-carga-una-mercaderia-nueva"></div>
 
-![Pantalla con el botón azul Nuevo Mercadería marcado en rojo](images/manual/50-compras/56-25-donde-esta-boton-nueva-mercaderia.png)
-
 1. Tocá el botón azul **Nuevo Mercadería**, arriba a la izquierda.
+2. Se abre el formulario **Crear Nuevo Mercadería**. Tiene cuatro partes.
 
-![Pantalla Crear Nuevo Mercadería completa](images/manual/50-compras/56-28-pantalla-nueva-mercaderia.png)
+![Formulario, primera parte: PASO 1 Información Básica y PASO 2 Unidades, completos con Harina 0000 x 25 kg](images/manual/50-compras/56-40-formulario-parte-1.png)
 
-2. Se abre el formulario. Tiene varias partes.
+**PASO 1 · Información Básica** (obligatoria):
 
-### PASO 1 · Información Básica
+- **Producto**: el producto que es. Por ejemplo: *Harina 0000*. Si no existe, se crea.
+- **Nombre de Compra**: cómo aparece en la factura del proveedor. Por ejemplo: *Harina 0000 x 25 kg*.
+- **Código de Barras**: es opcional.
+- **Rubro / Categoría**: el grupo. Por ejemplo: *Almacén*.
 
-<div id="paso-1-informacion-basica"></div>
+**PASO 2 · Unidades** (cómo lo comprás y cómo lo contás):
 
-![Recuadro rojo PASO 1 Información Básica](images/manual/50-compras/56-29-seccion-paso-1.png)
+- **Comprás por**: cómo te lo factura el proveedor. Por ejemplo: *Bolsa*.
+- **Contás por**: cómo lo contás en el depósito y en las recetas. Por ejemplo: *Kilo*.
+- **Equivalencia**: cuántas unidades de stock trae cada unidad de compra. Por ejemplo: *25*, porque *1 Bolsa = 25 Kilo*. Abajo el sistema te lo muestra escrito, para que lo revises.
 
-![Casillero Producto con Harina 0000](images/manual/50-compras/56-30-campo-producto.png)
+![Formulario, segunda parte: PASO 3 Costos e impuestos, Proveedor habitual y los botones Cancelar y Guardar Mercadería](images/manual/50-compras/56-41-formulario-parte-2.png)
 
-3. **Producto**: escribí el producto que es. Por ejemplo: *Harina 0000*. Si no existe, se crea.
+**PASO 3 · Costos e impuestos**:
 
-![Casillero Nombre de Compra con Harina 0000 x 25 kg](images/manual/50-compras/56-08-campo-nombre-de-compra.png)
+- **Porcentaje de Desperdicio**: cuánto se pierde al usarlo. Por ejemplo: *2*.
+- **IVA de Compra**: el IVA que te cobra el proveedor. Por ejemplo: *IVA 21%*.
 
-4. **Nombre de Compra**: cómo aparece en la factura del proveedor. Por ejemplo: *Harina 0000 x 25 kg*.
+**OPCIONAL · Proveedor habitual**: tocá **Mostrar/Ocultar** y elegí en **Proveedor por Defecto** a quién se lo comprás siempre. Se usa al armar la orden de compra.
 
-![Casillero Código de Barras vacío](images/manual/50-compras/56-09-campo-codigo-de-barras.png)
+El recuadro azul **¿Cuántos mercaderías puedo crear?** explica cuándo conviene una sola mercadería por producto y cuándo varias (por marca, proveedor o presentación).
 
-5. **Código de Barras**: es opcional.
-
-![Lista Rubro / Categoría con Almacén](images/manual/50-compras/56-10-campo-rubro-categoria.png)
-
-6. **Rubro / Categoría**: elegí el grupo. Por ejemplo: *Almacén*.
-
-### PASO 2 · Unidades
-
-<div id="paso-2-unidades"></div>
-
-![Recuadro azul PASO 2 Unidades: cómo lo comprás y cómo lo contás](images/manual/50-compras/56-31-seccion-paso-2-unidades.png)
-
-![Lista Comprás por con Bolsa](images/manual/50-compras/56-11-campo-compras-por.png)
-
-7. **Comprás por**: cómo te lo factura el proveedor. Por ejemplo: *Bolsa*.
-
-![Lista Contás por con Kilo](images/manual/50-compras/56-12-campo-contas-por.png)
-
-8. **Contás por**: cómo lo contás en el depósito y en las recetas. Por ejemplo: *Kilo*.
-
-![Casillero Equivalencia con 25](images/manual/50-compras/56-13-campo-equivalencia.png)
-
-9. **Equivalencia**: cuántas unidades de stock trae cada unidad de compra. Por ejemplo: *1 bolsa = 25 kilos*, entonces *25*.
-
-### PASO 3 · Costos e impuestos
-
-<div id="paso-3-costos-e-impuestos"></div>
-
-![Recuadro naranja PASO 3 Costos e impuestos](images/manual/50-compras/56-32-seccion-paso-3.png)
-
-![Casillero Porcentaje de Desperdicio con 2](images/manual/50-compras/56-14-campo-porcentaje-de-desperdicio.png)
-
-10. **Porcentaje de Desperdicio**: cuánto se pierde al usarlo. Por ejemplo: *2*.
-
-![Lista IVA de Compra con IVA 21%](images/manual/50-compras/56-15-campo-iva-de-compra.png)
-
-11. **IVA de Compra**: el IVA que te cobra el proveedor. Por ejemplo: *IVA 21%*.
-
-### Proveedor habitual (opcional)
-
-<div id="proveedor-habitual-opcional"></div>
-
-![Formulario con el botón Mostrar/Ocultar marcado en rojo](images/manual/50-compras/56-16-donde-esta-boton-mostrar-ocultar.png)
-
-12. Tocá **Mostrar/Ocultar** en la parte **OPCIONAL**.
-
-![Lista Proveedor por Defecto con Distribuidora Ejemplo](images/manual/50-compras/56-18-campo-proveedor-por-defecto.png)
-
-13. En **Proveedor por Defecto**, elegí a quién se lo comprás siempre. Se usa al armar la orden de compra.
-
-### Guardá
-
-<div id="guarda"></div>
-
-![Formulario con el botón azul Guardar Mercadería marcado en rojo](images/manual/50-compras/56-21-donde-esta-boton-guardar-s.png)
-
-14. Tocá el botón azul **Guardar Mercadería**, abajo a la derecha.
-
-![Formulario con el botón Cancelar marcado en rojo](images/manual/50-compras/56-19-donde-esta-boton-cancelar.png)
-
-> 💡 **Consejo útil:** si te arrepentiste, tocá **Cancelar**, abajo a la izquierda. No se guarda nada.
+3. Tocá el botón azul **Guardar Mercadería**, abajo a la derecha. Si te arrepentiste, tocá **Cancelar**: no se guarda nada.
 
 ---
 
@@ -168,27 +112,22 @@ En el recuadro de búsqueda tenés:
 
 <div id="paso-4-mira-o-cambia-una-mercaderia"></div>
 
+![Los cuatro botones de un renglón: ojo, hojita, lápiz y tacho](images/manual/50-compras/56-42-botones-del-renglon.png)
+
 A la derecha de cada renglón hay cuatro botones:
 
-![Lista con el ojo de Harina 0000 marcado en rojo](images/manual/50-compras/56-23-donde-esta-boton-icono.png)
-
 - El ojo 👁️ abre el detalle completo de la mercadería.
+- La hojita 🌿 abre la ficha del producto. Mirá [Maestro de Productos](/user-guide/maestro-de-productos).
+- El lápiz ✏️ abre una ventana para cambiar los datos. Cambiá lo que necesites y tocá **Guardar Mercadería**.
+- El tacho 🗑️ borra la mercadería. El sistema te pregunta si estás seguro.
 
 ![Detalle de la mercadería Harina 0000 x 25 kg](images/manual/50-compras/56-37-pantalla-detalle.png)
 
-![Lista con la hoja del producto marcada en rojo](images/manual/50-compras/56-34-donde-esta-boton-ver-producto.png)
-
-- La hojita 🌿 abre la ficha del producto. Mirá [Maestro de Productos](/user-guide/maestro-de-productos).
-
-![Lista con el lápiz marcado en rojo](images/manual/50-compras/56-35-donde-esta-boton-editar.png)
-
-- El lápiz ✏️ abre una ventana para cambiar los datos. Cambiá lo que necesites y tocá **Guardar Mercadería**.
+Así se ve el detalle completo.
 
 ![Ventana Editando Mercadería con los datos de Harina 0000](images/manual/50-compras/56-38-ventana-editar.png)
 
-![Lista con el tacho marcado en rojo](images/manual/50-compras/56-36-donde-esta-boton-eliminar.png)
-
-- El tacho 🗑️ borra la mercadería. El sistema te pregunta si estás seguro.
+Y así, la ventana del lápiz.
 
 > ⚠️ **Atención:** si borrás una mercadería que ya compraste, desaparece de las próximas órdenes de compra.
 

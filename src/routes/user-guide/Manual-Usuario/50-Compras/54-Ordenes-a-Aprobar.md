@@ -36,33 +36,31 @@
 
 Así se ve la pantalla. El número al lado del título dice cuántas órdenes esperan.
 
-![Renglón de una orden: número, proveedor, mercaderías, prioridad, fecha y botones](images/manual/50-compras/54-15-renglon-oc.png)
-
-Cada renglón muestra el número de la orden, el proveedor, qué se pide, la prioridad y la fecha.
-
 > 💡 **Consejo útil:** si no hay nada para aprobar, la pantalla dice *"No hay ordenes pendientes de aprobacion"*.
 
 ---
 
-## 👁️ Paso 2: Revisá la orden
+## 👁️ Paso 2: Revisá cada orden
 
-<div id="paso-2-revisa-la-orden"></div>
+<div id="paso-2-revisa-cada-orden"></div>
 
-![Pantalla con el botón Ver de una orden marcado en rojo](images/manual/50-compras/54-08-donde-esta-boton-ver.png)
+![Renglón de una orden: número, proveedor, mercaderías, prioridad, fecha y los botones Aprobar, Rechazar y Ver](images/manual/50-compras/54-15-renglon-oc.png)
 
-1. Tocá **Ver** para abrir la orden completa.
+Cada renglón muestra el número de la orden, el proveedor, qué se pide, la prioridad y la fecha. A la derecha tiene tres botones:
+
+- **Aprobar** (verde): aprueba la orden (Paso 3).
+- **Rechazar** (rojo): la rechaza (Paso 4).
+- **Ver**: abre la orden completa.
 
 ![Orden de compra con el detalle de lo pedido y el total](images/manual/50-compras/54-16-pantalla-ver-oc.png)
 
-2. Revisá el proveedor, las cantidades y el total.
+1. Tocá **Ver** y revisá el proveedor, las cantidades y el total.
 
 ---
 
 ## ✅ Paso 3: Aprobá la orden
 
 <div id="paso-3-aproba-la-orden"></div>
-
-![Pantalla con el botón verde Aprobar marcado en rojo](images/manual/50-compras/54-04-donde-esta-boton-aprobar.png)
 
 1. Tocá el botón verde **Aprobar** de la orden.
 2. El sistema te pregunta si estás seguro. Tocá **Aceptar**.
@@ -74,25 +72,13 @@ Cada renglón muestra el número de la orden, el proveedor, qué se pide, la pri
 
 <div id="paso-4-rechaza-la-orden"></div>
 
-![Pantalla con el botón rojo Rechazar marcado en rojo](images/manual/50-compras/54-06-donde-esta-boton-rechazar.png)
-
 1. Tocá el botón rojo **Rechazar** de la orden.
 
-![Pantalla Rechazar Orden de Compra con el motivo escrito](images/manual/50-compras/54-17-pantalla-rechazar.png)
+![Pantalla Rechazar Orden de Compra: datos de la orden, motivo del rechazo y los botones Cancelar y Confirmar Rechazo](images/manual/50-compras/54-18-formulario-rechazo.png)
 
-2. Se abre la pantalla **Rechazar Orden de Compra**.
-
-![Casillero Motivo del rechazo con un texto de ejemplo](images/manual/50-compras/54-10-campo-motivo-del-rechazo.png)
-
+2. Se abre la pantalla **Rechazar Orden de Compra**. Arriba repite los datos de la orden y lo que se pidió.
 3. En **Motivo del rechazo**, escribí por qué. Por ejemplo: *El precio subió: pedir otro presupuesto*. Quien la cargó lo va a ver.
-
-![Pantalla con el botón rojo Confirmar Rechazo marcado en rojo](images/manual/50-compras/54-13-donde-esta-boton-confirmar-rechazo.png)
-
-4. Tocá el botón rojo **Confirmar Rechazo**.
-
-![Pantalla con el botón Cancelar marcado en rojo](images/manual/50-compras/54-11-donde-esta-boton-cancelar.png)
-
-> 💡 **Consejo útil:** si te arrepentiste, tocá **Cancelar**. La orden sigue esperando.
+4. Tocá el botón rojo **Confirmar Rechazo**. Si te arrepentiste, tocá **Cancelar**: la orden sigue esperando.
 
 > ⚠️ **Atención:** una orden rechazada queda cerrada. Si hace falta, hay que cargar una nueva.
 

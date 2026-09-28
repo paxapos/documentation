@@ -51,7 +51,7 @@ Arriba tenés:
 
 <div id="paso-2-busca-una-orden"></div>
 
-![Recuadro de filtros: proveedor, número de OC, número de factura, fechas y centro de costo](images/manual/50-compras/52-02-panel-filtros.png)
+![Recuadro de filtros: proveedor, número de OC, número de factura, fechas, centro de costo y el botón Buscar](images/manual/50-compras/52-02-panel-filtros.png)
 
 En el recuadro de filtros podés completar:
 
@@ -60,10 +60,9 @@ En el recuadro de filtros podés completar:
 - **N° de Factura**: el número de la factura del proveedor.
 - Las dos fechas: **desde** y **hasta** qué día se creó.
 - **Centro de Costo**: si separás las compras por sector.
+- **Buscar**: el botón azul de la derecha, que aplica los filtros.
 
-![Pantalla con el botón azul Buscar marcado en rojo](images/manual/50-compras/52-08-donde-esta-boton-buscar.png)
-
-1. Completá lo que necesites y tocá el botón azul **Buscar**.
+1. Completá lo que necesites y tocá **Buscar**.
 
 ---
 
@@ -81,13 +80,17 @@ En la columna **Estado**, cada orden muestra una fila de círculos. El primero d
 
 Los círculos que siguen se pintan a medida que avanza: **Enviado**, **Recibido**, **Facturado** y **Pagado**.
 
+A la derecha, en **Acciones**, cada orden tiene un botón con el paso que sigue y una flechita **▾** con más opciones:
+
+- **Enviar (por mail)**: la orden todavía no se le mandó al proveedor (Paso 4).
+- **Recepcionar** (verde): ya se mandó y falta recibir la mercadería (Paso 5).
+- **▾**: abre más acciones (Paso 6).
+
 ---
 
 ## 📤 Paso 4: Mandale la orden al proveedor
 
 <div id="paso-4-mandale-la-orden-al-proveedor"></div>
-
-![Lista con el botón Enviar (por mail) marcado en rojo](images/manual/50-compras/52-12-donde-esta-boton-enviar-por-mail.png)
 
 1. Tocá **Enviar (por mail)** en la orden.
 2. El proveedor recibe un mail con un link para ver la orden.
@@ -102,37 +105,22 @@ Los círculos que siguen se pintan a medida que avanza: **Enviado**, **Recibido*
 
 <div id="paso-5-recibi-la-mercaderia"></div>
 
-![Lista con el botón verde Recepcionar marcado en rojo](images/manual/50-compras/52-10-donde-esta-boton-recepcionar.png)
-
 1. Cuando llega el pedido, tocá el botón verde **Recepcionar** de esa orden.
 
-![Pantalla Recepcionar Mercadería con la fecha y lo que llegó](images/manual/50-compras/52-117-pantalla-recepcion.png)
+![Pantalla de recepción: botones Recepcionar y Recepcionar y Generar Gasto, fecha de recepción y lo que llegó](images/manual/50-compras/52-123-formulario-recepcion.png)
 
-2. Se abre la pantalla **Recepcionar Mercadería**.
-
-![Casillero Fecha Recepción](images/manual/50-compras/52-47-campo-fecha-recepcion.png)
-
-3. En **Fecha Recepción**, dejá la fecha de hoy o poné el día en que llegó.
-
-![Renglón de lo recibido: Harina 0000, cantidad, unidad y precio](images/manual/50-compras/52-118-renglones-recepcion.png)
-
-4. Revisá cada renglón. Si llegó otra cantidad o a otro precio, cambialo.
-
-![Pantalla con el botón verde Recepcionar marcado en rojo](images/manual/50-compras/52-43-donde-esta-boton-recepcionar.png)
-
-5. Tocá el botón verde **Recepcionar**. La mercadería entra al stock.
-
-![Pantalla con el botón naranja Recepcionar y Generar Gasto marcado en rojo](images/manual/50-compras/52-45-donde-esta-boton-recepcionar-y-generar-gasto.png)
-
-> 💡 **Consejo útil:** si ya tenés la factura, tocá **Recepcionar y Generar Gasto**. Recibís la mercadería y cargás la factura en un solo paso.
+2. Se abre la pantalla **Recepcionar Mercadería**:
+   - **Fecha Recepción**: dejá la de hoy o poné el día en que llegó.
+   - Cada renglón es lo que pediste. Si llegó otra cantidad o a otro precio, cambialo. La **✖** roja saca un renglón, y en el renglón vacío de abajo podés sumar algo que vino de más.
+   - **Recepcionar** (verde): recibís la mercadería y entra al stock.
+   - **Recepcionar y Generar Gasto** (naranja): además cargás la factura, en un solo paso.
+3. Revisá todo y tocá el botón que corresponda.
 
 ---
 
 ## ⚙️ Paso 6: Usá el botón de más acciones
 
 <div id="paso-6-usa-el-boton-de-mas-acciones"></div>
-
-![Lista con la flechita de más acciones marcada en rojo](images/manual/50-compras/52-24-donde-esta-boton-mas-acciones.png)
 
 1. Tocá la flechita **▾** a la derecha de la orden.
 
@@ -169,30 +157,17 @@ Los círculos que siguen se pintan a medida que avanza: **Enviado**, **Recibido*
 
 ![Orden de Compra con su estado, botones, totales y link para el proveedor](images/manual/50-compras/52-119-pantalla-ver-oc.png)
 
-Arriba ves el proveedor, la observación y el estado. Después vienen los botones:
+Arriba ves el proveedor, la observación y el estado de la orden.
 
-![Orden con el botón verde Recepcionar marcado en rojo](images/manual/50-compras/52-120-donde-esta-boton-recepcionar-ficha.png)
+![Botones de la orden: Recepcionar, Editar, Imprimir, Observación, Finalizar y el tacho](images/manual/50-compras/52-124-botones-de-la-oc.png)
+
+Los botones de la orden:
 
 - **Recepcionar**: recibís la mercadería (Paso 5).
-
-![Orden con el botón Editar marcado en rojo](images/manual/50-compras/52-57-donde-esta-boton-editar.png)
-
 - **Editar**: cambiás la orden.
-
-![Orden con el botón Imprimir marcado en rojo](images/manual/50-compras/52-59-donde-esta-boton-imprimir.png)
-
 - **Imprimir**: la imprimís.
-
-![Orden con el botón Observación marcado en rojo](images/manual/50-compras/52-65-donde-esta-boton-observacion.png)
-
 - **Observación**: marcás un problema, igual que en el Paso 6.
-
-![Orden con el botón Finalizar marcado en rojo](images/manual/50-compras/52-69-donde-esta-boton-finalizar.png)
-
-- **Finalizar**: cerrás la orden.
-
-![Orden con el tacho rojo marcado en rojo](images/manual/50-compras/52-71-donde-esta-boton-icono.png)
-
+- **Finalizar**: cerrás la orden, aunque falte algo.
 - El tacho 🗑️ borra la orden.
 
 ### Link para el proveedor
@@ -200,8 +175,6 @@ Arriba ves el proveedor, la observación y el estado. Después vienen los botone
 <div id="link-para-el-proveedor"></div>
 
 ![Link público de la orden, con el botón Copiar](images/manual/50-compras/52-78-campo-publicurlinput.png)
-
-![Orden con el botón Copiar marcado en rojo](images/manual/50-compras/52-79-donde-esta-boton-icono.png)
 
 - El proveedor puede ver la orden con este link. Tocá **Copiar** para pegarlo en un mensaje.
 
@@ -213,16 +186,10 @@ Arriba ves el proveedor, la observación y el estado. Después vienen los botone
 
 <div id="facturas-pagos-e-items"></div>
 
-![Solapas Facturas, Pagos e Ítems](images/manual/50-compras/52-122-solapas.png)
+![Solapas Facturas, Pagos e Ítems, con los botones Cargar Factura y Digitalizar factura](images/manual/50-compras/52-125-solapas-y-facturas.png)
 
-- Abajo, las solapas muestran las **Facturas**, los **Pagos** y los **Ítems** de la orden.
-
-![Orden con el botón Cargar Factura marcado en rojo](images/manual/50-compras/52-85-donde-esta-boton-cargar-factura.png)
-
+- Las solapas muestran las **Facturas**, los **Pagos** y los **Ítems** de la orden.
 - **Cargar Factura**: cargás la factura del proveedor a mano.
-
-![Orden con el botón Digitalizar factura marcado en rojo](images/manual/50-compras/52-87-donde-esta-boton-digitalizar-factura.png)
-
 - **Digitalizar factura**: subís la foto y el sistema lee los datos.
 
 ---

@@ -33,121 +33,81 @@
 
 ![Opción Crear orden de compra marcada en rojo](images/manual/50-compras/53-00b-menu-opcion-form.png)
 
-2. Tocá **Crear orden de compra**.
-
-![Pantalla Generar Orden de Compra vacía](images/manual/50-compras/53-01-pantalla-form.png)
-
-Así se ve la pantalla **Generar Orden de Compra**.
+2. Tocá **Crear orden de compra**. Se abre la pantalla **Generar Orden de Compra**.
 
 ---
 
-## 📝 Paso 2: Completá los datos de la orden
+## 📝 Paso 2: Completá la orden
 
-<div id="paso-2-completa-los-datos-de-la-orden"></div>
+<div id="paso-2-completa-la-orden"></div>
 
-![Lista Tipo con Orden de Compra](images/manual/50-compras/53-05-campo-tipo.png)
+![Formulario Generar Orden de Compra completo: tipo, fecha, proveedor, observaciones y dos mercaderías](images/manual/50-compras/53-41-formulario-completo.png)
 
-1. En **Tipo**, dejá **Orden de Compra**. Si solo querés pedir precios, elegí **Solicitud Presupuesto**.
+Así se ve la orden completa. De arriba hacia abajo:
 
-![Casillero Fecha de entrega esperada con una fecha](images/manual/50-compras/53-08-campo-fecha-entrega.png)
+### Los datos de la orden
 
-2. En **Fecha de entrega esperada**, elegí el día en que necesitás la mercadería. El proveedor la ve.
+<div id="los-datos-de-la-orden"></div>
 
-![Casillero Proveedor con Distribuidora Ejemplo elegido](images/manual/50-compras/53-19-campo-proveedor-list.png)
-
-3. En **Proveedor**, escribí parte del nombre o el CUIT. Tocalo en la lista que aparece.
+- **Tipo**: dejá **Orden de Compra**. Si solo querés pedir precios, elegí **Solicitud Presupuesto**.
+- **Fecha de entrega esperada**: el día en que necesitás la mercadería. El proveedor la ve.
+- **Proveedor**: escribí parte del nombre o el CUIT y tocalo en la lista que aparece. Abajo se ven su teléfono, su mail y su CUIT.
+- **No Enviar Mail**: es un interruptor. Si lo tocás cambia a **Enviar por Mail** y, al guardar, la orden le llega por mail al proveedor. Si queda en **No Enviar Mail**, no se manda.
+- **Subir Remito**: si ya tenés el remito, subí la foto. Es opcional.
+- **Recepcionado**: marcalo solo si la mercadería ya llegó.
+- **Imprimir Orden**: marcalo si querés que salga impresa al guardar.
+- **Observaciones**: lo que tenga que saber el proveedor. Por ejemplo: *Entregar por la mañana, antes de las 11*.
+- El botón con la flechita, arriba de **Detalles de la OC**, sirve para mandar el pedido por WhatsApp o copiarlo.
 
 > ⚠️ **Atención:** elegí siempre el proveedor de la lista. Si escribís un nombre que no está, el sistema crea un proveedor nuevo.
 
-![Botón Subir Remito para elegir un archivo](images/manual/50-compras/53-09-campo-media-file.png)
+### Las mercaderías (Detalles de la OC)
 
-4. **Subir Remito**: si ya tenés el remito, subí la foto. Es opcional.
-
-![Casilla Recepcionado](images/manual/50-compras/53-10-campo-recepcionado.png)
-
-5. Marcá **Recepcionado** solo si la mercadería ya llegó.
-
-![Casilla Imprimir Orden](images/manual/50-compras/53-12-campo-ctrl-enviar-imprimir.png)
-
-6. Marcá **Imprimir Orden** si querés que salga impresa al guardar.
-
-![Casillero Observaciones con un texto de ejemplo](images/manual/50-compras/53-13-campo-observaciones.png)
-
-7. En **Observaciones**, escribí lo que tenga que saber el proveedor. Por ejemplo: *Entregar por la mañana*.
-
----
-
-## 🛒 Paso 3: Cargá las mercaderías
-
-<div id="paso-3-carga-las-mercaderias"></div>
-
-![Renglón con Harina 0000 x 25 kg, 4 bolsas, precio, IVA 21%, total y observación](images/manual/50-compras/53-20-renglon-mercaderia.png)
+<div id="las-mercaderias-detalles-de-la-oc"></div>
 
 Cada renglón es una mercadería. De izquierda a derecha:
 
-1. **Mercadería**: escribí el nombre y tocala en la lista. Por ejemplo: *Harina 0000 x 25 kg*.
-2. **Cantidad**: cuántas pedís. Por ejemplo: *4*.
-3. **U.M.**: la unidad en que la pedís. Por ejemplo: *Bolsa*.
-4. **Precio Total s/Imp**: el total de ese renglón, sin impuestos. Por ejemplo: *48000*.
-5. **IVA**: elegí el IVA. Por ejemplo: *IVA 21%*.
-6. **Precio c/Imp**: se calcula solo.
-7. **Observación**: una aclaración, si hace falta.
+- **Mercadería**: escribí el nombre y tocala en la lista. Por ejemplo: *Harina 0000 x 25 kg*.
+- **Cantidad**: cuántas pedís. Por ejemplo: *4*.
+- **U.M.**: la unidad en que la pedís. Por ejemplo: *Bolsa*.
+- **Precio Total s/Imp.**: el total de ese renglón, sin impuestos. Por ejemplo: *48000*.
+- **IVA**: elegí el IVA. Por ejemplo: *IVA 21%*.
+- **Precio c/Imp.**: se calcula solo.
+- **Observación**: una aclaración, si hace falta.
+- La **✖** roja saca ese renglón.
 
-![Formulario con el botón Aplicar de la sugerencia marcado en rojo](images/manual/50-compras/53-29-donde-esta-boton-aplicar.png)
+Debajo de cada renglón aparece una **Sugerencia**: el stock actual, cuánto consumís por día y la cantidad sugerida. Tocá **Aplicar** para usar esa cantidad, o la **i** para ver cómo se calculó.
 
-> 💡 **Consejo útil:** debajo de cada renglón aparece una **Sugerencia** de cantidad, según lo que consumís y el stock. Tocá **Aplicar** para usarla.
-
-![Formulario con el botón Ver detalle de la sugerencia marcado en rojo](images/manual/50-compras/53-31-donde-esta-boton-ver-detalle.png)
-
-Tocá **Ver detalle** para ver cómo se calculó.
-
-![Formulario con el botón Agregar otro Mercadería marcado en rojo](images/manual/50-compras/53-17-donde-esta-boton-btn-agregar-mercaderia.png)
-
-8. Para sumar otra mercadería, tocá **Agregar otro Mercadería**, debajo de los renglones.
-
-![Formulario con el tacho rojo de un renglón marcado en rojo](images/manual/50-compras/53-27-donde-esta-boton-remove.png)
-
-9. Para sacar un renglón, tocá su tacho rojo 🗑️.
-
-![Formulario completo con dos renglones cargados](images/manual/50-compras/53-39-pantalla-form-completo.png)
+Para sumar otra mercadería, tocá **Agregar otro Mercadería**, abajo de todo.
 
 ---
 
-## 💾 Paso 4: Guardá la orden
+## 💾 Paso 3: Guardá la orden
 
-<div id="paso-4-guarda-la-orden"></div>
+<div id="paso-3-guarda-la-orden"></div>
 
-![Pantalla con el botón azul Guardar Orden de Compra marcado en rojo](images/manual/50-compras/53-02-donde-esta-boton-guardar-orden-de-compra.png)
-
-1. Tocá el botón azul **Guardar Orden de Compra**, arriba.
+1. Tocá el botón azul **Guardar Orden de Compra**, arriba de todo.
 2. Si tu comercio pide aprobar las compras, la orden queda **a aprobar**. Mirá [Órdenes a aprobar](/user-guide/ordenes-a-aprobar).
 
 ### Si escribiste una mercadería nueva
 
 <div id="si-escribiste-una-mercaderia-nueva"></div>
 
-![Ventana Se van a crear mercaderías nuevas en el catálogo](images/manual/50-compras/53-40-ventana-mercaderias-nuevas.png)
+![Ventana Se van a crear mercaderías nuevas en el catálogo, con los botones Cancelar y Sí, crearlas](images/manual/50-compras/53-40-ventana-mercaderias-nuevas.png)
 
-Si escribiste una mercadería que no existe, aparece esta ventana antes de guardar.
+Si escribiste una mercadería que no existe, antes de guardar aparece esta ventana. Te muestra los nombres nuevos:
 
-![Ventana con el botón Sí, crearlas marcado en rojo](images/manual/50-compras/53-37-donde-esta-boton-btn-confirmar-mercaderias-nuevas.png)
-
-3. Si es algo que comprás para el stock o para una receta, tocá **Sí, crearlas**. Se crea la mercadería y se guarda la orden.
-
-![Ventana con el botón Cancelar marcado en rojo](images/manual/50-compras/53-35-donde-esta-boton-cancelar.png)
-
-4. Si te equivocaste de nombre, o es un equipo o un servicio, tocá **Cancelar** y corregí el renglón.
+- **Sí, crearlas**: si es algo que comprás para el stock o para una receta. Se crea la mercadería y se guarda la orden.
+- **Cancelar**: si te equivocaste de nombre, o si es un equipo o un servicio. Volvés a la orden para corregir el renglón.
 
 ---
 
-## 📤 Paso 5: Mandale la orden al proveedor
+## 📤 Paso 4: Mandale la orden al proveedor
 
-<div id="paso-5-mandale-la-orden-al-proveedor"></div>
+<div id="paso-4-mandale-la-orden-al-proveedor"></div>
 
-![Formulario con el botón de WhatsApp marcado en rojo](images/manual/50-compras/53-14-donde-esta-boton-enviar-pedido-por-whatsapp-o-cop.png)
-
-- Tocá el botón de WhatsApp para mandarle el pedido al proveedor o copiarlo.
-- También podés mandarla por mail desde [Órdenes de compra](/user-guide/todas-las-ordenes-compra).
+- Desde el formulario, con el botón de WhatsApp (Paso 2).
+- O después, por mail, desde [Órdenes de compra](/user-guide/todas-las-ordenes-compra).
 
 > ⚠️ **Atención:** si la orden está **a aprobar**, esperá a que la aprueben antes de mandarla.
 
@@ -162,4 +122,4 @@ Si escribiste una mercadería que no existe, aparece esta ventana antes de guard
 | **Se creó un proveedor repetido** | Escribiste el nombre y no lo elegiste de la lista. | Juntalos en [Proveedores](/user-guide/proveedores) con **Unificar**. |
 | **No aparece la mercadería al escribir** | No está cargada, o está con otro nombre. | Buscala en [Mercaderías](/user-guide/mercaderias) o cargala nueva. |
 | **La orden no se puede mandar al proveedor** | Está **a aprobar** o fue **rechazada**. | Revisala en [Órdenes a aprobar](/user-guide/ordenes-a-aprobar). |
-| **El total no coincide con la factura** | El precio del renglón se cargó por unidad y no el total. | En **Precio Total s/Imp** va el total del renglón, no el precio unitario. |
+| **El total no coincide con la factura** | El precio del renglón se cargó por unidad y no el total. | En **Precio Total s/Imp.** va el total del renglón, no el precio unitario. |

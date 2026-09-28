@@ -47,12 +47,10 @@ En el recuadro de búsqueda tenés:
 
 - **Buscar Proveedor**: escribí parte del nombre o del CUIT. Por ejemplo: *Ejemplo*.
 - **Nombres Duplicados**: marcala para ver solo los proveedores cargados dos veces.
-- **Unificar**: sirve para juntar dos proveedores repetidos (Paso 6).
-- **Buscar**: muestra el resultado.
+- **Unificar**: el botón blanco de la izquierda. Sirve para juntar dos proveedores repetidos (Paso 6).
+- **Buscar**: el botón azul de la derecha. Aplica la búsqueda.
 
-![Pantalla con el botón azul Buscar marcado en rojo](images/manual/50-compras/58-08-donde-esta-boton-buscar.png)
-
-1. Escribí lo que buscás y tocá el botón azul **Buscar**.
+1. Escribí lo que buscás y tocá **Buscar**.
 
 ![Lista con un solo proveedor: Distribuidora Ejemplo](images/manual/50-compras/58-52-resultado-busqueda.png)
 
@@ -67,109 +65,43 @@ En el recuadro de búsqueda tenés:
 ![Pantalla con el botón verde Nuevo Proveedor marcado en rojo](images/manual/50-compras/58-02-donde-esta-boton-nuevo-proveedor.png)
 
 1. Tocá el botón verde **Nuevo Proveedor**. Está arriba a la derecha.
-
-![Formulario del proveedor Distribuidora Ejemplo SRL completo](images/manual/50-compras/58-54-pantalla-nuevo-proveedor.png)
-
-2. Se abre el formulario. Completá los datos del proveedor.
+2. Se abre el formulario. Tiene cinco recuadros.
 
 ### Información del Proveedor
 
 <div id="informacion-del-proveedor"></div>
 
-![Casillero Razón Social con Distribuidora Ejemplo SRL](images/manual/50-compras/58-18-campo-razon-social.png)
+![Recuadro Información del Proveedor completo con los datos de Distribuidora Ejemplo SRL](images/manual/50-compras/58-67-formulario-datos.png)
 
-3. **Razón Social**: el nombre legal, como sale en la factura. Por ejemplo: *Distribuidora Ejemplo SRL*.
+- **Razón Social**: el nombre legal, como sale en la factura. Por ejemplo: *Distribuidora Ejemplo SRL*.
+- **Nombre / Fantasía**: el nombre con el que lo conocés.
+- **Email** y **Teléfono**: sirven para mandarle las órdenes de compra.
+- **Tipo Doc.** y **Número**: dejá **CUIT** y escribí el número, sin guiones.
+- **Condición IVA**: cómo factura. Por ejemplo: *Responsable Inscripto* o *Monotributista*.
+- **Nº de inscripción IIBB**: es opcional. Si lo dejás vacío, en las retenciones se usa el CUIT.
+- **Domicilio**, **Localidad** y **Provincia**: dónde está.
+- **CBU** y **Alias CBU**: la cuenta donde le pagás. El CBU tiene 22 números.
 
-![Casillero Nombre / Fantasía con Distribuidora Ejemplo](images/manual/50-compras/58-19-campo-nombre-fantasia.png)
+### Rubros y Percepciones e Impuestos en Facturas
 
-4. **Nombre / Fantasía**: el nombre con el que lo conocés.
+<div id="rubros-y-percepciones"></div>
 
-![Casillero Email con compras@ejemplo.com](images/manual/50-compras/58-20-campo-email.png)
+![Recuadros Rubros y Percepciones e Impuestos en Facturas, con los botones Todos y Ninguno](images/manual/50-compras/58-68-formulario-rubros-e-impuestos.png)
 
-![Casillero Teléfono con 11 5555-0000](images/manual/50-compras/58-21-campo-telefono.png)
+- **Rubros**: marcá qué te vende. Por ejemplo: *Almacén* o *Bebidas*. Sirve para encontrarlo más rápido.
+- **Percepciones e Impuestos en Facturas**: marcá los impuestos que este proveedor suele cobrarte en la factura. Abajo dice cuántos marcaste; **Todos** los marca de una vez y **Ninguno** los desmarca.
 
-5. **Email** y **Teléfono**: sirven para mandarle las órdenes de compra.
+### Documentación y Retenciones a Practicar
 
-![Lista Tipo Doc. con CUIT elegido](images/manual/50-compras/58-22-campo-tipo-doc.png)
+<div id="documentacion-y-retenciones"></div>
 
-![Casillero Número con el CUIT 20111111112](images/manual/50-compras/58-23-campo-numero.png)
+![Recuadros Documentación y Retenciones a Practicar, con el botón azul Guardar Proveedor abajo](images/manual/50-compras/58-69-formulario-documentacion-y-retenciones.png)
 
-6. En **Tipo Doc.** dejá **CUIT** y en **Número** escribí el CUIT, sin guiones.
+- **Documentación**: tocá **Agregar documento** para guardar un contrato o una constancia.
+- **Retenciones a Practicar**: marcá las retenciones que le hacés al pagarle: **Ganancias**, **IIBB**, **IVA** o **SUSS**. Al lado podés poner una alícuota propia; el engranaje ⚙️ abre más opciones. Si no sabés, preguntale a tu contador.
 
-![Lista Condición IVA con Responsable Inscripto](images/manual/50-compras/58-24-campo-condicion-iva.png)
-
-7. En **Condición IVA**, elegí cómo factura. Por ejemplo: *Responsable Inscripto* o *Monotributista*.
-
-![Casillero Nº de inscripción IIBB vacío](images/manual/50-compras/58-25-campo-no-de-inscripcion-iibb.png)
-
-8. **Nº de inscripción IIBB**: es opcional. Si lo dejás vacío, en las retenciones se usa el CUIT.
-
-![Casillero Domicilio con Av. Siempreviva 742](images/manual/50-compras/58-26-campo-domicilio.png)
-
-![Casillero Localidad con Córdoba](images/manual/50-compras/58-27-campo-localidad.png)
-
-![Casillero Provincia con Córdoba](images/manual/50-compras/58-28-campo-provincia.png)
-
-9. Completá **Domicilio**, **Localidad** y **Provincia**.
-
-![Casillero CBU de 22 dígitos](images/manual/50-compras/58-29-campo-cbu.png)
-
-![Casillero Alias CBU con distribuidora.ejemplo](images/manual/50-compras/58-30-campo-alias-cbu.png)
-
-10. **CBU** y **Alias CBU**: la cuenta donde le pagás. El CBU tiene 22 números.
-
-### Rubros
-
-<div id="rubros"></div>
-
-![Recuadro Rubros con las casillas de cada rubro](images/manual/50-compras/58-55-seccion-rubros.png)
-
-11. Marcá qué te vende. Por ejemplo: *Almacén* o *Bebidas*. Sirve para encontrarlo más rápido.
-
-### Percepciones e impuestos en facturas
-
-<div id="percepciones-e-impuestos-en-facturas"></div>
-
-![Recuadro Percepciones e Impuestos en Facturas con los impuestos para marcar](images/manual/50-compras/58-31-seccion-impuestos.png)
-
-12. Marcá los impuestos que este proveedor suele cobrarte en la factura. Por ejemplo: *IVA* o una percepción.
-
-![Recuadro de impuestos con el botón Todos marcado en rojo](images/manual/50-compras/58-32-donde-esta-boton-todos.png)
-
-![Recuadro de impuestos con el botón Ninguno marcado en rojo](images/manual/50-compras/58-34-donde-esta-boton-ninguno.png)
-
-13. **Todos** marca todos de una vez; **Ninguno** los desmarca.
-
-### Documentación
-
-<div id="documentacion"></div>
-
-![Recuadro Documentación con el botón Agregar documento](images/manual/50-compras/58-56-seccion-documentacion.png)
-
-![Formulario con el botón Agregar documento marcado en rojo](images/manual/50-compras/58-38-donde-esta-boton-agregar-documento.png)
-
-14. Si querés guardar un contrato o una constancia, tocá **Agregar documento** y elegí el archivo.
-
-### Retenciones a practicar
-
-<div id="retenciones-a-practicar"></div>
-
-![Recuadro Retenciones a Practicar con Ganancias, IIBB, IVA y SUSS](images/manual/50-compras/58-57-seccion-retenciones.png)
-
-15. Marcá las retenciones que le hacés al pagarle: **Ganancias**, **IIBB**, **IVA** o **SUSS**. Si no sabés, preguntale a tu contador.
-
-![Formulario con el engranaje de una retención marcado en rojo](images/manual/50-compras/58-40-donde-esta-boton-flecha.png)
-
-16. El engranaje ⚙️ de cada retención abre opciones avanzadas, como una alícuota distinta.
-
-### Guardá
-
-<div id="guarda"></div>
-
-![Formulario con el botón azul Guardar Proveedor marcado en rojo, abajo de todo](images/manual/50-compras/58-42-donde-esta-boton-guardar-proveedor.png)
-
-17. Tocá el botón azul **Guardar Proveedor**, abajo de todo.
-18. El proveedor aparece en la lista.
+3. Tocá el botón azul **Guardar Proveedor**, abajo de todo.
+4. El proveedor aparece en la lista.
 
 ---
 
@@ -177,7 +109,9 @@ En el recuadro de búsqueda tenés:
 
 <div id="paso-4-cambia-los-datos-de-un-proveedor"></div>
 
-![Lista con el botón ▾ del proveedor marcado en rojo](images/manual/50-compras/58-12-donde-esta-boton-mas-opciones.png)
+![Renglón del proveedor con los botones Ver proveedor y la flechita ▾](images/manual/50-compras/58-70-renglon-proveedor.png)
+
+A la derecha de cada proveedor hay dos botones: **Ver proveedor** abre su ficha (Paso 5), y la flechita **▾** abre más opciones.
 
 1. Tocá la flechita **▾** al lado de **Ver proveedor**.
 
@@ -199,9 +133,7 @@ En el recuadro de búsqueda tenés:
 
 <div id="paso-5-mira-la-ficha-del-proveedor"></div>
 
-![Lista con el botón Ver proveedor marcado en rojo](images/manual/50-compras/58-10-donde-esta-boton-ver-proveedor.png)
-
-1. Tocá **Ver proveedor**, a la derecha.
+1. Tocá **Ver proveedor**, a la derecha del proveedor.
 
 ![Detalles del Proveedor Distribuidora Ejemplo con sus datos y resúmenes](images/manual/50-compras/58-59-pantalla-ver-proveedor.png)
 
@@ -231,11 +163,9 @@ En el recuadro de búsqueda tenés:
 
 6. Tocá **Cuenta corriente** para ver lo que le debés.
 
-![Ficha con el botón Editar Proveedor marcado en rojo](images/manual/50-compras/58-61-donde-esta-boton-editar-proveedor.png)
+![Botones Editar Proveedor y Borrar Proveedor](images/manual/50-compras/58-71-botones-ficha.png)
 
-![Ficha con el botón rojo Borrar Proveedor marcado en rojo](images/manual/50-compras/58-62-donde-esta-boton-borrar-proveedor.png)
-
-7. Arriba a la derecha tenés **Editar Proveedor** y **Borrar Proveedor**.
+7. Arriba a la derecha tenés **Editar Proveedor**, que abre el formulario, y **Borrar Proveedor**, que lo borra (el sistema te pregunta antes).
 
 ![Ficha con el enlace Volver a Lista de Proveedores marcado en rojo](images/manual/50-compras/58-65-donde-esta-boton-volver.png)
 
@@ -249,23 +179,13 @@ En el recuadro de búsqueda tenés:
 
 > ⚠️ **Atención:** **Unificar** borra un proveedor y pasa todo lo suyo al otro. No se puede deshacer.
 
-![Recuadro de búsqueda con el botón Unificar marcado en rojo](images/manual/50-compras/58-06-donde-esta-boton-unificar.png)
+1. Tocá **Unificar**, en el recuadro de búsqueda (Paso 2).
 
-1. Tocá **Unificar**, en el recuadro de búsqueda.
-
-![Pantalla Unificar proveedores con las dos listas y el botón Unificar](images/manual/50-compras/58-60-pantalla-unificar.png)
-
-![Lista Proveedor a eliminar](images/manual/50-compras/58-44-campo-proveedor-a-eliminar.png)
+![Pantalla Unificar proveedores con las listas Proveedor a eliminar y Proveedor destino, y el botón Unificar](images/manual/50-compras/58-60-pantalla-unificar.png)
 
 2. En **Proveedor a eliminar**, elegí el que está repetido.
-
-![Lista Proveedor destino](images/manual/50-compras/58-45-campo-proveedor-destino.png)
-
 3. En **Proveedor destino**, elegí el que queda.
-
-![Pantalla con el botón azul Unificar marcado en rojo](images/manual/50-compras/58-46-donde-esta-boton-unificar.png)
-
-4. Revisá bien los dos y tocá **Unificar**.
+4. Revisá bien los dos y tocá el botón azul **Unificar**.
 
 ---
 
