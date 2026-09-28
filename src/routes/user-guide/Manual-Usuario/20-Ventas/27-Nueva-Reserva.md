@@ -59,6 +59,6 @@
 |---|---|---|
 | **"No se pudo procesar la reserva en este momento"** | Dos personas intentaron reservar la misma mesa al mismo tiempo. | Reintentá la carga en unos segundos. |
 | **Aviso de conflicto con otra reserva** | Ya hay otra reserva muy cercana en horario para la misma mesa física. | Elegí otro horario u otra mesa del salón. |
-| **No aparece el campo "Mesa del Salón"** | Tu comercio no tiene el mapa de mesas configurado. | Configurá el mapa desde [Mapa de Mesas](/user-guide/mapa-de-mesas) o dejá el campo vacío y asigná la mesa manualmente al recepcionar. |
+| **No aparece el campo "Mesa del Salón"** | Tu comercio no tiene el mapa de mesas configurado. | Dejá el campo vacío y asigná la mesa manualmente al recepcionar. |
 | **Se pide confirmar "cliente sin datos de contacto"** | No cargaste teléfono, mail ni DNI del cliente. | Volvé y completá al menos un dato de contacto, o tocá "Guardar igual" si es intencional. |
 

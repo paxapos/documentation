@@ -79,7 +79,7 @@ Tu comercio ya arranca con un menú creado: solo tenés que cargarle los product
 
 Vinculá las credenciales de tus pasarelas de pago (Prisma Payway, Mercado Pago, Macro Click) en **Medios de Pago** → **Configuración de Procesadores**.
 
-> 🔗 Guías completas: [Configuración de Procesadores de Pago](/user-guide/configuracion-procesadores) · [Configuración de Banco Macro](/user-guide/configuracion-banco-macro)
+> 🔗 Guías completas: [Configuración de Procesadores de Pago](/user-guide/configuracion-procesadores)
 
 ---
 

@@ -24,7 +24,7 @@ La pantalla de **Permisos por Rol** es la matriz central de control de seguridad
 <div id="requisitos-para-empezar-a-usarlo"></div>
 
 - Tener la sesión iniciada con una cuenta que posea perfil **Administrador Principal**.
-- Tener creados los roles de usuario en el módulo de [Roles](/user-guide/roles).
+- Tener creados los roles de usuario (se explican en esta misma guía).
 
 ---
 
