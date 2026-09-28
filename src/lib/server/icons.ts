@@ -39,6 +39,7 @@ export const moduleIcons: Record<string, string> = {
 	descuentos: 'lucide:percent',
 	'nueva-reserva': 'lucide:calendar-plus',
 	'listado-de-reservas': 'lucide:calendar-range',
+	'grilla-de-reservas': 'lucide:calendar-days',
 
 	// 30-Medios-de-Pago
 	'configuracion-procesadores': 'lucide:sliders-horizontal',
