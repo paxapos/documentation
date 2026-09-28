@@ -43,37 +43,13 @@ El **Salón de Ventas** (también llamado **Adición**) es la pantalla donde se 
 
 Cada mesa pertenece a un mozo. Hay que hacer dos cosas: **crear el mozo** y darle un **usuario con PIN** para que pueda entrar al sistema.
 
-### Paso A: Crear el mozo
+### Paso A: Crear el mozo y sus ajustes
 
 <div id="paso-a-crear-el-mozo"></div>
 
-1. Andá a **Configuración** → **Tablas maestras** → **Mozos**.
-<!-- FOTO: 21-01-menu-mozos -->
-2. Tocá **Crear Mozo**.
-<!-- FOTO: 21-02-boton-crear-mozo -->
-3. Completá los datos:
-   - **Alias / Identificador:** el número o nombre corto con el que se ve el mozo en el salón (ejemplo: *1* o *Juan*). Es obligatorio.
-   - **Nombre** y **Apellido.**
-   - **Foto** (opcional).
-<!-- FOTO: 21-03-formulario-mozo -->
-4. Tocá **Crear**.
+Los mozos se cargan en **Ventas** → **Mozos**. Ahí elegís su alias, su punto de venta, su impresora y quién lo puede usar.
 
-### Paso B: Ajustes del mozo
-
-<div id="paso-b-ajustes-del-mozo"></div>
-
-Después de crearlo, tocá **Editar** en el mozo para ver todas sus opciones:
-
-| Opción | ¿Qué hace? |
-|---|---|
-| **Punto de Venta** | El punto de venta con el que se facturan las mesas de este mozo. |
-| **Servidor de Impresión (Paxaprinter)** | Qué Fiscalberry imprime las mesas de este mozo. Si lo dejás en **Usar el del comercio**, usa el general. |
-| **Perfil de Impresión** | Qué impresoras usa este mozo. Si lo dejás en **Usar perfil default del comercio**, usa el general. |
-| **Estado del Mozo (Activo)** | Si está apagado, el mozo **no aparece** en la lista para abrir mesas. |
-| **Mozo Veloz** | Abre las mesas **al instante**, sin pedir descripción ni cantidad de cubiertos. |
-| **Visibilidad por Usuarios** | Qué usuarios **pueden ver y usar** a este mozo. Si no marcás ninguno, lo ven **todos los usuarios**. |
-
-<!-- FOTO: 21-04-formulario-editar-mozo -->
+> 🔗 Guía completa, paso a paso y con fotos: [Cómo Cargar los Mozos](/user-guide/mozos)
 
 ### Paso C: Crear el usuario con PIN
 
@@ -83,7 +59,7 @@ Para que el mozo entre al sistema con un código numérico, creale un **usuario 
 
 > 🔗 Guía completa: [Usuarios con PIN](/user-guide/usuarios-con-pin)
 
-> 💡 **Consejo útil:** En **Visibilidad por Usuarios** (Paso B) marcá el usuario del mozo. Así cada mozo ve solo su columna de mesas.
+> 💡 **Consejo útil:** En **Visibilidad por Usuarios** del mozo marcá su usuario con PIN. Así cada mozo ve solo su columna de mesas.
 
 ---
 
