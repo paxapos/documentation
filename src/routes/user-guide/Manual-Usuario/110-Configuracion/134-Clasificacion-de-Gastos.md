@@ -2,57 +2,114 @@
 
 <div id="clasificacion-de-gastos"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas Sistema** → **Clasif. de Gastos**  
-> **¿Quién lo usa?:** Contadores y Administradores  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Clasificación de Gastos**. Está debajo del título **Tablas del Sistema**.
+> **¿Quién lo usa?:** Dueños, contadores y administradores
+
+> 🎯 **¿Para qué sirve esto?**
+> Es la lista de rubros en los que ordenás lo que gastás. Por ejemplo: *Mano de obra*, *Mercaderías* o *Gastos operativos*.
+> Cuando cargás una factura elegís uno de estos rubros. Después los reportes suman cuánto gastaste en cada uno.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Permite administrar el plan de cuentas de gastos y egresos del comercio (ejemplo: *Servicios Públicos, Alquileres, Mantenimiento, Papelería, Honorarios*):
-
-1. **Rubros de egreso:** Categorización de comprobantes para análisis de resultados contables.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Configuración de Plan de Cuentas de Gastos** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tu usuario tiene que tener el permiso de **Clasificaciones** en [Permisos por Rol](/user-guide/permisos-por-rol).
+- La lista es un árbol. Un rubro puede tener sub-rubros. Los sub-rubros se ven con un guion bajo adelante (_) por cada nivel.
+- El sistema ya trae una lista armada. Antes de crear un rubro nuevo, fijate si ya existe uno parecido.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 🧭 Para qué se usan las clasificaciones en el resto del sistema
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="para-que-se-usan-las-clasificaciones"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+- **Cargar una factura**: en [Factura Manual](/user-guide/factura-manual) elegís la **Clasificación (opcional)** del gasto. Si no elegís, queda como *Sin clasificar*.
+- **Ver y filtrar gastos**: en [Historial de Facturas](/user-guide/historial-de-facturas) y en los reportes de gastos, el total se reparte por clasificación.
+- **Tablero General**: el gráfico de gastos y la *Contribución Marginal* usan la clasificación. Mirá [Tablero General](/user-guide/tablero-general).
+- **Mercadería**: las facturas clasificadas como *MERCADERIAS* tratan sus renglones como mercadería.
+
+> 💡 **Consejo útil:** cuanto mejor clasificás las facturas, más claros salen los reportes.
+
+---
+
+## 📍 Paso 1: Entrá a la pantalla
+
+<div id="paso-1-entra-a-la-pantalla"></div>
+
+![Menú lateral con el grupo Configuración marcado en rojo](images/manual/110-configuracion/134-00a-menu-grupo-configuracion.png)
+
+1. En el menú de la izquierda, tocá **Configuración**.
+
+![Opción Clasificación de Gastos marcada en rojo, debajo del título Tablas del Sistema](images/manual/110-configuracion/134-00b-menu-opcion-clasificacion-de-gastos.png)
+
+2. Tocá **Clasificación de Gastos**.
+
+![Pantalla Listado de Clasificaciones con los botones Nueva Clasificación y Reordenar y los primeros renglones](images/manual/110-configuracion/134-01-pantalla-clasificaciones.png)
+
+Así se ve el **Listado de Clasificaciones**. Cada renglón es un rubro.
+
+- Algunos rubros tienen una etiqueta celeste: **Variable** o **Fijo**. Es el tipo de costo (Paso 3).
+- A la derecha de cada renglón hay un botón **Editar** y una flechita (Paso 4).
+- Arriba a la derecha están **Nueva Clasificación** y **Reordenar**.
+
+---
+
+## ➕ Paso 2: Tocá el botón "Nueva Clasificación"
+
+<div id="paso-2-toca-el-boton-nueva-clasificacion"></div>
+
+![Botón verde Nueva Clasificación marcado en rojo arriba a la derecha](images/manual/110-configuracion/134-02-donde-esta-boton-nueva-clasificacion.png)
+
+1. Buscá el botón verde **Nueva Clasificación**. Está arriba a la derecha.
+2. Tocalo una vez.
+3. Se abre la pantalla con los datos del rubro nuevo.
+
+> ⚠️ **Atención:** al lado está **Reordenar**. No lo toques para probar. Ordena todo el árbol por nombre en el momento, sin preguntar.
+
+---
+
+## 📝 Paso 3: Completá los datos
+
+<div id="paso-3-completa-los-datos"></div>
+
+![Datos de la nueva clasificación: Clasificación padre GASTOS OPERATIVOS, Nombre Limpieza Prueba y Tipo de costo No aplica](images/manual/110-configuracion/134-03-formulario-nueva-clasificacion.png)
+
+Usamos el ejemplo *Limpieza Prueba*. Los casilleros son:
+
+- **Clasificación padre**: elegí de qué rubro cuelga. Por ejemplo: *GASTOS OPERATIVOS*. Dejalo en *Seleccionar* si es un rubro principal.
+- **Nombre**: escribí el nombre. Por ejemplo: *Limpieza Prueba*.
+- **Tipo de costo**: elegí **Costo fijo** (no cambia con las ventas, como el alquiler) o **Costo variable** (crece con las ventas, como la mercadería). *No aplica* lo deja sin tipo.
+- **Guardar**: el botón azul abajo a la derecha. Guarda el rubro y vuelve a la pantalla anterior.
+
+> 💡 **Consejo útil:** el tipo de costo alimenta la *Contribución Marginal* del [Tablero General](/user-guide/tablero-general). Sin tipo, ese dato no se calcula.
+
+---
+
+## 💾 Paso 4: Guardá, editá o borrá
+
+<div id="paso-4-guarda-edita-o-borra"></div>
+
+1. Tocá **Guardar**. Ves un mensaje que dice que la clasificación se guardó.
+
+En cada renglón del listado del Paso 1:
+
+- **Editar**: abre los mismos casilleros del Paso 3. Cambiá lo que necesites y tocá **Guardar**. Dentro de la edición también aparece **- eliminar -**.
+- **La flechita** (al lado de Editar): abre un menú con la opción **Borrar**.
+
+> ⚠️ **Atención:** **Borrar** elimina el rubro y te pide confirmación. Las facturas que lo usaban quedan sin ese rubro. No borres rubros que ya usás.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nueva Clasificación** | Esquina superior | Registra una categoría de egreso. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Crear una categoría de gasto
-
-<div id="paso-1-crear-una-categoria-de-gasto"></div>
-
-1. Tocá **Nueva Clasificación**.
-2. Escribí el nombre (ejemplo: *Mantenimiento de Equipos*).
-3. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| No figura la categoría al cargar una factura. | La categoría está deshabilitada. | Verificá que la casilla **Activa** esté seleccionada. |
+| No encontrás la clasificación al cargar una factura. | Todavía no la creaste. | Creala acá y volvé a cargar la factura. |
+| **"Error al guardar la clasificación"** | Dejaste el **Nombre** vacío. | Escribí un nombre y guardá de nuevo. |
+| El rubro quedó en un lugar equivocado. | Elegiste otra **Clasificación padre**. | Tocá **Editar** y cambiá el padre. |
+| La *Contribución Marginal* no aparece en el Tablero. | Los rubros no tienen **Tipo de costo**. | Editá los rubros y elegí **Costo fijo** o **Costo variable**. |
+| No ves **Clasificación de Gastos** en el menú. | Tu usuario no tiene permiso. | Pedile a un administrador que revise [Permisos por Rol](/user-guide/permisos-por-rol). |

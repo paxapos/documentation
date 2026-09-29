@@ -293,7 +293,7 @@ Por ejemplo, una parte en efectivo y otra con tarjeta:
 
 Los medios de pago se dan de alta en **Configuración** → **Tablas maestras** → **Tipos de Pago**.
 
-> 🔗 Guías completas: [Tipos de Pago](/user-guide/tipos-de-pago) · [Cobros y pagos](/user-guide/cobros-y-pagos)
+> 🔗 Guías completas: [Medios de cobro](/user-guide/medios-de-cobro) · [Cobros y pagos](/user-guide/configuracion-general#cobros-y-pagos)
 
 ---
 

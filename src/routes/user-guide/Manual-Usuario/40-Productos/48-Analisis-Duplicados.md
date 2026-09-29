@@ -40,7 +40,7 @@ Arriba, un cuadro azul te dice cuántos grupos de duplicados encontró.
 
 ![Etiqueta gris IA OFF](images/manual/40-productos/48-22-aviso-ia-apagada.png)
 
-> 💡 **Consejo útil:** si ves **IA OFF**, la búsqueda se hace comparando letras y palabras. Con la inteligencia artificial encendida aparece además el botón **Refinar con IA**. Mirá [Inteligencia Artificial](/user-guide/inteligencia-artificial).
+> 💡 **Consejo útil:** si ves **IA OFF**, la búsqueda se hace comparando letras y palabras. Con la inteligencia artificial encendida aparece además el botón **Refinar con IA**. Mirá [Inteligencia Artificial](/user-guide/configuracion-general#inteligencia-artificial).
 
 ---
 
@@ -123,5 +123,5 @@ Arriba ves el producto elegido. Abajo, los productos parecidos. La columna **Sim
 |---|---|---|
 | **Dice "¡Excelente! No se encontraron productos duplicados"** | No hay productos con nombres parecidos. | No tenés que hacer nada. |
 | **Un grupo junta productos que son distintos** | El sistema compara solo los nombres. | No unifiques ese grupo. Revisá cada producto con **Duplicados**. |
-| **No aparece Refinar con IA** | La inteligencia artificial está apagada (**IA OFF**). | Encendela en [Inteligencia Artificial](/user-guide/inteligencia-artificial). |
+| **No aparece Refinar con IA** | La inteligencia artificial está apagada (**IA OFF**). | Encendela en [Inteligencia Artificial](/user-guide/configuracion-general#inteligencia-artificial). |
 | **Unifiqué dos productos que no eran iguales** | Unificar no se puede deshacer. | Creá de nuevo el producto que falta en el [Maestro de Productos](/user-guide/maestro-de-productos). |

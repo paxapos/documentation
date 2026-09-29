@@ -43,14 +43,12 @@ export const moduleIcons: Record<string, string> = {
 
 	// 30-Medios-de-Pago
 	'configuracion-procesadores': 'lucide:sliders-horizontal',
-	'instrumentos-pago-manual': 'lucide:hand-coins',
 	'terminales-payway': 'lucide:smartphone-nfc',
 	'transacciones-payway': 'lucide:arrow-left-right',
 	'reembolsos-payway': 'lucide:rotate-ccw',
 	'anulaciones-payway': 'lucide:ban',
 	'cierres-payway': 'lucide:lock-keyhole',
 	'transacciones-macroclick': 'lucide:mouse-pointer-click',
-	'tipos-de-pago': 'lucide:coins',
 	mercadopago: 'lucide:qr-code',
 
 	// 40-Productos
@@ -105,7 +103,6 @@ export const moduleIcons: Record<string, string> = {
 	'puntos-de-venta-pdv': 'lucide:monitor-dot',
 	'cierres-contables': 'lucide:file-check-2',
 	contabilidad: 'lucide:calculator',
-	'arca-y-facturacion': 'lucide:landmark',
 
 	// 80-Comandero
 	comandero: 'lucide:flame',
@@ -140,18 +137,11 @@ export const moduleIcons: Record<string, string> = {
 	'business-intelligence': 'lucide:brain-circuit',
 
 	// 110-Configuración
-	'info-fiscal-comercio': 'lucide:file-badge',
-	'arca-afip': 'lucide:landmark',
-	'config-del-comercio': 'lucide:store',
-	'config-avanzada': 'lucide:settings-2',
+	'configuracion-general': 'lucide:settings',
 	'archivos-multimedia': 'lucide:images',
 	'delvalle-qr': 'lucide:qr-code',
-	'modulo-delivery': 'lucide:bike',
-	'inteligencia-artificial': 'lucide:sparkles',
-	'configuracion-email': 'lucide:mail-search',
 	'configuracion-de-impresoras': 'lucide:printer-check',
 	impresoras: 'lucide:printer',
-	'configuracion-impresion': 'lucide:sliders',
 	'perfiles-de-impresion': 'lucide:sliders-horizontal',
 	'usuarios-del-sistema': 'lucide:users',
 	'usuarios-con-pin': 'lucide:key-round',
@@ -163,6 +153,7 @@ export const moduleIcons: Record<string, string> = {
 	'turnos-mesa': 'lucide:table-properties',
 	mozos: 'lucide:user-square-2',
 	'tipos-de-documento': 'lucide:id-card',
+	'medios-de-cobro': 'lucide:coins',
 	'clasificacion-de-gastos': 'lucide:folder-output',
 	'rubros-de-compras': 'lucide:folder-tree',
 	'centros-de-costo': 'lucide:building-2',

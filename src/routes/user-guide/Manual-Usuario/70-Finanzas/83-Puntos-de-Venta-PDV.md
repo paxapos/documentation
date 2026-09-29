@@ -17,7 +17,7 @@
 
 - Tener clave fiscal nivel 3 en ARCA.
 - Tu usuario tiene que tener el permiso de **Facturación AFIP** en [Permisos por Rol](/user-guide/permisos-por-rol).
-- Crear el punto de venta en ARCA primero. Seguí la guía [ARCA y Facturación Electrónica](/user-guide/arca-y-facturacion).
+- Crear el punto de venta en ARCA primero. Seguí la guía [ARCA y Facturación Electrónica](/user-guide/configuracion-general#tramite-en-arca).
 - Al terminar en ARCA te dan un PDF con el alta del punto de venta. Guardalo: tiene los datos que vas a cargar.
 
 ---
@@ -67,7 +67,7 @@ El primer casillero es el nombre. Después vienen los **Datos de la Empresa**:
 - **CUIT**: los 11 números, sin guiones. Por ejemplo: *20111111112*.
 - **Razón Social**: el nombre legal del comercio, como figura en ARCA.
 - **Domicilio Fiscal**: el domicilio fiscal, como figura en ARCA.
-- **Responsabilidad IVA**: tu condición frente al IVA. Si ya está cargada en los datos del comercio, aparece gris y no se cambia acá. Mirá [Información Fiscal del Comercio](/user-guide/info-fiscal-comercio).
+- **Responsabilidad IVA**: tu condición frente al IVA. Si ya está cargada en los datos del comercio, aparece gris y no se cambia acá. Mirá [Información Fiscal del Comercio](/user-guide/configuracion-general#fiscal-y-arca).
 - **Nombre Fantasia**: el nombre de fantasía que figura en el PDF.
 - **Concepto de la Factura**: **Productos**, **Servicios**, **Productos y Servicios** u **Otro**. Si tenés dudas, preguntale a tu contador.
 - **Ingresos brutos**: tu número de Ingresos Brutos.
@@ -113,7 +113,7 @@ Para facturar, tu comercio tiene que estar relacionado con PaxaPOS en ARCA. La p
 - **Todo bien:** debajo de **Número de Punto de Venta** aparece la lista **PDV disponibles en ARCA** con tu número.
 - **Falta algo:** arriba aparece el aviso rojo **Relación fiscal**, con el texto **No hay Puntos de Venta disponibles para el CUIT** y tu número de CUIT.
 
-Si ves el aviso, revisá que hayas hecho los tres pasos del trámite en ARCA. Están en [ARCA y Facturación Electrónica](/user-guide/arca-y-facturacion). Después avisá a soporte para que confirmemos la relación:
+Si ves el aviso, revisá que hayas hecho los tres pasos del trámite en ARCA. Están en [ARCA y Facturación Electrónica](/user-guide/configuracion-general#tramite-en-arca). Después avisá a soporte para que confirmemos la relación:
 
 - **WhatsApp:** <a href="{{WHATSAPP_URL}}?text=Hola!%20Ya%20cargu%C3%A9%20mi%20punto%20de%20venta%20en%20PaxaPOS.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20es:%20__" target="_blank">{{WHATSAPP_DISPLAY}}</a>
 
@@ -127,7 +127,7 @@ Mandanos el **CUIT** del comercio y el **número de punto de venta**.
 
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| **Aparece el aviso Relación fiscal** | La relación de tu comercio con PaxaPOS en ARCA todavía no está confirmada. | Revisá el [trámite en ARCA](/user-guide/arca-y-facturacion) y avisá a soporte (Paso 4). |
+| **Aparece el aviso Relación fiscal** | La relación de tu comercio con PaxaPOS en ARCA todavía no está confirmada. | Revisá el [trámite en ARCA](/user-guide/configuracion-general#tramite-en-arca) y avisá a soporte (Paso 4). |
 | **Mi número no aparece en PDV disponibles en ARCA** | En ARCA el punto de venta se creó con otro sistema, o todavía no está confirmado. | Revisá el **Sistema** en el PDF: tiene que ser de **Web Services**. Consultá a soporte. |
 | **No me deja guardar** | Falta un dato obligatorio. | Completá **CUIT**, **Razón Social**, **Domicilio Fiscal** y **Número de Punto de Venta**. |
 | **No puedo cambiar el CUIT ni la Razón Social** | Una vez guardado el punto de venta, esos datos quedan bloqueados. | Pedile ayuda a soporte. |

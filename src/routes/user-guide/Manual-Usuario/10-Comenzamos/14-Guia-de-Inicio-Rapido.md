@@ -38,10 +38,10 @@ Entrá a [www.paxapos.com](https://www.paxapos.com) con el usuario y contraseña
 Para poder facturar necesitás tus datos fiscales y un **punto de venta** de ARCA cargados en PaxaPOS:
 
 1. Cargá el CUIT, la razón social y el domicilio fiscal en **Configuración** → **Fiscal y ARCA**.
-2. Hacé el trámite en ARCA y creá tu punto de venta: [ARCA y Facturación Electrónica](/user-guide/arca-y-facturacion).
+2. Hacé el trámite en ARCA y creá tu punto de venta: [ARCA y Facturación Electrónica](/user-guide/configuracion-general#tramite-en-arca).
 3. Con el PDF del alta del punto de venta, cargalo en **Configuración** → **Fiscal y ARCA** → **Puntos de venta** y avisá a soporte.
 
-> 🔗 Guías completas: [Puntos de Venta](/user-guide/puntos-de-venta-pdv) · [Fiscal y ARCA](/user-guide/fiscal-y-arca)
+> 🔗 Guías completas: [Puntos de Venta](/user-guide/puntos-de-venta-pdv) · [Fiscal y ARCA](/user-guide/configuracion-general#fiscal-y-arca)
 
 ---
 
