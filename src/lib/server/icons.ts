@@ -125,7 +125,7 @@ export const moduleIcons: Record<string, string> = {
 	'agregar-personal': 'lucide:user-round-plus',
 
 	// 100-Reportes
-	'resumen-general': 'lucide:layout-dashboard',
+	'tablero-general': 'lucide:layout-dashboard',
 	'ventas-por-mozo': 'lucide:user-cog',
 	'ventas-por-tipo-de-pago': 'lucide:credit-card',
 	'reporte-anual': 'lucide:calendar-days',
