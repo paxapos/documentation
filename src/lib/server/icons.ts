@@ -108,12 +108,7 @@ export const moduleIcons: Record<string, string> = {
 	'arca-y-facturacion': 'lucide:landmark',
 
 	// 80-Comandero
-	'comandas-activas': 'lucide:flame',
-	'comandas-terminadas': 'lucide:check-circle-2',
-	'sectores-de-comanda': 'lucide:split',
-	'puestos-de-comanda': 'lucide:monitor-smartphone',
-	'estados-de-comanda': 'lucide:activity',
-	'estados-de-items': 'lucide:list-checks',
+	comandero: 'lucide:flame',
 	'kitchen-display-system-kds': 'lucide:tv-minimal',
 	kds: 'lucide:tv-minimal',
 

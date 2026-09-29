@@ -1,0 +1,308 @@
+# Comandero (pantalla de cocina)
+
+<div id="comandero"></div>
+
+> **¿Dónde está en el sistema?:** Menú principal → **Comandero** → **Comandas Activas**, **Comandas Terminadas**, **Sectores**, **Puestos**, **Estados de Comanda** y **Estados de Items**
+> **¿Quién lo usa?:** Cocina, barra y encargados. La configuración la hace un administrador.
+
+> 🎯 **¿Para qué sirve esto?**
+> El Comandero es la pantalla de la cocina y la barra. Ahí aparece lo que los mozos comandan en el [Salón de Ventas](/user-guide/salon-de-ventas), sin papel.
+> La cocina marca cada plato a medida que lo prepara, y el mozo sabe cuándo retirarlo.
+
+---
+
+## 🔑 Antes de empezar
+
+<div id="antes-de-empezar"></div>
+
+- El módulo Comandero tiene que estar activo en tu comercio. Si no ves **Comandero** en el menú, pedíselo a soporte.
+- Para usar **Comandas Activas** y **Comandas Terminadas** necesitás el permiso de comandas. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
+- **Sectores**, **Puestos** y los estados los ve solo un administrador.
+- Conviene tener una pantalla o tablet en la cocina, con el navegador abierto en **Comandas Activas**.
+
+---
+
+## 🧩 Cómo se arma el Comandero
+
+<div id="como-se-arma-el-comandero"></div>
+
+Se configura una sola vez, en este orden:
+
+1. **Sectores**: las zonas del local donde se prepara. Por ejemplo: *Cocina* y *Barra*.
+2. **Puestos**: los lugares de trabajo de cada sector. Por ejemplo: *Parrilla* y *Pastas*, dentro de *Cocina*.
+3. **Cada producto** se asigna a un puesto. Así el sistema sabe a qué pantalla mandarlo.
+4. **Estados de Comanda**: los pasos de un pedido completo. Por ejemplo: *Confirmada*, *Lista* y *Entregada*.
+5. **Estados de Items**: los pasos de cada plato en cada puesto. Por ejemplo: *Pendiente*, *Elaborando* y *Listo*.
+
+Después, todos los días, la cocina usa **Comandas Activas**. Lo que ya se entregó queda en **Comandas Terminadas**.
+
+> 💡 **Consejo útil:** la pantalla de cocina y la impresora de comandas son cosas distintas. Podés usar una, la otra o las dos.
+
+---
+
+## 🗺️ Paso 1: Creá los sectores
+
+<div id="paso-1-crea-los-sectores"></div>
+
+1. En el menú de la izquierda, tocá **Comandero** y después **Sectores**.
+2. Tocá el botón verde **Crear Sector**, arriba a la derecha.
+3. En **Nombre**, escribí el nombre del sector. Por ejemplo: *Cocina*.
+4. Tocá el botón verde **Guardar**.
+5. El sector aparece en la lista.
+
+En cada renglón de la lista tenés dos botones:
+
+- **Editar**: cambiá el nombre del sector.
+- **Borrar**: el botón rojo. Borra el sector. El sistema te pregunta si estás seguro.
+
+Si todavía no creaste ninguno, la pantalla dice **No hay sectores creados.**
+
+---
+
+## 🍳 Paso 2: Creá los puestos
+
+<div id="paso-2-crea-los-puestos"></div>
+
+1. En el menú **Comandero**, tocá **Puestos**.
+2. Tocá el botón verde **Crear Puesto**, arriba a la derecha.
+3. Completá los datos:
+   - **Nombre**: cómo se llama el puesto. Por ejemplo: *Parrilla*.
+   - **Capacidad** y **Unidad de Medida**: cuánto puede preparar a la vez. No hace falta completarlos.
+   - **Sector**: tocá el sector al que pertenece. Por ejemplo: *Cocina*.
+4. Tocá el botón verde **Guardar**.
+5. El puesto aparece en la lista, con sus estados de trabajo ya armados.
+
+La lista muestra el **Nombre**, la **Capacidad**, la **Unidad de Medida**, el **Sector** y los **Estados** del puesto. Tocá un estado para cambiarlo.
+
+A la derecha de cada puesto tenés estos botones:
+
+- **Editar**: cambiá los datos del puesto.
+- **Borrar**: el botón rojo. Borra el puesto.
+- **Crear Estados**: aparece si el puesto no tiene estados. Le arma los estados de siempre.
+- **Agregar Estado**: aparece si el puesto ya tiene estados. Suma un paso nuevo (Paso 5).
+
+---
+
+## 🏷️ Paso 3: Asigná cada producto a su puesto
+
+<div id="paso-3-asigna-cada-producto-a-su-puesto"></div>
+
+El puesto se elige en cada producto del menú, no en la categoría.
+
+1. Abrí el producto para editarlo. Mirá cómo en [Menú](/user-guide/menu).
+2. Buscá el casillero **Puesto (KDS)**.
+3. Elegí el puesto donde se prepara. Por ejemplo: *Parrilla*. Con **-- Sin asignar --** no va a ningún puesto.
+4. Si además querés que salga en papel, tildá la impresora en **¿Dónde se imprime la comanda?**.
+5. Guardá el producto.
+
+> 💡 **Consejo útil:** los sabores o variantes también pueden tener su propio **Puesto**. Mirá [Variantes](/user-guide/variantes-grupo-sabores).
+
+---
+
+## 🔁 Paso 4: Revisá los estados de la comanda
+
+<div id="paso-4-revisa-los-estados-de-la-comanda"></div>
+
+Una comanda es el pedido completo de una mesa. Pasa por varios estados, de izquierda a derecha.
+
+1. En el menú **Comandero**, tocá **Estados de Comanda**.
+2. Vas a ver el cuadro **Flujo de Estados de Comanda**. El sistema trae estos:
+   - **Borrador**: el mozo todavía no la mandó. No se ve en la cocina.
+   - **Confirmada**: el mozo la mandó. Aparece en la cocina.
+   - **Lista**: la cocina la terminó. Espera que el mozo la retire.
+   - **Entregada**: el mozo la retiró. Sale de la pantalla de cocina.
+
+Cada estado dice su lugar. Por ejemplo: *2 de 4*. Sobre cada uno tenés:
+
+- El **lápiz** ✏️: cambiá el estado.
+- La **cruz** ✖: borrá el estado. No aparece en **Borrador**, **Confirmada** ni **Entregada**, porque el sistema los necesita.
+
+Para sumar un paso, tocá **Agregar Estado**, arriba a la derecha. Completá:
+
+- **Nombre**: por ejemplo, *Marchando*.
+- **Estado anterior** y **Estado posterior**: entre qué estados va.
+- **Colores**: el color con el que se ve.
+
+Después tocá **Guardar**.
+
+> ⚠️ **Atención:** si ves el aviso **Estados desconectados del flujo**, hay estados sueltos. Editalos para ubicarlos entre dos estados, o borralos.
+
+---
+
+## 🍽️ Paso 5: Revisá los estados de cada plato
+
+<div id="paso-5-revisa-los-estados-de-cada-plato"></div>
+
+Cada plato, dentro de la comanda, también avanza por pasos. Cada puesto tiene los suyos.
+
+1. En el menú **Comandero**, tocá **Estados de Items**.
+2. Vas a ver **Flujo de Estados por Puesto**: un recuadro por puesto con sus pasos.
+3. Los pasos de siempre son **Pendiente** → **Elaborando** → **Listo** → **Saliendo**.
+
+En cada recuadro tenés:
+
+- **Agregar estado**: el botón verde. Suma un paso a ese puesto.
+- El **lápiz** ✏️ de cada paso: cambialo.
+- La **cruz** ✖ de cada paso: borralo.
+
+Al agregar o cambiar un paso completás:
+
+- **Nombre**: elegilo de la lista. Por ejemplo: *En preparación*.
+- **Estado anterior**: el paso que va antes. Si lo dejás vacío, va primero.
+- **Color del estado**: gris, naranja, verde, azul, rojo, amarillo o violeta. Abajo ves cómo queda.
+
+Tocá **Guardar**. Si el puesto no tiene pasos, aparece en **Puestos sin flujo de estados configurado**. Tocá **Crear flujo por defecto** para armarle los de siempre.
+
+---
+
+## 📺 Paso 6: Abrí la pantalla de cocina
+
+<div id="paso-6-abri-la-pantalla-de-cocina"></div>
+
+1. En el menú **Comandero**, tocá **Comandas Activas**.
+2. Se abre la pantalla de cocina, a pantalla completa y sin el menú.
+
+Arriba, de izquierda a derecha, tenés:
+
+- **KDS**: el logo. Te lleva al inicio del sistema.
+- El botón de la **lista**: cambia entre ver comandas y ver platos (Paso 9).
+- **Todos los sectores**: elegí un sector para ver solo lo suyo.
+- **Todos los puestos**: aparece después de elegir un sector. Elegí tu puesto. Por ejemplo: *Parrilla*.
+- El **reloj**.
+- El **engranaje** ⚙: sonido, voz, tamaño y más (Paso 10).
+
+> 💡 **Consejo útil:** en la pantalla de cada puesto, elegí su sector y su puesto. Así la parrilla ve solo lo de la parrilla.
+
+Si no hay pedidos, dice **No hay comandas activas**. Si elegiste un filtro, dice **No hay comandas para este filtro** y aparece **Ver todas**.
+
+---
+
+## 🧾 Paso 7: Leé una comanda
+
+<div id="paso-7-lee-una-comanda"></div>
+
+Cada pedido es una tarjeta. Las nuevas se suman al final.
+
+- **Arriba a la izquierda**: el mozo, hace cuánto llegó (por ejemplo, *hace 5 minutos*) y el número de comanda.
+- **Arriba a la derecha**: el número de mesa, en grande, y el estado de la comanda. Por ejemplo: **CONFIRMADA**.
+- **El color de arriba** cambia con el estado: azul si está confirmada, naranja si está en marcha y verde si está lista.
+- **La observación** del pedido, si el mozo escribió una.
+- **ENTRADAS** y **PRINCIPALES**: los platos, separados.
+
+Cada plato muestra:
+
+- La **cantidad**, en un círculo.
+- El **nombre** y sus **sabores** o variantes. Por ejemplo: *2x Muzzarella*.
+- La **observación** del plato. Por ejemplo: *sin sal*.
+- **Arriba a la derecha**, un punto de color con su paso. Por ejemplo: **PENDIENTE** en gris.
+
+Cuando llega un pedido nuevo, suena un aviso y una voz lee la mesa y los platos.
+
+---
+
+## 👆 Paso 8: Avanzá los platos y la comanda
+
+<div id="paso-8-avanza-los-platos-y-la-comanda"></div>
+
+### Cada plato
+
+1. Tocá el plato para pasarlo al paso siguiente. Por ejemplo: de **PENDIENTE** a **ELABORANDO**.
+2. Volvé a tocarlo cuando avance otra vez. Por ejemplo: a **LISTO**.
+3. En el último paso ya no cambia más.
+
+> ⚠️ **Atención:** desde la pantalla no se puede volver un plato para atrás. Tocalo con cuidado.
+
+Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se ven más apagados.
+
+### La comanda entera
+
+- Abajo de la tarjeta está la barra **CAMBIAR A** con el paso siguiente. Por ejemplo: **CAMBIAR A LISTA ▸**. Tocala para avanzar la comanda.
+- Cuando todos los platos terminan, aparece la barra verde **TODOS LISTOS — MARCAR COMO** y el paso. Tocala para pasar la comanda a ese paso.
+
+### Cuando el mozo retira
+
+1. Con la comanda en **Lista**, tocá la barra de abajo.
+2. Se abre la ventanita **Mesa** y el número: **¿Confirma que el mozo retiró esta comanda?**
+3. Tocá **Retirada**. La comanda pasa a **Entregada** y sale de la pantalla.
+4. Si te equivocaste, tocá **Cancelar**.
+
+> ⚠️ **Atención:** si mantenés apretada una tarjeta 3 segundos, la comanda pasa directo a **Entregada** y sale de la pantalla.
+
+### Los tres puntitos ⋮
+
+Algunos usuarios ven **⋮** arriba a la derecha de la tarjeta. Abre la lista de estados. Tocá uno para pasar la comanda directo a ese estado. Si elegís **Borrador** o **Entregada**, sale de la pantalla.
+
+---
+
+## 🧮 Paso 9: Mirá los platos juntos
+
+<div id="paso-9-mira-los-platos-juntos"></div>
+
+Sirve para cocinar varios iguales de una vez. Por ejemplo: todas las *Pizza Muzzarella* pendientes.
+
+1. Tocá el botón de la **lista**, arriba a la izquierda.
+2. La pantalla muestra una columna por paso. Por ejemplo: **Pendiente (3)** y **Elaborando (1)**.
+3. Cada tarjeta junta un mismo plato: la cantidad total, el nombre, las mesas que lo pidieron y hace cuánto espera el más viejo.
+4. Tocá una tarjeta para avanzar ese plato.
+5. Si lo pidieron varias mesas, se abre **¿Cuál mover?**. Tocá **Todos** o elegí una mesa. Con **Cancelar** no cambia nada.
+
+Si el plato tiene receta, aparece un **libro** 📖. Tocalo para ver la receta.
+
+Los platos que ya están listos no aparecen en esta vista. Para volver a ver las comandas, tocá el mismo botón. La pantalla se acuerda de la última vista que usaste.
+
+---
+
+## ⚙️ Paso 10: Ajustá la pantalla
+
+<div id="paso-10-ajusta-la-pantalla"></div>
+
+Tocá el **engranaje** ⚙, arriba a la derecha. Se abre un panel con:
+
+- **Conectado**: la pantalla recibe los pedidos. Si dice **Sin conexión**, revisá internet.
+- **Sonido**: prende o apaga el aviso y la voz.
+- **Pantalla completa**: ocupa toda la pantalla.
+- **Voz / Idioma**: elegí la voz que lee los pedidos. Tocá **Probar voz** para escucharla.
+- **−** y **+**: achicá o agrandá todo. El número del medio dice el tamaño. Por ejemplo: *100%*. El botón de las flechas lo vuelve a la normalidad.
+- **Entregar todo**: el botón rojo, debajo de **Zona peligrosa**.
+
+> ⚠️ **Atención:** **Entregar todo** marca como entregadas todas las comandas que se ven en pantalla. Pide confirmar dos veces y escribir la palabra **ENTREGAR**. Usalo solo al cerrar el turno.
+
+Cada pantalla recuerda su sonido, su voz y su tamaño.
+
+---
+
+## ✅ Paso 11: Buscá una comanda entregada
+
+<div id="paso-11-busca-una-comanda-entregada"></div>
+
+1. En el menú **Comandero**, tocá **Comandas Terminadas**.
+2. Se abre **Histórico de Comandas**. Arriba dice cuántas comandas hay y en qué página estás.
+3. Para buscar, completá lo que necesites:
+   - **N° Mesa...**: el número de mesa.
+   - El selector de mozo: elegí uno, o dejá **Todos**.
+   - **Producto...**: parte del nombre de un plato. Por ejemplo: *Muzzarella*.
+4. Tocá **Buscar**.
+5. Abajo aparecen las comandas entregadas, de la más nueva a la más vieja. Hay 30 por página.
+
+Para pasar de página, usá **‹ Anterior** y **Siguiente ›**. Para sacar los filtros, tocá **Limpiar filtros**.
+
+Si una comanda se entregó por error, tocá **‹ Atrás** en su tarjeta. Vuelve a **Lista** y reaparece en **Comandas Activas**.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| **El pedido no aparece en la cocina** | El mozo no lo mandó: sigue en **Borrador**. | Pedile al mozo que lo comande desde el [Salón de Ventas](/user-guide/salon-de-ventas). |
+| **Un plato no aparece en mi puesto** | El producto no tiene **Puesto (KDS)**, o tiene otro. | Editá el producto y elegí el puesto correcto (Paso 3). |
+| **Veo platos de otros puestos** | La pantalla está en **Todos los sectores** o **Todos los puestos**. | Elegí tu sector y tu puesto arriba (Paso 6). |
+| **Las bebidas salen impresas en la cocina** | El producto tiene tildada la impresora de la cocina. | En el producto, revisá **¿Dónde se imprime la comanda?** (Paso 3). |
+| **No suena nada cuando llega un pedido** | El sonido está apagado, o el navegador bloqueó el audio. | Tocá el engranaje y prendé **Sonido**. Tocá la pantalla una vez para habilitar el audio. |
+| **Dice Sin conexión** | La pantalla perdió internet. | Revisá la conexión. Cuando vuelva, los pedidos se actualizan solos. |
+| **Toqué un plato por error** | Desde la pantalla los platos no vuelven para atrás. | Avisale a un encargado. Seguí con el paso que corresponde. |
+| **Entregué una comanda por error** | Se tocó **Retirada**, **Entregar todo** o se mantuvo apretada la tarjeta. | Buscala en **Comandas Terminadas** y tocá **‹ Atrás** (Paso 11). |
+| **No puedo cambiar nada en la pantalla** | Tu usuario no tiene permiso para cambiar comandas. | Pedile a un administrador que revise [Permisos por Rol](/user-guide/permisos-por-rol). |
+| **No puedo borrar un estado de comanda** | **Borrador**, **Confirmada** y **Entregada** los necesita el sistema. | Dejalos. Podés agregar otros estados entre ellos. |
