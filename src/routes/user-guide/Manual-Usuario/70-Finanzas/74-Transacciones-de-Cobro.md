@@ -22,7 +22,7 @@ Muestra el detalle completo de todos los ingresos de dinero registrados por vent
 
 <div id="requisitos-para-empezar-a-usarlo"></div>
 
-- Tener el permiso de **Auditoría y Reimpresión de Cobranzas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tener alguno de estos dos permisos configurado en [Permisos por Rol](/user-guide/permisos-por-rol): **Configuración de Cobros** (módulo Sistema) o **Contabilidad / Gastos** (módulo Finanzas).
 
 ---
 
