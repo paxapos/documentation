@@ -156,24 +156,26 @@
 		</div>
 
 		<main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12">
-			<div class="mb-4 lg:hidden">
+			<!-- Mobile/tablet: Temario y "En esta página" en una barra fija bajo el header -->
+			<div
+				class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"
+			>
 				<button
 					bind:this={menuButton}
 					type="button"
 					onclick={() => (sidebarOpen = true)}
-					class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-white"
+					class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600"
 					aria-expanded={sidebarOpen}
 				>
-					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
 					Temario
 				</button>
+				<ArticleTableOfContents headings={data.tableOfContents} mobile />
 			</div>
 
 			<div class="w-full">
-				<ArticleTableOfContents headings={data.tableOfContents} mobile />
-
 				<article>
 					<header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800">
 						<p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p>
