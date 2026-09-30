@@ -15,7 +15,7 @@
 
 <div id="antes-de-empezar"></div>
 
-- Tu usuario tiene que tener el permiso de cobros en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tu usuario tiene que tener alguno de estos dos permisos en [Permisos por Rol](/user-guide/permisos-por-rol): **Configuración de Cobros** (módulo Sistema) o **Contabilidad / Gastos** (módulo Finanzas).
 - Para corregir el medio de un cobro, también necesitás el permiso de cajero.
 - Esta pantalla **no reimprime tickets**. Para eso mirá [Histórico de Mesas](/user-guide/historico-de-mesas).
 
