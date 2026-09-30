@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas  
+ ¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón"/> <meta name="keywords" content="salon de ventas, paxapos, cómo usar el salón de ventas (adición), tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Cómo Usar el Salón de Ventas (Adición) - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas  
+ ¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Cómo Usar el Salón de Ventas (Adición) - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Cómo Usar el Salón de Ventas (Adición) - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas  
+ ¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Cómo Usar el Salón de Ventas (Adición) - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas  \n ¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Cómo Usar el Salón de Ventas (Adición) - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/salon-de-ventas" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Cómo Usar el Salón de Ventas (Adición)</a></li><li><a href="../user-guide/caja-rapida" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Usar la Caja Rápida (Registradora)</a></li><li><a href="../user-guide/mozos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Cargar los Mozos</a></li><li><a href="../user-guide/clientes" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Gestionar los Clientes</a></li><li><a href="../user-guide/descuentos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Configurar Descuentos</a></li><li><a href="../user-guide/nueva-reserva" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Cargar una Nueva Reserva</a></li><li><a href="../user-guide/listado-de-reservas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Usar el Listado de Reservas</a></li><li><a href="../user-guide/grilla-de-reservas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Usar la Grilla de Reservas</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Cómo Usar el Salón de Ventas (Adición)</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: salon-de-ventas</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="salon-de-ventas"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Ventas</strong> → <strong>Salón de Ventas</strong><br><strong>¿Quién lo usa?:</strong> Mozos, Cajeros y Encargados de Salón</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🎯 ¿Qué es y para qué sirve esta pantalla?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-es-y-para-que-sirve-esta-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+
+<p>El <strong>Salón de Ventas</strong> (también llamado <strong>Adición</strong>) es la pantalla donde se atiende cada mesa, de principio a fin:</p>
+<ol>
+<li><strong>Abrir la mesa</strong> y elegir el mozo que la atiende.</li>
+<li><strong>Cargar los productos</strong> que pide el cliente y <strong>comandar</strong> (mandar el pedido a cocina o barra).</li>
+<li><strong>Cerrar la mesa</strong> cuando piden la cuenta e imprimir el <strong>remito</strong> (la cuenta).</li>
+<li><strong>Cobrar</strong> con uno o varios medios de pago.</li>
+<li><strong>Emitir la factura</strong> con CAE cuando el cliente la necesita (por ejemplo, una <strong>Factura A</strong>).</li>
+<li>Hacer el <strong>Checkout</strong> para <strong>liberar la mesa</strong>.</li>
+</ol>
+<blockquote>
+<p>🧭 <strong>El recorrido completo de una mesa es:</strong>
+Abrir mesa → Cargar productos → <strong>Comandar</strong> → <strong>Cerrar</strong> → Imprimir remito → <strong>Cobrar</strong> → <strong>Emitir</strong> factura (solo si hace falta) → <strong>Checkout</strong></p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Requisitos para empezar a usarlo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="requisitos-para-empezar-a-usarlo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="requisitos-para-empezar-a-usarlo"></div>
+
+<ul>
+<li>Tener al menos un <strong>mozo</strong> creado (ver <a href="#antes-de-empezar-configurar-los-mozos">Antes de empezar: configurar los mozos</a>).</li>
+<li>Tener productos cargados en el menú (ver <a href="/user-guide/menu">Menú de Productos</a>).</li>
+<li>Para cobrar en efectivo o con tarjeta cargada a mano, tener la <strong>caja abierta</strong> (ver <a href="#paso-2-abri-la-caja">Paso 2: Abrí la caja</a>).</li>
+<li>Para imprimir comandas, remitos y facturas, tener <strong>Fiscalberry</strong> abierto en la computadora del local (ver <a href="/user-guide/impresoras">Gestión de Impresoras</a>).</li>
+<li>Para facturar electrónicamente, tener el <strong>punto de venta</strong> cargado (ver <a href="/user-guide/puntos-de-venta-pdv">Puntos de Venta</a>).</li>
+</ul>
+<hr>
+<h2 class="relative">
+                👥 Antes de empezar: configurar los mozos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar-configurar-los-mozos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar-configurar-los-mozos"></div>
+
+<p>Cada mesa pertenece a un mozo. Hay que hacer dos cosas: <strong>crear el mozo</strong> y darle un <strong>usuario con PIN</strong> para que pueda entrar al sistema.</p>
+<h3 class="relative">
+                Paso A: Crear el mozo y sus ajustes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-crear-el-mozo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-a-crear-el-mozo"></div>
+
+<p>Los mozos se cargan en <strong>Ventas</strong> → <strong>Mozos</strong>. Ahí elegís su alias, su punto de venta, su impresora y quién lo puede usar.</p>
+<blockquote>
+<p>🔗 Guía completa, paso a paso y con fotos: <a href="/user-guide/mozos">Cómo Cargar los Mozos</a></p>
+</blockquote>
+<h3 class="relative">
+                Paso C: Crear el usuario con PIN
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-c-crear-el-usuario-con-pin"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-c-crear-el-usuario-con-pin"></div>
+
+<p>Para que el mozo entre al sistema con un código numérico, creale un <strong>usuario con PIN</strong> en <strong>Configuración</strong> → <strong>Usuarios y acceso</strong> → <strong>Usuarios con PIN</strong>.</p>
+<blockquote>
+<p>🔗 Guía completa: <a href="/user-guide/usuarios-con-pin">Usuarios con PIN</a></p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> En <strong>Visibilidad por Usuarios</strong> del mozo marcá su usuario con PIN. Así cada mozo ve solo su columna de mesas.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📑 Guía Paso a Paso: ¿Cómo se usa?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="guia-paso-a-paso-como-se-usa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="guia-paso-a-paso-como-se-usa"></div>
+
+<h3 class="relative">
+                Paso 1: Entrá al Salón de Ventas
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-al-salon-de-ventas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-1-entra-al-salon-de-ventas"></div>
+
+<p><img src="/images/manual/20-ventas/21-00a-menu-grupo-ventas.png" alt="Grupo Ventas del menú lateral, marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Ventas</strong>. Se despliegan sus opciones.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/21-00b-menu-opcion-adicionar.png" alt="Opción Salón de Ventas dentro del grupo Ventas, marcada en rojo"></p>
+<ol start="2">
+<li>Tocá <strong>Salón de Ventas</strong>.</li>
+<li>Vas a ver las mesas abiertas, agrupadas por mozo.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/01-salon-listado-mesas.png" alt="Listado de mesas del salón con mesas abiertas en rojo y el botón Abrir Mesa"></p>
+<p>En esta pantalla vas a ver:</p>
+<ul>
+<li>El botón <strong>&quot;+ Abrir Mesa&quot;</strong> para crear una mesa nueva.</li>
+<li>Las mesas abiertas de cada mozo, con su <strong>número</strong>, <strong>importe</strong> y <strong>hora de apertura</strong>.</li>
+<li>Arriba a la derecha, cuántas <strong>Mesas</strong> y <strong>Cubiertos</strong> hay activos.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                Paso 2: Abrí la caja
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-abri-la-caja"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-2-abri-la-caja"></div>
+
+<p>Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón <strong>Abrir Caja</strong>.</p>
+<p><img src="/images/manual/20-ventas/21-205-donde-esta-boton-abrir-caja.png" alt="Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Abrir Caja</strong>. Está arriba, en el encabezado del salón.</li>
+<li>Si tenés más de una caja, elegí cuál abrir y tocá <strong>Continuar</strong>.</li>
+<li>Se abre la ventana <strong>Iniciar Caja</strong>.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/21-207-dialogo-iniciar-caja.png" alt="Ventana Iniciar Caja con la lista de billetes"></p>
+<p><img src="/images/manual/20-ventas/21-208-campo-billetes.png" alt="Casillero para la cantidad de billetes"></p>
+<ol start="4">
+<li>Al lado de cada billete, escribí cuántos hay en la caja. Por ejemplo: <em>2</em> billetes de <em>$ 1.000</em>.</li>
+<li>Arriba se suma solo el <strong>Total en Caja</strong>.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/21-209-boton-confirmar-abrir-caja.png" alt="Botón verde Abrir Caja para confirmar"></p>
+<ol start="6">
+<li>Tocá el botón verde <strong>Abrir Caja</strong>.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/21-210-caja-abierta.png" alt="Mensaje Caja Abierta con el importe inicial"></p>
+<ol start="7">
+<li>Vas a ver el mensaje <strong>¡Caja Abierta!</strong>. Ahora en el encabezado está el botón para cerrarla.</li>
+</ol>
+<blockquote>
+<p>💡 Si no ves el botón <strong>Abrir Caja</strong>, la caja ya está abierta. Seguí con el paso siguiente.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 3: Abrí una mesa
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-abri-una-mesa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-3-abri-una-mesa"></div>
+
+<p><img src="/images/manual/20-ventas/21-42-donde-esta-boton-abrir.png" alt="Listado de mesas con el botón Abrir Mesa marcado en rojo"></p>
+<ol>
+<li><p>Tocá <strong>&quot;+ Abrir Mesa&quot;</strong>.</p>
+</li>
+<li><p>Si te lo pide, elegí el <strong>mozo</strong> que va a atender la mesa.</p>
+</li>
+</ol>
+<!-- FOTO: 21-05-elegir-mozo -->
+<ol start="3">
+<li>Escribí la <strong>descripción</strong> de la mesa (por ejemplo, el número: <em>12</em>) y la <strong>cantidad de cubiertos</strong>.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/17-salon-dialogo-abrir-mesa.png" alt="Diálogo para abrir una mesa nueva con cantidad de cubiertos"></p>
+<ol start="4">
+<li>Tocá <strong>Guardar</strong>. Se abre la mesa, vacía.</li>
+</ol>
+<p><img src="/images/manual/20-ventas/18-salon-mesa-abierta.png" alt="Mesa recién abierta, sin productos cargados"></p>
+<blockquote>
+<p>💡 Si el mozo tiene activado <strong>Mozo Veloz</strong>, la mesa se abre directo, sin pedir descripción ni cubiertos.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 4: Cargá los productos y comandá
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-carga-los-productos-y-comanda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-4-carga-los-productos-y-comanda"></div>
+
+<p><img src="/images/manual/20-ventas/21-148-donde-esta-boton-nueva-comanda.png" alt="Mesa abierta con el botón Nueva Comanda marcado en rojo"></p>
+<ol>
+<li><p>Dentro de la mesa, tocá <strong>&quot;+ Nueva Comanda&quot;</strong>.</p>
+</li>
+<li><p>Se abre el catálogo. Buscá o tocá los productos que pidió el cliente. Cada uno se suma a la lista con su precio.</p>
+</li>
+</ol>
+<p><img src="/images/manual/20-ventas/20-salon-catalogo-productos.png" alt="Catálogo de productos del menú activo"></p>
+<p>Si no buscás, tocá primero la <strong>categoría</strong> (por ejemplo, <strong>Pizzas</strong>). Vas a ver sus productos.</p>
+<p><img src="/images/manual/20-ventas/21-211-boton-categoria.png" alt="Botón azul de la categoría Pizzas en el catálogo"></p>
+<p>Tocá el producto. Se suma a la comanda de la izquierda.</p>
+<p><img src="/images/manual/20-ventas/21-197-boton-producto.png" alt="Botón de un producto del catálogo"></p>
+<ol start="3">
+<li>Si el producto tiene <strong>variantes</strong> (por ejemplo, gustos de helado), elegí las opciones que te pide</li>
+</ol>
+<!-- FOTO: 21-06-elegir-variantes -->
+<p><img src="/images/manual/20-ventas/21-198-donde-esta-boton-comandar.png" alt="Catálogo con el botón Comandar marcado en rojo"></p>
+<ol start="4">
+<li><p>Cuando terminaste, tocá <strong>Comandar</strong>. El pedido sale impreso en cocina o barra.</p>
+</li>
+<li><p>La mesa vuelve a su vista principal, con la comanda cargada.</p>
+</li>
+</ol>
+<p><img src="/images/manual/20-ventas/23-salon-comanda-cargada.png" alt="Mesa con la comanda cargada tras comandar"></p>
+<blockquote>
+<p>💡 Si el cliente pide algo más, repetí este paso: cada vez que tocás <strong>Comandar</strong> sale una comanda nueva.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 5: Asigná un cliente (o creá uno nuevo)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-asigna-un-cliente-o-crea-uno-nuevo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-5-asigna-un-cliente-o-crea-uno-nuevo"></div>
+
+<p>Asignar un cliente es <strong>opcional</strong>, pero es <strong>obligatorio para hacer una Factura A</strong>. Lo podés hacer <strong>en cualquier momento</strong>, mientras la mesa esté abierta o después de cerrarla.</p>
+<ol>
+<li><p>Dentro de la mesa, tocá <strong>⚙️ Opciones</strong> (arriba a la derecha).
+<img src="/images/manual/20-ventas/21-115-donde-esta-boton-opciones.png" alt="Mesa con el botón Opciones marcado en rojo"></p>
+</li>
+<li><p>Tocá <strong>Cliente</strong>.</p>
+</li>
+</ol>
+<!-- FOTO: 21-08-opcion-cliente -->
+<ol start="3">
+<li>Se abre la ventana <strong>Seleccionar Cliente</strong>. Escribí el nombre, teléfono o email en el buscador.</li>
+</ol>
+<!-- FOTO: 21-09-buscar-cliente -->
+<ol start="4">
+<li><strong>Si el cliente aparece</strong>, tocalo y queda asignado a la mesa.</li>
+<li><strong>Si el cliente no existe</strong>, tocá <strong>Crear Cliente</strong>. Se abre otra ventana con el formulario:</li>
+</ol>
+<!-- FOTO: 21-10-boton-crear-cliente -->
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>¿Qué poner?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Teléfono (whatsapp)</strong></td>
+<td>El teléfono del cliente.</td>
+</tr>
+<tr>
+<td><strong>Nombre/Razón Social</strong></td>
+<td>El nombre de la persona o de la empresa.</td>
+</tr>
+<tr>
+<td><strong>Domicilio de Facturación</strong></td>
+<td>La dirección que va en la factura.</td>
+</tr>
+<tr>
+<td><strong>E-mail</strong></td>
+<td>Para mandarle la factura por correo.</td>
+</tr>
+<tr>
+<td><strong>Tipo de documento</strong> y <strong>Número</strong></td>
+<td>Para una Factura A: elegí <strong>CUIT</strong> y escribí los 11 números.</td>
+</tr>
+<tr>
+<td><strong>Descuento</strong></td>
+<td>Si el cliente tiene un descuento fijo. Si no, dejá <strong>Sin Descuento</strong>.</td>
+</tr>
+<tr>
+<td><strong>Fecha</strong></td>
+<td>Cumpleaños o inicio de actividades (opcional).</td>
+</tr>
+<tr>
+<td><strong>Condición IVA</strong></td>
+<td><strong>Define si la factura sale A o B.</strong> Para una Factura A elegí <strong>Responsable Inscripto</strong>.</td>
+</tr>
+<tr>
+<td><strong>Observación</strong></td>
+<td>Una nota sobre el cliente (opcional).</td>
+</tr>
+</tbody></table></div>
+<!-- FOTO: 21-11-formulario-crear-cliente -->
+
+<ol start="6">
+<li>Guardá el cliente. Queda asignado a la mesa y su nombre aparece en el costado de la mesa.</li>
+</ol>
+<blockquote>
+<p>🔗 Para ver y editar todos tus clientes: <a href="/user-guide/clientes">Clientes</a></p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 6: Cerrá la mesa e imprimí el remito
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-cerra-la-mesa-e-imprimi-el-remito"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-6-cerra-la-mesa-e-imprimi-el-remito"></div>
+
+<p>Cuando el cliente pide la cuenta:</p>
+<p><img src="/images/manual/20-ventas/21-119-donde-esta-boton-cerrar.png" alt="Mesa con el botón Cerrar marcado en rojo"></p>
+<ol>
+<li><p>Tocá <strong>🔒 Cerrar</strong>, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.</p>
+</li>
+<li><p>La pantalla cambia a la vista <strong>🧾 Remito</strong>: el detalle de todo lo consumido, con el total.</p>
+</li>
+</ol>
+<p><img src="/images/manual/20-ventas/25-salon-remito.png" alt="Vista de Remito con el detalle de la mesa cerrada"></p>
+<p><img src="/images/manual/20-ventas/21-154-donde-esta-boton-imprimir.png" alt="Remito con el botón Imprimir marcado en rojo"></p>
+<ol start="3">
+<li>Si el remito <strong>no salió impreso solo</strong>, tocá <strong>Imprimir</strong> en la sección <strong>🖨️ Remito</strong>.</li>
+</ol>
+<blockquote>
+<p>💡 El <strong>remito</strong> es la cuenta para el cliente: dice <strong>&quot;Documento no válido como factura&quot;</strong>. No es una factura.
+Desde la misma sección también podés <strong>Descargar Img</strong> o <strong>Descargar PDF A4</strong> para mandarlo por WhatsApp o mail.</p>
+</blockquote>
+<p><img src="/images/manual/20-ventas/21-121-donde-esta-boton-reabrir.png" alt="Mesa cerrada con el botón Reabrir marcado en rojo"></p>
+<blockquote>
+<p>🔓 ¿Cerraste por error? Tocá <strong>🔓 Reabrir</strong> y la mesa vuelve a estar abierta.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 7: Cobrá la mesa
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-cobra-la-mesa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-7-cobra-la-mesa"></div>
+
+<ol>
+<li><p>En la vista <strong>Remito</strong>, tocá <strong>💰 Cobrar</strong>.
+<img src="/images/manual/20-ventas/21-150-donde-esta-boton-cobrar.png" alt="Remito con el botón Cobrar marcado en rojo"></p>
+</li>
+<li><p>Se abre la pantalla de cobro con el <strong>Total a cobrar</strong>. En <strong>¿Cómo paga?</strong> elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá <strong>Más métodos de pago...</strong>
+<img src="/images/manual/20-ventas/28-salon-pantalla-cobro.png" alt="Pantalla de cobro con el total y los medios de pago"></p>
+</li>
+</ol>
+<p><img src="/images/manual/20-ventas/21-200-boton-metodo-efectivo.png" alt="Botón del medio de pago Efectivo">
+3. <strong>Si paga en efectivo:</strong> en <strong>💵 ¿Con cuánto paga el cliente?</strong> escribí el billete que te dio. El sistema te muestra el <strong>Vuelto</strong>. Si paga justo, tocá <strong>✓ Monto exacto</strong>.
+<img src="/images/manual/20-ventas/21-201-campo-con-cuanto-paga.png" alt="Casillero Con cuánto paga el cliente"></p>
+<p><img src="/images/manual/20-ventas/21-202-pantalla-cobro-efectivo.png" alt="Pantalla de cobro con Efectivo elegido y el vuelto calculado"></p>
+<p><img src="/images/manual/20-ventas/21-203-boton-confirmar-cobro.png" alt="Botón verde para confirmar el cobro"></p>
+<ol start="4">
+<li>Tocá el botón verde de abajo para confirmar el pago.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> El botón verde cobra de verdad. Revisá la mesa y el total antes de tocarlo. Si te equivocaste de mesa, tocá <strong>← Volver a la mesa</strong> y no se cobra nada.</p>
+</blockquote>
+<p><img src="/images/manual/20-ventas/21-204-boton-volver-a-la-mesa.png" alt="Botón Volver a la mesa"></p>
+<h4 class="relative">
+                Si paga con varios medios
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="si-paga-con-varios-medios"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h4>
+            <div id="si-paga-con-varios-medios"></div>
+
+<p>Por ejemplo, una parte en efectivo y otra con tarjeta:</p>
+<ol>
+<li>Cobrá la primera parte: elegí el medio y escribí <strong>solo ese monto</strong>.</li>
+<li>La mesa queda con saldo pendiente y el botón cambia a <strong>💰 Agregar Pago</strong>.</li>
+</ol>
+<!-- FOTO: 21-15-boton-agregar-pago -->
+<ol start="3">
+<li>Tocá <strong>Agregar Pago</strong> y cobrá lo que falta con el otro medio.</li>
+<li>Repetí hasta que no falte nada.</li>
+</ol>
+<blockquote>
+<p>💡 Si varias personas pagan su parte, en la pantalla de cobro podés usar <strong>✂️ Dividir</strong> para repartir el total y cargar un pago por cada uno (<strong>➕ Agregar Otro Pago</strong>).</p>
+</blockquote>
+<h4 class="relative">
+                ¿No aparece el medio de pago que necesitás?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="no-aparece-el-medio-de-pago"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h4>
+            <div id="no-aparece-el-medio-de-pago"></div>
+
+<p>Los medios de pago se dan de alta en <strong>Configuración</strong> → <strong>Tablas maestras</strong> → <strong>Tipos de Pago</strong>.</p>
+<blockquote>
+<p>🔗 Guías completas: <a href="/user-guide/medios-de-cobro">Medios de cobro</a> · <a href="/user-guide/configuracion-general#cobros-y-pagos">Cobros y pagos</a></p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 8: Emití la factura (solo si hace falta)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-emiti-la-factura"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-8-emiti-la-factura"></div>
+
+<p>Si el cliente te pide factura, hacela desde la sección <strong>🧾 Factura Fiscal</strong> de la vista <strong>Remito</strong>:</p>
+<ul>
+<li><strong>Emitir:</strong> hace la factura electrónica en ARCA (con <strong>CAE</strong>).</li>
+<li><strong>Imprimir:</strong> hace la factura y además la imprime por <strong>Fiscalberry</strong>.</li>
+</ul>
+<!-- FOTO: 21-16-seccion-factura-fiscal -->
+
+<h4 class="relative">
+                Cómo hacer una Factura A
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="como-hacer-una-factura-a"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h4>
+            <div id="como-hacer-una-factura-a"></div>
+
+<ol>
+<li>Asigná a la mesa un cliente con <strong>Condición IVA: Responsable Inscripto</strong> y su <strong>CUIT</strong> (ver <a href="#paso-5-asigna-un-cliente-o-crea-uno-nuevo">Paso 5</a>).</li>
+<li>En <strong>🧾 Factura Fiscal</strong>, tocá <strong>Imprimir</strong> o <strong>Emitir</strong>.</li>
+<li>Como el cliente es <strong>Responsable Inscripto</strong>, la factura sale <strong>A</strong>. Si la mesa no tiene cliente, o el cliente no es Responsable Inscripto, la factura <strong>no</strong> sale A.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> Revisá bien el cliente antes de facturar. Una factura mal hecha no se borra: hay que anularla con una <strong>Nota de Crédito</strong>.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                Paso 9: Hacé el Checkout (liberá la mesa)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-9-hace-el-checkout"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-9-hace-el-checkout"></div>
+
+<ol>
+<li>Cuando la mesa está <strong>totalmente cobrada</strong>, en la vista <strong>Remito</strong> aparece el botón <strong>👋 Checkout</strong>.</li>
+</ol>
+<!-- FOTO: 21-17-boton-checkout -->
+<ol start="2">
+<li>Tocalo. La mesa se <strong>libera</strong> y sale del listado del salón.</li>
+</ol>
+<blockquote>
+<p>⚠️ Si la mesa tiene <strong>pagos pendientes de aprobación</strong>, el sistema te avisa antes. Podés <strong>✓ Aprobar pagos primero</strong> o <strong>⚠️ Checkout de todos modos</strong> (en ese caso, esos pagos <strong>no</strong> se cuentan como cobrados).</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚙️ Más opciones dentro de una mesa
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="mas-opciones-dentro-de-una-mesa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="mas-opciones-dentro-de-una-mesa"></div>
+
+<p>El botón <strong>⚙️ Opciones</strong> (arriba a la derecha de la mesa) tiene más acciones. Algunas solo funcionan con la mesa <strong>abierta</strong>:</p>
+<p><img src="/images/manual/20-ventas/21-199-dialogo-opciones.png" alt="Ventana Opciones de la mesa"></p>
+<ul>
+<li><strong>👤 Mozo:</strong> cambiá el mozo de la mesa. Se abre una ventana para <strong>Seleccionar</strong> el nuevo mozo.</li>
+<li><strong>✏️ Número:</strong> cambiá la descripción o número de la mesa.</li>
+<li><strong>🍽️ Cubiertos:</strong> cambiá la cantidad de cubiertos.</li>
+<li><strong>Cliente:</strong> asigná o cambiá el cliente (ver <a href="#paso-5-asigna-un-cliente-o-crea-uno-nuevo">Paso 5</a>).</li>
+<li><strong>Observación:</strong> una nota sobre la mesa.</li>
+<li><strong>💸 Descuento:</strong> aplicá un descuento a la mesa.</li>
+<li><strong>✂️ Dividir Mesa:</strong> separá consumos en otra mesa.</li>
+<li><strong>🗑️ Anular Mesa:</strong> anula la mesa completa.</li>
+</ul>
+<blockquote>
+<p>ℹ️ Si no ves alguno de estos botones, tu usuario no tiene permiso para usarlo. Pedíselo al administrador.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-hacer-si-algo-no-sale-bien-problemas-comunes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué te pasa?</th>
+<th>¿Por qué puede ser?</th>
+<th>¿Cómo se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>El mozo no aparece para abrir la mesa.</td>
+<td>El mozo está <strong>inactivo</strong>, o tu usuario no está en su <strong>Visibilidad por Usuarios</strong>.</td>
+<td>Editá el mozo en <strong>Configuración → Tablas maestras → Mozos</strong> y revisá esas dos opciones.</td>
+</tr>
+<tr>
+<td>No sale impresa la comanda ni el remito.</td>
+<td><strong>Fiscalberry</strong> está cerrado, o la impresora está apagada o sin papel.</td>
+<td>Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver <a href="/user-guide/impresoras">Gestión de Impresoras</a>.</td>
+</tr>
+<tr>
+<td>El sistema no me deja cobrar en efectivo.</td>
+<td>No hay un <strong>arqueo de caja abierto</strong>.</td>
+<td>Tocá <strong>Abrir Caja</strong> arriba en el salón (ver <a href="#paso-2-abri-la-caja">Paso 2</a>) y volvé a cobrar.</td>
+</tr>
+<tr>
+<td>No aparece el botón <strong>Cobrar</strong>.</td>
+<td>La mesa todavía está abierta, o ya está totalmente cobrada.</td>
+<td>Primero tocá <strong>🔒 Cerrar</strong>. Si ya está cobrada, tocá <strong>👋 Checkout</strong>.</td>
+</tr>
+<tr>
+<td>No aparece el botón <strong>Checkout</strong>.</td>
+<td>Todavía falta cobrar una parte.</td>
+<td>Tocá <strong>💰 Agregar Pago</strong> y cobrá lo que falta.</td>
+</tr>
+<tr>
+<td>La factura no salió <strong>A</strong> y el cliente la quería A.</td>
+<td>El cliente no tiene la <strong>Condición IVA: Responsable Inscripto</strong>, o no estaba asignado a la mesa.</td>
+<td>Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa.</td>
+</tr>
+<tr>
+<td>La mesa sigue ocupada pero la gente ya se fue.</td>
+<td>Faltó cobrar o hacer el <strong>Checkout</strong>.</td>
+<td>Abrí la mesa, cobrá lo que falte y tocá <strong>👋 Checkout</strong>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/21-salon-de-ventas.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#que-es-y-para-que-sirve-esta-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué es y para qué sirve esta pantalla?</a></li><li><a href="#requisitos-para-empezar-a-usarlo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Requisitos para empezar a usarlo</a></li><li><a href="#antes-de-empezar-configurar-los-mozos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar: configurar los mozos</a></li><li><a href="#paso-a-crear-el-mozo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso A: Crear el mozo y sus ajustes</a></li><li><a href="#paso-c-crear-el-usuario-con-pin" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso C: Crear el usuario con PIN</a></li><li><a href="#guia-paso-a-paso-como-se-usa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guía Paso a Paso: ¿Cómo se usa?</a></li><li><a href="#paso-1-entra-al-salon-de-ventas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá al Salón de Ventas</a></li><li><a href="#paso-2-abri-la-caja" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Abrí la caja</a></li><li><a href="#paso-3-abri-una-mesa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Abrí una mesa</a></li><li><a href="#paso-4-carga-los-productos-y-comanda" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Cargá los productos y comandá</a></li><li><a href="#paso-5-asigna-un-cliente-o-crea-uno-nuevo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Asigná un cliente (o creá uno nuevo)</a></li><li><a href="#paso-6-cerra-la-mesa-e-imprimi-el-remito" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Cerrá la mesa e imprimí el remito</a></li><li><a href="#paso-7-cobra-la-mesa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Cobrá la mesa</a></li><li><a href="#paso-8-emiti-la-factura" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Emití la factura (solo si hace falta)</a></li><li><a href="#paso-9-hace-el-checkout" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 9: Hacé el Checkout (liberá la mesa)</a></li><li><a href="#mas-opciones-dentro-de-una-mesa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Más opciones dentro de una mesa</a></li><li><a href="#que-hacer-si-algo-no-sale-bien-problemas-comunes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué hacer si algo no sale bien? (Problemas Comunes)</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)",content:"\u003Cdiv id=\"salon-de-ventas\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Ventas\u003C/strong> → \u003Cstrong>Salón de Ventas\u003C/strong>\u003Cbr>\u003Cstrong>¿Quién lo usa?:\u003C/strong> Mozos, Cajeros y Encargados de Salón\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🎯 ¿Qué es y para qué sirve esta pantalla?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-es-y-para-que-sirve-esta-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-es-y-para-que-sirve-esta-pantalla\">\u003C/div>\n\n\u003Cp>El \u003Cstrong>Salón de Ventas\u003C/strong> (también llamado \u003Cstrong>Adición\u003C/strong>) es la pantalla donde se atiende cada mesa, de principio a fin:\u003C/p>\n\u003Col>\n\u003Cli>\u003Cstrong>Abrir la mesa\u003C/strong> y elegir el mozo que la atiende.\u003C/li>\n\u003Cli>\u003Cstrong>Cargar los productos\u003C/strong> que pide el cliente y \u003Cstrong>comandar\u003C/strong> (mandar el pedido a cocina o barra).\u003C/li>\n\u003Cli>\u003Cstrong>Cerrar la mesa\u003C/strong> cuando piden la cuenta e imprimir el \u003Cstrong>remito\u003C/strong> (la cuenta).\u003C/li>\n\u003Cli>\u003Cstrong>Cobrar\u003C/strong> con uno o varios medios de pago.\u003C/li>\n\u003Cli>\u003Cstrong>Emitir la factura\u003C/strong> con CAE cuando el cliente la necesita (por ejemplo, una \u003Cstrong>Factura A\u003C/strong>).\u003C/li>\n\u003Cli>Hacer el \u003Cstrong>Checkout\u003C/strong> para \u003Cstrong>liberar la mesa\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>🧭 \u003Cstrong>El recorrido completo de una mesa es:\u003C/strong>\nAbrir mesa → Cargar productos → \u003Cstrong>Comandar\u003C/strong> → \u003Cstrong>Cerrar\u003C/strong> → Imprimir remito → \u003Cstrong>Cobrar\u003C/strong> → \u003Cstrong>Emitir\u003C/strong> factura (solo si hace falta) → \u003Cstrong>Checkout\u003C/strong>\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Requisitos para empezar a usarlo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"requisitos-para-empezar-a-usarlo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"requisitos-para-empezar-a-usarlo\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tener al menos un \u003Cstrong>mozo\u003C/strong> creado (ver \u003Ca href=\"#antes-de-empezar-configurar-los-mozos\">Antes de empezar: configurar los mozos\u003C/a>).\u003C/li>\n\u003Cli>Tener productos cargados en el menú (ver \u003Ca href=\"/user-guide/menu\">Menú de Productos\u003C/a>).\u003C/li>\n\u003Cli>Para cobrar en efectivo o con tarjeta cargada a mano, tener la \u003Cstrong>caja abierta\u003C/strong> (ver \u003Ca href=\"#paso-2-abri-la-caja\">Paso 2: Abrí la caja\u003C/a>).\u003C/li>\n\u003Cli>Para imprimir comandas, remitos y facturas, tener \u003Cstrong>Fiscalberry\u003C/strong> abierto en la computadora del local (ver \u003Ca href=\"/user-guide/impresoras\">Gestión de Impresoras\u003C/a>).\u003C/li>\n\u003Cli>Para facturar electrónicamente, tener el \u003Cstrong>punto de venta\u003C/strong> cargado (ver \u003Ca href=\"/user-guide/puntos-de-venta-pdv\">Puntos de Venta\u003C/a>).\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👥 Antes de empezar: configurar los mozos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar-configurar-los-mozos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar-configurar-los-mozos\">\u003C/div>\n\n\u003Cp>Cada mesa pertenece a un mozo. Hay que hacer dos cosas: \u003Cstrong>crear el mozo\u003C/strong> y darle un \u003Cstrong>usuario con PIN\u003C/strong> para que pueda entrar al sistema.\u003C/p>\n\u003Ch3 class=\"relative\">\n                Paso A: Crear el mozo y sus ajustes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-crear-el-mozo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-a-crear-el-mozo\">\u003C/div>\n\n\u003Cp>Los mozos se cargan en \u003Cstrong>Ventas\u003C/strong> → \u003Cstrong>Mozos\u003C/strong>. Ahí elegís su alias, su punto de venta, su impresora y quién lo puede usar.\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔗 Guía completa, paso a paso y con fotos: \u003Ca href=\"/user-guide/mozos\">Cómo Cargar los Mozos\u003C/a>\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                Paso C: Crear el usuario con PIN\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-c-crear-el-usuario-con-pin\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-c-crear-el-usuario-con-pin\">\u003C/div>\n\n\u003Cp>Para que el mozo entre al sistema con un código numérico, creale un \u003Cstrong>usuario con PIN\u003C/strong> en \u003Cstrong>Configuración\u003C/strong> → \u003Cstrong>Usuarios y acceso\u003C/strong> → \u003Cstrong>Usuarios con PIN\u003C/strong>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔗 Guía completa: \u003Ca href=\"/user-guide/usuarios-con-pin\">Usuarios con PIN\u003C/a>\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> En \u003Cstrong>Visibilidad por Usuarios\u003C/strong> del mozo marcá su usuario con PIN. Así cada mozo ve solo su columna de mesas.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📑 Guía Paso a Paso: ¿Cómo se usa?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"guia-paso-a-paso-como-se-usa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"guia-paso-a-paso-como-se-usa\">\u003C/div>\n\n\u003Ch3 class=\"relative\">\n                Paso 1: Entrá al Salón de Ventas\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-al-salon-de-ventas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-1-entra-al-salon-de-ventas\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-00a-menu-grupo-ventas.png\" alt=\"Grupo Ventas del menú lateral, marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Ventas\u003C/strong>. Se despliegan sus opciones.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-00b-menu-opcion-adicionar.png\" alt=\"Opción Salón de Ventas dentro del grupo Ventas, marcada en rojo\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Salón de Ventas\u003C/strong>.\u003C/li>\n\u003Cli>Vas a ver las mesas abiertas, agrupadas por mozo.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/01-salon-listado-mesas.png\" alt=\"Listado de mesas del salón con mesas abiertas en rojo y el botón Abrir Mesa\">\u003C/p>\n\u003Cp>En esta pantalla vas a ver:\u003C/p>\n\u003Cul>\n\u003Cli>El botón \u003Cstrong>&quot;+ Abrir Mesa&quot;\u003C/strong> para crear una mesa nueva.\u003C/li>\n\u003Cli>Las mesas abiertas de cada mozo, con su \u003Cstrong>número\u003C/strong>, \u003Cstrong>importe\u003C/strong> y \u003Cstrong>hora de apertura\u003C/strong>.\u003C/li>\n\u003Cli>Arriba a la derecha, cuántas \u003Cstrong>Mesas\u003C/strong> y \u003Cstrong>Cubiertos\u003C/strong> hay activos.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 2: Abrí la caja\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-abri-la-caja\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-2-abri-la-caja\">\u003C/div>\n\n\u003Cp>Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón \u003Cstrong>Abrir Caja\u003C/strong>.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-205-donde-esta-boton-abrir-caja.png\" alt=\"Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Abrir Caja\u003C/strong>. Está arriba, en el encabezado del salón.\u003C/li>\n\u003Cli>Si tenés más de una caja, elegí cuál abrir y tocá \u003Cstrong>Continuar\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la ventana \u003Cstrong>Iniciar Caja\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-207-dialogo-iniciar-caja.png\" alt=\"Ventana Iniciar Caja con la lista de billetes\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-208-campo-billetes.png\" alt=\"Casillero para la cantidad de billetes\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Al lado de cada billete, escribí cuántos hay en la caja. Por ejemplo: \u003Cem>2\u003C/em> billetes de \u003Cem>$ 1.000\u003C/em>.\u003C/li>\n\u003Cli>Arriba se suma solo el \u003Cstrong>Total en Caja\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-209-boton-confirmar-abrir-caja.png\" alt=\"Botón verde Abrir Caja para confirmar\">\u003C/p>\n\u003Col start=\"6\">\n\u003Cli>Tocá el botón verde \u003Cstrong>Abrir Caja\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-210-caja-abierta.png\" alt=\"Mensaje Caja Abierta con el importe inicial\">\u003C/p>\n\u003Col start=\"7\">\n\u003Cli>Vas a ver el mensaje \u003Cstrong>¡Caja Abierta!\u003C/strong>. Ahora en el encabezado está el botón para cerrarla.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 Si no ves el botón \u003Cstrong>Abrir Caja\u003C/strong>, la caja ya está abierta. Seguí con el paso siguiente.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 3: Abrí una mesa\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-abri-una-mesa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-3-abri-una-mesa\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-42-donde-esta-boton-abrir.png\" alt=\"Listado de mesas con el botón Abrir Mesa marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>\u003Cp>Tocá \u003Cstrong>&quot;+ Abrir Mesa&quot;\u003C/strong>.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>Si te lo pide, elegí el \u003Cstrong>mozo\u003C/strong> que va a atender la mesa.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-05-elegir-mozo -->\n\u003Col start=\"3\">\n\u003Cli>Escribí la \u003Cstrong>descripción\u003C/strong> de la mesa (por ejemplo, el número: \u003Cem>12\u003C/em>) y la \u003Cstrong>cantidad de cubiertos\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/17-salon-dialogo-abrir-mesa.png\" alt=\"Diálogo para abrir una mesa nueva con cantidad de cubiertos\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>. Se abre la mesa, vacía.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/18-salon-mesa-abierta.png\" alt=\"Mesa recién abierta, sin productos cargados\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 Si el mozo tiene activado \u003Cstrong>Mozo Veloz\u003C/strong>, la mesa se abre directo, sin pedir descripción ni cubiertos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 4: Cargá los productos y comandá\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-carga-los-productos-y-comanda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-4-carga-los-productos-y-comanda\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-148-donde-esta-boton-nueva-comanda.png\" alt=\"Mesa abierta con el botón Nueva Comanda marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>\u003Cp>Dentro de la mesa, tocá \u003Cstrong>&quot;+ Nueva Comanda&quot;\u003C/strong>.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>Se abre el catálogo. Buscá o tocá los productos que pidió el cliente. Cada uno se suma a la lista con su precio.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/20-salon-catalogo-productos.png\" alt=\"Catálogo de productos del menú activo\">\u003C/p>\n\u003Cp>Si no buscás, tocá primero la \u003Cstrong>categoría\u003C/strong> (por ejemplo, \u003Cstrong>Pizzas\u003C/strong>). Vas a ver sus productos.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-211-boton-categoria.png\" alt=\"Botón azul de la categoría Pizzas en el catálogo\">\u003C/p>\n\u003Cp>Tocá el producto. Se suma a la comanda de la izquierda.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-197-boton-producto.png\" alt=\"Botón de un producto del catálogo\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Si el producto tiene \u003Cstrong>variantes\u003C/strong> (por ejemplo, gustos de helado), elegí las opciones que te pide\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-06-elegir-variantes -->\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-198-donde-esta-boton-comandar.png\" alt=\"Catálogo con el botón Comandar marcado en rojo\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>\u003Cp>Cuando terminaste, tocá \u003Cstrong>Comandar\u003C/strong>. El pedido sale impreso en cocina o barra.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>La mesa vuelve a su vista principal, con la comanda cargada.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/23-salon-comanda-cargada.png\" alt=\"Mesa con la comanda cargada tras comandar\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 Si el cliente pide algo más, repetí este paso: cada vez que tocás \u003Cstrong>Comandar\u003C/strong> sale una comanda nueva.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 5: Asigná un cliente (o creá uno nuevo)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-asigna-un-cliente-o-crea-uno-nuevo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-5-asigna-un-cliente-o-crea-uno-nuevo\">\u003C/div>\n\n\u003Cp>Asignar un cliente es \u003Cstrong>opcional\u003C/strong>, pero es \u003Cstrong>obligatorio para hacer una Factura A\u003C/strong>. Lo podés hacer \u003Cstrong>en cualquier momento\u003C/strong>, mientras la mesa esté abierta o después de cerrarla.\u003C/p>\n\u003Col>\n\u003Cli>\u003Cp>Dentro de la mesa, tocá \u003Cstrong>⚙️ Opciones\u003C/strong> (arriba a la derecha).\n\u003Cimg src=\"/images/manual/20-ventas/21-115-donde-esta-boton-opciones.png\" alt=\"Mesa con el botón Opciones marcado en rojo\">\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>Tocá \u003Cstrong>Cliente\u003C/strong>.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-08-opcion-cliente -->\n\u003Col start=\"3\">\n\u003Cli>Se abre la ventana \u003Cstrong>Seleccionar Cliente\u003C/strong>. Escribí el nombre, teléfono o email en el buscador.\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-09-buscar-cliente -->\n\u003Col start=\"4\">\n\u003Cli>\u003Cstrong>Si el cliente aparece\u003C/strong>, tocalo y queda asignado a la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Si el cliente no existe\u003C/strong>, tocá \u003Cstrong>Crear Cliente\u003C/strong>. Se abre otra ventana con el formulario:\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-10-boton-crear-cliente -->\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Campo\u003C/th>\n\u003Cth>¿Qué poner?\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>Teléfono (whatsapp)\u003C/strong>\u003C/td>\n\u003Ctd>El teléfono del cliente.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Nombre/Razón Social\u003C/strong>\u003C/td>\n\u003Ctd>El nombre de la persona o de la empresa.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Domicilio de Facturación\u003C/strong>\u003C/td>\n\u003Ctd>La dirección que va en la factura.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>E-mail\u003C/strong>\u003C/td>\n\u003Ctd>Para mandarle la factura por correo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Tipo de documento\u003C/strong> y \u003Cstrong>Número\u003C/strong>\u003C/td>\n\u003Ctd>Para una Factura A: elegí \u003Cstrong>CUIT\u003C/strong> y escribí los 11 números.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Descuento\u003C/strong>\u003C/td>\n\u003Ctd>Si el cliente tiene un descuento fijo. Si no, dejá \u003Cstrong>Sin Descuento\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Fecha\u003C/strong>\u003C/td>\n\u003Ctd>Cumpleaños o inicio de actividades (opcional).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Condición IVA\u003C/strong>\u003C/td>\n\u003Ctd>\u003Cstrong>Define si la factura sale A o B.\u003C/strong> Para una Factura A elegí \u003Cstrong>Responsable Inscripto\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Observación\u003C/strong>\u003C/td>\n\u003Ctd>Una nota sobre el cliente (opcional).\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003C!-- FOTO: 21-11-formulario-crear-cliente -->\n\n\u003Col start=\"6\">\n\u003Cli>Guardá el cliente. Queda asignado a la mesa y su nombre aparece en el costado de la mesa.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>🔗 Para ver y editar todos tus clientes: \u003Ca href=\"/user-guide/clientes\">Clientes\u003C/a>\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 6: Cerrá la mesa e imprimí el remito\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-cerra-la-mesa-e-imprimi-el-remito\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-6-cerra-la-mesa-e-imprimi-el-remito\">\u003C/div>\n\n\u003Cp>Cuando el cliente pide la cuenta:\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-119-donde-esta-boton-cerrar.png\" alt=\"Mesa con el botón Cerrar marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>\u003Cp>Tocá \u003Cstrong>🔒 Cerrar\u003C/strong>, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>La pantalla cambia a la vista \u003Cstrong>🧾 Remito\u003C/strong>: el detalle de todo lo consumido, con el total.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/25-salon-remito.png\" alt=\"Vista de Remito con el detalle de la mesa cerrada\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-154-donde-esta-boton-imprimir.png\" alt=\"Remito con el botón Imprimir marcado en rojo\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Si el remito \u003Cstrong>no salió impreso solo\u003C/strong>, tocá \u003Cstrong>Imprimir\u003C/strong> en la sección \u003Cstrong>🖨️ Remito\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 El \u003Cstrong>remito\u003C/strong> es la cuenta para el cliente: dice \u003Cstrong>&quot;Documento no válido como factura&quot;\u003C/strong>. No es una factura.\nDesde la misma sección también podés \u003Cstrong>Descargar Img\u003C/strong> o \u003Cstrong>Descargar PDF A4\u003C/strong> para mandarlo por WhatsApp o mail.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-121-donde-esta-boton-reabrir.png\" alt=\"Mesa cerrada con el botón Reabrir marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔓 ¿Cerraste por error? Tocá \u003Cstrong>🔓 Reabrir\u003C/strong> y la mesa vuelve a estar abierta.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 7: Cobrá la mesa\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-cobra-la-mesa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-7-cobra-la-mesa\">\u003C/div>\n\n\u003Col>\n\u003Cli>\u003Cp>En la vista \u003Cstrong>Remito\u003C/strong>, tocá \u003Cstrong>💰 Cobrar\u003C/strong>.\n\u003Cimg src=\"/images/manual/20-ventas/21-150-donde-esta-boton-cobrar.png\" alt=\"Remito con el botón Cobrar marcado en rojo\">\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>Se abre la pantalla de cobro con el \u003Cstrong>Total a cobrar\u003C/strong>. En \u003Cstrong>¿Cómo paga?\u003C/strong> elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá \u003Cstrong>Más métodos de pago...\u003C/strong>\n\u003Cimg src=\"/images/manual/20-ventas/28-salon-pantalla-cobro.png\" alt=\"Pantalla de cobro con el total y los medios de pago\">\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-200-boton-metodo-efectivo.png\" alt=\"Botón del medio de pago Efectivo\">\n3. \u003Cstrong>Si paga en efectivo:\u003C/strong> en \u003Cstrong>💵 ¿Con cuánto paga el cliente?\u003C/strong> escribí el billete que te dio. El sistema te muestra el \u003Cstrong>Vuelto\u003C/strong>. Si paga justo, tocá \u003Cstrong>✓ Monto exacto\u003C/strong>.\n\u003Cimg src=\"/images/manual/20-ventas/21-201-campo-con-cuanto-paga.png\" alt=\"Casillero Con cuánto paga el cliente\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-202-pantalla-cobro-efectivo.png\" alt=\"Pantalla de cobro con Efectivo elegido y el vuelto calculado\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-203-boton-confirmar-cobro.png\" alt=\"Botón verde para confirmar el cobro\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Tocá el botón verde de abajo para confirmar el pago.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> El botón verde cobra de verdad. Revisá la mesa y el total antes de tocarlo. Si te equivocaste de mesa, tocá \u003Cstrong>← Volver a la mesa\u003C/strong> y no se cobra nada.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-204-boton-volver-a-la-mesa.png\" alt=\"Botón Volver a la mesa\">\u003C/p>\n\u003Ch4 class=\"relative\">\n                Si paga con varios medios\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"si-paga-con-varios-medios\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h4>\n            \u003Cdiv id=\"si-paga-con-varios-medios\">\u003C/div>\n\n\u003Cp>Por ejemplo, una parte en efectivo y otra con tarjeta:\u003C/p>\n\u003Col>\n\u003Cli>Cobrá la primera parte: elegí el medio y escribí \u003Cstrong>solo ese monto\u003C/strong>.\u003C/li>\n\u003Cli>La mesa queda con saldo pendiente y el botón cambia a \u003Cstrong>💰 Agregar Pago\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-15-boton-agregar-pago -->\n\u003Col start=\"3\">\n\u003Cli>Tocá \u003Cstrong>Agregar Pago\u003C/strong> y cobrá lo que falta con el otro medio.\u003C/li>\n\u003Cli>Repetí hasta que no falte nada.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 Si varias personas pagan su parte, en la pantalla de cobro podés usar \u003Cstrong>✂️ Dividir\u003C/strong> para repartir el total y cargar un pago por cada uno (\u003Cstrong>➕ Agregar Otro Pago\u003C/strong>).\u003C/p>\n\u003C/blockquote>\n\u003Ch4 class=\"relative\">\n                ¿No aparece el medio de pago que necesitás?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"no-aparece-el-medio-de-pago\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h4>\n            \u003Cdiv id=\"no-aparece-el-medio-de-pago\">\u003C/div>\n\n\u003Cp>Los medios de pago se dan de alta en \u003Cstrong>Configuración\u003C/strong> → \u003Cstrong>Tablas maestras\u003C/strong> → \u003Cstrong>Tipos de Pago\u003C/strong>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔗 Guías completas: \u003Ca href=\"/user-guide/medios-de-cobro\">Medios de cobro\u003C/a> · \u003Ca href=\"/user-guide/configuracion-general#cobros-y-pagos\">Cobros y pagos\u003C/a>\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 8: Emití la factura (solo si hace falta)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-emiti-la-factura\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-8-emiti-la-factura\">\u003C/div>\n\n\u003Cp>Si el cliente te pide factura, hacela desde la sección \u003Cstrong>🧾 Factura Fiscal\u003C/strong> de la vista \u003Cstrong>Remito\u003C/strong>:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Emitir:\u003C/strong> hace la factura electrónica en ARCA (con \u003Cstrong>CAE\u003C/strong>).\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir:\u003C/strong> hace la factura y además la imprime por \u003Cstrong>Fiscalberry\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003C!-- FOTO: 21-16-seccion-factura-fiscal -->\n\n\u003Ch4 class=\"relative\">\n                Cómo hacer una Factura A\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"como-hacer-una-factura-a\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h4>\n            \u003Cdiv id=\"como-hacer-una-factura-a\">\u003C/div>\n\n\u003Col>\n\u003Cli>Asigná a la mesa un cliente con \u003Cstrong>Condición IVA: Responsable Inscripto\u003C/strong> y su \u003Cstrong>CUIT\u003C/strong> (ver \u003Ca href=\"#paso-5-asigna-un-cliente-o-crea-uno-nuevo\">Paso 5\u003C/a>).\u003C/li>\n\u003Cli>En \u003Cstrong>🧾 Factura Fiscal\u003C/strong>, tocá \u003Cstrong>Imprimir\u003C/strong> o \u003Cstrong>Emitir\u003C/strong>.\u003C/li>\n\u003Cli>Como el cliente es \u003Cstrong>Responsable Inscripto\u003C/strong>, la factura sale \u003Cstrong>A\u003C/strong>. Si la mesa no tiene cliente, o el cliente no es Responsable Inscripto, la factura \u003Cstrong>no\u003C/strong> sale A.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> Revisá bien el cliente antes de facturar. Una factura mal hecha no se borra: hay que anularla con una \u003Cstrong>Nota de Crédito\u003C/strong>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                Paso 9: Hacé el Checkout (liberá la mesa)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-9-hace-el-checkout\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-9-hace-el-checkout\">\u003C/div>\n\n\u003Col>\n\u003Cli>Cuando la mesa está \u003Cstrong>totalmente cobrada\u003C/strong>, en la vista \u003Cstrong>Remito\u003C/strong> aparece el botón \u003Cstrong>👋 Checkout\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003C!-- FOTO: 21-17-boton-checkout -->\n\u003Col start=\"2\">\n\u003Cli>Tocalo. La mesa se \u003Cstrong>libera\u003C/strong> y sale del listado del salón.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ Si la mesa tiene \u003Cstrong>pagos pendientes de aprobación\u003C/strong>, el sistema te avisa antes. Podés \u003Cstrong>✓ Aprobar pagos primero\u003C/strong> o \u003Cstrong>⚠️ Checkout de todos modos\u003C/strong> (en ese caso, esos pagos \u003Cstrong>no\u003C/strong> se cuentan como cobrados).\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚙️ Más opciones dentro de una mesa\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"mas-opciones-dentro-de-una-mesa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"mas-opciones-dentro-de-una-mesa\">\u003C/div>\n\n\u003Cp>El botón \u003Cstrong>⚙️ Opciones\u003C/strong> (arriba a la derecha de la mesa) tiene más acciones. Algunas solo funcionan con la mesa \u003Cstrong>abierta\u003C/strong>:\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/20-ventas/21-199-dialogo-opciones.png\" alt=\"Ventana Opciones de la mesa\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>👤 Mozo:\u003C/strong> cambiá el mozo de la mesa. Se abre una ventana para \u003Cstrong>Seleccionar\u003C/strong> el nuevo mozo.\u003C/li>\n\u003Cli>\u003Cstrong>✏️ Número:\u003C/strong> cambiá la descripción o número de la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>🍽️ Cubiertos:\u003C/strong> cambiá la cantidad de cubiertos.\u003C/li>\n\u003Cli>\u003Cstrong>Cliente:\u003C/strong> asigná o cambiá el cliente (ver \u003Ca href=\"#paso-5-asigna-un-cliente-o-crea-uno-nuevo\">Paso 5\u003C/a>).\u003C/li>\n\u003Cli>\u003Cstrong>Observación:\u003C/strong> una nota sobre la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>💸 Descuento:\u003C/strong> aplicá un descuento a la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>✂️ Dividir Mesa:\u003C/strong> separá consumos en otra mesa.\u003C/li>\n\u003Cli>\u003Cstrong>🗑️ Anular Mesa:\u003C/strong> anula la mesa completa.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>ℹ️ Si no ves alguno de estos botones, tu usuario no tiene permiso para usarlo. Pedíselo al administrador.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-hacer-si-algo-no-sale-bien-problemas-comunes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-hacer-si-algo-no-sale-bien-problemas-comunes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>¿Qué te pasa?\u003C/th>\n\u003Cth>¿Por qué puede ser?\u003C/th>\n\u003Cth>¿Cómo se soluciona?\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>El mozo no aparece para abrir la mesa.\u003C/td>\n\u003Ctd>El mozo está \u003Cstrong>inactivo\u003C/strong>, o tu usuario no está en su \u003Cstrong>Visibilidad por Usuarios\u003C/strong>.\u003C/td>\n\u003Ctd>Editá el mozo en \u003Cstrong>Configuración → Tablas maestras → Mozos\u003C/strong> y revisá esas dos opciones.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No sale impresa la comanda ni el remito.\u003C/td>\n\u003Ctd>\u003Cstrong>Fiscalberry\u003C/strong> está cerrado, o la impresora está apagada o sin papel.\u003C/td>\n\u003Ctd>Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver \u003Ca href=\"/user-guide/impresoras\">Gestión de Impresoras\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El sistema no me deja cobrar en efectivo.\u003C/td>\n\u003Ctd>No hay un \u003Cstrong>arqueo de caja abierto\u003C/strong>.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Abrir Caja\u003C/strong> arriba en el salón (ver \u003Ca href=\"#paso-2-abri-la-caja\">Paso 2\u003C/a>) y volvé a cobrar.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No aparece el botón \u003Cstrong>Cobrar\u003C/strong>.\u003C/td>\n\u003Ctd>La mesa todavía está abierta, o ya está totalmente cobrada.\u003C/td>\n\u003Ctd>Primero tocá \u003Cstrong>🔒 Cerrar\u003C/strong>. Si ya está cobrada, tocá \u003Cstrong>👋 Checkout\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No aparece el botón \u003Cstrong>Checkout\u003C/strong>.\u003C/td>\n\u003Ctd>Todavía falta cobrar una parte.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>💰 Agregar Pago\u003C/strong> y cobrá lo que falta.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La factura no salió \u003Cstrong>A\u003C/strong> y el cliente la quería A.\u003C/td>\n\u003Ctd>El cliente no tiene la \u003Cstrong>Condición IVA: Responsable Inscripto\u003C/strong>, o no estaba asignado a la mesa.\u003C/td>\n\u003Ctd>Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La mesa sigue ocupada pero la gente ya se fue.\u003C/td>\n\u003Ctd>Faltó cobrar o hacer el \u003Cstrong>Checkout\u003C/strong>.\u003C/td>\n\u003Ctd>Abrí la mesa, cobrá lo que falte y tocá \u003Cstrong>👋 Checkout\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"que-es-y-para-que-sirve-esta-pantalla",title:"¿Qué es y para qué sirve esta pantalla?",level:2},{id:"requisitos-para-empezar-a-usarlo",title:"Requisitos para empezar a usarlo",level:2},{id:"antes-de-empezar-configurar-los-mozos",title:"Antes de empezar: configurar los mozos",level:2},{id:"paso-a-crear-el-mozo",title:"Paso A: Crear el mozo y sus ajustes",level:3},{id:"paso-c-crear-el-usuario-con-pin",title:"Paso C: Crear el usuario con PIN",level:3},{id:"guia-paso-a-paso-como-se-usa",title:"Guía Paso a Paso: ¿Cómo se usa?",level:2},{id:"paso-1-entra-al-salon-de-ventas",title:"Paso 1: Entrá al Salón de Ventas",level:3},{id:"paso-2-abri-la-caja",title:"Paso 2: Abrí la caja",level:3},{id:"paso-3-abri-una-mesa",title:"Paso 3: Abrí una mesa",level:3},{id:"paso-4-carga-los-productos-y-comanda",title:"Paso 4: Cargá los productos y comandá",level:3},{id:"paso-5-asigna-un-cliente-o-crea-uno-nuevo",title:"Paso 5: Asigná un cliente (o creá uno nuevo)",level:3},{id:"paso-6-cerra-la-mesa-e-imprimi-el-remito",title:"Paso 6: Cerrá la mesa e imprimí el remito",level:3},{id:"paso-7-cobra-la-mesa",title:"Paso 7: Cobrá la mesa",level:3},{id:"paso-8-emiti-la-factura",title:"Paso 8: Emití la factura (solo si hace falta)",level:3},{id:"paso-9-hace-el-checkout",title:"Paso 9: Hacé el Checkout (liberá la mesa)",level:3},{id:"mas-opciones-dentro-de-una-mesa",title:"Más opciones dentro de una mesa",level:2},{id:"que-hacer-si-algo-no-sale-bien-problemas-comunes",title:"¿Qué hacer si algo no sale bien? (Problemas Comunes)",level:2}],seo:{title:"Cómo Usar el Salón de Ventas (Adición) - Manual",description:"¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas  \n ¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón",keywords:"salon de ventas, paxapos, cómo usar el salón de ventas (adición), tutorial, guía, manual usuario"},llmTxtFile:"21-salon-de-ventas.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

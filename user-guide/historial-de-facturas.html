@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Historial de Facturas
+ ¿Quién lo usa?: Contadores, Encargad..."/> <meta name="keywords" content="historial de facturas, paxapos, historial de facturas, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Historial de Facturas - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Historial de Facturas
+ ¿Quién lo usa?: Contadores, Encargad..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Historial de Facturas - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Historial de Facturas - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Historial de Facturas
+ ¿Quién lo usa?: Contadores, Encargad..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Historial de Facturas - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Historial de Facturas\n ¿Quién lo usa?: Contadores, Encargad...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Historial de Facturas - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/arqueos-de-caja" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Arqueos de Caja</a></li><li><a href="../user-guide/listado-de-cajas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Listado de Cajas</a></li><li><a href="../user-guide/transacciones-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Transacciones de Cobro</a></li><li><a href="../user-guide/factura-manual" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Factura Manual</a></li><li><a href="../user-guide/resumen-de-deuda" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Resumen de Deuda</a></li><li><a href="../user-guide/pagos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Pagos</a></li><li><a href="../user-guide/historial-de-facturas" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Historial de Facturas</a></li><li><a href="../user-guide/historico-de-mesas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Histórico de Mesas</a></li><li><a href="../user-guide/puntos-de-venta-pdv" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Puntos de Venta (PDVs)</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Historial de Facturas</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: historial-de-facturas</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="historial-de-facturas"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Finanzas</strong> → <strong>Facturas y Pagos</strong> → <strong>Historial de Facturas</strong>
+<strong>¿Quién lo usa?:</strong> Contadores, Encargados de Cuentas a Pagar y Administradores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Es la lista de todas las facturas de tus proveedores, pagas y sin pagar.
+Buscás una factura, ves cuánto falta pagar, la corregís, la pagás o la cerrás.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso <strong>Contabilidad / Gastos</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Las facturas llegan desde <a href="/user-guide/factura-manual">Factura Manual</a> o desde <strong>Nueva Factura</strong>.</li>
+<li>Para ver la deuda por proveedor, mirá <a href="/user-guide/resumen-de-deuda">Resumen de Deuda</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/70-finanzas/79-00a-menu-grupo-finanzas.png" alt="Menú lateral con el grupo Finanzas marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Finanzas</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/79-00b-menu-opcion-historial-de-facturas.png" alt="Opción Historial de Facturas marcada en rojo, debajo del título Facturas y Pagos"></p>
+<ol start="2">
+<li>Tocá <strong>Historial de Facturas</strong>. Está debajo del título <strong>FACTURAS Y PAGOS</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/79-01-pantalla-historial-de-facturas.png" alt="Pantalla Historial de Facturas con los botones de arriba, el buscador, el resumen y la lista"></p>
+<p>Así se ve la pantalla. Arriba están los botones, después el buscador, el resumen de la búsqueda y la lista de facturas.</p>
+<hr>
+<h2 class="relative">
+                🔘 Paso 2: Conocé los botones de arriba
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-conoce-los-botones-de-arriba"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-conoce-los-botones-de-arriba"></div>
+
+<p><img src="/images/manual/70-finanzas/79-02-botones-de-arriba.png" alt="Cinco botones juntos: Nueva Factura en verde, Factura Manual, Facturas directas, CAPEX y Exportar XLSX"></p>
+<ul>
+<li><strong>Nueva Factura</strong>: para subir la foto de una factura y cargar sus datos.</li>
+<li><strong>Factura Manual</strong>: abre <a href="/user-guide/factura-manual">Factura Manual</a>, para escribir los datos a mano.</li>
+<li><strong>Facturas directas</strong>: deja solo las facturas sin orden de compra.</li>
+<li><strong>CAPEX</strong>: deja solo las facturas de inversión (bienes de uso). Aparece si tu comercio usa CAPEX/OPEX.</li>
+<li><strong>Exportar XLSX</strong>: baja la lista, con los filtros que hayas puesto, en una planilla de Excel.</li>
+</ul>
+<p>Si elegís <strong>Facturas directas</strong> o <strong>CAPEX</strong>, arriba de la lista aparece un aviso. Tocá <strong>Quitar filtro</strong> para volver a ver todo.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si tu comercio tiene lectura con IA, aparece también un recuadro para arrastrar una factura y digitalizarla.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔎 Paso 3: Buscá una factura
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-busca-una-factura"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-busca-una-factura"></div>
+
+<p><img src="/images/manual/70-finanzas/79-03-buscador.png" alt="Panel de búsqueda con todos los filtros, el número 123 escrito en Num Factura y los botones Descargar Excel y Buscar"></p>
+<p>Completá lo que sepas y tocá <strong>Buscar</strong>. Los casilleros son:</p>
+<ul>
+<li><strong>Estado</strong>: <strong>Abierto</strong> (se puede modificar) o <strong>Cerrado</strong> (ya está en un cierre).</li>
+<li><strong>Con Deuda</strong>: tildalo para ver solo las que faltan pagar.</li>
+<li><strong>Proveedor</strong>: escribí el nombre y elegí uno. Usá el casillero de arriba (abajo hay otro <strong>Proveedor</strong> que hoy no filtra).</li>
+<li><strong>Clasificacion</strong>: el tipo de gasto.</li>
+<li><strong>Sin Clasificar</strong>: solo las que no tienen clasificación.</li>
+<li><strong>Sin OC</strong>: solo las que no vienen de una orden de compra.</li>
+<li><strong>CAPEX/OPEX</strong>: inversión o gasto operativo.</li>
+<li><strong>Tipo Costo</strong>: costo fijo o variable.</li>
+<li><strong>Tipo Factura</strong>: la letra. Por ejemplo: <strong>&quot;B&quot;</strong>.</li>
+<li><strong>Num Factura</strong>: escribí parte del número. Por ejemplo: <em>123</em>.</li>
+<li><strong>Neto</strong> y <strong>Total</strong>: el importe exacto.</li>
+<li><strong>N° de OC</strong>: el número de la orden de compra.</li>
+<li><strong>Desde</strong> y <strong>Hasta</strong>: el rango de fechas de la factura.</li>
+<li><strong>Descargar Excel</strong>: baja el resultado en una planilla.</li>
+<li><strong>Buscar</strong>: aplica los filtros.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> para ver todo un mes, poné el primer día en <strong>Desde</strong> y el último en <strong>Hasta</strong>.</p>
+</blockquote>
+<p><img src="/images/manual/70-finanzas/79-05-resultado-busqueda.png" alt="Lista con una sola factura, la número 51 de Distribuidora Ejemplo, tipo B, por 1.500 pesos"></p>
+<p>La lista muestra solo lo que coincide. Arriba dice cuántas facturas encontró. Por ejemplo: <strong>Se encontraron 1 Facturas en el historial</strong>.</p>
+<hr>
+<h2 class="relative">
+                📊 Paso 4: Leé el resumen y la lista
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-lee-el-resumen-y-la-lista"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-lee-el-resumen-y-la-lista"></div>
+
+<p><img src="/images/manual/70-finanzas/79-04-resumen-de-busqueda.png" alt="Resumen de Búsqueda con Total General 1.500, Total Sin IVA 1.239,67 y Saldo o Falta de pagar 1.500"></p>
+<p>El <strong>Resumen de Búsqueda</strong> suma <strong>todas</strong> las facturas que encontró, no solo las de la pantalla:</p>
+<ul>
+<li><strong>Total General</strong>: lo que suman con impuestos.</li>
+<li><strong>Total Sin IVA</strong>: lo que suman sin impuestos.</li>
+<li><strong>Saldo / Falta de pagar</strong>: lo que todavía no pagaste. En rojo si hay deuda, en verde si no.</li>
+</ul>
+<p>Las columnas de la lista dicen:</p>
+<ul>
+<li><strong>Casilla</strong>: para elegir la factura (Paso 7). Si la factura está cerrada, ves un candado.</li>
+<li><strong>#</strong>: el número interno. Debajo dice <strong>Directa</strong> (sin orden de compra) o el número de la orden.</li>
+<li><strong>Clasificación</strong> y <strong>CAPEX/OPEX</strong>: para qué gasto es.</li>
+<li><strong>Fecha</strong>, <strong>Proveedor</strong>, <strong>Imagen</strong> y <strong>Tipo</strong>: cuándo, de quién, si tiene foto y qué letra.</li>
+<li><strong>N° Comprobante</strong>: punto de venta y número.</li>
+<li><strong>Total Sin IVA</strong> y <strong>Total</strong>: los importes.</li>
+<li><strong>Falta pagar</strong>: naranja si hay deuda. Una tilde verde si está paga.</li>
+<li><strong>Observación</strong> y <strong>Creado</strong>: la nota y cuándo se cargó.</li>
+</ul>
+<p>Abajo de la lista, la línea <strong>Resumen</strong> cuenta las facturas, el total y lo pendiente.</p>
+<hr>
+<h2 class="relative">
+                ⚙️ Paso 5: Usá el menú de cada factura
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-usa-el-menu-de-cada-factura"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-usa-el-menu-de-cada-factura"></div>
+
+<p><img src="/images/manual/70-finanzas/79-06-menu-engranaje-abierto.png" alt="Menú de la rueda abierto con Pagar, Ver, Añadir items, Editar, Duplicar y Borrar, marcado en rojo"></p>
+<ol>
+<li>Al final del renglón, tocá el botón con la rueda ⚙. Es azul si la factura tiene deuda.</li>
+<li>Se abre una lista con las opciones:</li>
+</ol>
+<ul>
+<li><strong>Pagar</strong>: abre la ventanita para pagar. Solo aparece si falta pagar. Mirá <a href="/user-guide/resumen-de-deuda">Resumen de Deuda</a>.</li>
+<li><strong>Ver</strong>: muestra el detalle de la factura. También podés tocar cualquier lugar vacío del renglón.</li>
+<li><strong>Añadir items</strong>: carga lo que compraste en esa factura.</li>
+<li><strong>Editar</strong>: corrige los datos.</li>
+<li><strong>Duplicar</strong>: hace una copia para cargar otra parecida.</li>
+<li><strong>Borrar</strong>: elimina la factura.</li>
+<li><strong>Descargar Archivo</strong> o <strong>Subir Archivo</strong>: bajan o suben la foto de la factura, si corresponde.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Pagar</strong> registra un pago de verdad. <strong>Borrar</strong> elimina la factura. Tocalos solo si estás seguro.</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> <strong>Editar</strong>, <strong>Duplicar</strong> y <strong>Borrar</strong> no aparecen en facturas cerradas ni en las pagadas antes del último arqueo de caja. Un administrador siempre las ve.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🧾 Paso 6: Mostrá los impuestos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-mostra-los-impuestos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-mostra-los-impuestos"></div>
+
+<p><img src="/images/manual/70-finanzas/79-07-donde-esta-boton-mostrar-impuestos.png" alt="Pantalla con el botón Mostrar Impuestos marcado en rojo, arriba a la derecha de la lista"></p>
+<ol>
+<li>Tocá <strong>Mostrar Impuestos</strong>, arriba a la derecha de la lista.</li>
+<li>Aparecen las columnas de impuestos de cada factura.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/79-08-tabla-con-impuestos.png" alt="Lista con las columnas IVA 21% con neto 1.239,67 e impuesto 260,33"></p>
+<p>Cada impuesto muestra dos números: <strong>Neto</strong> (el importe sobre el que se calcula) e <strong>Imp.</strong> (el impuesto). El botón pasa a decir <strong>Ocultar Impuestos</strong>: tocalo para volver.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> este botón solo aparece si alguna de las facturas de la lista tiene impuestos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ☑️ Paso 7: Pagá o cerrá varias facturas juntas
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-paga-o-cierra-varias-facturas-juntas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-paga-o-cierra-varias-facturas-juntas"></div>
+
+<p><img src="/images/manual/70-finanzas/79-09-factura-seleccionada.png" alt="Panel Gastos Seleccionados con un gasto elegido, Total de Facturas 1.500, Total a Pagar 1.500 y los botones Pagar y Aplicar Cierre"></p>
+<ol>
+<li>Tildá la casilla de cada factura. Para elegir todas, tildá la de la fila de títulos.</li>
+<li>Arriba de la lista aparece el panel <strong>Gastos Seleccionados</strong>.</li>
+<li>Ahí ves cuántas elegiste, el <strong>Total de Facturas</strong> y el <strong>Total a Pagar</strong>.</li>
+</ol>
+<p>Tenés dos botones:</p>
+<ul>
+<li><strong>Pagar Facturas</strong>: abre el pago de todas las que tildaste. El botón muestra el total. Por ejemplo: <strong>Pagar 1.500,00</strong>.</li>
+<li><strong>Aplicar Cierre</strong>: junta las facturas en un cierre, para que nadie las modifique.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> revisá qué facturas tildaste antes de tocar <strong>Pagar Facturas</strong>. El pago es por la suma de todas.</p>
+</blockquote>
+<h3>Aplicar un cierre</h3>
+<p><img src="/images/manual/70-finanzas/79-10-ventanita-aplicar-cierre.png" alt="Ventanita con Crear Nuevo Cierre, Asignar a uno de los últimos cierres, y los botones Cancelar y Guardar"></p>
+<p>Al tocar <strong>Aplicar Cierre</strong> se abre esta ventanita:</p>
+<ul>
+<li><strong>breve descripción del periodo</strong>: escribí un nombre. Por ejemplo: <em>Cierre de Abril</em>.</li>
+<li><strong>Selecccione un cierre</strong> (así está escrito en pantalla): si sos administrador, tildalo para sumar las facturas a un cierre que ya existe. Después elegí cuál en la lista.</li>
+<li><strong>Cancelar</strong>: cierra la ventanita sin hacer nada.</li>
+<li><strong>Guardar</strong>: aplica el cierre.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> al <strong>Guardar</strong>, las facturas quedan cerradas y ya no se pueden modificar. Un cierre solo se deshace con permiso de administrador.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>No encuentro una factura</strong></td>
+<td>Hay un filtro puesto que la esconde.</td>
+<td>Vaciá los casilleros y tocá <strong>Buscar</strong>. Probá con menos del número.</td>
+</tr>
+<tr>
+<td><strong>No aparece el botón Mostrar Impuestos</strong></td>
+<td>Ninguna factura de la lista tiene impuestos.</td>
+<td>Es normal. Aparece solo si alguna los tiene.</td>
+</tr>
+<tr>
+<td><strong>No veo Editar ni Borrar</strong></td>
+<td>La factura está en un cierre o se pagó antes del último arqueo de caja.</td>
+<td>Un administrador puede modificarla. Un candado en la primera columna indica un cierre.</td>
+</tr>
+<tr>
+<td><strong>Falta pagar dice $ pero ya pagué</strong></td>
+<td>El pago se hizo por menos, o todavía no se cargó.</td>
+<td>Abrí la rueda ⚙ → <strong>Ver</strong> y revisá los pagos. Mirá también <a href="/user-guide/pagos">Pagos (Egresos)</a>.</td>
+</tr>
+<tr>
+<td><strong>El Saldo del resumen no coincide con mi lista</strong></td>
+<td>El resumen suma todas las páginas, no solo la que ves.</td>
+<td>Es normal. Usá los filtros para achicar el resultado.</td>
+</tr>
+<tr>
+<td><strong>Necesito la lista en Excel</strong></td>
+<td>—</td>
+<td>Tocá <strong>Exportar XLSX</strong> arriba, o <strong>Descargar Excel</strong> en el buscador.</td>
+</tr>
+<tr>
+<td><strong>Me equivoqué al aplicar un cierre</strong></td>
+<td>Se tocó <strong>Guardar</strong> con las facturas equivocadas.</td>
+<td>Pedile a un administrador que las saque del cierre.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/79-historial-de-facturas.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-conoce-los-botones-de-arriba" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Conocé los botones de arriba</a></li><li><a href="#paso-3-busca-una-factura" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Buscá una factura</a></li><li><a href="#paso-4-lee-el-resumen-y-la-lista" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Leé el resumen y la lista</a></li><li><a href="#paso-5-usa-el-menu-de-cada-factura" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Usá el menú de cada factura</a></li><li><a href="#paso-6-mostra-los-impuestos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Mostrá los impuestos</a></li><li><a href="#paso-7-paga-o-cierra-varias-facturas-juntas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Pagá o cerrá varias facturas juntas</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"historial-de-facturas",title:"Historial de Facturas",content:"\u003Cdiv id=\"historial-de-facturas\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Finanzas\u003C/strong> → \u003Cstrong>Facturas y Pagos\u003C/strong> → \u003Cstrong>Historial de Facturas\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Contadores, Encargados de Cuentas a Pagar y Administradores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nEs la lista de todas las facturas de tus proveedores, pagas y sin pagar.\nBuscás una factura, ves cuánto falta pagar, la corregís, la pagás o la cerrás.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso \u003Cstrong>Contabilidad / Gastos\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Las facturas llegan desde \u003Ca href=\"/user-guide/factura-manual\">Factura Manual\u003C/a> o desde \u003Cstrong>Nueva Factura\u003C/strong>.\u003C/li>\n\u003Cli>Para ver la deuda por proveedor, mirá \u003Ca href=\"/user-guide/resumen-de-deuda\">Resumen de Deuda\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-00a-menu-grupo-finanzas.png\" alt=\"Menú lateral con el grupo Finanzas marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Finanzas\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-00b-menu-opcion-historial-de-facturas.png\" alt=\"Opción Historial de Facturas marcada en rojo, debajo del título Facturas y Pagos\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Historial de Facturas\u003C/strong>. Está debajo del título \u003Cstrong>FACTURAS Y PAGOS\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-01-pantalla-historial-de-facturas.png\" alt=\"Pantalla Historial de Facturas con los botones de arriba, el buscador, el resumen y la lista\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Arriba están los botones, después el buscador, el resumen de la búsqueda y la lista de facturas.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔘 Paso 2: Conocé los botones de arriba\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-conoce-los-botones-de-arriba\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-conoce-los-botones-de-arriba\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-02-botones-de-arriba.png\" alt=\"Cinco botones juntos: Nueva Factura en verde, Factura Manual, Facturas directas, CAPEX y Exportar XLSX\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nueva Factura\u003C/strong>: para subir la foto de una factura y cargar sus datos.\u003C/li>\n\u003Cli>\u003Cstrong>Factura Manual\u003C/strong>: abre \u003Ca href=\"/user-guide/factura-manual\">Factura Manual\u003C/a>, para escribir los datos a mano.\u003C/li>\n\u003Cli>\u003Cstrong>Facturas directas\u003C/strong>: deja solo las facturas sin orden de compra.\u003C/li>\n\u003Cli>\u003Cstrong>CAPEX\u003C/strong>: deja solo las facturas de inversión (bienes de uso). Aparece si tu comercio usa CAPEX/OPEX.\u003C/li>\n\u003Cli>\u003Cstrong>Exportar XLSX\u003C/strong>: baja la lista, con los filtros que hayas puesto, en una planilla de Excel.\u003C/li>\n\u003C/ul>\n\u003Cp>Si elegís \u003Cstrong>Facturas directas\u003C/strong> o \u003Cstrong>CAPEX\u003C/strong>, arriba de la lista aparece un aviso. Tocá \u003Cstrong>Quitar filtro\u003C/strong> para volver a ver todo.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si tu comercio tiene lectura con IA, aparece también un recuadro para arrastrar una factura y digitalizarla.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 3: Buscá una factura\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-busca-una-factura\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-busca-una-factura\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-03-buscador.png\" alt=\"Panel de búsqueda con todos los filtros, el número 123 escrito en Num Factura y los botones Descargar Excel y Buscar\">\u003C/p>\n\u003Cp>Completá lo que sepas y tocá \u003Cstrong>Buscar\u003C/strong>. Los casilleros son:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Estado\u003C/strong>: \u003Cstrong>Abierto\u003C/strong> (se puede modificar) o \u003Cstrong>Cerrado\u003C/strong> (ya está en un cierre).\u003C/li>\n\u003Cli>\u003Cstrong>Con Deuda\u003C/strong>: tildalo para ver solo las que faltan pagar.\u003C/li>\n\u003Cli>\u003Cstrong>Proveedor\u003C/strong>: escribí el nombre y elegí uno. Usá el casillero de arriba (abajo hay otro \u003Cstrong>Proveedor\u003C/strong> que hoy no filtra).\u003C/li>\n\u003Cli>\u003Cstrong>Clasificacion\u003C/strong>: el tipo de gasto.\u003C/li>\n\u003Cli>\u003Cstrong>Sin Clasificar\u003C/strong>: solo las que no tienen clasificación.\u003C/li>\n\u003Cli>\u003Cstrong>Sin OC\u003C/strong>: solo las que no vienen de una orden de compra.\u003C/li>\n\u003Cli>\u003Cstrong>CAPEX/OPEX\u003C/strong>: inversión o gasto operativo.\u003C/li>\n\u003Cli>\u003Cstrong>Tipo Costo\u003C/strong>: costo fijo o variable.\u003C/li>\n\u003Cli>\u003Cstrong>Tipo Factura\u003C/strong>: la letra. Por ejemplo: \u003Cstrong>&quot;B&quot;\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Num Factura\u003C/strong>: escribí parte del número. Por ejemplo: \u003Cem>123\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Neto\u003C/strong> y \u003Cstrong>Total\u003C/strong>: el importe exacto.\u003C/li>\n\u003Cli>\u003Cstrong>N° de OC\u003C/strong>: el número de la orden de compra.\u003C/li>\n\u003Cli>\u003Cstrong>Desde\u003C/strong> y \u003Cstrong>Hasta\u003C/strong>: el rango de fechas de la factura.\u003C/li>\n\u003Cli>\u003Cstrong>Descargar Excel\u003C/strong>: baja el resultado en una planilla.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: aplica los filtros.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> para ver todo un mes, poné el primer día en \u003Cstrong>Desde\u003C/strong> y el último en \u003Cstrong>Hasta\u003C/strong>.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-05-resultado-busqueda.png\" alt=\"Lista con una sola factura, la número 51 de Distribuidora Ejemplo, tipo B, por 1.500 pesos\">\u003C/p>\n\u003Cp>La lista muestra solo lo que coincide. Arriba dice cuántas facturas encontró. Por ejemplo: \u003Cstrong>Se encontraron 1 Facturas en el historial\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📊 Paso 4: Leé el resumen y la lista\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-lee-el-resumen-y-la-lista\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-lee-el-resumen-y-la-lista\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-04-resumen-de-busqueda.png\" alt=\"Resumen de Búsqueda con Total General 1.500, Total Sin IVA 1.239,67 y Saldo o Falta de pagar 1.500\">\u003C/p>\n\u003Cp>El \u003Cstrong>Resumen de Búsqueda\u003C/strong> suma \u003Cstrong>todas\u003C/strong> las facturas que encontró, no solo las de la pantalla:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Total General\u003C/strong>: lo que suman con impuestos.\u003C/li>\n\u003Cli>\u003Cstrong>Total Sin IVA\u003C/strong>: lo que suman sin impuestos.\u003C/li>\n\u003Cli>\u003Cstrong>Saldo / Falta de pagar\u003C/strong>: lo que todavía no pagaste. En rojo si hay deuda, en verde si no.\u003C/li>\n\u003C/ul>\n\u003Cp>Las columnas de la lista dicen:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Casilla\u003C/strong>: para elegir la factura (Paso 7). Si la factura está cerrada, ves un candado.\u003C/li>\n\u003Cli>\u003Cstrong>#\u003C/strong>: el número interno. Debajo dice \u003Cstrong>Directa\u003C/strong> (sin orden de compra) o el número de la orden.\u003C/li>\n\u003Cli>\u003Cstrong>Clasificación\u003C/strong> y \u003Cstrong>CAPEX/OPEX\u003C/strong>: para qué gasto es.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha\u003C/strong>, \u003Cstrong>Proveedor\u003C/strong>, \u003Cstrong>Imagen\u003C/strong> y \u003Cstrong>Tipo\u003C/strong>: cuándo, de quién, si tiene foto y qué letra.\u003C/li>\n\u003Cli>\u003Cstrong>N° Comprobante\u003C/strong>: punto de venta y número.\u003C/li>\n\u003Cli>\u003Cstrong>Total Sin IVA\u003C/strong> y \u003Cstrong>Total\u003C/strong>: los importes.\u003C/li>\n\u003Cli>\u003Cstrong>Falta pagar\u003C/strong>: naranja si hay deuda. Una tilde verde si está paga.\u003C/li>\n\u003Cli>\u003Cstrong>Observación\u003C/strong> y \u003Cstrong>Creado\u003C/strong>: la nota y cuándo se cargó.\u003C/li>\n\u003C/ul>\n\u003Cp>Abajo de la lista, la línea \u003Cstrong>Resumen\u003C/strong> cuenta las facturas, el total y lo pendiente.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚙️ Paso 5: Usá el menú de cada factura\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-usa-el-menu-de-cada-factura\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-usa-el-menu-de-cada-factura\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-06-menu-engranaje-abierto.png\" alt=\"Menú de la rueda abierto con Pagar, Ver, Añadir items, Editar, Duplicar y Borrar, marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Al final del renglón, tocá el botón con la rueda ⚙. Es azul si la factura tiene deuda.\u003C/li>\n\u003Cli>Se abre una lista con las opciones:\u003C/li>\n\u003C/ol>\n\u003Cul>\n\u003Cli>\u003Cstrong>Pagar\u003C/strong>: abre la ventanita para pagar. Solo aparece si falta pagar. Mirá \u003Ca href=\"/user-guide/resumen-de-deuda\">Resumen de Deuda\u003C/a>.\u003C/li>\n\u003Cli>\u003Cstrong>Ver\u003C/strong>: muestra el detalle de la factura. También podés tocar cualquier lugar vacío del renglón.\u003C/li>\n\u003Cli>\u003Cstrong>Añadir items\u003C/strong>: carga lo que compraste en esa factura.\u003C/li>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: corrige los datos.\u003C/li>\n\u003Cli>\u003Cstrong>Duplicar\u003C/strong>: hace una copia para cargar otra parecida.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar\u003C/strong>: elimina la factura.\u003C/li>\n\u003Cli>\u003Cstrong>Descargar Archivo\u003C/strong> o \u003Cstrong>Subir Archivo\u003C/strong>: bajan o suben la foto de la factura, si corresponde.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Pagar\u003C/strong> registra un pago de verdad. \u003Cstrong>Borrar\u003C/strong> elimina la factura. Tocalos solo si estás seguro.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> \u003Cstrong>Editar\u003C/strong>, \u003Cstrong>Duplicar\u003C/strong> y \u003Cstrong>Borrar\u003C/strong> no aparecen en facturas cerradas ni en las pagadas antes del último arqueo de caja. Un administrador siempre las ve.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧾 Paso 6: Mostrá los impuestos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-mostra-los-impuestos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-mostra-los-impuestos\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-07-donde-esta-boton-mostrar-impuestos.png\" alt=\"Pantalla con el botón Mostrar Impuestos marcado en rojo, arriba a la derecha de la lista\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Mostrar Impuestos\u003C/strong>, arriba a la derecha de la lista.\u003C/li>\n\u003Cli>Aparecen las columnas de impuestos de cada factura.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-08-tabla-con-impuestos.png\" alt=\"Lista con las columnas IVA 21% con neto 1.239,67 e impuesto 260,33\">\u003C/p>\n\u003Cp>Cada impuesto muestra dos números: \u003Cstrong>Neto\u003C/strong> (el importe sobre el que se calcula) e \u003Cstrong>Imp.\u003C/strong> (el impuesto). El botón pasa a decir \u003Cstrong>Ocultar Impuestos\u003C/strong>: tocalo para volver.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> este botón solo aparece si alguna de las facturas de la lista tiene impuestos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ☑️ Paso 7: Pagá o cerrá varias facturas juntas\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-paga-o-cierra-varias-facturas-juntas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-paga-o-cierra-varias-facturas-juntas\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-09-factura-seleccionada.png\" alt=\"Panel Gastos Seleccionados con un gasto elegido, Total de Facturas 1.500, Total a Pagar 1.500 y los botones Pagar y Aplicar Cierre\">\u003C/p>\n\u003Col>\n\u003Cli>Tildá la casilla de cada factura. Para elegir todas, tildá la de la fila de títulos.\u003C/li>\n\u003Cli>Arriba de la lista aparece el panel \u003Cstrong>Gastos Seleccionados\u003C/strong>.\u003C/li>\n\u003Cli>Ahí ves cuántas elegiste, el \u003Cstrong>Total de Facturas\u003C/strong> y el \u003Cstrong>Total a Pagar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>Tenés dos botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Pagar Facturas\u003C/strong>: abre el pago de todas las que tildaste. El botón muestra el total. Por ejemplo: \u003Cstrong>Pagar 1.500,00\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Aplicar Cierre\u003C/strong>: junta las facturas en un cierre, para que nadie las modifique.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> revisá qué facturas tildaste antes de tocar \u003Cstrong>Pagar Facturas\u003C/strong>. El pago es por la suma de todas.\u003C/p>\n\u003C/blockquote>\n\u003Ch3>Aplicar un cierre\u003C/h3>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/79-10-ventanita-aplicar-cierre.png\" alt=\"Ventanita con Crear Nuevo Cierre, Asignar a uno de los últimos cierres, y los botones Cancelar y Guardar\">\u003C/p>\n\u003Cp>Al tocar \u003Cstrong>Aplicar Cierre\u003C/strong> se abre esta ventanita:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>breve descripción del periodo\u003C/strong>: escribí un nombre. Por ejemplo: \u003Cem>Cierre de Abril\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Selecccione un cierre\u003C/strong> (así está escrito en pantalla): si sos administrador, tildalo para sumar las facturas a un cierre que ya existe. Después elegí cuál en la lista.\u003C/li>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>: cierra la ventanita sin hacer nada.\u003C/li>\n\u003Cli>\u003Cstrong>Guardar\u003C/strong>: aplica el cierre.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> al \u003Cstrong>Guardar\u003C/strong>, las facturas quedan cerradas y ya no se pueden modificar. Un cierre solo se deshace con permiso de administrador.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>No encuentro una factura\u003C/strong>\u003C/td>\n\u003Ctd>Hay un filtro puesto que la esconde.\u003C/td>\n\u003Ctd>Vaciá los casilleros y tocá \u003Cstrong>Buscar\u003C/strong>. Probá con menos del número.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No aparece el botón Mostrar Impuestos\u003C/strong>\u003C/td>\n\u003Ctd>Ninguna factura de la lista tiene impuestos.\u003C/td>\n\u003Ctd>Es normal. Aparece solo si alguna los tiene.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No veo Editar ni Borrar\u003C/strong>\u003C/td>\n\u003Ctd>La factura está en un cierre o se pagó antes del último arqueo de caja.\u003C/td>\n\u003Ctd>Un administrador puede modificarla. Un candado en la primera columna indica un cierre.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Falta pagar dice $ pero ya pagué\u003C/strong>\u003C/td>\n\u003Ctd>El pago se hizo por menos, o todavía no se cargó.\u003C/td>\n\u003Ctd>Abrí la rueda ⚙ → \u003Cstrong>Ver\u003C/strong> y revisá los pagos. Mirá también \u003Ca href=\"/user-guide/pagos\">Pagos (Egresos)\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>El Saldo del resumen no coincide con mi lista\u003C/strong>\u003C/td>\n\u003Ctd>El resumen suma todas las páginas, no solo la que ves.\u003C/td>\n\u003Ctd>Es normal. Usá los filtros para achicar el resultado.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Necesito la lista en Excel\u003C/strong>\u003C/td>\n\u003Ctd>—\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Exportar XLSX\u003C/strong> arriba, o \u003Cstrong>Descargar Excel\u003C/strong> en el buscador.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Me equivoqué al aplicar un cierre\u003C/strong>\u003C/td>\n\u003Ctd>Se tocó \u003Cstrong>Guardar\u003C/strong> con las facturas equivocadas.\u003C/td>\n\u003Ctd>Pedile a un administrador que las saque del cierre.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-conoce-los-botones-de-arriba",title:"Paso 2: Conocé los botones de arriba",level:2},{id:"paso-3-busca-una-factura",title:"Paso 3: Buscá una factura",level:2},{id:"paso-4-lee-el-resumen-y-la-lista",title:"Paso 4: Leé el resumen y la lista",level:2},{id:"paso-5-usa-el-menu-de-cada-factura",title:"Paso 5: Usá el menú de cada factura",level:2},{id:"paso-6-mostra-los-impuestos",title:"Paso 6: Mostrá los impuestos",level:2},{id:"paso-7-paga-o-cierra-varias-facturas-juntas",title:"Paso 7: Pagá o cerrá varias facturas juntas",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Historial de Facturas - Manual",description:"¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Historial de Facturas\n ¿Quién lo usa?: Contadores, Encargad...",keywords:"historial de facturas, paxapos, historial de facturas, tutorial, guía, manual usuario"},llmTxtFile:"79-historial-de-facturas.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

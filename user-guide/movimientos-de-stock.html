@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Stock → Movimientos → Movimientos
+ ¿Quién lo usa?: Depósito, encargados y administradores"/> <meta name="keywords" content="movimientos de stock, paxapos, movimientos de stock, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Movimientos de Stock - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Stock → Movimientos → Movimientos
+ ¿Quién lo usa?: Depósito, encargados y administradores"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Movimientos de Stock - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Movimientos de Stock - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Stock → Movimientos → Movimientos
+ ¿Quién lo usa?: Depósito, encargados y administradores"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Movimientos de Stock - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Stock → Movimientos → Movimientos\n ¿Quién lo usa?: Depósito, encargados y administradores",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Movimientos de Stock - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/stock-mercaderias" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Stock de Mercaderías</a></li><li><a href="../user-guide/stock-subproductos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Stock de Subproductos</a></li><li><a href="../user-guide/movimientos-de-stock" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Movimientos de Stock</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Movimientos de Stock</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: movimientos-de-stock</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="movimientos-de-stock"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Stock</strong> → <strong>Movimientos</strong> → <strong>Movimientos</strong>
+<strong>¿Quién lo usa?:</strong> Depósito, encargados y administradores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Es la lista de todo lo que entró y salió del stock: compras recibidas, ventas, roturas y conteos.
+Te sirve para entender por qué el stock de algo subió o bajó.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Stock</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Solo aparecen movimientos de lo que tiene el stock controlado. Mirá <a href="/user-guide/stock-mercaderias">Stock de Mercaderías</a> y <a href="/user-guide/stock-subproductos">Stock de Subproductos</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/60-stock/64-00a-menu-grupo-stock.png" alt="Menú lateral con el grupo Stock marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Stock</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/64-00b-menu-opcion-movimientos.png" alt="Opción Movimientos marcada en rojo, debajo del título Movimientos"></p>
+<ol start="2">
+<li>Tocá <strong>Movimientos</strong>. Está debajo del título <strong>MOVIMIENTOS</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/64-01-pantalla-movimientos.png" alt="Pantalla Movimientos de Stock con el buscador, el botón Descargar Excel y la lista de movimientos"></p>
+<p>Así se ve la pantalla. Arriba está el buscador y abajo, la lista. Lo más nuevo aparece primero.</p>
+<hr>
+<h2 class="relative">
+                📖 Paso 2: Leé un movimiento
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-lee-un-movimiento"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-lee-un-movimiento"></div>
+
+<p><img src="/images/manual/60-stock/64-02-tabla-movimientos.png" alt="Lista con tres movimientos: menos 3 Medialuna, menos 2 y más 20 de Harina 0000 x 25 kg"></p>
+<p>Cada renglón es una entrada o una salida. Las columnas dicen:</p>
+<ul>
+<li><strong>#</strong>: el código del movimiento. Por ejemplo: <em>59A3B1</em>.</li>
+<li><strong>StockId</strong>: el número del renglón en la pantalla de stock.</li>
+<li><strong>Depósito</strong>: de qué depósito entró o salió.</li>
+<li><strong>Modelo</strong> y <strong>Modelo Id</strong>: de dónde viene el movimiento (mirá la tabla de abajo).</li>
+<li><strong>Subproducto</strong> o <strong>Mercaderia</strong>: qué se movió. Se completa una de las dos.</li>
+<li><strong>UM</strong>: la unidad. Por ejemplo: <em>Kilo</em> o <em>Unidad</em>.</li>
+<li><strong>Cant</strong>: cuánto se movió.</li>
+<li><strong>Descripción</strong>: qué pasó, si alguien lo escribió.</li>
+<li><strong>Creado</strong> y <strong>Creador</strong>: cuándo y quién.</li>
+</ul>
+<p>La columna <strong>Cant</strong> te dice si entró o salió:</p>
+<ul>
+<li><strong>Verde con +</strong>: entró. Por ejemplo: <em>+20</em> kilos de harina que llegaron.</li>
+<li><strong>Rojo con −</strong>: salió. Por ejemplo: <em>−2</em> por una bolsa rota.</li>
+</ul>
+<p>La columna <strong>Modelo</strong> te dice de dónde viene:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PedidoMercaderia</strong> o <strong>Pedido</strong></td>
+<td>Una compra que recibiste. Suma.</td>
+</tr>
+<tr>
+<td><strong>DetalleComanda</strong> o <strong>DetalleSabor</strong></td>
+<td>Una venta. Resta.</td>
+</tr>
+<tr>
+<td><strong>Desperdicio</strong></td>
+<td>Algo que se tiró o se echó a perder. Resta.</td>
+</tr>
+<tr>
+<td><strong>Stock</strong></td>
+<td>Un conteo cargado con <strong>Reinicializar</strong>.</td>
+</tr>
+<tr>
+<td><strong>Movimiento</strong></td>
+<td>Algo cargado a mano con <strong>Agregar Movimiento</strong>.</td>
+</tr>
+</tbody></table></div>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si un número no te cierra, buscá el producto (Paso 3) y leé sus movimientos de abajo hacia arriba, del más viejo al más nuevo.</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> los links <strong>editar</strong> y <strong>borrar</strong> cambian el stock. Usalos solo para corregir un movimiento cargado a mano por error.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔎 Paso 3: Buscá los movimientos de un producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-busca-los-movimientos-de-un-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-busca-los-movimientos-de-un-producto"></div>
+
+<p><img src="/images/manual/60-stock/64-03-panel-busqueda.png" alt="Recuadro de búsqueda con Harina escrito en el casillero Buscar y el botón azul Buscar a la derecha"></p>
+<p>En el recuadro de búsqueda tenés:</p>
+<ul>
+<li><strong>Buscar</strong>: escribí parte del nombre del producto. Por ejemplo: <em>Harina</em>. También podés escribir el <strong>StockId</strong>.</li>
+<li><strong>Buscar</strong>: el botón azul de la derecha, que aplica la búsqueda.</li>
+</ul>
+<ol>
+<li>Escribí el nombre y tocá <strong>Buscar</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/64-04-resultado-busqueda.png" alt="Lista con los dos movimientos de Harina 0000 x 25 kg: menos 2 y más 20"></p>
+<ol start="2">
+<li>La lista muestra solo los movimientos de ese producto.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                📥 Paso 4: Bajá los movimientos a una planilla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-baja-los-movimientos-a-una-planilla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-baja-los-movimientos-a-una-planilla"></div>
+
+<p><img src="/images/manual/60-stock/64-05-donde-esta-boton-descargar-excel.png" alt="Pantalla Movimientos de Stock con el botón verde Descargar Excel marcado en rojo, debajo del buscador"></p>
+<ol>
+<li>Si querés solo los de un producto, primero buscalo (Paso 3).</li>
+<li>Tocá el botón verde <strong>Descargar Excel</strong>, debajo del buscador.</li>
+<li>Se baja una planilla con los movimientos, lista para abrir en Excel.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>La lista está vacía</strong></td>
+<td>Nada tiene el stock controlado todavía.</td>
+<td>Empezá a controlarlo en <a href="/user-guide/stock-mercaderias">Stock de Mercaderías</a> o <a href="/user-guide/stock-subproductos">Stock de Subproductos</a>.</td>
+</tr>
+<tr>
+<td><strong>Recibí una compra y no aparece el movimiento</strong></td>
+<td>La mercadería no tenía el stock controlado cuando la recibiste.</td>
+<td>Stockeala en <a href="/user-guide/stock-mercaderias">Stock de Mercaderías</a>. Las próximas compras van a sumar solas.</td>
+</tr>
+<tr>
+<td><strong>Vendí un producto y no bajó el stock</strong></td>
+<td>El producto no tiene el stock controlado, ni una receta con ingredientes controlados.</td>
+<td>Stockealo en <a href="/user-guide/stock-subproductos">Stock de Subproductos</a> o revisá su <a href="/user-guide/recetas">receta</a>.</td>
+</tr>
+<tr>
+<td><strong>No encuentro un movimiento</strong></td>
+<td>La búsqueda tiene un nombre distinto.</td>
+<td>Escribí menos letras. Por ejemplo: <em>Harin</em> en vez de <em>Harina 0000 x 25 kg</em>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/64-movimientos-de-stock.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-lee-un-movimiento" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Leé un movimiento</a></li><li><a href="#paso-3-busca-los-movimientos-de-un-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Buscá los movimientos de un producto</a></li><li><a href="#paso-4-baja-los-movimientos-a-una-planilla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Bajá los movimientos a una planilla</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"movimientos-de-stock",title:"Movimientos de Stock",content:"\u003Cdiv id=\"movimientos-de-stock\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Stock\u003C/strong> → \u003Cstrong>Movimientos\u003C/strong> → \u003Cstrong>Movimientos\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Depósito, encargados y administradores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nEs la lista de todo lo que entró y salió del stock: compras recibidas, ventas, roturas y conteos.\nTe sirve para entender por qué el stock de algo subió o bajó.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Stock\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Solo aparecen movimientos de lo que tiene el stock controlado. Mirá \u003Ca href=\"/user-guide/stock-mercaderias\">Stock de Mercaderías\u003C/a> y \u003Ca href=\"/user-guide/stock-subproductos\">Stock de Subproductos\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-00a-menu-grupo-stock.png\" alt=\"Menú lateral con el grupo Stock marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Stock\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-00b-menu-opcion-movimientos.png\" alt=\"Opción Movimientos marcada en rojo, debajo del título Movimientos\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Movimientos\u003C/strong>. Está debajo del título \u003Cstrong>MOVIMIENTOS\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-01-pantalla-movimientos.png\" alt=\"Pantalla Movimientos de Stock con el buscador, el botón Descargar Excel y la lista de movimientos\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Arriba está el buscador y abajo, la lista. Lo más nuevo aparece primero.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📖 Paso 2: Leé un movimiento\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-lee-un-movimiento\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-lee-un-movimiento\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-02-tabla-movimientos.png\" alt=\"Lista con tres movimientos: menos 3 Medialuna, menos 2 y más 20 de Harina 0000 x 25 kg\">\u003C/p>\n\u003Cp>Cada renglón es una entrada o una salida. Las columnas dicen:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>#\u003C/strong>: el código del movimiento. Por ejemplo: \u003Cem>59A3B1\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>StockId\u003C/strong>: el número del renglón en la pantalla de stock.\u003C/li>\n\u003Cli>\u003Cstrong>Depósito\u003C/strong>: de qué depósito entró o salió.\u003C/li>\n\u003Cli>\u003Cstrong>Modelo\u003C/strong> y \u003Cstrong>Modelo Id\u003C/strong>: de dónde viene el movimiento (mirá la tabla de abajo).\u003C/li>\n\u003Cli>\u003Cstrong>Subproducto\u003C/strong> o \u003Cstrong>Mercaderia\u003C/strong>: qué se movió. Se completa una de las dos.\u003C/li>\n\u003Cli>\u003Cstrong>UM\u003C/strong>: la unidad. Por ejemplo: \u003Cem>Kilo\u003C/em> o \u003Cem>Unidad\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Cant\u003C/strong>: cuánto se movió.\u003C/li>\n\u003Cli>\u003Cstrong>Descripción\u003C/strong>: qué pasó, si alguien lo escribió.\u003C/li>\n\u003Cli>\u003Cstrong>Creado\u003C/strong> y \u003Cstrong>Creador\u003C/strong>: cuándo y quién.\u003C/li>\n\u003C/ul>\n\u003Cp>La columna \u003Cstrong>Cant\u003C/strong> te dice si entró o salió:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Verde con +\u003C/strong>: entró. Por ejemplo: \u003Cem>+20\u003C/em> kilos de harina que llegaron.\u003C/li>\n\u003Cli>\u003Cstrong>Rojo con −\u003C/strong>: salió. Por ejemplo: \u003Cem>−2\u003C/em> por una bolsa rota.\u003C/li>\n\u003C/ul>\n\u003Cp>La columna \u003Cstrong>Modelo\u003C/strong> te dice de dónde viene:\u003C/p>\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Modelo\u003C/th>\n\u003Cth>Qué significa\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>PedidoMercaderia\u003C/strong> o \u003Cstrong>Pedido\u003C/strong>\u003C/td>\n\u003Ctd>Una compra que recibiste. Suma.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>DetalleComanda\u003C/strong> o \u003Cstrong>DetalleSabor\u003C/strong>\u003C/td>\n\u003Ctd>Una venta. Resta.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Desperdicio\u003C/strong>\u003C/td>\n\u003Ctd>Algo que se tiró o se echó a perder. Resta.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Stock\u003C/strong>\u003C/td>\n\u003Ctd>Un conteo cargado con \u003Cstrong>Reinicializar\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Movimiento\u003C/strong>\u003C/td>\n\u003Ctd>Algo cargado a mano con \u003Cstrong>Agregar Movimiento\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si un número no te cierra, buscá el producto (Paso 3) y leé sus movimientos de abajo hacia arriba, del más viejo al más nuevo.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> los links \u003Cstrong>editar\u003C/strong> y \u003Cstrong>borrar\u003C/strong> cambian el stock. Usalos solo para corregir un movimiento cargado a mano por error.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 3: Buscá los movimientos de un producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-busca-los-movimientos-de-un-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-busca-los-movimientos-de-un-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-03-panel-busqueda.png\" alt=\"Recuadro de búsqueda con Harina escrito en el casillero Buscar y el botón azul Buscar a la derecha\">\u003C/p>\n\u003Cp>En el recuadro de búsqueda tenés:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: escribí parte del nombre del producto. Por ejemplo: \u003Cem>Harina\u003C/em>. También podés escribir el \u003Cstrong>StockId\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: el botón azul de la derecha, que aplica la búsqueda.\u003C/li>\n\u003C/ul>\n\u003Col>\n\u003Cli>Escribí el nombre y tocá \u003Cstrong>Buscar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-04-resultado-busqueda.png\" alt=\"Lista con los dos movimientos de Harina 0000 x 25 kg: menos 2 y más 20\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>La lista muestra solo los movimientos de ese producto.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📥 Paso 4: Bajá los movimientos a una planilla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-baja-los-movimientos-a-una-planilla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-baja-los-movimientos-a-una-planilla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/64-05-donde-esta-boton-descargar-excel.png\" alt=\"Pantalla Movimientos de Stock con el botón verde Descargar Excel marcado en rojo, debajo del buscador\">\u003C/p>\n\u003Col>\n\u003Cli>Si querés solo los de un producto, primero buscalo (Paso 3).\u003C/li>\n\u003Cli>Tocá el botón verde \u003Cstrong>Descargar Excel\u003C/strong>, debajo del buscador.\u003C/li>\n\u003Cli>Se baja una planilla con los movimientos, lista para abrir en Excel.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>La lista está vacía\u003C/strong>\u003C/td>\n\u003Ctd>Nada tiene el stock controlado todavía.\u003C/td>\n\u003Ctd>Empezá a controlarlo en \u003Ca href=\"/user-guide/stock-mercaderias\">Stock de Mercaderías\u003C/a> o \u003Ca href=\"/user-guide/stock-subproductos\">Stock de Subproductos\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Recibí una compra y no aparece el movimiento\u003C/strong>\u003C/td>\n\u003Ctd>La mercadería no tenía el stock controlado cuando la recibiste.\u003C/td>\n\u003Ctd>Stockeala en \u003Ca href=\"/user-guide/stock-mercaderias\">Stock de Mercaderías\u003C/a>. Las próximas compras van a sumar solas.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Vendí un producto y no bajó el stock\u003C/strong>\u003C/td>\n\u003Ctd>El producto no tiene el stock controlado, ni una receta con ingredientes controlados.\u003C/td>\n\u003Ctd>Stockealo en \u003Ca href=\"/user-guide/stock-subproductos\">Stock de Subproductos\u003C/a> o revisá su \u003Ca href=\"/user-guide/recetas\">receta\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No encuentro un movimiento\u003C/strong>\u003C/td>\n\u003Ctd>La búsqueda tiene un nombre distinto.\u003C/td>\n\u003Ctd>Escribí menos letras. Por ejemplo: \u003Cem>Harin\u003C/em> en vez de \u003Cem>Harina 0000 x 25 kg\u003C/em>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-lee-un-movimiento",title:"Paso 2: Leé un movimiento",level:2},{id:"paso-3-busca-los-movimientos-de-un-producto",title:"Paso 3: Buscá los movimientos de un producto",level:2},{id:"paso-4-baja-los-movimientos-a-una-planilla",title:"Paso 4: Bajá los movimientos a una planilla",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Movimientos de Stock - Manual",description:"¿Dónde está en el sistema?: Menú principal → Stock → Movimientos → Movimientos\n ¿Quién lo usa?: Depósito, encargados y administradores",keywords:"movimientos de stock, paxapos, movimientos de stock, tutorial, guía, manual usuario"},llmTxtFile:"64-movimientos-de-stock.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Productos → Menú
+ ¿Quién lo usa?: Encargados de la carta y administradores"/> <meta name="keywords" content="menu, paxapos, menú de productos (carta), tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Menú de Productos (Carta) - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Menú
+ ¿Quién lo usa?: Encargados de la carta y administradores"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Menú de Productos (Carta) - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Menú de Productos (Carta) - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Menú
+ ¿Quién lo usa?: Encargados de la carta y administradores"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Menú de Productos (Carta) - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Productos → Menú\n ¿Quién lo usa?: Encargados de la carta y administradores",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Menú de Productos (Carta) - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/menu" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Menú de Productos (Carta)</a></li><li><a href="../user-guide/categorias" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Categorías de Productos</a></li><li><a href="../user-guide/variantes-grupo-sabores" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Variantes y Grupos de Sabores</a></li><li><a href="../user-guide/maestro-de-productos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Maestro de Productos</a></li><li><a href="../user-guide/subproductos-elaborados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sub-Productos (Elaborados)</a></li><li><a href="../user-guide/recetas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Recetas</a></li><li><a href="../user-guide/analisis-duplicados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Buscar Duplicados</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Menú de Productos (Carta)</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: menu</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="menu-de-productos-carta"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Productos</strong> → <strong>Menú</strong>
+<strong>¿Quién lo usa?:</strong> Encargados de la carta y administradores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+El <strong>Menú</strong> es la lista de todo lo que vendés. Es lo que ven los mozos cuando cargan una mesa, y tus clientes en el menú online.
+Acá agregás productos, les ponés precio y elegís por qué impresora sale cada comanda.</p>
+</blockquote>
+<blockquote>
+<p>🧭 <strong>Primeros pasos para armar tu menú:</strong></p>
+<ol>
+<li>Creá las <a href="/user-guide/categorias">Categorías</a> y las <a href="/user-guide/variantes-grupo-sabores">Variantes</a>. No importa el orden.</li>
+<li>Cargá los productos en el menú (esta guía).</li>
+</ol>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tener creadas las <a href="/user-guide/categorias">Categorías</a>.</li>
+<li>Si algún producto lleva opciones, tener creadas sus <a href="/user-guide/variantes-grupo-sabores">Variantes</a>.</li>
+<li>Para elegir la impresora de cada producto, tenerlas cargadas. Mirá <a href="/user-guide/impresoras">Impresoras</a>.</li>
+<li>Tu usuario tiene que tener el permiso del <strong>Menú</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> tu comercio ya arranca con un menú creado. No hace falta crear otro: solo cargale los productos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/40-productos/41-00a-menu-grupo-productos.png" alt="Menú lateral con el grupo Productos marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Productos</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-00b-menu-opcion-index-vendibles.png" alt="Opción Menú marcada en rojo en el menú lateral"></p>
+<ol start="2">
+<li>Tocá <strong>Menú</strong>. Es la primera opción.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-01-pantalla-index-vendibles.png" alt="Pantalla del Menú Catálogo con la lista de productos"></p>
+<p>Así se ve la pantalla. Arriba están los botones. Abajo, la lista de productos con su precio.</p>
+<p><img src="/images/manual/40-productos/41-53-encabezado-menu.png" alt="Barra de arriba: Menú Catálogo, Agregar Producto, Importar, Exportar, Configurar, ayuda y más opciones"></p>
+<hr>
+<h2 class="relative">
+                ➕ Paso 2: Agregá un producto al menú
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-agrega-un-producto-al-menu"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-agrega-un-producto-al-menu"></div>
+
+<p><img src="/images/manual/40-productos/41-55-donde-esta-boton-agregar-producto.png" alt="Pantalla con el botón azul Agregar Producto marcado en rojo"></p>
+<ol>
+<li>Tocá el botón azul <strong>Agregar Producto</strong>.</li>
+<li>Se abre la pantalla <strong>Agregar Producto al Menú</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-74-pantalla-agregar-producto.png" alt="Pantalla Agregar Producto al Menú con Milanesa napolitana a $ 4500"></p>
+<p>Tiene varias partes. Las importantes son <strong>PASO 1</strong>, <strong>PASO 2</strong> y <strong>PASO 3</strong>.</p>
+<h3 class="relative">
+                PASO 1 · Información Básica (obligatoria)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-informacion-basica"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-1-informacion-basica"></div>
+
+<p><img src="/images/manual/40-productos/41-75-seccion-paso-1.png" alt="Recuadro rojo PASO 1 Información Básica completo"></p>
+<p><img src="/images/manual/40-productos/41-76-campo-nombre-del-producto.png" alt="Casillero Nombre del Producto con Milanesa napolitana"></p>
+<ol start="3">
+<li>En <strong>Nombre del Producto</strong>, escribí el nombre. Por ejemplo: <em>Milanesa napolitana</em>.</li>
+<li>Si el producto ya existe, aparece en una lista mientras escribís. Tocalo para elegirlo.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-77-campo-categoria.png" alt="Lista Categoría con Especialidades elegida"></p>
+<ol start="5">
+<li>En <strong>Categoría</strong>, elegí dónde aparece en el menú. Por ejemplo: <em>Especialidades</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-78-campo-precio-de-venta.png" alt="Casillero Precio de Venta con 4500"></p>
+<ol start="6">
+<li>En <strong>Precio de Venta</strong>, escribí el precio al público. Por ejemplo: <em>4500</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-79-campo-moneda.png" alt="Lista Moneda con Argentina Peso"></p>
+<ol start="7">
+<li><strong>Moneda</strong>: dejala como viene, salvo que vendas en otra moneda.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-80-campo-impuesto.png" alt="Lista Impuesto / IVA con IVA 21%"></p>
+<ol start="8">
+<li>En <strong>Impuesto / IVA</strong>, elegí el IVA del producto. Por ejemplo: <em>IVA 21%</em>.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si el IVA está mal cargado, el producto no se puede facturar bien. La lista del menú te avisa qué productos tienen ese problema.</p>
+</blockquote>
+<h3 class="relative">
+                PASO 2 · Variantes del Producto (si hace falta)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-variantes-del-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-2-variantes-del-producto"></div>
+
+<p><img src="/images/manual/40-productos/41-81-seccion-paso-2-variantes.png" alt="Recuadro PASO 2 Variantes del Producto con la variante Gustos de helado"></p>
+<ol start="9">
+<li>Tildá las variantes que lleva el producto. Por ejemplo: <em>Gustos de helado</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-82-donde-esta-boton-administrar-variantes.png" alt="Pantalla con el botón naranja Administrar Variantes marcado en rojo"></p>
+<ol start="10">
+<li>Si no está la que necesitás, tocá <strong>Administrar Variantes</strong> para crearla. Mirá <a href="/user-guide/variantes-grupo-sabores">Variantes</a>.</li>
+</ol>
+<h3 class="relative">
+                PASO 3 · Configuración Operativa (impresora)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-configuracion-operativa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-3-configuracion-operativa"></div>
+
+<p><img src="/images/manual/40-productos/41-84-seccion-paso-3-impresoras.png" alt="Recuadro PASO 3 Configuración Operativa con ¿Dónde se imprime la comanda?"></p>
+<ol start="11">
+<li>En <strong>¿Dónde se imprime la comanda?</strong>, tildá la impresora de este producto. Por ejemplo: <em>Cocina</em> o <em>Barra</em>.</li>
+<li><strong>Puesto</strong> y <strong>Depósito</strong> son opcionales. Si no los usás, dejalos como están.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> la impresora se elige en cada producto. Así la bebida sale en la barra y la comida en la cocina.</p>
+</blockquote>
+<h3 class="relative">
+                Opciones Adicionales (opcional)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="opciones-adicionales-opcional"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="opciones-adicionales-opcional"></div>
+
+<p><img src="/images/manual/40-productos/41-85-donde-esta-boton-mostrar-ocultar.png" alt="Pantalla con el botón Mostrar/Ocultar de Opciones Adicionales marcado en rojo"></p>
+<ol start="13">
+<li>Si querés, tocá <strong>Mostrar/Ocultar</strong> en <strong>Opciones Adicionales</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-87-seccion-opcional-abierta.png" alt="Opciones Adicionales abiertas: Orden y Nombre en Ticket"></p>
+<ol start="14">
+<li><strong>Orden</strong>: en qué lugar aparece en su categoría. <strong>Nombre en Ticket</strong>: un nombre más corto para la comanda y el ticket.</li>
+</ol>
+<h3 class="relative">
+                Guardá el producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="guarda-el-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="guarda-el-producto"></div>
+
+<p><img src="/images/manual/40-productos/41-88-donde-esta-boton-guardar-producto.png" alt="Pantalla con el botón azul Guardar Producto marcado en rojo"></p>
+<ol start="15">
+<li>Tocá el botón azul <strong>Guardar Producto</strong>, abajo de todo.</li>
+<li>El producto aparece en la lista. Los mozos ya lo pueden cargar en el <a href="/user-guide/salon-de-ventas">Salón de Ventas</a>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-90-donde-esta-boton-cancelar.png" alt="Pantalla con el botón Cancelar marcado en rojo"></p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si te arrepentiste, tocá <strong>Cancelar</strong>, debajo de <strong>Guardar Producto</strong>. No se guarda nada.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                💲 Paso 3: Cambiá un precio desde la lista
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-cambia-un-precio-desde-la-lista"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-cambia-un-precio-desde-la-lista"></div>
+
+<p><img src="/images/manual/40-productos/41-69-fila-producto.png" alt="Renglón de un producto con su stock, categoría, impresora y precio"></p>
+<ol>
+<li>Buscá el producto en la lista.</li>
+<li>Hacé clic sobre su <strong>Precio</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-70-celda-precio-editando.png" alt="Renglón con el precio abierto para escribir y un botón verde para confirmar"></p>
+<ol start="3">
+<li>Escribí el precio nuevo y tocá el botón verde ✔ (o Enter).</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> lo mismo sirve para el nombre, la categoría, el orden y otras columnas. Hacé clic en la celda y cambiala.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ✏️ Paso 4: Cambiá todos los datos de un producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-cambia-todos-los-datos-de-un-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-cambia-todos-los-datos-de-un-producto"></div>
+
+<p><img src="/images/manual/40-productos/41-49-donde-esta-boton-icono.png" alt="Lista con el lápiz de un producto marcado en rojo, a la derecha"></p>
+<ol>
+<li>Tocá el lápiz ✏️ a la derecha del producto. Si no lo ves, mové la lista hacia la derecha.</li>
+<li>Se abre la misma pantalla que al agregarlo, con sus datos. Cambiá lo que necesites.</li>
+<li>Tocá <strong>Guardar Producto</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-92-seccion-avanzado-abierta.png" alt="Sección AVANZADO Modificar Producto Maestro abierta, con nombre, código, imagen y Sin Stock"></p>
+<p>Al editar aparece además <strong>AVANZADO · Modificar Producto Maestro</strong>. Ahí cambiás el nombre, el código de barras, la foto o marcás <strong>Sin Stock</strong> para que no se pueda vender por un rato.</p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> lo que cambies en <strong>AVANZADO</strong> cambia el producto en <strong>todos</strong> tus menús.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🗑️ Paso 5: Sacá un producto del menú
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-saca-un-producto-del-menu"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-saca-un-producto-del-menu"></div>
+
+<p><img src="/images/manual/40-productos/41-51-donde-esta-boton-js-delete-producto.png" alt="Lista con el tacho de un producto marcado en rojo"></p>
+<ol>
+<li>Tocá el tacho 🗑️ a la derecha del producto.</li>
+<li>El sistema te pregunta si estás seguro. Confirmá para sacarlo.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> el producto sale de este menú, pero sigue existiendo en el <a href="/user-guide/maestro-de-productos">Maestro de Productos</a>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔎 Paso 6: Buscá un producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-busca-un-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-busca-un-producto"></div>
+
+<p><img src="/images/manual/40-productos/41-04-campo-quick-search.png" alt="Casillero Buscar en todos los productos con ALFAJOR escrito"></p>
+<ol>
+<li>En <strong>Buscar en todos los productos...</strong>, escribí parte del nombre y tocá Enter. Por ejemplo: <em>ALFAJOR</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-65-resultado-busqueda.png" alt="Lista con los productos que tienen ALFAJOR en el nombre"></p>
+<ol start="2">
+<li>La lista muestra solo los que coinciden.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-05-donde-esta-boton-icono.png" alt="Pantalla con la cruz para borrar la búsqueda marcada en rojo"></p>
+<ol start="3">
+<li>Para ver todo de nuevo, tocá la cruz ⊗ dentro del casillero.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-47-donde-esta-boton-limpiar-busqueda.png" alt="Pantalla sin resultados con el botón Limpiar búsqueda marcado en rojo"></p>
+<ol start="4">
+<li>Si no encuentra nada, tocá <strong>Limpiar búsqueda</strong>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🧰 Paso 7: Filtrá la lista
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-filtra-la-lista"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-filtra-la-lista"></div>
+
+<p><img src="/images/manual/40-productos/41-66-donde-esta-boton-filtros.png" alt="Pantalla con el botón Filtros marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Filtros</strong>, arriba a la derecha.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-68-panel-filtros.png" alt="Panel Filtros avanzados abierto"></p>
+<ol start="2">
+<li><p>Se abre el panel <strong>Filtros avanzados</strong>. Completá solo lo que necesites:</p>
+<ul>
+<li><strong>Nombre del producto</strong>, <strong>Nombre en ticket</strong> y <strong>Stock</strong> (con stock o sin stock)</li>
+<li><strong>Puesto</strong>, <strong>Categoría</strong> e <strong>Impresora</strong>. Por ejemplo: todo lo que sale por la <em>Barra</em>.</li>
+<li><strong>Impuesto</strong>, <strong>Precio exacto</strong> y <strong>Orden</strong>.</li>
+</ul>
+</li>
+<li><p>Tocá <strong>Buscar</strong>, abajo a la derecha del panel.</p>
+</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-32-donde-esta-boton-limpiar-filtros.png" alt="Panel de filtros con el botón Limpiar filtros marcado en rojo"></p>
+<ol start="4">
+<li>Para sacar todos los filtros, tocá <strong>Limpiar filtros</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-07-donde-esta-boton-close.png" alt="Panel de filtros con la cruz de cerrar marcada en rojo"></p>
+<ol start="5">
+<li>Para cerrar el panel, tocá la cruz <strong>×</strong> de arriba a la derecha.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ☑️ Paso 8: Cambiá muchos productos de una vez
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-cambia-muchos-productos-de-una-vez"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-8-cambia-muchos-productos-de-una-vez"></div>
+
+<p><img src="/images/manual/40-productos/41-46-campo-select-all-products.png" alt="Casilla para tildar todos los productos"></p>
+<ol>
+<li>Tildá la casilla de cada producto que querés cambiar. La de arriba de todo los tilda a todos.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-71-barra-seleccionados.png" alt="Barra de abajo: 1 seleccionado, Categoría, Puesto, Impuesto, Impresora, Stock, Eliminar y una cruz"></p>
+<ol start="2">
+<li>Abajo aparece una barra con lo que podés cambiar.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-34-donde-esta-boton-flecha.png" alt="Pantalla con el botón Categoría de la barra marcado en rojo"></p>
+<ol start="3">
+<li>Tocá lo que querés cambiar. Por ejemplo: <strong>Categoría</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-72-accion-masiva-abierta.png" alt="Lista de categorías abierta sobre la barra"></p>
+<ol start="4">
+<li>Elegí el valor nuevo de la lista.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-73-ventana-confirmar-accion-masiva.png" alt="Ventana Cambiar Categoría: Se asignará categoría a 1 producto(s)"></p>
+<ol start="5">
+<li>Se abre una ventana que te dice qué va a cambiar.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-44-donde-esta-boton-bulk-confirm-ok.png" alt="Ventana con el botón Confirmar marcado en rojo"></p>
+<ol start="6">
+<li>Si está bien, tocá <strong>Confirmar</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-42-donde-esta-boton-icono.png" alt="Ventana con el botón Cancelar marcado en rojo"></p>
+<p><img src="/images/manual/40-productos/41-40-donde-esta-boton-times.png" alt="Ventana con la cruz de cerrar marcada en rojo"></p>
+<ol start="7">
+<li>Si no, tocá <strong>Cancelar</strong> o la cruz <strong>×</strong>. No cambia nada.</li>
+</ol>
+<p><img src="/images/manual/40-productos/41-36-donde-esta-boton-flecha.png" alt="Barra con el botón rojo Eliminar marcado en rojo"></p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> el botón rojo <strong>Eliminar</strong> de la barra saca del menú <strong>todos</strong> los productos tildados.</p>
+</blockquote>
+<p><img src="/images/manual/40-productos/41-38-donde-esta-boton-flecha.png" alt="Barra con la cruz para destildar marcada en rojo"></p>
+<ol start="8">
+<li>Para destildar todo, tocá la cruz <strong>×</strong> al final de la barra.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🧭 Paso 9: Otros botones de arriba
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-9-otros-botones-de-arriba"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-9-otros-botones-de-arriba"></div>
+
+<p><img src="/images/manual/40-productos/41-11-donde-esta-boton-dropdown-toggle.png" alt="Pantalla con el botón Menú: Catálogo marcado en rojo"></p>
+<ul>
+<li><strong>Menú: Catálogo</strong>: si tenés más de un menú, lo cambiás acá. También podés crear uno nuevo.</li>
+</ul>
+<p><img src="/images/manual/40-productos/41-54-selector-de-menu-abierto.png" alt="Lista de menús abierta con Catálogo y Nuevo Menú"></p>
+<ul>
+<li><strong>Importar</strong>: carga muchos productos juntos desde un Excel.</li>
+<li><strong>Exportar</strong>: descarga la lista de productos en un Excel.</li>
+<li><strong>Configurar</strong>: cambia el nombre, la foto y cómo se ve este menú.</li>
+</ul>
+<p><img src="/images/manual/40-productos/41-17-donde-esta-boton-ayuda-precios.png" alt="Pantalla con el botón de ayuda de precios marcado en rojo"></p>
+<ul>
+<li><strong>?</strong>: explica cómo funcionan los precios y el <strong>Precio Futuro</strong>.</li>
+</ul>
+<p><img src="/images/manual/40-productos/41-63-ayuda-precios-abierta.png" alt="Explicación de precios abierta"></p>
+<p><img src="/images/manual/40-productos/41-19-donde-esta-boton-dropdown-toggle.png" alt="Pantalla con el botón de más opciones marcado en rojo"></p>
+<ul>
+<li><strong>⋯</strong> (tres puntitos): ver el menú online, su código QR y <strong>Aplicar precios futuros</strong>.</li>
+</ul>
+<p><img src="/images/manual/40-productos/41-64-mas-opciones-abierto.png" alt="Lista de más opciones abierta"></p>
+<p><img src="/images/manual/40-productos/41-21-donde-esta-boton-text-danger.png" alt="Lista de más opciones con Eliminar Menú marcado en rojo"></p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Eliminar Menú</strong> borra el menú entero con todos sus productos. No se puede deshacer.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>El mozo no encuentra un producto</strong></td>
+<td>Está marcado <strong>Sin Stock</strong>, o no está en el menú.</td>
+<td>Buscalo acá. Si no está, agregalo. Si está, editalo y desmarcá <strong>Sin Stock</strong>.</td>
+</tr>
+<tr>
+<td><strong>La comanda no sale impresa</strong></td>
+<td>No tiene impresora en <strong>¿Dónde se imprime la comanda?</strong>.</td>
+<td>Tocá el lápiz y tildá la impresora.</td>
+</tr>
+<tr>
+<td><strong>No aparece ninguna impresora para elegir</strong></td>
+<td>Todavía no cargaste las impresoras.</td>
+<td>Seguí <a href="/user-guide/impresoras">Impresoras</a> y volvé a editar el producto.</td>
+</tr>
+<tr>
+<td><strong>La factura sale con error por el IVA</strong></td>
+<td>El producto no tiene bien el <strong>Impuesto / IVA</strong>.</td>
+<td>Tocá el lápiz y elegí el IVA correcto.</td>
+</tr>
+<tr>
+<td><strong>Cambié un precio y no se guardó</strong></td>
+<td>No confirmaste el cambio en la celda.</td>
+<td>Hacé clic de nuevo, escribí el precio y tocá el botón verde ✔.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/41-menu.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-agrega-un-producto-al-menu" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Agregá un producto al menú</a></li><li><a href="#paso-1-informacion-basica" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">PASO 1 · Información Básica (obligatoria)</a></li><li><a href="#paso-2-variantes-del-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">PASO 2 · Variantes del Producto (si hace falta)</a></li><li><a href="#paso-3-configuracion-operativa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">PASO 3 · Configuración Operativa (impresora)</a></li><li><a href="#opciones-adicionales-opcional" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Opciones Adicionales (opcional)</a></li><li><a href="#guarda-el-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guardá el producto</a></li><li><a href="#paso-3-cambia-un-precio-desde-la-lista" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Cambiá un precio desde la lista</a></li><li><a href="#paso-4-cambia-todos-los-datos-de-un-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Cambiá todos los datos de un producto</a></li><li><a href="#paso-5-saca-un-producto-del-menu" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Sacá un producto del menú</a></li><li><a href="#paso-6-busca-un-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Buscá un producto</a></li><li><a href="#paso-7-filtra-la-lista" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Filtrá la lista</a></li><li><a href="#paso-8-cambia-muchos-productos-de-una-vez" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Cambiá muchos productos de una vez</a></li><li><a href="#paso-9-otros-botones-de-arriba" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 9: Otros botones de arriba</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"menu",title:"Menú de Productos (Carta)",content:"\u003Cdiv id=\"menu-de-productos-carta\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Productos\u003C/strong> → \u003Cstrong>Menú\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Encargados de la carta y administradores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nEl \u003Cstrong>Menú\u003C/strong> es la lista de todo lo que vendés. Es lo que ven los mozos cuando cargan una mesa, y tus clientes en el menú online.\nAcá agregás productos, les ponés precio y elegís por qué impresora sale cada comanda.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🧭 \u003Cstrong>Primeros pasos para armar tu menú:\u003C/strong>\u003C/p>\n\u003Col>\n\u003Cli>Creá las \u003Ca href=\"/user-guide/categorias\">Categorías\u003C/a> y las \u003Ca href=\"/user-guide/variantes-grupo-sabores\">Variantes\u003C/a>. No importa el orden.\u003C/li>\n\u003Cli>Cargá los productos en el menú (esta guía).\u003C/li>\n\u003C/ol>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tener creadas las \u003Ca href=\"/user-guide/categorias\">Categorías\u003C/a>.\u003C/li>\n\u003Cli>Si algún producto lleva opciones, tener creadas sus \u003Ca href=\"/user-guide/variantes-grupo-sabores\">Variantes\u003C/a>.\u003C/li>\n\u003Cli>Para elegir la impresora de cada producto, tenerlas cargadas. Mirá \u003Ca href=\"/user-guide/impresoras\">Impresoras\u003C/a>.\u003C/li>\n\u003Cli>Tu usuario tiene que tener el permiso del \u003Cstrong>Menú\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> tu comercio ya arranca con un menú creado. No hace falta crear otro: solo cargale los productos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-00a-menu-grupo-productos.png\" alt=\"Menú lateral con el grupo Productos marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Productos\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-00b-menu-opcion-index-vendibles.png\" alt=\"Opción Menú marcada en rojo en el menú lateral\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Menú\u003C/strong>. Es la primera opción.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-01-pantalla-index-vendibles.png\" alt=\"Pantalla del Menú Catálogo con la lista de productos\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Arriba están los botones. Abajo, la lista de productos con su precio.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-53-encabezado-menu.png\" alt=\"Barra de arriba: Menú Catálogo, Agregar Producto, Importar, Exportar, Configurar, ayuda y más opciones\">\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 2: Agregá un producto al menú\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-agrega-un-producto-al-menu\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-agrega-un-producto-al-menu\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-55-donde-esta-boton-agregar-producto.png\" alt=\"Pantalla con el botón azul Agregar Producto marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón azul \u003Cstrong>Agregar Producto\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la pantalla \u003Cstrong>Agregar Producto al Menú\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-74-pantalla-agregar-producto.png\" alt=\"Pantalla Agregar Producto al Menú con Milanesa napolitana a $ 4500\">\u003C/p>\n\u003Cp>Tiene varias partes. Las importantes son \u003Cstrong>PASO 1\u003C/strong>, \u003Cstrong>PASO 2\u003C/strong> y \u003Cstrong>PASO 3\u003C/strong>.\u003C/p>\n\u003Ch3 class=\"relative\">\n                PASO 1 · Información Básica (obligatoria)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-informacion-basica\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-1-informacion-basica\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-75-seccion-paso-1.png\" alt=\"Recuadro rojo PASO 1 Información Básica completo\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-76-campo-nombre-del-producto.png\" alt=\"Casillero Nombre del Producto con Milanesa napolitana\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>En \u003Cstrong>Nombre del Producto\u003C/strong>, escribí el nombre. Por ejemplo: \u003Cem>Milanesa napolitana\u003C/em>.\u003C/li>\n\u003Cli>Si el producto ya existe, aparece en una lista mientras escribís. Tocalo para elegirlo.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-77-campo-categoria.png\" alt=\"Lista Categoría con Especialidades elegida\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>En \u003Cstrong>Categoría\u003C/strong>, elegí dónde aparece en el menú. Por ejemplo: \u003Cem>Especialidades\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-78-campo-precio-de-venta.png\" alt=\"Casillero Precio de Venta con 4500\">\u003C/p>\n\u003Col start=\"6\">\n\u003Cli>En \u003Cstrong>Precio de Venta\u003C/strong>, escribí el precio al público. Por ejemplo: \u003Cem>4500\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-79-campo-moneda.png\" alt=\"Lista Moneda con Argentina Peso\">\u003C/p>\n\u003Col start=\"7\">\n\u003Cli>\u003Cstrong>Moneda\u003C/strong>: dejala como viene, salvo que vendas en otra moneda.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-80-campo-impuesto.png\" alt=\"Lista Impuesto / IVA con IVA 21%\">\u003C/p>\n\u003Col start=\"8\">\n\u003Cli>En \u003Cstrong>Impuesto / IVA\u003C/strong>, elegí el IVA del producto. Por ejemplo: \u003Cem>IVA 21%\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si el IVA está mal cargado, el producto no se puede facturar bien. La lista del menú te avisa qué productos tienen ese problema.\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                PASO 2 · Variantes del Producto (si hace falta)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-variantes-del-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-2-variantes-del-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-81-seccion-paso-2-variantes.png\" alt=\"Recuadro PASO 2 Variantes del Producto con la variante Gustos de helado\">\u003C/p>\n\u003Col start=\"9\">\n\u003Cli>Tildá las variantes que lleva el producto. Por ejemplo: \u003Cem>Gustos de helado\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-82-donde-esta-boton-administrar-variantes.png\" alt=\"Pantalla con el botón naranja Administrar Variantes marcado en rojo\">\u003C/p>\n\u003Col start=\"10\">\n\u003Cli>Si no está la que necesitás, tocá \u003Cstrong>Administrar Variantes\u003C/strong> para crearla. Mirá \u003Ca href=\"/user-guide/variantes-grupo-sabores\">Variantes\u003C/a>.\u003C/li>\n\u003C/ol>\n\u003Ch3 class=\"relative\">\n                PASO 3 · Configuración Operativa (impresora)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-configuracion-operativa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-3-configuracion-operativa\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-84-seccion-paso-3-impresoras.png\" alt=\"Recuadro PASO 3 Configuración Operativa con ¿Dónde se imprime la comanda?\">\u003C/p>\n\u003Col start=\"11\">\n\u003Cli>En \u003Cstrong>¿Dónde se imprime la comanda?\u003C/strong>, tildá la impresora de este producto. Por ejemplo: \u003Cem>Cocina\u003C/em> o \u003Cem>Barra\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Puesto\u003C/strong> y \u003Cstrong>Depósito\u003C/strong> son opcionales. Si no los usás, dejalos como están.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> la impresora se elige en cada producto. Así la bebida sale en la barra y la comida en la cocina.\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                Opciones Adicionales (opcional)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"opciones-adicionales-opcional\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"opciones-adicionales-opcional\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-85-donde-esta-boton-mostrar-ocultar.png\" alt=\"Pantalla con el botón Mostrar/Ocultar de Opciones Adicionales marcado en rojo\">\u003C/p>\n\u003Col start=\"13\">\n\u003Cli>Si querés, tocá \u003Cstrong>Mostrar/Ocultar\u003C/strong> en \u003Cstrong>Opciones Adicionales\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-87-seccion-opcional-abierta.png\" alt=\"Opciones Adicionales abiertas: Orden y Nombre en Ticket\">\u003C/p>\n\u003Col start=\"14\">\n\u003Cli>\u003Cstrong>Orden\u003C/strong>: en qué lugar aparece en su categoría. \u003Cstrong>Nombre en Ticket\u003C/strong>: un nombre más corto para la comanda y el ticket.\u003C/li>\n\u003C/ol>\n\u003Ch3 class=\"relative\">\n                Guardá el producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"guarda-el-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"guarda-el-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-88-donde-esta-boton-guardar-producto.png\" alt=\"Pantalla con el botón azul Guardar Producto marcado en rojo\">\u003C/p>\n\u003Col start=\"15\">\n\u003Cli>Tocá el botón azul \u003Cstrong>Guardar Producto\u003C/strong>, abajo de todo.\u003C/li>\n\u003Cli>El producto aparece en la lista. Los mozos ya lo pueden cargar en el \u003Ca href=\"/user-guide/salon-de-ventas\">Salón de Ventas\u003C/a>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-90-donde-esta-boton-cancelar.png\" alt=\"Pantalla con el botón Cancelar marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si te arrepentiste, tocá \u003Cstrong>Cancelar\u003C/strong>, debajo de \u003Cstrong>Guardar Producto\u003C/strong>. No se guarda nada.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💲 Paso 3: Cambiá un precio desde la lista\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-cambia-un-precio-desde-la-lista\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-cambia-un-precio-desde-la-lista\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-69-fila-producto.png\" alt=\"Renglón de un producto con su stock, categoría, impresora y precio\">\u003C/p>\n\u003Col>\n\u003Cli>Buscá el producto en la lista.\u003C/li>\n\u003Cli>Hacé clic sobre su \u003Cstrong>Precio\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-70-celda-precio-editando.png\" alt=\"Renglón con el precio abierto para escribir y un botón verde para confirmar\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Escribí el precio nuevo y tocá el botón verde ✔ (o Enter).\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> lo mismo sirve para el nombre, la categoría, el orden y otras columnas. Hacé clic en la celda y cambiala.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ Paso 4: Cambiá todos los datos de un producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-cambia-todos-los-datos-de-un-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-cambia-todos-los-datos-de-un-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-49-donde-esta-boton-icono.png\" alt=\"Lista con el lápiz de un producto marcado en rojo, a la derecha\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el lápiz ✏️ a la derecha del producto. Si no lo ves, mové la lista hacia la derecha.\u003C/li>\n\u003Cli>Se abre la misma pantalla que al agregarlo, con sus datos. Cambiá lo que necesites.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar Producto\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-92-seccion-avanzado-abierta.png\" alt=\"Sección AVANZADO Modificar Producto Maestro abierta, con nombre, código, imagen y Sin Stock\">\u003C/p>\n\u003Cp>Al editar aparece además \u003Cstrong>AVANZADO · Modificar Producto Maestro\u003C/strong>. Ahí cambiás el nombre, el código de barras, la foto o marcás \u003Cstrong>Sin Stock\u003C/strong> para que no se pueda vender por un rato.\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> lo que cambies en \u003Cstrong>AVANZADO\u003C/strong> cambia el producto en \u003Cstrong>todos\u003C/strong> tus menús.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗑️ Paso 5: Sacá un producto del menú\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-saca-un-producto-del-menu\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-saca-un-producto-del-menu\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-51-donde-esta-boton-js-delete-producto.png\" alt=\"Lista con el tacho de un producto marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el tacho 🗑️ a la derecha del producto.\u003C/li>\n\u003Cli>El sistema te pregunta si estás seguro. Confirmá para sacarlo.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> el producto sale de este menú, pero sigue existiendo en el \u003Ca href=\"/user-guide/maestro-de-productos\">Maestro de Productos\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 6: Buscá un producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-busca-un-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-busca-un-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-04-campo-quick-search.png\" alt=\"Casillero Buscar en todos los productos con ALFAJOR escrito\">\u003C/p>\n\u003Col>\n\u003Cli>En \u003Cstrong>Buscar en todos los productos...\u003C/strong>, escribí parte del nombre y tocá Enter. Por ejemplo: \u003Cem>ALFAJOR\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-65-resultado-busqueda.png\" alt=\"Lista con los productos que tienen ALFAJOR en el nombre\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>La lista muestra solo los que coinciden.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-05-donde-esta-boton-icono.png\" alt=\"Pantalla con la cruz para borrar la búsqueda marcada en rojo\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Para ver todo de nuevo, tocá la cruz ⊗ dentro del casillero.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-47-donde-esta-boton-limpiar-busqueda.png\" alt=\"Pantalla sin resultados con el botón Limpiar búsqueda marcado en rojo\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Si no encuentra nada, tocá \u003Cstrong>Limpiar búsqueda\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧰 Paso 7: Filtrá la lista\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-filtra-la-lista\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-filtra-la-lista\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-66-donde-esta-boton-filtros.png\" alt=\"Pantalla con el botón Filtros marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Filtros\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-68-panel-filtros.png\" alt=\"Panel Filtros avanzados abierto\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>\u003Cp>Se abre el panel \u003Cstrong>Filtros avanzados\u003C/strong>. Completá solo lo que necesites:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre del producto\u003C/strong>, \u003Cstrong>Nombre en ticket\u003C/strong> y \u003Cstrong>Stock\u003C/strong> (con stock o sin stock)\u003C/li>\n\u003Cli>\u003Cstrong>Puesto\u003C/strong>, \u003Cstrong>Categoría\u003C/strong> e \u003Cstrong>Impresora\u003C/strong>. Por ejemplo: todo lo que sale por la \u003Cem>Barra\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Impuesto\u003C/strong>, \u003Cstrong>Precio exacto\u003C/strong> y \u003Cstrong>Orden\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>\u003Cp>Tocá \u003Cstrong>Buscar\u003C/strong>, abajo a la derecha del panel.\u003C/p>\n\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-32-donde-esta-boton-limpiar-filtros.png\" alt=\"Panel de filtros con el botón Limpiar filtros marcado en rojo\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Para sacar todos los filtros, tocá \u003Cstrong>Limpiar filtros\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-07-donde-esta-boton-close.png\" alt=\"Panel de filtros con la cruz de cerrar marcada en rojo\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>Para cerrar el panel, tocá la cruz \u003Cstrong>×\u003C/strong> de arriba a la derecha.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ☑️ Paso 8: Cambiá muchos productos de una vez\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-cambia-muchos-productos-de-una-vez\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-8-cambia-muchos-productos-de-una-vez\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-46-campo-select-all-products.png\" alt=\"Casilla para tildar todos los productos\">\u003C/p>\n\u003Col>\n\u003Cli>Tildá la casilla de cada producto que querés cambiar. La de arriba de todo los tilda a todos.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-71-barra-seleccionados.png\" alt=\"Barra de abajo: 1 seleccionado, Categoría, Puesto, Impuesto, Impresora, Stock, Eliminar y una cruz\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Abajo aparece una barra con lo que podés cambiar.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-34-donde-esta-boton-flecha.png\" alt=\"Pantalla con el botón Categoría de la barra marcado en rojo\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Tocá lo que querés cambiar. Por ejemplo: \u003Cstrong>Categoría\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-72-accion-masiva-abierta.png\" alt=\"Lista de categorías abierta sobre la barra\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>Elegí el valor nuevo de la lista.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-73-ventana-confirmar-accion-masiva.png\" alt=\"Ventana Cambiar Categoría: Se asignará categoría a 1 producto(s)\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>Se abre una ventana que te dice qué va a cambiar.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-44-donde-esta-boton-bulk-confirm-ok.png\" alt=\"Ventana con el botón Confirmar marcado en rojo\">\u003C/p>\n\u003Col start=\"6\">\n\u003Cli>Si está bien, tocá \u003Cstrong>Confirmar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-42-donde-esta-boton-icono.png\" alt=\"Ventana con el botón Cancelar marcado en rojo\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-40-donde-esta-boton-times.png\" alt=\"Ventana con la cruz de cerrar marcada en rojo\">\u003C/p>\n\u003Col start=\"7\">\n\u003Cli>Si no, tocá \u003Cstrong>Cancelar\u003C/strong> o la cruz \u003Cstrong>×\u003C/strong>. No cambia nada.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-36-donde-esta-boton-flecha.png\" alt=\"Barra con el botón rojo Eliminar marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> el botón rojo \u003Cstrong>Eliminar\u003C/strong> de la barra saca del menú \u003Cstrong>todos\u003C/strong> los productos tildados.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-38-donde-esta-boton-flecha.png\" alt=\"Barra con la cruz para destildar marcada en rojo\">\u003C/p>\n\u003Col start=\"8\">\n\u003Cli>Para destildar todo, tocá la cruz \u003Cstrong>×\u003C/strong> al final de la barra.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧭 Paso 9: Otros botones de arriba\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-9-otros-botones-de-arriba\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-9-otros-botones-de-arriba\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-11-donde-esta-boton-dropdown-toggle.png\" alt=\"Pantalla con el botón Menú: Catálogo marcado en rojo\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Menú: Catálogo\u003C/strong>: si tenés más de un menú, lo cambiás acá. También podés crear uno nuevo.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-54-selector-de-menu-abierto.png\" alt=\"Lista de menús abierta con Catálogo y Nuevo Menú\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Importar\u003C/strong>: carga muchos productos juntos desde un Excel.\u003C/li>\n\u003Cli>\u003Cstrong>Exportar\u003C/strong>: descarga la lista de productos en un Excel.\u003C/li>\n\u003Cli>\u003Cstrong>Configurar\u003C/strong>: cambia el nombre, la foto y cómo se ve este menú.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-17-donde-esta-boton-ayuda-precios.png\" alt=\"Pantalla con el botón de ayuda de precios marcado en rojo\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>?\u003C/strong>: explica cómo funcionan los precios y el \u003Cstrong>Precio Futuro\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-63-ayuda-precios-abierta.png\" alt=\"Explicación de precios abierta\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-19-donde-esta-boton-dropdown-toggle.png\" alt=\"Pantalla con el botón de más opciones marcado en rojo\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>⋯\u003C/strong> (tres puntitos): ver el menú online, su código QR y \u003Cstrong>Aplicar precios futuros\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-64-mas-opciones-abierto.png\" alt=\"Lista de más opciones abierta\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/41-21-donde-esta-boton-text-danger.png\" alt=\"Lista de más opciones con Eliminar Menú marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Eliminar Menú\u003C/strong> borra el menú entero con todos sus productos. No se puede deshacer.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>El mozo no encuentra un producto\u003C/strong>\u003C/td>\n\u003Ctd>Está marcado \u003Cstrong>Sin Stock\u003C/strong>, o no está en el menú.\u003C/td>\n\u003Ctd>Buscalo acá. Si no está, agregalo. Si está, editalo y desmarcá \u003Cstrong>Sin Stock\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La comanda no sale impresa\u003C/strong>\u003C/td>\n\u003Ctd>No tiene impresora en \u003Cstrong>¿Dónde se imprime la comanda?\u003C/strong>.\u003C/td>\n\u003Ctd>Tocá el lápiz y tildá la impresora.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No aparece ninguna impresora para elegir\u003C/strong>\u003C/td>\n\u003Ctd>Todavía no cargaste las impresoras.\u003C/td>\n\u003Ctd>Seguí \u003Ca href=\"/user-guide/impresoras\">Impresoras\u003C/a> y volvé a editar el producto.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La factura sale con error por el IVA\u003C/strong>\u003C/td>\n\u003Ctd>El producto no tiene bien el \u003Cstrong>Impuesto / IVA\u003C/strong>.\u003C/td>\n\u003Ctd>Tocá el lápiz y elegí el IVA correcto.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Cambié un precio y no se guardó\u003C/strong>\u003C/td>\n\u003Ctd>No confirmaste el cambio en la celda.\u003C/td>\n\u003Ctd>Hacé clic de nuevo, escribí el precio y tocá el botón verde ✔.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-agrega-un-producto-al-menu",title:"Paso 2: Agregá un producto al menú",level:2},{id:"paso-1-informacion-basica",title:"PASO 1 · Información Básica (obligatoria)",level:3},{id:"paso-2-variantes-del-producto",title:"PASO 2 · Variantes del Producto (si hace falta)",level:3},{id:"paso-3-configuracion-operativa",title:"PASO 3 · Configuración Operativa (impresora)",level:3},{id:"opciones-adicionales-opcional",title:"Opciones Adicionales (opcional)",level:3},{id:"guarda-el-producto",title:"Guardá el producto",level:3},{id:"paso-3-cambia-un-precio-desde-la-lista",title:"Paso 3: Cambiá un precio desde la lista",level:2},{id:"paso-4-cambia-todos-los-datos-de-un-producto",title:"Paso 4: Cambiá todos los datos de un producto",level:2},{id:"paso-5-saca-un-producto-del-menu",title:"Paso 5: Sacá un producto del menú",level:2},{id:"paso-6-busca-un-producto",title:"Paso 6: Buscá un producto",level:2},{id:"paso-7-filtra-la-lista",title:"Paso 7: Filtrá la lista",level:2},{id:"paso-8-cambia-muchos-productos-de-una-vez",title:"Paso 8: Cambiá muchos productos de una vez",level:2},{id:"paso-9-otros-botones-de-arriba",title:"Paso 9: Otros botones de arriba",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Menú de Productos (Carta) - Manual",description:"¿Dónde está en el sistema?: Menú principal → Productos → Menú\n ¿Quién lo usa?: Encargados de la carta y administradores",keywords:"menu, paxapos, menú de productos (carta), tutorial, guía, manual usuario"},llmTxtFile:"41-menu.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

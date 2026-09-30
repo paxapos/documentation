@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Configuración → Configuración general (es la primera opción del grupo, arriba de todo).
+ ¿Quién..."/> <meta name="keywords" content="configuracion general, paxapos, configuración general, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Configuración general - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Configuración → Configuración general (es la primera opción del grupo, arriba de todo).
+ ¿Quién..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Configuración general - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Configuración general - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Configuración → Configuración general (es la primera opción del grupo, arriba de todo).
+ ¿Quién..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Configuración general - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Configuración → Configuración general (es la primera opción del grupo, arriba de todo).\n ¿Quién...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Configuración general - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/configuracion-general" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Configuración general</a></li><li><a href="../user-guide/impresoras" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo cargar las impresoras del local</a></li><li><a href="../user-guide/perfiles-de-impresion" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo usar los perfiles de impresión</a></li><li><a href="../user-guide/usuarios-del-sistema" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo administrar los Usuarios del Sistema</a></li><li><a href="../user-guide/usuarios-con-pin" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo administrar los Usuarios con PIN</a></li><li><a href="../user-guide/punto-de-venta" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Trámite en ARCA (con clave fiscal)</a></li><li><a href="../user-guide/permisos-por-rol" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo configurar los Permisos por Rol</a></li><li><a href="../user-guide/turnos-mesa" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Turnos de Mesa</a></li><li><a href="../user-guide/medios-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Medios de cobro</a></li><li><a href="../user-guide/clasificacion-de-gastos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Clasificación de Gastos</a></li><li><a href="../user-guide/centros-de-costo" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Centros de Costo</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Configuración general</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: configuracion-general</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="configuracion-general"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Configuración</strong> → <strong>Configuración general</strong> (es la primera opción del grupo, arriba de todo).
+<strong>¿Quién lo usa?:</strong> Dueños y administradores del comercio.</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá se ajusta cómo funciona tu comercio: datos, facturación, impresión, cobros, pedidos online y más. Todo está en una sola pantalla, ordenado por temas.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📍 <strong>Cómo se usa la pantalla</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="como-se-usa-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="como-se-usa-la-pantalla"></div>
+
+<p><img src="/images/manual/110-configuracion/111-00a-menu-grupo-configuracion.png" alt="Menú lateral con el grupo Configuración marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá el grupo <strong>Configuración</strong>.</li>
+</ol>
+<p><img src="/images/manual/110-configuracion/111-00b-menu-opcion-configuracion-general.png" alt="Opción Configuración general marcada en rojo dentro del grupo Configuración"></p>
+<ol start="2">
+<li>Tocá <strong>Configuración general</strong>.</li>
+</ol>
+<p><img src="/images/manual/110-configuracion/111-01-pantalla-configuracion.png" alt="Pantalla Configuración con el buscador arriba, la lista de secciones a la izquierda y los datos de Comercio a la derecha"></p>
+<p>La pantalla tiene tres partes:</p>
+<ul>
+<li><strong>El buscador</strong>, arriba de todo.</li>
+<li><strong>La lista de secciones</strong>, a la izquierda.</li>
+<li><strong>Los datos de la sección elegida</strong>, a la derecha. Cada tema está en un cuadro con su título.</li>
+</ul>
+<h3 class="relative">
+                🔎 El buscador
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="el-buscador"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="el-buscador"></div>
+
+<p><img src="/images/manual/110-configuracion/111-02-buscador-de-ajustes.png" alt="Buscador con la palabra cuit escrita y un resultado debajo"></p>
+<ol>
+<li>Tocá el casillero <strong>Buscar un ajuste</strong> y escribí una palabra. Por ejemplo: <em>cuit</em>, <em>whatsapp</em> o <em>moneda</em>.</li>
+<li>Debajo aparece una lista con los ajustes que coinciden. Cada uno dice en qué sección está.</li>
+<li>Tocá el que buscabas. Te lleva directo a esa sección.</li>
+<li>Para volver a la lista de secciones, borrá lo que escribiste.</li>
+</ol>
+<p>Escribir en el buscador no cambia nada en tu comercio.</p>
+<h3 class="relative">
+                🗂️ La lista de secciones
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="la-lista-de-secciones"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="la-lista-de-secciones"></div>
+
+<p><img src="/images/manual/110-configuracion/111-03-lista-de-secciones.png" alt="Lista de secciones agrupadas en Puesta en marcha, Operación, Canales e IA y Sistema"></p>
+<p>Las secciones están agrupadas por título:</p>
+<ul>
+<li><strong>Puesta en marcha</strong>: Comercio, Fiscal y ARCA, Módulos.</li>
+<li><strong>Operación</strong>: Ventas y salón, Impresión, Compras y stock, Caja, Cobros y pagos.</li>
+<li><strong>Canales e IA</strong>: Delivery y pedidos online, Reservas, Mensajería y notificaciones, Inteligencia Artificial.</li>
+<li><strong>Sistema</strong>: RRHH, Usuarios y acceso, Tablas maestras.</li>
+</ul>
+<p>Tocá el nombre de una sección para abrirla. La sección abierta se ve en azul.</p>
+<p>Fijate en dos detalles:</p>
+<ul>
+<li>Un triángulo amarillo ⚠️ al lado del nombre avisa que falta completar algo. Al abrir la sección, el aviso aparece escrito arriba. Por ejemplo: faltan datos fiscales o un procesador de cobro no está listo.</li>
+<li>Si una sección dice <strong>(módulo apagado)</strong>, ese módulo no está activo. Podés cargar los datos, pero no tienen efecto hasta activarlo en <strong>Módulos</strong>.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> lo que cargás en la sección <strong>RRHH</strong> se explica <a href="#rrhh">más abajo</a>. Las pantallas de RRHH tienen sus artículos: <a href="/user-guide/empleados">Empleados</a>, <a href="/user-guide/departamentos">Departamentos</a>, <a href="/user-guide/turnos-y-horarios-fichaje">Turnos y Horarios</a>, <a href="/user-guide/sueldos-y-jornales">Sueldos y Jornales</a> y <a href="/user-guide/datos-de-acceso-app">Datos de Acceso a la App</a>.</p>
+</blockquote>
+<h3 class="relative">
+                💾 El botón Guardar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="el-boton-guardar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="el-boton-guardar"></div>
+
+<p><img src="/images/manual/110-configuracion/111-04-donde-esta-boton-guardar.png" alt="Pantalla con el botón verde Guardar marcado en rojo abajo del último cuadro de la sección"></p>
+<p>Abajo de los cuadros de cada sección hay un botón verde <strong>Guardar</strong>.</p>
+<ol>
+<li>Cambiá lo que necesites en la sección.</li>
+<li>Bajá hasta el final y tocá <strong>Guardar</strong>.</li>
+<li>Aparece un mensaje verde que confirma que se guardaron los cambios.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Guardar</strong> solo guarda la sección que tenés abierta. Si cambiás algo y pasás a otra sección sin guardar, se pierde.</p>
+</blockquote>
+<p>Las secciones que solo tienen enlaces a otras pantallas (por ejemplo <strong>Tablas maestras</strong>) no tienen botón <strong>Guardar</strong>.</p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> estos cambios modifican cómo trabaja tu comercio ahora mismo. Cambiá de a uno y mirá qué pasa.</p>
+</blockquote>
+<p>Las fotos de este artículo muestran el comercio de prueba, con los datos reales tapados.</p>
+<hr>
+<h3 class="relative">
+                🏪 Comercio
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="comercio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="comercio"></div>
+
+<p>Datos de tu negocio, cómo se ve y dónde está. Es la primera sección de <strong>Puesta en marcha</strong>.</p>
+<p><img src="/images/manual/110-configuracion/111-05-comercio-datos-generales.png" alt="Cuadro Datos generales con Nombre de fantasía, URL del logo, Mail de la empresa y Valor del cubierto"></p>
+<p><strong>Datos generales</strong></p>
+<ul>
+<li><strong>Nombre de fantasía</strong>: el nombre con el que se conoce tu comercio.</li>
+<li><strong>URL del logo</strong>: la dirección de internet de tu logo. Se usa en el menú digital y en los comprobantes.</li>
+<li><strong>Mail de la empresa</strong>: el correo principal del comercio.</li>
+<li><strong>Valor del cubierto o servicio de mesa</strong>: lo que se cobra por comensal. Dejalo en 0 si no cobrás cubierto. Solo aparece si el tipo de comercio es restaurante.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-06-comercio-contacto-y-redes.png" alt="Cuadro Contacto y redes con teléfono, dirección, email, sitio web y redes sociales"></p>
+<p><strong>Contacto y redes</strong></p>
+<p>Estos datos se muestran en la ficha pública de tu comercio (menú y pedidos online). También los usa el asistente de WhatsApp para responder a tus clientes.</p>
+<ul>
+<li><strong>Teléfono</strong> y <strong>Dirección</strong>: cómo te encuentran tus clientes.</li>
+<li><strong>Email de contacto</strong> y <strong>Sitio web</strong>.</li>
+<li><strong>Instagram</strong>: escribilo con arroba, por ejemplo <em>@tucomercio</em>.</li>
+<li><strong>Facebook</strong>, <strong>Twitter / X</strong> y <strong>TikTok</strong>: tus usuarios en cada red.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-07-comercio-apariencia-y-ubicacion.png" alt="Cuadros Apariencia y Ubicación e idioma con theme visual, latitud, longitud, idioma, moneda y zona horaria"></p>
+<p><strong>Apariencia</strong></p>
+<ul>
+<li><strong>Theme visual del comercio</strong>: los colores del sistema para tu comercio. Si elegís &quot;usar theme predeterminado&quot;, se usa el general de PaxaPOS.</li>
+</ul>
+<p><strong>Ubicación e idioma</strong></p>
+<ul>
+<li><strong>Latitud</strong> y <strong>Longitud</strong>: la ubicación de tu local en el mapa. El delivery las usa para calcular el costo de envío.</li>
+<li><strong>HTML lang</strong>: el idioma de las pantallas.</li>
+<li><strong>Moneda</strong>: la moneda en la que trabajás. Si ya cobraste ventas, queda fija y no se puede cambiar (se ve solo el texto, sin casillero). Para otra moneda hace falta un comercio nuevo.</li>
+<li><strong>Zona horaria</strong>: define la hora de tus ventas y de los reportes.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                🧾 Fiscal y ARCA
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="fiscal-y-arca"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="fiscal-y-arca"></div>
+
+<p>Los datos para facturar. Si falta algo, arriba aparece un aviso amarillo.</p>
+<p><img src="/images/manual/110-configuracion/111-08-fiscal-datos-fiscales.png" alt="Aviso amarillo de facturación y cuadro Datos fiscales con razón social, CUIT y domicilio tapados"></p>
+<p><strong>Datos fiscales</strong></p>
+<p>Si sos Monotributista, cargá tus datos. Si sos Responsable Inscripto, cargá los de tu empresa.</p>
+<ul>
+<li><strong>Razón social</strong>: el nombre legal.</li>
+<li><strong>CUIT / CUIL</strong>: 11 números, con o sin guiones.</li>
+<li><strong>Domicilio fiscal</strong>: el que figura en ARCA.</li>
+<li><strong>Aviso amarillo</strong>: en la foto dice que la facturación electrónica está activa pero no hay ningún punto de venta habilitado. Se resuelve en <strong>Puntos de venta</strong>, más abajo.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-09-fiscal-agente-de-retencion.png" alt="Cuadro Agente de retención con número de agente, lugar de emisión, localidad y código postal"></p>
+<p><strong>Agente de retención</strong></p>
+<p>Completalo solo si tu comercio actúa como agente de retención. Estos datos salen en los certificados de retención que el proveedor descarga.</p>
+<ul>
+<li><strong>Nº de agente de recaudación</strong>: el número que asigna ARBA. Sin esto no se puede emitir el certificado de IIBB.</li>
+<li><strong>Lugar de emisión</strong>: aparece en el pie &quot;Lugar y Fecha&quot; del certificado.</li>
+<li><strong>Localidad del agente</strong> y <strong>Código postal del agente</strong>.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-10-fiscal-facturacion.png" alt="Cuadro Facturación con IVA por defecto, logo de la factura y plazo de pago"></p>
+<p><strong>Facturación</strong></p>
+<ul>
+<li><strong>IVA de productos por defecto</strong>: el IVA que se asigna a un producto nuevo.</li>
+<li><strong>URL del logo de la factura</strong>: se muestra arriba en tus comprobantes.</li>
+<li><strong>Plazo de pago (días)</strong>: solo si facturás servicios. El vencimiento que se declara a ARCA es el fin del período más estos días. Dejalo en 0 si cobrás en el momento. Vale para todos los puntos de venta.</li>
+<li><strong>Concepto de la factura</strong>: elegís Productos, Servicios, Productos y Servicios u Otro. Solo aparece si tu impresora fiscal es de tipo AFIP (facturación por web service). En el comercio de prueba no aparece.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-11-fiscal-remito-r.png" alt="Cuadro Remito R con punto de venta de remitos, CAI y vencimiento del CAI"></p>
+<p><strong>Remito R (traslado de mercadería)</strong></p>
+<p>Usalo solo si emitís remitos para trasladar mercadería. Si no, dejá todo vacío.</p>
+<ul>
+<li><strong>Punto de venta de remitos</strong>: distinto del de factura electrónica. Tiene que existir en Puntos de Venta.</li>
+<li><strong>CAI</strong>: el número que figura en el talonario o en la autorización de autoimpresor.</li>
+<li><strong>Vencimiento del CAI</strong>: con formato AAAA-MM-DD. Si vence, el sistema deja de emitir remitos.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-12-fiscal-puntos-de-venta.png" alt="Cuadro Puntos de venta sin ningún punto cargado y botón azul Agregar punto de venta"></p>
+<p><strong>Puntos de venta</strong></p>
+<p>Muestra la lista de tus puntos de venta con su número, nombre y si están habilitados. Cada uno tiene un botón <strong>Editar</strong>.</p>
+<ul>
+<li><strong>Agregar punto de venta</strong>: te lleva a la pantalla para crear uno. Esa pantalla consulta a ARCA en el momento. Más detalles en <a href="/user-guide/puntos-de-venta-pdv">Puntos de Venta</a>.</li>
+<li>En el comercio de prueba todavía no hay ninguno cargado.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                🧩 Módulos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="modulos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="modulos"></div>
+
+<p>Muestra qué funciones tiene prendidas tu comercio. Es solo para mirar: no se activa nada desde acá.</p>
+<ul>
+<li><strong>Módulos activos</strong>: una lista corta con un tilde verde ✔ si el módulo está activo o una cruz ✖ si no. Aparecen Salón, Caja registradora de ventas, Arqueo de caja, AFIP - Facturación electrónica, Servidor de impresión, Stock, Comandero (KDS), Compras, Contabilidad, Delivery, Reservas y Pedidos de clientes.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> activar o desactivar módulos cambia lo que ve todo el equipo y puede cambiar tu abono. Hacelo con el soporte de PaxaPOS.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                🍽️ Ventas y salón
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="ventas-y-salon"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="ventas-y-salon"></div>
+
+<p>Cómo se llaman las cosas y cómo se atienden las mesas. Es la primera sección del grupo <strong>Operación</strong>.</p>
+<p><img src="/images/manual/110-configuracion/111-14-ventas-terminologia.png" alt="Cuadro Terminología con los nombres Mozo, Mesa, Cubierto, Cliente, Menú, Comanda y Subtotal"></p>
+<p><strong>Terminología</strong></p>
+<p>Sirve para que el sistema hable como tu rubro. Por ejemplo, en un hotel &quot;Mesa&quot; pasa a ser &quot;Habitación&quot;. El cambio se ve en todas las pantallas.</p>
+<ul>
+<li><strong>Entidad vendedora</strong>: quién atiende la venta. Ej.: &quot;Mozo&quot; en gastronomía o &quot;Vendedor&quot; en un negocio de venta.</li>
+<li><strong>Objeto de venta</strong>: ej. &quot;Mesa&quot; u &quot;Habitación&quot;.</li>
+<li><strong>Número aplicado al objeto de venta</strong>: ej. &quot;Cubierto&quot; u &quot;Huésped&quot;.</li>
+<li><strong>Entidad que compra</strong>: ej. &quot;Cliente&quot;.</li>
+<li><strong>Catálogo</strong>: ej. &quot;Carta&quot; o &quot;Menú&quot;.</li>
+<li><strong>Comanda</strong>: cómo se llama cada pedido o consumo.</li>
+<li><strong>Subtotal de la comanda</strong>: el texto del subtotal.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-15-ventas-adicion-salon.png" alt="Cuadro Adición / salón con las opciones de apertura de mesa, estado de comandas, remito y descuento máximo"></p>
+<p><strong>Adición / salón</strong></p>
+<p>Los nombres de estos campos cambian según la terminología que elegiste arriba.</p>
+<ul>
+<li><strong>Indicar la cantidad de Cubiertos al abrir Mesa</strong>: elegís <strong>No</strong>, <strong>Si y que sea obligatorio</strong> o <strong>Si, pero que sea opcional</strong>.</li>
+<li><strong>Qué ventana mostrar al abrir una Mesa rápidamente</strong>: la pantalla que se abre primero. Puede ser la administración de la mesa, &quot;Agregar Producto&quot; o &quot;Agregar Cliente&quot;.</li>
+<li><strong>Ver el estado de las comandas en el salón</strong>: con <strong>Si</strong>, se ve el estado de cada comanda. Cuando está &quot;lista&quot;, la mesa cambia de color.</li>
+<li><strong>Efectos de transición en el salón</strong>: prende o apaga las animaciones entre pantallas.</li>
+<li><strong>Imprimir remito al hacer checkout en efectivo</strong>: con <strong>Si</strong>, al cobrar en efectivo se imprime el remito.</li>
+<li><strong>Mozo por defecto al crear Mesa</strong>: quién queda asignado si no elegís a nadie.</li>
+<li><strong>Porcentaje máximo de descuento que puede hacer un Mozo</strong>: un número de 0 a 100.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-16-ventas-numeros-y-estadisticas.png" alt="Cuadros Números y horarios y Estadísticas con hora de corte, precisión y producto estrella"></p>
+<p><strong>Números y horarios</strong></p>
+<ul>
+<li><strong>Hora de corte del día</strong>: a partir de qué hora empieza el día siguiente. Con corte a las 6, una mesa cerrada a las 00:30 se cuenta en el día anterior.</li>
+<li><strong>Precisión (centavos a redondear)</strong>: cuántos centavos se redondean al sumar productos. Si facturás online por ARCA queda fijo en 2, porque ARCA pide 2 decimales.</li>
+</ul>
+<p><strong>Estadísticas</strong></p>
+<ul>
+<li><strong>ID de producto estrella para Estadísticas</strong>: el número del producto (o varios separados por coma, sin espacios, ej. <em>23,33,56</em>). Se ve en <strong>Estadísticas → Detalle</strong> por mozo.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                🖨️ Impresión
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="impresion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="impresion"></div>
+
+<p>Cómo imprime tu comercio: el servidor de impresión, los perfiles y las opciones de tickets y comandas.</p>
+<p><img src="/images/manual/110-configuracion/111-17-impresion-crear-perfil.png" alt="Cuadro Crear perfil a partir de esta configuración con un aviso de que ya existe un perfil default"></p>
+<p><strong>Crear perfil a partir de esta configuración</strong></p>
+<p>Este cuadro aparece arriba de todo. Si todavía no tenés perfiles, ofrece crear el perfil &quot;Default&quot; con las impresoras cargadas más abajo. Si ya lo tenés, solo lo avisa, como en la foto.</p>
+<p><img src="/images/manual/110-configuracion/111-18-impresion-servidor.png" alt="Cuadro Servidor de impresión con la lista de servidores y sus puntos de color"></p>
+<p><strong>Servidor de impresión</strong></p>
+<p>Fiscalberry es el programa que corre en tu local y recibe lo que hay que imprimir.</p>
+<ul>
+<li><strong>Servidor de impresión activo para el comercio</strong>: elegís cuál usa tu comercio. Un punto verde 🟢 quiere decir que está conectado. Uno rojo 🔴, que no responde.</li>
+<li><strong>Sin Paxaprinter</strong>: no usar ningún servidor.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-19-impresion-fiscalberry-y-perfiles.png" alt="Cuadros Descargar Fiscalberry con los botones de descarga y Perfiles de impresión con la lista y sus botones"></p>
+<p><strong>Descargar Fiscalberry</strong></p>
+<ul>
+<li><strong>Windows (con interfaz)</strong>, <strong>Windows sin interfaz (consola)</strong>, <strong>Linux (con interfaz)</strong> y <strong>Linux sin interfaz (consola / Raspberry)</strong>: cada botón baja el programa para ese equipo.</li>
+<li><strong>verificar integridad (SHA256SUMS)</strong> y <strong>Todas las versiones</strong>: para técnicos.</li>
+<li>Se descarga, se ejecuta en la PC del local y aparece con el punto verde en la lista de arriba.</li>
+</ul>
+<p><strong>Perfiles de impresión</strong></p>
+<p>Cada perfil dice qué impresora usar para fiscal, remito, cajón y compras. Se puede asignar a un mozo, a un usuario o a un terminal.</p>
+<ul>
+<li>La tabla lista los perfiles con su <strong>Nombre</strong>, si es <strong>Default</strong> (la estrella) y sus <strong>Impresoras</strong>. <strong>Editar</strong> abre el perfil.</li>
+<li><strong>Agregar perfil</strong>, <strong>Gestionar todos los perfiles</strong> y <strong>Ver impresoras del comercio</strong>: te llevan a esas pantallas. Se explican en <a href="/user-guide/perfiles-de-impresion">Perfiles de impresión</a> e <a href="/user-guide/impresoras">Impresoras</a>.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-20-impresion-comportamiento.png" alt="Cuadro Comportamiento al imprimir con duplicados, fecha en remito, QR de pago y separación de comandas"></p>
+<p><strong>Comportamiento al imprimir</strong></p>
+<ul>
+<li><strong>Cierres duplicados a imprimir al cerrar mesa</strong> y <strong>Comandas duplicadas a imprimir</strong>: cuántas copias extra salen. Con 0 sale solo la original.</li>
+<li><strong>Imprimir fecha y hora en el remito</strong>: <strong>Si</strong> o <strong>No</strong>.</li>
+<li><strong>Imprimir QR de pago siempre en el remito</strong>: si está tildado, el remito de toda mesa sin pago previo lleva el QR de pago.</li>
+<li><strong>Separar comandas</strong>: genera una comanda distinta por impresora, por puesto o por categoría. O <strong>No separar en comandas</strong>.</li>
+<li><strong>Imprimir todos los productos por todas las comanderas</strong>: con <strong>Si</strong>, una Coca-Cola (barra) y una hamburguesa (cocina) salen juntas en las dos impresoras.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-21-impresion-impresoras-por-defecto.png" alt="Cuadro Impresoras por defecto con la comandera, la fiscal, las compras y qué hacer al cerrar"></p>
+<p><strong>Impresoras por defecto (respaldo sin perfil)</strong></p>
+<p>Solo se usan en equipos que no tienen un perfil de impresión asignado. Si ya usás perfiles, casi no las vas a necesitar.</p>
+<ul>
+<li><strong>Impresora de comandas por defecto</strong>, <strong>Impresora fiscal por defecto</strong> e <strong>Impresora de pedidos de Compras por defecto</strong>: elegís de la lista de tus impresoras.</li>
+<li><strong>Al cerrar o facturar: sacar remito o imprimir directo en la fiscal</strong>: <strong>Imprimir remito</strong>, <strong>Directo a la fiscal</strong> o <strong>No hacer nada</strong>. Cada perfil puede definir el suyo.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                🛒 Compras y stock
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="compras-y-stock"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="compras-y-stock"></div>
+
+<p>Ajustes de compras, pagos a proveedores y stock. Cada cuadro aparece según el módulo que tengas activo.</p>
+<p><img src="/images/manual/110-configuracion/111-22-compras-compras-y-flujo.png" alt="Cuadros Compras y Columnas del tablero Flujo de Compras con casillas tildadas"></p>
+<p><strong>Compras</strong></p>
+<ul>
+<li><strong>Habilitar aprobación de órdenes de compra</strong>: un superior tiene que aprobar la orden antes de enviarla al proveedor. También permite crear presupuestos.</li>
+<li><strong>Nombre del concepto que se compra</strong>: cómo se llama lo que comprás. Ej.: Ítem, Mercadería, Insumo. Se usa en botones, títulos y formularios de Compras.</li>
+</ul>
+<p><strong>Columnas del tablero &quot;Flujo de Compras&quot;</strong></p>
+<p>Tildá las columnas que querés ver en el tablero de compras: <strong>OC Creada (pendiente)</strong>, <strong>Lista de compras (ítems solicitados sin OC)</strong>, <strong>Enviada al proveedor</strong>, <strong>Recepcionada</strong>, <strong>Facturada</strong>, <strong>Pagada</strong> y <strong>Observada</strong>.</p>
+<p><img src="/images/manual/110-configuracion/111-23-compras-pagos-y-stock.png" alt="Cuadros Pagos a proveedores con órdenes de pago y retenciones, y Stock con Stock CERO automático"></p>
+<p><strong>Pagos a proveedores</strong></p>
+<ul>
+<li><strong>Habilitar Órdenes de Pago</strong>: permite crear pagos sin fecha, que quedan pendientes de aprobación. Incluye cheques y pagarés con fecha programada.</li>
+<li><strong>Habilitar Retenciones en Pagos (Agente de Retención)</strong>: calcula solo las retenciones (Ganancias, IIBB, IVA) al pagar facturas. Hay que configurar los regímenes por proveedor.</li>
+</ul>
+<p><strong>Stock</strong></p>
+<ul>
+<li><strong>Stock CERO automático</strong>: con <strong>Si</strong>, cuando un producto llega a stock 0 se marca solo como &quot;sin stock&quot;.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                💳 Cobros y pagos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="cobros-y-pagos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="cobros-y-pagos"></div>
+
+<p>Muestra cómo cobrás con tarjeta y QR. Acá se mira el estado. Para cambiar algo, se usan los botones de cada cuadro, que te llevan a otra pantalla.</p>
+<p><img src="/images/manual/110-configuracion/111-25-cobros.png" alt="Aviso amarillo y cuadros Procesador por canal, Cuentas conectadas y Medios de cobro y terminales"></p>
+<ul>
+<li><strong>Aviso amarillo</strong>: dice qué procesador no está listo. En la foto, MercadoPago está asignado a SmartPOS pero no hay terminales sincronizadas.</li>
+<li><strong>Procesador por canal</strong>: una tabla con el <strong>Canal</strong> (QR, Link de pago, SmartPOS), el <strong>Procesador asignado</strong> y su <strong>Estado</strong>. Un tilde verde dice <strong>Listo</strong>. Un triángulo amarillo explica qué falta. <strong>Cambiar procesador por canal</strong> abre la pantalla para elegir otro.</li>
+<li><strong>Cuentas conectadas</strong>: el estado de <strong>MercadoPago</strong>, <strong>Payway</strong> y <strong>Banco Macro</strong>, sin mostrar claves. Cada uno tiene su botón (<strong>Ver conexión</strong>, <strong>Conectar</strong> o <strong>Configurar</strong>) que abre la pantalla de conexión.</li>
+<li><strong>Medios de cobro y terminales</strong>: enlaces a <strong>Medios de cobro manuales</strong> (efectivo, transferencia, cheque, etc.) y <strong>Terminales</strong> (las SmartPOS de Payway). Los medios se explican en <a href="/user-guide/medios-de-cobro">Medios de cobro</a>.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> conectar o cambiar una cuenta de cobro afecta cómo cobrás desde ese momento. Hacelo con calma y probá con un cobro chico.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                🛵 Delivery y pedidos online
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="delivery-y-pedidos-online"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="delivery-y-pedidos-online"></div>
+
+<p>Cómo recibís pedidos por internet en <em>pedimelo.online</em>. Es la primera sección del grupo <strong>Canales e IA</strong>. Necesita el módulo <strong>Delivery</strong> activo.</p>
+<p><img src="/images/manual/110-configuracion/111-26-delivery-pedidos-online.png" alt="Cuadro Pedidos online con delivery abierto, URL, horario, estado inicial, modo del catálogo y teléfono de WhatsApp"></p>
+<p><strong>Pedidos online</strong></p>
+<ul>
+<li><strong>Delivery abierto</strong>: tildado, se aceptan pedidos. Destildado, pedimelo.online avisa a tus clientes que no se aceptan.</li>
+<li><strong>URL del pedimelo online</strong>: la dirección de tu página de pedidos, sin &quot;/&quot; al final.</li>
+<li><strong>ID Media del catálogo online</strong>: el número de la imagen del catálogo.</li>
+<li><strong>Horario y fechas de atención</strong>: texto libre con cuándo abrís y cerrás los pedidos.</li>
+<li><strong>Estado inicial de un nuevo pedido</strong>: cómo entra un pedido nuevo (ej. <strong>Pendiente</strong>).</li>
+<li><strong>Mensaje al cliente antes de asignar mesa</strong>: se muestra en pedimelo.online antes de pagar.</li>
+<li><strong>Modo del catálogo online</strong>: <strong>Solo Menú (sin botones para comprar)</strong> o <strong>Activar Pedidos Online</strong>.</li>
+<li><strong>Teléfono de WhatsApp para pedidos</strong>: el número donde te escriben.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-27-delivery-entrega-y-enlaces.png" alt="Cuadros Entrega y cobertura, Ubicación, Turnos de entrega y Procesadores de pago"></p>
+<p><strong>Entrega y cobertura</strong></p>
+<ul>
+<li><strong>Tiempo promedio de demora (segundos)</strong>: ej. 2400 si la demora es de 40 minutos.</li>
+<li><strong>Valor por Km.</strong>: lo que se cobra el envío por kilómetro.</li>
+<li><strong>URL a una imagen de tu comercio</strong> e <strong>Imagen de fondo</strong>: las imágenes de tu página de pedidos.</li>
+<li><strong>Mozo donde irán ventas por delivery</strong>: las ventas se vinculan a ese mozo.</li>
+<li><strong>Menú por default al ir al link pedimelo.online</strong>: qué carta se ve primero.</li>
+<li><strong>Tipo de pago si hay MercadoPago</strong>: con qué tipo de pago queda registrada la mesa pagada por MercadoPago.</li>
+</ul>
+<p><strong>Enlaces</strong></p>
+<ul>
+<li><strong>Ubicación</strong>: lleva a <strong>Comercio</strong>, donde se cargan latitud y longitud para calcular el envío.</li>
+<li><strong>Turnos de entrega</strong>: <strong>Administrar turnos</strong> abre los horarios que se ofrecen para posponer un pedido. Ver <a href="/user-guide/turnos-mesa">Turnos</a>.</li>
+<li><strong>Procesadores de pago</strong>: lleva a <strong>Cobros y pagos</strong>.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                📅 Reservas
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="reservas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="reservas"></div>
+
+<p>Las reservas online y el aviso de reservas en el salón.</p>
+<p><img src="/images/manual/110-configuracion/111-28-reservas-online-y-aviso.png" alt="Cuadros Reservas online con capacidad y email, y Aviso de reservas próximas en el salón"></p>
+<p><strong>Reservas online (asistente virtual)</strong></p>
+<ul>
+<li><strong>Habilitar reservas online en el chatbot</strong>: tildado, el asistente toma reservas. Destildado, avisa que no se aceptan.</li>
+<li><strong>Capacidad total del salón (cubiertos)</strong>: cuántas personas entran. Se usa para mostrar la ocupación en el calendario.</li>
+<li><strong>Email para grupos grandes</strong>: a dónde derivar grupos grandes o eventos.</li>
+</ul>
+<p><strong>Aviso de reservas próximas en el salón</strong></p>
+<ul>
+<li><strong>Minutos antes de la reserva</strong>: cuánto antes de la hora aparece la reserva en el mapa del salón y en la adición, para recibirla y abrir la mesa. Vacío usa 90 minutos.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-29-reservas-reglas-y-turnos.png" alt="Cuadros Reglas y restricciones con el cuadro de texto para el asistente y Turnos con dos enlaces"></p>
+<p><strong>Reglas y restricciones (las interpreta la IA)</strong></p>
+<ul>
+<li><strong>Reglas para el asistente</strong>: escribí con tus palabras las reglas. Por ejemplo: &quot;Los domingos no hay reservas&quot;. El asistente las respeta con clientes públicos. Si sos el dueño y reservás por Telegram, te deja saltearlas pero te avisa.</li>
+</ul>
+<p><strong>Turnos</strong></p>
+<ul>
+<li><strong>Administrar turnos</strong>: horarios y límite de comensales por turno y por reserva.</li>
+<li><strong>Ver calendario de reservas</strong>: abre el calendario.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-30-reservas-grilla-hotelera.png" alt="Cuadro Grilla hotelera con hora de checkout y días a mostrar"></p>
+<p><strong>Grilla hotelera</strong></p>
+<p>Solo aplica si tu comercio tiene el módulo de reservas de hotel activo.</p>
+<ul>
+<li><strong>Hora de Checkout</strong>: la hora en que hay que dejar la habitación.</li>
+<li><strong>Días a mostrar</strong>: cuántos días se ven en la grilla, contando desde un mes atrás. Si tu PC va lenta, poné menos.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                ✉️ Mensajería y notificaciones
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="mensajeria-y-notificaciones"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="mensajeria-y-notificaciones"></div>
+
+<p>Cómo se manda correo, WhatsApp y avisos por Telegram.</p>
+<p><img src="/images/manual/110-configuracion/111-31-mensajeria-email.png" alt="Cuadro Email con remitente, API Key de Resend, servidor SMTP, puerto, usuario, contraseña y TLS, con los datos tapados"></p>
+<p><strong>Email</strong></p>
+<p>Sirve para enviar facturas, avisos y comprobantes por correo. Las claves y contraseñas guardadas nunca se muestran: si el casillero está vacío, se conserva lo guardado.</p>
+<ul>
+<li><strong>Dirección de email (remitente)</strong>: desde qué dirección salen los correos.</li>
+<li><strong>API Key de Resend</strong>: la clave de Resend, un servicio gratis de envío. Con Resend no hace falta SMTP.</li>
+<li><strong>Servidor SMTP (host)</strong>, <strong>Puerto SMTP</strong> y <strong>Usuario SMTP</strong>: los datos de tu casilla, si no usás Resend. Ej.: <em>smtp.gmail.com</em>, 587.</li>
+<li><strong>Contraseña / Contraseña de aplicación</strong>: en Gmail y Outlook usá una contraseña de aplicación, no la normal.</li>
+<li><strong>Usar TLS (encriptación)</strong>: dejalo en <strong>Sí</strong> salvo que tu proveedor diga otra cosa.</li>
+<li><strong>Borrar el valor guardado</strong>: si lo tildás y guardás, se borra la clave guardada.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-32-mensajeria-proveedor-y-prueba.png" alt="Cuadro Proveedor y prueba de envío con la lista de proveedores y el botón Enviar email de prueba"></p>
+<p><strong>Proveedor y prueba de envío</strong></p>
+<ul>
+<li><strong>Proveedor de correo</strong>: elegís Resend, Gmail, Outlook / Hotmail, Yahoo u otro. Solo completa el host, el puerto y TLS de arriba, y muestra un consejo.</li>
+<li><strong>Email para prueba</strong> y <strong>Enviar email de prueba</strong>: manda un correo de prueba a esa dirección. Guardá antes los cambios de arriba.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-33-mensajeria-whatsapp.png" alt="Cuadros WhatsApp Omnibot con URL y claves tapadas, Probar conexión con Omnibot y Templates por situación"></p>
+<p><strong>WhatsApp (Omnibot)</strong></p>
+<p>Conecta PaxaPOS con el bot de WhatsApp, para enviar avisos y mensajes a tus clientes. Estos datos te los da el soporte.</p>
+<ul>
+<li><strong>URL del bot</strong>: la dirección del bot.</li>
+<li><strong>API Key de servicio</strong>: la clave que genera la consola del bot. Se muestra una sola vez.</li>
+<li><strong>Bot ID (opcional)</strong>: solo si tu cuenta tiene varios bots (por ejemplo, uno por sucursal).</li>
+<li><strong>URL del backoffice de Omnibot</strong>: a dónde lleva el botón &quot;Abrir Omnibot&quot;. Tiene que empezar con <em>https://</em>, si no, no se guarda.</li>
+<li><strong>API Key de agente (Omnibot → PaxaPos)</strong>: otra clave, distinta, que usa Omnibot para hablar con PaxaPOS.</li>
+<li><strong>Probar conexión</strong>: prueba con lo ya guardado. Guardá antes de probar.</li>
+<li><strong>Templates por situación</strong>: <strong>Administrar templates de WhatsApp</strong> abre la pantalla donde elegís qué mensaje sale en cada situación (reserva confirmada, pedido listo, etc.).</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-34-mensajeria-alertas.png" alt="Cuadro Alertas del Buchón con casillas de avisos por Telegram"></p>
+<p><strong>Alertas del Buchón</strong></p>
+<p>Tildá qué eventos te avisa por Telegram el bot &quot;El Buchón&quot;:</p>
+<ul>
+<li><strong>Notifica cierre de caja</strong> (con el módulo de arqueo activo).</li>
+<li><strong>Notifica cada mesa abierta</strong>.</li>
+<li><strong>Notifica cada mesa eliminada</strong>.</li>
+<li><strong>Notifica cada vez que eliminan productos en una comanda</strong>.</li>
+<li><strong>Notifica cada vez que eliminan una comanda</strong>.</li>
+<li><strong>Notifica cada vez que el stock alcanza el mínimo</strong> (con Stock activo).</li>
+<li><strong>Notifica OC pendientes de aprobación y cuando se aprueban/rechazan</strong> (con Compras activo).</li>
+</ul>
+<p>En el comercio de prueba no aparece la última: depende del módulo de Compras.</p>
+<hr>
+<h3 class="relative">
+                🤖 Inteligencia Artificial
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="inteligencia-artificial"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="inteligencia-artificial"></div>
+
+<p>Las funciones con IA: el asistente virtual, la lectura de facturas de compra y las reservas inteligentes.</p>
+<p><strong>Activación y consumo</strong></p>
+<p>El cuadro cambia según tu caso:</p>
+<ul>
+<li><strong>IA con key propia del comercio</strong>: usás tu propia clave de Google AI Studio. Le pagás el consumo a Google y PaxaPOS no te cobra nada. No hay interruptor de encendido. Es el caso de la foto.</li>
+<li><strong>IA de PaxaPOS (con cargo)</strong>: el consumo se factura en tu liquidación mensual. Un botón <strong>Apagar IA</strong> la apaga. El consumo hasta ese día se factura igual.</li>
+<li><strong>IA APAGADA</strong>: el cuadro explica qué se cobra si la encendés, muestra una estimación con tu consumo real, los términos, una casilla para aceptarlos y el botón <strong>ENCENDER IA</strong>.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Apagar IA</strong> y <strong>ENCENDER IA</strong> cambian tu facturación real. No los toques sin hablar antes con el soporte. Para pasar a la IA de PaxaPOS, pedísela al soporte.</p>
+</blockquote>
+<p><strong>API Key de Gemini</strong></p>
+<ul>
+<li><strong>API Key de Gemini (clave propia del comercio)</strong>: pegá acá tu clave de Google AI Studio. Vacío conserva la actual. El texto <strong>Hay una key guardada</strong> te confirma que ya hay una.</li>
+<li><strong>Borrar la API key guardada</strong>: si la tildás y guardás, se borra tu clave y la IA se queda sin credenciales.</li>
+<li><strong>Guardar API Key</strong>: es un botón aparte del <strong>Guardar</strong> de la sección. Solo guarda la clave.</li>
+<li>El recuadro naranja explica cómo pedir la IA de PaxaPOS. No pegues una clave de PaxaPOS en ese casillero, porque el consumo no se facturaría.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-37-ia-personalidad.png" alt="Cuadro Personalidad con nombre del asistente, tono, voz, especialidades e instrucciones"></p>
+<p><strong>Personalidad</strong></p>
+<p>Cómo se presenta y conversa tu asistente con los clientes. No hace falta cargar el menú: usa el menú marcado como &quot;default&quot; en Delivery.</p>
+<ul>
+<li><strong>Nombre del asistente</strong>: con qué nombre se presenta.</li>
+<li><strong>Tono de conversación</strong>: <strong>Casual y amigable</strong>, <strong>Formal y profesional</strong> o <strong>Divertido y entusiasta</strong>.</li>
+<li><strong>Voz del asistente</strong>: Puck, Charon, Kore, Fenrir o Aoede. Solo se usa si tu comercio tiene el asistente por voz.</li>
+<li><strong>Especialidades del local (una por línea)</strong>: los productos que el asistente recomienda.</li>
+<li><strong>Instrucciones adicionales</strong>: cualquier cosa que quieras que tenga en cuenta sobre tu negocio.</li>
+</ul>
+<p><img src="/images/manual/110-configuracion/111-38-ia-tecnico.png" alt="Cuadros Técnico con proveedores y modelos, y Ver modelos disponibles de Gemini con dos botones"></p>
+<p><strong>Técnico — proveedores y modelos</strong></p>
+<p>Con los valores por defecto ya funciona. Cambialos solo si sabés lo que hacés.</p>
+<ul>
+<li><strong>Chat (texto)</strong>: qué proveedor procesa los mensajes escritos.</li>
+<li><strong>Voz (audio en vivo) — EXPERIMENTAL</strong>: dejalo en <strong>Desactivado</strong> para ocultar el botón de voz en pedimelo.online. Activala solo si el soporte lo autorizó.</li>
+<li><strong>Nota de voz (micrófono) en pedimelo.online</strong>: deja que el cliente mande un audio corto. Consume tokens de tu clave.</li>
+<li><strong>Modelo para el chat (texto)</strong>, <strong>Modelo para el OCR de facturas (visión)</strong> y <strong>Modelo para la voz (Live API)</strong>: el nombre del modelo de Gemini. El de OCR vacío usa el de chat.</li>
+<li><strong>Máximo de tokens en respuesta</strong>: el tope por respuesta. Por defecto 8192.</li>
+<li><strong>Ver modelos de chat / OCR</strong> y <strong>Ver modelos de voz (Live API)</strong>: listan los modelos que ofrece tu cuenta de Google.</li>
+</ul>
+<p>Al final de la sección hay un enlace a <strong>Reservas</strong>, para las reglas del asistente en reservas online.</p>
+<hr>
+<h3 class="relative">
+                👤 RRHH
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="rrhh"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="rrhh"></div>
+
+<p>Los datos que usa la liquidación de sueldos: la firma de los recibos y el tipo de empleador. La sección se muestra si tu comercio tiene activo el módulo de sueldos (RRHH) o el de fichaje. La liquidación en sí se hace en <a href="/user-guide/sueldos-y-jornales">Sueldos y Jornales</a>.</p>
+<p>Si falta el tipo de empleador y el módulo de sueldos está activo, aparece el triángulo amarillo ⚠️ al lado del nombre. Al abrir la sección, el aviso dice: <strong>Falta el tipo de empleador del F931: sin él, el TXT de la liquidación sale con un valor por defecto.</strong></p>
+<p><strong>Recibos de sueldo</strong></p>
+<p>La firma que se imprime al pie de los recibos de sueldo.</p>
+<ul>
+<li><strong>URL de la firma de quien autoriza los recibos de sueldo (imagen)</strong>: pegá la dirección web (URL) de una imagen con la firma. Es la que sale impresa al pie de cada recibo.</li>
+<li><strong>Aclaración que acompaña la firma</strong>: el texto que aparece debajo de la firma. Por ejemplo: <em>María Gómez, Gerente de Personal</em>.</li>
+</ul>
+<p><strong>Liquidación de sueldos (AFIP)</strong></p>
+<p>Datos que usa la liquidación al armar el archivo de texto del F931/SICOSS de AFIP.</p>
+<ul>
+<li><strong>Tipo de empleador (F931)</strong>: elegí en la lista, que empieza con <strong>Seleccioná el tipo de empleador</strong>. Es el código &quot;Tipo de empresa&quot; que se declara en el F931. Cada liquidación nueva lo toma de acá y sale en el archivo que se presenta. Las opciones son:<ul>
+<li><strong>Administración Pública</strong>.</li>
+<li><strong>Decreto 814/01, Art2 Inc.B</strong>.</li>
+<li><strong>Servicios Eventuales, Art2 Inc.B</strong>.</li>
+<li><strong>Decreto 814/01, Art2 Inc.A</strong>.</li>
+<li><strong>Servicios Eventuales, Art2 Inc.A</strong>.</li>
+<li><strong>Enseñanza Privada</strong>.</li>
+<li><strong>Decreto 1212/03 - AFA Clubes</strong>.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> ante la duda con el <strong>Tipo de empleador (F931)</strong>, consultalo con tu contador. Después de cambiarlo, tocá <strong>Guardar</strong>.</p>
+</blockquote>
+<hr>
+<h3 class="relative">
+                👥 Usuarios y acceso
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="usuarios-y-acceso"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="usuarios-y-acceso"></div>
+
+<p><img src="/images/manual/110-configuracion/111-39-usuarios-y-acceso.png" alt="Cuadros Usuarios y roles, Mi sesión y Seguridad con enlaces y una casilla"></p>
+<p>Es un atajo a las pantallas de personas y permisos.</p>
+<ul>
+<li><strong>Usuarios y roles</strong>: <strong>Usuarios del Sistema</strong> (<a href="/user-guide/usuarios-del-sistema">ver</a>), <strong>Usuarios con PIN</strong> (<a href="/user-guide/usuarios-con-pin">ver</a>), <strong>Roles</strong> y <strong>Permisos por Rol</strong> (<a href="/user-guide/permisos-por-rol">ver</a>).</li>
+<li><strong>Mi sesión</strong>: <strong>Mis Sesiones Activas</strong> muestra dónde tenés abierta tu cuenta. <strong>Mi Token JWT API</strong> es para conectar sistemas externos.</li>
+<li><strong>Seguridad</strong>: <strong>Autenticar por PIN solo en la misma IP que el printserver</strong>. Tildada, el PIN solo funciona desde la red del servidor de impresión. Es lo único que se guarda en esta sección.</li>
+</ul>
+<hr>
+<h3 class="relative">
+                📚 Tablas maestras
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="tablas-maestras"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="tablas-maestras"></div>
+
+<p><img src="/images/manual/110-configuracion/111-40-tablas-maestras.png" alt="Cuadros de enlaces: Salón y personal, Cobros y documentos, Compras y contabilidad, Fichaje e Impresión y multimedia"></p>
+<p>Solo tiene enlaces a las listas de datos que usa el sistema. No tiene botón <strong>Guardar</strong>.</p>
+<ul>
+<li><strong>Salón y personal</strong>: <strong>Turnos</strong> (<a href="/user-guide/turnos-mesa">ver</a>) y <strong>Mozos</strong>.</li>
+<li><strong>Cobros y documentos</strong>: <strong>Medios de cobro</strong> (<a href="/user-guide/medios-de-cobro">ver</a>) y <strong>Tipos de Documento</strong>.</li>
+<li><strong>Compras y contabilidad</strong>: <strong>Clasificación de Gastos</strong> (<a href="/user-guide/clasificacion-de-gastos">ver</a>), <strong>Rubros de Compras</strong>, <strong>Centros de Costo</strong> (<a href="/user-guide/centros-de-costo">ver</a>) y <strong>Unidades de Medida</strong>.</li>
+<li><strong>Fichaje</strong>: <strong>Turnos y Horarios</strong> y <strong>Departamentos</strong>.</li>
+<li><strong>Impresión y multimedia</strong>: <strong>Impresoras</strong> (<a href="/user-guide/impresoras">ver</a>) y <strong>Archivos Multimedia</strong>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                ⚠️ <strong>Resolución de Inconvenientes</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>No veo una sección de la lista</strong></td>
+<td>Tu rol no tiene permiso, o es una sección solo para el soporte (Soporte).</td>
+<td>Pedile al dueño que revise tu rol en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+<tr>
+<td><strong>Toqué una sección y no aparece el campo que busco</strong></td>
+<td>El campo depende de un módulo apagado o de otro dato (por ejemplo, el valor del cubierto solo aparece en restaurantes).</td>
+<td>Buscalo con el buscador. Si sigue sin aparecer, mirá el cuadro <strong>Módulos</strong> o pedí ayuda al soporte.</td>
+</tr>
+<tr>
+<td><strong>Cambié algo y al volver no está</strong></td>
+<td>Pasaste a otra sección sin tocar <strong>Guardar</strong>.</td>
+<td>Volvé a cargarlo y tocá <strong>Guardar</strong> antes de salir de la sección.</td>
+</tr>
+<tr>
+<td><strong>Un triángulo amarillo ⚠️ al lado de una sección</strong></td>
+<td>Falta completar datos (fiscales, o un procesador de cobro sin configurar).</td>
+<td>Abrí la sección y leé el aviso amarillo de arriba.</td>
+</tr>
+<tr>
+<td><strong>No puedo cambiar la moneda</strong></td>
+<td>El comercio ya tiene ventas cobradas.</td>
+<td>Es a propósito. Para otra moneda hace falta un comercio nuevo.</td>
+</tr>
+<tr>
+<td><strong>La sección dice &quot;(módulo apagado)&quot;</strong></td>
+<td>El módulo no está activo, así que lo que cargues no tiene efecto.</td>
+<td>Activá el módulo desde <strong>Módulos</strong> con ayuda del soporte.</td>
+</tr>
+<tr>
+<td><strong>El correo de prueba no llega</strong></td>
+<td>Datos de SMTP incorrectos o contraseña normal en vez de contraseña de aplicación.</td>
+<td>Revisá host, puerto y contraseña. En Gmail usá una contraseña de aplicación.</td>
+</tr>
+<tr>
+<td><strong>Los clientes no pueden pedir online</strong></td>
+<td><strong>Delivery abierto</strong> está destildado o el <strong>Modo del catálogo online</strong> es solo Menú.</td>
+<td>Tildá <strong>Delivery abierto</strong> y elegí <strong>Activar Pedidos Online</strong>. Guardá.</td>
+</tr>
+<tr>
+<td><strong>No puedo facturar</strong></td>
+<td>Falta el trámite en ARCA o no hay punto de venta habilitado.</td>
+<td>Hacé el <a href="#tramite-en-arca">trámite en ARCA</a> y avisá al soporte.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/111-configuracion-general.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#como-se-usa-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo se usa la pantalla</a></li><li><a href="#el-buscador" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">El buscador</a></li><li><a href="#la-lista-de-secciones" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">La lista de secciones</a></li><li><a href="#el-boton-guardar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">El botón Guardar</a></li><li><a href="#comercio" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Comercio</a></li><li><a href="#fiscal-y-arca" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Fiscal y ARCA</a></li><li><a href="#modulos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Módulos</a></li><li><a href="#ventas-y-salon" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Ventas y salón</a></li><li><a href="#impresion" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Impresión</a></li><li><a href="#compras-y-stock" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Compras y stock</a></li><li><a href="#cobros-y-pagos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cobros y pagos</a></li><li><a href="#delivery-y-pedidos-online" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Delivery y pedidos online</a></li><li><a href="#reservas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Reservas</a></li><li><a href="#mensajeria-y-notificaciones" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Mensajería y notificaciones</a></li><li><a href="#inteligencia-artificial" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Inteligencia Artificial</a></li><li><a href="#rrhh" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">RRHH</a></li><li><a href="#usuarios-y-acceso" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Usuarios y acceso</a></li><li><a href="#tablas-maestras" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Tablas maestras</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"configuracion-general",title:"Configuración general",content:"\u003Cdiv id=\"configuracion-general\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Configuración\u003C/strong> → \u003Cstrong>Configuración general\u003C/strong> (es la primera opción del grupo, arriba de todo).\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Dueños y administradores del comercio.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá se ajusta cómo funciona tu comercio: datos, facturación, impresión, cobros, pedidos online y más. Todo está en una sola pantalla, ordenado por temas.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 \u003Cstrong>Cómo se usa la pantalla\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"como-se-usa-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"como-se-usa-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-00a-menu-grupo-configuracion.png\" alt=\"Menú lateral con el grupo Configuración marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá el grupo \u003Cstrong>Configuración\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-00b-menu-opcion-configuracion-general.png\" alt=\"Opción Configuración general marcada en rojo dentro del grupo Configuración\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Configuración general\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-01-pantalla-configuracion.png\" alt=\"Pantalla Configuración con el buscador arriba, la lista de secciones a la izquierda y los datos de Comercio a la derecha\">\u003C/p>\n\u003Cp>La pantalla tiene tres partes:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>El buscador\u003C/strong>, arriba de todo.\u003C/li>\n\u003Cli>\u003Cstrong>La lista de secciones\u003C/strong>, a la izquierda.\u003C/li>\n\u003Cli>\u003Cstrong>Los datos de la sección elegida\u003C/strong>, a la derecha. Cada tema está en un cuadro con su título.\u003C/li>\n\u003C/ul>\n\u003Ch3 class=\"relative\">\n                🔎 El buscador\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"el-buscador\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"el-buscador\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-02-buscador-de-ajustes.png\" alt=\"Buscador con la palabra cuit escrita y un resultado debajo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el casillero \u003Cstrong>Buscar un ajuste\u003C/strong> y escribí una palabra. Por ejemplo: \u003Cem>cuit\u003C/em>, \u003Cem>whatsapp\u003C/em> o \u003Cem>moneda\u003C/em>.\u003C/li>\n\u003Cli>Debajo aparece una lista con los ajustes que coinciden. Cada uno dice en qué sección está.\u003C/li>\n\u003Cli>Tocá el que buscabas. Te lleva directo a esa sección.\u003C/li>\n\u003Cli>Para volver a la lista de secciones, borrá lo que escribiste.\u003C/li>\n\u003C/ol>\n\u003Cp>Escribir en el buscador no cambia nada en tu comercio.\u003C/p>\n\u003Ch3 class=\"relative\">\n                🗂️ La lista de secciones\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"la-lista-de-secciones\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"la-lista-de-secciones\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-03-lista-de-secciones.png\" alt=\"Lista de secciones agrupadas en Puesta en marcha, Operación, Canales e IA y Sistema\">\u003C/p>\n\u003Cp>Las secciones están agrupadas por título:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Puesta en marcha\u003C/strong>: Comercio, Fiscal y ARCA, Módulos.\u003C/li>\n\u003Cli>\u003Cstrong>Operación\u003C/strong>: Ventas y salón, Impresión, Compras y stock, Caja, Cobros y pagos.\u003C/li>\n\u003Cli>\u003Cstrong>Canales e IA\u003C/strong>: Delivery y pedidos online, Reservas, Mensajería y notificaciones, Inteligencia Artificial.\u003C/li>\n\u003Cli>\u003Cstrong>Sistema\u003C/strong>: RRHH, Usuarios y acceso, Tablas maestras.\u003C/li>\n\u003C/ul>\n\u003Cp>Tocá el nombre de una sección para abrirla. La sección abierta se ve en azul.\u003C/p>\n\u003Cp>Fijate en dos detalles:\u003C/p>\n\u003Cul>\n\u003Cli>Un triángulo amarillo ⚠️ al lado del nombre avisa que falta completar algo. Al abrir la sección, el aviso aparece escrito arriba. Por ejemplo: faltan datos fiscales o un procesador de cobro no está listo.\u003C/li>\n\u003Cli>Si una sección dice \u003Cstrong>(módulo apagado)\u003C/strong>, ese módulo no está activo. Podés cargar los datos, pero no tienen efecto hasta activarlo en \u003Cstrong>Módulos\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> lo que cargás en la sección \u003Cstrong>RRHH\u003C/strong> se explica \u003Ca href=\"#rrhh\">más abajo\u003C/a>. Las pantallas de RRHH tienen sus artículos: \u003Ca href=\"/user-guide/empleados\">Empleados\u003C/a>, \u003Ca href=\"/user-guide/departamentos\">Departamentos\u003C/a>, \u003Ca href=\"/user-guide/turnos-y-horarios-fichaje\">Turnos y Horarios\u003C/a>, \u003Ca href=\"/user-guide/sueldos-y-jornales\">Sueldos y Jornales\u003C/a> y \u003Ca href=\"/user-guide/datos-de-acceso-app\">Datos de Acceso a la App\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                💾 El botón Guardar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"el-boton-guardar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"el-boton-guardar\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-04-donde-esta-boton-guardar.png\" alt=\"Pantalla con el botón verde Guardar marcado en rojo abajo del último cuadro de la sección\">\u003C/p>\n\u003Cp>Abajo de los cuadros de cada sección hay un botón verde \u003Cstrong>Guardar\u003C/strong>.\u003C/p>\n\u003Col>\n\u003Cli>Cambiá lo que necesites en la sección.\u003C/li>\n\u003Cli>Bajá hasta el final y tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003Cli>Aparece un mensaje verde que confirma que se guardaron los cambios.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Guardar\u003C/strong> solo guarda la sección que tenés abierta. Si cambiás algo y pasás a otra sección sin guardar, se pierde.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Las secciones que solo tienen enlaces a otras pantallas (por ejemplo \u003Cstrong>Tablas maestras\u003C/strong>) no tienen botón \u003Cstrong>Guardar\u003C/strong>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> estos cambios modifican cómo trabaja tu comercio ahora mismo. Cambiá de a uno y mirá qué pasa.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Las fotos de este artículo muestran el comercio de prueba, con los datos reales tapados.\u003C/p>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🏪 Comercio\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"comercio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"comercio\">\u003C/div>\n\n\u003Cp>Datos de tu negocio, cómo se ve y dónde está. Es la primera sección de \u003Cstrong>Puesta en marcha\u003C/strong>.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-05-comercio-datos-generales.png\" alt=\"Cuadro Datos generales con Nombre de fantasía, URL del logo, Mail de la empresa y Valor del cubierto\">\u003C/p>\n\u003Cp>\u003Cstrong>Datos generales\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre de fantasía\u003C/strong>: el nombre con el que se conoce tu comercio.\u003C/li>\n\u003Cli>\u003Cstrong>URL del logo\u003C/strong>: la dirección de internet de tu logo. Se usa en el menú digital y en los comprobantes.\u003C/li>\n\u003Cli>\u003Cstrong>Mail de la empresa\u003C/strong>: el correo principal del comercio.\u003C/li>\n\u003Cli>\u003Cstrong>Valor del cubierto o servicio de mesa\u003C/strong>: lo que se cobra por comensal. Dejalo en 0 si no cobrás cubierto. Solo aparece si el tipo de comercio es restaurante.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-06-comercio-contacto-y-redes.png\" alt=\"Cuadro Contacto y redes con teléfono, dirección, email, sitio web y redes sociales\">\u003C/p>\n\u003Cp>\u003Cstrong>Contacto y redes\u003C/strong>\u003C/p>\n\u003Cp>Estos datos se muestran en la ficha pública de tu comercio (menú y pedidos online). También los usa el asistente de WhatsApp para responder a tus clientes.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Teléfono\u003C/strong> y \u003Cstrong>Dirección\u003C/strong>: cómo te encuentran tus clientes.\u003C/li>\n\u003Cli>\u003Cstrong>Email de contacto\u003C/strong> y \u003Cstrong>Sitio web\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Instagram\u003C/strong>: escribilo con arroba, por ejemplo \u003Cem>@tucomercio\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Facebook\u003C/strong>, \u003Cstrong>Twitter / X\u003C/strong> y \u003Cstrong>TikTok\u003C/strong>: tus usuarios en cada red.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-07-comercio-apariencia-y-ubicacion.png\" alt=\"Cuadros Apariencia y Ubicación e idioma con theme visual, latitud, longitud, idioma, moneda y zona horaria\">\u003C/p>\n\u003Cp>\u003Cstrong>Apariencia\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Theme visual del comercio\u003C/strong>: los colores del sistema para tu comercio. Si elegís &quot;usar theme predeterminado&quot;, se usa el general de PaxaPOS.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Ubicación e idioma\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Latitud\u003C/strong> y \u003Cstrong>Longitud\u003C/strong>: la ubicación de tu local en el mapa. El delivery las usa para calcular el costo de envío.\u003C/li>\n\u003Cli>\u003Cstrong>HTML lang\u003C/strong>: el idioma de las pantallas.\u003C/li>\n\u003Cli>\u003Cstrong>Moneda\u003C/strong>: la moneda en la que trabajás. Si ya cobraste ventas, queda fija y no se puede cambiar (se ve solo el texto, sin casillero). Para otra moneda hace falta un comercio nuevo.\u003C/li>\n\u003Cli>\u003Cstrong>Zona horaria\u003C/strong>: define la hora de tus ventas y de los reportes.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🧾 Fiscal y ARCA\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"fiscal-y-arca\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"fiscal-y-arca\">\u003C/div>\n\n\u003Cp>Los datos para facturar. Si falta algo, arriba aparece un aviso amarillo.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-08-fiscal-datos-fiscales.png\" alt=\"Aviso amarillo de facturación y cuadro Datos fiscales con razón social, CUIT y domicilio tapados\">\u003C/p>\n\u003Cp>\u003Cstrong>Datos fiscales\u003C/strong>\u003C/p>\n\u003Cp>Si sos Monotributista, cargá tus datos. Si sos Responsable Inscripto, cargá los de tu empresa.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Razón social\u003C/strong>: el nombre legal.\u003C/li>\n\u003Cli>\u003Cstrong>CUIT / CUIL\u003C/strong>: 11 números, con o sin guiones.\u003C/li>\n\u003Cli>\u003Cstrong>Domicilio fiscal\u003C/strong>: el que figura en ARCA.\u003C/li>\n\u003Cli>\u003Cstrong>Aviso amarillo\u003C/strong>: en la foto dice que la facturación electrónica está activa pero no hay ningún punto de venta habilitado. Se resuelve en \u003Cstrong>Puntos de venta\u003C/strong>, más abajo.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-09-fiscal-agente-de-retencion.png\" alt=\"Cuadro Agente de retención con número de agente, lugar de emisión, localidad y código postal\">\u003C/p>\n\u003Cp>\u003Cstrong>Agente de retención\u003C/strong>\u003C/p>\n\u003Cp>Completalo solo si tu comercio actúa como agente de retención. Estos datos salen en los certificados de retención que el proveedor descarga.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nº de agente de recaudación\u003C/strong>: el número que asigna ARBA. Sin esto no se puede emitir el certificado de IIBB.\u003C/li>\n\u003Cli>\u003Cstrong>Lugar de emisión\u003C/strong>: aparece en el pie &quot;Lugar y Fecha&quot; del certificado.\u003C/li>\n\u003Cli>\u003Cstrong>Localidad del agente\u003C/strong> y \u003Cstrong>Código postal del agente\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-10-fiscal-facturacion.png\" alt=\"Cuadro Facturación con IVA por defecto, logo de la factura y plazo de pago\">\u003C/p>\n\u003Cp>\u003Cstrong>Facturación\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>IVA de productos por defecto\u003C/strong>: el IVA que se asigna a un producto nuevo.\u003C/li>\n\u003Cli>\u003Cstrong>URL del logo de la factura\u003C/strong>: se muestra arriba en tus comprobantes.\u003C/li>\n\u003Cli>\u003Cstrong>Plazo de pago (días)\u003C/strong>: solo si facturás servicios. El vencimiento que se declara a ARCA es el fin del período más estos días. Dejalo en 0 si cobrás en el momento. Vale para todos los puntos de venta.\u003C/li>\n\u003Cli>\u003Cstrong>Concepto de la factura\u003C/strong>: elegís Productos, Servicios, Productos y Servicios u Otro. Solo aparece si tu impresora fiscal es de tipo AFIP (facturación por web service). En el comercio de prueba no aparece.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-11-fiscal-remito-r.png\" alt=\"Cuadro Remito R con punto de venta de remitos, CAI y vencimiento del CAI\">\u003C/p>\n\u003Cp>\u003Cstrong>Remito R (traslado de mercadería)\u003C/strong>\u003C/p>\n\u003Cp>Usalo solo si emitís remitos para trasladar mercadería. Si no, dejá todo vacío.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Punto de venta de remitos\u003C/strong>: distinto del de factura electrónica. Tiene que existir en Puntos de Venta.\u003C/li>\n\u003Cli>\u003Cstrong>CAI\u003C/strong>: el número que figura en el talonario o en la autorización de autoimpresor.\u003C/li>\n\u003Cli>\u003Cstrong>Vencimiento del CAI\u003C/strong>: con formato AAAA-MM-DD. Si vence, el sistema deja de emitir remitos.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-12-fiscal-puntos-de-venta.png\" alt=\"Cuadro Puntos de venta sin ningún punto cargado y botón azul Agregar punto de venta\">\u003C/p>\n\u003Cp>\u003Cstrong>Puntos de venta\u003C/strong>\u003C/p>\n\u003Cp>Muestra la lista de tus puntos de venta con su número, nombre y si están habilitados. Cada uno tiene un botón \u003Cstrong>Editar\u003C/strong>.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Agregar punto de venta\u003C/strong>: te lleva a la pantalla para crear uno. Esa pantalla consulta a ARCA en el momento. Más detalles en \u003Ca href=\"/user-guide/puntos-de-venta-pdv\">Puntos de Venta\u003C/a>.\u003C/li>\n\u003Cli>En el comercio de prueba todavía no hay ninguno cargado.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🧩 Módulos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"modulos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"modulos\">\u003C/div>\n\n\u003Cp>Muestra qué funciones tiene prendidas tu comercio. Es solo para mirar: no se activa nada desde acá.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Módulos activos\u003C/strong>: una lista corta con un tilde verde ✔ si el módulo está activo o una cruz ✖ si no. Aparecen Salón, Caja registradora de ventas, Arqueo de caja, AFIP - Facturación electrónica, Servidor de impresión, Stock, Comandero (KDS), Compras, Contabilidad, Delivery, Reservas y Pedidos de clientes.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> activar o desactivar módulos cambia lo que ve todo el equipo y puede cambiar tu abono. Hacelo con el soporte de PaxaPOS.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🍽️ Ventas y salón\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"ventas-y-salon\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"ventas-y-salon\">\u003C/div>\n\n\u003Cp>Cómo se llaman las cosas y cómo se atienden las mesas. Es la primera sección del grupo \u003Cstrong>Operación\u003C/strong>.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-14-ventas-terminologia.png\" alt=\"Cuadro Terminología con los nombres Mozo, Mesa, Cubierto, Cliente, Menú, Comanda y Subtotal\">\u003C/p>\n\u003Cp>\u003Cstrong>Terminología\u003C/strong>\u003C/p>\n\u003Cp>Sirve para que el sistema hable como tu rubro. Por ejemplo, en un hotel &quot;Mesa&quot; pasa a ser &quot;Habitación&quot;. El cambio se ve en todas las pantallas.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Entidad vendedora\u003C/strong>: quién atiende la venta. Ej.: &quot;Mozo&quot; en gastronomía o &quot;Vendedor&quot; en un negocio de venta.\u003C/li>\n\u003Cli>\u003Cstrong>Objeto de venta\u003C/strong>: ej. &quot;Mesa&quot; u &quot;Habitación&quot;.\u003C/li>\n\u003Cli>\u003Cstrong>Número aplicado al objeto de venta\u003C/strong>: ej. &quot;Cubierto&quot; u &quot;Huésped&quot;.\u003C/li>\n\u003Cli>\u003Cstrong>Entidad que compra\u003C/strong>: ej. &quot;Cliente&quot;.\u003C/li>\n\u003Cli>\u003Cstrong>Catálogo\u003C/strong>: ej. &quot;Carta&quot; o &quot;Menú&quot;.\u003C/li>\n\u003Cli>\u003Cstrong>Comanda\u003C/strong>: cómo se llama cada pedido o consumo.\u003C/li>\n\u003Cli>\u003Cstrong>Subtotal de la comanda\u003C/strong>: el texto del subtotal.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-15-ventas-adicion-salon.png\" alt=\"Cuadro Adición / salón con las opciones de apertura de mesa, estado de comandas, remito y descuento máximo\">\u003C/p>\n\u003Cp>\u003Cstrong>Adición / salón\u003C/strong>\u003C/p>\n\u003Cp>Los nombres de estos campos cambian según la terminología que elegiste arriba.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Indicar la cantidad de Cubiertos al abrir Mesa\u003C/strong>: elegís \u003Cstrong>No\u003C/strong>, \u003Cstrong>Si y que sea obligatorio\u003C/strong> o \u003Cstrong>Si, pero que sea opcional\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Qué ventana mostrar al abrir una Mesa rápidamente\u003C/strong>: la pantalla que se abre primero. Puede ser la administración de la mesa, &quot;Agregar Producto&quot; o &quot;Agregar Cliente&quot;.\u003C/li>\n\u003Cli>\u003Cstrong>Ver el estado de las comandas en el salón\u003C/strong>: con \u003Cstrong>Si\u003C/strong>, se ve el estado de cada comanda. Cuando está &quot;lista&quot;, la mesa cambia de color.\u003C/li>\n\u003Cli>\u003Cstrong>Efectos de transición en el salón\u003C/strong>: prende o apaga las animaciones entre pantallas.\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir remito al hacer checkout en efectivo\u003C/strong>: con \u003Cstrong>Si\u003C/strong>, al cobrar en efectivo se imprime el remito.\u003C/li>\n\u003Cli>\u003Cstrong>Mozo por defecto al crear Mesa\u003C/strong>: quién queda asignado si no elegís a nadie.\u003C/li>\n\u003Cli>\u003Cstrong>Porcentaje máximo de descuento que puede hacer un Mozo\u003C/strong>: un número de 0 a 100.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-16-ventas-numeros-y-estadisticas.png\" alt=\"Cuadros Números y horarios y Estadísticas con hora de corte, precisión y producto estrella\">\u003C/p>\n\u003Cp>\u003Cstrong>Números y horarios\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Hora de corte del día\u003C/strong>: a partir de qué hora empieza el día siguiente. Con corte a las 6, una mesa cerrada a las 00:30 se cuenta en el día anterior.\u003C/li>\n\u003Cli>\u003Cstrong>Precisión (centavos a redondear)\u003C/strong>: cuántos centavos se redondean al sumar productos. Si facturás online por ARCA queda fijo en 2, porque ARCA pide 2 decimales.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Estadísticas\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>ID de producto estrella para Estadísticas\u003C/strong>: el número del producto (o varios separados por coma, sin espacios, ej. \u003Cem>23,33,56\u003C/em>). Se ve en \u003Cstrong>Estadísticas → Detalle\u003C/strong> por mozo.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🖨️ Impresión\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"impresion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"impresion\">\u003C/div>\n\n\u003Cp>Cómo imprime tu comercio: el servidor de impresión, los perfiles y las opciones de tickets y comandas.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-17-impresion-crear-perfil.png\" alt=\"Cuadro Crear perfil a partir de esta configuración con un aviso de que ya existe un perfil default\">\u003C/p>\n\u003Cp>\u003Cstrong>Crear perfil a partir de esta configuración\u003C/strong>\u003C/p>\n\u003Cp>Este cuadro aparece arriba de todo. Si todavía no tenés perfiles, ofrece crear el perfil &quot;Default&quot; con las impresoras cargadas más abajo. Si ya lo tenés, solo lo avisa, como en la foto.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-18-impresion-servidor.png\" alt=\"Cuadro Servidor de impresión con la lista de servidores y sus puntos de color\">\u003C/p>\n\u003Cp>\u003Cstrong>Servidor de impresión\u003C/strong>\u003C/p>\n\u003Cp>Fiscalberry es el programa que corre en tu local y recibe lo que hay que imprimir.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Servidor de impresión activo para el comercio\u003C/strong>: elegís cuál usa tu comercio. Un punto verde 🟢 quiere decir que está conectado. Uno rojo 🔴, que no responde.\u003C/li>\n\u003Cli>\u003Cstrong>Sin Paxaprinter\u003C/strong>: no usar ningún servidor.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-19-impresion-fiscalberry-y-perfiles.png\" alt=\"Cuadros Descargar Fiscalberry con los botones de descarga y Perfiles de impresión con la lista y sus botones\">\u003C/p>\n\u003Cp>\u003Cstrong>Descargar Fiscalberry\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Windows (con interfaz)\u003C/strong>, \u003Cstrong>Windows sin interfaz (consola)\u003C/strong>, \u003Cstrong>Linux (con interfaz)\u003C/strong> y \u003Cstrong>Linux sin interfaz (consola / Raspberry)\u003C/strong>: cada botón baja el programa para ese equipo.\u003C/li>\n\u003Cli>\u003Cstrong>verificar integridad (SHA256SUMS)\u003C/strong> y \u003Cstrong>Todas las versiones\u003C/strong>: para técnicos.\u003C/li>\n\u003Cli>Se descarga, se ejecuta en la PC del local y aparece con el punto verde en la lista de arriba.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Perfiles de impresión\u003C/strong>\u003C/p>\n\u003Cp>Cada perfil dice qué impresora usar para fiscal, remito, cajón y compras. Se puede asignar a un mozo, a un usuario o a un terminal.\u003C/p>\n\u003Cul>\n\u003Cli>La tabla lista los perfiles con su \u003Cstrong>Nombre\u003C/strong>, si es \u003Cstrong>Default\u003C/strong> (la estrella) y sus \u003Cstrong>Impresoras\u003C/strong>. \u003Cstrong>Editar\u003C/strong> abre el perfil.\u003C/li>\n\u003Cli>\u003Cstrong>Agregar perfil\u003C/strong>, \u003Cstrong>Gestionar todos los perfiles\u003C/strong> y \u003Cstrong>Ver impresoras del comercio\u003C/strong>: te llevan a esas pantallas. Se explican en \u003Ca href=\"/user-guide/perfiles-de-impresion\">Perfiles de impresión\u003C/a> e \u003Ca href=\"/user-guide/impresoras\">Impresoras\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-20-impresion-comportamiento.png\" alt=\"Cuadro Comportamiento al imprimir con duplicados, fecha en remito, QR de pago y separación de comandas\">\u003C/p>\n\u003Cp>\u003Cstrong>Comportamiento al imprimir\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Cierres duplicados a imprimir al cerrar mesa\u003C/strong> y \u003Cstrong>Comandas duplicadas a imprimir\u003C/strong>: cuántas copias extra salen. Con 0 sale solo la original.\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir fecha y hora en el remito\u003C/strong>: \u003Cstrong>Si\u003C/strong> o \u003Cstrong>No\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir QR de pago siempre en el remito\u003C/strong>: si está tildado, el remito de toda mesa sin pago previo lleva el QR de pago.\u003C/li>\n\u003Cli>\u003Cstrong>Separar comandas\u003C/strong>: genera una comanda distinta por impresora, por puesto o por categoría. O \u003Cstrong>No separar en comandas\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir todos los productos por todas las comanderas\u003C/strong>: con \u003Cstrong>Si\u003C/strong>, una Coca-Cola (barra) y una hamburguesa (cocina) salen juntas en las dos impresoras.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-21-impresion-impresoras-por-defecto.png\" alt=\"Cuadro Impresoras por defecto con la comandera, la fiscal, las compras y qué hacer al cerrar\">\u003C/p>\n\u003Cp>\u003Cstrong>Impresoras por defecto (respaldo sin perfil)\u003C/strong>\u003C/p>\n\u003Cp>Solo se usan en equipos que no tienen un perfil de impresión asignado. Si ya usás perfiles, casi no las vas a necesitar.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Impresora de comandas por defecto\u003C/strong>, \u003Cstrong>Impresora fiscal por defecto\u003C/strong> e \u003Cstrong>Impresora de pedidos de Compras por defecto\u003C/strong>: elegís de la lista de tus impresoras.\u003C/li>\n\u003Cli>\u003Cstrong>Al cerrar o facturar: sacar remito o imprimir directo en la fiscal\u003C/strong>: \u003Cstrong>Imprimir remito\u003C/strong>, \u003Cstrong>Directo a la fiscal\u003C/strong> o \u003Cstrong>No hacer nada\u003C/strong>. Cada perfil puede definir el suyo.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🛒 Compras y stock\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"compras-y-stock\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"compras-y-stock\">\u003C/div>\n\n\u003Cp>Ajustes de compras, pagos a proveedores y stock. Cada cuadro aparece según el módulo que tengas activo.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-22-compras-compras-y-flujo.png\" alt=\"Cuadros Compras y Columnas del tablero Flujo de Compras con casillas tildadas\">\u003C/p>\n\u003Cp>\u003Cstrong>Compras\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Habilitar aprobación de órdenes de compra\u003C/strong>: un superior tiene que aprobar la orden antes de enviarla al proveedor. También permite crear presupuestos.\u003C/li>\n\u003Cli>\u003Cstrong>Nombre del concepto que se compra\u003C/strong>: cómo se llama lo que comprás. Ej.: Ítem, Mercadería, Insumo. Se usa en botones, títulos y formularios de Compras.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Columnas del tablero &quot;Flujo de Compras&quot;\u003C/strong>\u003C/p>\n\u003Cp>Tildá las columnas que querés ver en el tablero de compras: \u003Cstrong>OC Creada (pendiente)\u003C/strong>, \u003Cstrong>Lista de compras (ítems solicitados sin OC)\u003C/strong>, \u003Cstrong>Enviada al proveedor\u003C/strong>, \u003Cstrong>Recepcionada\u003C/strong>, \u003Cstrong>Facturada\u003C/strong>, \u003Cstrong>Pagada\u003C/strong> y \u003Cstrong>Observada\u003C/strong>.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-23-compras-pagos-y-stock.png\" alt=\"Cuadros Pagos a proveedores con órdenes de pago y retenciones, y Stock con Stock CERO automático\">\u003C/p>\n\u003Cp>\u003Cstrong>Pagos a proveedores\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Habilitar Órdenes de Pago\u003C/strong>: permite crear pagos sin fecha, que quedan pendientes de aprobación. Incluye cheques y pagarés con fecha programada.\u003C/li>\n\u003Cli>\u003Cstrong>Habilitar Retenciones en Pagos (Agente de Retención)\u003C/strong>: calcula solo las retenciones (Ganancias, IIBB, IVA) al pagar facturas. Hay que configurar los regímenes por proveedor.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Stock\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Stock CERO automático\u003C/strong>: con \u003Cstrong>Si\u003C/strong>, cuando un producto llega a stock 0 se marca solo como &quot;sin stock&quot;.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                💳 Cobros y pagos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"cobros-y-pagos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"cobros-y-pagos\">\u003C/div>\n\n\u003Cp>Muestra cómo cobrás con tarjeta y QR. Acá se mira el estado. Para cambiar algo, se usan los botones de cada cuadro, que te llevan a otra pantalla.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-25-cobros.png\" alt=\"Aviso amarillo y cuadros Procesador por canal, Cuentas conectadas y Medios de cobro y terminales\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Aviso amarillo\u003C/strong>: dice qué procesador no está listo. En la foto, MercadoPago está asignado a SmartPOS pero no hay terminales sincronizadas.\u003C/li>\n\u003Cli>\u003Cstrong>Procesador por canal\u003C/strong>: una tabla con el \u003Cstrong>Canal\u003C/strong> (QR, Link de pago, SmartPOS), el \u003Cstrong>Procesador asignado\u003C/strong> y su \u003Cstrong>Estado\u003C/strong>. Un tilde verde dice \u003Cstrong>Listo\u003C/strong>. Un triángulo amarillo explica qué falta. \u003Cstrong>Cambiar procesador por canal\u003C/strong> abre la pantalla para elegir otro.\u003C/li>\n\u003Cli>\u003Cstrong>Cuentas conectadas\u003C/strong>: el estado de \u003Cstrong>MercadoPago\u003C/strong>, \u003Cstrong>Payway\u003C/strong> y \u003Cstrong>Banco Macro\u003C/strong>, sin mostrar claves. Cada uno tiene su botón (\u003Cstrong>Ver conexión\u003C/strong>, \u003Cstrong>Conectar\u003C/strong> o \u003Cstrong>Configurar\u003C/strong>) que abre la pantalla de conexión.\u003C/li>\n\u003Cli>\u003Cstrong>Medios de cobro y terminales\u003C/strong>: enlaces a \u003Cstrong>Medios de cobro manuales\u003C/strong> (efectivo, transferencia, cheque, etc.) y \u003Cstrong>Terminales\u003C/strong> (las SmartPOS de Payway). Los medios se explican en \u003Ca href=\"/user-guide/medios-de-cobro\">Medios de cobro\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> conectar o cambiar una cuenta de cobro afecta cómo cobrás desde ese momento. Hacelo con calma y probá con un cobro chico.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🛵 Delivery y pedidos online\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"delivery-y-pedidos-online\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"delivery-y-pedidos-online\">\u003C/div>\n\n\u003Cp>Cómo recibís pedidos por internet en \u003Cem>pedimelo.online\u003C/em>. Es la primera sección del grupo \u003Cstrong>Canales e IA\u003C/strong>. Necesita el módulo \u003Cstrong>Delivery\u003C/strong> activo.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-26-delivery-pedidos-online.png\" alt=\"Cuadro Pedidos online con delivery abierto, URL, horario, estado inicial, modo del catálogo y teléfono de WhatsApp\">\u003C/p>\n\u003Cp>\u003Cstrong>Pedidos online\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Delivery abierto\u003C/strong>: tildado, se aceptan pedidos. Destildado, pedimelo.online avisa a tus clientes que no se aceptan.\u003C/li>\n\u003Cli>\u003Cstrong>URL del pedimelo online\u003C/strong>: la dirección de tu página de pedidos, sin &quot;/&quot; al final.\u003C/li>\n\u003Cli>\u003Cstrong>ID Media del catálogo online\u003C/strong>: el número de la imagen del catálogo.\u003C/li>\n\u003Cli>\u003Cstrong>Horario y fechas de atención\u003C/strong>: texto libre con cuándo abrís y cerrás los pedidos.\u003C/li>\n\u003Cli>\u003Cstrong>Estado inicial de un nuevo pedido\u003C/strong>: cómo entra un pedido nuevo (ej. \u003Cstrong>Pendiente\u003C/strong>).\u003C/li>\n\u003Cli>\u003Cstrong>Mensaje al cliente antes de asignar mesa\u003C/strong>: se muestra en pedimelo.online antes de pagar.\u003C/li>\n\u003Cli>\u003Cstrong>Modo del catálogo online\u003C/strong>: \u003Cstrong>Solo Menú (sin botones para comprar)\u003C/strong> o \u003Cstrong>Activar Pedidos Online\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Teléfono de WhatsApp para pedidos\u003C/strong>: el número donde te escriben.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-27-delivery-entrega-y-enlaces.png\" alt=\"Cuadros Entrega y cobertura, Ubicación, Turnos de entrega y Procesadores de pago\">\u003C/p>\n\u003Cp>\u003Cstrong>Entrega y cobertura\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Tiempo promedio de demora (segundos)\u003C/strong>: ej. 2400 si la demora es de 40 minutos.\u003C/li>\n\u003Cli>\u003Cstrong>Valor por Km.\u003C/strong>: lo que se cobra el envío por kilómetro.\u003C/li>\n\u003Cli>\u003Cstrong>URL a una imagen de tu comercio\u003C/strong> e \u003Cstrong>Imagen de fondo\u003C/strong>: las imágenes de tu página de pedidos.\u003C/li>\n\u003Cli>\u003Cstrong>Mozo donde irán ventas por delivery\u003C/strong>: las ventas se vinculan a ese mozo.\u003C/li>\n\u003Cli>\u003Cstrong>Menú por default al ir al link pedimelo.online\u003C/strong>: qué carta se ve primero.\u003C/li>\n\u003Cli>\u003Cstrong>Tipo de pago si hay MercadoPago\u003C/strong>: con qué tipo de pago queda registrada la mesa pagada por MercadoPago.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Enlaces\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Ubicación\u003C/strong>: lleva a \u003Cstrong>Comercio\u003C/strong>, donde se cargan latitud y longitud para calcular el envío.\u003C/li>\n\u003Cli>\u003Cstrong>Turnos de entrega\u003C/strong>: \u003Cstrong>Administrar turnos\u003C/strong> abre los horarios que se ofrecen para posponer un pedido. Ver \u003Ca href=\"/user-guide/turnos-mesa\">Turnos\u003C/a>.\u003C/li>\n\u003Cli>\u003Cstrong>Procesadores de pago\u003C/strong>: lleva a \u003Cstrong>Cobros y pagos\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                📅 Reservas\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"reservas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"reservas\">\u003C/div>\n\n\u003Cp>Las reservas online y el aviso de reservas en el salón.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-28-reservas-online-y-aviso.png\" alt=\"Cuadros Reservas online con capacidad y email, y Aviso de reservas próximas en el salón\">\u003C/p>\n\u003Cp>\u003Cstrong>Reservas online (asistente virtual)\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Habilitar reservas online en el chatbot\u003C/strong>: tildado, el asistente toma reservas. Destildado, avisa que no se aceptan.\u003C/li>\n\u003Cli>\u003Cstrong>Capacidad total del salón (cubiertos)\u003C/strong>: cuántas personas entran. Se usa para mostrar la ocupación en el calendario.\u003C/li>\n\u003Cli>\u003Cstrong>Email para grupos grandes\u003C/strong>: a dónde derivar grupos grandes o eventos.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Aviso de reservas próximas en el salón\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Minutos antes de la reserva\u003C/strong>: cuánto antes de la hora aparece la reserva en el mapa del salón y en la adición, para recibirla y abrir la mesa. Vacío usa 90 minutos.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-29-reservas-reglas-y-turnos.png\" alt=\"Cuadros Reglas y restricciones con el cuadro de texto para el asistente y Turnos con dos enlaces\">\u003C/p>\n\u003Cp>\u003Cstrong>Reglas y restricciones (las interpreta la IA)\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Reglas para el asistente\u003C/strong>: escribí con tus palabras las reglas. Por ejemplo: &quot;Los domingos no hay reservas&quot;. El asistente las respeta con clientes públicos. Si sos el dueño y reservás por Telegram, te deja saltearlas pero te avisa.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Turnos\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Administrar turnos\u003C/strong>: horarios y límite de comensales por turno y por reserva.\u003C/li>\n\u003Cli>\u003Cstrong>Ver calendario de reservas\u003C/strong>: abre el calendario.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-30-reservas-grilla-hotelera.png\" alt=\"Cuadro Grilla hotelera con hora de checkout y días a mostrar\">\u003C/p>\n\u003Cp>\u003Cstrong>Grilla hotelera\u003C/strong>\u003C/p>\n\u003Cp>Solo aplica si tu comercio tiene el módulo de reservas de hotel activo.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Hora de Checkout\u003C/strong>: la hora en que hay que dejar la habitación.\u003C/li>\n\u003Cli>\u003Cstrong>Días a mostrar\u003C/strong>: cuántos días se ven en la grilla, contando desde un mes atrás. Si tu PC va lenta, poné menos.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                ✉️ Mensajería y notificaciones\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"mensajeria-y-notificaciones\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"mensajeria-y-notificaciones\">\u003C/div>\n\n\u003Cp>Cómo se manda correo, WhatsApp y avisos por Telegram.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-31-mensajeria-email.png\" alt=\"Cuadro Email con remitente, API Key de Resend, servidor SMTP, puerto, usuario, contraseña y TLS, con los datos tapados\">\u003C/p>\n\u003Cp>\u003Cstrong>Email\u003C/strong>\u003C/p>\n\u003Cp>Sirve para enviar facturas, avisos y comprobantes por correo. Las claves y contraseñas guardadas nunca se muestran: si el casillero está vacío, se conserva lo guardado.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Dirección de email (remitente)\u003C/strong>: desde qué dirección salen los correos.\u003C/li>\n\u003Cli>\u003Cstrong>API Key de Resend\u003C/strong>: la clave de Resend, un servicio gratis de envío. Con Resend no hace falta SMTP.\u003C/li>\n\u003Cli>\u003Cstrong>Servidor SMTP (host)\u003C/strong>, \u003Cstrong>Puerto SMTP\u003C/strong> y \u003Cstrong>Usuario SMTP\u003C/strong>: los datos de tu casilla, si no usás Resend. Ej.: \u003Cem>smtp.gmail.com\u003C/em>, 587.\u003C/li>\n\u003Cli>\u003Cstrong>Contraseña / Contraseña de aplicación\u003C/strong>: en Gmail y Outlook usá una contraseña de aplicación, no la normal.\u003C/li>\n\u003Cli>\u003Cstrong>Usar TLS (encriptación)\u003C/strong>: dejalo en \u003Cstrong>Sí\u003C/strong> salvo que tu proveedor diga otra cosa.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar el valor guardado\u003C/strong>: si lo tildás y guardás, se borra la clave guardada.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-32-mensajeria-proveedor-y-prueba.png\" alt=\"Cuadro Proveedor y prueba de envío con la lista de proveedores y el botón Enviar email de prueba\">\u003C/p>\n\u003Cp>\u003Cstrong>Proveedor y prueba de envío\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Proveedor de correo\u003C/strong>: elegís Resend, Gmail, Outlook / Hotmail, Yahoo u otro. Solo completa el host, el puerto y TLS de arriba, y muestra un consejo.\u003C/li>\n\u003Cli>\u003Cstrong>Email para prueba\u003C/strong> y \u003Cstrong>Enviar email de prueba\u003C/strong>: manda un correo de prueba a esa dirección. Guardá antes los cambios de arriba.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-33-mensajeria-whatsapp.png\" alt=\"Cuadros WhatsApp Omnibot con URL y claves tapadas, Probar conexión con Omnibot y Templates por situación\">\u003C/p>\n\u003Cp>\u003Cstrong>WhatsApp (Omnibot)\u003C/strong>\u003C/p>\n\u003Cp>Conecta PaxaPOS con el bot de WhatsApp, para enviar avisos y mensajes a tus clientes. Estos datos te los da el soporte.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>URL del bot\u003C/strong>: la dirección del bot.\u003C/li>\n\u003Cli>\u003Cstrong>API Key de servicio\u003C/strong>: la clave que genera la consola del bot. Se muestra una sola vez.\u003C/li>\n\u003Cli>\u003Cstrong>Bot ID (opcional)\u003C/strong>: solo si tu cuenta tiene varios bots (por ejemplo, uno por sucursal).\u003C/li>\n\u003Cli>\u003Cstrong>URL del backoffice de Omnibot\u003C/strong>: a dónde lleva el botón &quot;Abrir Omnibot&quot;. Tiene que empezar con \u003Cem>https://\u003C/em>, si no, no se guarda.\u003C/li>\n\u003Cli>\u003Cstrong>API Key de agente (Omnibot → PaxaPos)\u003C/strong>: otra clave, distinta, que usa Omnibot para hablar con PaxaPOS.\u003C/li>\n\u003Cli>\u003Cstrong>Probar conexión\u003C/strong>: prueba con lo ya guardado. Guardá antes de probar.\u003C/li>\n\u003Cli>\u003Cstrong>Templates por situación\u003C/strong>: \u003Cstrong>Administrar templates de WhatsApp\u003C/strong> abre la pantalla donde elegís qué mensaje sale en cada situación (reserva confirmada, pedido listo, etc.).\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-34-mensajeria-alertas.png\" alt=\"Cuadro Alertas del Buchón con casillas de avisos por Telegram\">\u003C/p>\n\u003Cp>\u003Cstrong>Alertas del Buchón\u003C/strong>\u003C/p>\n\u003Cp>Tildá qué eventos te avisa por Telegram el bot &quot;El Buchón&quot;:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Notifica cierre de caja\u003C/strong> (con el módulo de arqueo activo).\u003C/li>\n\u003Cli>\u003Cstrong>Notifica cada mesa abierta\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Notifica cada mesa eliminada\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Notifica cada vez que eliminan productos en una comanda\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Notifica cada vez que eliminan una comanda\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Notifica cada vez que el stock alcanza el mínimo\u003C/strong> (con Stock activo).\u003C/li>\n\u003Cli>\u003Cstrong>Notifica OC pendientes de aprobación y cuando se aprueban/rechazan\u003C/strong> (con Compras activo).\u003C/li>\n\u003C/ul>\n\u003Cp>En el comercio de prueba no aparece la última: depende del módulo de Compras.\u003C/p>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                🤖 Inteligencia Artificial\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"inteligencia-artificial\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"inteligencia-artificial\">\u003C/div>\n\n\u003Cp>Las funciones con IA: el asistente virtual, la lectura de facturas de compra y las reservas inteligentes.\u003C/p>\n\u003Cp>\u003Cstrong>Activación y consumo\u003C/strong>\u003C/p>\n\u003Cp>El cuadro cambia según tu caso:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>IA con key propia del comercio\u003C/strong>: usás tu propia clave de Google AI Studio. Le pagás el consumo a Google y PaxaPOS no te cobra nada. No hay interruptor de encendido. Es el caso de la foto.\u003C/li>\n\u003Cli>\u003Cstrong>IA de PaxaPOS (con cargo)\u003C/strong>: el consumo se factura en tu liquidación mensual. Un botón \u003Cstrong>Apagar IA\u003C/strong> la apaga. El consumo hasta ese día se factura igual.\u003C/li>\n\u003Cli>\u003Cstrong>IA APAGADA\u003C/strong>: el cuadro explica qué se cobra si la encendés, muestra una estimación con tu consumo real, los términos, una casilla para aceptarlos y el botón \u003Cstrong>ENCENDER IA\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Apagar IA\u003C/strong> y \u003Cstrong>ENCENDER IA\u003C/strong> cambian tu facturación real. No los toques sin hablar antes con el soporte. Para pasar a la IA de PaxaPOS, pedísela al soporte.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cstrong>API Key de Gemini\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>API Key de Gemini (clave propia del comercio)\u003C/strong>: pegá acá tu clave de Google AI Studio. Vacío conserva la actual. El texto \u003Cstrong>Hay una key guardada\u003C/strong> te confirma que ya hay una.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar la API key guardada\u003C/strong>: si la tildás y guardás, se borra tu clave y la IA se queda sin credenciales.\u003C/li>\n\u003Cli>\u003Cstrong>Guardar API Key\u003C/strong>: es un botón aparte del \u003Cstrong>Guardar\u003C/strong> de la sección. Solo guarda la clave.\u003C/li>\n\u003Cli>El recuadro naranja explica cómo pedir la IA de PaxaPOS. No pegues una clave de PaxaPOS en ese casillero, porque el consumo no se facturaría.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-37-ia-personalidad.png\" alt=\"Cuadro Personalidad con nombre del asistente, tono, voz, especialidades e instrucciones\">\u003C/p>\n\u003Cp>\u003Cstrong>Personalidad\u003C/strong>\u003C/p>\n\u003Cp>Cómo se presenta y conversa tu asistente con los clientes. No hace falta cargar el menú: usa el menú marcado como &quot;default&quot; en Delivery.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre del asistente\u003C/strong>: con qué nombre se presenta.\u003C/li>\n\u003Cli>\u003Cstrong>Tono de conversación\u003C/strong>: \u003Cstrong>Casual y amigable\u003C/strong>, \u003Cstrong>Formal y profesional\u003C/strong> o \u003Cstrong>Divertido y entusiasta\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Voz del asistente\u003C/strong>: Puck, Charon, Kore, Fenrir o Aoede. Solo se usa si tu comercio tiene el asistente por voz.\u003C/li>\n\u003Cli>\u003Cstrong>Especialidades del local (una por línea)\u003C/strong>: los productos que el asistente recomienda.\u003C/li>\n\u003Cli>\u003Cstrong>Instrucciones adicionales\u003C/strong>: cualquier cosa que quieras que tenga en cuenta sobre tu negocio.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-38-ia-tecnico.png\" alt=\"Cuadros Técnico con proveedores y modelos, y Ver modelos disponibles de Gemini con dos botones\">\u003C/p>\n\u003Cp>\u003Cstrong>Técnico — proveedores y modelos\u003C/strong>\u003C/p>\n\u003Cp>Con los valores por defecto ya funciona. Cambialos solo si sabés lo que hacés.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Chat (texto)\u003C/strong>: qué proveedor procesa los mensajes escritos.\u003C/li>\n\u003Cli>\u003Cstrong>Voz (audio en vivo) — EXPERIMENTAL\u003C/strong>: dejalo en \u003Cstrong>Desactivado\u003C/strong> para ocultar el botón de voz en pedimelo.online. Activala solo si el soporte lo autorizó.\u003C/li>\n\u003Cli>\u003Cstrong>Nota de voz (micrófono) en pedimelo.online\u003C/strong>: deja que el cliente mande un audio corto. Consume tokens de tu clave.\u003C/li>\n\u003Cli>\u003Cstrong>Modelo para el chat (texto)\u003C/strong>, \u003Cstrong>Modelo para el OCR de facturas (visión)\u003C/strong> y \u003Cstrong>Modelo para la voz (Live API)\u003C/strong>: el nombre del modelo de Gemini. El de OCR vacío usa el de chat.\u003C/li>\n\u003Cli>\u003Cstrong>Máximo de tokens en respuesta\u003C/strong>: el tope por respuesta. Por defecto 8192.\u003C/li>\n\u003Cli>\u003Cstrong>Ver modelos de chat / OCR\u003C/strong> y \u003Cstrong>Ver modelos de voz (Live API)\u003C/strong>: listan los modelos que ofrece tu cuenta de Google.\u003C/li>\n\u003C/ul>\n\u003Cp>Al final de la sección hay un enlace a \u003Cstrong>Reservas\u003C/strong>, para las reglas del asistente en reservas online.\u003C/p>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                👤 RRHH\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"rrhh\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"rrhh\">\u003C/div>\n\n\u003Cp>Los datos que usa la liquidación de sueldos: la firma de los recibos y el tipo de empleador. La sección se muestra si tu comercio tiene activo el módulo de sueldos (RRHH) o el de fichaje. La liquidación en sí se hace en \u003Ca href=\"/user-guide/sueldos-y-jornales\">Sueldos y Jornales\u003C/a>.\u003C/p>\n\u003Cp>Si falta el tipo de empleador y el módulo de sueldos está activo, aparece el triángulo amarillo ⚠️ al lado del nombre. Al abrir la sección, el aviso dice: \u003Cstrong>Falta el tipo de empleador del F931: sin él, el TXT de la liquidación sale con un valor por defecto.\u003C/strong>\u003C/p>\n\u003Cp>\u003Cstrong>Recibos de sueldo\u003C/strong>\u003C/p>\n\u003Cp>La firma que se imprime al pie de los recibos de sueldo.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>URL de la firma de quien autoriza los recibos de sueldo (imagen)\u003C/strong>: pegá la dirección web (URL) de una imagen con la firma. Es la que sale impresa al pie de cada recibo.\u003C/li>\n\u003Cli>\u003Cstrong>Aclaración que acompaña la firma\u003C/strong>: el texto que aparece debajo de la firma. Por ejemplo: \u003Cem>María Gómez, Gerente de Personal\u003C/em>.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Liquidación de sueldos (AFIP)\u003C/strong>\u003C/p>\n\u003Cp>Datos que usa la liquidación al armar el archivo de texto del F931/SICOSS de AFIP.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Tipo de empleador (F931)\u003C/strong>: elegí en la lista, que empieza con \u003Cstrong>Seleccioná el tipo de empleador\u003C/strong>. Es el código &quot;Tipo de empresa&quot; que se declara en el F931. Cada liquidación nueva lo toma de acá y sale en el archivo que se presenta. Las opciones son:\u003Cul>\n\u003Cli>\u003Cstrong>Administración Pública\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Decreto 814/01, Art2 Inc.B\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Servicios Eventuales, Art2 Inc.B\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Decreto 814/01, Art2 Inc.A\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Servicios Eventuales, Art2 Inc.A\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Enseñanza Privada\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Decreto 1212/03 - AFA Clubes\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> ante la duda con el \u003Cstrong>Tipo de empleador (F931)\u003C/strong>, consultalo con tu contador. Después de cambiarlo, tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                👥 Usuarios y acceso\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"usuarios-y-acceso\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"usuarios-y-acceso\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-39-usuarios-y-acceso.png\" alt=\"Cuadros Usuarios y roles, Mi sesión y Seguridad con enlaces y una casilla\">\u003C/p>\n\u003Cp>Es un atajo a las pantallas de personas y permisos.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Usuarios y roles\u003C/strong>: \u003Cstrong>Usuarios del Sistema\u003C/strong> (\u003Ca href=\"/user-guide/usuarios-del-sistema\">ver\u003C/a>), \u003Cstrong>Usuarios con PIN\u003C/strong> (\u003Ca href=\"/user-guide/usuarios-con-pin\">ver\u003C/a>), \u003Cstrong>Roles\u003C/strong> y \u003Cstrong>Permisos por Rol\u003C/strong> (\u003Ca href=\"/user-guide/permisos-por-rol\">ver\u003C/a>).\u003C/li>\n\u003Cli>\u003Cstrong>Mi sesión\u003C/strong>: \u003Cstrong>Mis Sesiones Activas\u003C/strong> muestra dónde tenés abierta tu cuenta. \u003Cstrong>Mi Token JWT API\u003C/strong> es para conectar sistemas externos.\u003C/li>\n\u003Cli>\u003Cstrong>Seguridad\u003C/strong>: \u003Cstrong>Autenticar por PIN solo en la misma IP que el printserver\u003C/strong>. Tildada, el PIN solo funciona desde la red del servidor de impresión. Es lo único que se guarda en esta sección.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                📚 Tablas maestras\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"tablas-maestras\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"tablas-maestras\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/111-40-tablas-maestras.png\" alt=\"Cuadros de enlaces: Salón y personal, Cobros y documentos, Compras y contabilidad, Fichaje e Impresión y multimedia\">\u003C/p>\n\u003Cp>Solo tiene enlaces a las listas de datos que usa el sistema. No tiene botón \u003Cstrong>Guardar\u003C/strong>.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Salón y personal\u003C/strong>: \u003Cstrong>Turnos\u003C/strong> (\u003Ca href=\"/user-guide/turnos-mesa\">ver\u003C/a>) y \u003Cstrong>Mozos\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Cobros y documentos\u003C/strong>: \u003Cstrong>Medios de cobro\u003C/strong> (\u003Ca href=\"/user-guide/medios-de-cobro\">ver\u003C/a>) y \u003Cstrong>Tipos de Documento\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Compras y contabilidad\u003C/strong>: \u003Cstrong>Clasificación de Gastos\u003C/strong> (\u003Ca href=\"/user-guide/clasificacion-de-gastos\">ver\u003C/a>), \u003Cstrong>Rubros de Compras\u003C/strong>, \u003Cstrong>Centros de Costo\u003C/strong> (\u003Ca href=\"/user-guide/centros-de-costo\">ver\u003C/a>) y \u003Cstrong>Unidades de Medida\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Fichaje\u003C/strong>: \u003Cstrong>Turnos y Horarios\u003C/strong> y \u003Cstrong>Departamentos\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Impresión y multimedia\u003C/strong>: \u003Cstrong>Impresoras\u003C/strong> (\u003Ca href=\"/user-guide/impresoras\">ver\u003C/a>) y \u003Cstrong>Archivos Multimedia\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ \u003Cstrong>Resolución de Inconvenientes\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>No veo una sección de la lista\u003C/strong>\u003C/td>\n\u003Ctd>Tu rol no tiene permiso, o es una sección solo para el soporte (Soporte).\u003C/td>\n\u003Ctd>Pedile al dueño que revise tu rol en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Toqué una sección y no aparece el campo que busco\u003C/strong>\u003C/td>\n\u003Ctd>El campo depende de un módulo apagado o de otro dato (por ejemplo, el valor del cubierto solo aparece en restaurantes).\u003C/td>\n\u003Ctd>Buscalo con el buscador. Si sigue sin aparecer, mirá el cuadro \u003Cstrong>Módulos\u003C/strong> o pedí ayuda al soporte.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Cambié algo y al volver no está\u003C/strong>\u003C/td>\n\u003Ctd>Pasaste a otra sección sin tocar \u003Cstrong>Guardar\u003C/strong>.\u003C/td>\n\u003Ctd>Volvé a cargarlo y tocá \u003Cstrong>Guardar\u003C/strong> antes de salir de la sección.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Un triángulo amarillo ⚠️ al lado de una sección\u003C/strong>\u003C/td>\n\u003Ctd>Falta completar datos (fiscales, o un procesador de cobro sin configurar).\u003C/td>\n\u003Ctd>Abrí la sección y leé el aviso amarillo de arriba.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No puedo cambiar la moneda\u003C/strong>\u003C/td>\n\u003Ctd>El comercio ya tiene ventas cobradas.\u003C/td>\n\u003Ctd>Es a propósito. Para otra moneda hace falta un comercio nuevo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La sección dice &quot;(módulo apagado)&quot;\u003C/strong>\u003C/td>\n\u003Ctd>El módulo no está activo, así que lo que cargues no tiene efecto.\u003C/td>\n\u003Ctd>Activá el módulo desde \u003Cstrong>Módulos\u003C/strong> con ayuda del soporte.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>El correo de prueba no llega\u003C/strong>\u003C/td>\n\u003Ctd>Datos de SMTP incorrectos o contraseña normal en vez de contraseña de aplicación.\u003C/td>\n\u003Ctd>Revisá host, puerto y contraseña. En Gmail usá una contraseña de aplicación.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Los clientes no pueden pedir online\u003C/strong>\u003C/td>\n\u003Ctd>\u003Cstrong>Delivery abierto\u003C/strong> está destildado o el \u003Cstrong>Modo del catálogo online\u003C/strong> es solo Menú.\u003C/td>\n\u003Ctd>Tildá \u003Cstrong>Delivery abierto\u003C/strong> y elegí \u003Cstrong>Activar Pedidos Online\u003C/strong>. Guardá.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No puedo facturar\u003C/strong>\u003C/td>\n\u003Ctd>Falta el trámite en ARCA o no hay punto de venta habilitado.\u003C/td>\n\u003Ctd>Hacé el \u003Ca href=\"#tramite-en-arca\">trámite en ARCA\u003C/a> y avisá al soporte.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"como-se-usa-la-pantalla",title:"Cómo se usa la pantalla",level:2},{id:"el-buscador",title:"El buscador",level:3},{id:"la-lista-de-secciones",title:"La lista de secciones",level:3},{id:"el-boton-guardar",title:"El botón Guardar",level:3},{id:"comercio",title:"Comercio",level:3},{id:"fiscal-y-arca",title:"Fiscal y ARCA",level:3},{id:"modulos",title:"Módulos",level:3},{id:"ventas-y-salon",title:"Ventas y salón",level:3},{id:"impresion",title:"Impresión",level:3},{id:"compras-y-stock",title:"Compras y stock",level:3},{id:"cobros-y-pagos",title:"Cobros y pagos",level:3},{id:"delivery-y-pedidos-online",title:"Delivery y pedidos online",level:3},{id:"reservas",title:"Reservas",level:3},{id:"mensajeria-y-notificaciones",title:"Mensajería y notificaciones",level:3},{id:"inteligencia-artificial",title:"Inteligencia Artificial",level:3},{id:"rrhh",title:"RRHH",level:3},{id:"usuarios-y-acceso",title:"Usuarios y acceso",level:3},{id:"tablas-maestras",title:"Tablas maestras",level:3},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Configuración general - Manual",description:"¿Dónde está en el sistema?: Menú principal → Configuración → Configuración general (es la primera opción del grupo, arriba de todo).\n ¿Quién...",keywords:"configuracion general, paxapos, configuración general, tutorial, guía, manual usuario"},llmTxtFile:"111-configuracion-general.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

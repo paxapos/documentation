@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Arqueos de Caja
+ ¿Quién lo usa?: Cajeros, encargados de turno y contadores"/> <meta name="keywords" content="arqueos de caja, paxapos, arqueos de caja, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Arqueos de Caja - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Arqueos de Caja
+ ¿Quién lo usa?: Cajeros, encargados de turno y contadores"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Arqueos de Caja - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Arqueos de Caja - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Arqueos de Caja
+ ¿Quién lo usa?: Cajeros, encargados de turno y contadores"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Arqueos de Caja - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Arqueos de Caja\n ¿Quién lo usa?: Cajeros, encargados de turno y contadores",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Arqueos de Caja - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/arqueos-de-caja" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Arqueos de Caja</a></li><li><a href="../user-guide/listado-de-cajas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Listado de Cajas</a></li><li><a href="../user-guide/transacciones-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Transacciones de Cobro</a></li><li><a href="../user-guide/factura-manual" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Factura Manual</a></li><li><a href="../user-guide/resumen-de-deuda" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Resumen de Deuda</a></li><li><a href="../user-guide/pagos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Pagos</a></li><li><a href="../user-guide/historial-de-facturas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Historial de Facturas</a></li><li><a href="../user-guide/historico-de-mesas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Histórico de Mesas</a></li><li><a href="../user-guide/puntos-de-venta-pdv" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Puntos de Venta (PDVs)</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Arqueos de Caja</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: arqueos-de-caja</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="arqueos-de-caja"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Finanzas</strong> → <strong>Caja</strong> → <strong>Arqueos de Caja</strong>
+<strong>¿Quién lo usa?:</strong> Cajeros, encargados de turno y contadores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Un arqueo es el turno de una caja: desde que la abrís con un fondo de cambio hasta que la cerrás contando la plata.
+Acá abrís y cerrás turnos, anotás ingresos y retiros de dinero y revisás los turnos anteriores.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Arqueos</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>La caja tiene que existir y tener tu usuario tildado. Mirá <a href="/user-guide/listado-de-cajas">Listado de Cajas</a>.</li>
+<li>Una caja tiene un solo turno abierto a la vez.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/70-finanzas/71-00a-menu-grupo-finanzas.png" alt="Menú lateral con el grupo Finanzas marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Finanzas</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/71-00b-menu-opcion-arqueos-de-caja.png" alt="Opción Arqueos de Caja marcada en rojo, debajo del título Caja"></p>
+<ol start="2">
+<li>Tocá <strong>Arqueos de Caja</strong>. Está debajo del título <strong>CAJA</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/71-01-pantalla-arqueos.png" alt="Pantalla Gestión de Arqueos con el aviso arriba, los filtros, los arqueos abiertos y el historial de cerrados"></p>
+<p>De arriba hacia abajo, la pantalla tiene:</p>
+<ul>
+<li><strong>Las cajas libres</strong>: una tarjeta por cada caja sin turno abierto. Tocá la tarjeta para abrir un turno (Paso 5).</li>
+<li><strong>Filtros de Búsqueda</strong>: para encontrar un turno (Paso 2).</li>
+<li><strong>Arqueos Abiertos - Pendientes de Cierre</strong>: los turnos que todavía no cerraste (Paso 4).</li>
+<li><strong>Historial de Arqueos Cerrados</strong>: los turnos terminados (Paso 3).</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si todas las cajas tienen un turno abierto, la pantalla dice <strong>No hay cajas configuradas</strong>. Las cajas existen: solo no queda ninguna libre.</p>
+</blockquote>
+<p><img src="/images/manual/70-finanzas/71-02-aviso-sin-cajas-libres.png" alt="Aviso No hay cajas configuradas con el botón azul Crear Primera Caja"></p>
+<p>No toques <strong>Crear Primera Caja</strong>. Cerrá un turno (Paso 8) para que la caja vuelva a aparecer.</p>
+<hr>
+<h2 class="relative">
+                🔎 Paso 2: Buscá un arqueo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-busca-un-arqueo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-busca-un-arqueo"></div>
+
+<p><img src="/images/manual/70-finanzas/71-04-filtros-de-busqueda.png" alt="Recuadro Filtros de Búsqueda con Caja, Creado por, Desde, Hasta y los botones Buscar y Descargar Excel"></p>
+<p>Este recuadro lo ve quien puede ver todos los arqueos. Tiene:</p>
+<ul>
+<li><strong>Caja</strong>: mostrá solo una caja. Con <strong>Todas las cajas</strong> ves todas.</li>
+<li><strong>Creado por</strong>: mostrá solo los turnos de un usuario.</li>
+<li><strong>Desde</strong> y <strong>Hasta</strong>: elegí fecha y hora de inicio y de fin.</li>
+<li><strong>Buscar</strong>: el botón azul de arriba a la derecha. Aplica los filtros.</li>
+<li><strong>Descargar Excel</strong>: el botón azul de abajo a la derecha (Paso 9).</li>
+</ul>
+<ol>
+<li>Completá lo que necesites.</li>
+<li>Tocá <strong>Buscar</strong>.</li>
+<li>El historial muestra solo los turnos que coinciden.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                📜 Paso 3: Mirá los arqueos cerrados
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-mira-los-arqueos-cerrados"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-mira-los-arqueos-cerrados"></div>
+
+<p><img src="/images/manual/70-finanzas/71-08-arqueos-cerrados.png" alt="Historial de Arqueos Cerrados con columnas de importes y un botón de tres puntitos en cada renglón"></p>
+<p>Cada renglón es un turno terminado. Las columnas dicen:</p>
+<ul>
+<li><strong>Caja</strong>, <strong>Inicio</strong>, <strong>Cierre</strong> y <strong>Hora</strong>: dónde y cuándo se abrió y se cerró.</li>
+<li><strong>Importe Final</strong>: la plata que se contó al cerrar.</li>
+<li><strong>Saldo con Arqueo Ant.</strong>: diferencia entre lo que quedó al cerrar el turno anterior y lo que se puso al abrir este.</li>
+<li><strong>Saldo de caja</strong>: diferencia entre lo que debía haber y lo que se contó. Verde es sin diferencia y rojo es diferencia grande.</li>
+<li><strong>Cobros</strong>, <strong>Pagos</strong>, <strong>Ingresos</strong> y <strong>Egresos</strong>: el movimiento de efectivo del turno.</li>
+<li><strong>Cobrado</strong>, <strong>Facturado</strong> y <strong>Anulado</strong>: los totales de ventas del turno.</li>
+<li><strong>Creador</strong>: quién abrió el turno.</li>
+<li><strong>Acciones</strong>: el botón de tres puntitos.</li>
+</ul>
+<p><img src="/images/manual/70-finanzas/71-09-menu-mas-opciones.png" alt="Menú del botón de tres puntitos con Ver y Acciones"></p>
+<p>Al tocar los tres puntitos se abre una lista con:</p>
+<ul>
+<li><strong>Ver</strong>: abre el detalle del turno.</li>
+<li><strong>Acciones</strong>: abre otra lista (Paso 7).</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🔓 Paso 4: Mirá los arqueos abiertos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-mira-los-arqueos-abiertos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-mira-los-arqueos-abiertos"></div>
+
+<p><img src="/images/manual/70-finanzas/71-06-arqueos-abiertos.png" alt="Recuadro Arqueos Abiertos con las columnas Caja, Inicial, Iniciado, Cobrado, Creador y Acciones"></p>
+<p>Cada renglón es un turno que todavía no cerraste:</p>
+<ul>
+<li><strong>Caja</strong>: cuál es la caja.</li>
+<li><strong>Inicial</strong>: la plata con la que abriste. Por ejemplo: <em>$10.000,00</em>.</li>
+<li><strong>Iniciado</strong>: cuándo lo abriste.</li>
+<li><strong>Cobrado</strong>: lo que se cobró en efectivo en el turno.</li>
+<li><strong>Creador</strong>: quién lo abrió.</li>
+</ul>
+<p><img src="/images/manual/70-finanzas/71-07-barra-de-iconos-del-arqueo.png" alt="Cuatro botones de un renglón: ojo, lápiz, candado azules y tacho rojo"></p>
+<p>Al final de cada renglón hay cuatro botones:</p>
+<ul>
+<li><strong>👁 (ojo)</strong>: mirá el detalle del turno (Paso 6).</li>
+<li><strong>✏️ (lápiz)</strong>: corregí los importes (Paso 10).</li>
+<li><strong>🔒 (candado)</strong>: cerrá el turno (Paso 8).</li>
+<li><strong>🗑 (tacho)</strong>: borra el turno.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> el tacho borra el turno. Los cobros y pagos quedan sin turno asignado. Usalo solo si te equivocaste al abrirlo.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ➕ Paso 5: Abrí un arqueo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-abri-un-arqueo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-abri-un-arqueo"></div>
+
+<ol>
+<li>En <strong>Gestión de Arqueos</strong>, tocá la tarjeta de la caja libre que querés abrir. También podés tocar el <strong>➕</strong> de esa caja en <a href="/user-guide/listado-de-cajas">Listado de Cajas</a>.</li>
+<li>Se abre una ventana con el título <strong>Nuevo Arqueo de</strong> y el nombre de la caja.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/71-14-pantalla-abrir-arqueo.png" alt="Formulario Nuevo Arqueo de Caja Prueba Manual con Importe Inicial 10000, Moneda ARS y el botón azul Abrir Arqueo"></p>
+<ul>
+<li><strong>Importe Inicial</strong>: escribí cuánta plata ponés en la caja para dar cambio. Por ejemplo: <em>10000</em>.</li>
+<li><strong>Moneda de esta caja</strong>: elegí la moneda. Por ejemplo: <em>ARS</em>.</li>
+<li><strong>Abrir Arqueo</strong>: el botón azul de abajo. Abre el turno.</li>
+</ul>
+<ol start="3">
+<li>Tocá <strong>Abrir Arqueo</strong>.</li>
+<li>El turno aparece en <strong>Arqueos Abiertos - Pendientes de Cierre</strong>.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> desde el momento en que abrís, los cobros en efectivo de tu turno se suman a esta caja.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                👁️ Paso 6: Mirá el detalle de un arqueo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-mira-el-detalle-de-un-arqueo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-mira-el-detalle-de-un-arqueo"></div>
+
+<ol>
+<li>Tocá el ojo del turno que querés ver.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/71-10-pantalla-detalle-del-arqueo.png" alt="Detalle del arqueo abierto con el resumen de caja, la información del turno y los botones Ingreso, Retiro y Acciones arriba"></p>
+<p>Arriba a la izquierda dice <strong>Arqueo Abierto</strong> o <strong>Arqueo Cerrado</strong>. Después ves:</p>
+<ul>
+<li><strong>Movimientos de Efectivo</strong>: el <strong>Importe Inicial</strong>, más los cobros y los ingresos, menos los pagos y los retiros.</li>
+<li><strong>SALDO Faltante</strong>: cuánto falta para llegar al importe final que cargues al cerrar.</li>
+<li><strong>Información del Turno</strong>: quién lo abrió y cuándo.</li>
+<li><strong>Resumen de Ventas</strong>: lo facturado, las mesas abiertas y las anulaciones.</li>
+<li><strong>Detalle de Movimientos</strong>: cada ingreso, egreso y retiro del turno.</li>
+<li><strong>¿Por qué no cierra?</strong>: te ayuda a encontrar diferencias.</li>
+</ul>
+<p>Arriba a la derecha están los botones <strong>Ingreso</strong>, <strong>Retiro</strong> y <strong>Acciones</strong>.</p>
+<hr>
+<h2 class="relative">
+                💵 Paso 7: Anotá un ingreso o un retiro de dinero
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-anota-un-ingreso-o-un-retiro-de-dinero"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-anota-un-ingreso-o-un-retiro-de-dinero"></div>
+
+<p>Estos botones aparecen solo mientras el turno está abierto.</p>
+<h3>Ingreso</h3>
+<p><img src="/images/manual/70-finanzas/71-12-ventana-ingreso.png" alt="Ventanita Ingreso de Dinero con Monto 1500, una aclaración, la observación y los botones Registrar Ingreso y Cancelar"></p>
+<ol>
+<li>Tocá el botón verde <strong>Ingreso</strong>.</li>
+<li>Se abre la ventanita <strong>Ingreso de Dinero</strong>.</li>
+</ol>
+<ul>
+<li><strong>Monto</strong>: cuánta plata entra. Por ejemplo: <em>1500</em>.</li>
+<li><strong>Observación</strong>: el motivo. Por ejemplo: <em>Cambio para la caja</em>.</li>
+<li><strong>Registrar Ingreso</strong>: anota el ingreso de verdad.</li>
+<li><strong>Cancelar</strong>: cierra la ventanita sin anotar nada.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si la plata viene de otra caja, no la anotes acá. Esa caja tiene que hacer un <strong>Retiro</strong> hacia esta.</p>
+</blockquote>
+<h3>Retiro</h3>
+<p><img src="/images/manual/70-finanzas/71-13-ventana-retiro.png" alt="Ventanita Retiro de Dinero con Monto 2000, A Caja opcional, la observación y los botones Registrar Retiro y Cancelar"></p>
+<ol>
+<li>Tocá el botón naranja <strong>Retiro</strong>.</li>
+<li>Se abre la ventanita <strong>Retiro de Dinero</strong>.</li>
+</ol>
+<ul>
+<li><strong>Monto</strong>: cuánta plata sale. Por ejemplo: <em>2000</em>.</li>
+<li><strong>A Caja (opcional)</strong>: si la plata va a otra caja, elegila. Esa caja recibe el ingreso sola. Si no, dejá <strong>Sin especificar</strong>.</li>
+<li><strong>Observación</strong>: el motivo. Por ejemplo: <em>Pago a un proveedor</em>.</li>
+<li><strong>Registrar Retiro</strong>: anota el retiro de verdad.</li>
+<li><strong>Cancelar</strong>: cierra la ventanita sin anotar nada.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Registrar Ingreso</strong> y <strong>Registrar Retiro</strong> cambian la plata de la caja. Tocalos solo con movimientos reales.</p>
+</blockquote>
+<h3>Acciones</h3>
+<p><img src="/images/manual/70-finanzas/71-11-menu-acciones.png" alt="Lista Acciones abierta con Editar, Cambiar creador, Cerrar, Imprimir y Borrar"></p>
+<p>El botón <strong>Acciones</strong> abre una lista con:</p>
+<ul>
+<li><strong>Editar</strong>: corregí los importes (Paso 10).</li>
+<li><strong>Cambiar creador</strong>: elegí a qué usuario se le asigna el turno.</li>
+<li><strong>Cerrar</strong>: cierra el turno (Paso 8).</li>
+<li><strong>Imprimir</strong>: manda el resumen del turno a la impresora.</li>
+<li><strong>Borrar</strong>: elimina el turno. No se puede deshacer.</li>
+</ul>
+<p>En un turno ya cerrado, en vez de <strong>Cerrar</strong> aparece <strong>Reabrir</strong>.</p>
+<hr>
+<h2 class="relative">
+                🔒 Paso 8: Cerrá un arqueo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-cerra-un-arqueo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-8-cerra-un-arqueo"></div>
+
+<ol>
+<li>En <strong>Arqueos Abiertos</strong>, tocá el candado 🔒 del turno que querés cerrar. Es el tercer botón del renglón (Paso 4).</li>
+<li>Se abre la pantalla <strong>Cerrando Arqueo</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/71-16-pantalla-cerrar-arqueo.png" alt="Pantalla Cerrando Arqueo con el resumen de movimientos, el Importe Final y la lista para contar billetes"></p>
+<ul>
+<li><strong>Resumen de Movimientos</strong>: lo que debería haber. Abajo dice <strong>Total Esperado</strong>.</li>
+<li><strong>Importe Inicial</strong>: la plata con la que abriste. No se cambia acá.</li>
+<li><strong>Importe Final (Efectivo en Caja)</strong>: escribí lo que contaste.</li>
+<li><strong>Contar Billetes</strong>: escribí cuántos billetes hay de cada valor. Arriba ves el total contado.</li>
+<li><strong>Usar este total como Importe Final</strong>: copia el total de los billetes en <strong>Importe Final</strong>.</li>
+<li><strong>Cerrar Arqueo</strong>: el botón verde de abajo. Cierra el turno.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Cerrar Arqueo</strong> termina el turno de esa caja. Contá bien antes de tocarlo.</p>
+</blockquote>
+<ol start="3">
+<li>Tocá <strong>Cerrar Arqueo</strong>.</li>
+<li>El turno pasa a <strong>Historial de Arqueos Cerrados</strong>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                📥 Paso 9: Bajá los arqueos a Excel
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-9-baja-los-arqueos-a-excel"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-9-baja-los-arqueos-a-excel"></div>
+
+<p><img src="/images/manual/70-finanzas/71-05-donde-esta-boton-descargar-excel.png" alt="Pantalla con el botón azul Descargar Excel marcado en rojo debajo de Buscar"></p>
+<ol>
+<li>Poné los filtros que quieras (Paso 2).</li>
+<li>Tocá <strong>Descargar Excel</strong>.</li>
+<li>Se baja un archivo con los turnos que coinciden.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ✏️ Paso 10: Corregí los importes de un arqueo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-10-corregi-los-importes-de-un-arqueo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-10-corregi-los-importes-de-un-arqueo"></div>
+
+<p><img src="/images/manual/70-finanzas/71-18-pantalla-editar-arqueo.png" alt="Pantalla Editando Arqueo con Importe Inicial, Importe Final y el botón Guardar"></p>
+<ol>
+<li>Tocá el lápiz del turno.</li>
+<li>Cambiá <strong>Importe Inicial</strong> o <strong>Importe Final</strong>.</li>
+<li>Tocá <strong>Guardar</strong>.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> cambiar los importes cambia el saldo del turno. Hacelo solo para corregir un error de carga.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dice <strong>No hay cajas configuradas</strong> y la caja existe.</td>
+<td>Todas las cajas ya tienen un turno abierto.</td>
+<td>Cerrá el turno que ya no uses (Paso 8). La tarjeta vuelve a aparecer.</td>
+</tr>
+<tr>
+<td>No veo mi caja para abrir un turno.</td>
+<td>Tu usuario no está tildado en la caja.</td>
+<td>Pedile a un administrador que lo tilde en <a href="/user-guide/listado-de-cajas">Listado de Cajas</a>.</td>
+</tr>
+<tr>
+<td>Al abrir dice que la caja ya se encuentra abierta.</td>
+<td>Otra persona la abrió antes.</td>
+<td>Buscá el turno en <strong>Arqueos Abiertos</strong> y cerralo, o usá ese mismo turno.</td>
+</tr>
+<tr>
+<td>Faltan botones <strong>Ingreso</strong> y <strong>Retiro</strong>.</td>
+<td>El turno ya está cerrado o no tenés permiso.</td>
+<td>Solo se usan en turnos abiertos. Consultá tus permisos.</td>
+</tr>
+<tr>
+<td>Hay un faltante al cerrar.</td>
+<td>Salió plata de la caja y no se anotó.</td>
+<td>Anotá los retiros con <strong>Retiro</strong> y mirá <strong>¿Por qué no cierra?</strong>.</td>
+</tr>
+<tr>
+<td>El resumen muestra un importe en rojo entre <strong>Facturado Total Mesas</strong> y <strong>Abiertas Por Usuario</strong>.</td>
+<td>Cobraste mesas de otros compañeros o quedaron mesas sin cobrar.</td>
+<td>Es normal. Leé el <a href="/user-guide/08-faq-cajero-diferencia-facturado-vs-abiertas">FAQ de Diferencias en Arqueo</a>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/71-arqueos-de-caja.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-busca-un-arqueo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Buscá un arqueo</a></li><li><a href="#paso-3-mira-los-arqueos-cerrados" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Mirá los arqueos cerrados</a></li><li><a href="#paso-4-mira-los-arqueos-abiertos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Mirá los arqueos abiertos</a></li><li><a href="#paso-5-abri-un-arqueo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Abrí un arqueo</a></li><li><a href="#paso-6-mira-el-detalle-de-un-arqueo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Mirá el detalle de un arqueo</a></li><li><a href="#paso-7-anota-un-ingreso-o-un-retiro-de-dinero" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Anotá un ingreso o un retiro de dinero</a></li><li><a href="#paso-8-cerra-un-arqueo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Cerrá un arqueo</a></li><li><a href="#paso-9-baja-los-arqueos-a-excel" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 9: Bajá los arqueos a Excel</a></li><li><a href="#paso-10-corregi-los-importes-de-un-arqueo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 10: Corregí los importes de un arqueo</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"arqueos-de-caja",title:"Arqueos de Caja",content:"\u003Cdiv id=\"arqueos-de-caja\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Finanzas\u003C/strong> → \u003Cstrong>Caja\u003C/strong> → \u003Cstrong>Arqueos de Caja\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Cajeros, encargados de turno y contadores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nUn arqueo es el turno de una caja: desde que la abrís con un fondo de cambio hasta que la cerrás contando la plata.\nAcá abrís y cerrás turnos, anotás ingresos y retiros de dinero y revisás los turnos anteriores.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Arqueos\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>La caja tiene que existir y tener tu usuario tildado. Mirá \u003Ca href=\"/user-guide/listado-de-cajas\">Listado de Cajas\u003C/a>.\u003C/li>\n\u003Cli>Una caja tiene un solo turno abierto a la vez.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-00a-menu-grupo-finanzas.png\" alt=\"Menú lateral con el grupo Finanzas marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Finanzas\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-00b-menu-opcion-arqueos-de-caja.png\" alt=\"Opción Arqueos de Caja marcada en rojo, debajo del título Caja\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Arqueos de Caja\u003C/strong>. Está debajo del título \u003Cstrong>CAJA\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-01-pantalla-arqueos.png\" alt=\"Pantalla Gestión de Arqueos con el aviso arriba, los filtros, los arqueos abiertos y el historial de cerrados\">\u003C/p>\n\u003Cp>De arriba hacia abajo, la pantalla tiene:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Las cajas libres\u003C/strong>: una tarjeta por cada caja sin turno abierto. Tocá la tarjeta para abrir un turno (Paso 5).\u003C/li>\n\u003Cli>\u003Cstrong>Filtros de Búsqueda\u003C/strong>: para encontrar un turno (Paso 2).\u003C/li>\n\u003Cli>\u003Cstrong>Arqueos Abiertos - Pendientes de Cierre\u003C/strong>: los turnos que todavía no cerraste (Paso 4).\u003C/li>\n\u003Cli>\u003Cstrong>Historial de Arqueos Cerrados\u003C/strong>: los turnos terminados (Paso 3).\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si todas las cajas tienen un turno abierto, la pantalla dice \u003Cstrong>No hay cajas configuradas\u003C/strong>. Las cajas existen: solo no queda ninguna libre.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-02-aviso-sin-cajas-libres.png\" alt=\"Aviso No hay cajas configuradas con el botón azul Crear Primera Caja\">\u003C/p>\n\u003Cp>No toques \u003Cstrong>Crear Primera Caja\u003C/strong>. Cerrá un turno (Paso 8) para que la caja vuelva a aparecer.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 2: Buscá un arqueo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-busca-un-arqueo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-busca-un-arqueo\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-04-filtros-de-busqueda.png\" alt=\"Recuadro Filtros de Búsqueda con Caja, Creado por, Desde, Hasta y los botones Buscar y Descargar Excel\">\u003C/p>\n\u003Cp>Este recuadro lo ve quien puede ver todos los arqueos. Tiene:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Caja\u003C/strong>: mostrá solo una caja. Con \u003Cstrong>Todas las cajas\u003C/strong> ves todas.\u003C/li>\n\u003Cli>\u003Cstrong>Creado por\u003C/strong>: mostrá solo los turnos de un usuario.\u003C/li>\n\u003Cli>\u003Cstrong>Desde\u003C/strong> y \u003Cstrong>Hasta\u003C/strong>: elegí fecha y hora de inicio y de fin.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: el botón azul de arriba a la derecha. Aplica los filtros.\u003C/li>\n\u003Cli>\u003Cstrong>Descargar Excel\u003C/strong>: el botón azul de abajo a la derecha (Paso 9).\u003C/li>\n\u003C/ul>\n\u003Col>\n\u003Cli>Completá lo que necesites.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Buscar\u003C/strong>.\u003C/li>\n\u003Cli>El historial muestra solo los turnos que coinciden.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📜 Paso 3: Mirá los arqueos cerrados\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-mira-los-arqueos-cerrados\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-mira-los-arqueos-cerrados\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-08-arqueos-cerrados.png\" alt=\"Historial de Arqueos Cerrados con columnas de importes y un botón de tres puntitos en cada renglón\">\u003C/p>\n\u003Cp>Cada renglón es un turno terminado. Las columnas dicen:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Caja\u003C/strong>, \u003Cstrong>Inicio\u003C/strong>, \u003Cstrong>Cierre\u003C/strong> y \u003Cstrong>Hora\u003C/strong>: dónde y cuándo se abrió y se cerró.\u003C/li>\n\u003Cli>\u003Cstrong>Importe Final\u003C/strong>: la plata que se contó al cerrar.\u003C/li>\n\u003Cli>\u003Cstrong>Saldo con Arqueo Ant.\u003C/strong>: diferencia entre lo que quedó al cerrar el turno anterior y lo que se puso al abrir este.\u003C/li>\n\u003Cli>\u003Cstrong>Saldo de caja\u003C/strong>: diferencia entre lo que debía haber y lo que se contó. Verde es sin diferencia y rojo es diferencia grande.\u003C/li>\n\u003Cli>\u003Cstrong>Cobros\u003C/strong>, \u003Cstrong>Pagos\u003C/strong>, \u003Cstrong>Ingresos\u003C/strong> y \u003Cstrong>Egresos\u003C/strong>: el movimiento de efectivo del turno.\u003C/li>\n\u003Cli>\u003Cstrong>Cobrado\u003C/strong>, \u003Cstrong>Facturado\u003C/strong> y \u003Cstrong>Anulado\u003C/strong>: los totales de ventas del turno.\u003C/li>\n\u003Cli>\u003Cstrong>Creador\u003C/strong>: quién abrió el turno.\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: el botón de tres puntitos.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-09-menu-mas-opciones.png\" alt=\"Menú del botón de tres puntitos con Ver y Acciones\">\u003C/p>\n\u003Cp>Al tocar los tres puntitos se abre una lista con:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Ver\u003C/strong>: abre el detalle del turno.\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: abre otra lista (Paso 7).\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔓 Paso 4: Mirá los arqueos abiertos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-mira-los-arqueos-abiertos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-mira-los-arqueos-abiertos\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-06-arqueos-abiertos.png\" alt=\"Recuadro Arqueos Abiertos con las columnas Caja, Inicial, Iniciado, Cobrado, Creador y Acciones\">\u003C/p>\n\u003Cp>Cada renglón es un turno que todavía no cerraste:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Caja\u003C/strong>: cuál es la caja.\u003C/li>\n\u003Cli>\u003Cstrong>Inicial\u003C/strong>: la plata con la que abriste. Por ejemplo: \u003Cem>$10.000,00\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Iniciado\u003C/strong>: cuándo lo abriste.\u003C/li>\n\u003Cli>\u003Cstrong>Cobrado\u003C/strong>: lo que se cobró en efectivo en el turno.\u003C/li>\n\u003Cli>\u003Cstrong>Creador\u003C/strong>: quién lo abrió.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-07-barra-de-iconos-del-arqueo.png\" alt=\"Cuatro botones de un renglón: ojo, lápiz, candado azules y tacho rojo\">\u003C/p>\n\u003Cp>Al final de cada renglón hay cuatro botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>👁 (ojo)\u003C/strong>: mirá el detalle del turno (Paso 6).\u003C/li>\n\u003Cli>\u003Cstrong>✏️ (lápiz)\u003C/strong>: corregí los importes (Paso 10).\u003C/li>\n\u003Cli>\u003Cstrong>🔒 (candado)\u003C/strong>: cerrá el turno (Paso 8).\u003C/li>\n\u003Cli>\u003Cstrong>🗑 (tacho)\u003C/strong>: borra el turno.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> el tacho borra el turno. Los cobros y pagos quedan sin turno asignado. Usalo solo si te equivocaste al abrirlo.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 5: Abrí un arqueo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-abri-un-arqueo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-abri-un-arqueo\">\u003C/div>\n\n\u003Col>\n\u003Cli>En \u003Cstrong>Gestión de Arqueos\u003C/strong>, tocá la tarjeta de la caja libre que querés abrir. También podés tocar el \u003Cstrong>➕\u003C/strong> de esa caja en \u003Ca href=\"/user-guide/listado-de-cajas\">Listado de Cajas\u003C/a>.\u003C/li>\n\u003Cli>Se abre una ventana con el título \u003Cstrong>Nuevo Arqueo de\u003C/strong> y el nombre de la caja.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-14-pantalla-abrir-arqueo.png\" alt=\"Formulario Nuevo Arqueo de Caja Prueba Manual con Importe Inicial 10000, Moneda ARS y el botón azul Abrir Arqueo\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Importe Inicial\u003C/strong>: escribí cuánta plata ponés en la caja para dar cambio. Por ejemplo: \u003Cem>10000\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Moneda de esta caja\u003C/strong>: elegí la moneda. Por ejemplo: \u003Cem>ARS\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Abrir Arqueo\u003C/strong>: el botón azul de abajo. Abre el turno.\u003C/li>\n\u003C/ul>\n\u003Col start=\"3\">\n\u003Cli>Tocá \u003Cstrong>Abrir Arqueo\u003C/strong>.\u003C/li>\n\u003Cli>El turno aparece en \u003Cstrong>Arqueos Abiertos - Pendientes de Cierre\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> desde el momento en que abrís, los cobros en efectivo de tu turno se suman a esta caja.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👁️ Paso 6: Mirá el detalle de un arqueo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-mira-el-detalle-de-un-arqueo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-mira-el-detalle-de-un-arqueo\">\u003C/div>\n\n\u003Col>\n\u003Cli>Tocá el ojo del turno que querés ver.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-10-pantalla-detalle-del-arqueo.png\" alt=\"Detalle del arqueo abierto con el resumen de caja, la información del turno y los botones Ingreso, Retiro y Acciones arriba\">\u003C/p>\n\u003Cp>Arriba a la izquierda dice \u003Cstrong>Arqueo Abierto\u003C/strong> o \u003Cstrong>Arqueo Cerrado\u003C/strong>. Después ves:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Movimientos de Efectivo\u003C/strong>: el \u003Cstrong>Importe Inicial\u003C/strong>, más los cobros y los ingresos, menos los pagos y los retiros.\u003C/li>\n\u003Cli>\u003Cstrong>SALDO Faltante\u003C/strong>: cuánto falta para llegar al importe final que cargues al cerrar.\u003C/li>\n\u003Cli>\u003Cstrong>Información del Turno\u003C/strong>: quién lo abrió y cuándo.\u003C/li>\n\u003Cli>\u003Cstrong>Resumen de Ventas\u003C/strong>: lo facturado, las mesas abiertas y las anulaciones.\u003C/li>\n\u003Cli>\u003Cstrong>Detalle de Movimientos\u003C/strong>: cada ingreso, egreso y retiro del turno.\u003C/li>\n\u003Cli>\u003Cstrong>¿Por qué no cierra?\u003C/strong>: te ayuda a encontrar diferencias.\u003C/li>\n\u003C/ul>\n\u003Cp>Arriba a la derecha están los botones \u003Cstrong>Ingreso\u003C/strong>, \u003Cstrong>Retiro\u003C/strong> y \u003Cstrong>Acciones\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💵 Paso 7: Anotá un ingreso o un retiro de dinero\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-anota-un-ingreso-o-un-retiro-de-dinero\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-anota-un-ingreso-o-un-retiro-de-dinero\">\u003C/div>\n\n\u003Cp>Estos botones aparecen solo mientras el turno está abierto.\u003C/p>\n\u003Ch3>Ingreso\u003C/h3>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-12-ventana-ingreso.png\" alt=\"Ventanita Ingreso de Dinero con Monto 1500, una aclaración, la observación y los botones Registrar Ingreso y Cancelar\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón verde \u003Cstrong>Ingreso\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la ventanita \u003Cstrong>Ingreso de Dinero\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cul>\n\u003Cli>\u003Cstrong>Monto\u003C/strong>: cuánta plata entra. Por ejemplo: \u003Cem>1500\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Observación\u003C/strong>: el motivo. Por ejemplo: \u003Cem>Cambio para la caja\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Registrar Ingreso\u003C/strong>: anota el ingreso de verdad.\u003C/li>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>: cierra la ventanita sin anotar nada.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si la plata viene de otra caja, no la anotes acá. Esa caja tiene que hacer un \u003Cstrong>Retiro\u003C/strong> hacia esta.\u003C/p>\n\u003C/blockquote>\n\u003Ch3>Retiro\u003C/h3>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-13-ventana-retiro.png\" alt=\"Ventanita Retiro de Dinero con Monto 2000, A Caja opcional, la observación y los botones Registrar Retiro y Cancelar\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón naranja \u003Cstrong>Retiro\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la ventanita \u003Cstrong>Retiro de Dinero\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cul>\n\u003Cli>\u003Cstrong>Monto\u003C/strong>: cuánta plata sale. Por ejemplo: \u003Cem>2000\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>A Caja (opcional)\u003C/strong>: si la plata va a otra caja, elegila. Esa caja recibe el ingreso sola. Si no, dejá \u003Cstrong>Sin especificar\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Observación\u003C/strong>: el motivo. Por ejemplo: \u003Cem>Pago a un proveedor\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Registrar Retiro\u003C/strong>: anota el retiro de verdad.\u003C/li>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>: cierra la ventanita sin anotar nada.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Registrar Ingreso\u003C/strong> y \u003Cstrong>Registrar Retiro\u003C/strong> cambian la plata de la caja. Tocalos solo con movimientos reales.\u003C/p>\n\u003C/blockquote>\n\u003Ch3>Acciones\u003C/h3>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-11-menu-acciones.png\" alt=\"Lista Acciones abierta con Editar, Cambiar creador, Cerrar, Imprimir y Borrar\">\u003C/p>\n\u003Cp>El botón \u003Cstrong>Acciones\u003C/strong> abre una lista con:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: corregí los importes (Paso 10).\u003C/li>\n\u003Cli>\u003Cstrong>Cambiar creador\u003C/strong>: elegí a qué usuario se le asigna el turno.\u003C/li>\n\u003Cli>\u003Cstrong>Cerrar\u003C/strong>: cierra el turno (Paso 8).\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir\u003C/strong>: manda el resumen del turno a la impresora.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar\u003C/strong>: elimina el turno. No se puede deshacer.\u003C/li>\n\u003C/ul>\n\u003Cp>En un turno ya cerrado, en vez de \u003Cstrong>Cerrar\u003C/strong> aparece \u003Cstrong>Reabrir\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔒 Paso 8: Cerrá un arqueo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-cerra-un-arqueo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-8-cerra-un-arqueo\">\u003C/div>\n\n\u003Col>\n\u003Cli>En \u003Cstrong>Arqueos Abiertos\u003C/strong>, tocá el candado 🔒 del turno que querés cerrar. Es el tercer botón del renglón (Paso 4).\u003C/li>\n\u003Cli>Se abre la pantalla \u003Cstrong>Cerrando Arqueo\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-16-pantalla-cerrar-arqueo.png\" alt=\"Pantalla Cerrando Arqueo con el resumen de movimientos, el Importe Final y la lista para contar billetes\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Resumen de Movimientos\u003C/strong>: lo que debería haber. Abajo dice \u003Cstrong>Total Esperado\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Importe Inicial\u003C/strong>: la plata con la que abriste. No se cambia acá.\u003C/li>\n\u003Cli>\u003Cstrong>Importe Final (Efectivo en Caja)\u003C/strong>: escribí lo que contaste.\u003C/li>\n\u003Cli>\u003Cstrong>Contar Billetes\u003C/strong>: escribí cuántos billetes hay de cada valor. Arriba ves el total contado.\u003C/li>\n\u003Cli>\u003Cstrong>Usar este total como Importe Final\u003C/strong>: copia el total de los billetes en \u003Cstrong>Importe Final\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Cerrar Arqueo\u003C/strong>: el botón verde de abajo. Cierra el turno.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Cerrar Arqueo\u003C/strong> termina el turno de esa caja. Contá bien antes de tocarlo.\u003C/p>\n\u003C/blockquote>\n\u003Col start=\"3\">\n\u003Cli>Tocá \u003Cstrong>Cerrar Arqueo\u003C/strong>.\u003C/li>\n\u003Cli>El turno pasa a \u003Cstrong>Historial de Arqueos Cerrados\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📥 Paso 9: Bajá los arqueos a Excel\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-9-baja-los-arqueos-a-excel\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-9-baja-los-arqueos-a-excel\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-05-donde-esta-boton-descargar-excel.png\" alt=\"Pantalla con el botón azul Descargar Excel marcado en rojo debajo de Buscar\">\u003C/p>\n\u003Col>\n\u003Cli>Poné los filtros que quieras (Paso 2).\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Descargar Excel\u003C/strong>.\u003C/li>\n\u003Cli>Se baja un archivo con los turnos que coinciden.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ Paso 10: Corregí los importes de un arqueo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-10-corregi-los-importes-de-un-arqueo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-10-corregi-los-importes-de-un-arqueo\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/71-18-pantalla-editar-arqueo.png\" alt=\"Pantalla Editando Arqueo con Importe Inicial, Importe Final y el botón Guardar\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el lápiz del turno.\u003C/li>\n\u003Cli>Cambiá \u003Cstrong>Importe Inicial\u003C/strong> o \u003Cstrong>Importe Final\u003C/strong>.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> cambiar los importes cambia el saldo del turno. Hacelo solo para corregir un error de carga.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>Dice \u003Cstrong>No hay cajas configuradas\u003C/strong> y la caja existe.\u003C/td>\n\u003Ctd>Todas las cajas ya tienen un turno abierto.\u003C/td>\n\u003Ctd>Cerrá el turno que ya no uses (Paso 8). La tarjeta vuelve a aparecer.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo mi caja para abrir un turno.\u003C/td>\n\u003Ctd>Tu usuario no está tildado en la caja.\u003C/td>\n\u003Ctd>Pedile a un administrador que lo tilde en \u003Ca href=\"/user-guide/listado-de-cajas\">Listado de Cajas\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Al abrir dice que la caja ya se encuentra abierta.\u003C/td>\n\u003Ctd>Otra persona la abrió antes.\u003C/td>\n\u003Ctd>Buscá el turno en \u003Cstrong>Arqueos Abiertos\u003C/strong> y cerralo, o usá ese mismo turno.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Faltan botones \u003Cstrong>Ingreso\u003C/strong> y \u003Cstrong>Retiro\u003C/strong>.\u003C/td>\n\u003Ctd>El turno ya está cerrado o no tenés permiso.\u003C/td>\n\u003Ctd>Solo se usan en turnos abiertos. Consultá tus permisos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Hay un faltante al cerrar.\u003C/td>\n\u003Ctd>Salió plata de la caja y no se anotó.\u003C/td>\n\u003Ctd>Anotá los retiros con \u003Cstrong>Retiro\u003C/strong> y mirá \u003Cstrong>¿Por qué no cierra?\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El resumen muestra un importe en rojo entre \u003Cstrong>Facturado Total Mesas\u003C/strong> y \u003Cstrong>Abiertas Por Usuario\u003C/strong>.\u003C/td>\n\u003Ctd>Cobraste mesas de otros compañeros o quedaron mesas sin cobrar.\u003C/td>\n\u003Ctd>Es normal. Leé el \u003Ca href=\"/user-guide/08-faq-cajero-diferencia-facturado-vs-abiertas\">FAQ de Diferencias en Arqueo\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-busca-un-arqueo",title:"Paso 2: Buscá un arqueo",level:2},{id:"paso-3-mira-los-arqueos-cerrados",title:"Paso 3: Mirá los arqueos cerrados",level:2},{id:"paso-4-mira-los-arqueos-abiertos",title:"Paso 4: Mirá los arqueos abiertos",level:2},{id:"paso-5-abri-un-arqueo",title:"Paso 5: Abrí un arqueo",level:2},{id:"paso-6-mira-el-detalle-de-un-arqueo",title:"Paso 6: Mirá el detalle de un arqueo",level:2},{id:"paso-7-anota-un-ingreso-o-un-retiro-de-dinero",title:"Paso 7: Anotá un ingreso o un retiro de dinero",level:2},{id:"paso-8-cerra-un-arqueo",title:"Paso 8: Cerrá un arqueo",level:2},{id:"paso-9-baja-los-arqueos-a-excel",title:"Paso 9: Bajá los arqueos a Excel",level:2},{id:"paso-10-corregi-los-importes-de-un-arqueo",title:"Paso 10: Corregí los importes de un arqueo",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Arqueos de Caja - Manual",description:"¿Dónde está en el sistema?: Menú principal → Finanzas → Caja → Arqueos de Caja\n ¿Quién lo usa?: Cajeros, encargados de turno y contadores",keywords:"arqueos de caja, paxapos, arqueos de caja, tutorial, guía, manual usuario"},llmTxtFile:"71-arqueos-de-caja.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

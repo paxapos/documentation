@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Reportes → Tablero General. Está debajo del título GENERAL.
+ ¿Quién lo usa?: Dueños de lo..."/> <meta name="keywords" content="tablero general, paxapos, tablero general, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Tablero General - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Reportes → Tablero General. Está debajo del título GENERAL.
+ ¿Quién lo usa?: Dueños de lo..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Tablero General - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Tablero General - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Reportes → Tablero General. Está debajo del título GENERAL.
+ ¿Quién lo usa?: Dueños de lo..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Tablero General - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Reportes → Tablero General. Está debajo del título GENERAL.\n ¿Quién lo usa?: Dueños de lo...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Tablero General - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/tablero-general" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Tablero General</a></li><li><a href="../user-guide/productos-mas-vendidos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Productos Más Vendidos</a></li><li><a href="../user-guide/compras-por-mercaderia" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Compras por Mercadería</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Tablero General</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: tablero-general</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="tablero-general"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Reportes</strong> → <strong>Tablero General</strong>. Está debajo del título <strong>GENERAL</strong>.
+<strong>¿Quién lo usa?:</strong> Dueños de local, gerentes y contadores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá ves cómo le fue a tu negocio en un período: cuánto vendiste, cuánto gastaste y cuánto ganaste.
+La pantalla se titula <strong>Tu negocio en números</strong>. Solo se mira: no cambia ningún dato.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Reportes</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Para que haya números, tenés que tener ventas cobradas y gastos cargados en las fechas que elijas.</li>
+<li>Los bloques que no tienen datos <strong>no se muestran</strong>. Es normal: no es un error.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 <strong>Paso 1: Entrá a la pantalla</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/100-reportes/101-00a-menu-grupo-reportes.png" alt="Menú lateral con el grupo Reportes marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Reportes</strong>.</li>
+</ol>
+<p><img src="/images/manual/100-reportes/101-00b-menu-opcion-tablero-general.png" alt="Opción Tablero General marcada en rojo, debajo del título General"></p>
+<ol start="2">
+<li>Tocá <strong>Tablero General</strong>.</li>
+</ol>
+<p><img src="/images/manual/100-reportes/101-01-pantalla-tablero-general.png" alt="Pantalla Tu negocio en números con el resumen del período, las tarjetas azules y el filtro de fechas"></p>
+<p>Así se ve la pantalla. Cuando entrás, muestra los <strong>últimos 7 días</strong>. Más abajo vas a ver cómo cambiar las fechas.</p>
+<hr>
+<h2 class="relative">
+                🔘 <strong>Paso 2: Los botones de arriba</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-los-botones-de-arriba"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-los-botones-de-arriba"></div>
+
+<p><img src="/images/manual/100-reportes/101-02-donde-esta-boton-exportar.png" alt="Pantalla con el grupo de dos botones, recargar y Exportar, marcado en rojo debajo del título"></p>
+<p>Debajo del título hay dos botones juntos.</p>
+<ul>
+<li><strong>Botón con dos flechas (↻)</strong>: vuelve a cargar la pantalla con los datos de este momento. Sirve si hubo ventas nuevas.</li>
+<li><strong>Exportar</strong> (azul): baja a tu computadora un archivo con los números principales de la pantalla. Lo abrís con Excel.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🗂️ <strong>Paso 3: Elegí un centro de costo (si tenés)</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-elegi-un-centro-de-costo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-elegi-un-centro-de-costo"></div>
+
+<p><img src="/images/manual/100-reportes/101-03-pestanas-centro-de-costo.png" alt="Pestañas Global, Administrativo - General, CASER, corralon, desarrollo, obras publicas, Otro, salud y seguridad"></p>
+<p>Estas pestañas <strong>solo aparecen si tu comercio tiene centros de costo</strong>.</p>
+<ol>
+<li><strong>Global</strong> muestra todo el comercio junto.</li>
+<li>Tocá el nombre de un centro para ver solo lo suyo.</li>
+<li>La pantalla se recarga y aparece un aviso arriba.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> en un centro, las ventas, los cobros y los métodos de pago son del centro. Los gastos, el IVA y la facturación siguen siendo los de todo el comercio.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📅 <strong>Paso 4: Elegí las fechas</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-elegi-las-fechas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-elegi-las-fechas"></div>
+
+<p><img src="/images/manual/100-reportes/101-04-filtro-fechas.png" alt="Panel Rango de Fechas con los casilleros Desde y Hasta y el botón azul Actualizar Datos"></p>
+<ul>
+<li><strong>Desde</strong>: el primer día que querés mirar.</li>
+<li><strong>Hasta</strong>: el último día.</li>
+<li><strong>Actualizar Datos</strong>: tocalo para ver los números de esas fechas.</li>
+<li>El cartel celeste te recuerda que cada día se cuenta desde una hora fija (por ejemplo 06:00) hasta la misma hora del día siguiente. Esa hora se configura en tu comercio.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> los gráficos se dibujan si el rango es de <strong>menos de 180 días</strong>. Con más días ves los números, pero no los gráficos. El máximo es de unos 2 años.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📊 <strong>Paso 5: Leé el resumen de arriba</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-lee-el-resumen-de-arriba"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-lee-el-resumen-de-arriba"></div>
+
+<p><img src="/images/manual/100-reportes/101-05-resumen-ejecutivo.png" alt="Resumen ejecutivo con la frase En estos 90 días tu negocio ganó y tres tarjetas: Ventas, Gastos y Resultado"></p>
+<p>Es la respuesta corta a &quot;¿cómo me fue?&quot;.</p>
+<ul>
+<li><strong>La frase de arriba</strong> dice si tu negocio <strong>ganó</strong> (verde) o <strong>perdió</strong> (rojo) en esos días.</li>
+<li><strong>Margen</strong>: de cada $100 que vendiste, cuántos te quedaron limpios.</li>
+<li><strong>Ventas</strong>: lo que vendiste, y cuánto es por día.</li>
+<li><strong>Gastos</strong>: lo que gastaste, y qué parte de tus ventas representa.</li>
+<li><strong>Resultado</strong>: ventas menos gastos. Verde es ganancia y rojo es pérdida.</li>
+<li><strong>Las flechas ▲ ▼</strong> comparan con el período anterior de la misma cantidad de días. En Ventas, ▲ es bueno. En Gastos, ▼ (gastaste menos) es bueno: por eso sale en verde.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si cargaste ventas pero no gastos, el resultado no aparece. Cargá tus gastos para conocer tu ganancia real.</p>
+</blockquote>
+<p><img src="/images/manual/100-reportes/101-06-kpis-principales.png" alt="Cuatro tarjetas azules: Mesas 357, Cubiertos 1.186, Tickets Fiscales 0 y Días Analizados 90"></p>
+<p>Las tarjetas azules cuentan cosas del período:</p>
+<ul>
+<li><strong>Mesas</strong>: cuántas mesas cerraste.</li>
+<li><strong>Cubiertos</strong>: cuántas personas comieron.</li>
+<li><strong>Tickets Fiscales</strong>: cuántas facturas electrónicas o tickets fiscales emitiste. Si no facturás con el sistema, da 0.</li>
+<li><strong>Días Analizados</strong>: cuántos días abarcan las fechas que elegiste.</li>
+</ul>
+<p>Los nombres <strong>Mesas</strong> y <strong>Cubiertos</strong> pueden cambiar según cómo configuraste tu comercio.</p>
+<hr>
+<h2 class="relative">
+                💰 <strong>Paso 6: Leé ventas y gastos</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-lee-ventas-y-gastos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-lee-ventas-y-gastos"></div>
+
+<p><img src="/images/manual/100-reportes/101-07-resumen-ventas-y-gastos.png" alt="Paneles Resumen de Ventas, con total, descuentos, cobros y promedio, y Resumen de Gastos, con gastos totales, pagos, gastos fiscales e IVA compras"></p>
+<p><strong>Resumen de Ventas</strong> (a la izquierda):</p>
+<ul>
+<li><strong>Total de Ventas</strong>: la suma de todas las mesas cerradas.</li>
+<li><strong>Descuentos</strong>: cuánto se rebajó en total. Es la diferencia entre el precio sin descuento y lo que se cobró.</li>
+<li><strong>Cobros</strong>: la plata que entró en el período. Puede ser distinta de las ventas si hubo cobros parciales o pagos de otros días.</li>
+<li><strong>Promedio por Cubierto</strong>: cuánto gastó cada persona, en promedio.</li>
+<li><strong>Promedio por Mesa</strong>: cuánto se vendió por mesa, en promedio.</li>
+</ul>
+<p><strong>Resumen de Gastos</strong> (a la derecha):</p>
+<ul>
+<li><strong>Gastos Totales</strong>: todo lo que cargaste como gasto.</li>
+<li><strong>Pagos Realizados</strong>: lo que ya pagaste de esos gastos. Si es menor, todavía debés plata.</li>
+<li><strong>Gastos Fiscales</strong>: los gastos que tienen factura.</li>
+<li><strong>IVA Compras</strong>: el IVA de esas facturas. Es un IVA que se descuenta a tu favor.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> pasá el mouse por un número para ver un cartelito que explica de dónde sale.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚖️ <strong>Paso 7: Leé los saldos</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-lee-los-saldos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-lee-los-saldos"></div>
+
+<p><img src="/images/manual/100-reportes/101-08-saldos-y-estado-fiscal.png" alt="Tres tarjetas: Saldo Operativo con la etiqueta verde Ganancia, Flujo de Caja con la etiqueta Positivo y Situación IVA con la etiqueta Saldo a favor"></p>
+<p>Estas tres tarjetas resumen el resultado. Cada una tiene una etiqueta de color: verde es bueno y rojo es malo.</p>
+<ul>
+<li><strong>Saldo Operativo</strong>: ventas menos gastos. La etiqueta dice <strong>GANANCIA</strong> o <strong>PÉRDIDA</strong>. Si tenés inversiones grandes (compra de equipos, obras), aparecen abajo aparte y <strong>no</strong> se restan.</li>
+<li><strong>Flujo de Caja</strong>: cobros menos pagos. Es la plata que realmente entró y salió. Dice <strong>POSITIVO</strong> o <strong>NEGATIVO</strong>.</li>
+<li><strong>Situación IVA</strong>: el IVA de tus ventas menos el IVA de tus compras. <strong>A PAGAR</strong> significa que le debés IVA a ARCA (ex AFIP). <strong>SALDO A FAVOR</strong> significa que te queda a favor. Si el número está entre paréntesis, es a favor.</li>
+</ul>
+<p>Estas tarjetas aparecen solo si hay ventas y gastos en el período.</p>
+<hr>
+<h2 class="relative">
+                🧮 <strong>Paso 8: Leé la Contribución Marginal</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-lee-la-contribucion-marginal"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-8-lee-la-contribucion-marginal"></div>
+
+<p><img src="/images/manual/100-reportes/101-09-contribucion-marginal.png" alt="Panel Contribución Marginal con Ventas, Costos Variables, Contribución Marginal, Costos Fijos y otros, y Resultado Operativo"></p>
+<p>Es una cuenta de izquierda a derecha, de las ventas al resultado:</p>
+<ul>
+<li><strong>Ventas</strong>: lo que vendiste.</li>
+<li><strong>Costos Variables</strong>: gastos que suben y bajan con lo que vendés, como la mercadería.</li>
+<li><strong>Contribución Marginal</strong>: lo que sobra después de pagar esos costos. Entre paréntesis está el porcentaje sobre las ventas. Sirve para pagar los costos fijos.</li>
+<li><strong>Costos Fijos y otros</strong>: gastos que pagás venda o no venda, como el alquiler, más los gastos sin clasificar.</li>
+<li><strong>Resultado Operativo</strong>: lo que queda al final. Es el mismo número del Saldo Operativo.</li>
+</ul>
+<p>Si tu comercio cobra Ingresos Brutos, abajo aparece una línea con el impuesto <strong>estimado</strong> y el resultado después de pagarlo.</p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> para que esta cuenta funcione, tenés que marcar cada clasificación de gastos como costo <strong>fijo</strong> o <strong>variable</strong>. Si no, en lugar de la cuenta ves un aviso celeste con un enlace a <strong>Clasificaciones</strong>. Ahí elegís el <strong>Tipo de costo</strong> de cada una.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🧾 <strong>Paso 9: Facturación Electrónica y Métricas Operativas</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-9-facturacion-electronica-y-metricas-operativas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-9-facturacion-electronica-y-metricas-operativas"></div>
+
+<p>Estos dos paneles aparecen <strong>solo si emitiste facturas electrónicas o cierres Z en las fechas elegidas</strong>. Si no, no se muestran. En el comercio de prueba no había facturas, por eso no hay foto.</p>
+<p><strong>Facturación Electrónica</strong>:</p>
+<ul>
+<li><strong>Total Fiscal</strong>: todo lo que facturaste, con IVA.</li>
+<li><strong>Neto Fiscal</strong>: lo facturado sin el IVA.</li>
+<li><strong>IVA Ventas</strong>: el IVA de esas facturas.</li>
+<li><strong>Promedio Ticket</strong>: cuánto vale cada factura, en promedio.</li>
+<li><strong>Notas de Crédito</strong>: aparece si hiciste devoluciones o anulaciones. Ya están restadas del total.</li>
+</ul>
+<p><strong>Métricas Operativas</strong>:</p>
+<ul>
+<li><strong>Promedio de Permanencia</strong>: cuánto tiempo se queda una mesa, en promedio. Se lee en horas, minutos y segundos. Dice <strong>No disponible</strong> si no hay datos.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🥧 <strong>Paso 10: Leé los métodos de pago</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-10-lee-los-metodos-de-pago"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-10-lee-los-metodos-de-pago"></div>
+
+<p><img src="/images/manual/100-reportes/101-10-grafico-metodos-de-pago.png" alt="Gráfico de torta Métodos de Pago a la izquierda y lista Detalle por Método a la derecha con montos y porcentajes"></p>
+<p>Muestra con qué te pagaron.</p>
+<ul>
+<li><strong>El gráfico de torta</strong>: cada color es un método de pago. Cuanto más grande el trozo, más plata entró por ahí. El número dentro es el porcentaje.</li>
+<li><strong>Detalle por Método</strong>: la misma información en lista, de mayor a menor. Cada renglón tiene el color, el nombre, el porcentaje y el monto.</li>
+<li><strong>Buscar método de pago</strong>: escribí un nombre y la lista muestra solo ese.</li>
+</ul>
+<p>Solo salen los métodos que tuvieron cobros.</p>
+<hr>
+<h2 class="relative">
+                📈 <strong>Paso 11: Leé los gráficos por día</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-11-lee-los-graficos-por-dia"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-11-lee-los-graficos-por-dia"></div>
+
+<p>Estos tres gráficos muestran <strong>cada día</strong> del período. A la izquierda están los días más viejos y a la derecha los más nuevos. Pasá el mouse por un punto o una barra para ver el monto exacto.</p>
+<p><img src="/images/manual/100-reportes/101-11-grafico-evolucion-ventas-gastos.png" alt="Gráfico de líneas Evolución de Ventas y Gastos con la línea verde de ventas y la roja de gastos"></p>
+<p><strong>Evolución de Ventas y Gastos</strong>: la línea verde son las ventas, la roja son los gastos y la azul es lo facturado. Si la verde queda muy arriba de la roja, el negocio gana.</p>
+<p><img src="/images/manual/100-reportes/101-12-grafico-margen-de-ganancia.png" alt="Gráfico de barras Margen de Ganancia por Día con barras verdes"></p>
+<p><strong>Margen de Ganancia por Día</strong>: cada barra es un día. Es la venta menos los gastos de ese día. Una barra alta es un buen día. Solo aparece si cargaste gastos.</p>
+<p><img src="/images/manual/100-reportes/101-13-grafico-flujo-de-caja.png" alt="Gráfico de barras Flujo de Caja por Día con barras azules"></p>
+<p><strong>Flujo de Caja por Día</strong>: cada barra es la plata que cobraste menos la que pagaste ese día.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si un día no tuvo movimientos, la línea baja a cero y no hay barra. Los gastos suelen cargarse en pocos días, por eso se ven casi en cero.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🧩 <strong>Paso 12: Mirá en qué gastás</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-12-mira-en-que-gastas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-12-mira-en-que-gastas"></div>
+
+<p><img src="/images/manual/100-reportes/101-14-grafico-gastos-por-clasificacion.png" alt="Aviso amarillo Tu mayor gasto es Sin clasificar, gráfico de torta de Gastos por Clasificación y lista Detalle por Clasificación"></p>
+<ul>
+<li><strong>El aviso amarillo</strong> te dice cuál es tu mayor gasto y qué parte de todos tus gastos es. Es el primer lugar para buscar ahorro.</li>
+<li><strong>Gastos por Clasificación</strong>: el gráfico de torta reparte tus gastos por tipo, como mercadería o sueldos. Cada color es un tipo.</li>
+<li><strong>Detalle por Clasificación</strong>: la lista con el monto de cada tipo, de mayor a menor.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si casi todo dice <strong>Sin clasificar</strong>, no vas a saber en qué gastás. Cuando cargues un gasto, elegí su clasificación.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🗓️ <strong>Paso 13: Leé las tablas por día</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-13-lee-las-tablas-por-dia"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-13-lee-las-tablas-por-dia"></div>
+
+<p><img src="/images/manual/100-reportes/101-15-tabla-ventas-por-dia.png" alt="Tabla Ventas por Día con las columnas Fecha, Mesas, Ventas, Promedio x Ticket, Cubiertos, Promedio x Cubierto, Cobros y Fiscal"></p>
+<p><strong>Ventas por Día</strong>: una fila por día, del más nuevo al más viejo. En la foto se ven los primeros días; en pantalla ves todos.</p>
+<ul>
+<li><strong>Fecha</strong>: el día.</li>
+<li><strong>Mesas</strong>: cuántas mesas cerraste.</li>
+<li><strong>Ventas</strong>: el total vendido.</li>
+<li><strong>Promedio x Ticket</strong>: ventas dividido mesas.</li>
+<li><strong>Cubiertos</strong>: cuántas personas.</li>
+<li><strong>Promedio x Cubierto</strong>: lo que gastó cada persona.</li>
+<li><strong>Cobros</strong>: lo que cobraste ese día.</li>
+<li><strong>Fiscal (Tickets)</strong>: lo facturado. Entre paréntesis está la cantidad de facturas.</li>
+</ul>
+<p><img src="/images/manual/100-reportes/101-16-tabla-gastos-por-dia.png" alt="Tabla Gastos por Día con las columnas Fecha, Gasto Sin IVA, Total y Pagos"></p>
+<p><strong>Gastos por Día</strong>:</p>
+<ul>
+<li><strong>Fecha</strong>: el día.</li>
+<li><strong>Gasto Sin IVA</strong>: el gasto sin el impuesto.</li>
+<li><strong>Total</strong>: el gasto con IVA.</li>
+<li><strong>Pagos</strong>: lo que pagaste ese día.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                ⚠️ <strong>Resolución de Inconvenientes</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>&quot;No hay movimientos en el período seleccionado&quot;</strong></td>
+<td>No hay ventas ni gastos en esas fechas</td>
+<td>Ampliá el rango con <strong>Desde</strong> y <strong>Hasta</strong>, o probá otro centro de costo.</td>
+</tr>
+<tr>
+<td>No veo los gráficos</td>
+<td>El rango es de 180 días o más, o no hay ventas</td>
+<td>Elegí menos de 180 días y tocá <strong>Actualizar Datos</strong>.</td>
+</tr>
+<tr>
+<td>No veo <strong>Resultado</strong>, <strong>Saldo Operativo</strong> ni <strong>Contribución Marginal</strong></td>
+<td>No hay gastos cargados en el período</td>
+<td>Cargá tus gastos y volvé a mirar.</td>
+</tr>
+<tr>
+<td>En lugar de la Contribución Marginal veo un aviso celeste</td>
+<td>Las clasificaciones no tienen tipo de costo</td>
+<td>Tocá el enlace <strong>Clasificaciones</strong> y elegí fijo o variable en cada una.</td>
+</tr>
+<tr>
+<td>No veo <strong>Facturación Electrónica</strong> ni <strong>Métricas Operativas</strong></td>
+<td>No hay facturas electrónicas en las fechas</td>
+<td>Es normal si no facturás con el sistema. Probá otro rango.</td>
+</tr>
+<tr>
+<td>Todo el gasto dice <strong>Sin clasificar</strong></td>
+<td>Los gastos se cargaron sin clasificación</td>
+<td>Clasificá los gastos al cargarlos.</td>
+</tr>
+<tr>
+<td><strong>Ventas</strong> y <strong>Cobros</strong> no coinciden</td>
+<td>Hubo cobros parciales o pagos de otros días</td>
+<td>Es normal. Los <strong>Cobros</strong> cuentan la plata del período.</td>
+</tr>
+<tr>
+<td>El día no cierra a medianoche</td>
+<td>Cada día se cuenta desde la hora de corte (ej. 06:00)</td>
+<td>Es a propósito: una venta de madrugada cuenta para el día anterior.</td>
+</tr>
+<tr>
+<td>No veo el menú <strong>Reportes</strong></td>
+<td>Tu usuario no tiene el permiso</td>
+<td>Pedile al dueño que te lo dé en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/101-tablero-general.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-los-botones-de-arriba" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Los botones de arriba</a></li><li><a href="#paso-3-elegi-un-centro-de-costo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Elegí un centro de costo (si tenés)</a></li><li><a href="#paso-4-elegi-las-fechas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Elegí las fechas</a></li><li><a href="#paso-5-lee-el-resumen-de-arriba" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Leé el resumen de arriba</a></li><li><a href="#paso-6-lee-ventas-y-gastos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Leé ventas y gastos</a></li><li><a href="#paso-7-lee-los-saldos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Leé los saldos</a></li><li><a href="#paso-8-lee-la-contribucion-marginal" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Leé la Contribución Marginal</a></li><li><a href="#paso-9-facturacion-electronica-y-metricas-operativas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 9: Facturación Electrónica y Métricas Operativas</a></li><li><a href="#paso-10-lee-los-metodos-de-pago" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 10: Leé los métodos de pago</a></li><li><a href="#paso-11-lee-los-graficos-por-dia" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 11: Leé los gráficos por día</a></li><li><a href="#paso-12-mira-en-que-gastas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 12: Mirá en qué gastás</a></li><li><a href="#paso-13-lee-las-tablas-por-dia" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 13: Leé las tablas por día</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"tablero-general",title:"Tablero General",content:"\u003Cdiv id=\"tablero-general\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Reportes\u003C/strong> → \u003Cstrong>Tablero General\u003C/strong>. Está debajo del título \u003Cstrong>GENERAL\u003C/strong>.\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Dueños de local, gerentes y contadores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá ves cómo le fue a tu negocio en un período: cuánto vendiste, cuánto gastaste y cuánto ganaste.\nLa pantalla se titula \u003Cstrong>Tu negocio en números\u003C/strong>. Solo se mira: no cambia ningún dato.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Reportes\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Para que haya números, tenés que tener ventas cobradas y gastos cargados en las fechas que elijas.\u003C/li>\n\u003Cli>Los bloques que no tienen datos \u003Cstrong>no se muestran\u003C/strong>. Es normal: no es un error.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 \u003Cstrong>Paso 1: Entrá a la pantalla\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-00a-menu-grupo-reportes.png\" alt=\"Menú lateral con el grupo Reportes marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Reportes\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-00b-menu-opcion-tablero-general.png\" alt=\"Opción Tablero General marcada en rojo, debajo del título General\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Tablero General\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-01-pantalla-tablero-general.png\" alt=\"Pantalla Tu negocio en números con el resumen del período, las tarjetas azules y el filtro de fechas\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Cuando entrás, muestra los \u003Cstrong>últimos 7 días\u003C/strong>. Más abajo vas a ver cómo cambiar las fechas.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔘 \u003Cstrong>Paso 2: Los botones de arriba\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-los-botones-de-arriba\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-los-botones-de-arriba\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-02-donde-esta-boton-exportar.png\" alt=\"Pantalla con el grupo de dos botones, recargar y Exportar, marcado en rojo debajo del título\">\u003C/p>\n\u003Cp>Debajo del título hay dos botones juntos.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Botón con dos flechas (↻)\u003C/strong>: vuelve a cargar la pantalla con los datos de este momento. Sirve si hubo ventas nuevas.\u003C/li>\n\u003Cli>\u003Cstrong>Exportar\u003C/strong> (azul): baja a tu computadora un archivo con los números principales de la pantalla. Lo abrís con Excel.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗂️ \u003Cstrong>Paso 3: Elegí un centro de costo (si tenés)\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-elegi-un-centro-de-costo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-elegi-un-centro-de-costo\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-03-pestanas-centro-de-costo.png\" alt=\"Pestañas Global, Administrativo - General, CASER, corralon, desarrollo, obras publicas, Otro, salud y seguridad\">\u003C/p>\n\u003Cp>Estas pestañas \u003Cstrong>solo aparecen si tu comercio tiene centros de costo\u003C/strong>.\u003C/p>\n\u003Col>\n\u003Cli>\u003Cstrong>Global\u003C/strong> muestra todo el comercio junto.\u003C/li>\n\u003Cli>Tocá el nombre de un centro para ver solo lo suyo.\u003C/li>\n\u003Cli>La pantalla se recarga y aparece un aviso arriba.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> en un centro, las ventas, los cobros y los métodos de pago son del centro. Los gastos, el IVA y la facturación siguen siendo los de todo el comercio.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📅 \u003Cstrong>Paso 4: Elegí las fechas\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-elegi-las-fechas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-elegi-las-fechas\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-04-filtro-fechas.png\" alt=\"Panel Rango de Fechas con los casilleros Desde y Hasta y el botón azul Actualizar Datos\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Desde\u003C/strong>: el primer día que querés mirar.\u003C/li>\n\u003Cli>\u003Cstrong>Hasta\u003C/strong>: el último día.\u003C/li>\n\u003Cli>\u003Cstrong>Actualizar Datos\u003C/strong>: tocalo para ver los números de esas fechas.\u003C/li>\n\u003Cli>El cartel celeste te recuerda que cada día se cuenta desde una hora fija (por ejemplo 06:00) hasta la misma hora del día siguiente. Esa hora se configura en tu comercio.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> los gráficos se dibujan si el rango es de \u003Cstrong>menos de 180 días\u003C/strong>. Con más días ves los números, pero no los gráficos. El máximo es de unos 2 años.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📊 \u003Cstrong>Paso 5: Leé el resumen de arriba\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-lee-el-resumen-de-arriba\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-lee-el-resumen-de-arriba\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-05-resumen-ejecutivo.png\" alt=\"Resumen ejecutivo con la frase En estos 90 días tu negocio ganó y tres tarjetas: Ventas, Gastos y Resultado\">\u003C/p>\n\u003Cp>Es la respuesta corta a &quot;¿cómo me fue?&quot;.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>La frase de arriba\u003C/strong> dice si tu negocio \u003Cstrong>ganó\u003C/strong> (verde) o \u003Cstrong>perdió\u003C/strong> (rojo) en esos días.\u003C/li>\n\u003Cli>\u003Cstrong>Margen\u003C/strong>: de cada $100 que vendiste, cuántos te quedaron limpios.\u003C/li>\n\u003Cli>\u003Cstrong>Ventas\u003C/strong>: lo que vendiste, y cuánto es por día.\u003C/li>\n\u003Cli>\u003Cstrong>Gastos\u003C/strong>: lo que gastaste, y qué parte de tus ventas representa.\u003C/li>\n\u003Cli>\u003Cstrong>Resultado\u003C/strong>: ventas menos gastos. Verde es ganancia y rojo es pérdida.\u003C/li>\n\u003Cli>\u003Cstrong>Las flechas ▲ ▼\u003C/strong> comparan con el período anterior de la misma cantidad de días. En Ventas, ▲ es bueno. En Gastos, ▼ (gastaste menos) es bueno: por eso sale en verde.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si cargaste ventas pero no gastos, el resultado no aparece. Cargá tus gastos para conocer tu ganancia real.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-06-kpis-principales.png\" alt=\"Cuatro tarjetas azules: Mesas 357, Cubiertos 1.186, Tickets Fiscales 0 y Días Analizados 90\">\u003C/p>\n\u003Cp>Las tarjetas azules cuentan cosas del período:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Mesas\u003C/strong>: cuántas mesas cerraste.\u003C/li>\n\u003Cli>\u003Cstrong>Cubiertos\u003C/strong>: cuántas personas comieron.\u003C/li>\n\u003Cli>\u003Cstrong>Tickets Fiscales\u003C/strong>: cuántas facturas electrónicas o tickets fiscales emitiste. Si no facturás con el sistema, da 0.\u003C/li>\n\u003Cli>\u003Cstrong>Días Analizados\u003C/strong>: cuántos días abarcan las fechas que elegiste.\u003C/li>\n\u003C/ul>\n\u003Cp>Los nombres \u003Cstrong>Mesas\u003C/strong> y \u003Cstrong>Cubiertos\u003C/strong> pueden cambiar según cómo configuraste tu comercio.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💰 \u003Cstrong>Paso 6: Leé ventas y gastos\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-lee-ventas-y-gastos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-lee-ventas-y-gastos\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-07-resumen-ventas-y-gastos.png\" alt=\"Paneles Resumen de Ventas, con total, descuentos, cobros y promedio, y Resumen de Gastos, con gastos totales, pagos, gastos fiscales e IVA compras\">\u003C/p>\n\u003Cp>\u003Cstrong>Resumen de Ventas\u003C/strong> (a la izquierda):\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Total de Ventas\u003C/strong>: la suma de todas las mesas cerradas.\u003C/li>\n\u003Cli>\u003Cstrong>Descuentos\u003C/strong>: cuánto se rebajó en total. Es la diferencia entre el precio sin descuento y lo que se cobró.\u003C/li>\n\u003Cli>\u003Cstrong>Cobros\u003C/strong>: la plata que entró en el período. Puede ser distinta de las ventas si hubo cobros parciales o pagos de otros días.\u003C/li>\n\u003Cli>\u003Cstrong>Promedio por Cubierto\u003C/strong>: cuánto gastó cada persona, en promedio.\u003C/li>\n\u003Cli>\u003Cstrong>Promedio por Mesa\u003C/strong>: cuánto se vendió por mesa, en promedio.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Resumen de Gastos\u003C/strong> (a la derecha):\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Gastos Totales\u003C/strong>: todo lo que cargaste como gasto.\u003C/li>\n\u003Cli>\u003Cstrong>Pagos Realizados\u003C/strong>: lo que ya pagaste de esos gastos. Si es menor, todavía debés plata.\u003C/li>\n\u003Cli>\u003Cstrong>Gastos Fiscales\u003C/strong>: los gastos que tienen factura.\u003C/li>\n\u003Cli>\u003Cstrong>IVA Compras\u003C/strong>: el IVA de esas facturas. Es un IVA que se descuenta a tu favor.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> pasá el mouse por un número para ver un cartelito que explica de dónde sale.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚖️ \u003Cstrong>Paso 7: Leé los saldos\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-lee-los-saldos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-lee-los-saldos\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-08-saldos-y-estado-fiscal.png\" alt=\"Tres tarjetas: Saldo Operativo con la etiqueta verde Ganancia, Flujo de Caja con la etiqueta Positivo y Situación IVA con la etiqueta Saldo a favor\">\u003C/p>\n\u003Cp>Estas tres tarjetas resumen el resultado. Cada una tiene una etiqueta de color: verde es bueno y rojo es malo.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Saldo Operativo\u003C/strong>: ventas menos gastos. La etiqueta dice \u003Cstrong>GANANCIA\u003C/strong> o \u003Cstrong>PÉRDIDA\u003C/strong>. Si tenés inversiones grandes (compra de equipos, obras), aparecen abajo aparte y \u003Cstrong>no\u003C/strong> se restan.\u003C/li>\n\u003Cli>\u003Cstrong>Flujo de Caja\u003C/strong>: cobros menos pagos. Es la plata que realmente entró y salió. Dice \u003Cstrong>POSITIVO\u003C/strong> o \u003Cstrong>NEGATIVO\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Situación IVA\u003C/strong>: el IVA de tus ventas menos el IVA de tus compras. \u003Cstrong>A PAGAR\u003C/strong> significa que le debés IVA a ARCA (ex AFIP). \u003Cstrong>SALDO A FAVOR\u003C/strong> significa que te queda a favor. Si el número está entre paréntesis, es a favor.\u003C/li>\n\u003C/ul>\n\u003Cp>Estas tarjetas aparecen solo si hay ventas y gastos en el período.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧮 \u003Cstrong>Paso 8: Leé la Contribución Marginal\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-lee-la-contribucion-marginal\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-8-lee-la-contribucion-marginal\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-09-contribucion-marginal.png\" alt=\"Panel Contribución Marginal con Ventas, Costos Variables, Contribución Marginal, Costos Fijos y otros, y Resultado Operativo\">\u003C/p>\n\u003Cp>Es una cuenta de izquierda a derecha, de las ventas al resultado:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Ventas\u003C/strong>: lo que vendiste.\u003C/li>\n\u003Cli>\u003Cstrong>Costos Variables\u003C/strong>: gastos que suben y bajan con lo que vendés, como la mercadería.\u003C/li>\n\u003Cli>\u003Cstrong>Contribución Marginal\u003C/strong>: lo que sobra después de pagar esos costos. Entre paréntesis está el porcentaje sobre las ventas. Sirve para pagar los costos fijos.\u003C/li>\n\u003Cli>\u003Cstrong>Costos Fijos y otros\u003C/strong>: gastos que pagás venda o no venda, como el alquiler, más los gastos sin clasificar.\u003C/li>\n\u003Cli>\u003Cstrong>Resultado Operativo\u003C/strong>: lo que queda al final. Es el mismo número del Saldo Operativo.\u003C/li>\n\u003C/ul>\n\u003Cp>Si tu comercio cobra Ingresos Brutos, abajo aparece una línea con el impuesto \u003Cstrong>estimado\u003C/strong> y el resultado después de pagarlo.\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> para que esta cuenta funcione, tenés que marcar cada clasificación de gastos como costo \u003Cstrong>fijo\u003C/strong> o \u003Cstrong>variable\u003C/strong>. Si no, en lugar de la cuenta ves un aviso celeste con un enlace a \u003Cstrong>Clasificaciones\u003C/strong>. Ahí elegís el \u003Cstrong>Tipo de costo\u003C/strong> de cada una.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧾 \u003Cstrong>Paso 9: Facturación Electrónica y Métricas Operativas\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-9-facturacion-electronica-y-metricas-operativas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-9-facturacion-electronica-y-metricas-operativas\">\u003C/div>\n\n\u003Cp>Estos dos paneles aparecen \u003Cstrong>solo si emitiste facturas electrónicas o cierres Z en las fechas elegidas\u003C/strong>. Si no, no se muestran. En el comercio de prueba no había facturas, por eso no hay foto.\u003C/p>\n\u003Cp>\u003Cstrong>Facturación Electrónica\u003C/strong>:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Total Fiscal\u003C/strong>: todo lo que facturaste, con IVA.\u003C/li>\n\u003Cli>\u003Cstrong>Neto Fiscal\u003C/strong>: lo facturado sin el IVA.\u003C/li>\n\u003Cli>\u003Cstrong>IVA Ventas\u003C/strong>: el IVA de esas facturas.\u003C/li>\n\u003Cli>\u003Cstrong>Promedio Ticket\u003C/strong>: cuánto vale cada factura, en promedio.\u003C/li>\n\u003Cli>\u003Cstrong>Notas de Crédito\u003C/strong>: aparece si hiciste devoluciones o anulaciones. Ya están restadas del total.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Métricas Operativas\u003C/strong>:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Promedio de Permanencia\u003C/strong>: cuánto tiempo se queda una mesa, en promedio. Se lee en horas, minutos y segundos. Dice \u003Cstrong>No disponible\u003C/strong> si no hay datos.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🥧 \u003Cstrong>Paso 10: Leé los métodos de pago\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-10-lee-los-metodos-de-pago\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-10-lee-los-metodos-de-pago\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-10-grafico-metodos-de-pago.png\" alt=\"Gráfico de torta Métodos de Pago a la izquierda y lista Detalle por Método a la derecha con montos y porcentajes\">\u003C/p>\n\u003Cp>Muestra con qué te pagaron.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>El gráfico de torta\u003C/strong>: cada color es un método de pago. Cuanto más grande el trozo, más plata entró por ahí. El número dentro es el porcentaje.\u003C/li>\n\u003Cli>\u003Cstrong>Detalle por Método\u003C/strong>: la misma información en lista, de mayor a menor. Cada renglón tiene el color, el nombre, el porcentaje y el monto.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar método de pago\u003C/strong>: escribí un nombre y la lista muestra solo ese.\u003C/li>\n\u003C/ul>\n\u003Cp>Solo salen los métodos que tuvieron cobros.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📈 \u003Cstrong>Paso 11: Leé los gráficos por día\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-11-lee-los-graficos-por-dia\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-11-lee-los-graficos-por-dia\">\u003C/div>\n\n\u003Cp>Estos tres gráficos muestran \u003Cstrong>cada día\u003C/strong> del período. A la izquierda están los días más viejos y a la derecha los más nuevos. Pasá el mouse por un punto o una barra para ver el monto exacto.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-11-grafico-evolucion-ventas-gastos.png\" alt=\"Gráfico de líneas Evolución de Ventas y Gastos con la línea verde de ventas y la roja de gastos\">\u003C/p>\n\u003Cp>\u003Cstrong>Evolución de Ventas y Gastos\u003C/strong>: la línea verde son las ventas, la roja son los gastos y la azul es lo facturado. Si la verde queda muy arriba de la roja, el negocio gana.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-12-grafico-margen-de-ganancia.png\" alt=\"Gráfico de barras Margen de Ganancia por Día con barras verdes\">\u003C/p>\n\u003Cp>\u003Cstrong>Margen de Ganancia por Día\u003C/strong>: cada barra es un día. Es la venta menos los gastos de ese día. Una barra alta es un buen día. Solo aparece si cargaste gastos.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-13-grafico-flujo-de-caja.png\" alt=\"Gráfico de barras Flujo de Caja por Día con barras azules\">\u003C/p>\n\u003Cp>\u003Cstrong>Flujo de Caja por Día\u003C/strong>: cada barra es la plata que cobraste menos la que pagaste ese día.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si un día no tuvo movimientos, la línea baja a cero y no hay barra. Los gastos suelen cargarse en pocos días, por eso se ven casi en cero.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧩 \u003Cstrong>Paso 12: Mirá en qué gastás\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-12-mira-en-que-gastas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-12-mira-en-que-gastas\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-14-grafico-gastos-por-clasificacion.png\" alt=\"Aviso amarillo Tu mayor gasto es Sin clasificar, gráfico de torta de Gastos por Clasificación y lista Detalle por Clasificación\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>El aviso amarillo\u003C/strong> te dice cuál es tu mayor gasto y qué parte de todos tus gastos es. Es el primer lugar para buscar ahorro.\u003C/li>\n\u003Cli>\u003Cstrong>Gastos por Clasificación\u003C/strong>: el gráfico de torta reparte tus gastos por tipo, como mercadería o sueldos. Cada color es un tipo.\u003C/li>\n\u003Cli>\u003Cstrong>Detalle por Clasificación\u003C/strong>: la lista con el monto de cada tipo, de mayor a menor.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si casi todo dice \u003Cstrong>Sin clasificar\u003C/strong>, no vas a saber en qué gastás. Cuando cargues un gasto, elegí su clasificación.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗓️ \u003Cstrong>Paso 13: Leé las tablas por día\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-13-lee-las-tablas-por-dia\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-13-lee-las-tablas-por-dia\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-15-tabla-ventas-por-dia.png\" alt=\"Tabla Ventas por Día con las columnas Fecha, Mesas, Ventas, Promedio x Ticket, Cubiertos, Promedio x Cubierto, Cobros y Fiscal\">\u003C/p>\n\u003Cp>\u003Cstrong>Ventas por Día\u003C/strong>: una fila por día, del más nuevo al más viejo. En la foto se ven los primeros días; en pantalla ves todos.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Fecha\u003C/strong>: el día.\u003C/li>\n\u003Cli>\u003Cstrong>Mesas\u003C/strong>: cuántas mesas cerraste.\u003C/li>\n\u003Cli>\u003Cstrong>Ventas\u003C/strong>: el total vendido.\u003C/li>\n\u003Cli>\u003Cstrong>Promedio x Ticket\u003C/strong>: ventas dividido mesas.\u003C/li>\n\u003Cli>\u003Cstrong>Cubiertos\u003C/strong>: cuántas personas.\u003C/li>\n\u003Cli>\u003Cstrong>Promedio x Cubierto\u003C/strong>: lo que gastó cada persona.\u003C/li>\n\u003Cli>\u003Cstrong>Cobros\u003C/strong>: lo que cobraste ese día.\u003C/li>\n\u003Cli>\u003Cstrong>Fiscal (Tickets)\u003C/strong>: lo facturado. Entre paréntesis está la cantidad de facturas.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/100-reportes/101-16-tabla-gastos-por-dia.png\" alt=\"Tabla Gastos por Día con las columnas Fecha, Gasto Sin IVA, Total y Pagos\">\u003C/p>\n\u003Cp>\u003Cstrong>Gastos por Día\u003C/strong>:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Fecha\u003C/strong>: el día.\u003C/li>\n\u003Cli>\u003Cstrong>Gasto Sin IVA\u003C/strong>: el gasto sin el impuesto.\u003C/li>\n\u003Cli>\u003Cstrong>Total\u003C/strong>: el gasto con IVA.\u003C/li>\n\u003Cli>\u003Cstrong>Pagos\u003C/strong>: lo que pagaste ese día.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ \u003Cstrong>Resolución de Inconvenientes\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>&quot;No hay movimientos en el período seleccionado&quot;\u003C/strong>\u003C/td>\n\u003Ctd>No hay ventas ni gastos en esas fechas\u003C/td>\n\u003Ctd>Ampliá el rango con \u003Cstrong>Desde\u003C/strong> y \u003Cstrong>Hasta\u003C/strong>, o probá otro centro de costo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo los gráficos\u003C/td>\n\u003Ctd>El rango es de 180 días o más, o no hay ventas\u003C/td>\n\u003Ctd>Elegí menos de 180 días y tocá \u003Cstrong>Actualizar Datos\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo \u003Cstrong>Resultado\u003C/strong>, \u003Cstrong>Saldo Operativo\u003C/strong> ni \u003Cstrong>Contribución Marginal\u003C/strong>\u003C/td>\n\u003Ctd>No hay gastos cargados en el período\u003C/td>\n\u003Ctd>Cargá tus gastos y volvé a mirar.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>En lugar de la Contribución Marginal veo un aviso celeste\u003C/td>\n\u003Ctd>Las clasificaciones no tienen tipo de costo\u003C/td>\n\u003Ctd>Tocá el enlace \u003Cstrong>Clasificaciones\u003C/strong> y elegí fijo o variable en cada una.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo \u003Cstrong>Facturación Electrónica\u003C/strong> ni \u003Cstrong>Métricas Operativas\u003C/strong>\u003C/td>\n\u003Ctd>No hay facturas electrónicas en las fechas\u003C/td>\n\u003Ctd>Es normal si no facturás con el sistema. Probá otro rango.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Todo el gasto dice \u003Cstrong>Sin clasificar\u003C/strong>\u003C/td>\n\u003Ctd>Los gastos se cargaron sin clasificación\u003C/td>\n\u003Ctd>Clasificá los gastos al cargarlos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Ventas\u003C/strong> y \u003Cstrong>Cobros\u003C/strong> no coinciden\u003C/td>\n\u003Ctd>Hubo cobros parciales o pagos de otros días\u003C/td>\n\u003Ctd>Es normal. Los \u003Cstrong>Cobros\u003C/strong> cuentan la plata del período.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El día no cierra a medianoche\u003C/td>\n\u003Ctd>Cada día se cuenta desde la hora de corte (ej. 06:00)\u003C/td>\n\u003Ctd>Es a propósito: una venta de madrugada cuenta para el día anterior.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo el menú \u003Cstrong>Reportes\u003C/strong>\u003C/td>\n\u003Ctd>Tu usuario no tiene el permiso\u003C/td>\n\u003Ctd>Pedile al dueño que te lo dé en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-los-botones-de-arriba",title:"Paso 2: Los botones de arriba",level:2},{id:"paso-3-elegi-un-centro-de-costo",title:"Paso 3: Elegí un centro de costo (si tenés)",level:2},{id:"paso-4-elegi-las-fechas",title:"Paso 4: Elegí las fechas",level:2},{id:"paso-5-lee-el-resumen-de-arriba",title:"Paso 5: Leé el resumen de arriba",level:2},{id:"paso-6-lee-ventas-y-gastos",title:"Paso 6: Leé ventas y gastos",level:2},{id:"paso-7-lee-los-saldos",title:"Paso 7: Leé los saldos",level:2},{id:"paso-8-lee-la-contribucion-marginal",title:"Paso 8: Leé la Contribución Marginal",level:2},{id:"paso-9-facturacion-electronica-y-metricas-operativas",title:"Paso 9: Facturación Electrónica y Métricas Operativas",level:2},{id:"paso-10-lee-los-metodos-de-pago",title:"Paso 10: Leé los métodos de pago",level:2},{id:"paso-11-lee-los-graficos-por-dia",title:"Paso 11: Leé los gráficos por día",level:2},{id:"paso-12-mira-en-que-gastas",title:"Paso 12: Mirá en qué gastás",level:2},{id:"paso-13-lee-las-tablas-por-dia",title:"Paso 13: Leé las tablas por día",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Tablero General - Manual",description:"¿Dónde está en el sistema?: Menú principal → Reportes → Tablero General. Está debajo del título GENERAL.\n ¿Quién lo usa?: Dueños de lo...",keywords:"tablero general, paxapos, tablero general, tutorial, guía, manual usuario"},llmTxtFile:"101-tablero-general.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

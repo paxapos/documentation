@@ -1,0 +1,77 @@
+﻿# Empleados Trabajando
+
+Empleados Trabajando
+¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando
+¿Quién lo usa?: Encargados, jefes de turno y recursos humanos.
+🎯 ¿Para qué sirve esto?
+Muestra quién está trabajando ahora mismo en tu comercio: todos los que marcaron el ingreso y todavía no marcaron la salida.
+Desde acá también podés fichar un ingreso, marcar una salida o cerrar la jornada de todos juntos.
+---
+🔑 Antes de empezar
+• Tiene que estar activo el módulo de Fichaje o el de RRHH.
+• Para ver la pantalla necesitás el permiso Fichaje. Mirá Permisos por Rol.
+• El botón Eliminar de cada tarjeta necesita el permiso de editar fichadas.
+• El botón Egresar todos necesita el permiso de egresar a todos. Sin él, el sistema no te deja usarlo.
+• Los empleados tienen que estar cargados en Empleados. Ellos marcan su ingreso con la app de fichaje o lo carga el encargado.
+---
+👀 Paso 1: Mirá quién está presente
+Arriba a la izquierda ves un título grande. Por ejemplo: 8 Presentes. Ese número son las personas con ingreso y sin salida.
+Cada persona aparece en una tarjeta. La tarjeta muestra:
+• El departamento, arriba.
+• La foto del empleado. Si al fichar se sacó una foto, aparece chiquita en una esquina de la foto principal.
+• El apellido y nombre. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.
+• El DNI.
+• El día y la hora del ingreso.
+• Un espacio para la observación.
+• El botón Egreso.
+Si tenés el permiso de editar fichadas, también ves el botón rojo Eliminar.
+Debajo del buscador hay un texto que dice cuántos resultados ves. Por ejemplo: Mostrando 50 de 120 resultados.
+⚠️ Atención: esta pantalla muestra a todos los que tienen un ingreso sin salida, aunque sea de días atrás. Si alguien se olvidó de fichar la salida ayer, sigue apareciendo hasta que alguien la marque.
+---
+🔎 Paso 2: Buscá o filtrá
+Arriba hay dos formas de acotar las tarjetas.
+• Buscador: el casillero que dice Buscar por nombre o documento.... Escribí una parte del nombre, del apellido o del DNI. Por ejemplo: Pérez. La lista se actualiza sola mientras escribís.
+• Botones de departamento: una fila de botones al lado del buscador. El primero es Todos. Después hay uno por cada departamento que tiene gente presente. Tocá uno para ver solo ese departamento.
+Si hay un lector de DNI conectado, al pasar el documento se completa el buscador solo.
+Si hay muchas personas, la pantalla muestra 50. Abajo aparece el botón azul Cargar más con la cantidad que falta. Tocalo para ver las que siguen.
+---
+🟢 Paso 3: Fichá un ingreso
+1. Arriba a la derecha, tocá el botón verde Fichar Ingreso.
+2. Se abre una ventanita Nuevo Ingreso.
+3. Sacá la foto con el botón Sacar Foto, o elegí un archivo del equipo. La foto es opcional.
+4. En Empleado, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla.
+5. Fecha Hora: solo la ves si tenés permiso de editar fichadas. Viene con la hora de ahora. Cambiala si cargás un ingreso de antes.
+6. Observación: si querés, anotá algo. Por ejemplo: Llegó con aviso.
+7. Tocá el botón azul Fichar.
+Volvés a la pantalla y la persona aparece entre los presentes.
+💡 Consejo útil: si no tenés permiso de editar fichadas, el sistema usa siempre la hora actual.
+Al lado está el botón gris Nuevo Registro. Abre el formulario para dar de alta a un empleado nuevo. Es el mismo de Empleados.
+---
+🔴 Paso 4: Marcá la salida de una persona
+1. Buscá la tarjeta de la persona.
+2. Abajo de la tarjeta, tocá el botón Egreso.
+3. La tarjeta se apaga y desaparece. El número de Presentes baja en uno.
+El sistema guarda como hora de salida el momento en que tocás el botón.
+Si te equivocás de persona, corregí la hora en el Registro Diario de Fichaje.
+---
+🚪 Paso 5: Cerrá la jornada de todos
+⚠️ Atención: este botón marca la salida de TODAS las personas presentes, con la hora de ahora. No respeta el buscador ni el departamento elegido. No hay un botón para deshacerlo.
+1. Arriba a la derecha, tocá el botón rojo Egresar todos.
+2. El sistema pregunta ¿Está seguro que desea egresar a todos?.
+3. Confirmá. La pantalla vuelve con un mensaje verde: Se ha egresado a todos los registros.
+---
+📝 Paso 6: Anotá una observación o eliminá un registro
+• Observación: en el espacio bajo los datos de la persona, hacé clic para escribir o cambiar el texto. Aparecen dos íconos: tocá ✓ para guardar o ✕ para cancelar. Después queda a la vista con el título Observación.
+• Eliminar: borra el registro de fichada de esa persona. El sistema pregunta Desea eliminar?. Usalo solo si el ingreso se cargó por error.
+⚠️ Atención: al eliminar, perdés esa fichada. Las horas de ese día no se cuentan en los reportes.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| Un empleado trabaja pero no aparece | No marcó el ingreso. | Tocá Fichar Ingreso y cargalo. O pedile que fiche en la app. |
+| Aparece alguien que ya se fue | Se olvidó de fichar la salida. | Tocá Egreso en su tarjeta. Después corregí la hora en el Registro Diario de Fichaje. |
+| Aparece alguien de días atrás | Nadie marcó su salida ese día. | Marcá Egreso y corregí la hora de salida real en el registro diario. |
+| No veo el botón Egresar todos o dice que no tengo permiso | Tu rol no puede egresar a todos. | Pedí a un administrador el permiso en Permisos por Rol. |
+| No veo el botón Eliminar | Tu rol no puede editar fichadas. | Pedí a un administrador el permiso de editar fichadas. |
+| El nombre no es un enlace | No tenés el permiso de Recursos Humanos. | Es normal. Pedí el permiso si necesitás abrir la ficha. |
+| El buscador no encuentra a nadie | La persona no está presente o el departamento elegido no es el suyo. | Tocá Todos en los botones de departamento y probá de nuevo. |

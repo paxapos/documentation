@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio d..."/> <meta name="keywords" content="punto de venta, paxapos, 🏛️ trámite en arca (con clave fiscal), tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="🏛️ Trámite en ARCA (con clave fiscal) - Manual"/> <meta property="og:description" content="Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio d..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="🏛️ Trámite en ARCA (con clave fiscal) - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="🏛️ Trámite en ARCA (con clave fiscal) - Manual"/> <meta name="twitter:description" content="Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio d..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "🏛️ Trámite en ARCA (con clave fiscal) - Manual",
+  "description": "Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio d...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>🏛️ Trámite en ARCA (con clave fiscal) - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/configuracion-general" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Configuración general</a></li><li><a href="../user-guide/impresoras" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo cargar las impresoras del local</a></li><li><a href="../user-guide/perfiles-de-impresion" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo usar los perfiles de impresión</a></li><li><a href="../user-guide/usuarios-del-sistema" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo administrar los Usuarios del Sistema</a></li><li><a href="../user-guide/usuarios-con-pin" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo administrar los Usuarios con PIN</a></li><li><a href="../user-guide/punto-de-venta" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Trámite en ARCA (con clave fiscal)</a></li><li><a href="../user-guide/permisos-por-rol" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo configurar los Permisos por Rol</a></li><li><a href="../user-guide/turnos-mesa" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Turnos de Mesa</a></li><li><a href="../user-guide/medios-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Medios de cobro</a></li><li><a href="../user-guide/clasificacion-de-gastos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Clasificación de Gastos</a></li><li><a href="../user-guide/centros-de-costo" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Centros de Costo</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[-1--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">🏛️ Trámite en ARCA (con clave fiscal)</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: punto-de-venta</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="tramite-en-arca"></div>
+
+<p>Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio de ARCA.</p>
+<div id="arca-facturacion"></div>
+
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong><br>Para poder comenzar a facturar necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado.</p>
+</blockquote>
+<hr>
+<h5 class="relative">
+                ⚠️ <strong>REQUISITO OBLIGATORIO</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="requisito-obligatorio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h5>
+            <div id="requisito-obligatorio"></div>
+
+<blockquote>
+<p><strong>Recordá que para realizar este trámite debés poseer clave fiscal de nivel 3 en ARCA.</strong></p>
+</blockquote>
+<hr>
+<h5 class="relative">
+                🚀 <strong>1. Habilitar el servicio de factura electrónica por web service</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="habilitar-servicio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h5>
+            <div id="habilitar-servicio"></div>
+
+<h6 class="relative">
+                <strong>🌐 1.1 Ingreso a ARCA y acceso a Administrador</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="ingreso-arca"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="ingreso-arca"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Ingresar en el sitio de ARCA</strong> (<a href="http://www.afip.gob.ar">www.afip.gob.ar</a>) y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a <a href="https://auth.afip.gob.ar/contribuyente/">https://auth.afip.gob.ar/contribuyente/</a></p>
+<p><img src="/images/afip/1-Inicio-sesion.webp" alt="Ingreso a ARCA">
+<em>Pantalla de ingreso a ARCA con Clave Fiscal</em></p>
+<p><strong>🔹 PASO 2:</strong> <strong>Ingresar el CUIT</strong>, presionar &quot;Siguiente&quot; luego ingresar la clave y seleccionar &quot;Ingresar&quot;</p>
+<p><strong>🔹 PASO 3:</strong> <strong>Seleccionar la opción</strong> &quot;Administrador de Relaciones de Clave Fiscal&quot;</p>
+<p><img src="/images/afip/2-Administrador-relaciones.webp" alt="Administrador de Relaciones">
+<em>Menú principal con opción de Administrador de Relaciones</em></p>
+<p><strong>🔹 PASO 4:</strong> <strong>En el caso que tengas más de un CUIT</strong> asociado a tu cuenta de ARCA, aparecerá una pantalla donde tendrás que seleccionar el CUIT con el que deseas emitir facturas electrónicas</p>
+<hr>
+<h6 class="relative">
+                <strong>🔗 1.2 Crear nueva relación y seleccionar servicio</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="crear-relacion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="crear-relacion"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso-1"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso-1"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Seleccionar</strong> &quot;Nueva Relación&quot;</p>
+<p><img src="/images/afip/3-Nueva-relacion.webp" alt="Nueva Relación">
+<em>Botón para crear una nueva relación</em></p>
+<p><strong>🔹 PASO 2:</strong> <strong>Seleccionar</strong> &quot;Buscar&quot; en la opción &quot;Servicio&quot;</p>
+<p><img src="/images/afip/4-Servicios.webp" alt="Buscar Servicio">
+<em>Campo de búsqueda de servicios</em></p>
+<p><strong>🔹 PASO 3:</strong> <strong>Asegurate</strong> que en el campo &quot;Representado&quot; figure el CUIT al que le estás habilitando el servicio</p>
+<p><strong>🔹 PASO 4:</strong> <strong>Luego abrir</strong> la opción &quot;ARCA&quot; y seleccionar la opción &quot;WebServices&quot;</p>
+<p><img src="/images/afip/5-Web-service.webp" alt="WebServices ARCA">
+<em>Menú desplegable de ARCA mostrando WebServices</em></p>
+<hr>
+<h6 class="relative">
+                <strong>📑 1.3 Elegir servicio según tipo de factura</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="elegir-servicio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="elegir-servicio"></div>
+
+<h6 class="relative">
+                <strong>🎯 Tipos de servicios disponibles:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="tipos-de-servicios-disponibles"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="tipos-de-servicios-disponibles"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Tipo de Factura</th>
+<th>Servicio que debés buscar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Facturas electrónicas A, B, C o M</strong></td>
+<td>&quot;Facturación Electrónica&quot;</td>
+</tr>
+<tr>
+<td><strong>Facturas electrónicas de exportación</strong></td>
+<td>&quot;Facturación electrónica de exportación&quot;</td>
+</tr>
+<tr>
+<td><strong>Facturas electrónicas T de turismo</strong></td>
+<td>&quot;Web Service Comprobantes T&quot;</td>
+</tr>
+</tbody></table></div>
+<h6 class="relative">
+                <strong>⚠️ Importante:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="importante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="importante"></div>
+
+<p><em>Si necesitás realizar distintos tipos de facturas (por Ej. A y E) debe repetir los pasos del 1.3A al 1.9 seleccionando en cada caso el servicio que corresponda al tipo de factura.</em></p>
+<hr>
+<h6 class="relative">
+                <strong>👤 1.4 Buscar y asignar representante</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="asignar-representante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="asignar-representante"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso-2"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso-2"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Seleccionar</strong> &quot;Buscar&quot; en la opción &quot;Representante&quot;</p>
+<p><img src="/images/afip/6-Buscar-representante.webp" alt="Buscar Representante">
+<em>Campo para buscar representante</em></p>
+<p><strong>🔹 PASO 2:</strong> <strong>Ingresar el CUIT</strong> 20303683268 y presionar &quot;Buscar&quot;</p>
+<p><img src="/images/afip/7-Representante.webp" alt="Ingresar CUIT Representante">
+<em>Ingreso del CUIT del representante autorizado</em></p>
+<p><strong>🔹 PASO 3:</strong> <strong>Se le indicará</strong> que el CUIT pertenece a VILAR ALEJANDRO ERNESTO</p>
+<h6 class="relative">
+                <strong>⚠️ Nota importante:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="nota-importante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="nota-importante"></div>
+
+<p><em>Ignorá el mensaje de ARCA en rojo sobre el computador fiscal y la &quot;Advertencia del Sistema&quot; que aparece debajo sobre la delegación del servicio.</em></p>
+<hr>
+<h6 class="relative">
+                <strong>✅ 1.5 Confirmar la relación</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="confirmar-relacion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="confirmar-relacion"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso final:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-final"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-final"></div>
+
+<p><strong>🔹 PASO FINAL:</strong> <strong>Presione confirmar</strong> nuevamente</p>
+<p><img src="/images/afip/8-Confirmar-representante.webp" alt="Confirmar Relación">
+<em>Botón de confirmación final de la relación</em></p>
+<hr>
+<h5 class="relative">
+                🏪 <strong>2. Crear un nuevo punto de venta electrónico</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="crear-punto-venta"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h5>
+            <div id="crear-punto-venta"></div>
+
+<h6 class="relative">
+                <strong>🎯 Objetivo:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="objetivo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="objetivo"></div>
+
+<p>Habilitar la opción &quot;Administración de puntos de venta y domicilios&quot;.</p>
+<hr>
+<h6 class="relative">
+                <strong>⚙️ 2.1 Adherir el servicio desde administrador</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="adherir-servicio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="adherir-servicio"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso-3"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso-3"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Ingresar a</strong> &quot;Administrador de Relaciones de Clave Fiscal&quot;</p>
+<p><img src="/images/afip/2-Administrador-relaciones.webp" alt="Administrador Relaciones">
+<em>Acceso al administrador de relaciones</em></p>
+<p><strong>🔹 PASO 2:</strong> <strong>Seleccionar</strong> &quot;Adherir Servicio&quot;</p>
+<p><img src="/images/afip/3-Nueva-relacion.webp" alt="Adherir Servicio">
+<em>Opción para adherir nuevo servicio</em></p>
+<p><strong>🔹 PASO 3:</strong> <strong>Abrir la opción</strong> &quot;ARCA&quot;, luego la opción &quot;Servicios Interactivos&quot; y buscar el servicio &quot;Administración de puntos de venta y domicilios&quot;</p>
+<p><img src="/images/afip/5-Web-service.webp" alt="Servicios Interactivos">
+<em>Navegación hacia servicios interactivos</em></p>
+<p><img src="/images/afip/10-Administrador-pdv.webp" alt="Puntos de Venta">
+<em>Servicio de administración de puntos de venta</em></p>
+<p><strong>🔹 PASO 4:</strong> <strong>Confirmar</strong> la operación</p>
+<p><img src="/images/afip/8-Confirmar-representante.webp" alt="Confirmar Adherir">
+<em>Confirmación de adhesión al servicio</em></p>
+<hr>
+<h6 class="relative">
+                <strong>🔄 2.2 Reingresar y acceder a administración</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="reingresar-arca"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="reingresar-arca"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso-4"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso-4"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Para que este nuevo servicio quede habilitado</strong> deberás salir del sitio de ARCA e ingresar nuevamente en <a href="http://www.afip.gob.ar">www.afip.gob.ar</a> y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a <a href="https://auth.afip.gob.ar/contribuyente/">https://auth.afip.gob.ar/contribuyente/</a></p>
+<p><img src="/images/afip/1-Inicio-sesion.webp" alt="Reingresar ARCA">
+<em>Reingreso necesario para activar el nuevo servicio</em></p>
+<p><strong>🔹 PASO 2:</strong> <strong>En el buscador</strong>, ingresar la opción &quot;Administración de puntos de venta y domicilios&quot;</p>
+<p><img src="/images/afip/9-Administrar-relaciones.webp" alt="Servicios Habilitados">
+<em>Lista de servicios habilitados mostrando la nueva opción</em></p>
+<p><strong>🔹 PASO 3:</strong> <strong>Seleccionar la empresa</strong> e ingresar a &quot;A/B/M de Puntos de Venta&quot;</p>
+<p><strong>🔹 PASO 4:</strong> <strong>Si se presenta un mensaje</strong>, presionar &quot;Cerrar&quot;</p>
+<hr>
+<h6 class="relative">
+                <strong>➕ 2.3 Crear nuevo punto de venta</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="crear-pvd"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="crear-pvd"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso a paso:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso-5"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-a-paso-5"></div>
+
+<p><strong>🔹 PASO 1:</strong> <strong>Seleccionar</strong> &quot;Agregar…&quot;</p>
+<p><strong>🔹 PASO 2:</strong> <strong>Ingresar los siguientes datos:</strong></p>
+<p><img src="/images/afip/11-abm.webp" alt="Formulario Punto Venta">
+<em>Formulario completo para crear punto de venta</em></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Número</strong></td>
+<td>Código único del punto de venta, debe ser diferente a otros puntos de venta que ya tengas registrados</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Nombre Fantasía</strong></td>
+<td>Nombre descriptivo del punto de venta</td>
+<td>&quot;Factura Electrónica&quot;</td>
+</tr>
+<tr>
+<td><strong>Sistema</strong></td>
+<td>Ver tabla de opciones abajo</td>
+<td>Según tu condición fiscal</td>
+</tr>
+<tr>
+<td><strong>Nuevo domicilio</strong></td>
+<td>Seleccionar el domicilio fiscal asociado al punto de venta</td>
+<td>Tu domicilio fiscal</td>
+</tr>
+</tbody></table></div>
+<h6 class="relative">
+                <strong>🏛️ Opciones para el campo &quot;Sistema&quot;:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="opciones-para-el-campo-sistema"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="opciones-para-el-campo-sistema"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Tu condición fiscal</th>
+<th>Opción que debés seleccionar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MONOTRIBUTISTA</strong></td>
+<td>&quot;Factura Electrónica - Monotributo - Web Services&quot;</td>
+</tr>
+<tr>
+<td><strong>RESPONSABLE INSCRIPTO</strong></td>
+<td>&quot;RECE para aplicativos y Web Services&quot;</td>
+</tr>
+<tr>
+<td><strong>FACTURA DE EXPORTACIÓN</strong></td>
+<td>&quot;Comprobantes de Exportación - Web Services&quot;</td>
+</tr>
+</tbody></table></div>
+<h6 class="relative">
+                <strong>⚠️ Importante:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="importante-1"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="importante-1"></div>
+
+<p><em>Asegurate de seleccionar la opción correcta en el campo &quot;Sistema 1&quot;:</em></p>
+<p><strong>🔸 Si sos MONOTRIBUTISTA:</strong> &quot;Factura Electrónica - Monotributo - Web Services&quot;<br><strong>🔸 Si sos RESPONSABLE INSCRIPTO:</strong> &quot;RECE para aplicativos y web services&quot;<br><strong>🔸 Si emites FACTURA DE EXPORTACIÓN:</strong> &quot;Comprobantes de Exportación - Web Services&quot;</p>
+<hr>
+<h6 class="relative">
+                <strong>✅ 2.4 Confirmar punto de venta</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="confirmar-pvd"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="confirmar-pvd"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso final:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-final-1"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-final-1"></div>
+
+<p><strong>🔹 PASO FINAL:</strong> <strong>Seleccionar</strong> &quot;Aceptar&quot; para confirmar la operación</p>
+<hr>
+<hr>
+<h6 class="relative">
+                <strong>📞 2.5 Notificar al soporte técnico</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="25-notificar-al-soporte-tecnico"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="25-notificar-al-soporte-tecnico"></div>
+
+<h6 class="relative">
+                <strong>📋 Paso obligatorio:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-obligatorio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="paso-obligatorio"></div>
+
+<p><strong>🔹 IMPORTANTE:</strong> <strong>Una vez completados todos los pasos anteriores en ARCA</strong>, deberás <strong>notificarnos inmediatamente</strong> para que podamos configurar el PVD (Punto de Venta) en tu comercio.</p>
+<h6 class="relative">
+                <strong>📧 ¿Cómo notificar?</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="como-notificar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="como-notificar"></div>
+
+<ul>
+<li><strong>WhatsApp:</strong> <a href="https://wa.me/542254629000?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">+54 2254 62-9000</a> <em>¡Click para chatear directamente en nueva pestaña!</em></li>
+</ul>
+<h6 class="relative">
+                <strong>📋 Información que debés proporcionar:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="informacion-que-debes-proporcionar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="informacion-que-debes-proporcionar"></div>
+
+<ul>
+<li>✅ <strong>CUIT del comercio</strong></li>
+<li>✅ <strong>Número del punto de venta creado</strong> (ej: 3)</li>
+<li>✅ <strong>Nombre fantasía asignado</strong> (ej: &quot;Factura Electrónica&quot;)</li>
+<li>✅ <strong>Tipo de sistema seleccionado</strong> (Monotributo/Responsable Inscripto/Exportación)</li>
+</ul>
+<h6 class="relative">
+                <strong>⏱️ Tiempo de configuración:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="tiempo-de-configuracion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="tiempo-de-configuracion"></div>
+
+<p>Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en <strong>24-48 horas hábiles</strong>.</p>
+<h6 class="relative">
+                <strong>⚠️ Recordá:</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="recorda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="recorda"></div>
+
+<p>Sin esta notificación, <strong>no podrás comenzar a facturar electrónicamente</strong>, aunque hayas completado todos los pasos en ARCA.</p>
+<h5 class="relative">
+                🎯 <strong>Resumen del proceso completo</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resumen-del-proceso-completo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h5>
+            <div id="resumen-del-proceso-completo"></div>
+
+<pre><code>🏛️ 1. Entrás a ARCA con clave fiscal nivel 3
+   ↓
+🔗 2. Habilitás el servicio de facturación electrónica
+   ↓
+👤 3. Asignás a VILAR ALEJANDRO ERNESTO como representante
+   ↓
+🏪 4. Creás un punto de venta electrónico
+   ↓
+✅ 5. Confirmás toda la configuración
+
+🎉 ¡Ya podés facturar electrónicamente!
+</code></pre>
+<hr>
+<h5 class="relative">
+                🚨 <strong>¿Problemas comunes?</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="problemas-comunes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h5>
+            <div id="problemas-comunes"></div>
+
+<ul>
+<li><strong>&quot;No tengo clave fiscal nivel 3&quot;</strong> → Debés tramitarla en ARCA primero</li>
+<li><strong>&quot;No aparece el servicio&quot;</strong> → Verificá que estés en la sección correcta de WebServices</li>
+<li><strong>&quot;Error al asignar representante&quot;</strong> → Verificá que el CUIT 20306836268 esté bien escrito</li>
+</ul>
+<h6 class="relative">
+                <strong>📞 ¿Necesitás ayuda?</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="necesitas-ayuda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h6>
+            <div id="necesitas-ayuda"></div>
+
+<p>Este proceso es técnico y específico de ARCA. Si tenés dudas, consultá con:</p>
+<ul>
+<li><strong>Contador:</strong> Para aspectos fiscales</li>
+<li><strong>Soporte técnico:</strong> Para la integración</li>
+<li><strong>ARCA:</strong> Para problemas con la plataforma oficial</li>
+</ul>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/125-punto-de-venta.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[-1--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)",content:"\u003Cdiv id=\"tramite-en-arca\">\u003C/div>\n\n\u003Cp>Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio de ARCA.\u003C/p>\n\u003Cdiv id=\"arca-facturacion\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\u003Cbr>Para poder comenzar a facturar necesitamos que nos conectes con ARCA. Seguí estos pasos una única vez y ya queda configurado.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch5 class=\"relative\">\n                ⚠️ \u003Cstrong>REQUISITO OBLIGATORIO\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"requisito-obligatorio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h5>\n            \u003Cdiv id=\"requisito-obligatorio\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>Recordá que para realizar este trámite debés poseer clave fiscal de nivel 3 en ARCA.\u003C/strong>\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch5 class=\"relative\">\n                🚀 \u003Cstrong>1. Habilitar el servicio de factura electrónica por web service\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"habilitar-servicio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h5>\n            \u003Cdiv id=\"habilitar-servicio\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🌐 1.1 Ingreso a ARCA y acceso a Administrador\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"ingreso-arca\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"ingreso-arca\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Ingresar en el sitio de ARCA\u003C/strong> (\u003Ca href=\"http://www.afip.gob.ar\">www.afip.gob.ar\u003C/a>) y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a \u003Ca href=\"https://auth.afip.gob.ar/contribuyente/\">https://auth.afip.gob.ar/contribuyente/\u003C/a>\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/1-Inicio-sesion.webp\" alt=\"Ingreso a ARCA\">\n\u003Cem>Pantalla de ingreso a ARCA con Clave Fiscal\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>Ingresar el CUIT\u003C/strong>, presionar &quot;Siguiente&quot; luego ingresar la clave y seleccionar &quot;Ingresar&quot;\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 3:\u003C/strong> \u003Cstrong>Seleccionar la opción\u003C/strong> &quot;Administrador de Relaciones de Clave Fiscal&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/2-Administrador-relaciones.webp\" alt=\"Administrador de Relaciones\">\n\u003Cem>Menú principal con opción de Administrador de Relaciones\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 4:\u003C/strong> \u003Cstrong>En el caso que tengas más de un CUIT\u003C/strong> asociado a tu cuenta de ARCA, aparecerá una pantalla donde tendrás que seleccionar el CUIT con el que deseas emitir facturas electrónicas\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🔗 1.2 Crear nueva relación y seleccionar servicio\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"crear-relacion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"crear-relacion\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso-1\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso-1\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Nueva Relación&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/3-Nueva-relacion.webp\" alt=\"Nueva Relación\">\n\u003Cem>Botón para crear una nueva relación\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Buscar&quot; en la opción &quot;Servicio&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/4-Servicios.webp\" alt=\"Buscar Servicio\">\n\u003Cem>Campo de búsqueda de servicios\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 3:\u003C/strong> \u003Cstrong>Asegurate\u003C/strong> que en el campo &quot;Representado&quot; figure el CUIT al que le estás habilitando el servicio\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 4:\u003C/strong> \u003Cstrong>Luego abrir\u003C/strong> la opción &quot;ARCA&quot; y seleccionar la opción &quot;WebServices&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/5-Web-service.webp\" alt=\"WebServices ARCA\">\n\u003Cem>Menú desplegable de ARCA mostrando WebServices\u003C/em>\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📑 1.3 Elegir servicio según tipo de factura\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"elegir-servicio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"elegir-servicio\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🎯 Tipos de servicios disponibles:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"tipos-de-servicios-disponibles\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"tipos-de-servicios-disponibles\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Tipo de Factura\u003C/th>\n\u003Cth>Servicio que debés buscar\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>Facturas electrónicas A, B, C o M\u003C/strong>\u003C/td>\n\u003Ctd>&quot;Facturación Electrónica&quot;\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Facturas electrónicas de exportación\u003C/strong>\u003C/td>\n\u003Ctd>&quot;Facturación electrónica de exportación&quot;\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Facturas electrónicas T de turismo\u003C/strong>\u003C/td>\n\u003Ctd>&quot;Web Service Comprobantes T&quot;\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⚠️ Importante:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"importante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"importante\">\u003C/div>\n\n\u003Cp>\u003Cem>Si necesitás realizar distintos tipos de facturas (por Ej. A y E) debe repetir los pasos del 1.3A al 1.9 seleccionando en cada caso el servicio que corresponda al tipo de factura.\u003C/em>\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>👤 1.4 Buscar y asignar representante\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"asignar-representante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"asignar-representante\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso-2\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso-2\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Buscar&quot; en la opción &quot;Representante&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/6-Buscar-representante.webp\" alt=\"Buscar Representante\">\n\u003Cem>Campo para buscar representante\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>Ingresar el CUIT\u003C/strong> 20303683268 y presionar &quot;Buscar&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/7-Representante.webp\" alt=\"Ingresar CUIT Representante\">\n\u003Cem>Ingreso del CUIT del representante autorizado\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 3:\u003C/strong> \u003Cstrong>Se le indicará\u003C/strong> que el CUIT pertenece a VILAR ALEJANDRO ERNESTO\u003C/p>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⚠️ Nota importante:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"nota-importante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"nota-importante\">\u003C/div>\n\n\u003Cp>\u003Cem>Ignorá el mensaje de ARCA en rojo sobre el computador fiscal y la &quot;Advertencia del Sistema&quot; que aparece debajo sobre la delegación del servicio.\u003C/em>\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>✅ 1.5 Confirmar la relación\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"confirmar-relacion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"confirmar-relacion\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso final:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-final\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-final\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO FINAL:\u003C/strong> \u003Cstrong>Presione confirmar\u003C/strong> nuevamente\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/8-Confirmar-representante.webp\" alt=\"Confirmar Relación\">\n\u003Cem>Botón de confirmación final de la relación\u003C/em>\u003C/p>\n\u003Chr>\n\u003Ch5 class=\"relative\">\n                🏪 \u003Cstrong>2. Crear un nuevo punto de venta electrónico\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"crear-punto-venta\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h5>\n            \u003Cdiv id=\"crear-punto-venta\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🎯 Objetivo:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"objetivo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"objetivo\">\u003C/div>\n\n\u003Cp>Habilitar la opción &quot;Administración de puntos de venta y domicilios&quot;.\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⚙️ 2.1 Adherir el servicio desde administrador\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"adherir-servicio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"adherir-servicio\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso-3\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso-3\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Ingresar a\u003C/strong> &quot;Administrador de Relaciones de Clave Fiscal&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/2-Administrador-relaciones.webp\" alt=\"Administrador Relaciones\">\n\u003Cem>Acceso al administrador de relaciones\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Adherir Servicio&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/3-Nueva-relacion.webp\" alt=\"Adherir Servicio\">\n\u003Cem>Opción para adherir nuevo servicio\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 3:\u003C/strong> \u003Cstrong>Abrir la opción\u003C/strong> &quot;ARCA&quot;, luego la opción &quot;Servicios Interactivos&quot; y buscar el servicio &quot;Administración de puntos de venta y domicilios&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/5-Web-service.webp\" alt=\"Servicios Interactivos\">\n\u003Cem>Navegación hacia servicios interactivos\u003C/em>\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/10-Administrador-pdv.webp\" alt=\"Puntos de Venta\">\n\u003Cem>Servicio de administración de puntos de venta\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 4:\u003C/strong> \u003Cstrong>Confirmar\u003C/strong> la operación\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/8-Confirmar-representante.webp\" alt=\"Confirmar Adherir\">\n\u003Cem>Confirmación de adhesión al servicio\u003C/em>\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🔄 2.2 Reingresar y acceder a administración\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"reingresar-arca\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"reingresar-arca\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso-4\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso-4\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Para que este nuevo servicio quede habilitado\u003C/strong> deberás salir del sitio de ARCA e ingresar nuevamente en \u003Ca href=\"http://www.afip.gob.ar\">www.afip.gob.ar\u003C/a> y ubicar el botón de acceso directo con la Clave Fiscal, o ingresar a \u003Ca href=\"https://auth.afip.gob.ar/contribuyente/\">https://auth.afip.gob.ar/contribuyente/\u003C/a>\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/1-Inicio-sesion.webp\" alt=\"Reingresar ARCA\">\n\u003Cem>Reingreso necesario para activar el nuevo servicio\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>En el buscador\u003C/strong>, ingresar la opción &quot;Administración de puntos de venta y domicilios&quot;\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/9-Administrar-relaciones.webp\" alt=\"Servicios Habilitados\">\n\u003Cem>Lista de servicios habilitados mostrando la nueva opción\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 3:\u003C/strong> \u003Cstrong>Seleccionar la empresa\u003C/strong> e ingresar a &quot;A/B/M de Puntos de Venta&quot;\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 4:\u003C/strong> \u003Cstrong>Si se presenta un mensaje\u003C/strong>, presionar &quot;Cerrar&quot;\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>➕ 2.3 Crear nuevo punto de venta\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"crear-pvd\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"crear-pvd\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso a paso:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso-5\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-a-paso-5\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO 1:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Agregar…&quot;\u003C/p>\n\u003Cp>\u003Cstrong>🔹 PASO 2:\u003C/strong> \u003Cstrong>Ingresar los siguientes datos:\u003C/strong>\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/afip/11-abm.webp\" alt=\"Formulario Punto Venta\">\n\u003Cem>Formulario completo para crear punto de venta\u003C/em>\u003C/p>\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Campo\u003C/th>\n\u003Cth>Descripción\u003C/th>\n\u003Cth>Ejemplo\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>Número\u003C/strong>\u003C/td>\n\u003Ctd>Código único del punto de venta, debe ser diferente a otros puntos de venta que ya tengas registrados\u003C/td>\n\u003Ctd>3\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Nombre Fantasía\u003C/strong>\u003C/td>\n\u003Ctd>Nombre descriptivo del punto de venta\u003C/td>\n\u003Ctd>&quot;Factura Electrónica&quot;\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Sistema\u003C/strong>\u003C/td>\n\u003Ctd>Ver tabla de opciones abajo\u003C/td>\n\u003Ctd>Según tu condición fiscal\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Nuevo domicilio\u003C/strong>\u003C/td>\n\u003Ctd>Seleccionar el domicilio fiscal asociado al punto de venta\u003C/td>\n\u003Ctd>Tu domicilio fiscal\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>🏛️ Opciones para el campo &quot;Sistema&quot;:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"opciones-para-el-campo-sistema\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"opciones-para-el-campo-sistema\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Tu condición fiscal\u003C/th>\n\u003Cth>Opción que debés seleccionar\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>MONOTRIBUTISTA\u003C/strong>\u003C/td>\n\u003Ctd>&quot;Factura Electrónica - Monotributo - Web Services&quot;\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>RESPONSABLE INSCRIPTO\u003C/strong>\u003C/td>\n\u003Ctd>&quot;RECE para aplicativos y Web Services&quot;\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>FACTURA DE EXPORTACIÓN\u003C/strong>\u003C/td>\n\u003Ctd>&quot;Comprobantes de Exportación - Web Services&quot;\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⚠️ Importante:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"importante-1\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"importante-1\">\u003C/div>\n\n\u003Cp>\u003Cem>Asegurate de seleccionar la opción correcta en el campo &quot;Sistema 1&quot;:\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>🔸 Si sos MONOTRIBUTISTA:\u003C/strong> &quot;Factura Electrónica - Monotributo - Web Services&quot;\u003Cbr>\u003Cstrong>🔸 Si sos RESPONSABLE INSCRIPTO:\u003C/strong> &quot;RECE para aplicativos y web services&quot;\u003Cbr>\u003Cstrong>🔸 Si emites FACTURA DE EXPORTACIÓN:\u003C/strong> &quot;Comprobantes de Exportación - Web Services&quot;\u003C/p>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>✅ 2.4 Confirmar punto de venta\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"confirmar-pvd\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"confirmar-pvd\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso final:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-final-1\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-final-1\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 PASO FINAL:\u003C/strong> \u003Cstrong>Seleccionar\u003C/strong> &quot;Aceptar&quot; para confirmar la operación\u003C/p>\n\u003Chr>\n\u003Chr>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📞 2.5 Notificar al soporte técnico\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"25-notificar-al-soporte-tecnico\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"25-notificar-al-soporte-tecnico\">\u003C/div>\n\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Paso obligatorio:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-obligatorio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"paso-obligatorio\">\u003C/div>\n\n\u003Cp>\u003Cstrong>🔹 IMPORTANTE:\u003C/strong> \u003Cstrong>Una vez completados todos los pasos anteriores en ARCA\u003C/strong>, deberás \u003Cstrong>notificarnos inmediatamente\u003C/strong> para que podamos configurar el PVD (Punto de Venta) en tu comercio.\u003C/p>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📧 ¿Cómo notificar?\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"como-notificar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"como-notificar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>\u003Cstrong>WhatsApp:\u003C/strong> \u003Ca href=\"https://wa.me/542254629000?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__\" target=\"_blank\">+54 2254 62-9000\u003C/a> \u003Cem>¡Click para chatear directamente en nueva pestaña!\u003C/em>\u003C/li>\n\u003C/ul>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📋 Información que debés proporcionar:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"informacion-que-debes-proporcionar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"informacion-que-debes-proporcionar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>✅ \u003Cstrong>CUIT del comercio\u003C/strong>\u003C/li>\n\u003Cli>✅ \u003Cstrong>Número del punto de venta creado\u003C/strong> (ej: 3)\u003C/li>\n\u003Cli>✅ \u003Cstrong>Nombre fantasía asignado\u003C/strong> (ej: &quot;Factura Electrónica&quot;)\u003C/li>\n\u003Cli>✅ \u003Cstrong>Tipo de sistema seleccionado\u003C/strong> (Monotributo/Responsable Inscripto/Exportación)\u003C/li>\n\u003C/ul>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⏱️ Tiempo de configuración:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"tiempo-de-configuracion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"tiempo-de-configuracion\">\u003C/div>\n\n\u003Cp>Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en \u003Cstrong>24-48 horas hábiles\u003C/strong>.\u003C/p>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>⚠️ Recordá:\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"recorda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"recorda\">\u003C/div>\n\n\u003Cp>Sin esta notificación, \u003Cstrong>no podrás comenzar a facturar electrónicamente\u003C/strong>, aunque hayas completado todos los pasos en ARCA.\u003C/p>\n\u003Ch5 class=\"relative\">\n                🎯 \u003Cstrong>Resumen del proceso completo\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resumen-del-proceso-completo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h5>\n            \u003Cdiv id=\"resumen-del-proceso-completo\">\u003C/div>\n\n\u003Cpre>\u003Ccode>🏛️ 1. Entrás a ARCA con clave fiscal nivel 3\n   ↓\n🔗 2. Habilitás el servicio de facturación electrónica\n   ↓\n👤 3. Asignás a VILAR ALEJANDRO ERNESTO como representante\n   ↓\n🏪 4. Creás un punto de venta electrónico\n   ↓\n✅ 5. Confirmás toda la configuración\n\n🎉 ¡Ya podés facturar electrónicamente!\n\u003C/code>\u003C/pre>\n\u003Chr>\n\u003Ch5 class=\"relative\">\n                🚨 \u003Cstrong>¿Problemas comunes?\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"problemas-comunes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h5>\n            \u003Cdiv id=\"problemas-comunes\">\u003C/div>\n\n\u003Cul>\n\u003Cli>\u003Cstrong>&quot;No tengo clave fiscal nivel 3&quot;\u003C/strong> → Debés tramitarla en ARCA primero\u003C/li>\n\u003Cli>\u003Cstrong>&quot;No aparece el servicio&quot;\u003C/strong> → Verificá que estés en la sección correcta de WebServices\u003C/li>\n\u003Cli>\u003Cstrong>&quot;Error al asignar representante&quot;\u003C/strong> → Verificá que el CUIT 20306836268 esté bien escrito\u003C/li>\n\u003C/ul>\n\u003Ch6 class=\"relative\">\n                \u003Cstrong>📞 ¿Necesitás ayuda?\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"necesitas-ayuda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h6>\n            \u003Cdiv id=\"necesitas-ayuda\">\u003C/div>\n\n\u003Cp>Este proceso es técnico y específico de ARCA. Si tenés dudas, consultá con:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Contador:\u003C/strong> Para aspectos fiscales\u003C/li>\n\u003Cli>\u003Cstrong>Soporte técnico:\u003C/strong> Para la integración\u003C/li>\n\u003Cli>\u003Cstrong>ARCA:\u003C/strong> Para problemas con la plataforma oficial\u003C/li>\n\u003C/ul>\n",tableOfContents:[],seo:{title:"🏛️ Trámite en ARCA (con clave fiscal) - Manual",description:"Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace una sola vez. No se hace dentro de PaxaPOS: las fotos de abajo son del sitio d...",keywords:"punto de venta, paxapos, 🏛️ trámite en arca (con clave fiscal), tutorial, guía, manual usuario"},llmTxtFile:"125-punto-de-venta.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

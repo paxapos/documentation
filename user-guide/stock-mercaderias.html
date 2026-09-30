@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Stock → Inventario → Stock Mercaderías
+ ¿Quién lo usa?: Depósito y encargados de compras"/> <meta name="keywords" content="stock mercaderias, paxapos, stock de mercaderías, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Stock de Mercaderías - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Stock → Inventario → Stock Mercaderías
+ ¿Quién lo usa?: Depósito y encargados de compras"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Stock de Mercaderías - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Stock de Mercaderías - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Stock → Inventario → Stock Mercaderías
+ ¿Quién lo usa?: Depósito y encargados de compras"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Stock de Mercaderías - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Stock → Inventario → Stock Mercaderías\n ¿Quién lo usa?: Depósito y encargados de compras",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Stock de Mercaderías - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/stock-mercaderias" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Stock de Mercaderías</a></li><li><a href="../user-guide/stock-subproductos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Stock de Subproductos</a></li><li><a href="../user-guide/movimientos-de-stock" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Movimientos de Stock</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Stock de Mercaderías</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: stock-mercaderias</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="stock-de-mercaderias"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Stock</strong> → <strong>Inventario</strong> → <strong>Stock Mercaderías</strong>
+<strong>¿Quién lo usa?:</strong> Depósito y encargados de compras</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá ves cuánto te queda de cada cosa que le comprás a un proveedor. Por ejemplo: cuántos kilos de <em>Harina 0000</em> hay en el depósito.
+También cargás qué mercaderías querés controlar, el mínimo que no querés perforar y los conteos del depósito.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Stock</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>La mercadería tiene que estar cargada. Mirá <a href="/user-guide/mercaderias">Mercaderías</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/60-stock/62-00a-menu-grupo-stock.png" alt="Menú lateral con el grupo Stock marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Stock</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-00b-menu-opcion-stock-mercaderias.png" alt="Opción Stock Mercaderías marcada en rojo, debajo de Inventario"></p>
+<ol start="2">
+<li>Tocá <strong>Stock Mercaderías</strong>. Está debajo del título <strong>INVENTARIO</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-01-pantalla-stock-mercaderias.png" alt="Pantalla Stock de Mercaderias con el buscador arriba y la lista con Harina 0000 y Levadura fresca"></p>
+<p>Así se ve la pantalla. Cada renglón es una mercadería que tiene el stock controlado. Las columnas dicen:</p>
+<ul>
+<li><strong>Depósito</strong>: dónde está guardada. Por ejemplo: <em>Depósito Central</em>.</li>
+<li><strong>Mercadería</strong>: el nombre. Tocalo para ver la ficha del producto.</li>
+<li><strong>PU Ult. Compra</strong> y <strong>Fecha Ult. Compra</strong>: cuánto la pagaste la última vez y cuándo.</li>
+<li><strong>U/M de Compra</strong>: cómo te la vende el proveedor. Por ejemplo: <em>Bolsa</em>.</li>
+<li><strong>U/M de Stock</strong>: cómo la contás en el depósito. Por ejemplo: <em>Kilo</em>.</li>
+<li><strong>fecha inicio</strong> y <strong>cantidad inicial</strong>: cuándo empezaste a controlarla y cuánto había ese día.</li>
+<li><strong>cant en stock</strong>: cuánto hay ahora. Es la cantidad inicial más lo que entró, menos lo que salió.</li>
+<li><strong>Nivel minimo de stock</strong>: por debajo de ese número te conviene volver a comprar.</li>
+<li><strong>acciones</strong>: los botones de cada renglón (Paso 5).</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> tocá el título de una columna para ordenar la lista. Por ejemplo, tocá <strong>cant en stock</strong> para ver primero lo que tiene menos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔎 Paso 2: Buscá una mercadería
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-busca-una-mercaderia"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-busca-una-mercaderia"></div>
+
+<p><img src="/images/manual/60-stock/62-04-panel-busqueda.png" alt="Recuadro de búsqueda con Harina escrito, los depósitos, los rubros, los proveedores y el botón azul Buscar"></p>
+<p>En el recuadro de búsqueda tenés:</p>
+<ul>
+<li><strong>Buscar por Nombre</strong>: escribí parte del nombre. Por ejemplo: <em>Harina</em>.</li>
+<li><strong>Seleccione Depósito</strong>: mostrá solo lo que está en un depósito.</li>
+<li><strong>Seleccione Rubro</strong>: mostrá solo un rubro. Por ejemplo: <em>Almacén</em>.</li>
+<li><strong>Seleccione Proveedor</strong>: mostrá solo lo que le comprás a un proveedor.</li>
+<li><strong>Buscar</strong>: el botón azul de abajo, que aplica la búsqueda.</li>
+</ul>
+<ol>
+<li>Completá lo que necesites y tocá <strong>Buscar</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-05-resultado-busqueda.png" alt="Lista con un solo renglón: Harina 0000 x 25 kg, con 68 kilos en stock"></p>
+<ol start="2">
+<li>La lista muestra solo las que coinciden.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> la casilla <strong>Search</strong> de arriba de la lista busca al instante entre los renglones que ya ves, sin tocar <strong>Buscar</strong>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ➕ Paso 3: Empezá a controlar el stock de una mercadería
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-empeza-a-controlar-el-stock-de-una-mercaderia"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-empeza-a-controlar-el-stock-de-una-mercaderia"></div>
+
+<p><img src="/images/manual/60-stock/62-02-donde-esta-boton-stockear-mercaderia.png" alt="Pantalla Stock de Mercaderias con el botón verde Stockear Mercaderia marcado en rojo arriba a la derecha"></p>
+<ol>
+<li>Tocá el botón verde <strong>Stockear Mercaderia</strong>, arriba a la derecha.</li>
+<li>Se abre una ventanita con los datos para completar.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-03-formulario-stockear.png" alt="Ventanita Formulario Stokear Producto completa con Harina 0000 x 25 kg, Depósito Central, 50, 10, la fecha y el botón Guardar"></p>
+<ul>
+<li><strong>Compras Mercaderia</strong>: escribí parte del nombre y tocalo en la lista. Por ejemplo: <em>Harina 0000 x 25 kg</em>.</li>
+<li><strong>Deposito</strong>: dónde la guardás. Por ejemplo: <em>Depósito Central</em>.</li>
+<li><strong>Cant Inicial</strong>: cuánto hay hoy, contado en la unidad de stock. Por ejemplo: <em>50</em> kilos.</li>
+<li><strong>Stock Minimo</strong>: el número que no querés perforar. Por ejemplo: <em>10</em>.</li>
+<li><strong>Fecha</strong>: desde cuándo la controlás. Ya viene con la fecha y hora de hoy.</li>
+</ul>
+<ol start="3">
+<li>Tocá el botón verde <strong>Guardar</strong>.</li>
+<li>La mercadería aparece en la lista.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> antes de stockear, buscala en esta pantalla (Paso 2). Si ya está, no la cargues de nuevo: quedaría repetida.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🧰 Paso 4: Conocé los botones de cada renglón
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-conoce-los-botones-de-cada-renglon"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-conoce-los-botones-de-cada-renglon"></div>
+
+<p><img src="/images/manual/60-stock/62-06-botones-del-renglon.png" alt="Botones de un renglón: Reinicializar en azul y Acciones con una flechita"></p>
+<p>A la derecha de cada renglón hay dos botones:</p>
+<ul>
+<li><strong>Reinicializar</strong>: cargá lo que contaste en el depósito (Paso 7).</li>
+<li><strong>Acciones</strong>: abre una lista con más opciones.</li>
+</ul>
+<p><img src="/images/manual/60-stock/62-07-menu-acciones.png" alt="Lista Acciones abierta con Agregar Precio Unitario, Editar nivel minimo de Stock, Ver, Editar, Agregar Movimiento y Cerrar"></p>
+<p>Al tocar <strong>Acciones</strong> se abre esta lista:</p>
+<ul>
+<li><strong>Agregar Precio Unitario</strong>: cargá el costo de la mercadería.</li>
+<li><strong>Editar nivel minimo de Stock</strong>: cambiá el mínimo (Paso 6).</li>
+<li><strong>Ver</strong>: mirá el stock y todo lo que entró y salió (Paso 5).</li>
+<li><strong>Editar</strong>: corregí el depósito, la cantidad inicial o el mínimo.</li>
+<li><strong>Agregar Movimiento</strong>: sumá o restá una cantidad a mano (Paso 5).</li>
+<li><strong>Cerrar</strong>: deja de controlar el stock de esa mercadería.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Cerrar</strong> saca la mercadería de esta lista. El sistema te pregunta si estás seguro. Usalo solo si ya no querés controlarla.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                👁️ Paso 5: Mirá lo que entró y salió, y sumá o restá a mano
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-mira-lo-que-entro-y-salio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-mira-lo-que-entro-y-salio"></div>
+
+<ol>
+<li>Tocá <strong>Acciones</strong> y después <strong>Ver</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-08-ventana-ver.png" alt="Ventanita Ver de Harina 0000 x 25 kg: Stock Actual 68 kilos, Stock Inicial 50, Ubicación Depósito Central y el Historial de Movimientos"></p>
+<ol start="2">
+<li>Se abre una ventanita con:<ul>
+<li><strong>Stock Actual</strong>: lo que hay ahora. Por ejemplo: <em>68 Kilos</em>.</li>
+<li><strong>Stock Inicial</strong>: lo que había cuando empezaste a controlarla.</li>
+<li><strong>Ubicación</strong>: el depósito.</li>
+<li><strong>Historial de Movimientos</strong>: cada entrada (en verde, con <strong>+</strong>) y cada salida (en rojo, con <strong>−</strong>).</li>
+</ul>
+</li>
+</ol>
+<p>Si llegó mercadería sin factura o se rompió algo, cargalo a mano:</p>
+<ol start="3">
+<li>Tocá <strong>Acciones</strong> y después <strong>Agregar Movimiento</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-09-ventana-agregar-movimiento.png" alt="Ventanita Agregar Movimiento de Stock para Harina 0000 x 25 kg con 20, ALTA marcado, la descripción y el botón Guardar"></p>
+<ul>
+<li><strong>Cant</strong>: cuánto entra o sale, en la unidad de stock. Por ejemplo: <em>20</em> kilos.</li>
+<li><strong>ALTA</strong>: marcalo si la mercadería <strong>entra</strong>.</li>
+<li><strong>BAJA</strong>: marcalo si la mercadería <strong>sale</strong>. Por ejemplo: una bolsa rota.</li>
+<li><strong>Descripción</strong>: contá qué pasó. Por ejemplo: <em>Llegaron 20 kilos sin factura</em>.</li>
+</ul>
+<ol start="4">
+<li>Tocá <strong>Guardar</strong>. El stock se actualiza al instante.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> las compras recibidas y las ventas mueven el stock solas. Usá <strong>Agregar Movimiento</strong> solo para lo que no pasa por el sistema. Mirá <a href="/user-guide/movimientos-de-stock">Movimientos de Stock</a>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔔 Paso 6: Cambiá el nivel mínimo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-cambia-el-nivel-minimo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-cambia-el-nivel-minimo"></div>
+
+<ol>
+<li>Tocá <strong>Acciones</strong> y después <strong>Editar nivel minimo de Stock</strong>.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-10-ventana-nivel-minimo.png" alt="Ventanita Editar nivel minimo de Stock para Harina 0000 x 25 kg, con el casillero Stock Minimo en 10 y el botón Guardar"></p>
+<ol start="2">
+<li>En <strong>Stock Minimo</strong>, escribí el nuevo número. Por ejemplo: <em>10</em>.</li>
+<li>Tocá <strong>Guardar</strong>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🔢 Paso 7: Cargá lo que contaste en el depósito
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-carga-lo-que-contaste-en-el-deposito"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-carga-lo-que-contaste-en-el-deposito"></div>
+
+<p>Hacelo cuando contás la mercadería a mano y el número no coincide con el sistema.</p>
+<ol>
+<li>Tocá el botón azul <strong>Reinicializar</strong> del renglón.</li>
+</ol>
+<p><img src="/images/manual/60-stock/62-11-ventana-reinicializar.png" alt="Ventanita Reinicializar de Harina 0000 x 25 kg con 63 escrito, el aviso rojo Faltante 5 Kilos, la observación y el botón Guardar"></p>
+<ol start="2">
+<li>Arriba ves la <strong>Cantidad Inicial</strong> y el <strong>Movimiento Saldo</strong> (lo que entró menos lo que salió).</li>
+<li>En <strong>Cantidad Actual en Stock</strong>, escribí lo que contaste. Por ejemplo: <em>63</em>.</li>
+<li>Mirá el aviso de abajo:<ul>
+<li><strong>Stock perfecto!</strong> en verde: coincide con el sistema.</li>
+<li><strong>Faltante</strong> en rojo: contaste menos de lo que dice el sistema. Por ejemplo: <em>Faltante: 5 Kilos</em>.</li>
+<li><strong>Sobrante</strong> en amarillo: contaste más.</li>
+</ul>
+</li>
+<li>En <strong>Observación</strong>, escribí algo que te ayude a recordarlo. Por ejemplo: <em>Conteo del lunes</em>.</li>
+<li>Tocá <strong>Guardar</strong>.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> al guardar, el stock pasa a ser el número que contaste. El anterior queda en <strong>Stock Cerrados</strong> y no se puede deshacer.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>La mercadería no aparece en la lista para stockear</strong></td>
+<td>No está cargada en Compras.</td>
+<td>Cargala en <a href="/user-guide/mercaderias">Mercaderías</a> y volvé a tocar <strong>Stockear Mercaderia</strong>.</td>
+</tr>
+<tr>
+<td><strong>La mercadería aparece dos veces</strong></td>
+<td>Se stockeó dos veces.</td>
+<td>Mirá cuál tiene los movimientos con <strong>Ver</strong> y cerrá la otra con <strong>Acciones</strong> → <strong>Cerrar</strong>.</td>
+</tr>
+<tr>
+<td><strong>La cantidad en stock está en negativo</strong></td>
+<td>Se vendió o se usó antes de cargar la compra.</td>
+<td>Recibí la compra en <a href="/user-guide/todas-las-ordenes-compra">Órdenes de Compra</a> o contá y usá <strong>Reinicializar</strong>.</td>
+</tr>
+<tr>
+<td><strong>El stock sube 25 veces más de lo que compré</strong></td>
+<td>La equivalencia entre la unidad de compra y la de stock está mal.</td>
+<td>Revisá <strong>Comprás por</strong>, <strong>Contás por</strong> y <strong>Equivalencia</strong> en <a href="/user-guide/mercaderias">Mercaderías</a>.</td>
+</tr>
+<tr>
+<td><strong>La lista está vacía</strong></td>
+<td>Todavía no controlás ninguna mercadería, o la búsqueda es muy estricta.</td>
+<td>Borrá lo escrito en el buscador y tocá <strong>Buscar</strong>. Si sigue vacía, usá <strong>Stockear Mercaderia</strong>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/62-stock-mercaderias.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-busca-una-mercaderia" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Buscá una mercadería</a></li><li><a href="#paso-3-empeza-a-controlar-el-stock-de-una-mercaderia" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Empezá a controlar el stock de una mercadería</a></li><li><a href="#paso-4-conoce-los-botones-de-cada-renglon" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Conocé los botones de cada renglón</a></li><li><a href="#paso-5-mira-lo-que-entro-y-salio" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Mirá lo que entró y salió, y sumá o restá a mano</a></li><li><a href="#paso-6-cambia-el-nivel-minimo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Cambiá el nivel mínimo</a></li><li><a href="#paso-7-carga-lo-que-contaste-en-el-deposito" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Cargá lo que contaste en el depósito</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"stock-mercaderias",title:"Stock de Mercaderías",content:"\u003Cdiv id=\"stock-de-mercaderias\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Stock\u003C/strong> → \u003Cstrong>Inventario\u003C/strong> → \u003Cstrong>Stock Mercaderías\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Depósito y encargados de compras\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá ves cuánto te queda de cada cosa que le comprás a un proveedor. Por ejemplo: cuántos kilos de \u003Cem>Harina 0000\u003C/em> hay en el depósito.\nTambién cargás qué mercaderías querés controlar, el mínimo que no querés perforar y los conteos del depósito.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Stock\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>La mercadería tiene que estar cargada. Mirá \u003Ca href=\"/user-guide/mercaderias\">Mercaderías\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-00a-menu-grupo-stock.png\" alt=\"Menú lateral con el grupo Stock marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Stock\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-00b-menu-opcion-stock-mercaderias.png\" alt=\"Opción Stock Mercaderías marcada en rojo, debajo de Inventario\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Stock Mercaderías\u003C/strong>. Está debajo del título \u003Cstrong>INVENTARIO\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-01-pantalla-stock-mercaderias.png\" alt=\"Pantalla Stock de Mercaderias con el buscador arriba y la lista con Harina 0000 y Levadura fresca\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Cada renglón es una mercadería que tiene el stock controlado. Las columnas dicen:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Depósito\u003C/strong>: dónde está guardada. Por ejemplo: \u003Cem>Depósito Central\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Mercadería\u003C/strong>: el nombre. Tocalo para ver la ficha del producto.\u003C/li>\n\u003Cli>\u003Cstrong>PU Ult. Compra\u003C/strong> y \u003Cstrong>Fecha Ult. Compra\u003C/strong>: cuánto la pagaste la última vez y cuándo.\u003C/li>\n\u003Cli>\u003Cstrong>U/M de Compra\u003C/strong>: cómo te la vende el proveedor. Por ejemplo: \u003Cem>Bolsa\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>U/M de Stock\u003C/strong>: cómo la contás en el depósito. Por ejemplo: \u003Cem>Kilo\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>fecha inicio\u003C/strong> y \u003Cstrong>cantidad inicial\u003C/strong>: cuándo empezaste a controlarla y cuánto había ese día.\u003C/li>\n\u003Cli>\u003Cstrong>cant en stock\u003C/strong>: cuánto hay ahora. Es la cantidad inicial más lo que entró, menos lo que salió.\u003C/li>\n\u003Cli>\u003Cstrong>Nivel minimo de stock\u003C/strong>: por debajo de ese número te conviene volver a comprar.\u003C/li>\n\u003Cli>\u003Cstrong>acciones\u003C/strong>: los botones de cada renglón (Paso 5).\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> tocá el título de una columna para ordenar la lista. Por ejemplo, tocá \u003Cstrong>cant en stock\u003C/strong> para ver primero lo que tiene menos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 2: Buscá una mercadería\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-busca-una-mercaderia\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-busca-una-mercaderia\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-04-panel-busqueda.png\" alt=\"Recuadro de búsqueda con Harina escrito, los depósitos, los rubros, los proveedores y el botón azul Buscar\">\u003C/p>\n\u003Cp>En el recuadro de búsqueda tenés:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Buscar por Nombre\u003C/strong>: escribí parte del nombre. Por ejemplo: \u003Cem>Harina\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Seleccione Depósito\u003C/strong>: mostrá solo lo que está en un depósito.\u003C/li>\n\u003Cli>\u003Cstrong>Seleccione Rubro\u003C/strong>: mostrá solo un rubro. Por ejemplo: \u003Cem>Almacén\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Seleccione Proveedor\u003C/strong>: mostrá solo lo que le comprás a un proveedor.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: el botón azul de abajo, que aplica la búsqueda.\u003C/li>\n\u003C/ul>\n\u003Col>\n\u003Cli>Completá lo que necesites y tocá \u003Cstrong>Buscar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-05-resultado-busqueda.png\" alt=\"Lista con un solo renglón: Harina 0000 x 25 kg, con 68 kilos en stock\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>La lista muestra solo las que coinciden.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> la casilla \u003Cstrong>Search\u003C/strong> de arriba de la lista busca al instante entre los renglones que ya ves, sin tocar \u003Cstrong>Buscar\u003C/strong>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 3: Empezá a controlar el stock de una mercadería\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-empeza-a-controlar-el-stock-de-una-mercaderia\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-empeza-a-controlar-el-stock-de-una-mercaderia\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-02-donde-esta-boton-stockear-mercaderia.png\" alt=\"Pantalla Stock de Mercaderias con el botón verde Stockear Mercaderia marcado en rojo arriba a la derecha\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón verde \u003Cstrong>Stockear Mercaderia\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003Cli>Se abre una ventanita con los datos para completar.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-03-formulario-stockear.png\" alt=\"Ventanita Formulario Stokear Producto completa con Harina 0000 x 25 kg, Depósito Central, 50, 10, la fecha y el botón Guardar\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Compras Mercaderia\u003C/strong>: escribí parte del nombre y tocalo en la lista. Por ejemplo: \u003Cem>Harina 0000 x 25 kg\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Deposito\u003C/strong>: dónde la guardás. Por ejemplo: \u003Cem>Depósito Central\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Cant Inicial\u003C/strong>: cuánto hay hoy, contado en la unidad de stock. Por ejemplo: \u003Cem>50\u003C/em> kilos.\u003C/li>\n\u003Cli>\u003Cstrong>Stock Minimo\u003C/strong>: el número que no querés perforar. Por ejemplo: \u003Cem>10\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha\u003C/strong>: desde cuándo la controlás. Ya viene con la fecha y hora de hoy.\u003C/li>\n\u003C/ul>\n\u003Col start=\"3\">\n\u003Cli>Tocá el botón verde \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003Cli>La mercadería aparece en la lista.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> antes de stockear, buscala en esta pantalla (Paso 2). Si ya está, no la cargues de nuevo: quedaría repetida.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧰 Paso 4: Conocé los botones de cada renglón\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-conoce-los-botones-de-cada-renglon\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-conoce-los-botones-de-cada-renglon\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-06-botones-del-renglon.png\" alt=\"Botones de un renglón: Reinicializar en azul y Acciones con una flechita\">\u003C/p>\n\u003Cp>A la derecha de cada renglón hay dos botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Reinicializar\u003C/strong>: cargá lo que contaste en el depósito (Paso 7).\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: abre una lista con más opciones.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-07-menu-acciones.png\" alt=\"Lista Acciones abierta con Agregar Precio Unitario, Editar nivel minimo de Stock, Ver, Editar, Agregar Movimiento y Cerrar\">\u003C/p>\n\u003Cp>Al tocar \u003Cstrong>Acciones\u003C/strong> se abre esta lista:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Agregar Precio Unitario\u003C/strong>: cargá el costo de la mercadería.\u003C/li>\n\u003Cli>\u003Cstrong>Editar nivel minimo de Stock\u003C/strong>: cambiá el mínimo (Paso 6).\u003C/li>\n\u003Cli>\u003Cstrong>Ver\u003C/strong>: mirá el stock y todo lo que entró y salió (Paso 5).\u003C/li>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: corregí el depósito, la cantidad inicial o el mínimo.\u003C/li>\n\u003Cli>\u003Cstrong>Agregar Movimiento\u003C/strong>: sumá o restá una cantidad a mano (Paso 5).\u003C/li>\n\u003Cli>\u003Cstrong>Cerrar\u003C/strong>: deja de controlar el stock de esa mercadería.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Cerrar\u003C/strong> saca la mercadería de esta lista. El sistema te pregunta si estás seguro. Usalo solo si ya no querés controlarla.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👁️ Paso 5: Mirá lo que entró y salió, y sumá o restá a mano\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-mira-lo-que-entro-y-salio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-mira-lo-que-entro-y-salio\">\u003C/div>\n\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Acciones\u003C/strong> y después \u003Cstrong>Ver\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-08-ventana-ver.png\" alt=\"Ventanita Ver de Harina 0000 x 25 kg: Stock Actual 68 kilos, Stock Inicial 50, Ubicación Depósito Central y el Historial de Movimientos\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Se abre una ventanita con:\u003Cul>\n\u003Cli>\u003Cstrong>Stock Actual\u003C/strong>: lo que hay ahora. Por ejemplo: \u003Cem>68 Kilos\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Stock Inicial\u003C/strong>: lo que había cuando empezaste a controlarla.\u003C/li>\n\u003Cli>\u003Cstrong>Ubicación\u003C/strong>: el depósito.\u003C/li>\n\u003Cli>\u003Cstrong>Historial de Movimientos\u003C/strong>: cada entrada (en verde, con \u003Cstrong>+\u003C/strong>) y cada salida (en rojo, con \u003Cstrong>−\u003C/strong>).\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ol>\n\u003Cp>Si llegó mercadería sin factura o se rompió algo, cargalo a mano:\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Tocá \u003Cstrong>Acciones\u003C/strong> y después \u003Cstrong>Agregar Movimiento\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-09-ventana-agregar-movimiento.png\" alt=\"Ventanita Agregar Movimiento de Stock para Harina 0000 x 25 kg con 20, ALTA marcado, la descripción y el botón Guardar\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Cant\u003C/strong>: cuánto entra o sale, en la unidad de stock. Por ejemplo: \u003Cem>20\u003C/em> kilos.\u003C/li>\n\u003Cli>\u003Cstrong>ALTA\u003C/strong>: marcalo si la mercadería \u003Cstrong>entra\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>BAJA\u003C/strong>: marcalo si la mercadería \u003Cstrong>sale\u003C/strong>. Por ejemplo: una bolsa rota.\u003C/li>\n\u003Cli>\u003Cstrong>Descripción\u003C/strong>: contá qué pasó. Por ejemplo: \u003Cem>Llegaron 20 kilos sin factura\u003C/em>.\u003C/li>\n\u003C/ul>\n\u003Col start=\"4\">\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>. El stock se actualiza al instante.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> las compras recibidas y las ventas mueven el stock solas. Usá \u003Cstrong>Agregar Movimiento\u003C/strong> solo para lo que no pasa por el sistema. Mirá \u003Ca href=\"/user-guide/movimientos-de-stock\">Movimientos de Stock\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔔 Paso 6: Cambiá el nivel mínimo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-cambia-el-nivel-minimo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-cambia-el-nivel-minimo\">\u003C/div>\n\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Acciones\u003C/strong> y después \u003Cstrong>Editar nivel minimo de Stock\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-10-ventana-nivel-minimo.png\" alt=\"Ventanita Editar nivel minimo de Stock para Harina 0000 x 25 kg, con el casillero Stock Minimo en 10 y el botón Guardar\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>En \u003Cstrong>Stock Minimo\u003C/strong>, escribí el nuevo número. Por ejemplo: \u003Cem>10\u003C/em>.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔢 Paso 7: Cargá lo que contaste en el depósito\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-carga-lo-que-contaste-en-el-deposito\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-carga-lo-que-contaste-en-el-deposito\">\u003C/div>\n\n\u003Cp>Hacelo cuando contás la mercadería a mano y el número no coincide con el sistema.\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón azul \u003Cstrong>Reinicializar\u003C/strong> del renglón.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/60-stock/62-11-ventana-reinicializar.png\" alt=\"Ventanita Reinicializar de Harina 0000 x 25 kg con 63 escrito, el aviso rojo Faltante 5 Kilos, la observación y el botón Guardar\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Arriba ves la \u003Cstrong>Cantidad Inicial\u003C/strong> y el \u003Cstrong>Movimiento Saldo\u003C/strong> (lo que entró menos lo que salió).\u003C/li>\n\u003Cli>En \u003Cstrong>Cantidad Actual en Stock\u003C/strong>, escribí lo que contaste. Por ejemplo: \u003Cem>63\u003C/em>.\u003C/li>\n\u003Cli>Mirá el aviso de abajo:\u003Cul>\n\u003Cli>\u003Cstrong>Stock perfecto!\u003C/strong> en verde: coincide con el sistema.\u003C/li>\n\u003Cli>\u003Cstrong>Faltante\u003C/strong> en rojo: contaste menos de lo que dice el sistema. Por ejemplo: \u003Cem>Faltante: 5 Kilos\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Sobrante\u003C/strong> en amarillo: contaste más.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>En \u003Cstrong>Observación\u003C/strong>, escribí algo que te ayude a recordarlo. Por ejemplo: \u003Cem>Conteo del lunes\u003C/em>.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> al guardar, el stock pasa a ser el número que contaste. El anterior queda en \u003Cstrong>Stock Cerrados\u003C/strong> y no se puede deshacer.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>La mercadería no aparece en la lista para stockear\u003C/strong>\u003C/td>\n\u003Ctd>No está cargada en Compras.\u003C/td>\n\u003Ctd>Cargala en \u003Ca href=\"/user-guide/mercaderias\">Mercaderías\u003C/a> y volvé a tocar \u003Cstrong>Stockear Mercaderia\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La mercadería aparece dos veces\u003C/strong>\u003C/td>\n\u003Ctd>Se stockeó dos veces.\u003C/td>\n\u003Ctd>Mirá cuál tiene los movimientos con \u003Cstrong>Ver\u003C/strong> y cerrá la otra con \u003Cstrong>Acciones\u003C/strong> → \u003Cstrong>Cerrar\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La cantidad en stock está en negativo\u003C/strong>\u003C/td>\n\u003Ctd>Se vendió o se usó antes de cargar la compra.\u003C/td>\n\u003Ctd>Recibí la compra en \u003Ca href=\"/user-guide/todas-las-ordenes-compra\">Órdenes de Compra\u003C/a> o contá y usá \u003Cstrong>Reinicializar\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>El stock sube 25 veces más de lo que compré\u003C/strong>\u003C/td>\n\u003Ctd>La equivalencia entre la unidad de compra y la de stock está mal.\u003C/td>\n\u003Ctd>Revisá \u003Cstrong>Comprás por\u003C/strong>, \u003Cstrong>Contás por\u003C/strong> y \u003Cstrong>Equivalencia\u003C/strong> en \u003Ca href=\"/user-guide/mercaderias\">Mercaderías\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La lista está vacía\u003C/strong>\u003C/td>\n\u003Ctd>Todavía no controlás ninguna mercadería, o la búsqueda es muy estricta.\u003C/td>\n\u003Ctd>Borrá lo escrito en el buscador y tocá \u003Cstrong>Buscar\u003C/strong>. Si sigue vacía, usá \u003Cstrong>Stockear Mercaderia\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-busca-una-mercaderia",title:"Paso 2: Buscá una mercadería",level:2},{id:"paso-3-empeza-a-controlar-el-stock-de-una-mercaderia",title:"Paso 3: Empezá a controlar el stock de una mercadería",level:2},{id:"paso-4-conoce-los-botones-de-cada-renglon",title:"Paso 4: Conocé los botones de cada renglón",level:2},{id:"paso-5-mira-lo-que-entro-y-salio",title:"Paso 5: Mirá lo que entró y salió, y sumá o restá a mano",level:2},{id:"paso-6-cambia-el-nivel-minimo",title:"Paso 6: Cambiá el nivel mínimo",level:2},{id:"paso-7-carga-lo-que-contaste-en-el-deposito",title:"Paso 7: Cargá lo que contaste en el depósito",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Stock de Mercaderías - Manual",description:"¿Dónde está en el sistema?: Menú principal → Stock → Inventario → Stock Mercaderías\n ¿Quién lo usa?: Depósito y encargados de compras",keywords:"stock mercaderias, paxapos, stock de mercaderías, tutorial, guía, manual usuario"},llmTxtFile:"62-stock-mercaderias.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

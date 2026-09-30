@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Acceso y Seguridad → Usuarios del Sistema
+ ¿Quién lo usa?..."/> <meta name="keywords" content="usuarios del sistema, paxapos, cómo administrar los usuarios del sistema, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Cómo administrar los Usuarios del Sistema - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Acceso y Seguridad → Usuarios del Sistema
+ ¿Quién lo usa?..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Cómo administrar los Usuarios del Sistema - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Cómo administrar los Usuarios del Sistema - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Acceso y Seguridad → Usuarios del Sistema
+ ¿Quién lo usa?..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Cómo administrar los Usuarios del Sistema - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Acceso y Seguridad → Usuarios del Sistema\n ¿Quién lo usa?...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Cómo administrar los Usuarios del Sistema - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/configuracion-general" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Configuración general</a></li><li><a href="../user-guide/impresoras" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo cargar las impresoras del local</a></li><li><a href="../user-guide/perfiles-de-impresion" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo usar los perfiles de impresión</a></li><li><a href="../user-guide/usuarios-del-sistema" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Cómo administrar los Usuarios del Sistema</a></li><li><a href="../user-guide/usuarios-con-pin" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo administrar los Usuarios con PIN</a></li><li><a href="../user-guide/punto-de-venta" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Trámite en ARCA (con clave fiscal)</a></li><li><a href="../user-guide/permisos-por-rol" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo configurar los Permisos por Rol</a></li><li><a href="../user-guide/turnos-mesa" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Turnos de Mesa</a></li><li><a href="../user-guide/medios-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Medios de cobro</a></li><li><a href="../user-guide/clasificacion-de-gastos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Clasificación de Gastos</a></li><li><a href="../user-guide/centros-de-costo" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Centros de Costo</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Cómo administrar los Usuarios del Sistema</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: usuarios-del-sistema</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="usuarios-del-sistema"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Configuración</strong> → debajo del título <strong>Acceso y Seguridad</strong> → <strong>Usuarios del Sistema</strong>
+<strong>¿Quién lo usa?:</strong> El dueño y los encargados del comercio.</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá ves quién puede entrar a PaxaPOS en tu comercio y con qué rol. Vas a poder darle acceso a una persona nueva o sumar a alguien que ya usa PaxaPOS en otro comercio.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📍 <strong>Paso 1: Entrá a la pantalla</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/110-configuracion/123-00a-menu-grupo-configuracion.png" alt="Menú lateral con el grupo Configuración marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Configuración</strong>.</li>
+</ol>
+<p><img src="/images/manual/110-configuracion/123-00b-menu-opcion-usuarios-del-sistema.png" alt="Opción Usuarios del Sistema marcada en rojo debajo del título Acceso y Seguridad"></p>
+<ol start="2">
+<li>Debajo del título <strong>Acceso y Seguridad</strong>, tocá <strong>Usuarios del Sistema</strong>.</li>
+</ol>
+<p><img src="/images/manual/110-configuracion/123-01-pantalla-usuarios-de-mi-comercio.png" alt="Pantalla Usuarios de mi comercio con la lista de usuarios"></p>
+<p>Ves la lista <strong>Usuarios de mi comercio</strong>. Cada renglón muestra:</p>
+<ul>
+<li><strong>Nombre de usuario</strong>: el email o nombre con el que entra la persona.</li>
+<li><strong>Roles</strong>: lo que puede hacer en el sistema.</li>
+<li><strong>Activo</strong>: si puede entrar (<strong>Yes</strong>) o no (<strong>No</strong>).</li>
+<li><strong>en PaxaPos desde</strong> y <strong>Ultima vez conectado</strong>: cuándo se creó la cuenta y cuándo entró por última vez.</li>
+<li><strong>Acciones</strong>: los botones para editar al usuario o quitarlo del comercio.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                ❓ <strong>Paso 2: Conocé qué puede hacer cada rol</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-conoce-que-puede-hacer-cada-rol"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-conoce-que-puede-hacer-cada-rol"></div>
+
+<ol>
+<li>Tocá la barra gris <strong>¿Qué puede hacer cada rol?</strong>.</li>
+<li>Se despliega la explicación.</li>
+</ol>
+<p><img src="/images/manual/110-configuracion/123-05-ayuda-que-puede-hacer-cada-rol.png" alt="Ayuda desplegada con la explicación de los roles Dueño, Encargado y Cajero / Mozo / otros"></p>
+<ul>
+<li><strong>Dueño</strong>: tiene acceso total. Es el único que puede crear o asignar el rol Dueño a otra persona.</li>
+<li><strong>Encargado</strong>: gestiona el día a día y el equipo. Puede crear y vincular usuarios, pero no crear dueños.</li>
+<li><strong>Cajero / Mozo / otros</strong>: solo ven lo de su tarea. No gestionan usuarios.</li>
+</ul>
+<p>Para ver el detalle fino de cada rol, mirá <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</p>
+<hr>
+<h2 class="relative">
+                🔍 <strong>Paso 3: Buscá un usuario</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-busca-un-usuario"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-busca-un-usuario"></div>
+
+<p><img src="/images/manual/110-configuracion/123-06-filtros-de-la-lista.png" alt="Casillero de búsqueda, lista de roles y botón Filtrar"></p>
+<ul>
+<li><strong>Buscar entre mis usuarios</strong>: escribí parte del nombre o del email.</li>
+<li><strong>Todos los roles</strong>: elegí un rol para ver solo a quienes lo tienen.</li>
+<li><strong>Filtrar</strong>: tocalo para aplicar la búsqueda.</li>
+</ul>
+<p>Después de filtrar aparece el botón <strong>Limpiar</strong>. Tocalo para volver a ver a todos.</p>
+<hr>
+<h2 class="relative">
+                ➕ <strong>Paso 4: Elegí entre Crear usuario nuevo y Vincular usuario existente</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-elegi-entre-crear-y-vincular"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-elegi-entre-crear-y-vincular"></div>
+
+<p><img src="/images/manual/110-configuracion/123-02-donde-esta-botones-crear-y-vincular.png" alt="Pantalla con los botones Crear usuario nuevo y Vincular usuario existente marcados en rojo"></p>
+<p>Arriba a la derecha hay dos botones. Elegí bien para no duplicar cuentas:</p>
+<ul>
+<li><strong>Crear usuario nuevo</strong> (verde): para alguien que todavía no tiene cuenta en PaxaPOS.</li>
+<li><strong>Vincular usuario existente</strong> (azul): para alguien que ya usa PaxaPOS en otro comercio.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si dudás, primero probá <strong>Vincular usuario existente</strong> con el email de la persona. Así no se crea una cuenta repetida.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📝 <strong>Paso 5: Creá un usuario nuevo</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-crea-un-usuario-nuevo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-crea-un-usuario-nuevo"></div>
+
+<p>Tocá <strong>Crear usuario nuevo</strong>. Se abre una ventanita con los datos.</p>
+<p><img src="/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-1.png" alt="Datos de Acceso y Contraseña con datos de ejemplo de Juan Pérez, contraseñas difuminadas"></p>
+<ul>
+<li><p><strong>Username</strong>: el nombre de usuario. Por ejemplo: <em>juan.perez</em>.</p>
+</li>
+<li><p><strong>Email</strong>: el email de la persona. Por ejemplo: <em><a href="mailto:juan.perez@ejemplo.com">juan.perez@ejemplo.com</a></em>.</p>
+</li>
+<li><p><strong>Password</strong> y <strong>Password (confirm)</strong>: la contraseña, escrita dos veces igual.
+<img src="/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-2.png" alt="Bloque Roles y Permisos con Roles, Cajas y Mozos"></p>
+</li>
+<li><p><strong>Roles</strong>: tildá el rol que tendrá. Podés abrir <strong>¿Qué puede hacer cada rol?</strong> para elegir mejor.</p>
+</li>
+<li><p><strong>Cajas</strong>: las cajas que puede usar. <strong>Seleccionar todos</strong> las tilda todas.</p>
+</li>
+<li><p><strong>Mozos</strong>: a qué mozo corresponde, si trabaja en el salón.
+<img src="/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-3.png" alt="Bloques Centros de Costo y Perfil de Impresión, con los botones Cancelar y Registrar nuevo usuario abajo"></p>
+</li>
+<li><p><strong>Centros de Costo</strong>: a qué áreas pertenece. Define qué compras y ventas ve.</p>
+</li>
+<li><p><strong>Perfil de Impresión</strong>: a qué impresoras imprime. Si no elegís, usa el del comercio. <strong>Gestionar Perfiles</strong> te lleva a <a href="/user-guide/perfiles-de-impresion">Perfiles de Impresión</a>.</p>
+</li>
+<li><p><strong>Cancelar</strong>: cierra sin crear nada.</p>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> el botón <strong>Registrar nuevo usuario</strong> crea la cuenta de verdad. Revisá el email y el rol antes de tocarlo.</p>
+</blockquote>
+<p>Al tocar <strong>Registrar nuevo usuario</strong>, la persona ya puede entrar y aparece en la lista.</p>
+<hr>
+<h2 class="relative">
+                🔗 <strong>Paso 6: Vinculá un usuario que ya existe</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-vincula-un-usuario-que-ya-existe"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-vincula-un-usuario-que-ya-existe"></div>
+
+<p>Tocá <strong>Vincular usuario existente</strong>. Se abre otra ventanita.</p>
+<p><img src="/images/manual/110-configuracion/123-04-ventanita-vincular-usuario-existente.png" alt="Ventanita Vincular usuario existente con un email de ejemplo y los botones Cancelar y Vincular a mi comercio"></p>
+<ul>
+<li><strong>Email o nombre de usuario completo</strong>: escribí el dato exacto. No se muestran sugerencias por seguridad.</li>
+<li><strong>Rol en el comercio</strong>: elegí qué rol tendrá acá.</li>
+<li><strong>Cancelar</strong>: cierra sin hacer nada.</li>
+<li><strong>Vincular a mi comercio</strong>: suma a la persona a tu comercio.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Vincular a mi comercio</strong> le da acceso real a tu comercio a esa cuenta. Confirmá que es la persona correcta.</p>
+</blockquote>
+<p>Si no existe ninguna cuenta con ese dato, aparece un aviso amarillo con el botón <strong>Crear una cuenta nueva con este email</strong>. Tocalo para seguir por el Paso 5.</p>
+<hr>
+<h2 class="relative">
+                ✏️ <strong>Paso 7: Editá o quitá a un usuario</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-edita-o-quita-a-un-usuario"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-edita-o-quita-a-un-usuario"></div>
+
+<p>En la lista del Paso 1, la columna <strong>Acciones</strong> de cada renglón tiene dos botones juntos:</p>
+<ul>
+<li><strong>Lápiz azul (Editar)</strong>: abre la pantalla para cambiar el usuario.</li>
+<li><strong>Botón con la X (Quitar de mi comercio)</strong>: le saca el acceso a tu comercio.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Quitar de mi comercio</strong> hace que la persona pierda el acceso. Su cuenta de PaxaPOS no se borra. Te pide confirmar antes.</p>
+</blockquote>
+<p>Al tocar el lápiz se abre la pantalla de edición:</p>
+<p><img src="/images/manual/110-configuracion/123-08-editar-usuario-parte-1.png" alt="Pantalla Editando a un usuario con el bloque Roles y Permisos"></p>
+<p><img src="/images/manual/110-configuracion/123-08-editar-usuario-parte-2.png" alt="Bloques Centros de Costo y Perfil de Impresión con los botones Cancelar y Guardar cambios"></p>
+<p>Tiene los mismos bloques que el alta, sin usuario ni contraseña. Tocá <strong>Guardar cambios</strong> para aplicar, o <strong>Cancelar</strong> para salir sin cambiar nada.</p>
+<hr>
+<h2 class="relative">
+                ⚠️ <strong>Resolución de Inconvenientes</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No veo los botones <strong>Crear usuario nuevo</strong> ni <strong>Vincular usuario existente</strong>.</td>
+<td>Tu usuario no tiene permiso para administrar usuarios.</td>
+<td>Pedile al dueño que revise tu rol en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+<tr>
+<td><strong>Vincular usuario existente</strong> no encuentra a la persona.</td>
+<td>El email o usuario no está escrito completo y exacto.</td>
+<td>Escribilo de nuevo sin espacios. Si no existe, usá <strong>Crear una cuenta nueva con este email</strong>.</td>
+</tr>
+<tr>
+<td>No puedo darle el rol Dueño a alguien.</td>
+<td>Solo el Dueño puede crear o asignar ese rol.</td>
+<td>Pedile al dueño del comercio que lo haga.</td>
+</tr>
+<tr>
+<td>La persona no puede entrar.</td>
+<td>La contraseña está mal escrita o la cuenta está inactiva.</td>
+<td>Revisá la columna <strong>Activo</strong> y editá al usuario.</td>
+</tr>
+<tr>
+<td>Quité a alguien por error.</td>
+<td>Se tocó <strong>Quitar de mi comercio</strong>.</td>
+<td>Volvé a sumarlo con <strong>Vincular usuario existente</strong>.</td>
+</tr>
+<tr>
+<td>Un mozo de PIN no aparece acá.</td>
+<td>Los accesos por PIN están en otra pantalla.</td>
+<td>Mirá <a href="/user-guide/usuarios-con-pin">Usuarios con PIN</a>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/123-usuarios-del-sistema.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-conoce-que-puede-hacer-cada-rol" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Conocé qué puede hacer cada rol</a></li><li><a href="#paso-3-busca-un-usuario" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Buscá un usuario</a></li><li><a href="#paso-4-elegi-entre-crear-y-vincular" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Elegí entre Crear usuario nuevo y Vincular usuario existente</a></li><li><a href="#paso-5-crea-un-usuario-nuevo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Creá un usuario nuevo</a></li><li><a href="#paso-6-vincula-un-usuario-que-ya-existe" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Vinculá un usuario que ya existe</a></li><li><a href="#paso-7-edita-o-quita-a-un-usuario" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Editá o quitá a un usuario</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema",content:"\u003Cdiv id=\"usuarios-del-sistema\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Configuración\u003C/strong> → debajo del título \u003Cstrong>Acceso y Seguridad\u003C/strong> → \u003Cstrong>Usuarios del Sistema\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> El dueño y los encargados del comercio.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá ves quién puede entrar a PaxaPOS en tu comercio y con qué rol. Vas a poder darle acceso a una persona nueva o sumar a alguien que ya usa PaxaPOS en otro comercio.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 \u003Cstrong>Paso 1: Entrá a la pantalla\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-00a-menu-grupo-configuracion.png\" alt=\"Menú lateral con el grupo Configuración marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Configuración\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-00b-menu-opcion-usuarios-del-sistema.png\" alt=\"Opción Usuarios del Sistema marcada en rojo debajo del título Acceso y Seguridad\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Debajo del título \u003Cstrong>Acceso y Seguridad\u003C/strong>, tocá \u003Cstrong>Usuarios del Sistema\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-01-pantalla-usuarios-de-mi-comercio.png\" alt=\"Pantalla Usuarios de mi comercio con la lista de usuarios\">\u003C/p>\n\u003Cp>Ves la lista \u003Cstrong>Usuarios de mi comercio\u003C/strong>. Cada renglón muestra:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre de usuario\u003C/strong>: el email o nombre con el que entra la persona.\u003C/li>\n\u003Cli>\u003Cstrong>Roles\u003C/strong>: lo que puede hacer en el sistema.\u003C/li>\n\u003Cli>\u003Cstrong>Activo\u003C/strong>: si puede entrar (\u003Cstrong>Yes\u003C/strong>) o no (\u003Cstrong>No\u003C/strong>).\u003C/li>\n\u003Cli>\u003Cstrong>en PaxaPos desde\u003C/strong> y \u003Cstrong>Ultima vez conectado\u003C/strong>: cuándo se creó la cuenta y cuándo entró por última vez.\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: los botones para editar al usuario o quitarlo del comercio.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ❓ \u003Cstrong>Paso 2: Conocé qué puede hacer cada rol\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-conoce-que-puede-hacer-cada-rol\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-conoce-que-puede-hacer-cada-rol\">\u003C/div>\n\n\u003Col>\n\u003Cli>Tocá la barra gris \u003Cstrong>¿Qué puede hacer cada rol?\u003C/strong>.\u003C/li>\n\u003Cli>Se despliega la explicación.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-05-ayuda-que-puede-hacer-cada-rol.png\" alt=\"Ayuda desplegada con la explicación de los roles Dueño, Encargado y Cajero / Mozo / otros\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Dueño\u003C/strong>: tiene acceso total. Es el único que puede crear o asignar el rol Dueño a otra persona.\u003C/li>\n\u003Cli>\u003Cstrong>Encargado\u003C/strong>: gestiona el día a día y el equipo. Puede crear y vincular usuarios, pero no crear dueños.\u003C/li>\n\u003Cli>\u003Cstrong>Cajero / Mozo / otros\u003C/strong>: solo ven lo de su tarea. No gestionan usuarios.\u003C/li>\n\u003C/ul>\n\u003Cp>Para ver el detalle fino de cada rol, mirá \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔍 \u003Cstrong>Paso 3: Buscá un usuario\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-busca-un-usuario\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-busca-un-usuario\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-06-filtros-de-la-lista.png\" alt=\"Casillero de búsqueda, lista de roles y botón Filtrar\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Buscar entre mis usuarios\u003C/strong>: escribí parte del nombre o del email.\u003C/li>\n\u003Cli>\u003Cstrong>Todos los roles\u003C/strong>: elegí un rol para ver solo a quienes lo tienen.\u003C/li>\n\u003Cli>\u003Cstrong>Filtrar\u003C/strong>: tocalo para aplicar la búsqueda.\u003C/li>\n\u003C/ul>\n\u003Cp>Después de filtrar aparece el botón \u003Cstrong>Limpiar\u003C/strong>. Tocalo para volver a ver a todos.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ \u003Cstrong>Paso 4: Elegí entre Crear usuario nuevo y Vincular usuario existente\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-elegi-entre-crear-y-vincular\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-elegi-entre-crear-y-vincular\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-02-donde-esta-botones-crear-y-vincular.png\" alt=\"Pantalla con los botones Crear usuario nuevo y Vincular usuario existente marcados en rojo\">\u003C/p>\n\u003Cp>Arriba a la derecha hay dos botones. Elegí bien para no duplicar cuentas:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Crear usuario nuevo\u003C/strong> (verde): para alguien que todavía no tiene cuenta en PaxaPOS.\u003C/li>\n\u003Cli>\u003Cstrong>Vincular usuario existente\u003C/strong> (azul): para alguien que ya usa PaxaPOS en otro comercio.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si dudás, primero probá \u003Cstrong>Vincular usuario existente\u003C/strong> con el email de la persona. Así no se crea una cuenta repetida.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📝 \u003Cstrong>Paso 5: Creá un usuario nuevo\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-crea-un-usuario-nuevo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-crea-un-usuario-nuevo\">\u003C/div>\n\n\u003Cp>Tocá \u003Cstrong>Crear usuario nuevo\u003C/strong>. Se abre una ventanita con los datos.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-1.png\" alt=\"Datos de Acceso y Contraseña con datos de ejemplo de Juan Pérez, contraseñas difuminadas\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cp>\u003Cstrong>Username\u003C/strong>: el nombre de usuario. Por ejemplo: \u003Cem>juan.perez\u003C/em>.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Email\u003C/strong>: el email de la persona. Por ejemplo: \u003Cem>\u003Ca href=\"mailto:juan.perez@ejemplo.com\">juan.perez@ejemplo.com\u003C/a>\u003C/em>.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Password\u003C/strong> y \u003Cstrong>Password (confirm)\u003C/strong>: la contraseña, escrita dos veces igual.\n\u003Cimg src=\"/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-2.png\" alt=\"Bloque Roles y Permisos con Roles, Cajas y Mozos\">\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Roles\u003C/strong>: tildá el rol que tendrá. Podés abrir \u003Cstrong>¿Qué puede hacer cada rol?\u003C/strong> para elegir mejor.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Cajas\u003C/strong>: las cajas que puede usar. \u003Cstrong>Seleccionar todos\u003C/strong> las tilda todas.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Mozos\u003C/strong>: a qué mozo corresponde, si trabaja en el salón.\n\u003Cimg src=\"/images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-3.png\" alt=\"Bloques Centros de Costo y Perfil de Impresión, con los botones Cancelar y Registrar nuevo usuario abajo\">\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Centros de Costo\u003C/strong>: a qué áreas pertenece. Define qué compras y ventas ve.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Perfil de Impresión\u003C/strong>: a qué impresoras imprime. Si no elegís, usa el del comercio. \u003Cstrong>Gestionar Perfiles\u003C/strong> te lleva a \u003Ca href=\"/user-guide/perfiles-de-impresion\">Perfiles de Impresión\u003C/a>.\u003C/p>\n\u003C/li>\n\u003Cli>\u003Cp>\u003Cstrong>Cancelar\u003C/strong>: cierra sin crear nada.\u003C/p>\n\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> el botón \u003Cstrong>Registrar nuevo usuario\u003C/strong> crea la cuenta de verdad. Revisá el email y el rol antes de tocarlo.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Al tocar \u003Cstrong>Registrar nuevo usuario\u003C/strong>, la persona ya puede entrar y aparece en la lista.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔗 \u003Cstrong>Paso 6: Vinculá un usuario que ya existe\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-vincula-un-usuario-que-ya-existe\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-vincula-un-usuario-que-ya-existe\">\u003C/div>\n\n\u003Cp>Tocá \u003Cstrong>Vincular usuario existente\u003C/strong>. Se abre otra ventanita.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-04-ventanita-vincular-usuario-existente.png\" alt=\"Ventanita Vincular usuario existente con un email de ejemplo y los botones Cancelar y Vincular a mi comercio\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Email o nombre de usuario completo\u003C/strong>: escribí el dato exacto. No se muestran sugerencias por seguridad.\u003C/li>\n\u003Cli>\u003Cstrong>Rol en el comercio\u003C/strong>: elegí qué rol tendrá acá.\u003C/li>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>: cierra sin hacer nada.\u003C/li>\n\u003Cli>\u003Cstrong>Vincular a mi comercio\u003C/strong>: suma a la persona a tu comercio.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Vincular a mi comercio\u003C/strong> le da acceso real a tu comercio a esa cuenta. Confirmá que es la persona correcta.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Si no existe ninguna cuenta con ese dato, aparece un aviso amarillo con el botón \u003Cstrong>Crear una cuenta nueva con este email\u003C/strong>. Tocalo para seguir por el Paso 5.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ \u003Cstrong>Paso 7: Editá o quitá a un usuario\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-edita-o-quita-a-un-usuario\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-edita-o-quita-a-un-usuario\">\u003C/div>\n\n\u003Cp>En la lista del Paso 1, la columna \u003Cstrong>Acciones\u003C/strong> de cada renglón tiene dos botones juntos:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Lápiz azul (Editar)\u003C/strong>: abre la pantalla para cambiar el usuario.\u003C/li>\n\u003Cli>\u003Cstrong>Botón con la X (Quitar de mi comercio)\u003C/strong>: le saca el acceso a tu comercio.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Quitar de mi comercio\u003C/strong> hace que la persona pierda el acceso. Su cuenta de PaxaPOS no se borra. Te pide confirmar antes.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Al tocar el lápiz se abre la pantalla de edición:\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-08-editar-usuario-parte-1.png\" alt=\"Pantalla Editando a un usuario con el bloque Roles y Permisos\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/110-configuracion/123-08-editar-usuario-parte-2.png\" alt=\"Bloques Centros de Costo y Perfil de Impresión con los botones Cancelar y Guardar cambios\">\u003C/p>\n\u003Cp>Tiene los mismos bloques que el alta, sin usuario ni contraseña. Tocá \u003Cstrong>Guardar cambios\u003C/strong> para aplicar, o \u003Cstrong>Cancelar\u003C/strong> para salir sin cambiar nada.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ \u003Cstrong>Resolución de Inconvenientes\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>No veo los botones \u003Cstrong>Crear usuario nuevo\u003C/strong> ni \u003Cstrong>Vincular usuario existente\u003C/strong>.\u003C/td>\n\u003Ctd>Tu usuario no tiene permiso para administrar usuarios.\u003C/td>\n\u003Ctd>Pedile al dueño que revise tu rol en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Vincular usuario existente\u003C/strong> no encuentra a la persona.\u003C/td>\n\u003Ctd>El email o usuario no está escrito completo y exacto.\u003C/td>\n\u003Ctd>Escribilo de nuevo sin espacios. Si no existe, usá \u003Cstrong>Crear una cuenta nueva con este email\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No puedo darle el rol Dueño a alguien.\u003C/td>\n\u003Ctd>Solo el Dueño puede crear o asignar ese rol.\u003C/td>\n\u003Ctd>Pedile al dueño del comercio que lo haga.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La persona no puede entrar.\u003C/td>\n\u003Ctd>La contraseña está mal escrita o la cuenta está inactiva.\u003C/td>\n\u003Ctd>Revisá la columna \u003Cstrong>Activo\u003C/strong> y editá al usuario.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Quité a alguien por error.\u003C/td>\n\u003Ctd>Se tocó \u003Cstrong>Quitar de mi comercio\u003C/strong>.\u003C/td>\n\u003Ctd>Volvé a sumarlo con \u003Cstrong>Vincular usuario existente\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Un mozo de PIN no aparece acá.\u003C/td>\n\u003Ctd>Los accesos por PIN están en otra pantalla.\u003C/td>\n\u003Ctd>Mirá \u003Ca href=\"/user-guide/usuarios-con-pin\">Usuarios con PIN\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-conoce-que-puede-hacer-cada-rol",title:"Paso 2: Conocé qué puede hacer cada rol",level:2},{id:"paso-3-busca-un-usuario",title:"Paso 3: Buscá un usuario",level:2},{id:"paso-4-elegi-entre-crear-y-vincular",title:"Paso 4: Elegí entre Crear usuario nuevo y Vincular usuario existente",level:2},{id:"paso-5-crea-un-usuario-nuevo",title:"Paso 5: Creá un usuario nuevo",level:2},{id:"paso-6-vincula-un-usuario-que-ya-existe",title:"Paso 6: Vinculá un usuario que ya existe",level:2},{id:"paso-7-edita-o-quita-a-un-usuario",title:"Paso 7: Editá o quitá a un usuario",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Cómo administrar los Usuarios del Sistema - Manual",description:"¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Acceso y Seguridad → Usuarios del Sistema\n ¿Quién lo usa?...",keywords:"usuarios del sistema, paxapos, cómo administrar los usuarios del sistema, tutorial, guía, manual usuario"},llmTxtFile:"123-usuarios-del-sistema.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

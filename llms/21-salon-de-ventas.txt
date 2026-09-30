@@ -1,0 +1,186 @@
+﻿# Salon de Ventas
+
+Cómo Usar el Salón de Ventas (Adición)
+¿Dónde está en el sistema?: Menú principal → Ventas → Salón de Ventas
+¿Quién lo usa?: Mozos, Cajeros y Encargados de Salón
+---
+🎯 ¿Qué es y para qué sirve esta pantalla?
+El Salón de Ventas (también llamado Adición) es la pantalla donde se atiende cada mesa, de principio a fin:
+1. Abrir la mesa y elegir el mozo que la atiende.
+2. Cargar los productos que pide el cliente y comandar (mandar el pedido a cocina o barra).
+3. Cerrar la mesa cuando piden la cuenta e imprimir el remito (la cuenta).
+4. Cobrar con uno o varios medios de pago.
+5. Emitir la factura con CAE cuando el cliente la necesita (por ejemplo, una Factura A).
+6. Hacer el Checkout para liberar la mesa.
+🧭 El recorrido completo de una mesa es:
+Abrir mesa → Cargar productos → Comandar → Cerrar → Imprimir remito → Cobrar → Emitir factura (solo si hace falta) → Checkout
+---
+🔑 Requisitos para empezar a usarlo
+• Tener al menos un mozo creado (ver Antes de empezar: configurar los mozos).
+• Tener productos cargados en el menú (ver Menú de Productos).
+• Para cobrar en efectivo o con tarjeta cargada a mano, tener la caja abierta (ver Paso 2: Abrí la caja).
+• Para imprimir comandas, remitos y facturas, tener Fiscalberry abierto en la computadora del local (ver Gestión de Impresoras).
+• Para facturar electrónicamente, tener el punto de venta cargado (ver Puntos de Venta).
+---
+👥 Antes de empezar: configurar los mozos
+Cada mesa pertenece a un mozo. Hay que hacer dos cosas: crear el mozo y darle un usuario con PIN para que pueda entrar al sistema.
+Paso A: Crear el mozo y sus ajustes
+Los mozos se cargan en Ventas → Mozos. Ahí elegís su alias, su punto de venta, su impresora y quién lo puede usar.
+🔗 Guía completa, paso a paso y con fotos: Cómo Cargar los Mozos
+Paso C: Crear el usuario con PIN
+Para que el mozo entre al sistema con un código numérico, creale un usuario con PIN en Configuración → Usuarios y acceso → Usuarios con PIN.
+🔗 Guía completa: Usuarios con PIN
+💡 Consejo útil: En Visibilidad por Usuarios del mozo marcá su usuario con PIN. Así cada mozo ve solo su columna de mesas.
+---
+📑 Guía Paso a Paso: ¿Cómo se usa?
+Paso 1: Entrá al Salón de Ventas
+!Grupo Ventas del menú lateral, marcado en rojo
+1. En el menú de la izquierda, tocá Ventas. Se despliegan sus opciones.
+!Opción Salón de Ventas dentro del grupo Ventas, marcada en rojo
+2. Tocá Salón de Ventas.
+3. Vas a ver las mesas abiertas, agrupadas por mozo.
+!Listado de mesas del salón con mesas abiertas en rojo y el botón Abrir Mesa
+En esta pantalla vas a ver:
+• El botón "+ Abrir Mesa" para crear una mesa nueva.
+• Las mesas abiertas de cada mozo, con su número, importe y hora de apertura.
+• Arriba a la derecha, cuántas Mesas y Cubiertos hay activos.
+---
+Paso 2: Abrí la caja
+Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón Abrir Caja.
+!Encabezado del Salón de Ventas con el botón Abrir Caja marcado en rojo
+1. Tocá Abrir Caja. Está arriba, en el encabezado del salón.
+2. Si tenés más de una caja, elegí cuál abrir y tocá Continuar.
+3. Se abre la ventana Iniciar Caja.
+!Ventana Iniciar Caja con la lista de billetes
+!Casillero para la cantidad de billetes
+4. Al lado de cada billete, escribí cuántos hay en la caja. Por ejemplo: 2 billetes de $ 1.000.
+5. Arriba se suma solo el Total en Caja.
+!Botón verde Abrir Caja para confirmar
+6. Tocá el botón verde Abrir Caja.
+!Mensaje Caja Abierta con el importe inicial
+7. Vas a ver el mensaje ¡Caja Abierta!. Ahora en el encabezado está el botón para cerrarla.
+💡 Si no ves el botón Abrir Caja, la caja ya está abierta. Seguí con el paso siguiente.
+---
+Paso 3: Abrí una mesa
+!Listado de mesas con el botón Abrir Mesa marcado en rojo
+1. Tocá "+ Abrir Mesa".
+2. Si te lo pide, elegí el mozo que va a atender la mesa.
+3. Escribí la descripción de la mesa (por ejemplo, el número: 12) y la cantidad de cubiertos.
+!Diálogo para abrir una mesa nueva con cantidad de cubiertos
+4. Tocá Guardar. Se abre la mesa, vacía.
+!Mesa recién abierta, sin productos cargados
+💡 Si el mozo tiene activado Mozo Veloz, la mesa se abre directo, sin pedir descripción ni cubiertos.
+---
+Paso 4: Cargá los productos y comandá
+!Mesa abierta con el botón Nueva Comanda marcado en rojo
+1. Dentro de la mesa, tocá "+ Nueva Comanda".
+2. Se abre el catálogo. Buscá o tocá los productos que pidió el cliente. Cada uno se suma a la lista con su precio.
+!Catálogo de productos del menú activo
+Si no buscás, tocá primero la categoría (por ejemplo, Pizzas). Vas a ver sus productos.
+!Botón azul de la categoría Pizzas en el catálogo
+Tocá el producto. Se suma a la comanda de la izquierda.
+!Botón de un producto del catálogo
+3. Si el producto tiene variantes (por ejemplo, gustos de helado), elegí las opciones que te pide
+!Catálogo con el botón Comandar marcado en rojo
+4. Cuando terminaste, tocá Comandar. El pedido sale impreso en cocina o barra.
+5. La mesa vuelve a su vista principal, con la comanda cargada.
+!Mesa con la comanda cargada tras comandar
+💡 Si el cliente pide algo más, repetí este paso: cada vez que tocás Comandar sale una comanda nueva.
+---
+Paso 5: Asigná un cliente (o creá uno nuevo)
+Asignar un cliente es opcional, pero es obligatorio para hacer una Factura A. Lo podés hacer en cualquier momento, mientras la mesa esté abierta o después de cerrarla.
+1. Dentro de la mesa, tocá ⚙️ Opciones (arriba a la derecha).
+!Mesa con el botón Opciones marcado en rojo
+2. Tocá Cliente.
+3. Se abre la ventana Seleccionar Cliente. Escribí el nombre, teléfono o email en el buscador.
+4. Si el cliente aparece, tocalo y queda asignado a la mesa.
+5. Si el cliente no existe, tocá Crear Cliente. Se abre otra ventana con el formulario:
+| Campo | ¿Qué poner? |
+|---|---|
+| Teléfono (whatsapp) | El teléfono del cliente. |
+| Nombre/Razón Social | El nombre de la persona o de la empresa. |
+| Domicilio de Facturación | La dirección que va en la factura. |
+| E-mail | Para mandarle la factura por correo. |
+| Tipo de documento y Número | Para una Factura A: elegí CUIT y escribí los 11 números. |
+| Descuento | Si el cliente tiene un descuento fijo. Si no, dejá Sin Descuento. |
+| Fecha | Cumpleaños o inicio de actividades (opcional). |
+| Condición IVA | Define si la factura sale A o B. Para una Factura A elegí Responsable Inscripto. |
+| Observación | Una nota sobre el cliente (opcional). |
+6. Guardá el cliente. Queda asignado a la mesa y su nombre aparece en el costado de la mesa.
+🔗 Para ver y editar todos tus clientes: Clientes
+---
+Paso 6: Cerrá la mesa e imprimí el remito
+Cuando el cliente pide la cuenta:
+!Mesa con el botón Cerrar marcado en rojo
+1. Tocá 🔒 Cerrar, en la barra de la izquierda. La mesa se cierra y ya no se le pueden cargar productos.
+2. La pantalla cambia a la vista 🧾 Remito: el detalle de todo lo consumido, con el total.
+!Vista de Remito con el detalle de la mesa cerrada
+!Remito con el botón Imprimir marcado en rojo
+3. Si el remito no salió impreso solo, tocá Imprimir en la sección 🖨️ Remito.
+💡 El remito es la cuenta para el cliente: dice "Documento no válido como factura". No es una factura.
+Desde la misma sección también podés Descargar Img o Descargar PDF A4 para mandarlo por WhatsApp o mail.
+!Mesa cerrada con el botón Reabrir marcado en rojo
+🔓 ¿Cerraste por error? Tocá 🔓 Reabrir y la mesa vuelve a estar abierta.
+---
+Paso 7: Cobrá la mesa
+1. En la vista Remito, tocá 💰 Cobrar.
+!Remito con el botón Cobrar marcado en rojo
+2. Se abre la pantalla de cobro con el Total a cobrar. En ¿Cómo paga? elegí el medio de pago (efectivo, tarjeta, Mercado Pago, etc.). Si no ves el que buscás, tocá Más métodos de pago...
+!Pantalla de cobro con el total y los medios de pago
+!Botón del medio de pago Efectivo
+3. Si paga en efectivo: en 💵 ¿Con cuánto paga el cliente? escribí el billete que te dio. El sistema te muestra el Vuelto. Si paga justo, tocá ✓ Monto exacto.
+!Casillero Con cuánto paga el cliente
+!Pantalla de cobro con Efectivo elegido y el vuelto calculado
+!Botón verde para confirmar el cobro
+4. Tocá el botón verde de abajo para confirmar el pago.
+⚠️ Atención: El botón verde cobra de verdad. Revisá la mesa y el total antes de tocarlo. Si te equivocaste de mesa, tocá ← Volver a la mesa y no se cobra nada.
+!Botón Volver a la mesa
+Si paga con varios medios
+Por ejemplo, una parte en efectivo y otra con tarjeta:
+1. Cobrá la primera parte: elegí el medio y escribí solo ese monto.
+2. La mesa queda con saldo pendiente y el botón cambia a 💰 Agregar Pago.
+3. Tocá Agregar Pago y cobrá lo que falta con el otro medio.
+4. Repetí hasta que no falte nada.
+💡 Si varias personas pagan su parte, en la pantalla de cobro podés usar ✂️ Dividir para repartir el total y cargar un pago por cada uno (➕ Agregar Otro Pago).
+¿No aparece el medio de pago que necesitás?
+Los medios de pago se dan de alta en Configuración → Tablas maestras → Tipos de Pago.
+🔗 Guías completas: Medios de cobro · Cobros y pagos
+---
+Paso 8: Emití la factura (solo si hace falta)
+Si el cliente te pide factura, hacela desde la sección 🧾 Factura Fiscal de la vista Remito:
+• Emitir: hace la factura electrónica en ARCA (con CAE).
+• Imprimir: hace la factura y además la imprime por Fiscalberry.
+Cómo hacer una Factura A
+1. Asigná a la mesa un cliente con Condición IVA: Responsable Inscripto y su CUIT (ver Paso 5).
+2. En 🧾 Factura Fiscal, tocá Imprimir o Emitir.
+3. Como el cliente es Responsable Inscripto, la factura sale A. Si la mesa no tiene cliente, o el cliente no es Responsable Inscripto, la factura no sale A.
+⚠️ Atención: Revisá bien el cliente antes de facturar. Una factura mal hecha no se borra: hay que anularla con una Nota de Crédito.
+---
+Paso 9: Hacé el Checkout (liberá la mesa)
+1. Cuando la mesa está totalmente cobrada, en la vista Remito aparece el botón 👋 Checkout.
+2. Tocalo. La mesa se libera y sale del listado del salón.
+⚠️ Si la mesa tiene pagos pendientes de aprobación, el sistema te avisa antes. Podés ✓ Aprobar pagos primero o ⚠️ Checkout de todos modos (en ese caso, esos pagos no se cuentan como cobrados).
+---
+⚙️ Más opciones dentro de una mesa
+El botón ⚙️ Opciones (arriba a la derecha de la mesa) tiene más acciones. Algunas solo funcionan con la mesa abierta:
+!Ventana Opciones de la mesa
+• 👤 Mozo: cambiá el mozo de la mesa. Se abre una ventana para Seleccionar el nuevo mozo.
+• ✏️ Número: cambiá la descripción o número de la mesa.
+• 🍽️ Cubiertos: cambiá la cantidad de cubiertos.
+• Cliente: asigná o cambiá el cliente (ver Paso 5).
+• Observación: una nota sobre la mesa.
+• 💸 Descuento: aplicá un descuento a la mesa.
+• ✂️ Dividir Mesa: separá consumos en otra mesa.
+• 🗑️ Anular Mesa: anula la mesa completa.
+ℹ️ Si no ves alguno de estos botones, tu usuario no tiene permiso para usarlo. Pedíselo al administrador.
+---
+⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+|---|---|---|
+| El mozo no aparece para abrir la mesa. | El mozo está inactivo, o tu usuario no está en su Visibilidad por Usuarios. | Editá el mozo en Configuración → Tablas maestras → Mozos y revisá esas dos opciones. |
+| No sale impresa la comanda ni el remito. | Fiscalberry está cerrado, o la impresora está apagada o sin papel. | Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver Gestión de Impresoras. |
+| El sistema no me deja cobrar en efectivo. | No hay un arqueo de caja abierto. | Tocá Abrir Caja arriba en el salón (ver Paso 2) y volvé a cobrar. |
+| No aparece el botón Cobrar. | La mesa todavía está abierta, o ya está totalmente cobrada. | Primero tocá 🔒 Cerrar. Si ya está cobrada, tocá 👋 Checkout. |
+| No aparece el botón Checkout. | Todavía falta cobrar una parte. | Tocá 💰 Agregar Pago y cobrá lo que falta. |
+| La factura no salió A y el cliente la quería A. | El cliente no tiene la Condición IVA: Responsable Inscripto, o no estaba asignado a la mesa. | Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa. |
+| La mesa sigue ocupada pero la gente ya se fue. | Faltó cobrar o hacer el Checkout. | Abrí la mesa, cobrá lo que falte y tocá 👋 Checkout. |

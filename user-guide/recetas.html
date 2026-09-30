@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas
+ ¿Quién lo usa?: Jefes de cocina, administradores ..."/> <meta name="keywords" content="recetas, paxapos, recetas, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Recetas - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas
+ ¿Quién lo usa?: Jefes de cocina, administradores ..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Recetas - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Recetas - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas
+ ¿Quién lo usa?: Jefes de cocina, administradores ..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Recetas - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas\n ¿Quién lo usa?: Jefes de cocina, administradores ...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Recetas - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/menu" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Menú de Productos (Carta)</a></li><li><a href="../user-guide/categorias" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Categorías de Productos</a></li><li><a href="../user-guide/variantes-grupo-sabores" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Variantes y Grupos de Sabores</a></li><li><a href="../user-guide/maestro-de-productos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Maestro de Productos</a></li><li><a href="../user-guide/subproductos-elaborados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sub-Productos (Elaborados)</a></li><li><a href="../user-guide/recetas" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Recetas</a></li><li><a href="../user-guide/analisis-duplicados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Buscar Duplicados</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Recetas</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: recetas</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="recetas"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Productos</strong> → <strong>Gestión Avanzada</strong> → <strong>Recetas</strong>
+<strong>¿Quién lo usa?:</strong> Jefes de cocina, administradores y encargados de costos</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá ves todas las recetas de tu cocina juntas, como un manual. Cada receta dice qué ingredientes lleva un producto y cuánto de cada uno.
+Con las recetas, el sistema calcula cuánto te cuesta preparar cada plato y descuenta el stock al vender.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Maestro de Productos</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Los ingredientes tienen que estar cargados como productos. Mirá <a href="/user-guide/maestro-de-productos">Maestro de Productos</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/40-productos/46-00a-menu-grupo-productos.png" alt="Menú lateral con el grupo Productos marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Productos</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-00b-menu-opcion-listado-recetas.png" alt="Opción Recetas marcada en rojo en el menú lateral"></p>
+<ol start="2">
+<li>Tocá <strong>Recetas</strong>. Está debajo del título <strong>GESTIÓN AVANZADA</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-01-pantalla-listado-recetas.png" alt="Pantalla Manual de Cocina con el índice de recetas"></p>
+<p>Así se ve la pantalla. Arriba está el <strong>Índice de Recetas</strong>, separado en <strong>Productos en Venta</strong> y <strong>Subproductos</strong>. Abajo, una tarjeta por receta.</p>
+<hr>
+<h2 class="relative">
+                🔎 Paso 2: Buscá una receta
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-busca-una-receta"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-busca-una-receta"></div>
+
+<p><img src="/images/manual/40-productos/46-10-campo-buscar-receta.png" alt="Casillero Buscar receta"></p>
+<ol>
+<li>En el casillero <strong>Buscar receta...</strong>, escribí el nombre del producto.</li>
+<li>La lista se achica mientras escribís.</li>
+<li>También podés tocar un nombre del índice para ir directo a su receta.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-11-tarjeta-receta.png" alt="Tarjeta de la receta JAMON Y QUESO: rinde 12 docenas, con los botones Ver, Editar e Imprimir"></p>
+<p>Cada tarjeta muestra el nombre, cuánto <strong>rinde</strong> la receta, los ingredientes y el costo.</p>
+<hr>
+<h2 class="relative">
+                👁️ Paso 3: Mirá el producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-mira-el-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-mira-el-producto"></div>
+
+<p><img src="/images/manual/40-productos/46-04-donde-esta-boton-ver.png" alt="Tarjeta con el botón Ver marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Ver</strong>, arriba a la derecha de la tarjeta.</li>
+<li>Se abre la ficha del producto. Mirá <a href="/user-guide/maestro-de-productos#paso-5-mira-la-ficha-de-un-producto">Maestro de Productos</a>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ✏️ Paso 4: Cambiá una receta
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-cambia-una-receta"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-cambia-una-receta"></div>
+
+<p><img src="/images/manual/40-productos/46-06-donde-esta-boton-editar.png" alt="Tarjeta con el botón Editar marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Editar</strong>, arriba a la derecha de la tarjeta.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-12-pantalla-formulario-receta.png" alt="Formulario de la receta de JAMON Y QUESO con sus cuatro ingredientes"></p>
+<ol start="2">
+<li>Se abre el formulario de la receta.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-13-campo-cant-porciones.png" alt="Casillero de cantidad que rinde la receta, con 12,00"></p>
+<ol start="3">
+<li>Arriba, escribí cuánto <strong>rinde</strong> la receta. Por ejemplo: <em>12</em> docenas.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-14-campo-detalle-de-elaboracion.png" alt="Casillero Detalle de elaboración con su barra de herramientas"></p>
+<ol start="4">
+<li>En <strong>Detalle de elaboración</strong>, escribí cómo se prepara. Es opcional.</li>
+</ol>
+<h3 class="relative">
+                Los ingredientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="los-ingredientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="los-ingredientes"></div>
+
+<p><img src="/images/manual/40-productos/46-15-renglon-ingrediente.png" alt="Renglón de un ingrediente: PALETA COCIDA, 0.26, unidad, observación y tacho"></p>
+<p>Cada renglón es un ingrediente. De izquierda a derecha:</p>
+<p><img src="/images/manual/40-productos/46-16-campo-ingrediente.png" alt="Casillero del ingrediente con [Kg] PALETA COCIDA"></p>
+<ol start="5">
+<li><strong>Ingrediente</strong>: escribí el nombre y elegilo de la lista. Entre corchetes ves su unidad. Por ejemplo: <em>[Kg]</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-17-campo-cantidad.png" alt="Casillero de cantidad con 0.26"></p>
+<ol start="6">
+<li><strong>Cantidad</strong>: cuánto lleva. Por ejemplo: <em>0.26</em> kilos.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-18-campo-unidad-de-medida.png" alt="Lista de unidad de medida"></p>
+<ol start="7">
+<li><strong>Unidad</strong>: en qué unidad pusiste la cantidad. Por ejemplo: <em>Kg</em> o <em>gramos</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-19-campo-observacion.png" alt="Casillero Observación (opcional)"></p>
+<ol start="8">
+<li><strong>Observación</strong>: una aclaración. Es opcional.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-22-donde-esta-boton-agregar-ingrediente.png" alt="Formulario con el botón Agregar Ingrediente marcado en rojo"></p>
+<ol start="9">
+<li>Para sumar un ingrediente, tocá <strong>+ Agregar Ingrediente</strong>, debajo de la lista.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-24-ingrediente-nuevo-vacio.png" alt="Renglón nuevo vacío, con Seleccione producto"></p>
+<ol start="10">
+<li>Aparece un renglón vacío. Completalo como en los pasos 5 a 8.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-20-donde-esta-boton-quitar-ingrediente.png" alt="Formulario con el tacho del primer ingrediente marcado en rojo"></p>
+<ol start="11">
+<li>Para sacar un ingrediente, tocá el tacho rojo 🗑️ de ese renglón.</li>
+</ol>
+<h3 class="relative">
+                Guardá los cambios
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="guarda-los-cambios"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="guarda-los-cambios"></div>
+
+<p><img src="/images/manual/40-productos/46-25-donde-esta-boton-guardar.png" alt="Formulario con el botón verde Guardar marcado en rojo"></p>
+<ol start="12">
+<li>Tocá el botón verde <strong>Guardar</strong>, abajo a la izquierda.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-27-donde-esta-boton-eliminar.png" alt="Formulario con el botón rojo Eliminar marcado en rojo"></p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> el botón rojo <strong>Eliminar</strong>, abajo a la derecha, borra la receta entera. El producto queda sin receta.</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> para cargar la receta de un producto que no tiene, abrí su ficha y tocá <strong>Agregar Receta</strong>. Mirá <a href="/user-guide/maestro-de-productos#botones-de-arriba">Maestro de Productos</a>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🖨️ Paso 5: Imprimí las recetas
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-imprimi-las-recetas"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-imprimi-las-recetas"></div>
+
+<p><img src="/images/manual/40-productos/46-02-donde-esta-boton-imprimir-manual.png" alt="Pantalla con el botón Imprimir Manual marcado en rojo"></p>
+<ol>
+<li>Para imprimir <strong>todas</strong> las recetas, tocá <strong>Imprimir Manual</strong>, arriba a la derecha.</li>
+</ol>
+<p><img src="/images/manual/40-productos/46-08-donde-esta-boton-imprimir.png" alt="Tarjeta con el botón Imprimir marcado en rojo"></p>
+<ol start="2">
+<li>Para imprimir <strong>una sola</strong> receta, tocá <strong>Imprimir</strong> en su tarjeta.</li>
+<li>Se abre la ventana de impresión de tu computadora. Elegí la impresora y tocá <strong>Imprimir</strong>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Un producto no aparece en la lista</strong></td>
+<td>No tiene receta, o su receta no tiene ingredientes.</td>
+<td>Abrí su ficha en el <a href="/user-guide/maestro-de-productos">Maestro de Productos</a> y tocá <strong>Agregar Receta</strong>.</td>
+</tr>
+<tr>
+<td><strong>La receta descuenta más stock del que debería</strong></td>
+<td>La cantidad o la unidad están mal.</td>
+<td>Tocá <strong>Editar</strong> y revisá si pusiste gramos o kilos.</td>
+</tr>
+<tr>
+<td><strong>El costo de la receta da $0</strong></td>
+<td>Los ingredientes no tienen precio de compra.</td>
+<td>Cargá las compras de esos ingredientes.</td>
+</tr>
+<tr>
+<td><strong>No encuentro el ingrediente al escribirlo</strong></td>
+<td>No está cargado como producto.</td>
+<td>Crealo primero en el <a href="/user-guide/maestro-de-productos">Maestro de Productos</a>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/46-recetas.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-busca-una-receta" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Buscá una receta</a></li><li><a href="#paso-3-mira-el-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Mirá el producto</a></li><li><a href="#paso-4-cambia-una-receta" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Cambiá una receta</a></li><li><a href="#los-ingredientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Los ingredientes</a></li><li><a href="#guarda-los-cambios" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guardá los cambios</a></li><li><a href="#paso-5-imprimi-las-recetas" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Imprimí las recetas</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"recetas",title:"Recetas",content:"\u003Cdiv id=\"recetas\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Productos\u003C/strong> → \u003Cstrong>Gestión Avanzada\u003C/strong> → \u003Cstrong>Recetas\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Jefes de cocina, administradores y encargados de costos\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá ves todas las recetas de tu cocina juntas, como un manual. Cada receta dice qué ingredientes lleva un producto y cuánto de cada uno.\nCon las recetas, el sistema calcula cuánto te cuesta preparar cada plato y descuenta el stock al vender.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Maestro de Productos\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Los ingredientes tienen que estar cargados como productos. Mirá \u003Ca href=\"/user-guide/maestro-de-productos\">Maestro de Productos\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-00a-menu-grupo-productos.png\" alt=\"Menú lateral con el grupo Productos marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Productos\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-00b-menu-opcion-listado-recetas.png\" alt=\"Opción Recetas marcada en rojo en el menú lateral\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Recetas\u003C/strong>. Está debajo del título \u003Cstrong>GESTIÓN AVANZADA\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-01-pantalla-listado-recetas.png\" alt=\"Pantalla Manual de Cocina con el índice de recetas\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Arriba está el \u003Cstrong>Índice de Recetas\u003C/strong>, separado en \u003Cstrong>Productos en Venta\u003C/strong> y \u003Cstrong>Subproductos\u003C/strong>. Abajo, una tarjeta por receta.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 2: Buscá una receta\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-busca-una-receta\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-busca-una-receta\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-10-campo-buscar-receta.png\" alt=\"Casillero Buscar receta\">\u003C/p>\n\u003Col>\n\u003Cli>En el casillero \u003Cstrong>Buscar receta...\u003C/strong>, escribí el nombre del producto.\u003C/li>\n\u003Cli>La lista se achica mientras escribís.\u003C/li>\n\u003Cli>También podés tocar un nombre del índice para ir directo a su receta.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-11-tarjeta-receta.png\" alt=\"Tarjeta de la receta JAMON Y QUESO: rinde 12 docenas, con los botones Ver, Editar e Imprimir\">\u003C/p>\n\u003Cp>Cada tarjeta muestra el nombre, cuánto \u003Cstrong>rinde\u003C/strong> la receta, los ingredientes y el costo.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👁️ Paso 3: Mirá el producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-mira-el-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-mira-el-producto\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-04-donde-esta-boton-ver.png\" alt=\"Tarjeta con el botón Ver marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Ver\u003C/strong>, arriba a la derecha de la tarjeta.\u003C/li>\n\u003Cli>Se abre la ficha del producto. Mirá \u003Ca href=\"/user-guide/maestro-de-productos#paso-5-mira-la-ficha-de-un-producto\">Maestro de Productos\u003C/a>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ Paso 4: Cambiá una receta\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-cambia-una-receta\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-cambia-una-receta\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-06-donde-esta-boton-editar.png\" alt=\"Tarjeta con el botón Editar marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Editar\u003C/strong>, arriba a la derecha de la tarjeta.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-12-pantalla-formulario-receta.png\" alt=\"Formulario de la receta de JAMON Y QUESO con sus cuatro ingredientes\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Se abre el formulario de la receta.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-13-campo-cant-porciones.png\" alt=\"Casillero de cantidad que rinde la receta, con 12,00\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Arriba, escribí cuánto \u003Cstrong>rinde\u003C/strong> la receta. Por ejemplo: \u003Cem>12\u003C/em> docenas.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-14-campo-detalle-de-elaboracion.png\" alt=\"Casillero Detalle de elaboración con su barra de herramientas\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>En \u003Cstrong>Detalle de elaboración\u003C/strong>, escribí cómo se prepara. Es opcional.\u003C/li>\n\u003C/ol>\n\u003Ch3 class=\"relative\">\n                Los ingredientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"los-ingredientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"los-ingredientes\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-15-renglon-ingrediente.png\" alt=\"Renglón de un ingrediente: PALETA COCIDA, 0.26, unidad, observación y tacho\">\u003C/p>\n\u003Cp>Cada renglón es un ingrediente. De izquierda a derecha:\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-16-campo-ingrediente.png\" alt=\"Casillero del ingrediente con [Kg] PALETA COCIDA\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>\u003Cstrong>Ingrediente\u003C/strong>: escribí el nombre y elegilo de la lista. Entre corchetes ves su unidad. Por ejemplo: \u003Cem>[Kg]\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-17-campo-cantidad.png\" alt=\"Casillero de cantidad con 0.26\">\u003C/p>\n\u003Col start=\"6\">\n\u003Cli>\u003Cstrong>Cantidad\u003C/strong>: cuánto lleva. Por ejemplo: \u003Cem>0.26\u003C/em> kilos.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-18-campo-unidad-de-medida.png\" alt=\"Lista de unidad de medida\">\u003C/p>\n\u003Col start=\"7\">\n\u003Cli>\u003Cstrong>Unidad\u003C/strong>: en qué unidad pusiste la cantidad. Por ejemplo: \u003Cem>Kg\u003C/em> o \u003Cem>gramos\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-19-campo-observacion.png\" alt=\"Casillero Observación (opcional)\">\u003C/p>\n\u003Col start=\"8\">\n\u003Cli>\u003Cstrong>Observación\u003C/strong>: una aclaración. Es opcional.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-22-donde-esta-boton-agregar-ingrediente.png\" alt=\"Formulario con el botón Agregar Ingrediente marcado en rojo\">\u003C/p>\n\u003Col start=\"9\">\n\u003Cli>Para sumar un ingrediente, tocá \u003Cstrong>+ Agregar Ingrediente\u003C/strong>, debajo de la lista.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-24-ingrediente-nuevo-vacio.png\" alt=\"Renglón nuevo vacío, con Seleccione producto\">\u003C/p>\n\u003Col start=\"10\">\n\u003Cli>Aparece un renglón vacío. Completalo como en los pasos 5 a 8.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-20-donde-esta-boton-quitar-ingrediente.png\" alt=\"Formulario con el tacho del primer ingrediente marcado en rojo\">\u003C/p>\n\u003Col start=\"11\">\n\u003Cli>Para sacar un ingrediente, tocá el tacho rojo 🗑️ de ese renglón.\u003C/li>\n\u003C/ol>\n\u003Ch3 class=\"relative\">\n                Guardá los cambios\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"guarda-los-cambios\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"guarda-los-cambios\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-25-donde-esta-boton-guardar.png\" alt=\"Formulario con el botón verde Guardar marcado en rojo\">\u003C/p>\n\u003Col start=\"12\">\n\u003Cli>Tocá el botón verde \u003Cstrong>Guardar\u003C/strong>, abajo a la izquierda.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-27-donde-esta-boton-eliminar.png\" alt=\"Formulario con el botón rojo Eliminar marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> el botón rojo \u003Cstrong>Eliminar\u003C/strong>, abajo a la derecha, borra la receta entera. El producto queda sin receta.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> para cargar la receta de un producto que no tiene, abrí su ficha y tocá \u003Cstrong>Agregar Receta\u003C/strong>. Mirá \u003Ca href=\"/user-guide/maestro-de-productos#botones-de-arriba\">Maestro de Productos\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🖨️ Paso 5: Imprimí las recetas\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-imprimi-las-recetas\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-imprimi-las-recetas\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-02-donde-esta-boton-imprimir-manual.png\" alt=\"Pantalla con el botón Imprimir Manual marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Para imprimir \u003Cstrong>todas\u003C/strong> las recetas, tocá \u003Cstrong>Imprimir Manual\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/46-08-donde-esta-boton-imprimir.png\" alt=\"Tarjeta con el botón Imprimir marcado en rojo\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Para imprimir \u003Cstrong>una sola\u003C/strong> receta, tocá \u003Cstrong>Imprimir\u003C/strong> en su tarjeta.\u003C/li>\n\u003Cli>Se abre la ventana de impresión de tu computadora. Elegí la impresora y tocá \u003Cstrong>Imprimir\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>Un producto no aparece en la lista\u003C/strong>\u003C/td>\n\u003Ctd>No tiene receta, o su receta no tiene ingredientes.\u003C/td>\n\u003Ctd>Abrí su ficha en el \u003Ca href=\"/user-guide/maestro-de-productos\">Maestro de Productos\u003C/a> y tocá \u003Cstrong>Agregar Receta\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La receta descuenta más stock del que debería\u003C/strong>\u003C/td>\n\u003Ctd>La cantidad o la unidad están mal.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Editar\u003C/strong> y revisá si pusiste gramos o kilos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>El costo de la receta da $0\u003C/strong>\u003C/td>\n\u003Ctd>Los ingredientes no tienen precio de compra.\u003C/td>\n\u003Ctd>Cargá las compras de esos ingredientes.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No encuentro el ingrediente al escribirlo\u003C/strong>\u003C/td>\n\u003Ctd>No está cargado como producto.\u003C/td>\n\u003Ctd>Crealo primero en el \u003Ca href=\"/user-guide/maestro-de-productos\">Maestro de Productos\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-busca-una-receta",title:"Paso 2: Buscá una receta",level:2},{id:"paso-3-mira-el-producto",title:"Paso 3: Mirá el producto",level:2},{id:"paso-4-cambia-una-receta",title:"Paso 4: Cambiá una receta",level:2},{id:"los-ingredientes",title:"Los ingredientes",level:3},{id:"guarda-los-cambios",title:"Guardá los cambios",level:3},{id:"paso-5-imprimi-las-recetas",title:"Paso 5: Imprimí las recetas",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Recetas - Manual",description:"¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas\n ¿Quién lo usa?: Jefes de cocina, administradores ...",keywords:"recetas, paxapos, recetas, tutorial, guía, manual usuario"},llmTxtFile:"46-recetas.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

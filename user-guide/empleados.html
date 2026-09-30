@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados
+ ¿Quién lo usa?: Recursos Humanos, encargados y administradores."/> <meta name="keywords" content="empleados, paxapos, empleados, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Empleados - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados
+ ¿Quién lo usa?: Recursos Humanos, encargados y administradores."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Empleados - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Empleados - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados
+ ¿Quién lo usa?: Recursos Humanos, encargados y administradores."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Empleados - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → RRHH → Empleados\n ¿Quién lo usa?: Recursos Humanos, encargados y administradores.",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Empleados - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/empleados" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Empleados</a></li><li><a href="../user-guide/empleados-trabajando" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Empleados Trabajando</a></li><li><a href="../user-guide/registro-diario-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Registro Diario de Fichaje</a></li><li><a href="../user-guide/reporte-mensual-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Reporte Mensual de Fichaje</a></li><li><a href="../user-guide/departamentos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Departamentos</a></li><li><a href="../user-guide/turnos-y-horarios-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Turnos y Horarios de Fichaje</a></li><li><a href="../user-guide/sueldos-y-jornales" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sueldos y Jornales</a></li><li><a href="../user-guide/datos-de-acceso-app" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Datos de Acceso a la App de Fichaje</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Empleados</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: empleados</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="empleados"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>RRHH</strong> → <strong>Empleados</strong>
+<strong>¿Quién lo usa?:</strong> Recursos Humanos, encargados y administradores.</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá está la lista de todas las personas que trabajan en tu comercio.
+Podés dar de alta a un empleado nuevo, ver su ficha, corregir sus datos y darlo de baja cuando se va.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tiene que estar activo el módulo de Fichaje o el de RRHH. Si no ves <strong>RRHH</strong> en el menú, pedíselo a soporte.</li>
+<li>Para ver <strong>Empleados</strong> necesitás el permiso <strong>Recursos Humanos</strong>. Mirá <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Los datos de sueldo y liquidación (CUIL, CBU, convenio y otros) los ve solo quien tiene ese permiso.</li>
+<li>Antes de cargar empleados, conviene crear los <a href="/user-guide/departamentos">Departamentos</a> y los <a href="/user-guide/turnos-y-horarios-fichaje">Turnos y Horarios</a>. Así los podés elegir en el formulario.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📋 Paso 1: Mirá la lista de empleados
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-mira-la-lista-de-empleados"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-mira-la-lista-de-empleados"></div>
+
+<p>Al entrar a <strong>Empleados</strong> ves el título y, debajo, cuántos empleados hay. Por ejemplo: <em>12 activos · 2 inactivos</em>.</p>
+<p>Arriba a la derecha está el botón verde <strong>Nuevo Empleado</strong>.</p>
+<p>Debajo tenés dos pestañas:</p>
+<ul>
+<li><strong>Activos</strong>: las personas que hoy trabajan con vos. Es la que se abre primero.</li>
+<li><strong>Historial (Bajas)</strong>: las personas dadas de baja. A cada pestaña le sigue un número con la cantidad.</li>
+</ul>
+<h3>Buscar a alguien</h3>
+<p>Tocá la barra <strong>Filtros</strong> para abrirla. Se abre sola si ya buscaste algo.</p>
+<ul>
+<li><strong>Nombre</strong>: escribí una parte del nombre. Por ejemplo: <em>Juan</em>.</li>
+<li><strong>Apellido</strong>: escribí una parte del apellido. Por ejemplo: <em>Pérez</em>.</li>
+<li><strong>DNI</strong>: escribí el número completo, sin puntos. Por ejemplo: <em>30123456</em>.</li>
+<li><strong>Departamento</strong>: elegí uno de la lista. Con <strong>-- Todos --</strong> no se filtra por departamento.</li>
+</ul>
+<p>Tocá el botón azul <strong>Buscar</strong>. Para volver a ver todos, tocá <strong>Limpiar filtros</strong>. Ese botón aparece solo cuando hay un filtro puesto.</p>
+<h3>Qué muestra cada columna</h3>
+<ul>
+<li><strong>Foto</strong>: la foto de la persona. Si no tiene, ves un dibujito gris.</li>
+<li><strong>Nombre</strong>: apellido y nombre. Abajo, el número de legajo si lo cargaste.</li>
+<li><strong>DNI</strong>.</li>
+<li><strong>Departamento</strong>.</li>
+<li><strong>Turno</strong>: los turnos que tiene asignados.</li>
+<li><strong>Contacto</strong>: teléfono y e-mail.</li>
+<li><strong>Estado</strong>: una etiqueta verde si está activo y una roja si está dado de baja.</li>
+</ul>
+<p>Tocá el título <strong>Nombre</strong>, <strong>DNI</strong>, <strong>Departamento</strong> o <strong>Contacto</strong> para ordenar la lista. La lista sale ordenada por nombre.</p>
+<p>Si no hay resultados, la pantalla dice <strong>No se encontraron empleados</strong>. En la pestaña de bajas dice <strong>No hay empleados dados de baja</strong>.</p>
+<h3>Los botones de cada renglón</h3>
+<p>A la derecha de cada empleado hay estos botones:</p>
+<ul>
+<li>El ojo, <strong>Ver</strong>: abre la ficha del empleado (Paso 4).</li>
+<li>La llave amarilla, <strong>Reiniciar Password</strong>: solo aparece si el empleado tiene un usuario del sistema. Le manda una contraseña nueva por e-mail. El sistema te pregunta antes. Necesitás el permiso de cambiar contraseñas.</li>
+<li>El lápiz azul, <strong>Editar</strong>: abre el formulario para corregir datos (Paso 5).</li>
+<li>El tacho rojo, <strong>Eliminar</strong>: saca al empleado de la lista (Paso 7).</li>
+</ul>
+<hr>
+<h2 class="relative">
+                ➕ Paso 2: Tocá &quot;Nuevo Empleado&quot;
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-toca-nuevo-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-toca-nuevo-empleado"></div>
+
+<ol>
+<li>Arriba a la derecha, tocá el botón verde <strong>Nuevo Empleado</strong>.</li>
+<li>Se abre la pantalla <strong>Nuevo Empleado</strong>, con varios cuadros para completar.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                📝 Paso 3: Completá el formulario
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-completa-el-formulario"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-completa-el-formulario"></div>
+
+<p>Solo son obligatorios el <strong>Nombre</strong> y el <strong>Apellido</strong>. El resto lo podés completar después.</p>
+<h3>Cuadro Foto</h3>
+<ul>
+<li><strong>Sacar Foto</strong>: el botón verde saca la foto con la cámara de tu equipo. El navegador te pide permiso la primera vez.</li>
+<li><strong>O subir archivo</strong>: elegí una foto que ya tengas guardada.</li>
+</ul>
+<p>La foto sirve para reconocer a la persona en la pantalla de <a href="/user-guide/empleados-trabajando">Empleados Trabajando</a>.</p>
+<h3>Cuadro Datos Personales</h3>
+<ul>
+<li><strong>Nombre</strong> y <strong>Apellido</strong>: obligatorios. Por ejemplo: <em>Juan</em> y <em>Pérez</em>.</li>
+<li><strong>DNI</strong>: solo números, sin puntos. Por ejemplo: <em>30123456</em>. El sistema no deja cargar dos empleados con el mismo DNI.</li>
+<li><strong>Departamento</strong>: elegí uno de la lista. Por ejemplo: <em>Cocina</em>.</li>
+<li><strong>E-Mail</strong> y <strong>Teléfono</strong>: para contactarlo.</li>
+</ul>
+<h3>Cuadro Jornada y Turnos</h3>
+<ul>
+<li><strong>Horas Semanales</strong>: cuántas horas trabaja por semana. Por ejemplo: <em>40</em>. El <a href="/user-guide/reporte-mensual-fichaje">Reporte Mensual</a> lo usa para calcular las horas esperadas.</li>
+<li><strong>Valor hora (estimación de costo)</strong>: el precio de la hora de trabajo. Solo lo ves si tenés el permiso de Recursos Humanos. Sirve para estimar el costo del personal. No reemplaza la liquidación oficial.</li>
+<li><strong>Turnos Asignados</strong>: tildá los turnos que hace. Se usan para saber si llegó tarde.</li>
+</ul>
+<h3>Cuadro Usuario del Sistema</h3>
+<ul>
+<li>Elegí un usuario si la persona también entra al sistema o usa la app de fichaje. Con <strong>-- Sin usuario asignado --</strong> no se vincula ninguno.</li>
+<li>Un mismo usuario no puede estar en dos empleados.</li>
+<li>Solo quien tiene el permiso de Recursos Humanos puede elegir el usuario. Para el resto, el casillero está bloqueado.</li>
+<li>Para crear usuarios, mirá <a href="/user-guide/usuarios-del-sistema">Usuarios del Sistema</a>.</li>
+</ul>
+<h3>Cuadro Observaciones</h3>
+<ul>
+<li>Escribí lo que quieras anotar sobre el empleado. Es texto libre.</li>
+</ul>
+<h3>Cuadro Datos para RRHH y Liquidación</h3>
+<p>Lo ves solo con el permiso de Recursos Humanos.</p>
+<ul>
+<li><strong>CUIL</strong>, <strong>Legajo</strong> y <strong>CBU</strong>.</li>
+<li><strong>Fecha de Ingreso</strong>: el día que empezó a trabajar.</li>
+<li><strong>Situación</strong>: dejá <strong>Activo (sin especificar)</strong> para un empleado que trabaja. Otras opciones lo dan de baja (Paso 6).</li>
+<li><strong>Convenio</strong>, <strong>Obra Social</strong> y <strong>Adicional</strong>: elegí uno de cada lista, si corresponde.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si el comercio tiene un lector de DNI conectado, al pasar el documento se completan solos el nombre, el apellido y el DNI.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                💾 Paso 4: Registrá al empleado
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-registra-al-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-registra-al-empleado"></div>
+
+<p>Al final de la pantalla hay tres botones:</p>
+<ul>
+<li><strong>Cancelar</strong>, a la izquierda: vuelve a la lista sin guardar.</li>
+<li><strong>Registrar</strong>, verde, a la derecha: guarda el empleado.</li>
+<li><strong>Registrar y Fichar</strong>, rojo, a la derecha: guarda al empleado y abre la pantalla para marcar su ingreso ahora mismo.</li>
+</ul>
+<p>Si falta el nombre o el apellido, o el DNI ya existe, el sistema muestra un mensaje rojo y no guarda. Corregí el dato y probá de nuevo.</p>
+<p>Cuando se guarda, ves un mensaje verde. Después, entrá a <strong>Empleados</strong> para verlo en la lista.</p>
+<hr>
+<h2 class="relative">
+                👤 Paso 5: Abrí la ficha de un empleado
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-abri-la-ficha-de-un-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-abri-la-ficha-de-un-empleado"></div>
+
+<ol>
+<li>En la lista, tocá el ojo <strong>Ver</strong> del empleado.</li>
+<li>Arriba ves su foto, su nombre y etiquetas con su estado, su legajo y su departamento. A la derecha está el botón verde <strong>Editar</strong>.</li>
+<li>Si está dado de baja, aparece un aviso rojo que dice <strong>Empleado dado de baja</strong>.</li>
+</ol>
+<p>Más abajo la ficha tiene estos cuadros:</p>
+<ul>
+<li><strong>Datos Personales</strong>: DNI, CUIL, e-mail, teléfono, domicilio, fecha de nacimiento y observación.</li>
+<li><strong>Datos Laborales</strong>: legajo, CBU, convenio, obra social, fecha de ingreso y jornada semanal. También cuándo se dio de alta en el sistema y cuándo se modificó por última vez.</li>
+<li><strong>Turnos Asignados</strong>: cada turno con su horario, la tolerancia en minutos y los días de la semana.</li>
+<li><strong>Resumen de Horas Trabajadas por Mes</strong>: las horas de los últimos 12 meses.</li>
+<li><strong>Registros de Fichadas (Ingresos y Egresos)</strong>: cada fichada de la persona, la más nueva primero.</li>
+</ul>
+<h3>La tabla de fichadas</h3>
+<ul>
+<li><strong>Fecha</strong>, <strong>Ingreso (fichada)</strong> y <strong>Egreso (fichada)</strong>: el día y la hora de cada marca. Con una foto de cuando fichó, si hay.</li>
+<li><strong>Created del Registro</strong>: la hora en que el sistema recibió la marca. Si es muy distinta de la hora de la fichada, alguien la corrigió.</li>
+<li><strong>Hs. Trabajadas</strong>: el tiempo entre el ingreso y el egreso.</li>
+<li><strong>Turno</strong>: el turno que se le asignó a esa fichada.</li>
+<li><strong>Puntualidad</strong>: <strong>En hora</strong> o <strong>TARDE</strong> con los minutos que pasó de la tolerancia del turno.</li>
+<li><strong>Hs. Extras</strong>: lo trabajado de más respecto del turno.</li>
+<li><strong>Acciones</strong>: los botones para corregir, que se explican en <a href="/user-guide/registro-diario-fichaje">Registro Diario de Fichaje</a>.</li>
+</ul>
+<p>Quien tiene el permiso de liquidar sueldos ve además la etiqueta <strong>EDITADO</strong> en las marcas corregidas a mano. También ve un botón rojo con la cantidad de marcas editadas y el enlace <strong>Ver auditoría completa</strong>.</p>
+<hr>
+<h2 class="relative">
+                ✏️ Paso 6: Corregí datos o dá de baja a un empleado
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-corregi-datos-o-da-de-baja-a-un-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-corregi-datos-o-da-de-baja-a-un-empleado"></div>
+
+<ol>
+<li>En la lista, tocá el lápiz <strong>Editar</strong>. También podés tocar <strong>Editar</strong> dentro de la ficha.</li>
+<li>Se abre <strong>Editar Empleado</strong>, con los mismos cuadros que el alta.</li>
+<li>Arriba hay un cuadro nuevo, <strong>Estado Laboral</strong>:<ul>
+<li><strong>Situación</strong>: elegí cómo está hoy el empleado. <strong>Activo (sin especificar)</strong> lo deja trabajando. Cualquier otra opción de baja lo pasa a la pestaña <strong>Historial (Bajas)</strong>.</li>
+<li><strong>Fecha de Ingreso</strong>.</li>
+</ul>
+</li>
+<li>En el cuadro <strong>Foto</strong> podés cambiar la foto. Si el empleado ya tenía una, ves la foto y el casillero <strong>Cambiar foto</strong>.</li>
+<li>Tocá <strong>Guardar Cambios</strong>, abajo a la derecha. Volvés a la lista.</li>
+</ol>
+<p>Las situaciones que cuentan como activas son <strong>Activo</strong>, <strong>Reserva de puesto</strong>, <strong>Licencia sin goce</strong> y <strong>Trabajador de temporada</strong>. Las demás cuentan como baja.</p>
+<p>Para <strong>reincorporar</strong> a alguien de baja, entrá a <strong>Historial (Bajas)</strong>, tocá <strong>Editar</strong> y cambiá la <strong>Situación</strong> a <strong>Activo (sin especificar)</strong>. El aviso rojo <strong>Este empleado está dado de baja</strong> te lo recuerda.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> para que alguien deje de trabajar con vos, usá la baja. No lo elimines. Así conservás sus fichadas y su historial.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🗑️ Paso 7: Eliminá un empleado
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-elimina-un-empleado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-elimina-un-empleado"></div>
+
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> el empleado desaparece de las listas y del <a href="/user-guide/reporte-mensual-fichaje">Reporte Mensual</a>. Usalo solo para un alta cargada por error. Si alguien dejó de trabajar, dalo de baja como en el Paso 6.</p>
+</blockquote>
+<ol>
+<li>En la lista, tocá el tacho rojo <strong>Eliminar</strong> del empleado.</li>
+<li>El sistema pregunta <strong>¿Eliminar a Juan Pérez?</strong>.</li>
+<li>Confirmá para eliminarlo. Si no querés, cancelá.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>El DNI ya existe en la base de datos</strong></td>
+<td>Ya hay un empleado con ese DNI. Puede estar de baja.</td>
+<td>Buscalo por DNI. Miralo también en <strong>Historial (Bajas)</strong>. Si está de baja, reincorporalo en lugar de crear uno nuevo.</td>
+</tr>
+<tr>
+<td><strong>No puedo ingresar el mismo usuario para dos empleados</strong></td>
+<td>Ese usuario ya está vinculado a otro empleado.</td>
+<td>Elegí otro usuario, o dejá <strong>-- Sin usuario asignado --</strong>.</td>
+</tr>
+<tr>
+<td>No veo el menú <strong>RRHH</strong></td>
+<td>El módulo no está activo o tu rol no tiene el permiso.</td>
+<td>Pedile a un administrador que revise <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+<tr>
+<td>No veo los cuadros de CUIL, CBU y Situación</td>
+<td>Esos datos son solo para quien tiene el permiso de Recursos Humanos.</td>
+<td>Pedí el permiso a un administrador.</td>
+</tr>
+<tr>
+<td>El casillero <strong>Usuario del Sistema</strong> está bloqueado</td>
+<td>Tu rol no tiene el permiso de Recursos Humanos.</td>
+<td>Pedile a un administrador que lo vincule.</td>
+</tr>
+<tr>
+<td>Falta un empleado en la lista</td>
+<td>Está dado de baja, o hay un filtro puesto.</td>
+<td>Tocá <strong>Limpiar filtros</strong> y mirá la pestaña <strong>Historial (Bajas)</strong>.</td>
+</tr>
+<tr>
+<td>No aparece la llave <strong>Reiniciar Password</strong></td>
+<td>El empleado no tiene un usuario vinculado.</td>
+<td>Editá al empleado y elegí su usuario en <strong>Usuario del Sistema</strong>.</td>
+</tr>
+<tr>
+<td>El empleado no aparece en <a href="/user-guide/empleados-trabajando">Empleados Trabajando</a></td>
+<td>Todavía no marcó el ingreso.</td>
+<td>Marcá su ingreso desde esa pantalla o desde la app de fichaje.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/91-empleados.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-mira-la-lista-de-empleados" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Mirá la lista de empleados</a></li><li><a href="#paso-2-toca-nuevo-empleado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Tocá "Nuevo Empleado"</a></li><li><a href="#paso-3-completa-el-formulario" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Completá el formulario</a></li><li><a href="#paso-4-registra-al-empleado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Registrá al empleado</a></li><li><a href="#paso-5-abri-la-ficha-de-un-empleado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Abrí la ficha de un empleado</a></li><li><a href="#paso-6-corregi-datos-o-da-de-baja-a-un-empleado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Corregí datos o dá de baja a un empleado</a></li><li><a href="#paso-7-elimina-un-empleado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Eliminá un empleado</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"empleados",title:"Empleados",content:"\u003Cdiv id=\"empleados\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>RRHH\u003C/strong> → \u003Cstrong>Empleados\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Recursos Humanos, encargados y administradores.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá está la lista de todas las personas que trabajan en tu comercio.\nPodés dar de alta a un empleado nuevo, ver su ficha, corregir sus datos y darlo de baja cuando se va.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tiene que estar activo el módulo de Fichaje o el de RRHH. Si no ves \u003Cstrong>RRHH\u003C/strong> en el menú, pedíselo a soporte.\u003C/li>\n\u003Cli>Para ver \u003Cstrong>Empleados\u003C/strong> necesitás el permiso \u003Cstrong>Recursos Humanos\u003C/strong>. Mirá \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Los datos de sueldo y liquidación (CUIL, CBU, convenio y otros) los ve solo quien tiene ese permiso.\u003C/li>\n\u003Cli>Antes de cargar empleados, conviene crear los \u003Ca href=\"/user-guide/departamentos\">Departamentos\u003C/a> y los \u003Ca href=\"/user-guide/turnos-y-horarios-fichaje\">Turnos y Horarios\u003C/a>. Así los podés elegir en el formulario.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📋 Paso 1: Mirá la lista de empleados\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-mira-la-lista-de-empleados\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-mira-la-lista-de-empleados\">\u003C/div>\n\n\u003Cp>Al entrar a \u003Cstrong>Empleados\u003C/strong> ves el título y, debajo, cuántos empleados hay. Por ejemplo: \u003Cem>12 activos · 2 inactivos\u003C/em>.\u003C/p>\n\u003Cp>Arriba a la derecha está el botón verde \u003Cstrong>Nuevo Empleado\u003C/strong>.\u003C/p>\n\u003Cp>Debajo tenés dos pestañas:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Activos\u003C/strong>: las personas que hoy trabajan con vos. Es la que se abre primero.\u003C/li>\n\u003Cli>\u003Cstrong>Historial (Bajas)\u003C/strong>: las personas dadas de baja. A cada pestaña le sigue un número con la cantidad.\u003C/li>\n\u003C/ul>\n\u003Ch3>Buscar a alguien\u003C/h3>\n\u003Cp>Tocá la barra \u003Cstrong>Filtros\u003C/strong> para abrirla. Se abre sola si ya buscaste algo.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong>: escribí una parte del nombre. Por ejemplo: \u003Cem>Juan\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Apellido\u003C/strong>: escribí una parte del apellido. Por ejemplo: \u003Cem>Pérez\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>DNI\u003C/strong>: escribí el número completo, sin puntos. Por ejemplo: \u003Cem>30123456\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Departamento\u003C/strong>: elegí uno de la lista. Con \u003Cstrong>-- Todos --\u003C/strong> no se filtra por departamento.\u003C/li>\n\u003C/ul>\n\u003Cp>Tocá el botón azul \u003Cstrong>Buscar\u003C/strong>. Para volver a ver todos, tocá \u003Cstrong>Limpiar filtros\u003C/strong>. Ese botón aparece solo cuando hay un filtro puesto.\u003C/p>\n\u003Ch3>Qué muestra cada columna\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Foto\u003C/strong>: la foto de la persona. Si no tiene, ves un dibujito gris.\u003C/li>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong>: apellido y nombre. Abajo, el número de legajo si lo cargaste.\u003C/li>\n\u003Cli>\u003Cstrong>DNI\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Departamento\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Turno\u003C/strong>: los turnos que tiene asignados.\u003C/li>\n\u003Cli>\u003Cstrong>Contacto\u003C/strong>: teléfono y e-mail.\u003C/li>\n\u003Cli>\u003Cstrong>Estado\u003C/strong>: una etiqueta verde si está activo y una roja si está dado de baja.\u003C/li>\n\u003C/ul>\n\u003Cp>Tocá el título \u003Cstrong>Nombre\u003C/strong>, \u003Cstrong>DNI\u003C/strong>, \u003Cstrong>Departamento\u003C/strong> o \u003Cstrong>Contacto\u003C/strong> para ordenar la lista. La lista sale ordenada por nombre.\u003C/p>\n\u003Cp>Si no hay resultados, la pantalla dice \u003Cstrong>No se encontraron empleados\u003C/strong>. En la pestaña de bajas dice \u003Cstrong>No hay empleados dados de baja\u003C/strong>.\u003C/p>\n\u003Ch3>Los botones de cada renglón\u003C/h3>\n\u003Cp>A la derecha de cada empleado hay estos botones:\u003C/p>\n\u003Cul>\n\u003Cli>El ojo, \u003Cstrong>Ver\u003C/strong>: abre la ficha del empleado (Paso 4).\u003C/li>\n\u003Cli>La llave amarilla, \u003Cstrong>Reiniciar Password\u003C/strong>: solo aparece si el empleado tiene un usuario del sistema. Le manda una contraseña nueva por e-mail. El sistema te pregunta antes. Necesitás el permiso de cambiar contraseñas.\u003C/li>\n\u003Cli>El lápiz azul, \u003Cstrong>Editar\u003C/strong>: abre el formulario para corregir datos (Paso 5).\u003C/li>\n\u003Cli>El tacho rojo, \u003Cstrong>Eliminar\u003C/strong>: saca al empleado de la lista (Paso 7).\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 2: Tocá &quot;Nuevo Empleado&quot;\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-toca-nuevo-empleado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-toca-nuevo-empleado\">\u003C/div>\n\n\u003Col>\n\u003Cli>Arriba a la derecha, tocá el botón verde \u003Cstrong>Nuevo Empleado\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la pantalla \u003Cstrong>Nuevo Empleado\u003C/strong>, con varios cuadros para completar.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📝 Paso 3: Completá el formulario\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-completa-el-formulario\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-completa-el-formulario\">\u003C/div>\n\n\u003Cp>Solo son obligatorios el \u003Cstrong>Nombre\u003C/strong> y el \u003Cstrong>Apellido\u003C/strong>. El resto lo podés completar después.\u003C/p>\n\u003Ch3>Cuadro Foto\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Sacar Foto\u003C/strong>: el botón verde saca la foto con la cámara de tu equipo. El navegador te pide permiso la primera vez.\u003C/li>\n\u003Cli>\u003Cstrong>O subir archivo\u003C/strong>: elegí una foto que ya tengas guardada.\u003C/li>\n\u003C/ul>\n\u003Cp>La foto sirve para reconocer a la persona en la pantalla de \u003Ca href=\"/user-guide/empleados-trabajando\">Empleados Trabajando\u003C/a>.\u003C/p>\n\u003Ch3>Cuadro Datos Personales\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong> y \u003Cstrong>Apellido\u003C/strong>: obligatorios. Por ejemplo: \u003Cem>Juan\u003C/em> y \u003Cem>Pérez\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>DNI\u003C/strong>: solo números, sin puntos. Por ejemplo: \u003Cem>30123456\u003C/em>. El sistema no deja cargar dos empleados con el mismo DNI.\u003C/li>\n\u003Cli>\u003Cstrong>Departamento\u003C/strong>: elegí uno de la lista. Por ejemplo: \u003Cem>Cocina\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>E-Mail\u003C/strong> y \u003Cstrong>Teléfono\u003C/strong>: para contactarlo.\u003C/li>\n\u003C/ul>\n\u003Ch3>Cuadro Jornada y Turnos\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Horas Semanales\u003C/strong>: cuántas horas trabaja por semana. Por ejemplo: \u003Cem>40\u003C/em>. El \u003Ca href=\"/user-guide/reporte-mensual-fichaje\">Reporte Mensual\u003C/a> lo usa para calcular las horas esperadas.\u003C/li>\n\u003Cli>\u003Cstrong>Valor hora (estimación de costo)\u003C/strong>: el precio de la hora de trabajo. Solo lo ves si tenés el permiso de Recursos Humanos. Sirve para estimar el costo del personal. No reemplaza la liquidación oficial.\u003C/li>\n\u003Cli>\u003Cstrong>Turnos Asignados\u003C/strong>: tildá los turnos que hace. Se usan para saber si llegó tarde.\u003C/li>\n\u003C/ul>\n\u003Ch3>Cuadro Usuario del Sistema\u003C/h3>\n\u003Cul>\n\u003Cli>Elegí un usuario si la persona también entra al sistema o usa la app de fichaje. Con \u003Cstrong>-- Sin usuario asignado --\u003C/strong> no se vincula ninguno.\u003C/li>\n\u003Cli>Un mismo usuario no puede estar en dos empleados.\u003C/li>\n\u003Cli>Solo quien tiene el permiso de Recursos Humanos puede elegir el usuario. Para el resto, el casillero está bloqueado.\u003C/li>\n\u003Cli>Para crear usuarios, mirá \u003Ca href=\"/user-guide/usuarios-del-sistema\">Usuarios del Sistema\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Ch3>Cuadro Observaciones\u003C/h3>\n\u003Cul>\n\u003Cli>Escribí lo que quieras anotar sobre el empleado. Es texto libre.\u003C/li>\n\u003C/ul>\n\u003Ch3>Cuadro Datos para RRHH y Liquidación\u003C/h3>\n\u003Cp>Lo ves solo con el permiso de Recursos Humanos.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>CUIL\u003C/strong>, \u003Cstrong>Legajo\u003C/strong> y \u003Cstrong>CBU\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha de Ingreso\u003C/strong>: el día que empezó a trabajar.\u003C/li>\n\u003Cli>\u003Cstrong>Situación\u003C/strong>: dejá \u003Cstrong>Activo (sin especificar)\u003C/strong> para un empleado que trabaja. Otras opciones lo dan de baja (Paso 6).\u003C/li>\n\u003Cli>\u003Cstrong>Convenio\u003C/strong>, \u003Cstrong>Obra Social\u003C/strong> y \u003Cstrong>Adicional\u003C/strong>: elegí uno de cada lista, si corresponde.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si el comercio tiene un lector de DNI conectado, al pasar el documento se completan solos el nombre, el apellido y el DNI.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💾 Paso 4: Registrá al empleado\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-registra-al-empleado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-registra-al-empleado\">\u003C/div>\n\n\u003Cp>Al final de la pantalla hay tres botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>, a la izquierda: vuelve a la lista sin guardar.\u003C/li>\n\u003Cli>\u003Cstrong>Registrar\u003C/strong>, verde, a la derecha: guarda el empleado.\u003C/li>\n\u003Cli>\u003Cstrong>Registrar y Fichar\u003C/strong>, rojo, a la derecha: guarda al empleado y abre la pantalla para marcar su ingreso ahora mismo.\u003C/li>\n\u003C/ul>\n\u003Cp>Si falta el nombre o el apellido, o el DNI ya existe, el sistema muestra un mensaje rojo y no guarda. Corregí el dato y probá de nuevo.\u003C/p>\n\u003Cp>Cuando se guarda, ves un mensaje verde. Después, entrá a \u003Cstrong>Empleados\u003C/strong> para verlo en la lista.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👤 Paso 5: Abrí la ficha de un empleado\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-abri-la-ficha-de-un-empleado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-abri-la-ficha-de-un-empleado\">\u003C/div>\n\n\u003Col>\n\u003Cli>En la lista, tocá el ojo \u003Cstrong>Ver\u003C/strong> del empleado.\u003C/li>\n\u003Cli>Arriba ves su foto, su nombre y etiquetas con su estado, su legajo y su departamento. A la derecha está el botón verde \u003Cstrong>Editar\u003C/strong>.\u003C/li>\n\u003Cli>Si está dado de baja, aparece un aviso rojo que dice \u003Cstrong>Empleado dado de baja\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>Más abajo la ficha tiene estos cuadros:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Datos Personales\u003C/strong>: DNI, CUIL, e-mail, teléfono, domicilio, fecha de nacimiento y observación.\u003C/li>\n\u003Cli>\u003Cstrong>Datos Laborales\u003C/strong>: legajo, CBU, convenio, obra social, fecha de ingreso y jornada semanal. También cuándo se dio de alta en el sistema y cuándo se modificó por última vez.\u003C/li>\n\u003Cli>\u003Cstrong>Turnos Asignados\u003C/strong>: cada turno con su horario, la tolerancia en minutos y los días de la semana.\u003C/li>\n\u003Cli>\u003Cstrong>Resumen de Horas Trabajadas por Mes\u003C/strong>: las horas de los últimos 12 meses.\u003C/li>\n\u003Cli>\u003Cstrong>Registros de Fichadas (Ingresos y Egresos)\u003C/strong>: cada fichada de la persona, la más nueva primero.\u003C/li>\n\u003C/ul>\n\u003Ch3>La tabla de fichadas\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Fecha\u003C/strong>, \u003Cstrong>Ingreso (fichada)\u003C/strong> y \u003Cstrong>Egreso (fichada)\u003C/strong>: el día y la hora de cada marca. Con una foto de cuando fichó, si hay.\u003C/li>\n\u003Cli>\u003Cstrong>Created del Registro\u003C/strong>: la hora en que el sistema recibió la marca. Si es muy distinta de la hora de la fichada, alguien la corrigió.\u003C/li>\n\u003Cli>\u003Cstrong>Hs. Trabajadas\u003C/strong>: el tiempo entre el ingreso y el egreso.\u003C/li>\n\u003Cli>\u003Cstrong>Turno\u003C/strong>: el turno que se le asignó a esa fichada.\u003C/li>\n\u003Cli>\u003Cstrong>Puntualidad\u003C/strong>: \u003Cstrong>En hora\u003C/strong> o \u003Cstrong>TARDE\u003C/strong> con los minutos que pasó de la tolerancia del turno.\u003C/li>\n\u003Cli>\u003Cstrong>Hs. Extras\u003C/strong>: lo trabajado de más respecto del turno.\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: los botones para corregir, que se explican en \u003Ca href=\"/user-guide/registro-diario-fichaje\">Registro Diario de Fichaje\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Cp>Quien tiene el permiso de liquidar sueldos ve además la etiqueta \u003Cstrong>EDITADO\u003C/strong> en las marcas corregidas a mano. También ve un botón rojo con la cantidad de marcas editadas y el enlace \u003Cstrong>Ver auditoría completa\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ Paso 6: Corregí datos o dá de baja a un empleado\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-corregi-datos-o-da-de-baja-a-un-empleado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-corregi-datos-o-da-de-baja-a-un-empleado\">\u003C/div>\n\n\u003Col>\n\u003Cli>En la lista, tocá el lápiz \u003Cstrong>Editar\u003C/strong>. También podés tocar \u003Cstrong>Editar\u003C/strong> dentro de la ficha.\u003C/li>\n\u003Cli>Se abre \u003Cstrong>Editar Empleado\u003C/strong>, con los mismos cuadros que el alta.\u003C/li>\n\u003Cli>Arriba hay un cuadro nuevo, \u003Cstrong>Estado Laboral\u003C/strong>:\u003Cul>\n\u003Cli>\u003Cstrong>Situación\u003C/strong>: elegí cómo está hoy el empleado. \u003Cstrong>Activo (sin especificar)\u003C/strong> lo deja trabajando. Cualquier otra opción de baja lo pasa a la pestaña \u003Cstrong>Historial (Bajas)\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha de Ingreso\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>En el cuadro \u003Cstrong>Foto\u003C/strong> podés cambiar la foto. Si el empleado ya tenía una, ves la foto y el casillero \u003Cstrong>Cambiar foto\u003C/strong>.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar Cambios\u003C/strong>, abajo a la derecha. Volvés a la lista.\u003C/li>\n\u003C/ol>\n\u003Cp>Las situaciones que cuentan como activas son \u003Cstrong>Activo\u003C/strong>, \u003Cstrong>Reserva de puesto\u003C/strong>, \u003Cstrong>Licencia sin goce\u003C/strong> y \u003Cstrong>Trabajador de temporada\u003C/strong>. Las demás cuentan como baja.\u003C/p>\n\u003Cp>Para \u003Cstrong>reincorporar\u003C/strong> a alguien de baja, entrá a \u003Cstrong>Historial (Bajas)\u003C/strong>, tocá \u003Cstrong>Editar\u003C/strong> y cambiá la \u003Cstrong>Situación\u003C/strong> a \u003Cstrong>Activo (sin especificar)\u003C/strong>. El aviso rojo \u003Cstrong>Este empleado está dado de baja\u003C/strong> te lo recuerda.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> para que alguien deje de trabajar con vos, usá la baja. No lo elimines. Así conservás sus fichadas y su historial.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗑️ Paso 7: Eliminá un empleado\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-elimina-un-empleado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-elimina-un-empleado\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> el empleado desaparece de las listas y del \u003Ca href=\"/user-guide/reporte-mensual-fichaje\">Reporte Mensual\u003C/a>. Usalo solo para un alta cargada por error. Si alguien dejó de trabajar, dalo de baja como en el Paso 6.\u003C/p>\n\u003C/blockquote>\n\u003Col>\n\u003Cli>En la lista, tocá el tacho rojo \u003Cstrong>Eliminar\u003C/strong> del empleado.\u003C/li>\n\u003Cli>El sistema pregunta \u003Cstrong>¿Eliminar a Juan Pérez?\u003C/strong>.\u003C/li>\n\u003Cli>Confirmá para eliminarlo. Si no querés, cancelá.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>El DNI ya existe en la base de datos\u003C/strong>\u003C/td>\n\u003Ctd>Ya hay un empleado con ese DNI. Puede estar de baja.\u003C/td>\n\u003Ctd>Buscalo por DNI. Miralo también en \u003Cstrong>Historial (Bajas)\u003C/strong>. Si está de baja, reincorporalo en lugar de crear uno nuevo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No puedo ingresar el mismo usuario para dos empleados\u003C/strong>\u003C/td>\n\u003Ctd>Ese usuario ya está vinculado a otro empleado.\u003C/td>\n\u003Ctd>Elegí otro usuario, o dejá \u003Cstrong>-- Sin usuario asignado --\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo el menú \u003Cstrong>RRHH\u003C/strong>\u003C/td>\n\u003Ctd>El módulo no está activo o tu rol no tiene el permiso.\u003C/td>\n\u003Ctd>Pedile a un administrador que revise \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo los cuadros de CUIL, CBU y Situación\u003C/td>\n\u003Ctd>Esos datos son solo para quien tiene el permiso de Recursos Humanos.\u003C/td>\n\u003Ctd>Pedí el permiso a un administrador.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El casillero \u003Cstrong>Usuario del Sistema\u003C/strong> está bloqueado\u003C/td>\n\u003Ctd>Tu rol no tiene el permiso de Recursos Humanos.\u003C/td>\n\u003Ctd>Pedile a un administrador que lo vincule.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Falta un empleado en la lista\u003C/td>\n\u003Ctd>Está dado de baja, o hay un filtro puesto.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Limpiar filtros\u003C/strong> y mirá la pestaña \u003Cstrong>Historial (Bajas)\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No aparece la llave \u003Cstrong>Reiniciar Password\u003C/strong>\u003C/td>\n\u003Ctd>El empleado no tiene un usuario vinculado.\u003C/td>\n\u003Ctd>Editá al empleado y elegí su usuario en \u003Cstrong>Usuario del Sistema\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El empleado no aparece en \u003Ca href=\"/user-guide/empleados-trabajando\">Empleados Trabajando\u003C/a>\u003C/td>\n\u003Ctd>Todavía no marcó el ingreso.\u003C/td>\n\u003Ctd>Marcá su ingreso desde esa pantalla o desde la app de fichaje.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-mira-la-lista-de-empleados",title:"Paso 1: Mirá la lista de empleados",level:2},{id:"paso-2-toca-nuevo-empleado",title:"Paso 2: Tocá \"Nuevo Empleado\"",level:2},{id:"paso-3-completa-el-formulario",title:"Paso 3: Completá el formulario",level:2},{id:"paso-4-registra-al-empleado",title:"Paso 4: Registrá al empleado",level:2},{id:"paso-5-abri-la-ficha-de-un-empleado",title:"Paso 5: Abrí la ficha de un empleado",level:2},{id:"paso-6-corregi-datos-o-da-de-baja-a-un-empleado",title:"Paso 6: Corregí datos o dá de baja a un empleado",level:2},{id:"paso-7-elimina-un-empleado",title:"Paso 7: Eliminá un empleado",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Empleados - Manual",description:"¿Dónde está en el sistema?: Menú principal → RRHH → Empleados\n ¿Quién lo usa?: Recursos Humanos, encargados y administradores.",keywords:"empleados, paxapos, empleados, tutorial, guía, manual usuario"},llmTxtFile:"91-empleados.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

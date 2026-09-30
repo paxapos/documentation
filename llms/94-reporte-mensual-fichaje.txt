@@ -1,0 +1,81 @@
+﻿# Reporte Mensual Fichaje
+
+Reporte Mensual de Fichaje
+¿Dónde está en el sistema?: Menú principal → RRHH → Reporte Mensual
+¿Quién lo usa?: Recursos humanos, quien liquida sueldos y gerentes.
+🎯 ¿Para qué sirve esto?
+Resume el mes de cada empleado en un renglón: cuántas horas trabajó, cuántas debía, cuántos días vino y si llegó a horario.
+Sirve para controlar la asistencia y preparar la liquidación de sueldos.
+---
+🔑 Antes de empezar
+• Tiene que estar activo el módulo de Fichaje o el de RRHH.
+• Para abrir el reporte necesitás el permiso Recursos Humanos. Mirá Permisos por Rol.
+• El botón Auditoría Editados necesita, además, el permiso de liquidar sueldos.
+• El reporte sale de las fichadas. Antes de usarlo, revisá que no falten salidas en el Registro Diario de Fichaje.
+• Cada empleado tiene que tener cargadas sus Horas Semanales y sus turnos. Se cargan en Empleados. Sin eso, no hay horas esperadas ni puntualidad.
+---
+📅 Paso 1: Elegí el mes
+Al entrar, el reporte abre el mes en curso.
+• El título grande muestra el mes y los días que tiene. Por ejemplo: septiembre 2026 (30 días).
+• Si el mes todavía no terminó, debajo aparece Transcurridos 29 de 30 días. Con ese dato se calculan las horas esperadas hasta hoy.
+• Debajo dice cuántos empleados aparecen. Por ejemplo: Hay 12 empleados.
+• A la izquierda hay un botón azul con el nombre del mes anterior. Por ejemplo: agosto 2026.
+• A la derecha hay un botón azul con el mes siguiente. Por ejemplo: octubre 2026 >.
+Tocá esos botones para ir de mes en mes. El reporte siempre toma el mes entero.
+---
+🔎 Paso 2: Filtrá por turno o departamento
+Arriba de la tabla hay dos listas para elegir. Al elegir una opción, la pantalla se actualiza sola.
+• Turnos: elegí un turno para ver solo las jornadas de ese turno.
+• Departamentos: elegí un departamento para ver solo a esa gente.
+💡 Consejo útil: las columnas de puntualidad y turno se calculan con todas las fichadas del mes. Si filtrás por turno, esas columnas pueden mostrar más datos que las horas trabajadas.
+---
+📊 Paso 3: Leé cada columna
+Sale un renglón por empleado, ordenado por apellido. Solo aparecen quienes tienen al menos un ingreso en el mes. Tocá el nombre para abrir la ficha.
+• Empleado: apellido y nombre.
+• Departamento.
+• Turno: el nombre del turno de sus fichadas. Si no tiene, ves una raya.
+• Hs Jornada Semanal: las horas por semana cargadas en la ficha del empleado.
+• Hs esperadas: las horas que debería haber trabajado. Se calcula así: horas semanales, divididas 7, por los días del mes. En un mes en curso solo cuenta los días transcurridos. Por ejemplo: con 40 horas semanales y 30 días, son 171:26.
+• Hs Trabajadas: la suma de todas sus jornadas completas, en horas y minutos. Una jornada sin salida no suma nada.
+• Días Fich.: cuántos días distintos fichó ingreso.
+• Sin Egreso: cuántas jornadas quedaron sin salida. Si es mayor a cero, sale en rojo. Es una señal de que hay que corregirlas.
+• Puntual: cuántas veces llegó dentro de la tolerancia del turno. Sale en verde.
+• Tarde: cuántas veces llegó después de la tolerancia. Sale en rojo cuando es mayor a cero.
+• Temprano: cuántas veces llegó antes que el turno, pasada la tolerancia. Sale en naranja.
+• Hs Extras: hoy esta columna muestra una raya para todos. Para ver extras, mirá la ficha del empleado o el Registro Diario de Fichaje.
+• Dif.: las horas esperadas menos las trabajadas. Si es positiva, faltan horas. Si es negativa, trabajó de más. Sale una raya si el empleado no tiene horas semanales.
+• Editados: cuántas marcas se corrigieron a mano. Si es mayor a cero, es un enlace a la auditoría.
+Cómo se decide si llegó tarde
+El sistema compara la hora de ingreso con la del turno. Se fija solo en la hora del día. Por ejemplo, con un turno de 08:00 y 10 minutos de tolerancia:
+• Llegó 07:55: Puntual.
+• Llegó 08:10: Puntual.
+• Llegó 08:11: Tarde.
+• Llegó 07:49: Temprano.
+Las jornadas sin turno asignado no cuentan en Puntual, Tarde ni Temprano.
+---
+🕵️ Paso 4: Revisá las marcas corregidas
+Una marca cuenta como editada cuando su hora difiere más de 5 minutos de la hora en que el sistema la recibió.
+1. En la tabla, buscá un número rojo con un triángulo en la columna Editados.
+2. Tocalo para abrir el detalle de ese empleado.
+3. O tocá el botón rojo Auditoría Editados, arriba a la derecha. Muestra a todos los empleados del mes.
+Solo lo ve quien tiene permiso de liquidar sueldos. Sin ese permiso, el sistema no abre la pantalla.
+---
+📥 Paso 5: Descargá el Excel
+1. Arriba a la derecha, tocá el botón Descargar Excel.
+2. Se descarga una planilla con la hoja RRHH Reporte.
+La planilla trae las mismas columnas que la pantalla, con estas diferencias:
+• No incluye la columna Hs Extras.
+• En Hs esperadas siempre usa el mes completo, aunque el mes no haya terminado.
+💡 Consejo útil: descargá el Excel cuando el mes ya cerró. Así Hs esperadas y Dif. quedan completas.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| Un empleado figura con menos horas de las reales | Tiene jornadas sin salida. Esas horas no se suman. | Mirá Sin Egreso. Completá las salidas en el Registro Diario de Fichaje. |
+| Hs esperadas figura en cero | El empleado no tiene Horas Semanales cargadas. | Editalo en Empleados y completá Horas Semanales. |
+| Dif. muestra una raya | El empleado no tiene horas semanales, o el mes todavía no empezó. | Cargá Horas Semanales en su ficha. |
+| Todas las llegadas figuran en cero | Los empleados no tienen turno o el turno no tiene hora de ingreso. | Asigná turnos en Empleados. Armalos en Turnos y Horarios. |
+| Un empleado no aparece | No fichó ingreso ese mes, o fue eliminado. | Buscá sus fichadas en el Registro Diario de Fichaje. |
+| Hs Extras siempre dice una raya | La columna no se calcula en este reporte. | Mirá las extras en la ficha del empleado. |
+| Me dice que no tengo permiso | El reporte requiere el permiso de Recursos Humanos. | Pedí a un administrador que lo active en Permisos por Rol. |
+| El botón Auditoría Editados da error de permiso | Falta el permiso de liquidar sueldos. | Pedí ese permiso a un administrador. |

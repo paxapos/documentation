@@ -1,0 +1,75 @@
+﻿# Configuracion Procesadores
+
+Configuración de Procesadores de Pago
+¿Dónde está en el sistema?: Menú principal → Medios de Pago → Configuración de Procesadores
+¿Quién lo usa?: Dueños y administradores del comercio
+🎯 ¿Para qué sirve esto?
+Acá elegís con qué empresa cobrás cuando el cliente paga con QR, con un link o con una terminal de tarjetas.
+Esa empresa se llama "procesador". Por ejemplo: MercadoPago, Payway o MacroClick.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso Contabilidad de Finanzas en Permisos por Rol.
+• Tenés que tener una cuenta abierta en el procesador que vas a usar. Por ejemplo, una cuenta de MercadoPago.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Medios de Pago marcado en rojo
+1. En el menú de la izquierda, tocá Medios de Pago.
+2. Se abre la lista de opciones de ese grupo.
+!Opción Configuración de Procesadores marcada en rojo en el menú lateral
+3. Tocá Configuración de Procesadores.
+!Pantalla Medios de Pago con las tres tarjetas: Cobro con QR, Link de Pago y Terminal SmartPOS
+Así se ve la pantalla. Arriba hay tres tarjetas, una por cada forma de cobrar.
+---
+📱 Paso 2: Elegí el procesador para cobrar con QR
+!Tarjeta Cobro con QR con las opciones MercadoPago, MacroClick y Deshabilitado
+1. Mirá la tarjeta Cobro con QR. Es la de la izquierda.
+2. Tocá el nombre del procesador que querés usar. Por ejemplo: MercadoPago.
+3. La opción elegida queda con borde azul.
+4. Si no cobrás con QR, tocá Deshabilitado.
+---
+🔗 Paso 3: Elegí el procesador para el link de pago
+!Tarjeta Link de Pago con las opciones MercadoPago, Payway, Pedimelo Online y Deshabilitado
+1. Mirá la tarjeta Link de Pago. Es la del medio.
+2. El link de pago es el que le mandás al cliente por WhatsApp o por email.
+3. Tocá el procesador que querés usar, o Deshabilitado si no lo usás.
+---
+💳 Paso 4: Elegí el procesador para la terminal de tarjetas
+!Tarjeta Terminal SmartPOS con las opciones MercadoPago, Payway y Deshabilitado
+1. Mirá la tarjeta Terminal SmartPOS. Es la de la derecha.
+2. Es la maquinita donde el cliente pasa o apoya la tarjeta.
+3. Tocá la empresa de tu terminal, o Deshabilitado si no tenés una.
+---
+💾 Paso 5: Guardá lo que elegiste
+⚠️ Atención: al guardar cambia la forma de cobrar de todo el comercio. Revisá bien las tres tarjetas antes.
+!Pantalla con el botón azul Guardar Configuración marcado en rojo, debajo de las tarjetas
+1. Tocá el botón azul Guardar Configuración. Está debajo de las tres tarjetas.
+2. La pantalla se vuelve a cargar con lo que elegiste.
+3. Más abajo aparece una solapa por cada procesador que elegiste.
+---
+⚙️ Paso 6: Conectá tu cuenta del procesador
+Después de guardar, en la parte de abajo hay una solapa por cada procesador que usás.
+Opción A: Vincular con MercadoPago (la más fácil)
+!Pantalla con el botón naranja Vincular con MercadoPago marcado en rojo
+1. Tocá el botón naranja Vincular con MercadoPago.
+2. Se abre la página de MercadoPago.
+3. Entrá con tu usuario de MercadoPago y aceptá darle permiso a PaxaPOS.
+4. Al terminar, volvés a PaxaPOS con la cuenta conectada.
+💡 Consejo útil: así no tenés que copiar ninguna clave a mano.
+Opción B: Configurar Credenciales
+!Pantalla con el botón azul Configurar Credenciales marcado en rojo
+1. Tocá el botón azul Configurar Credenciales.
+2. Se abre la pantalla de ese procesador.
+!Pantalla MercadoPago con el estado de la cuenta y los canales de cobro
+3. Arriba ves si la cuenta está bien conectada.
+4. Si ves un cuadro rojo que dice No pudimos verificar la cuenta, tocá Reconectar con MercadoPago.
+5. En Canales de cobro ves con qué cobra hoy cada forma de pago.
+!Pantalla MercadoPago con el botón Volver a medios de pago marcado en rojo
+6. Cuando termines, tocá Volver a medios de pago. Está abajo de todo.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No aparece Medios de Pago en el menú | Tu usuario no tiene el permiso Contabilidad de Finanzas. | Pedile al dueño que lo active en Permisos por Rol. |
+| Abajo no aparece ninguna solapa de procesador | Todavía no elegiste ni guardaste un procesador. | Elegí uno en alguna tarjeta y tocá Guardar Configuración. |
+| Cuadro rojo "No pudimos verificar la cuenta" | La conexión con MercadoPago venció o se cortó. | Tocá Configurar Credenciales y después Reconectar con MercadoPago. |
+| El cliente no puede pagar con QR o con link | Esa tarjeta quedó en Deshabilitado. | Elegí un procesador en esa tarjeta y guardá. |

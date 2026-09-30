@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Comandero → Comandas Activas, Comandas Terminadas, Sectores, Puestos, Estados de Com..."/> <meta name="keywords" content="comandero, paxapos, comandero (pantalla de cocina), tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Comandero (pantalla de cocina) - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Comandero → Comandas Activas, Comandas Terminadas, Sectores, Puestos, Estados de Com..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Comandero (pantalla de cocina) - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Comandero (pantalla de cocina) - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Comandero → Comandas Activas, Comandas Terminadas, Sectores, Puestos, Estados de Com..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Comandero (pantalla de cocina) - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Comandero → Comandas Activas, Comandas Terminadas, Sectores, Puestos, Estados de Com...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Comandero (pantalla de cocina) - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/comandero" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Comandero (pantalla de cocina)</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Comandero (pantalla de cocina)</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: comandero</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="comandero"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Comandero</strong> → <strong>Comandas Activas</strong>, <strong>Comandas Terminadas</strong>, <strong>Sectores</strong>, <strong>Puestos</strong>, <strong>Estados de Comanda</strong> y <strong>Estados de Items</strong>
+<strong>¿Quién lo usa?:</strong> Cocina, barra y encargados. La configuración la hace un administrador.</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+El Comandero es la pantalla de la cocina y la barra. Ahí aparece lo que los mozos comandan en el <a href="/user-guide/salon-de-ventas">Salón de Ventas</a>, sin papel.
+La cocina marca cada plato a medida que lo prepara, y el mozo sabe cuándo retirarlo.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>El módulo Comandero tiene que estar activo en tu comercio. Si no ves <strong>Comandero</strong> en el menú, pedíselo a soporte.</li>
+<li>Para usar <strong>Comandas Activas</strong> y <strong>Comandas Terminadas</strong> necesitás el permiso de comandas. Mirá <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li><strong>Sectores</strong>, <strong>Puestos</strong> y los estados los ve solo un administrador.</li>
+<li>Conviene tener una pantalla o tablet en la cocina, con el navegador abierto en <strong>Comandas Activas</strong>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🧩 Cómo se arma el Comandero
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="como-se-arma-el-comandero"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="como-se-arma-el-comandero"></div>
+
+<p>Se configura una sola vez, en este orden:</p>
+<ol>
+<li><strong>Sectores</strong>: las zonas del local donde se prepara. Por ejemplo: <em>Cocina</em> y <em>Barra</em>.</li>
+<li><strong>Puestos</strong>: los lugares de trabajo de cada sector. Por ejemplo: <em>Parrilla</em> y <em>Pastas</em>, dentro de <em>Cocina</em>.</li>
+<li><strong>Cada producto</strong> se asigna a un puesto. Así el sistema sabe a qué pantalla mandarlo.</li>
+<li><strong>Estados de Comanda</strong>: los pasos de un pedido completo. Por ejemplo: <em>Confirmada</em>, <em>Lista</em> y <em>Entregada</em>.</li>
+<li><strong>Estados de Items</strong>: los pasos de cada plato en cada puesto. Por ejemplo: <em>Pendiente</em>, <em>Elaborando</em> y <em>Listo</em>.</li>
+</ol>
+<p>Después, todos los días, la cocina usa <strong>Comandas Activas</strong>. Lo que ya se entregó queda en <strong>Comandas Terminadas</strong>.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> la pantalla de cocina y la impresora de comandas son cosas distintas. Podés usar una, la otra o las dos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🗺️ Paso 1: Creá los sectores
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-crea-los-sectores"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-crea-los-sectores"></div>
+
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Comandero</strong> y después <strong>Sectores</strong>.</li>
+<li>Tocá el botón verde <strong>Crear Sector</strong>, arriba a la derecha.</li>
+<li>En <strong>Nombre</strong>, escribí el nombre del sector. Por ejemplo: <em>Cocina</em>.</li>
+<li>Tocá el botón verde <strong>Guardar</strong>.</li>
+<li>El sector aparece en la lista.</li>
+</ol>
+<p>En cada renglón de la lista tenés dos botones:</p>
+<ul>
+<li><strong>Editar</strong>: cambiá el nombre del sector.</li>
+<li><strong>Borrar</strong>: el botón rojo. Borra el sector. El sistema te pregunta si estás seguro.</li>
+</ul>
+<p>Si todavía no creaste ninguno, la pantalla dice <strong>No hay sectores creados.</strong></p>
+<hr>
+<h2 class="relative">
+                🍳 Paso 2: Creá los puestos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-crea-los-puestos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-crea-los-puestos"></div>
+
+<ol>
+<li>En el menú <strong>Comandero</strong>, tocá <strong>Puestos</strong>.</li>
+<li>Tocá el botón verde <strong>Crear Puesto</strong>, arriba a la derecha.</li>
+<li>Completá los datos:<ul>
+<li><strong>Nombre</strong>: cómo se llama el puesto. Por ejemplo: <em>Parrilla</em>.</li>
+<li><strong>Capacidad</strong> y <strong>Unidad de Medida</strong>: cuánto puede preparar a la vez. No hace falta completarlos.</li>
+<li><strong>Sector</strong>: tocá el sector al que pertenece. Por ejemplo: <em>Cocina</em>.</li>
+</ul>
+</li>
+<li>Tocá el botón verde <strong>Guardar</strong>.</li>
+<li>El puesto aparece en la lista, con sus estados de trabajo ya armados.</li>
+</ol>
+<p>La lista muestra el <strong>Nombre</strong>, la <strong>Capacidad</strong>, la <strong>Unidad de Medida</strong>, el <strong>Sector</strong> y los <strong>Estados</strong> del puesto. Tocá un estado para cambiarlo.</p>
+<p>A la derecha de cada puesto tenés estos botones:</p>
+<ul>
+<li><strong>Editar</strong>: cambiá los datos del puesto.</li>
+<li><strong>Borrar</strong>: el botón rojo. Borra el puesto.</li>
+<li><strong>Crear Estados</strong>: aparece si el puesto no tiene estados. Le arma los estados de siempre.</li>
+<li><strong>Agregar Estado</strong>: aparece si el puesto ya tiene estados. Suma un paso nuevo (Paso 5).</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🏷️ Paso 3: Asigná cada producto a su puesto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-asigna-cada-producto-a-su-puesto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-asigna-cada-producto-a-su-puesto"></div>
+
+<p>El puesto se elige en cada producto del menú, no en la categoría.</p>
+<ol>
+<li>Abrí el producto para editarlo. Mirá cómo en <a href="/user-guide/menu">Menú</a>.</li>
+<li>Buscá el casillero <strong>Puesto (KDS)</strong>.</li>
+<li>Elegí el puesto donde se prepara. Por ejemplo: <em>Parrilla</em>. Con <strong>-- Sin asignar --</strong> no va a ningún puesto.</li>
+<li>Si además querés que salga en papel, tildá la impresora en <strong>¿Dónde se imprime la comanda?</strong>.</li>
+<li>Guardá el producto.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> los sabores o variantes también pueden tener su propio <strong>Puesto</strong>. Mirá <a href="/user-guide/variantes-grupo-sabores">Variantes</a>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔁 Paso 4: Revisá los estados de la comanda
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-revisa-los-estados-de-la-comanda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-revisa-los-estados-de-la-comanda"></div>
+
+<p>Una comanda es el pedido completo de una mesa. Pasa por varios estados, de izquierda a derecha.</p>
+<ol>
+<li>En el menú <strong>Comandero</strong>, tocá <strong>Estados de Comanda</strong>.</li>
+<li>Vas a ver el cuadro <strong>Flujo de Estados de Comanda</strong>. El sistema trae estos:<ul>
+<li><strong>Borrador</strong>: el mozo todavía no la mandó. No se ve en la cocina.</li>
+<li><strong>Confirmada</strong>: el mozo la mandó. Aparece en la cocina.</li>
+<li><strong>Lista</strong>: la cocina la terminó. Espera que el mozo la retire.</li>
+<li><strong>Entregada</strong>: el mozo la retiró. Sale de la pantalla de cocina.</li>
+</ul>
+</li>
+</ol>
+<p>Cada estado dice su lugar. Por ejemplo: <em>2 de 4</em>. Sobre cada uno tenés:</p>
+<ul>
+<li>El <strong>lápiz</strong> ✏️: cambiá el estado.</li>
+<li>La <strong>cruz</strong> ✖: borrá el estado. No aparece en <strong>Borrador</strong>, <strong>Confirmada</strong> ni <strong>Entregada</strong>, porque el sistema los necesita.</li>
+</ul>
+<p>Para sumar un paso, tocá <strong>Agregar Estado</strong>, arriba a la derecha. Completá:</p>
+<ul>
+<li><strong>Nombre</strong>: por ejemplo, <em>Marchando</em>.</li>
+<li><strong>Estado anterior</strong> y <strong>Estado posterior</strong>: entre qué estados va.</li>
+<li><strong>Colores</strong>: el color con el que se ve.</li>
+</ul>
+<p>Después tocá <strong>Guardar</strong>.</p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si ves el aviso <strong>Estados desconectados del flujo</strong>, hay estados sueltos. Editalos para ubicarlos entre dos estados, o borralos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🍽️ Paso 5: Revisá los estados de cada plato
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-revisa-los-estados-de-cada-plato"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-revisa-los-estados-de-cada-plato"></div>
+
+<p>Cada plato, dentro de la comanda, también avanza por pasos. Cada puesto tiene los suyos.</p>
+<ol>
+<li>En el menú <strong>Comandero</strong>, tocá <strong>Estados de Items</strong>.</li>
+<li>Vas a ver <strong>Flujo de Estados por Puesto</strong>: un recuadro por puesto con sus pasos.</li>
+<li>Los pasos de siempre son <strong>Pendiente</strong> → <strong>Elaborando</strong> → <strong>Listo</strong> → <strong>Saliendo</strong>.</li>
+</ol>
+<p>En cada recuadro tenés:</p>
+<ul>
+<li><strong>Agregar estado</strong>: el botón verde. Suma un paso a ese puesto.</li>
+<li>El <strong>lápiz</strong> ✏️ de cada paso: cambialo.</li>
+<li>La <strong>cruz</strong> ✖ de cada paso: borralo.</li>
+</ul>
+<p>Al agregar o cambiar un paso completás:</p>
+<ul>
+<li><strong>Nombre</strong>: elegilo de la lista. Por ejemplo: <em>En preparación</em>.</li>
+<li><strong>Estado anterior</strong>: el paso que va antes. Si lo dejás vacío, va primero.</li>
+<li><strong>Color del estado</strong>: gris, naranja, verde, azul, rojo, amarillo o violeta. Abajo ves cómo queda.</li>
+</ul>
+<p>Tocá <strong>Guardar</strong>. Si el puesto no tiene pasos, aparece en <strong>Puestos sin flujo de estados configurado</strong>. Tocá <strong>Crear flujo por defecto</strong> para armarle los de siempre.</p>
+<hr>
+<h2 class="relative">
+                📺 Paso 6: Abrí la pantalla de cocina
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-abri-la-pantalla-de-cocina"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-abri-la-pantalla-de-cocina"></div>
+
+<ol>
+<li>En el menú <strong>Comandero</strong>, tocá <strong>Comandas Activas</strong>.</li>
+<li>Se abre la pantalla de cocina, a pantalla completa y sin el menú.</li>
+</ol>
+<p>Arriba, de izquierda a derecha, tenés:</p>
+<ul>
+<li><strong>KDS</strong>: el logo. Te lleva al inicio del sistema.</li>
+<li>El botón de la <strong>lista</strong>: cambia entre ver comandas y ver platos (Paso 9).</li>
+<li><strong>Todos los sectores</strong>: elegí un sector para ver solo lo suyo.</li>
+<li><strong>Todos los puestos</strong>: aparece después de elegir un sector. Elegí tu puesto. Por ejemplo: <em>Parrilla</em>.</li>
+<li>El <strong>reloj</strong>.</li>
+<li>El <strong>engranaje</strong> ⚙: sonido, voz, tamaño y más (Paso 10).</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> en la pantalla de cada puesto, elegí su sector y su puesto. Así la parrilla ve solo lo de la parrilla.</p>
+</blockquote>
+<p>Si no hay pedidos, dice <strong>No hay comandas activas</strong>. Si elegiste un filtro, dice <strong>No hay comandas para este filtro</strong> y aparece <strong>Ver todas</strong>.</p>
+<hr>
+<h2 class="relative">
+                🧾 Paso 7: Leé una comanda
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-lee-una-comanda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-lee-una-comanda"></div>
+
+<p>Cada pedido es una tarjeta. Las nuevas se suman al final.</p>
+<ul>
+<li><strong>Arriba a la izquierda</strong>: el mozo, hace cuánto llegó (por ejemplo, <em>hace 5 minutos</em>) y el número de comanda.</li>
+<li><strong>Arriba a la derecha</strong>: el número de mesa, en grande, y el estado de la comanda. Por ejemplo: <strong>CONFIRMADA</strong>.</li>
+<li><strong>El color de arriba</strong> cambia con el estado: azul si está confirmada, naranja si está en marcha y verde si está lista.</li>
+<li><strong>La observación</strong> del pedido, si el mozo escribió una.</li>
+<li><strong>ENTRADAS</strong> y <strong>PRINCIPALES</strong>: los platos, separados.</li>
+</ul>
+<p>Cada plato muestra:</p>
+<ul>
+<li>La <strong>cantidad</strong>, en un círculo.</li>
+<li>El <strong>nombre</strong> y sus <strong>sabores</strong> o variantes. Por ejemplo: <em>2x Muzzarella</em>.</li>
+<li>La <strong>observación</strong> del plato. Por ejemplo: <em>sin sal</em>.</li>
+<li><strong>Arriba a la derecha</strong>, un punto de color con su paso. Por ejemplo: <strong>PENDIENTE</strong> en gris.</li>
+</ul>
+<p>Cuando llega un pedido nuevo, suena un aviso y una voz lee la mesa y los platos.</p>
+<hr>
+<h2 class="relative">
+                👆 Paso 8: Avanzá los platos y la comanda
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-avanza-los-platos-y-la-comanda"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-8-avanza-los-platos-y-la-comanda"></div>
+
+<h3>Cada plato</h3>
+<ol>
+<li>Tocá el plato para pasarlo al paso siguiente. Por ejemplo: de <strong>PENDIENTE</strong> a <strong>ELABORANDO</strong>.</li>
+<li>Volvé a tocarlo cuando avance otra vez. Por ejemplo: a <strong>LISTO</strong>.</li>
+<li>En el último paso ya no cambia más.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> desde la pantalla no se puede volver un plato para atrás. Tocalo con cuidado.</p>
+</blockquote>
+<p>Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se ven más apagados.</p>
+<h3>La comanda entera</h3>
+<ul>
+<li>Abajo de la tarjeta está la barra <strong>CAMBIAR A</strong> con el paso siguiente. Por ejemplo: <strong>CAMBIAR A LISTA ▸</strong>. Tocala para avanzar la comanda.</li>
+<li>Cuando todos los platos terminan, aparece la barra verde <strong>TODOS LISTOS — MARCAR COMO</strong> y el paso. Tocala para pasar la comanda a ese paso.</li>
+</ul>
+<h3>Cuando el mozo retira</h3>
+<ol>
+<li>Con la comanda en <strong>Lista</strong>, tocá la barra de abajo.</li>
+<li>Se abre la ventanita <strong>Mesa</strong> y el número: <strong>¿Confirma que el mozo retiró esta comanda?</strong></li>
+<li>Tocá <strong>Retirada</strong>. La comanda pasa a <strong>Entregada</strong> y sale de la pantalla.</li>
+<li>Si te equivocaste, tocá <strong>Cancelar</strong>.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si mantenés apretada una tarjeta 3 segundos, la comanda pasa directo a <strong>Entregada</strong> y sale de la pantalla.</p>
+</blockquote>
+<h3>Los tres puntitos ⋮</h3>
+<p>Algunos usuarios ven <strong>⋮</strong> arriba a la derecha de la tarjeta. Abre la lista de estados. Tocá uno para pasar la comanda directo a ese estado. Si elegís <strong>Borrador</strong> o <strong>Entregada</strong>, sale de la pantalla.</p>
+<hr>
+<h2 class="relative">
+                🧮 Paso 9: Mirá los platos juntos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-9-mira-los-platos-juntos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-9-mira-los-platos-juntos"></div>
+
+<p>Sirve para cocinar varios iguales de una vez. Por ejemplo: todas las <em>Pizza Muzzarella</em> pendientes.</p>
+<ol>
+<li>Tocá el botón de la <strong>lista</strong>, arriba a la izquierda.</li>
+<li>La pantalla muestra una columna por paso. Por ejemplo: <strong>Pendiente (3)</strong> y <strong>Elaborando (1)</strong>.</li>
+<li>Cada tarjeta junta un mismo plato: la cantidad total, el nombre, las mesas que lo pidieron y hace cuánto espera el más viejo.</li>
+<li>Tocá una tarjeta para avanzar ese plato.</li>
+<li>Si lo pidieron varias mesas, se abre <strong>¿Cuál mover?</strong>. Tocá <strong>Todos</strong> o elegí una mesa. Con <strong>Cancelar</strong> no cambia nada.</li>
+</ol>
+<p>Si el plato tiene receta, aparece un <strong>libro</strong> 📖. Tocalo para ver la receta.</p>
+<p>Los platos que ya están listos no aparecen en esta vista. Para volver a ver las comandas, tocá el mismo botón. La pantalla se acuerda de la última vista que usaste.</p>
+<hr>
+<h2 class="relative">
+                ⚙️ Paso 10: Ajustá la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-10-ajusta-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-10-ajusta-la-pantalla"></div>
+
+<p>Tocá el <strong>engranaje</strong> ⚙, arriba a la derecha. Se abre un panel con:</p>
+<ul>
+<li><strong>Conectado</strong>: la pantalla recibe los pedidos. Si dice <strong>Sin conexión</strong>, revisá internet.</li>
+<li><strong>Sonido</strong>: prende o apaga el aviso y la voz.</li>
+<li><strong>Pantalla completa</strong>: ocupa toda la pantalla.</li>
+<li><strong>Voz / Idioma</strong>: elegí la voz que lee los pedidos. Tocá <strong>Probar voz</strong> para escucharla.</li>
+<li><strong>−</strong> y <strong>+</strong>: achicá o agrandá todo. El número del medio dice el tamaño. Por ejemplo: <em>100%</em>. El botón de las flechas lo vuelve a la normalidad.</li>
+<li><strong>Entregar todo</strong>: el botón rojo, debajo de <strong>Zona peligrosa</strong>.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Entregar todo</strong> marca como entregadas todas las comandas que se ven en pantalla. Pide confirmar dos veces y escribir la palabra <strong>ENTREGAR</strong>. Usalo solo al cerrar el turno.</p>
+</blockquote>
+<p>Cada pantalla recuerda su sonido, su voz y su tamaño.</p>
+<hr>
+<h2 class="relative">
+                ✅ Paso 11: Buscá una comanda entregada
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-11-busca-una-comanda-entregada"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-11-busca-una-comanda-entregada"></div>
+
+<ol>
+<li>En el menú <strong>Comandero</strong>, tocá <strong>Comandas Terminadas</strong>.</li>
+<li>Se abre <strong>Histórico de Comandas</strong>. Arriba dice cuántas comandas hay y en qué página estás.</li>
+<li>Para buscar, completá lo que necesites:<ul>
+<li><strong>N° Mesa...</strong>: el número de mesa.</li>
+<li>El selector de mozo: elegí uno, o dejá <strong>Todos</strong>.</li>
+<li><strong>Producto...</strong>: parte del nombre de un plato. Por ejemplo: <em>Muzzarella</em>.</li>
+</ul>
+</li>
+<li>Tocá <strong>Buscar</strong>.</li>
+<li>Abajo aparecen las comandas entregadas, de la más nueva a la más vieja. Hay 30 por página.</li>
+</ol>
+<p>Para pasar de página, usá <strong>‹ Anterior</strong> y <strong>Siguiente ›</strong>. Para sacar los filtros, tocá <strong>Limpiar filtros</strong>.</p>
+<p>Si una comanda se entregó por error, tocá <strong>‹ Atrás</strong> en su tarjeta. Vuelve a <strong>Lista</strong> y reaparece en <strong>Comandas Activas</strong>.</p>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>El pedido no aparece en la cocina</strong></td>
+<td>El mozo no lo mandó: sigue en <strong>Borrador</strong>.</td>
+<td>Pedile al mozo que lo comande desde el <a href="/user-guide/salon-de-ventas">Salón de Ventas</a>.</td>
+</tr>
+<tr>
+<td><strong>Un plato no aparece en mi puesto</strong></td>
+<td>El producto no tiene <strong>Puesto (KDS)</strong>, o tiene otro.</td>
+<td>Editá el producto y elegí el puesto correcto (Paso 3).</td>
+</tr>
+<tr>
+<td><strong>Veo platos de otros puestos</strong></td>
+<td>La pantalla está en <strong>Todos los sectores</strong> o <strong>Todos los puestos</strong>.</td>
+<td>Elegí tu sector y tu puesto arriba (Paso 6).</td>
+</tr>
+<tr>
+<td><strong>Las bebidas salen impresas en la cocina</strong></td>
+<td>El producto tiene tildada la impresora de la cocina.</td>
+<td>En el producto, revisá <strong>¿Dónde se imprime la comanda?</strong> (Paso 3).</td>
+</tr>
+<tr>
+<td><strong>No suena nada cuando llega un pedido</strong></td>
+<td>El sonido está apagado, o el navegador bloqueó el audio.</td>
+<td>Tocá el engranaje y prendé <strong>Sonido</strong>. Tocá la pantalla una vez para habilitar el audio.</td>
+</tr>
+<tr>
+<td><strong>Dice Sin conexión</strong></td>
+<td>La pantalla perdió internet.</td>
+<td>Revisá la conexión. Cuando vuelva, los pedidos se actualizan solos.</td>
+</tr>
+<tr>
+<td><strong>Toqué un plato por error</strong></td>
+<td>Desde la pantalla los platos no vuelven para atrás.</td>
+<td>Avisale a un encargado. Seguí con el paso que corresponde.</td>
+</tr>
+<tr>
+<td><strong>Entregué una comanda por error</strong></td>
+<td>Se tocó <strong>Retirada</strong>, <strong>Entregar todo</strong> o se mantuvo apretada la tarjeta.</td>
+<td>Buscala en <strong>Comandas Terminadas</strong> y tocá <strong>‹ Atrás</strong> (Paso 11).</td>
+</tr>
+<tr>
+<td><strong>No puedo cambiar nada en la pantalla</strong></td>
+<td>Tu usuario no tiene permiso para cambiar comandas.</td>
+<td>Pedile a un administrador que revise <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+<tr>
+<td><strong>No puedo borrar un estado de comanda</strong></td>
+<td><strong>Borrador</strong>, <strong>Confirmada</strong> y <strong>Entregada</strong> los necesita el sistema.</td>
+<td>Dejalos. Podés agregar otros estados entre ellos.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/81-comandero.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#como-se-arma-el-comandero" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo se arma el Comandero</a></li><li><a href="#paso-1-crea-los-sectores" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Creá los sectores</a></li><li><a href="#paso-2-crea-los-puestos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Creá los puestos</a></li><li><a href="#paso-3-asigna-cada-producto-a-su-puesto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Asigná cada producto a su puesto</a></li><li><a href="#paso-4-revisa-los-estados-de-la-comanda" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Revisá los estados de la comanda</a></li><li><a href="#paso-5-revisa-los-estados-de-cada-plato" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Revisá los estados de cada plato</a></li><li><a href="#paso-6-abri-la-pantalla-de-cocina" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Abrí la pantalla de cocina</a></li><li><a href="#paso-7-lee-una-comanda" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Leé una comanda</a></li><li><a href="#paso-8-avanza-los-platos-y-la-comanda" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Avanzá los platos y la comanda</a></li><li><a href="#paso-9-mira-los-platos-juntos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 9: Mirá los platos juntos</a></li><li><a href="#paso-10-ajusta-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 10: Ajustá la pantalla</a></li><li><a href="#paso-11-busca-una-comanda-entregada" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 11: Buscá una comanda entregada</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"comandero",title:"Comandero (pantalla de cocina)",content:"\u003Cdiv id=\"comandero\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Comandero\u003C/strong> → \u003Cstrong>Comandas Activas\u003C/strong>, \u003Cstrong>Comandas Terminadas\u003C/strong>, \u003Cstrong>Sectores\u003C/strong>, \u003Cstrong>Puestos\u003C/strong>, \u003Cstrong>Estados de Comanda\u003C/strong> y \u003Cstrong>Estados de Items\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Cocina, barra y encargados. La configuración la hace un administrador.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nEl Comandero es la pantalla de la cocina y la barra. Ahí aparece lo que los mozos comandan en el \u003Ca href=\"/user-guide/salon-de-ventas\">Salón de Ventas\u003C/a>, sin papel.\nLa cocina marca cada plato a medida que lo prepara, y el mozo sabe cuándo retirarlo.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>El módulo Comandero tiene que estar activo en tu comercio. Si no ves \u003Cstrong>Comandero\u003C/strong> en el menú, pedíselo a soporte.\u003C/li>\n\u003Cli>Para usar \u003Cstrong>Comandas Activas\u003C/strong> y \u003Cstrong>Comandas Terminadas\u003C/strong> necesitás el permiso de comandas. Mirá \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>\u003Cstrong>Sectores\u003C/strong>, \u003Cstrong>Puestos\u003C/strong> y los estados los ve solo un administrador.\u003C/li>\n\u003Cli>Conviene tener una pantalla o tablet en la cocina, con el navegador abierto en \u003Cstrong>Comandas Activas\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧩 Cómo se arma el Comandero\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"como-se-arma-el-comandero\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"como-se-arma-el-comandero\">\u003C/div>\n\n\u003Cp>Se configura una sola vez, en este orden:\u003C/p>\n\u003Col>\n\u003Cli>\u003Cstrong>Sectores\u003C/strong>: las zonas del local donde se prepara. Por ejemplo: \u003Cem>Cocina\u003C/em> y \u003Cem>Barra\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Puestos\u003C/strong>: los lugares de trabajo de cada sector. Por ejemplo: \u003Cem>Parrilla\u003C/em> y \u003Cem>Pastas\u003C/em>, dentro de \u003Cem>Cocina\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Cada producto\u003C/strong> se asigna a un puesto. Así el sistema sabe a qué pantalla mandarlo.\u003C/li>\n\u003Cli>\u003Cstrong>Estados de Comanda\u003C/strong>: los pasos de un pedido completo. Por ejemplo: \u003Cem>Confirmada\u003C/em>, \u003Cem>Lista\u003C/em> y \u003Cem>Entregada\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Estados de Items\u003C/strong>: los pasos de cada plato en cada puesto. Por ejemplo: \u003Cem>Pendiente\u003C/em>, \u003Cem>Elaborando\u003C/em> y \u003Cem>Listo\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>Después, todos los días, la cocina usa \u003Cstrong>Comandas Activas\u003C/strong>. Lo que ya se entregó queda en \u003Cstrong>Comandas Terminadas\u003C/strong>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> la pantalla de cocina y la impresora de comandas son cosas distintas. Podés usar una, la otra o las dos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗺️ Paso 1: Creá los sectores\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-crea-los-sectores\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-crea-los-sectores\">\u003C/div>\n\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Comandero\u003C/strong> y después \u003Cstrong>Sectores\u003C/strong>.\u003C/li>\n\u003Cli>Tocá el botón verde \u003Cstrong>Crear Sector\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003Cli>En \u003Cstrong>Nombre\u003C/strong>, escribí el nombre del sector. Por ejemplo: \u003Cem>Cocina\u003C/em>.\u003C/li>\n\u003Cli>Tocá el botón verde \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003Cli>El sector aparece en la lista.\u003C/li>\n\u003C/ol>\n\u003Cp>En cada renglón de la lista tenés dos botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: cambiá el nombre del sector.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar\u003C/strong>: el botón rojo. Borra el sector. El sistema te pregunta si estás seguro.\u003C/li>\n\u003C/ul>\n\u003Cp>Si todavía no creaste ninguno, la pantalla dice \u003Cstrong>No hay sectores creados.\u003C/strong>\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🍳 Paso 2: Creá los puestos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-crea-los-puestos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-crea-los-puestos\">\u003C/div>\n\n\u003Col>\n\u003Cli>En el menú \u003Cstrong>Comandero\u003C/strong>, tocá \u003Cstrong>Puestos\u003C/strong>.\u003C/li>\n\u003Cli>Tocá el botón verde \u003Cstrong>Crear Puesto\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003Cli>Completá los datos:\u003Cul>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong>: cómo se llama el puesto. Por ejemplo: \u003Cem>Parrilla\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Capacidad\u003C/strong> y \u003Cstrong>Unidad de Medida\u003C/strong>: cuánto puede preparar a la vez. No hace falta completarlos.\u003C/li>\n\u003Cli>\u003Cstrong>Sector\u003C/strong>: tocá el sector al que pertenece. Por ejemplo: \u003Cem>Cocina\u003C/em>.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>Tocá el botón verde \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003Cli>El puesto aparece en la lista, con sus estados de trabajo ya armados.\u003C/li>\n\u003C/ol>\n\u003Cp>La lista muestra el \u003Cstrong>Nombre\u003C/strong>, la \u003Cstrong>Capacidad\u003C/strong>, la \u003Cstrong>Unidad de Medida\u003C/strong>, el \u003Cstrong>Sector\u003C/strong> y los \u003Cstrong>Estados\u003C/strong> del puesto. Tocá un estado para cambiarlo.\u003C/p>\n\u003Cp>A la derecha de cada puesto tenés estos botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: cambiá los datos del puesto.\u003C/li>\n\u003Cli>\u003Cstrong>Borrar\u003C/strong>: el botón rojo. Borra el puesto.\u003C/li>\n\u003Cli>\u003Cstrong>Crear Estados\u003C/strong>: aparece si el puesto no tiene estados. Le arma los estados de siempre.\u003C/li>\n\u003Cli>\u003Cstrong>Agregar Estado\u003C/strong>: aparece si el puesto ya tiene estados. Suma un paso nuevo (Paso 5).\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🏷️ Paso 3: Asigná cada producto a su puesto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-asigna-cada-producto-a-su-puesto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-asigna-cada-producto-a-su-puesto\">\u003C/div>\n\n\u003Cp>El puesto se elige en cada producto del menú, no en la categoría.\u003C/p>\n\u003Col>\n\u003Cli>Abrí el producto para editarlo. Mirá cómo en \u003Ca href=\"/user-guide/menu\">Menú\u003C/a>.\u003C/li>\n\u003Cli>Buscá el casillero \u003Cstrong>Puesto (KDS)\u003C/strong>.\u003C/li>\n\u003Cli>Elegí el puesto donde se prepara. Por ejemplo: \u003Cem>Parrilla\u003C/em>. Con \u003Cstrong>-- Sin asignar --\u003C/strong> no va a ningún puesto.\u003C/li>\n\u003Cli>Si además querés que salga en papel, tildá la impresora en \u003Cstrong>¿Dónde se imprime la comanda?\u003C/strong>.\u003C/li>\n\u003Cli>Guardá el producto.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> los sabores o variantes también pueden tener su propio \u003Cstrong>Puesto\u003C/strong>. Mirá \u003Ca href=\"/user-guide/variantes-grupo-sabores\">Variantes\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔁 Paso 4: Revisá los estados de la comanda\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-revisa-los-estados-de-la-comanda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-revisa-los-estados-de-la-comanda\">\u003C/div>\n\n\u003Cp>Una comanda es el pedido completo de una mesa. Pasa por varios estados, de izquierda a derecha.\u003C/p>\n\u003Col>\n\u003Cli>En el menú \u003Cstrong>Comandero\u003C/strong>, tocá \u003Cstrong>Estados de Comanda\u003C/strong>.\u003C/li>\n\u003Cli>Vas a ver el cuadro \u003Cstrong>Flujo de Estados de Comanda\u003C/strong>. El sistema trae estos:\u003Cul>\n\u003Cli>\u003Cstrong>Borrador\u003C/strong>: el mozo todavía no la mandó. No se ve en la cocina.\u003C/li>\n\u003Cli>\u003Cstrong>Confirmada\u003C/strong>: el mozo la mandó. Aparece en la cocina.\u003C/li>\n\u003Cli>\u003Cstrong>Lista\u003C/strong>: la cocina la terminó. Espera que el mozo la retire.\u003C/li>\n\u003Cli>\u003Cstrong>Entregada\u003C/strong>: el mozo la retiró. Sale de la pantalla de cocina.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ol>\n\u003Cp>Cada estado dice su lugar. Por ejemplo: \u003Cem>2 de 4\u003C/em>. Sobre cada uno tenés:\u003C/p>\n\u003Cul>\n\u003Cli>El \u003Cstrong>lápiz\u003C/strong> ✏️: cambiá el estado.\u003C/li>\n\u003Cli>La \u003Cstrong>cruz\u003C/strong> ✖: borrá el estado. No aparece en \u003Cstrong>Borrador\u003C/strong>, \u003Cstrong>Confirmada\u003C/strong> ni \u003Cstrong>Entregada\u003C/strong>, porque el sistema los necesita.\u003C/li>\n\u003C/ul>\n\u003Cp>Para sumar un paso, tocá \u003Cstrong>Agregar Estado\u003C/strong>, arriba a la derecha. Completá:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong>: por ejemplo, \u003Cem>Marchando\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Estado anterior\u003C/strong> y \u003Cstrong>Estado posterior\u003C/strong>: entre qué estados va.\u003C/li>\n\u003Cli>\u003Cstrong>Colores\u003C/strong>: el color con el que se ve.\u003C/li>\n\u003C/ul>\n\u003Cp>Después tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si ves el aviso \u003Cstrong>Estados desconectados del flujo\u003C/strong>, hay estados sueltos. Editalos para ubicarlos entre dos estados, o borralos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🍽️ Paso 5: Revisá los estados de cada plato\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-revisa-los-estados-de-cada-plato\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-revisa-los-estados-de-cada-plato\">\u003C/div>\n\n\u003Cp>Cada plato, dentro de la comanda, también avanza por pasos. Cada puesto tiene los suyos.\u003C/p>\n\u003Col>\n\u003Cli>En el menú \u003Cstrong>Comandero\u003C/strong>, tocá \u003Cstrong>Estados de Items\u003C/strong>.\u003C/li>\n\u003Cli>Vas a ver \u003Cstrong>Flujo de Estados por Puesto\u003C/strong>: un recuadro por puesto con sus pasos.\u003C/li>\n\u003Cli>Los pasos de siempre son \u003Cstrong>Pendiente\u003C/strong> → \u003Cstrong>Elaborando\u003C/strong> → \u003Cstrong>Listo\u003C/strong> → \u003Cstrong>Saliendo\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>En cada recuadro tenés:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Agregar estado\u003C/strong>: el botón verde. Suma un paso a ese puesto.\u003C/li>\n\u003Cli>El \u003Cstrong>lápiz\u003C/strong> ✏️ de cada paso: cambialo.\u003C/li>\n\u003Cli>La \u003Cstrong>cruz\u003C/strong> ✖ de cada paso: borralo.\u003C/li>\n\u003C/ul>\n\u003Cp>Al agregar o cambiar un paso completás:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Nombre\u003C/strong>: elegilo de la lista. Por ejemplo: \u003Cem>En preparación\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Estado anterior\u003C/strong>: el paso que va antes. Si lo dejás vacío, va primero.\u003C/li>\n\u003Cli>\u003Cstrong>Color del estado\u003C/strong>: gris, naranja, verde, azul, rojo, amarillo o violeta. Abajo ves cómo queda.\u003C/li>\n\u003C/ul>\n\u003Cp>Tocá \u003Cstrong>Guardar\u003C/strong>. Si el puesto no tiene pasos, aparece en \u003Cstrong>Puestos sin flujo de estados configurado\u003C/strong>. Tocá \u003Cstrong>Crear flujo por defecto\u003C/strong> para armarle los de siempre.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📺 Paso 6: Abrí la pantalla de cocina\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-abri-la-pantalla-de-cocina\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-abri-la-pantalla-de-cocina\">\u003C/div>\n\n\u003Col>\n\u003Cli>En el menú \u003Cstrong>Comandero\u003C/strong>, tocá \u003Cstrong>Comandas Activas\u003C/strong>.\u003C/li>\n\u003Cli>Se abre la pantalla de cocina, a pantalla completa y sin el menú.\u003C/li>\n\u003C/ol>\n\u003Cp>Arriba, de izquierda a derecha, tenés:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>KDS\u003C/strong>: el logo. Te lleva al inicio del sistema.\u003C/li>\n\u003Cli>El botón de la \u003Cstrong>lista\u003C/strong>: cambia entre ver comandas y ver platos (Paso 9).\u003C/li>\n\u003Cli>\u003Cstrong>Todos los sectores\u003C/strong>: elegí un sector para ver solo lo suyo.\u003C/li>\n\u003Cli>\u003Cstrong>Todos los puestos\u003C/strong>: aparece después de elegir un sector. Elegí tu puesto. Por ejemplo: \u003Cem>Parrilla\u003C/em>.\u003C/li>\n\u003Cli>El \u003Cstrong>reloj\u003C/strong>.\u003C/li>\n\u003Cli>El \u003Cstrong>engranaje\u003C/strong> ⚙: sonido, voz, tamaño y más (Paso 10).\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> en la pantalla de cada puesto, elegí su sector y su puesto. Así la parrilla ve solo lo de la parrilla.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Si no hay pedidos, dice \u003Cstrong>No hay comandas activas\u003C/strong>. Si elegiste un filtro, dice \u003Cstrong>No hay comandas para este filtro\u003C/strong> y aparece \u003Cstrong>Ver todas\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧾 Paso 7: Leé una comanda\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-lee-una-comanda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-lee-una-comanda\">\u003C/div>\n\n\u003Cp>Cada pedido es una tarjeta. Las nuevas se suman al final.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Arriba a la izquierda\u003C/strong>: el mozo, hace cuánto llegó (por ejemplo, \u003Cem>hace 5 minutos\u003C/em>) y el número de comanda.\u003C/li>\n\u003Cli>\u003Cstrong>Arriba a la derecha\u003C/strong>: el número de mesa, en grande, y el estado de la comanda. Por ejemplo: \u003Cstrong>CONFIRMADA\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>El color de arriba\u003C/strong> cambia con el estado: azul si está confirmada, naranja si está en marcha y verde si está lista.\u003C/li>\n\u003Cli>\u003Cstrong>La observación\u003C/strong> del pedido, si el mozo escribió una.\u003C/li>\n\u003Cli>\u003Cstrong>ENTRADAS\u003C/strong> y \u003Cstrong>PRINCIPALES\u003C/strong>: los platos, separados.\u003C/li>\n\u003C/ul>\n\u003Cp>Cada plato muestra:\u003C/p>\n\u003Cul>\n\u003Cli>La \u003Cstrong>cantidad\u003C/strong>, en un círculo.\u003C/li>\n\u003Cli>El \u003Cstrong>nombre\u003C/strong> y sus \u003Cstrong>sabores\u003C/strong> o variantes. Por ejemplo: \u003Cem>2x Muzzarella\u003C/em>.\u003C/li>\n\u003Cli>La \u003Cstrong>observación\u003C/strong> del plato. Por ejemplo: \u003Cem>sin sal\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Arriba a la derecha\u003C/strong>, un punto de color con su paso. Por ejemplo: \u003Cstrong>PENDIENTE\u003C/strong> en gris.\u003C/li>\n\u003C/ul>\n\u003Cp>Cuando llega un pedido nuevo, suena un aviso y una voz lee la mesa y los platos.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👆 Paso 8: Avanzá los platos y la comanda\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-avanza-los-platos-y-la-comanda\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-8-avanza-los-platos-y-la-comanda\">\u003C/div>\n\n\u003Ch3>Cada plato\u003C/h3>\n\u003Col>\n\u003Cli>Tocá el plato para pasarlo al paso siguiente. Por ejemplo: de \u003Cstrong>PENDIENTE\u003C/strong> a \u003Cstrong>ELABORANDO\u003C/strong>.\u003C/li>\n\u003Cli>Volvé a tocarlo cuando avance otra vez. Por ejemplo: a \u003Cstrong>LISTO\u003C/strong>.\u003C/li>\n\u003Cli>En el último paso ya no cambia más.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> desde la pantalla no se puede volver un plato para atrás. Tocalo con cuidado.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se ven más apagados.\u003C/p>\n\u003Ch3>La comanda entera\u003C/h3>\n\u003Cul>\n\u003Cli>Abajo de la tarjeta está la barra \u003Cstrong>CAMBIAR A\u003C/strong> con el paso siguiente. Por ejemplo: \u003Cstrong>CAMBIAR A LISTA ▸\u003C/strong>. Tocala para avanzar la comanda.\u003C/li>\n\u003Cli>Cuando todos los platos terminan, aparece la barra verde \u003Cstrong>TODOS LISTOS — MARCAR COMO\u003C/strong> y el paso. Tocala para pasar la comanda a ese paso.\u003C/li>\n\u003C/ul>\n\u003Ch3>Cuando el mozo retira\u003C/h3>\n\u003Col>\n\u003Cli>Con la comanda en \u003Cstrong>Lista\u003C/strong>, tocá la barra de abajo.\u003C/li>\n\u003Cli>Se abre la ventanita \u003Cstrong>Mesa\u003C/strong> y el número: \u003Cstrong>¿Confirma que el mozo retiró esta comanda?\u003C/strong>\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Retirada\u003C/strong>. La comanda pasa a \u003Cstrong>Entregada\u003C/strong> y sale de la pantalla.\u003C/li>\n\u003Cli>Si te equivocaste, tocá \u003Cstrong>Cancelar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si mantenés apretada una tarjeta 3 segundos, la comanda pasa directo a \u003Cstrong>Entregada\u003C/strong> y sale de la pantalla.\u003C/p>\n\u003C/blockquote>\n\u003Ch3>Los tres puntitos ⋮\u003C/h3>\n\u003Cp>Algunos usuarios ven \u003Cstrong>⋮\u003C/strong> arriba a la derecha de la tarjeta. Abre la lista de estados. Tocá uno para pasar la comanda directo a ese estado. Si elegís \u003Cstrong>Borrador\u003C/strong> o \u003Cstrong>Entregada\u003C/strong>, sale de la pantalla.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧮 Paso 9: Mirá los platos juntos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-9-mira-los-platos-juntos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-9-mira-los-platos-juntos\">\u003C/div>\n\n\u003Cp>Sirve para cocinar varios iguales de una vez. Por ejemplo: todas las \u003Cem>Pizza Muzzarella\u003C/em> pendientes.\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón de la \u003Cstrong>lista\u003C/strong>, arriba a la izquierda.\u003C/li>\n\u003Cli>La pantalla muestra una columna por paso. Por ejemplo: \u003Cstrong>Pendiente (3)\u003C/strong> y \u003Cstrong>Elaborando (1)\u003C/strong>.\u003C/li>\n\u003Cli>Cada tarjeta junta un mismo plato: la cantidad total, el nombre, las mesas que lo pidieron y hace cuánto espera el más viejo.\u003C/li>\n\u003Cli>Tocá una tarjeta para avanzar ese plato.\u003C/li>\n\u003Cli>Si lo pidieron varias mesas, se abre \u003Cstrong>¿Cuál mover?\u003C/strong>. Tocá \u003Cstrong>Todos\u003C/strong> o elegí una mesa. Con \u003Cstrong>Cancelar\u003C/strong> no cambia nada.\u003C/li>\n\u003C/ol>\n\u003Cp>Si el plato tiene receta, aparece un \u003Cstrong>libro\u003C/strong> 📖. Tocalo para ver la receta.\u003C/p>\n\u003Cp>Los platos que ya están listos no aparecen en esta vista. Para volver a ver las comandas, tocá el mismo botón. La pantalla se acuerda de la última vista que usaste.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚙️ Paso 10: Ajustá la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-10-ajusta-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-10-ajusta-la-pantalla\">\u003C/div>\n\n\u003Cp>Tocá el \u003Cstrong>engranaje\u003C/strong> ⚙, arriba a la derecha. Se abre un panel con:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Conectado\u003C/strong>: la pantalla recibe los pedidos. Si dice \u003Cstrong>Sin conexión\u003C/strong>, revisá internet.\u003C/li>\n\u003Cli>\u003Cstrong>Sonido\u003C/strong>: prende o apaga el aviso y la voz.\u003C/li>\n\u003Cli>\u003Cstrong>Pantalla completa\u003C/strong>: ocupa toda la pantalla.\u003C/li>\n\u003Cli>\u003Cstrong>Voz / Idioma\u003C/strong>: elegí la voz que lee los pedidos. Tocá \u003Cstrong>Probar voz\u003C/strong> para escucharla.\u003C/li>\n\u003Cli>\u003Cstrong>−\u003C/strong> y \u003Cstrong>+\u003C/strong>: achicá o agrandá todo. El número del medio dice el tamaño. Por ejemplo: \u003Cem>100%\u003C/em>. El botón de las flechas lo vuelve a la normalidad.\u003C/li>\n\u003Cli>\u003Cstrong>Entregar todo\u003C/strong>: el botón rojo, debajo de \u003Cstrong>Zona peligrosa\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Entregar todo\u003C/strong> marca como entregadas todas las comandas que se ven en pantalla. Pide confirmar dos veces y escribir la palabra \u003Cstrong>ENTREGAR\u003C/strong>. Usalo solo al cerrar el turno.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Cada pantalla recuerda su sonido, su voz y su tamaño.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✅ Paso 11: Buscá una comanda entregada\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-11-busca-una-comanda-entregada\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-11-busca-una-comanda-entregada\">\u003C/div>\n\n\u003Col>\n\u003Cli>En el menú \u003Cstrong>Comandero\u003C/strong>, tocá \u003Cstrong>Comandas Terminadas\u003C/strong>.\u003C/li>\n\u003Cli>Se abre \u003Cstrong>Histórico de Comandas\u003C/strong>. Arriba dice cuántas comandas hay y en qué página estás.\u003C/li>\n\u003Cli>Para buscar, completá lo que necesites:\u003Cul>\n\u003Cli>\u003Cstrong>N° Mesa...\u003C/strong>: el número de mesa.\u003C/li>\n\u003Cli>El selector de mozo: elegí uno, o dejá \u003Cstrong>Todos\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Producto...\u003C/strong>: parte del nombre de un plato. Por ejemplo: \u003Cem>Muzzarella\u003C/em>.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Buscar\u003C/strong>.\u003C/li>\n\u003Cli>Abajo aparecen las comandas entregadas, de la más nueva a la más vieja. Hay 30 por página.\u003C/li>\n\u003C/ol>\n\u003Cp>Para pasar de página, usá \u003Cstrong>‹ Anterior\u003C/strong> y \u003Cstrong>Siguiente ›\u003C/strong>. Para sacar los filtros, tocá \u003Cstrong>Limpiar filtros\u003C/strong>.\u003C/p>\n\u003Cp>Si una comanda se entregó por error, tocá \u003Cstrong>‹ Atrás\u003C/strong> en su tarjeta. Vuelve a \u003Cstrong>Lista\u003C/strong> y reaparece en \u003Cstrong>Comandas Activas\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>El pedido no aparece en la cocina\u003C/strong>\u003C/td>\n\u003Ctd>El mozo no lo mandó: sigue en \u003Cstrong>Borrador\u003C/strong>.\u003C/td>\n\u003Ctd>Pedile al mozo que lo comande desde el \u003Ca href=\"/user-guide/salon-de-ventas\">Salón de Ventas\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Un plato no aparece en mi puesto\u003C/strong>\u003C/td>\n\u003Ctd>El producto no tiene \u003Cstrong>Puesto (KDS)\u003C/strong>, o tiene otro.\u003C/td>\n\u003Ctd>Editá el producto y elegí el puesto correcto (Paso 3).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Veo platos de otros puestos\u003C/strong>\u003C/td>\n\u003Ctd>La pantalla está en \u003Cstrong>Todos los sectores\u003C/strong> o \u003Cstrong>Todos los puestos\u003C/strong>.\u003C/td>\n\u003Ctd>Elegí tu sector y tu puesto arriba (Paso 6).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Las bebidas salen impresas en la cocina\u003C/strong>\u003C/td>\n\u003Ctd>El producto tiene tildada la impresora de la cocina.\u003C/td>\n\u003Ctd>En el producto, revisá \u003Cstrong>¿Dónde se imprime la comanda?\u003C/strong> (Paso 3).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No suena nada cuando llega un pedido\u003C/strong>\u003C/td>\n\u003Ctd>El sonido está apagado, o el navegador bloqueó el audio.\u003C/td>\n\u003Ctd>Tocá el engranaje y prendé \u003Cstrong>Sonido\u003C/strong>. Tocá la pantalla una vez para habilitar el audio.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Dice Sin conexión\u003C/strong>\u003C/td>\n\u003Ctd>La pantalla perdió internet.\u003C/td>\n\u003Ctd>Revisá la conexión. Cuando vuelva, los pedidos se actualizan solos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Toqué un plato por error\u003C/strong>\u003C/td>\n\u003Ctd>Desde la pantalla los platos no vuelven para atrás.\u003C/td>\n\u003Ctd>Avisale a un encargado. Seguí con el paso que corresponde.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Entregué una comanda por error\u003C/strong>\u003C/td>\n\u003Ctd>Se tocó \u003Cstrong>Retirada\u003C/strong>, \u003Cstrong>Entregar todo\u003C/strong> o se mantuvo apretada la tarjeta.\u003C/td>\n\u003Ctd>Buscala en \u003Cstrong>Comandas Terminadas\u003C/strong> y tocá \u003Cstrong>‹ Atrás\u003C/strong> (Paso 11).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No puedo cambiar nada en la pantalla\u003C/strong>\u003C/td>\n\u003Ctd>Tu usuario no tiene permiso para cambiar comandas.\u003C/td>\n\u003Ctd>Pedile a un administrador que revise \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>No puedo borrar un estado de comanda\u003C/strong>\u003C/td>\n\u003Ctd>\u003Cstrong>Borrador\u003C/strong>, \u003Cstrong>Confirmada\u003C/strong> y \u003Cstrong>Entregada\u003C/strong> los necesita el sistema.\u003C/td>\n\u003Ctd>Dejalos. Podés agregar otros estados entre ellos.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"como-se-arma-el-comandero",title:"Cómo se arma el Comandero",level:2},{id:"paso-1-crea-los-sectores",title:"Paso 1: Creá los sectores",level:2},{id:"paso-2-crea-los-puestos",title:"Paso 2: Creá los puestos",level:2},{id:"paso-3-asigna-cada-producto-a-su-puesto",title:"Paso 3: Asigná cada producto a su puesto",level:2},{id:"paso-4-revisa-los-estados-de-la-comanda",title:"Paso 4: Revisá los estados de la comanda",level:2},{id:"paso-5-revisa-los-estados-de-cada-plato",title:"Paso 5: Revisá los estados de cada plato",level:2},{id:"paso-6-abri-la-pantalla-de-cocina",title:"Paso 6: Abrí la pantalla de cocina",level:2},{id:"paso-7-lee-una-comanda",title:"Paso 7: Leé una comanda",level:2},{id:"paso-8-avanza-los-platos-y-la-comanda",title:"Paso 8: Avanzá los platos y la comanda",level:2},{id:"paso-9-mira-los-platos-juntos",title:"Paso 9: Mirá los platos juntos",level:2},{id:"paso-10-ajusta-la-pantalla",title:"Paso 10: Ajustá la pantalla",level:2},{id:"paso-11-busca-una-comanda-entregada",title:"Paso 11: Buscá una comanda entregada",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Comandero (pantalla de cocina) - Manual",description:"¿Dónde está en el sistema?: Menú principal → Comandero → Comandas Activas, Comandas Terminadas, Sectores, Puestos, Estados de Com...",keywords:"comandero, paxapos, comandero (pantalla de cocina), tutorial, guía, manual usuario"},llmTxtFile:"81-comandero.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

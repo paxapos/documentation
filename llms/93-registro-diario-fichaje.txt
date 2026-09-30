@@ -1,0 +1,98 @@
+﻿# Registro Diario Fichaje
+
+Registro Diario de Fichaje
+¿Dónde está en el sistema?: Menú principal → RRHH → Registro Diario
+¿Quién lo usa?: Recursos humanos y encargados.
+🎯 ¿Para qué sirve esto?
+Muestra todas las fichadas de un día: quién entró, quién salió y cuántas horas trabajó cada uno.
+Desde acá corregís una hora mal cargada, completás una salida que falta o eliminás un registro por error.
+---
+🔑 Antes de empezar
+• Tiene que estar activo el módulo de Fichaje o el de RRHH.
+• Para ver Registro Diario en el menú necesitás el permiso Fichaje con la acción de editar fichadas. Mirá Permisos por Rol.
+• Sin ese permiso no podés corregir horas, fichar ni eliminar registros.
+• Los empleados y sus turnos tienen que estar cargados. Mirá Empleados y Turnos y Horarios.
+---
+📅 Paso 1: Elegí el día
+Al entrar, la pantalla abre el día de hoy.
+Arriba, con el título Fichajes, ves un resumen. Por ejemplo: 12 registros · 10 completos · 2 sin egreso. Los "sin egreso" son personas que entraron y todavía no salieron.
+Para cambiar de día usás la barra que está debajo del título:
+• A la izquierda, un botón con el día anterior. Por ejemplo: 28/09. Tocalo para ir para atrás.
+• En el medio, la fecha completa. Por ejemplo: lunes 29 de septiembre, 2026. Si es hoy, aparece la etiqueta hoy.
+• Si estás en otro día, al lado de la fecha aparece el enlace Ir a hoy.
+• A la derecha, un botón con el día siguiente.
+Los filtros que hayas puesto se mantienen al cambiar de día.
+---
+🔎 Paso 2: Filtrá los registros
+Debajo de la barra de días hay tres listas para elegir y un botón.
+• Todos los empleados: elegí a una persona para ver solo sus fichadas.
+• Todos los departamentos: elegí uno para ver solo a esa gente. Por ejemplo: Cocina.
+• Todos los turnos: elegí un turno para ver solo las fichadas de ese turno.
+• Botón Filtrar: aplica lo que elegiste.
+Podés combinar las tres listas. Para volver a ver todo, dejá las tres en su primera opción y tocá Filtrar.
+Si ese día no hay fichadas, la pantalla dice No hay registros para este día.
+---
+📊 Paso 3: Leé la tabla
+Cada renglón es una jornada de una persona. Las columnas son:
+• Empleado: la foto, el nombre y, abajo, el departamento. Tocá el nombre para abrir su ficha.
+• Turno: el turno que el sistema le asignó a esa fichada. Si no tiene, ves una raya.
+• Ingreso: la hora de entrada, con la foto de cuando fichó si hay.
+• Egreso: la hora de salida. Si todavía no salió, dice Pendiente.
+• Horas: el tiempo trabajado. Por ejemplo: 08 hs 15 min. Abajo, en gris, las horas extras con un más. Por ejemplo: +1 hr 15 min. Las extras se calculan contra el horario del turno.
+Los renglones sin salida tienen una franja amarilla a la izquierda.
+Arriba a la derecha tenés el botón Excel. Descarga esta misma tabla del día, con los filtros que tengas puestos.
+Si hay más de 100 registros, abajo ves los números de página.
+---
+✏️ Paso 4: Corregí la hora de una fichada
+⚠️ Atención: al cambiar una hora, cambia el cálculo de horas y de sueldos. Los cambios quedan marcados como EDITADO para quien audita. Mirá el Reporte Mensual.
+1. Buscá el renglón de la persona.
+2. En la columna Ingreso o Egreso, tocá el lápiz. Al pasar el mouse por encima dice Editar.
+3. Se abre la pantalla Editar Fichada. Arriba ves el nombre, el DNI y el turno.
+4. En el cuadro Datos de la fichada completá:
+• Tipo Registro: ingreso o egreso. Dejalo como está.
+• Fecha Hora: elegí año, mes, día, hora y minutos.
+5. En el cuadro Foto podés cambiarla con Cambiar Foto. No es obligatorio.
+6. Tocá el botón azul Guardar, abajo a la derecha. Si no querés cambiar nada, tocá Volver.
+Volvés a la pantalla anterior con la hora corregida.
+---
+➕ Paso 5: Completá una salida o un ingreso que falta
+Cuando alguien olvidó fichar, el renglón muestra Pendiente en Egreso o Sin ingreso en Ingreso.
+1. En esa celda, tocá el botón con el signo más. Al pasar el mouse dice Fichar egreso o Fichar ingreso.
+2. Se abre la pantalla Fichar egreso o Fichar ingreso.
+3. En Fecha Hora, elegí la hora real. Viene con la hora de ahora.
+4. En Observación, si querés, anotá el motivo. Por ejemplo: Olvidó fichar.
+5. Tocá Fichar.
+---
+🔁 Paso 6: Cambiá una marca de ingreso a egreso
+A veces la persona toca "ingreso" cuando quería salir. Si el renglón tiene una sola marca, aparece un botón con dos flechas ⇄ al lado del lápiz.
+1. Tocá el botón de las flechas. Al pasar el mouse dice Cambiar a egreso o Cambiar a ingreso.
+2. La marca pasa al otro lugar. Queda la hora y la foto que tenía.
+Solo se puede cuando el renglón tiene una sola marca. Si ya tiene ingreso y egreso, el botón no aparece.
+---
+🟢 Paso 7: Fichá a alguien desde acá
+1. Arriba a la derecha, tocá el botón azul Fichar.
+2. Se abre una ventanita Nuevo Registro.
+3. Sacá una foto con Sacar Foto, o elegí un archivo. Es opcional.
+4. En Empleado, elegí a la persona. Podés escribir su nombre o su DNI.
+5. En Fecha Hora, elegí cuándo ocurrió. Viene con la hora de ahora.
+6. En Ingreso o Egreso, marcá lo que corresponde.
+7. En Observación, escribí una nota si querés.
+8. Tocá Fichar.
+Un egreso se une al último ingreso abierto de esa persona, si ocurrió dentro de las 24 horas. Si no hay un ingreso abierto, el egreso queda suelto.
+---
+🗑️ Paso 8: Eliminá un registro
+⚠️ Atención: eliminar borra la jornada completa, con su ingreso y su egreso. No se puede deshacer desde esta pantalla.
+1. Al final del renglón, tocá el tachito. Al pasar el mouse dice Eliminar.
+2. El sistema pregunta ¿Desea eliminar este registro?.
+3. Confirmá.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No veo Registro Diario en el menú | Tu rol no tiene el permiso de editar fichadas. | Pedí a un administrador que lo active en Permisos por Rol. |
+| Un renglón dice Pendiente en Egreso | La persona no fichó la salida. | Tocá el signo más en Egreso y cargá la hora real. |
+| Una persona fichó de noche y aparece en el día siguiente | Su turno cruza la medianoche. La jornada se ve en los dos días. | Buscala en el día en que entró y en el día en que salió. |
+| Las horas dan un número raro | Falta una marca o la hora está mal cargada. | Corregí la hora con el lápiz. |
+| La foto no coincide con el empleado | Fichó otra persona por él. | Corregí o eliminá el registro. Hablá con el equipo sobre el cuidado del acceso. |
+| No aparece la columna de horas extras | El renglón no tiene turno asignado. | Asignale turnos al empleado en Empleados. |
+| Filtré y no aparece nadie | Hay un filtro puesto que no coincide. | Dejá las tres listas en su primera opción y tocá Filtrar. |

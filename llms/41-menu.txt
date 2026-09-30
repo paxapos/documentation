@@ -1,0 +1,162 @@
+﻿# Menu
+
+Menú de Productos (Carta)
+¿Dónde está en el sistema?: Menú principal → Productos → Menú
+¿Quién lo usa?: Encargados de la carta y administradores
+🎯 ¿Para qué sirve esto?
+El Menú es la lista de todo lo que vendés. Es lo que ven los mozos cuando cargan una mesa, y tus clientes en el menú online.
+Acá agregás productos, les ponés precio y elegís por qué impresora sale cada comanda.
+🧭 Primeros pasos para armar tu menú:
+1. Creá las Categorías y las Variantes. No importa el orden.
+2. Cargá los productos en el menú (esta guía).
+---
+🔑 Antes de empezar
+• Tener creadas las Categorías.
+• Si algún producto lleva opciones, tener creadas sus Variantes.
+• Para elegir la impresora de cada producto, tenerlas cargadas. Mirá Impresoras.
+• Tu usuario tiene que tener el permiso del Menú en Permisos por Rol.
+💡 Consejo útil: tu comercio ya arranca con un menú creado. No hace falta crear otro: solo cargale los productos.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Productos marcado en rojo
+1. En el menú de la izquierda, tocá Productos.
+!Opción Menú marcada en rojo en el menú lateral
+2. Tocá Menú. Es la primera opción.
+!Pantalla del Menú Catálogo con la lista de productos
+Así se ve la pantalla. Arriba están los botones. Abajo, la lista de productos con su precio.
+!Barra de arriba: Menú Catálogo, Agregar Producto, Importar, Exportar, Configurar, ayuda y más opciones
+---
+➕ Paso 2: Agregá un producto al menú
+!Pantalla con el botón azul Agregar Producto marcado en rojo
+1. Tocá el botón azul Agregar Producto.
+2. Se abre la pantalla Agregar Producto al Menú.
+!Pantalla Agregar Producto al Menú con Milanesa napolitana a $ 4500
+Tiene varias partes. Las importantes son PASO 1, PASO 2 y PASO 3.
+PASO 1 · Información Básica (obligatoria)
+!Recuadro rojo PASO 1 Información Básica completo
+!Casillero Nombre del Producto con Milanesa napolitana
+3. En Nombre del Producto, escribí el nombre. Por ejemplo: Milanesa napolitana.
+4. Si el producto ya existe, aparece en una lista mientras escribís. Tocalo para elegirlo.
+!Lista Categoría con Especialidades elegida
+5. En Categoría, elegí dónde aparece en el menú. Por ejemplo: Especialidades.
+!Casillero Precio de Venta con 4500
+6. En Precio de Venta, escribí el precio al público. Por ejemplo: 4500.
+!Lista Moneda con Argentina Peso
+7. Moneda: dejala como viene, salvo que vendas en otra moneda.
+!Lista Impuesto / IVA con IVA 21%
+8. En Impuesto / IVA, elegí el IVA del producto. Por ejemplo: IVA 21%.
+⚠️ Atención: si el IVA está mal cargado, el producto no se puede facturar bien. La lista del menú te avisa qué productos tienen ese problema.
+PASO 2 · Variantes del Producto (si hace falta)
+!Recuadro PASO 2 Variantes del Producto con la variante Gustos de helado
+9. Tildá las variantes que lleva el producto. Por ejemplo: Gustos de helado.
+!Pantalla con el botón naranja Administrar Variantes marcado en rojo
+10. Si no está la que necesitás, tocá Administrar Variantes para crearla. Mirá Variantes.
+PASO 3 · Configuración Operativa (impresora)
+!Recuadro PASO 3 Configuración Operativa con ¿Dónde se imprime la comanda?
+11. En ¿Dónde se imprime la comanda?, tildá la impresora de este producto. Por ejemplo: Cocina o Barra.
+12. Puesto y Depósito son opcionales. Si no los usás, dejalos como están.
+💡 Consejo útil: la impresora se elige en cada producto. Así la bebida sale en la barra y la comida en la cocina.
+Opciones Adicionales (opcional)
+!Pantalla con el botón Mostrar/Ocultar de Opciones Adicionales marcado en rojo
+13. Si querés, tocá Mostrar/Ocultar en Opciones Adicionales.
+!Opciones Adicionales abiertas: Orden y Nombre en Ticket
+14. Orden: en qué lugar aparece en su categoría. Nombre en Ticket: un nombre más corto para la comanda y el ticket.
+Guardá el producto
+!Pantalla con el botón azul Guardar Producto marcado en rojo
+15. Tocá el botón azul Guardar Producto, abajo de todo.
+16. El producto aparece en la lista. Los mozos ya lo pueden cargar en el Salón de Ventas.
+!Pantalla con el botón Cancelar marcado en rojo
+💡 Consejo útil: si te arrepentiste, tocá Cancelar, debajo de Guardar Producto. No se guarda nada.
+---
+💲 Paso 3: Cambiá un precio desde la lista
+!Renglón de un producto con su stock, categoría, impresora y precio
+1. Buscá el producto en la lista.
+2. Hacé clic sobre su Precio.
+!Renglón con el precio abierto para escribir y un botón verde para confirmar
+3. Escribí el precio nuevo y tocá el botón verde ✔ (o Enter).
+💡 Consejo útil: lo mismo sirve para el nombre, la categoría, el orden y otras columnas. Hacé clic en la celda y cambiala.
+---
+✏️ Paso 4: Cambiá todos los datos de un producto
+!Lista con el lápiz de un producto marcado en rojo, a la derecha
+1. Tocá el lápiz ✏️ a la derecha del producto. Si no lo ves, mové la lista hacia la derecha.
+2. Se abre la misma pantalla que al agregarlo, con sus datos. Cambiá lo que necesites.
+3. Tocá Guardar Producto.
+!Sección AVANZADO Modificar Producto Maestro abierta, con nombre, código, imagen y Sin Stock
+Al editar aparece además AVANZADO · Modificar Producto Maestro. Ahí cambiás el nombre, el código de barras, la foto o marcás Sin Stock para que no se pueda vender por un rato.
+⚠️ Atención: lo que cambies en AVANZADO cambia el producto en todos tus menús.
+---
+🗑️ Paso 5: Sacá un producto del menú
+!Lista con el tacho de un producto marcado en rojo
+1. Tocá el tacho 🗑️ a la derecha del producto.
+2. El sistema te pregunta si estás seguro. Confirmá para sacarlo.
+💡 Consejo útil: el producto sale de este menú, pero sigue existiendo en el Maestro de Productos.
+---
+🔎 Paso 6: Buscá un producto
+!Casillero Buscar en todos los productos con ALFAJOR escrito
+1. En Buscar en todos los productos..., escribí parte del nombre y tocá Enter. Por ejemplo: ALFAJOR.
+!Lista con los productos que tienen ALFAJOR en el nombre
+2. La lista muestra solo los que coinciden.
+!Pantalla con la cruz para borrar la búsqueda marcada en rojo
+3. Para ver todo de nuevo, tocá la cruz ⊗ dentro del casillero.
+!Pantalla sin resultados con el botón Limpiar búsqueda marcado en rojo
+4. Si no encuentra nada, tocá Limpiar búsqueda.
+---
+🧰 Paso 7: Filtrá la lista
+!Pantalla con el botón Filtros marcado en rojo
+1. Tocá Filtros, arriba a la derecha.
+!Panel Filtros avanzados abierto
+2. Se abre el panel Filtros avanzados. Completá solo lo que necesites:
+• Nombre del producto, Nombre en ticket y Stock (con stock o sin stock)
+• Puesto, Categoría e Impresora. Por ejemplo: todo lo que sale por la Barra.
+• Impuesto, Precio exacto y Orden.
+3. Tocá Buscar, abajo a la derecha del panel.
+!Panel de filtros con el botón Limpiar filtros marcado en rojo
+4. Para sacar todos los filtros, tocá Limpiar filtros.
+!Panel de filtros con la cruz de cerrar marcada en rojo
+5. Para cerrar el panel, tocá la cruz × de arriba a la derecha.
+---
+☑️ Paso 8: Cambiá muchos productos de una vez
+!Casilla para tildar todos los productos
+1. Tildá la casilla de cada producto que querés cambiar. La de arriba de todo los tilda a todos.
+!Barra de abajo: 1 seleccionado, Categoría, Puesto, Impuesto, Impresora, Stock, Eliminar y una cruz
+2. Abajo aparece una barra con lo que podés cambiar.
+!Pantalla con el botón Categoría de la barra marcado en rojo
+3. Tocá lo que querés cambiar. Por ejemplo: Categoría.
+!Lista de categorías abierta sobre la barra
+4. Elegí el valor nuevo de la lista.
+!Ventana Cambiar Categoría: Se asignará categoría a 1 producto(s)
+5. Se abre una ventana que te dice qué va a cambiar.
+!Ventana con el botón Confirmar marcado en rojo
+6. Si está bien, tocá Confirmar.
+!Ventana con el botón Cancelar marcado en rojo
+!Ventana con la cruz de cerrar marcada en rojo
+7. Si no, tocá Cancelar o la cruz ×. No cambia nada.
+!Barra con el botón rojo Eliminar marcado en rojo
+⚠️ Atención: el botón rojo Eliminar de la barra saca del menú todos los productos tildados.
+!Barra con la cruz para destildar marcada en rojo
+8. Para destildar todo, tocá la cruz × al final de la barra.
+---
+🧭 Paso 9: Otros botones de arriba
+!Pantalla con el botón Menú: Catálogo marcado en rojo
+• Menú: Catálogo: si tenés más de un menú, lo cambiás acá. También podés crear uno nuevo.
+!Lista de menús abierta con Catálogo y Nuevo Menú
+• Importar: carga muchos productos juntos desde un Excel.
+• Exportar: descarga la lista de productos en un Excel.
+• Configurar: cambia el nombre, la foto y cómo se ve este menú.
+!Pantalla con el botón de ayuda de precios marcado en rojo
+• ?: explica cómo funcionan los precios y el Precio Futuro.
+!Explicación de precios abierta
+!Pantalla con el botón de más opciones marcado en rojo
+• ⋯ (tres puntitos): ver el menú online, su código QR y Aplicar precios futuros.
+!Lista de más opciones abierta
+!Lista de más opciones con Eliminar Menú marcado en rojo
+⚠️ Atención: Eliminar Menú borra el menú entero con todos sus productos. No se puede deshacer.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| El mozo no encuentra un producto | Está marcado Sin Stock, o no está en el menú. | Buscalo acá. Si no está, agregalo. Si está, editalo y desmarcá Sin Stock. |
+| La comanda no sale impresa | No tiene impresora en ¿Dónde se imprime la comanda?. | Tocá el lápiz y tildá la impresora. |
+| No aparece ninguna impresora para elegir | Todavía no cargaste las impresoras. | Seguí Impresoras y volvé a editar el producto. |
+| La factura sale con error por el IVA | El producto no tiene bien el Impuesto / IVA. | Tocá el lápiz y elegí el IVA correcto. |
+| Cambié un precio y no se guardó | No confirmaste el cambio en la celda. | Hacé clic de nuevo, escribí el precio y tocá el botón verde ✔. |

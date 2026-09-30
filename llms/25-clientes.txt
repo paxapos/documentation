@@ -1,0 +1,107 @@
+﻿# Clientes
+
+Cómo Gestionar los Clientes
+¿Dónde está en el sistema?: Menú principal → Ventas → Clientes
+¿Quién lo usa?: Cajeros, encargados y administradores
+🎯 ¿Para qué sirve esto?
+Acá cargás, buscás y corregís los clientes de tu comercio. Con los clientes cargados podés asignarlos a una mesa, hacerles la factura con sus datos y darles un descuento.
+---
+📍 Paso 1: Entrá al listado de Clientes
+!Grupo Ventas del menú lateral, marcado en rojo
+1. En el menú de la izquierda, tocá Ventas. Se despliegan sus opciones.
+!Opción Clientes dentro del grupo Ventas, marcada en rojo
+2. Bajá hasta la parte Clientes y tocá Clientes.
+3. Se abre el listado con todos los clientes.
+!Listado de clientes con el buscador arriba y la tabla abajo
+En esta pantalla vas a ver:
+• Arriba a la derecha: el botón verde Crear Nuevo Cliente.
+• En el medio: el buscador, con casilleros para buscar por nombre, teléfono, documento y más.
+• Abajo: la tabla con los clientes y, a la derecha de cada uno, sus botones.
+---
+➕ Paso 2: Cargá un cliente nuevo
+!Listado de clientes con el botón Crear Nuevo Cliente marcado en rojo
+1. Tocá el botón verde Crear Nuevo Cliente, arriba a la derecha.
+2. Se abre la pantalla Agregar Cliente, con los datos en tres partes.
+!Pantalla Agregar Cliente con las partes Datos personales, Contacto y Comercial
+Datos personales
+!Casillero Nombre con el nombre Juan Pérez
+3. En Nombre, escribí el nombre del cliente. Por ejemplo: Juan Pérez.
+!Lista Iva Responsabilidad con Consumidor Final elegido
+4. En Iva Responsabilidad, dejá Consumidor Final. Cambialo solo si el cliente te pide factura A (por ejemplo, Resp. Inscripto).
+!Lista Tipo Documento
+5. En Tipo Documento, elegí el tipo. Por ejemplo: DNI o CUIT.
+!Casillero Número de documento
+6. En Número de documento, escribí el número, sin puntos ni guiones.
+Contacto
+!Casillero Correo Electrónico
+7. En Correo Electrónico, escribí el mail. Por ejemplo: juan.perez@ejemplo.com.
+!Casillero Teléfono
+8. En Teléfono, escribí el celular. Por ejemplo: 1155556666.
+!Casillero Domicilio de facturación
+9. En Domicilio de facturación, escribí la dirección. Por ejemplo: Av. Siempreviva 742.
+Comercial
+!Lista Descuento con Sin Descuento elegido
+10. En Descuento, elegí un descuento si el cliente siempre lo tiene. Si no, dejá Sin Descuento.
+!Casillero Codigo
+11. Codigo es opcional. Sirve si usás un número propio para cada cliente.
+Guardá
+!Pantalla Agregar Cliente con el botón Agregar marcado en rojo abajo a la derecha
+12. Tocá el botón azul Agregar, abajo a la derecha.
+13. El cliente queda guardado y volvés al listado.
+!Pantalla Agregar Cliente con el botón Cancelar marcado en rojo abajo a la izquierda
+• Si no querés guardar, tocá Cancelar, abajo a la izquierda.
+💡 Consejo útil: Cargá siempre el teléfono, el mail o el documento. Así el sistema te avisa si el cliente ya existe.
+---
+🔍 Paso 3: Buscá un cliente
+!Buscador de clientes con todos sus casilleros
+1. Usá el buscador que está arriba de la tabla. Completá solo lo que sepas del cliente:
+!Casillero Nombre del buscador con la palabra Prueba escrita
+• Nombre: escribí una parte del nombre. Por ejemplo: Pérez.
+!Casillero Teléfono del buscador
+• Teléfono: escribí el celular.
+!Casillero Nº Documento del buscador
+• Nº Documento: escribí el DNI o el CUIT.
+!Lista Tag del buscador
+• Tag: elegí una etiqueta para ver solo esos clientes. Por ejemplo: Frecuente.
+!Listado con el botón Buscar marcado en rojo
+2. Tocá el botón azul Buscar.
+3. La tabla muestra solo los clientes que coinciden.
+!Tabla de clientes filtrada por la búsqueda
+!Listado con el botón Limpiar marcado en rojo
+4. Para volver a ver todos los clientes, tocá Limpiar.
+---
+✏️ Paso 4: Mirá, corregí o borrá un cliente
+A la derecha de cada cliente hay tres botones:
+!Botones Ver, Editar y Borrar de un cliente
+Ver la ficha
+!Tabla de clientes con el botón del ojo marcado en rojo
+1. Tocá el botón del ojo 👁️.
+2. Se abre la ficha del cliente.
+!Ficha del cliente con sus datos, consumo, cuentas abiertas e historial de mesas
+En la ficha vas a ver:
+• Cuántas visitas hizo y cuánto consumió en total.
+• Sus datos, las cuentas abiertas y el historial de mesas.
+• Si hay clientes parecidos cargados (posibles duplicados):
+!Aviso naranja Posibles Clientes duplicados
+• La parte CRM, para anotar gustos o alergias, vincular clientes y ponerle etiquetas (tags):
+!Parte CRM de la ficha con Notas, Vínculos y Tags
+!Ficha del cliente con el botón Editar marcado en rojo
+• Para corregir sus datos desde la ficha, tocá Editar, arriba a la derecha.
+Corregir los datos
+!Tabla de clientes con el botón del lápiz marcado en rojo
+1. Tocá el botón del lápiz ✏️.
+2. Se abren los datos del cliente. Cambiá lo que haga falta.
+3. Tocá Actualizar para guardar los cambios.
+Borrar
+⚠️ Atención: Borrar un cliente no se puede deshacer. Revisá bien que sea el cliente correcto.
+!Tabla de clientes con el botón rojo de la papelera marcado
+1. Tocá el botón rojo de la papelera 🗑️.
+2. El sistema te pregunta si estás seguro. Tocá Aceptar para borrarlo.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No encuentro al cliente en la lista | Quedó escrito algo en el buscador. | Tocá Limpiar y buscá por teléfono o documento. |
+| Se crearon clientes duplicados | Se cargó el mismo cliente sin teléfono, mail ni documento. | Abrí la ficha: el aviso Posibles Clientes duplicados te muestra cuáles son. Borrá el repetido. |
+| No puedo elegir un descuento | No hay descuentos creados. | Creá uno en Ventas → Descuentos (ver Descuentos). |
+| No me deja borrar ni editar un cliente | Tu usuario no tiene permiso para modificar clientes. | Pedile al administrador que lo revise en Permisos por Rol. |

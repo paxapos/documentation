@@ -1,0 +1,81 @@
+﻿# Recetas
+
+Recetas
+¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Recetas
+¿Quién lo usa?: Jefes de cocina, administradores y encargados de costos
+🎯 ¿Para qué sirve esto?
+Acá ves todas las recetas de tu cocina juntas, como un manual. Cada receta dice qué ingredientes lleva un producto y cuánto de cada uno.
+Con las recetas, el sistema calcula cuánto te cuesta preparar cada plato y descuenta el stock al vender.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso de Maestro de Productos en Permisos por Rol.
+• Los ingredientes tienen que estar cargados como productos. Mirá Maestro de Productos.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Productos marcado en rojo
+1. En el menú de la izquierda, tocá Productos.
+!Opción Recetas marcada en rojo en el menú lateral
+2. Tocá Recetas. Está debajo del título GESTIÓN AVANZADA.
+!Pantalla Manual de Cocina con el índice de recetas
+Así se ve la pantalla. Arriba está el Índice de Recetas, separado en Productos en Venta y Subproductos. Abajo, una tarjeta por receta.
+---
+🔎 Paso 2: Buscá una receta
+!Casillero Buscar receta
+1. En el casillero Buscar receta..., escribí el nombre del producto.
+2. La lista se achica mientras escribís.
+3. También podés tocar un nombre del índice para ir directo a su receta.
+!Tarjeta de la receta JAMON Y QUESO: rinde 12 docenas, con los botones Ver, Editar e Imprimir
+Cada tarjeta muestra el nombre, cuánto rinde la receta, los ingredientes y el costo.
+---
+👁️ Paso 3: Mirá el producto
+!Tarjeta con el botón Ver marcado en rojo
+1. Tocá Ver, arriba a la derecha de la tarjeta.
+2. Se abre la ficha del producto. Mirá Maestro de Productos.
+---
+✏️ Paso 4: Cambiá una receta
+!Tarjeta con el botón Editar marcado en rojo
+1. Tocá Editar, arriba a la derecha de la tarjeta.
+!Formulario de la receta de JAMON Y QUESO con sus cuatro ingredientes
+2. Se abre el formulario de la receta.
+!Casillero de cantidad que rinde la receta, con 12,00
+3. Arriba, escribí cuánto rinde la receta. Por ejemplo: 12 docenas.
+!Casillero Detalle de elaboración con su barra de herramientas
+4. En Detalle de elaboración, escribí cómo se prepara. Es opcional.
+Los ingredientes
+!Renglón de un ingrediente: PALETA COCIDA, 0.26, unidad, observación y tacho
+Cada renglón es un ingrediente. De izquierda a derecha:
+![Casillero del ingrediente con [Kg] PALETA COCIDA](images/manual/40-productos/46-16-campo-ingrediente.png)
+5. Ingrediente: escribí el nombre y elegilo de la lista. Entre corchetes ves su unidad. Por ejemplo: [Kg].
+!Casillero de cantidad con 0.26
+6. Cantidad: cuánto lleva. Por ejemplo: 0.26 kilos.
+!Lista de unidad de medida
+7. Unidad: en qué unidad pusiste la cantidad. Por ejemplo: Kg o gramos.
+!Casillero Observación (opcional)
+8. Observación: una aclaración. Es opcional.
+!Formulario con el botón Agregar Ingrediente marcado en rojo
+9. Para sumar un ingrediente, tocá + Agregar Ingrediente, debajo de la lista.
+!Renglón nuevo vacío, con Seleccione producto
+10. Aparece un renglón vacío. Completalo como en los pasos 5 a 8.
+!Formulario con el tacho del primer ingrediente marcado en rojo
+11. Para sacar un ingrediente, tocá el tacho rojo 🗑️ de ese renglón.
+Guardá los cambios
+!Formulario con el botón verde Guardar marcado en rojo
+12. Tocá el botón verde Guardar, abajo a la izquierda.
+!Formulario con el botón rojo Eliminar marcado en rojo
+⚠️ Atención: el botón rojo Eliminar, abajo a la derecha, borra la receta entera. El producto queda sin receta.
+💡 Consejo útil: para cargar la receta de un producto que no tiene, abrí su ficha y tocá Agregar Receta. Mirá Maestro de Productos.
+---
+🖨️ Paso 5: Imprimí las recetas
+!Pantalla con el botón Imprimir Manual marcado en rojo
+1. Para imprimir todas las recetas, tocá Imprimir Manual, arriba a la derecha.
+!Tarjeta con el botón Imprimir marcado en rojo
+2. Para imprimir una sola receta, tocá Imprimir en su tarjeta.
+3. Se abre la ventana de impresión de tu computadora. Elegí la impresora y tocá Imprimir.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| Un producto no aparece en la lista | No tiene receta, o su receta no tiene ingredientes. | Abrí su ficha en el Maestro de Productos y tocá Agregar Receta. |
+| La receta descuenta más stock del que debería | La cantidad o la unidad están mal. | Tocá Editar y revisá si pusiste gramos o kilos. |
+| El costo de la receta da $0 | Los ingredientes no tienen precio de compra. | Cargá las compras de esos ingredientes. |
+| No encuentro el ingrediente al escribirlo | No está cargado como producto. | Crealo primero en el Maestro de Productos. |

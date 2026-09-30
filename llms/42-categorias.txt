@@ -1,0 +1,95 @@
+﻿# Categorias
+
+Categorías de Productos
+¿Dónde está en el sistema?: Menú principal → Productos → Categorías
+¿Quién lo usa?: Encargados y administradores
+🎯 ¿Para qué sirve esto?
+Las categorías agrupan los productos de tu menú. Por ejemplo: Bebidas, Pizzas o Postres.
+Así los mozos encuentran rápido cada producto, y tus clientes ven el menú online ordenado.
+🧭 Primeros pasos para armar tu menú:
+1. Creá las categorías (esta guía) y las Variantes. No importa el orden.
+2. Cargá los productos en el Menú.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso de Categorías de Productos en Permisos por Rol.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Productos marcado en rojo
+1. En el menú de la izquierda, tocá Productos.
+!Opción Categorías marcada en rojo en el menú lateral
+2. Tocá Categorías.
+!Pantalla Categorías del Menú con la lista de categorías
+Así se ve la pantalla. Arriba están los botones. Abajo, la lista de tus categorías.
+---
+➕ Paso 2: Creá una categoría
+!Pantalla con el botón azul Nueva Categoría marcado en rojo
+1. Tocá el botón azul Nueva Categoría. Está arriba a la izquierda.
+2. Se abre el formulario.
+!Formulario Nueva Categoría completo con la categoría Bebidas
+3. En Nombre de la Categoría, escribí el nombre. Por ejemplo: Bebidas.
+4. En Descripción (opcional) podés escribir un texto corto. Se ve en el menú online.
+5. En Orden de visualización, poné un número. El número más chico aparece primero.
+6. Marcá Categoría privada solo si no querés que los clientes la vean en el menú online.
+7. Si querés, tocá Choose File (o Elegir archivo) y elegí una foto de la categoría.
+8. Tocá un cuadrito de color. Sirve para reconocer la categoría más rápido.
+!Formulario con el botón verde Crear Categoría marcado en rojo
+9. Tocá el botón verde Crear Categoría.
+10. Volvés a la lista, con la categoría nueva.
+---
+🗂️ Paso 3: Creá una subcategoría (opcional)
+Una subcategoría va dentro de otra. Por ejemplo: Cervezas dentro de Bebidas.
+1. Tocá Nueva Categoría y escribí el nombre. Por ejemplo: Cervezas.
+!Casillero Categoría Padre con Bebidas elegida
+2. En Categoría Padre, elegí la categoría de arriba. Por ejemplo: Bebidas.
+3. Tocá Crear Categoría.
+4. En la lista, Cervezas aparece debajo de Bebidas, un poco corrida a la derecha.
+---
+🔎 Paso 4: Buscá una categoría
+!Casillero Buscar categoría con la palabra Sandw escrita
+1. En el casillero Buscar categoría..., escribí parte del nombre. Por ejemplo: Sandw.
+!Pantalla con el botón azul Buscar marcado en rojo
+2. Tocá el botón azul Buscar.
+!Lista con las dos categorías que empiezan con Sandw
+3. La lista muestra solo las categorías que coinciden.
+⚠️ Atención: si la búsqueda encuentra una sola categoría, la pantalla dice "Empezá a organizar tu menú" como si no hubiera ninguna. Escribí menos letras para que aparezcan varias.
+---
+✏️ Paso 5: Cambiá una categoría
+!Renglón de la categoría Bebidas con el lápiz y el tacho a la derecha
+Cada renglón muestra el nombre, cuántos productos tiene y si se ve en el menú online.
+!Lista de categorías con el lápiz de Bebidas marcado en rojo
+1. Pasá el mouse por el renglón de la categoría. A la derecha aparecen un lápiz y un tacho.
+2. Tocá el lápiz ✏️.
+!Formulario Editar Categoría Bebidas
+3. Se abre el formulario con los datos de la categoría. Cambiá lo que necesites.
+!Formulario con el botón azul Guardar Cambios marcado en rojo
+4. Tocá el botón azul Guardar Cambios.
+---
+🗑️ Paso 6: Borrá una categoría
+⚠️ Atención: borrar una categoría no se puede deshacer. Antes, pasá sus productos a otra categoría.
+!Lista de categorías con el tacho de Bebidas marcado en rojo
+1. Pasá el mouse por el renglón y tocá el tacho 🗑️.
+2. El sistema te pregunta si estás seguro. Tocá Aceptar para borrarla.
+---
+↕️ Paso 7: Cambiá el orden de las categorías
+1. En la lista, agarrá una categoría con las tres rayitas ≡ de la izquierda.
+2. Arrastrala hasta el lugar que quieras y soltala.
+3. El sistema dice "¡Guardado!" y recarga la lista.
+!Pantalla con el botón Ordenar A-Z marcado en rojo
+4. Si preferís el orden alfabético, tocá Ordenar A-Z.
+⚠️ Atención: Ordenar A-Z cambia el orden de todas las categorías de una vez. El orden que armaste a mano se pierde.
+---
+🔧 Paso 8: Arreglá la lista si se ve mal (opcional)
+!Pantalla con el botón Reparar árbol marcado en rojo
+1. Si las subcategorías aparecen en un lugar raro, tocá Reparar árbol.
+2. El sistema acomoda cada categoría debajo de la que le corresponde.
+💡 Consejo útil: usalo solo si ves la lista rota. Si la lista se ve bien, no hace falta.
+➡️ Siguiente paso: creá las Variantes si tus productos las necesitan. Después cargá los productos en el menú.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No aparece Categorías en el menú | Tu usuario no tiene el permiso de categorías. | Pedile al dueño que lo active en Permisos por Rol. |
+| Busqué y dice "Empezá a organizar tu menú" | La búsqueda encontró una sola categoría. | Escribí menos letras, o buscala mirando la lista completa. |
+| No puedo borrar una categoría | Tiene productos adentro. | Pasá esos productos a otra categoría y probá de nuevo. |
+| La categoría no se ve en el menú online | Está marcada como Categoría privada. | Tocá el lápiz, desmarcá Categoría privada y tocá Guardar Cambios. |
+| Las subcategorías se ven desordenadas | La lista quedó con errores. | Tocá Reparar árbol, arriba a la derecha. |

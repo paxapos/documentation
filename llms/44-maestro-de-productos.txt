@@ -1,0 +1,141 @@
+﻿# Maestro de Productos
+
+Maestro de Productos
+¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Maestro de Productos
+¿Quién lo usa?: Administradores y encargados de compras o costos
+🎯 ¿Para qué sirve esto?
+Es la lista de todos los productos del comercio: los que vendés, los que comprás y los que preparás vos.
+Desde acá los buscás, los creás, les cambiás el nombre y mirás su ficha completa.
+💡 Consejo útil: si estás cargando tu carta por primera vez, no empieces por acá. Los productos que vendés se cargan desde el Menú, con su categoría y su precio. El Menú tiene solo lo que vendés; el Maestro tiene todo.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso de Maestro de Productos en Permisos por Rol.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Productos marcado en rojo
+1. En el menú de la izquierda, tocá Productos.
+!Opción Maestro de Productos marcada en rojo, debajo de Gestión Avanzada
+2. Tocá Maestro de Productos. Está debajo del título GESTIÓN AVANZADA.
+!Pantalla Maestro de Productos con los filtros arriba y la lista de productos abajo
+Así se ve la pantalla. La lista tarda unos segundos en aparecer.
+La columna Tipo te dice qué es cada producto:
+• VENTA: lo vendés al cliente. Por ejemplo: Coca Cola.
+• COMPRA: lo comprás a un proveedor. Por ejemplo: Harina.
+• SUBPRODUCTO: lo preparás vos y lo usás en otros productos. Por ejemplo: una salsa.
+• INGREDIENTE, VARIANTE y RECETA: se usa en recetas, es una opción de variante o tiene receta.
+!Pantalla con el botón de ayuda marcado en rojo
+💡 Consejo útil: tocá el botón ? de arriba para ver esta explicación en la pantalla.
+!Explicación ¿Qué es el Maestro de Productos? abierta
+---
+🔎 Paso 2: Buscá un producto
+!Casillero de búsqueda con la palabra ALFAJOR escrita
+1. En el primer casillero, escribí el nombre o el código de barras. Por ejemplo: ALFAJOR.
+!Lista Todos los tipos
+2. Si querés, en Todos los tipos elegí solo los que vendés o solo los que comprás.
+!Lista Con y sin receta
+3. En Con y sin receta podés ver solo los que tienen receta, o solo los que no.
+!Casilla Incluir productos eliminados
+4. Marcá Incluir productos eliminados si buscás uno que borraste.
+!Casilla Solo duplicados
+5. Marcá Solo duplicados para ver los productos que tienen el mismo nombre que otro.
+!Pantalla con el botón azul Buscar marcado en rojo
+6. Tocá el botón azul Buscar.
+7. La lista muestra solo los productos que coinciden.
+!Pantalla No se encontraron productos con el botón Limpiar búsqueda marcado en rojo
+8. Si dice No se encontraron productos, tocá Limpiar búsqueda para ver la lista completa.
+💡 Consejo útil: para cambiar el nombre o el código de barras rápido, hacé clic sobre ellos en la lista. Escribí el nuevo y tocá Enter.
+---
+➕ Paso 3: Creá un producto
+!Pantalla con el botón azul Crear Nuevo Producto marcado en rojo
+1. Tocá el botón azul Crear Nuevo Producto. Está arriba a la derecha.
+2. Se abre una ventana.
+!Ventana Crear Nuevo Producto con Pizza Muzzarella escrito
+!Casillero Nombre con Pizza Muzzarella escrito
+3. En Nombre, escribí el nombre del producto. Por ejemplo: Pizza Muzzarella.
+!Botón para elegir la imagen del producto
+4. Si querés, en Imagen tocá Choose File (o Elegir archivo) y elegí una foto.
+!Casillero Código de Barras
+5. En Código de Barras, escribí el código si el producto lo tiene.
+!Lista Contás el stock por con Unidad elegida
+6. En Contás el stock por, elegí cómo lo contás. Por ejemplo: Unidad, Kilo o Litro.
+!Casillero Porcentaje de desperdicio
+7. En Porcentaje de desperdicio, poné cuánto se pierde al usarlo. Por ejemplo: 10.
+!Casillero Descripción con su barra de herramientas
+8. En Descripción podés escribir un texto sobre el producto.
+!Ventana con el botón verde Agregar marcado en rojo
+9. Tocá el botón verde Agregar.
+10. El producto aparece en la lista.
+Si el nombre ya existe
+!Aviso Ya existe un producto similar, con sugerencias de nombres
+Si ya hay un producto con un nombre muy parecido, el sistema no lo guarda. Te muestra nombres parecidos para elegir.
+!Pantalla con una sugerencia de nombre marcada en rojo
+1. Tocá uno de los nombres sugeridos. Se copia en el casillero Nombre.
+2. Tocá Agregar de nuevo.
+⚠️ Atención: antes de crear otro, fijate si el producto ya existe. Dos productos iguales te desordenan el stock y los costos.
+---
+⚙️ Paso 4: Usá el botón Acciones
+!Lista con el botón Acciones de un producto marcado en rojo
+1. Tocá Acciones, a la derecha del producto.
+!Menú de Acciones abierto con Ver Detalle, Agregar Mercadería, Crear Receta, Editar y Eliminar
+2. Se abre una lista. Elegí qué querés hacer:
+• Ver Detalle: abre la ficha completa del producto (Paso 5).
+• Agregar a Menú: aparece si el producto todavía no se vende.
+• Agregar Mercadería: para comprarlo a un proveedor.
+• Crear Receta o Editar Receta: para cargar sus ingredientes.
+• Editar: abre el formulario del producto.
+!Menú de Acciones con Eliminar marcado en rojo
+⚠️ Atención: Eliminar borra el producto. El sistema te pregunta si estás seguro antes. Si te equivocaste, buscalo con Incluir productos eliminados y tocá Restaurar.
+---
+📄 Paso 5: Mirá la ficha de un producto
+!Ficha del producto JAMON Y QUESO con sus botones y la sección Cómo se vende este producto
+La ficha muestra todo sobre el producto. Arriba están los botones. Abajo, una sección por cada uso del producto.
+Botones de arriba
+!Ficha con el botón Editar marcado en rojo
+• Editar: abre el formulario del producto (Paso 6).
+!Ficha con el botón Agregar Costo marcado en rojo
+• Agregar Costo (P. Unitario): para cargar a mano cuánto te cuesta, si no lo comprás por el sistema.
+!Ficha del producto Frutilla con el botón Agregar Receta marcado en rojo
+• Agregar Receta (o Editar Receta): para cargar los ingredientes. Mirá Recetas.
+!Ficha con el botón rojo Borrar marcado en rojo
+• Borrar: borra el producto. El sistema te pregunta si estás seguro antes.
+Cómo se vende este producto
+Aparece si el producto está en algún menú. Muestra el precio, la categoría y el impuesto.
+!Ficha con el botón Ver en Menú marcado en rojo
+• Ver en Menú: te lleva al producto dentro del menú, para cambiar el precio.
+!Ficha con el botón verde Agregar a otro menú marcado en rojo
+• Agregar a otro menú: para venderlo también en otro menú. Por ejemplo: en el de delivery.
+Receta / Elaboración
+Aparece si el producto tiene receta. Muestra los ingredientes y cuánto cuesta prepararlo.
+!Ficha con el botón Editar receta marcado en rojo
+• Editar receta: para cambiar los ingredientes o las cantidades.
+!Solapa Mi Receta con el nombre de un ingrediente marcado en rojo
+• Abajo, en la solapa Mi Receta, tocá el nombre de un ingrediente para abrir su ficha.
+Cómo se compra este producto
+!Sección Cómo se compra este producto con la mercadería CHOCOLATE
+Aparece si el producto se compra, o si no se vende. Cada renglón es una mercadería: la forma en que se lo comprás al proveedor. Por ejemplo: Chocolate por kilo.
+!Ficha con el botón Crear nueva mercadería marcado en rojo
+• Crear nueva mercadería para este producto: por ejemplo, si ahora lo comprás en otra presentación.
+!Ficha de Frutilla con el botón Crear primera mercadería marcado en rojo
+• Crear primera mercadería para este producto: aparece si todavía no lo comprás a nadie.
+En qué recetas se usa este producto
+!Sección En qué recetas se usa este producto con el botón Ver marcado en rojo
+• Aparece si el producto es ingrediente de otros. Tocá Ver para abrir el producto que lo usa.
+Este producto es Variante (Sabor)
+!Sección Este producto es Variante con el botón Editar Sabor marcado en rojo
+• Aparece si el producto es una opción de una variante. Tocá Editar Sabor para cambiar su precio en esa variante. Mirá Variantes.
+---
+✏️ Paso 6: Cambiá los datos de un producto
+1. En la ficha, tocá Editar. O en la lista, tocá Acciones → Editar.
+!Formulario Editar del producto JAMON Y QUESO
+2. Se abre el formulario con los datos del producto. Cambiá lo que necesites.
+!Formulario con el botón verde Actualizar marcado en rojo
+3. Tocá el botón verde Actualizar.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| La lista dice "Cargando página, por favor espera..." | La lista todavía se está armando. | Esperá unos segundos. Si no aparece, recargá la página. |
+| No me deja crear el producto: dice "Ya existe un producto similar" | Ya hay un producto con un nombre casi igual. | Buscalo en la lista. Si es otro distinto, elegí un nombre sugerido. |
+| No encuentro un producto que borré | La lista no muestra los borrados. | Marcá Incluir productos eliminados y tocá Buscar. |
+| El producto no aparece para vender | Está en el Maestro pero no en ningún menú. | Tocá Acciones → Agregar a Menú, o cargalo desde el Menú. |
+| El costo del producto sale en $0 | No tiene compras, ni receta, ni costo cargado. | Cargale una mercadería, una receta o tocá Agregar Costo (P. Unitario). |

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturación AFIP → Historico de Mesas
+ ¿Quién lo usa?: Encargados de salón, ca..."/> <meta name="keywords" content="historico de mesas, paxapos, histórico de mesas, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Histórico de Mesas - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturación AFIP → Historico de Mesas
+ ¿Quién lo usa?: Encargados de salón, ca..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Histórico de Mesas - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Histórico de Mesas - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Finanzas → Facturación AFIP → Historico de Mesas
+ ¿Quién lo usa?: Encargados de salón, ca..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Histórico de Mesas - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Finanzas → Facturación AFIP → Historico de Mesas\n ¿Quién lo usa?: Encargados de salón, ca...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Histórico de Mesas - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/arqueos-de-caja" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Arqueos de Caja</a></li><li><a href="../user-guide/listado-de-cajas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Listado de Cajas</a></li><li><a href="../user-guide/transacciones-de-cobro" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Transacciones de Cobro</a></li><li><a href="../user-guide/factura-manual" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Factura Manual</a></li><li><a href="../user-guide/resumen-de-deuda" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Resumen de Deuda</a></li><li><a href="../user-guide/pagos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Pagos</a></li><li><a href="../user-guide/historial-de-facturas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Historial de Facturas</a></li><li><a href="../user-guide/historico-de-mesas" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Histórico de Mesas</a></li><li><a href="../user-guide/puntos-de-venta-pdv" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Puntos de Venta (PDVs)</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Histórico de Mesas</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: historico-de-mesas</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="historico-de-mesas"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Finanzas</strong> → <strong>Facturación AFIP</strong> → <strong>Historico de Mesas</strong>
+<strong>¿Quién lo usa?:</strong> Encargados de salón, cajeros y auditores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Acá ves todas las mesas que ya pasaron, una por renglón, con su mozo, su total y cómo se cobraron.
+Podés buscar una mesa vieja, ver su detalle, bajar la lista a Excel o cargar a mano una mesa que faltó.</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Ojo con los nombres:</strong> el menú y los botones usan el nombre que tenga tu comercio. Si tu comercio usa &quot;Pedido&quot; en vez de &quot;Mesa&quot;, vas a leer <strong>Abrir Pedido</strong>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de facturación AFIP en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>Para ver los botones de cada renglón, también necesitás el permiso de anular mesas.</li>
+<li>Esta pantalla <strong>no emite facturas</strong>. La factura se emite desde la mesa, en el Salón.</li>
+<li>Para ver solo los cobros, mirá <a href="/user-guide/transacciones-de-cobro">Transacciones de Cobro</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/70-finanzas/81-00a-menu-grupo-finanzas.png" alt="Menú lateral con el grupo Finanzas marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Finanzas</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/81-00b-menu-opcion-historico-de-mesas.png" alt="Opción Historico de Mesas marcada en rojo, debajo del título Facturación AFIP"></p>
+<ol start="2">
+<li>Tocá <strong>Historico de Mesas</strong>. Está debajo del título <strong>FACTURACIÓN AFIP</strong>.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/81-01-pantalla-historico-de-mesas.png" alt="Pantalla Mesas con el buscador arriba y la lista de mesas abajo"></p>
+<p>Se abre la pantalla <strong>Mesas</strong>. Arriba tenés el buscador. Abajo, un renglón por mesa. Las columnas dicen:</p>
+<ul>
+<li><strong>#ID</strong>: el número interno de la mesa.</li>
+<li><strong>Mesa</strong>: el número o nombre que le pusieron.</li>
+<li><strong>Mozo</strong>: quién la atendió.</li>
+<li><strong>Cubiertos</strong>: cuántas personas había.</li>
+<li><strong>Cliente</strong>: a quién se le asoció, si se cargó.</li>
+<li><strong>Estado</strong>: por ejemplo <strong>Facturada</strong>, <strong>Checkout</strong> o <strong>Pendiente</strong>.</li>
+<li><strong>Total</strong> y <strong>Descuento</strong>: lo que se cobró y el descuento aplicado.</li>
+<li><strong>Cobros</strong>: con qué medio pagó y cuánto. Si la celda sale en rojo, lo cobrado no coincide con el total.</li>
+<li><strong>CAE Factura</strong>: el número de la factura electrónica, si se emitió.</li>
+<li><strong>Checkin</strong>, <strong>Checkout</strong> y <strong>Tiempo de permanencia</strong>: cuándo empezó, cuándo terminó y cuánto duró.</li>
+<li><strong>Creador</strong>: quién la cargó.</li>
+<li><strong>Acciones</strong>: los botones de cada renglón (Paso 4).</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🔎 Paso 2: Buscá una mesa
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-busca-una-mesa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-busca-una-mesa"></div>
+
+<p><img src="/images/manual/70-finanzas/81-03-buscador-completo.png" alt="Buscador completo con Filtrar por fechas desplegado, los botones Excel y Buscar"></p>
+<p>En el recuadro <strong>Filtros de Búsqueda</strong> tenés estos casilleros:</p>
+<ul>
+<li><strong>Mesa</strong>: escribí el número. Por ejemplo: <em>10</em>.</li>
+<li><strong>Importe</strong>: escribí el total. Por ejemplo: <em>1500</em>.</li>
+<li><strong>Mozo</strong>: elegí quién la atendió.</li>
+<li><strong>Estado</strong>: elegí <strong>Abierta</strong>, <strong>Facturada</strong>, <strong>Cobrada</strong>, etc.</li>
+<li><strong>Cliente</strong>: elegí un cliente.</li>
+<li><strong>Centro de Costo</strong>: aparece solo si tu comercio los usa.</li>
+<li><strong>Filtrar por fechas</strong>: tocalo para abrir los casilleros de fechas. Cada uno tiene <strong>Desde</strong> y <strong>Hasta</strong>:<ul>
+<li><strong>Creada</strong>: cuándo se abrió la mesa.</li>
+<li><strong>Checkin</strong>: cuándo empezó.</li>
+<li><strong>Checkout</strong>: cuándo terminó.</li>
+<li><strong>Cerrada</strong>: cuándo se cerró.</li>
+<li><strong>Cobrada</strong>: cuándo se cobró.</li>
+</ul>
+</li>
+<li><strong>Descuentos</strong>: tildá uno para ver solo las mesas con ese descuento.</li>
+<li><strong>Incluir anuladas</strong>: tildalo para buscar las mesas anuladas.</li>
+<li><strong>Excel</strong>: baja la lista con lo que buscaste a un archivo de Excel.</li>
+<li><strong>Buscar</strong>: el botón azul. Aplica lo que completaste.</li>
+</ul>
+<ol>
+<li>Completá solo lo que necesites.</li>
+<li>Tocá <strong>Buscar</strong>.</li>
+<li>La lista muestra solo las mesas que coinciden.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/81-04-lista-filtrada.png" alt="Lista con una sola mesa encontrada, con sus datos y los botones de la derecha"></p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> con <strong>Incluir anuladas</strong> la lista muestra solo las anuladas, no todas juntas. En nuestras pruebas la tabla salió vacía: si te pasa, destildalo.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                👁 Paso 3: Mirá el detalle de una mesa
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-mira-el-detalle-de-una-mesa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-mira-el-detalle-de-una-mesa"></div>
+
+<p><img src="/images/manual/70-finanzas/81-05-renglon-con-menu-abierto.png" alt="Renglón de una mesa con el ojo, el lápiz y el menú de los tres puntos abierto: Reabrir, Imprimir Ticket, Ver detalles y Anular"></p>
+<p>En <strong>Acciones</strong> de cada renglón hay tres botones:</p>
+<ul>
+<li><strong>Ojo</strong> 👁: abre el detalle de la mesa.</li>
+<li><strong>Lápiz</strong> ✏️: abre la mesa para cambiar sus datos.</li>
+<li><strong>Tres puntos</strong> ⋮: abre más opciones (Paso 4).</li>
+</ul>
+<ol>
+<li>Tocá el <strong>ojo</strong> 👁 del renglón.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/81-07-pantalla-ver-detalles.png" alt="Ventanita Detalles de Mesa con Estadía, Información General y Cliente"></p>
+<p>Se abre la ventanita <strong>Detalles de Mesa</strong>. Bajando ves:</p>
+<ul>
+<li><strong>Estadía</strong>: cuándo empezó, cuándo terminó y cuánto duró.</li>
+<li><strong>Información General</strong>: cubiertos, mozo, creador, fechas y total.</li>
+<li><strong>Cliente</strong>: quién es, si la mesa tiene uno.</li>
+<li>Más abajo: los pedidos, los cobros y el resumen de pagos.</li>
+<li><strong>Facturas AFIP</strong>: solo aparece si la mesa ya tiene una factura.</li>
+</ul>
+<p><img src="/images/manual/70-finanzas/81-08-botones-del-detalle.png" alt="Botones Imprimir Ticket, Editar y Anular arriba a la derecha del detalle"></p>
+<p>Arriba a la derecha hay tres botones:</p>
+<ul>
+<li><strong>Imprimir Ticket</strong>: imprime el ticket de la mesa.</li>
+<li><strong>Editar</strong>: abre la mesa para cambiar sus datos.</li>
+<li><strong>Anular</strong>: anula la mesa.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Imprimir Ticket</strong> imprime de verdad. <strong>Anular</strong> saca la mesa de las estadísticas. No los toques si no estás seguro.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⋮ Paso 4: Usá el menú de tres puntos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-usa-el-menu-de-tres-puntos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-usa-el-menu-de-tres-puntos"></div>
+
+<ol>
+<li>En el renglón, tocá los <strong>tres puntos</strong> ⋮. Está a la derecha.</li>
+</ol>
+<p>Se abre la lista que ves en la foto del Paso 3, con estas opciones:</p>
+<ul>
+<li><strong>Reabrir</strong>: vuelve a abrir la mesa para seguir cargándole cosas. Solo aparece si la mesa no está abierta.</li>
+<li><strong>Imprimir Ticket</strong>: imprime el ticket de la mesa.</li>
+<li><strong>Ver detalles</strong>: abre el detalle, igual que el ojo.</li>
+<li><strong>Anular</strong>: anula la mesa.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> <strong>Reabrir</strong>, <strong>Imprimir Ticket</strong> y <strong>Anular</strong> actúan al instante después de confirmar. Una mesa anulada deja de contar en las estadísticas.</p>
+</blockquote>
+<p>Si anulás una mesa, la lista la muestra en rojo con un botón verde para <strong>Restaurar</strong> (las flechas 🔄). Al tocarlo, el sistema te pide confirmar.</p>
+<hr>
+<h2 class="relative">
+                ➕ Paso 5: Abrí una mesa a mano
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-abri-una-mesa-a-mano"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-abri-una-mesa-a-mano"></div>
+
+<p>Sirve para cargar una mesa que quedó sin registrar. Por ejemplo, una venta de días atrás.</p>
+<p><img src="/images/manual/70-finanzas/81-02-donde-esta-boton-abrir-mesa.png" alt="Pantalla Mesas con el botón verde Abrir Mesa marcado en rojo arriba a la derecha"></p>
+<ol>
+<li>Tocá el botón verde <strong>Abrir Mesa</strong>, arriba a la derecha.</li>
+</ol>
+<p><img src="/images/manual/70-finanzas/81-09-pantalla-abrir-mesa.png" alt="Pantalla Agregar Mesa vacía"></p>
+<p>Se abre la pantalla <strong>Agregar Mesa</strong>. Completala así:</p>
+<p><img src="/images/manual/70-finanzas/81-10-formulario-abrir-mesa.png" alt="Pantalla Agregar Mesa completa con datos de ejemplo y los botones Agregar y Cancelar"></p>
+<ul>
+<li><strong>Listar Mesa</strong>: el botón de arriba a la derecha. Vuelve a la lista sin guardar.</li>
+<li><strong>Número de Mesa</strong>: escribí el número. Por ejemplo: <em>99</em>.</li>
+<li><strong>Mozo</strong>: elegí quién la atendió.</li>
+<li><strong>Tipo Entrega</strong>: elegí <strong>En Salón</strong>, <strong>Es Delivery</strong> o <strong>Es Take Away</strong>.</li>
+<li><strong>Es Pedimelo Online</strong>: tildalo si vino de tu menú online.</li>
+<li><strong>Es Reserva</strong>: tildalo si es una reserva.</li>
+<li><strong>Checkin</strong> y <strong>Checkout</strong>: la fecha y hora de entrada y de salida.</li>
+<li><strong>Cliente</strong>: elegí uno si querés. Puede quedar sin elegir.</li>
+<li><strong>Fecha de Facturación</strong>: cuándo se cerró la cuenta.</li>
+<li><strong>Importe Total</strong>: cuánto se cobró. Por ejemplo: <em>1500</em>.</li>
+<li><strong>Salon Mesa</strong>: la mesa del salón donde estuvo.</li>
+<li><strong>Estado</strong>: por ejemplo <strong>Cobrada</strong>. Al elegir <strong>Cobrada</strong> aparecen dos casilleros más.</li>
+<li><strong>Tipo De Pago</strong>: con qué pagó. Por ejemplo: <em>Transferencia bancaria</em>.</li>
+<li><strong>Monto a Pagar</strong>: cuánto pagó. Se completa solo con el importe.</li>
+<li><strong>Agregar</strong>: el botón verde de abajo. Guarda la mesa.</li>
+<li><strong>Cancelar</strong>: sale sin guardar nada.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> al tocar <strong>Agregar</strong> se crea la mesa y, si está <strong>Cobrada</strong>, también el cobro. Revisá los datos antes.</p>
+</blockquote>
+<ol>
+<li>Completá los datos.</li>
+<li>Tocá <strong>Agregar</strong> para guardar, o <strong>Cancelar</strong> para salir.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                ⚠️ ¿Qué hacer si algo no sale bien?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-hacer-si-algo-no-sale-bien"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-hacer-si-algo-no-sale-bien"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Busco el botón <strong>Facturar</strong> y no está.</td>
+<td>Esta pantalla no emite facturas.</td>
+<td>Emití la factura desde la mesa, en el Salón.</td>
+</tr>
+<tr>
+<td>No veo los botones del renglón.</td>
+<td>Tu usuario no puede anular mesas.</td>
+<td>Pedile el permiso a quien administra el sistema.</td>
+</tr>
+<tr>
+<td>La lista sale vacía.</td>
+<td>Los filtros no coinciden con ninguna mesa.</td>
+<td>Borrá los filtros y tocá <strong>Buscar</strong> de nuevo.</td>
+</tr>
+<tr>
+<td>Con <strong>Incluir anuladas</strong> la lista sale vacía.</td>
+<td>La pantalla no muestra las anuladas en este caso.</td>
+<td>Destildalo y buscá por número de mesa.</td>
+</tr>
+<tr>
+<td>La celda de <strong>Cobros</strong> sale en rojo.</td>
+<td>Lo cobrado no coincide con el total de la mesa.</td>
+<td>Abrí el detalle y revisá los cobros.</td>
+</tr>
+<tr>
+<td>No aparece <strong>Reabrir</strong>.</td>
+<td>La mesa ya está abierta.</td>
+<td>Solo se reabren mesas cerradas o cobradas.</td>
+</tr>
+<tr>
+<td>Cambié un dato y la lista no cambia.</td>
+<td>Falta tocar <strong>Buscar</strong>.</td>
+<td>Tocá <strong>Buscar</strong> para actualizar la lista.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/81-historico-de-mesas.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-busca-una-mesa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Buscá una mesa</a></li><li><a href="#paso-3-mira-el-detalle-de-una-mesa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Mirá el detalle de una mesa</a></li><li><a href="#paso-4-usa-el-menu-de-tres-puntos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">⋮ Paso 4: Usá el menú de tres puntos</a></li><li><a href="#paso-5-abri-una-mesa-a-mano" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Abrí una mesa a mano</a></li><li><a href="#que-hacer-si-algo-no-sale-bien" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué hacer si algo no sale bien?</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"historico-de-mesas",title:"Histórico de Mesas",content:"\u003Cdiv id=\"historico-de-mesas\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Finanzas\u003C/strong> → \u003Cstrong>Facturación AFIP\u003C/strong> → \u003Cstrong>Historico de Mesas\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Encargados de salón, cajeros y auditores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nAcá ves todas las mesas que ya pasaron, una por renglón, con su mozo, su total y cómo se cobraron.\nPodés buscar una mesa vieja, ver su detalle, bajar la lista a Excel o cargar a mano una mesa que faltó.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Ojo con los nombres:\u003C/strong> el menú y los botones usan el nombre que tenga tu comercio. Si tu comercio usa &quot;Pedido&quot; en vez de &quot;Mesa&quot;, vas a leer \u003Cstrong>Abrir Pedido\u003C/strong>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de facturación AFIP en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>Para ver los botones de cada renglón, también necesitás el permiso de anular mesas.\u003C/li>\n\u003Cli>Esta pantalla \u003Cstrong>no emite facturas\u003C/strong>. La factura se emite desde la mesa, en el Salón.\u003C/li>\n\u003Cli>Para ver solo los cobros, mirá \u003Ca href=\"/user-guide/transacciones-de-cobro\">Transacciones de Cobro\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-00a-menu-grupo-finanzas.png\" alt=\"Menú lateral con el grupo Finanzas marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Finanzas\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-00b-menu-opcion-historico-de-mesas.png\" alt=\"Opción Historico de Mesas marcada en rojo, debajo del título Facturación AFIP\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Historico de Mesas\u003C/strong>. Está debajo del título \u003Cstrong>FACTURACIÓN AFIP\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-01-pantalla-historico-de-mesas.png\" alt=\"Pantalla Mesas con el buscador arriba y la lista de mesas abajo\">\u003C/p>\n\u003Cp>Se abre la pantalla \u003Cstrong>Mesas\u003C/strong>. Arriba tenés el buscador. Abajo, un renglón por mesa. Las columnas dicen:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>#ID\u003C/strong>: el número interno de la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Mesa\u003C/strong>: el número o nombre que le pusieron.\u003C/li>\n\u003Cli>\u003Cstrong>Mozo\u003C/strong>: quién la atendió.\u003C/li>\n\u003Cli>\u003Cstrong>Cubiertos\u003C/strong>: cuántas personas había.\u003C/li>\n\u003Cli>\u003Cstrong>Cliente\u003C/strong>: a quién se le asoció, si se cargó.\u003C/li>\n\u003Cli>\u003Cstrong>Estado\u003C/strong>: por ejemplo \u003Cstrong>Facturada\u003C/strong>, \u003Cstrong>Checkout\u003C/strong> o \u003Cstrong>Pendiente\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Total\u003C/strong> y \u003Cstrong>Descuento\u003C/strong>: lo que se cobró y el descuento aplicado.\u003C/li>\n\u003Cli>\u003Cstrong>Cobros\u003C/strong>: con qué medio pagó y cuánto. Si la celda sale en rojo, lo cobrado no coincide con el total.\u003C/li>\n\u003Cli>\u003Cstrong>CAE Factura\u003C/strong>: el número de la factura electrónica, si se emitió.\u003C/li>\n\u003Cli>\u003Cstrong>Checkin\u003C/strong>, \u003Cstrong>Checkout\u003C/strong> y \u003Cstrong>Tiempo de permanencia\u003C/strong>: cuándo empezó, cuándo terminó y cuánto duró.\u003C/li>\n\u003Cli>\u003Cstrong>Creador\u003C/strong>: quién la cargó.\u003C/li>\n\u003Cli>\u003Cstrong>Acciones\u003C/strong>: los botones de cada renglón (Paso 4).\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 2: Buscá una mesa\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-busca-una-mesa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-busca-una-mesa\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-03-buscador-completo.png\" alt=\"Buscador completo con Filtrar por fechas desplegado, los botones Excel y Buscar\">\u003C/p>\n\u003Cp>En el recuadro \u003Cstrong>Filtros de Búsqueda\u003C/strong> tenés estos casilleros:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Mesa\u003C/strong>: escribí el número. Por ejemplo: \u003Cem>10\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Importe\u003C/strong>: escribí el total. Por ejemplo: \u003Cem>1500\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Mozo\u003C/strong>: elegí quién la atendió.\u003C/li>\n\u003Cli>\u003Cstrong>Estado\u003C/strong>: elegí \u003Cstrong>Abierta\u003C/strong>, \u003Cstrong>Facturada\u003C/strong>, \u003Cstrong>Cobrada\u003C/strong>, etc.\u003C/li>\n\u003Cli>\u003Cstrong>Cliente\u003C/strong>: elegí un cliente.\u003C/li>\n\u003Cli>\u003Cstrong>Centro de Costo\u003C/strong>: aparece solo si tu comercio los usa.\u003C/li>\n\u003Cli>\u003Cstrong>Filtrar por fechas\u003C/strong>: tocalo para abrir los casilleros de fechas. Cada uno tiene \u003Cstrong>Desde\u003C/strong> y \u003Cstrong>Hasta\u003C/strong>:\u003Cul>\n\u003Cli>\u003Cstrong>Creada\u003C/strong>: cuándo se abrió la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Checkin\u003C/strong>: cuándo empezó.\u003C/li>\n\u003Cli>\u003Cstrong>Checkout\u003C/strong>: cuándo terminó.\u003C/li>\n\u003Cli>\u003Cstrong>Cerrada\u003C/strong>: cuándo se cerró.\u003C/li>\n\u003Cli>\u003Cstrong>Cobrada\u003C/strong>: cuándo se cobró.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>\u003Cstrong>Descuentos\u003C/strong>: tildá uno para ver solo las mesas con ese descuento.\u003C/li>\n\u003Cli>\u003Cstrong>Incluir anuladas\u003C/strong>: tildalo para buscar las mesas anuladas.\u003C/li>\n\u003Cli>\u003Cstrong>Excel\u003C/strong>: baja la lista con lo que buscaste a un archivo de Excel.\u003C/li>\n\u003Cli>\u003Cstrong>Buscar\u003C/strong>: el botón azul. Aplica lo que completaste.\u003C/li>\n\u003C/ul>\n\u003Col>\n\u003Cli>Completá solo lo que necesites.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Buscar\u003C/strong>.\u003C/li>\n\u003Cli>La lista muestra solo las mesas que coinciden.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-04-lista-filtrada.png\" alt=\"Lista con una sola mesa encontrada, con sus datos y los botones de la derecha\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> con \u003Cstrong>Incluir anuladas\u003C/strong> la lista muestra solo las anuladas, no todas juntas. En nuestras pruebas la tabla salió vacía: si te pasa, destildalo.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👁 Paso 3: Mirá el detalle de una mesa\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-mira-el-detalle-de-una-mesa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-mira-el-detalle-de-una-mesa\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-05-renglon-con-menu-abierto.png\" alt=\"Renglón de una mesa con el ojo, el lápiz y el menú de los tres puntos abierto: Reabrir, Imprimir Ticket, Ver detalles y Anular\">\u003C/p>\n\u003Cp>En \u003Cstrong>Acciones\u003C/strong> de cada renglón hay tres botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Ojo\u003C/strong> 👁: abre el detalle de la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Lápiz\u003C/strong> ✏️: abre la mesa para cambiar sus datos.\u003C/li>\n\u003Cli>\u003Cstrong>Tres puntos\u003C/strong> ⋮: abre más opciones (Paso 4).\u003C/li>\n\u003C/ul>\n\u003Col>\n\u003Cli>Tocá el \u003Cstrong>ojo\u003C/strong> 👁 del renglón.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-07-pantalla-ver-detalles.png\" alt=\"Ventanita Detalles de Mesa con Estadía, Información General y Cliente\">\u003C/p>\n\u003Cp>Se abre la ventanita \u003Cstrong>Detalles de Mesa\u003C/strong>. Bajando ves:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Estadía\u003C/strong>: cuándo empezó, cuándo terminó y cuánto duró.\u003C/li>\n\u003Cli>\u003Cstrong>Información General\u003C/strong>: cubiertos, mozo, creador, fechas y total.\u003C/li>\n\u003Cli>\u003Cstrong>Cliente\u003C/strong>: quién es, si la mesa tiene uno.\u003C/li>\n\u003Cli>Más abajo: los pedidos, los cobros y el resumen de pagos.\u003C/li>\n\u003Cli>\u003Cstrong>Facturas AFIP\u003C/strong>: solo aparece si la mesa ya tiene una factura.\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-08-botones-del-detalle.png\" alt=\"Botones Imprimir Ticket, Editar y Anular arriba a la derecha del detalle\">\u003C/p>\n\u003Cp>Arriba a la derecha hay tres botones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Imprimir Ticket\u003C/strong>: imprime el ticket de la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Editar\u003C/strong>: abre la mesa para cambiar sus datos.\u003C/li>\n\u003Cli>\u003Cstrong>Anular\u003C/strong>: anula la mesa.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Imprimir Ticket\u003C/strong> imprime de verdad. \u003Cstrong>Anular\u003C/strong> saca la mesa de las estadísticas. No los toques si no estás seguro.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⋮ Paso 4: Usá el menú de tres puntos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-usa-el-menu-de-tres-puntos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-usa-el-menu-de-tres-puntos\">\u003C/div>\n\n\u003Col>\n\u003Cli>En el renglón, tocá los \u003Cstrong>tres puntos\u003C/strong> ⋮. Está a la derecha.\u003C/li>\n\u003C/ol>\n\u003Cp>Se abre la lista que ves en la foto del Paso 3, con estas opciones:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Reabrir\u003C/strong>: vuelve a abrir la mesa para seguir cargándole cosas. Solo aparece si la mesa no está abierta.\u003C/li>\n\u003Cli>\u003Cstrong>Imprimir Ticket\u003C/strong>: imprime el ticket de la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Ver detalles\u003C/strong>: abre el detalle, igual que el ojo.\u003C/li>\n\u003Cli>\u003Cstrong>Anular\u003C/strong>: anula la mesa.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> \u003Cstrong>Reabrir\u003C/strong>, \u003Cstrong>Imprimir Ticket\u003C/strong> y \u003Cstrong>Anular\u003C/strong> actúan al instante después de confirmar. Una mesa anulada deja de contar en las estadísticas.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Si anulás una mesa, la lista la muestra en rojo con un botón verde para \u003Cstrong>Restaurar\u003C/strong> (las flechas 🔄). Al tocarlo, el sistema te pide confirmar.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 5: Abrí una mesa a mano\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-abri-una-mesa-a-mano\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-abri-una-mesa-a-mano\">\u003C/div>\n\n\u003Cp>Sirve para cargar una mesa que quedó sin registrar. Por ejemplo, una venta de días atrás.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-02-donde-esta-boton-abrir-mesa.png\" alt=\"Pantalla Mesas con el botón verde Abrir Mesa marcado en rojo arriba a la derecha\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón verde \u003Cstrong>Abrir Mesa\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-09-pantalla-abrir-mesa.png\" alt=\"Pantalla Agregar Mesa vacía\">\u003C/p>\n\u003Cp>Se abre la pantalla \u003Cstrong>Agregar Mesa\u003C/strong>. Completala así:\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/70-finanzas/81-10-formulario-abrir-mesa.png\" alt=\"Pantalla Agregar Mesa completa con datos de ejemplo y los botones Agregar y Cancelar\">\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Listar Mesa\u003C/strong>: el botón de arriba a la derecha. Vuelve a la lista sin guardar.\u003C/li>\n\u003Cli>\u003Cstrong>Número de Mesa\u003C/strong>: escribí el número. Por ejemplo: \u003Cem>99\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Mozo\u003C/strong>: elegí quién la atendió.\u003C/li>\n\u003Cli>\u003Cstrong>Tipo Entrega\u003C/strong>: elegí \u003Cstrong>En Salón\u003C/strong>, \u003Cstrong>Es Delivery\u003C/strong> o \u003Cstrong>Es Take Away\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Es Pedimelo Online\u003C/strong>: tildalo si vino de tu menú online.\u003C/li>\n\u003Cli>\u003Cstrong>Es Reserva\u003C/strong>: tildalo si es una reserva.\u003C/li>\n\u003Cli>\u003Cstrong>Checkin\u003C/strong> y \u003Cstrong>Checkout\u003C/strong>: la fecha y hora de entrada y de salida.\u003C/li>\n\u003Cli>\u003Cstrong>Cliente\u003C/strong>: elegí uno si querés. Puede quedar sin elegir.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha de Facturación\u003C/strong>: cuándo se cerró la cuenta.\u003C/li>\n\u003Cli>\u003Cstrong>Importe Total\u003C/strong>: cuánto se cobró. Por ejemplo: \u003Cem>1500\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Salon Mesa\u003C/strong>: la mesa del salón donde estuvo.\u003C/li>\n\u003Cli>\u003Cstrong>Estado\u003C/strong>: por ejemplo \u003Cstrong>Cobrada\u003C/strong>. Al elegir \u003Cstrong>Cobrada\u003C/strong> aparecen dos casilleros más.\u003C/li>\n\u003Cli>\u003Cstrong>Tipo De Pago\u003C/strong>: con qué pagó. Por ejemplo: \u003Cem>Transferencia bancaria\u003C/em>.\u003C/li>\n\u003Cli>\u003Cstrong>Monto a Pagar\u003C/strong>: cuánto pagó. Se completa solo con el importe.\u003C/li>\n\u003Cli>\u003Cstrong>Agregar\u003C/strong>: el botón verde de abajo. Guarda la mesa.\u003C/li>\n\u003Cli>\u003Cstrong>Cancelar\u003C/strong>: sale sin guardar nada.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> al tocar \u003Cstrong>Agregar\u003C/strong> se crea la mesa y, si está \u003Cstrong>Cobrada\u003C/strong>, también el cobro. Revisá los datos antes.\u003C/p>\n\u003C/blockquote>\n\u003Col>\n\u003Cli>Completá los datos.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Agregar\u003C/strong> para guardar, o \u003Cstrong>Cancelar\u003C/strong> para salir.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ ¿Qué hacer si algo no sale bien?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-hacer-si-algo-no-sale-bien\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-hacer-si-algo-no-sale-bien\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>Busco el botón \u003Cstrong>Facturar\u003C/strong> y no está.\u003C/td>\n\u003Ctd>Esta pantalla no emite facturas.\u003C/td>\n\u003Ctd>Emití la factura desde la mesa, en el Salón.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo los botones del renglón.\u003C/td>\n\u003Ctd>Tu usuario no puede anular mesas.\u003C/td>\n\u003Ctd>Pedile el permiso a quien administra el sistema.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La lista sale vacía.\u003C/td>\n\u003Ctd>Los filtros no coinciden con ninguna mesa.\u003C/td>\n\u003Ctd>Borrá los filtros y tocá \u003Cstrong>Buscar\u003C/strong> de nuevo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Con \u003Cstrong>Incluir anuladas\u003C/strong> la lista sale vacía.\u003C/td>\n\u003Ctd>La pantalla no muestra las anuladas en este caso.\u003C/td>\n\u003Ctd>Destildalo y buscá por número de mesa.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La celda de \u003Cstrong>Cobros\u003C/strong> sale en rojo.\u003C/td>\n\u003Ctd>Lo cobrado no coincide con el total de la mesa.\u003C/td>\n\u003Ctd>Abrí el detalle y revisá los cobros.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No aparece \u003Cstrong>Reabrir\u003C/strong>.\u003C/td>\n\u003Ctd>La mesa ya está abierta.\u003C/td>\n\u003Ctd>Solo se reabren mesas cerradas o cobradas.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Cambié un dato y la lista no cambia.\u003C/td>\n\u003Ctd>Falta tocar \u003Cstrong>Buscar\u003C/strong>.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Buscar\u003C/strong> para actualizar la lista.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-busca-una-mesa",title:"Paso 2: Buscá una mesa",level:2},{id:"paso-3-mira-el-detalle-de-una-mesa",title:"Paso 3: Mirá el detalle de una mesa",level:2},{id:"paso-4-usa-el-menu-de-tres-puntos",title:"⋮ Paso 4: Usá el menú de tres puntos",level:2},{id:"paso-5-abri-una-mesa-a-mano",title:"Paso 5: Abrí una mesa a mano",level:2},{id:"que-hacer-si-algo-no-sale-bien",title:"¿Qué hacer si algo no sale bien?",level:2}],seo:{title:"Histórico de Mesas - Manual",description:"¿Dónde está en el sistema?: Menú principal → Finanzas → Facturación AFIP → Historico de Mesas\n ¿Quién lo usa?: Encargados de salón, ca...",keywords:"historico de mesas, paxapos, histórico de mesas, tutorial, guía, manual usuario"},llmTxtFile:"81-historico-de-mesas.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

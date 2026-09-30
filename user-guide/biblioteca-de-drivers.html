@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="📋 Guía de Instalación Rápida de drivers"/> <meta name="keywords" content="biblioteca de drivers, paxapos, biblioteca de drivers, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Biblioteca de Drivers - Manual"/> <meta property="og:description" content="📋 Guía de Instalación Rápida de drivers"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Biblioteca de Drivers - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Biblioteca de Drivers - Manual"/> <meta name="twitter:description" content="📋 Guía de Instalación Rápida de drivers"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Biblioteca de Drivers - Manual",
+  "description": "📋 Guía de Instalación Rápida de drivers",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Biblioteca de Drivers - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/biblioteca-de-drivers" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Biblioteca de Drivers</a></li><li><a href="../user-guide/sam4s-giant-100" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sam4S Giant - 100</a></li><li><a href="../user-guide/citizen-ct-s310ii" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Citizen CT-S310II</a></li><li><a href="../user-guide/epson-tm-t20" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Epson TM-T20</a></li><li><a href="../user-guide/drivers-genericos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Drivers Genéricos POS</a></li><li><a href="../user-guide/epson-tm-t88" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Epson TM-T88V</a></li><li><a href="../user-guide/fiscalberry-windows" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Instalar Fiscalberry en Windows</a></li><li><a href="../user-guide/fiscalberry-linux" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Instalar Fiscalberry en Linux</a></li><li><a href="../user-guide/fiscalberry-android" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Instalar Fiscalberry en Android</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Biblioteca de Drivers</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: biblioteca-de-drivers</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="biblioteca-de-drivers"></div>
+
+<h2 class="relative">
+                📋 <strong>Guía de Instalación Rápida de drivers</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="guia-de-instalacion-rapida-de-drivers"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="guia-de-instalacion-rapida-de-drivers"></div>
+
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong><br>Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas. Cada driver incluye instrucciones detalladas e instaladores oficiales.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🖨️ <strong>Fiscalberry: el programa que imprime</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="fiscalberry-el-programa-que-imprime"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="fiscalberry-el-programa-que-imprime"></div>
+
+<blockquote>
+<p>⚠️ Además del driver de la impresora, en el local tiene que estar instalado y <strong>siempre abierto</strong> <strong>Fiscalberry</strong>, el programa que conecta PaxaPOS con tus impresoras. Seguí la guía de tu equipo:</p>
+<ul>
+<li>🖥️ <a href="/user-guide/fiscalberry-windows">Instalar Fiscalberry en Windows</a></li>
+<li>🐧 <a href="/user-guide/fiscalberry-linux">Instalar Fiscalberry en Linux</a></li>
+<li>📱 <a href="/user-guide/fiscalberry-android">Instalar Fiscalberry en Android</a> (solo impresoras de red)</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="relative">
+                📦 <strong>Drivers Disponibles</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="drivers-disponibles"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="drivers-disponibles"></div>
+
+<h3 class="relative">
+                <strong>🏷️ Drivers con Guía Completa</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="drivers-con-guia-completa"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="drivers-con-guia-completa"></div>
+
+<blockquote>
+<p>📚 <strong>Estos modelos incluyen documentación paso a paso detallada:</strong></p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>🏭 <strong>Fabricante</strong></th>
+<th>📱 <strong>Modelo</strong></th>
+<th>🖥️ <strong>Windows</strong></th>
+<th>📋 <strong>Manual</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>SAM4S</strong></td>
+<td>Giant 100</td>
+<td>7/8/10/11</td>
+<td><a href="/user-guide/sam4s-giant-100">📄 Ver Guía</a></td>
+</tr>
+<tr>
+<td><strong>CITIZEN</strong></td>
+<td>CT-S310II</td>
+<td>10+</td>
+<td><a href="/user-guide/citizen-ct-s310ii">📄 Ver Guía</a></td>
+</tr>
+<tr>
+<td><strong>EPSON</strong></td>
+<td>TM-T20/T20II/T20III</td>
+<td>7/8/10/11</td>
+<td><a href="/user-guide/epson-tm-t20">📄 Ver Guía</a></td>
+</tr>
+<tr>
+<td><strong>EPSON</strong></td>
+<td>TM-T88V</td>
+<td>7/8/10/11</td>
+<td><a href="/user-guide/epson-tm-t88">📄 Ver Guía</a></td>
+</tr>
+<tr>
+<td><strong>Genérico POS</strong></td>
+<td>80mm / 58mm</td>
+<td>7/8/10/11</td>
+<td><a href="/user-guide/drivers-genericos">📄 Ver Guía</a></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="relative">
+                <strong>⬇️ Descarga Directa de Drivers</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="descarga-directa-de-drivers"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="descarga-directa-de-drivers"></div>
+
+<blockquote>
+<p>💾 <strong>Drivers disponibles para descarga inmediata sin guía paso a paso:</strong></p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>🏭 <strong>Fabricante</strong></th>
+<th>📱 <strong>Modelo</strong></th>
+<th>🖥️ <strong>Windows</strong></th>
+<th>⬇️ <strong>Descarga</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>3nStar</strong></td>
+<td>LTT214</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/3nstar/LTT214.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>3nStar</strong></td>
+<td>RPT005</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/3nstar/RPT005.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>3nStar</strong></td>
+<td>RPT006w</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/3nstar/RPT006w.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>HASAR</strong></td>
+<td>85E</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/hasar/85E.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>HASAR</strong></td>
+<td>180</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/hasar/HASAR-180.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>HASAR</strong></td>
+<td>181</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/hasar/HASAR-181.zip">⬇️ Descargar</a></td>
+</tr>
+<tr>
+<td><strong>HASAR</strong></td>
+<td>250</td>
+<td>7/8/10/11</td>
+<td><a href="/drivers/hasar/HASAR-250.zip">⬇️ Descargar</a></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2 class="relative">
+                📋 <strong>Guía de Instalación Rápida</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="guia-de-instalacion-rapida"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="guia-de-instalacion-rapida"></div>
+
+<h3 class="relative">
+                <strong>🔧 Antes de Empezar</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="antes-de-empezar"></div>
+
+<blockquote>
+<p>⚠️ <strong>REQUISITOS PREVIOS:</strong></p>
+<ul>
+<li>✅ Permisos de administrador en Windows</li>
+<li>✅ Impresora conectada vía USB/Ethernet</li>
+<li>✅ Antivirus temporalmente desactivado</li>
+</ul>
+</blockquote>
+<h3 class="relative">
+                <strong>🚀 Proceso de Instalación</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="proceso-de-instalacion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="proceso-de-instalacion"></div>
+
+<p><strong>1️⃣ Descargar</strong></p>
+<ul>
+<li>Haz clic en el enlace del driver correspondiente a tu impresora</li>
+</ul>
+<p><strong>2️⃣ Ejecutar</strong></p>
+<ul>
+<li>Ejecuta el instalador como administrador (clic derecho → &quot;Ejecutar como administrador&quot;)</li>
+</ul>
+<p><strong>3️⃣ Seguir</strong></p>
+<ul>
+<li>Sigue las instrucciones paso a paso del asistente de instalación</li>
+</ul>
+<p><strong>4️⃣ Configurar</strong></p>
+<ul>
+<li>Configura la impresora desde el menú de configuración</li>
+</ul>
+<h3 class="relative">
+                <strong>✅ Verificación Post-Instalación</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="verificacion-post-instalacion"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="verificacion-post-instalacion"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Verificar</th>
+<th>Cómo Hacerlo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>🔄 Reiniciar</strong></td>
+<td>Reinicia la impresora físicamente</td>
+</tr>
+<tr>
+<td><strong>🖨️ Probar</strong></td>
+<td>Realiza una impresión de prueba</td>
+</tr>
+<tr>
+<td><strong>⚙️ Configurar</strong></td>
+<td>Ajusta la configuración</td>
+</tr>
+</tbody></table></div>
+<blockquote>
+<p>🔗 <strong>Siguiente Paso:</strong> Una vez instalado el driver, dá de alta la impresora en PaxaPOS siguiendo <a href="/user-guide/impresoras">Gestión de Impresoras</a>. Acordate de tener <strong>Fiscalberry</strong> instalado y abierto (<a href="/user-guide/fiscalberry-windows">Windows</a> · <a href="/user-guide/fiscalberry-linux">Linux</a>).</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🚨 <strong>¿Problemas comunes?</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="problemas-comunes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="problemas-comunes"></div>
+
+<ul>
+<li><strong>&quot;Impresora no detectada&quot;</strong> → Verificar conexión USB, reinstalar driver, cambiar puerto USB</li>
+<li><strong>&quot;Caracteres extraños&quot;</strong> → Verificar codificación, actualizar driver, configurar idioma</li>
+<li><strong>&quot;No imprime comandas&quot;</strong> → Verificar configuración, revisar papel térmico, limpiar cabezal</li>
+<li><strong>&quot;Impresión lenta&quot;</strong> → Actualizar driver, verificar cable USB, reiniciar spooler</li>
+<li><strong>&quot;Papel se atasca&quot;</strong> → Verificar tipo de papel, limpiar rodillos, ajustar guías</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🆘 <strong>Soporte Técnico Especializado</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="soporte-tecnico-especializado"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="soporte-tecnico-especializado"></div>
+
+<blockquote>
+<p>💬 <strong>¿Necesitás ayuda personalizada?</strong><br>Nuestro equipo técnico está disponible para asistirte con cualquier problema de instalación o configuración.</p>
+</blockquote>
+<h3 class="relative">
+                <strong>📞 Contacto Directo</strong>
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="contacto-directo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="contacto-directo"></div>
+
+<p><strong>💬 WhatsApp Business</strong></p>
+<ul>
+<li><strong>Número:</strong> <a href="https://wa.me/542254629000?" target="_blank">+54 2254 62-9000</a></li>
+<li><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00 hs</li>
+<li><strong>Respuesta:</strong> Inmediata durante horario de atención</li>
+</ul>
+<blockquote>
+<p>🚀 <strong>Tip:</strong> <em>¡Hacé clic en WhatsApp para chatear directamente en una nueva pestaña!</em></p>
+</blockquote>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/141-biblioteca-de-drivers.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#guia-de-instalacion-rapida-de-drivers" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guía de Instalación Rápida de drivers</a></li><li><a href="#fiscalberry-el-programa-que-imprime" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Fiscalberry: el programa que imprime</a></li><li><a href="#drivers-disponibles" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Drivers Disponibles</a></li><li><a href="#drivers-con-guia-completa" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Drivers con Guía Completa</a></li><li><a href="#descarga-directa-de-drivers" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Descarga Directa de Drivers</a></li><li><a href="#guia-de-instalacion-rapida" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guía de Instalación Rápida</a></li><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de Empezar</a></li><li><a href="#proceso-de-instalacion" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Proceso de Instalación</a></li><li><a href="#verificacion-post-instalacion" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Verificación Post-Instalación</a></li><li><a href="#problemas-comunes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Problemas comunes?</a></li><li><a href="#soporte-tecnico-especializado" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Soporte Técnico Especializado</a></li><li><a href="#contacto-directo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Contacto Directo</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers",content:"\u003Cdiv id=\"biblioteca-de-drivers\">\u003C/div>\n\n\u003Ch2 class=\"relative\">\n                📋 \u003Cstrong>Guía de Instalación Rápida de drivers\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"guia-de-instalacion-rapida-de-drivers\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"guia-de-instalacion-rapida-de-drivers\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\u003Cbr>Esta biblioteca contiene todos los drivers y controladores necesarios para conectar impresoras de comandas. Cada driver incluye instrucciones detalladas e instaladores oficiales.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🖨️ \u003Cstrong>Fiscalberry: el programa que imprime\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"fiscalberry-el-programa-que-imprime\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"fiscalberry-el-programa-que-imprime\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>⚠️ Además del driver de la impresora, en el local tiene que estar instalado y \u003Cstrong>siempre abierto\u003C/strong> \u003Cstrong>Fiscalberry\u003C/strong>, el programa que conecta PaxaPOS con tus impresoras. Seguí la guía de tu equipo:\u003C/p>\n\u003Cul>\n\u003Cli>🖥️ \u003Ca href=\"/user-guide/fiscalberry-windows\">Instalar Fiscalberry en Windows\u003C/a>\u003C/li>\n\u003Cli>🐧 \u003Ca href=\"/user-guide/fiscalberry-linux\">Instalar Fiscalberry en Linux\u003C/a>\u003C/li>\n\u003Cli>📱 \u003Ca href=\"/user-guide/fiscalberry-android\">Instalar Fiscalberry en Android\u003C/a> (solo impresoras de red)\u003C/li>\n\u003C/ul>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📦 \u003Cstrong>Drivers Disponibles\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"drivers-disponibles\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"drivers-disponibles\">\u003C/div>\n\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>🏷️ Drivers con Guía Completa\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"drivers-con-guia-completa\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"drivers-con-guia-completa\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>📚 \u003Cstrong>Estos modelos incluyen documentación paso a paso detallada:\u003C/strong>\u003C/p>\n\u003C/blockquote>\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>🏭 \u003Cstrong>Fabricante\u003C/strong>\u003C/th>\n\u003Cth>📱 \u003Cstrong>Modelo\u003C/strong>\u003C/th>\n\u003Cth>🖥️ \u003Cstrong>Windows\u003C/strong>\u003C/th>\n\u003Cth>📋 \u003Cstrong>Manual\u003C/strong>\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>SAM4S\u003C/strong>\u003C/td>\n\u003Ctd>Giant 100\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/user-guide/sam4s-giant-100\">📄 Ver Guía\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>CITIZEN\u003C/strong>\u003C/td>\n\u003Ctd>CT-S310II\u003C/td>\n\u003Ctd>10+\u003C/td>\n\u003Ctd>\u003Ca href=\"/user-guide/citizen-ct-s310ii\">📄 Ver Guía\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>EPSON\u003C/strong>\u003C/td>\n\u003Ctd>TM-T20/T20II/T20III\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/user-guide/epson-tm-t20\">📄 Ver Guía\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>EPSON\u003C/strong>\u003C/td>\n\u003Ctd>TM-T88V\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/user-guide/epson-tm-t88\">📄 Ver Guía\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Genérico POS\u003C/strong>\u003C/td>\n\u003Ctd>80mm / 58mm\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/user-guide/drivers-genericos\">📄 Ver Guía\u003C/a>\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Chr>\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>⬇️ Descarga Directa de Drivers\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"descarga-directa-de-drivers\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"descarga-directa-de-drivers\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>💾 \u003Cstrong>Drivers disponibles para descarga inmediata sin guía paso a paso:\u003C/strong>\u003C/p>\n\u003C/blockquote>\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>🏭 \u003Cstrong>Fabricante\u003C/strong>\u003C/th>\n\u003Cth>📱 \u003Cstrong>Modelo\u003C/strong>\u003C/th>\n\u003Cth>🖥️ \u003Cstrong>Windows\u003C/strong>\u003C/th>\n\u003Cth>⬇️ \u003Cstrong>Descarga\u003C/strong>\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>3nStar\u003C/strong>\u003C/td>\n\u003Ctd>LTT214\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/3nstar/LTT214.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>3nStar\u003C/strong>\u003C/td>\n\u003Ctd>RPT005\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/3nstar/RPT005.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>3nStar\u003C/strong>\u003C/td>\n\u003Ctd>RPT006w\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/3nstar/RPT006w.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>HASAR\u003C/strong>\u003C/td>\n\u003Ctd>85E\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/hasar/85E.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>HASAR\u003C/strong>\u003C/td>\n\u003Ctd>180\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/hasar/HASAR-180.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>HASAR\u003C/strong>\u003C/td>\n\u003Ctd>181\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/hasar/HASAR-181.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>HASAR\u003C/strong>\u003C/td>\n\u003Ctd>250\u003C/td>\n\u003Ctd>7/8/10/11\u003C/td>\n\u003Ctd>\u003Ca href=\"/drivers/hasar/HASAR-250.zip\">⬇️ Descargar\u003C/a>\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📋 \u003Cstrong>Guía de Instalación Rápida\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"guia-de-instalacion-rapida\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"guia-de-instalacion-rapida\">\u003C/div>\n\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>🔧 Antes de Empezar\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>REQUISITOS PREVIOS:\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>✅ Permisos de administrador en Windows\u003C/li>\n\u003Cli>✅ Impresora conectada vía USB/Ethernet\u003C/li>\n\u003Cli>✅ Antivirus temporalmente desactivado\u003C/li>\n\u003C/ul>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>🚀 Proceso de Instalación\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"proceso-de-instalacion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"proceso-de-instalacion\">\u003C/div>\n\n\u003Cp>\u003Cstrong>1️⃣ Descargar\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>Haz clic en el enlace del driver correspondiente a tu impresora\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>2️⃣ Ejecutar\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>Ejecuta el instalador como administrador (clic derecho → &quot;Ejecutar como administrador&quot;)\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>3️⃣ Seguir\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>Sigue las instrucciones paso a paso del asistente de instalación\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>4️⃣ Configurar\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>Configura la impresora desde el menú de configuración\u003C/li>\n\u003C/ul>\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>✅ Verificación Post-Instalación\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"verificacion-post-instalacion\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"verificacion-post-instalacion\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Verificar\u003C/th>\n\u003Cth>Cómo Hacerlo\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>🔄 Reiniciar\u003C/strong>\u003C/td>\n\u003Ctd>Reinicia la impresora físicamente\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>🖨️ Probar\u003C/strong>\u003C/td>\n\u003Ctd>Realiza una impresión de prueba\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>⚙️ Configurar\u003C/strong>\u003C/td>\n\u003Ctd>Ajusta la configuración\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Cblockquote>\n\u003Cp>🔗 \u003Cstrong>Siguiente Paso:\u003C/strong> Una vez instalado el driver, dá de alta la impresora en PaxaPOS siguiendo \u003Ca href=\"/user-guide/impresoras\">Gestión de Impresoras\u003C/a>. Acordate de tener \u003Cstrong>Fiscalberry\u003C/strong> instalado y abierto (\u003Ca href=\"/user-guide/fiscalberry-windows\">Windows\u003C/a> · \u003Ca href=\"/user-guide/fiscalberry-linux\">Linux\u003C/a>).\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🚨 \u003Cstrong>¿Problemas comunes?\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"problemas-comunes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"problemas-comunes\">\u003C/div>\n\n\u003Cul>\n\u003Cli>\u003Cstrong>&quot;Impresora no detectada&quot;\u003C/strong> → Verificar conexión USB, reinstalar driver, cambiar puerto USB\u003C/li>\n\u003Cli>\u003Cstrong>&quot;Caracteres extraños&quot;\u003C/strong> → Verificar codificación, actualizar driver, configurar idioma\u003C/li>\n\u003Cli>\u003Cstrong>&quot;No imprime comandas&quot;\u003C/strong> → Verificar configuración, revisar papel térmico, limpiar cabezal\u003C/li>\n\u003Cli>\u003Cstrong>&quot;Impresión lenta&quot;\u003C/strong> → Actualizar driver, verificar cable USB, reiniciar spooler\u003C/li>\n\u003Cli>\u003Cstrong>&quot;Papel se atasca&quot;\u003C/strong> → Verificar tipo de papel, limpiar rodillos, ajustar guías\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🆘 \u003Cstrong>Soporte Técnico Especializado\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"soporte-tecnico-especializado\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"soporte-tecnico-especializado\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>💬 \u003Cstrong>¿Necesitás ayuda personalizada?\u003C/strong>\u003Cbr>Nuestro equipo técnico está disponible para asistirte con cualquier problema de instalación o configuración.\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                \u003Cstrong>📞 Contacto Directo\u003C/strong>\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"contacto-directo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"contacto-directo\">\u003C/div>\n\n\u003Cp>\u003Cstrong>💬 WhatsApp Business\u003C/strong>\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Número:\u003C/strong> \u003Ca href=\"https://wa.me/542254629000?\" target=\"_blank\">+54 2254 62-9000\u003C/a>\u003C/li>\n\u003Cli>\u003Cstrong>Horario:\u003C/strong> Lunes a Viernes de 9:00 a 18:00 hs\u003C/li>\n\u003Cli>\u003Cstrong>Respuesta:\u003C/strong> Inmediata durante horario de atención\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>🚀 \u003Cstrong>Tip:\u003C/strong> \u003Cem>¡Hacé clic en WhatsApp para chatear directamente en una nueva pestaña!\u003C/em>\u003C/p>\n\u003C/blockquote>\n",tableOfContents:[{id:"guia-de-instalacion-rapida-de-drivers",title:"Guía de Instalación Rápida de drivers",level:2},{id:"fiscalberry-el-programa-que-imprime",title:"Fiscalberry: el programa que imprime",level:2},{id:"drivers-disponibles",title:"Drivers Disponibles",level:2},{id:"drivers-con-guia-completa",title:"Drivers con Guía Completa",level:3},{id:"descarga-directa-de-drivers",title:"Descarga Directa de Drivers",level:3},{id:"guia-de-instalacion-rapida",title:"Guía de Instalación Rápida",level:2},{id:"antes-de-empezar",title:"Antes de Empezar",level:3},{id:"proceso-de-instalacion",title:"Proceso de Instalación",level:3},{id:"verificacion-post-instalacion",title:"Verificación Post-Instalación",level:3},{id:"problemas-comunes",title:"¿Problemas comunes?",level:2},{id:"soporte-tecnico-especializado",title:"Soporte Técnico Especializado",level:2},{id:"contacto-directo",title:"Contacto Directo",level:3}],seo:{title:"Biblioteca de Drivers - Manual",description:"📋 Guía de Instalación Rápida de drivers",keywords:"biblioteca de drivers, paxapos, biblioteca de drivers, tutorial, guía, manual usuario"},llmTxtFile:"141-biblioteca-de-drivers.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

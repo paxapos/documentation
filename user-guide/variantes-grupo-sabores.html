@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → Productos → Variantes
+ ¿Quién lo usa?: Encargados del menú y administradores"/> <meta name="keywords" content="variantes grupo sabores, paxapos, variantes y grupos de sabores, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Variantes y Grupos de Sabores - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Variantes
+ ¿Quién lo usa?: Encargados del menú y administradores"/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Variantes y Grupos de Sabores - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Variantes y Grupos de Sabores - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → Productos → Variantes
+ ¿Quién lo usa?: Encargados del menú y administradores"/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Variantes y Grupos de Sabores - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → Productos → Variantes\n ¿Quién lo usa?: Encargados del menú y administradores",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Variantes y Grupos de Sabores - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/menu" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Menú de Productos (Carta)</a></li><li><a href="../user-guide/categorias" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Categorías de Productos</a></li><li><a href="../user-guide/variantes-grupo-sabores" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Variantes y Grupos de Sabores</a></li><li><a href="../user-guide/maestro-de-productos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Maestro de Productos</a></li><li><a href="../user-guide/subproductos-elaborados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sub-Productos (Elaborados)</a></li><li><a href="../user-guide/recetas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Recetas</a></li><li><a href="../user-guide/analisis-duplicados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Buscar Duplicados</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Variantes y Grupos de Sabores</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: variantes-grupo-sabores</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="variantes-y-grupos-de-sabores"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>Productos</strong> → <strong>Variantes</strong>
+<strong>¿Quién lo usa?:</strong> Encargados del menú y administradores</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Una variante es un grupo de opciones que el cliente elige al pedir. Por ejemplo: <em>Gustos de helado</em> (Chocolate, Frutilla, Dulce de leche).
+También sirve para el punto de la carne, la guarnición o el tamaño de un plato.</p>
+</blockquote>
+<blockquote>
+<p>🧭 <strong>Primeros pasos para armar tu menú:</strong></p>
+<ol>
+<li>Creá las <strong>variantes</strong> (esta guía) y las <a href="/user-guide/categorias">Categorías</a>. No importa el orden.</li>
+<li>Cargá los productos en el <a href="/user-guide/menu">Menú</a>. Ahí le asignás a cada producto sus variantes.</li>
+</ol>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tu usuario tiene que tener el permiso de <strong>Variantes</strong> en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📍 Paso 1: Entrá a la pantalla
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-entra-a-la-pantalla"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-entra-a-la-pantalla"></div>
+
+<p><img src="/images/manual/40-productos/43-00a-menu-grupo-productos.png" alt="Menú lateral con el grupo Productos marcado en rojo"></p>
+<ol>
+<li>En el menú de la izquierda, tocá <strong>Productos</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-00b-menu-opcion-grupo-sabores.png" alt="Opción Variantes marcada en rojo en el menú lateral"></p>
+<ol start="2">
+<li>Tocá <strong>Variantes</strong>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-01-pantalla-index.png" alt="Pantalla Variantes con la variante Gustos de helado"></p>
+<p>Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.</p>
+<p><img src="/images/manual/40-productos/43-22-donde-esta-boton-ayuda.png" alt="Pantalla con el botón de ayuda marcado en rojo"></p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si tocás el botón <strong>?</strong> de arriba, aparece una explicación corta.</p>
+</blockquote>
+<p><img src="/images/manual/40-productos/43-24-ayuda-abierta.png" alt="Explicación ¿Qué es una Variante? abierta debajo del botón de ayuda"></p>
+<hr>
+<h2 class="relative">
+                ➕ Paso 2: Creá una variante
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-crea-una-variante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-crea-una-variante"></div>
+
+<p><img src="/images/manual/40-productos/43-20-donde-esta-boton-crear-variante.png" alt="Pantalla con el botón azul Crear Variante marcado en rojo"></p>
+<ol>
+<li>Tocá el botón azul <strong>Crear Variante</strong>. Está arriba a la izquierda.</li>
+<li>Se abre una ventana.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-25-ventana-crear-variante.png" alt="Ventana Crear Variante con los datos de Gustos de helado"></p>
+<p><img src="/images/manual/40-productos/43-06-campo-nombre-de-la-variante.png" alt="Casillero Nombre de la Variante con Gustos de helado escrito"></p>
+<ol start="3">
+<li>En <strong>Nombre de la Variante</strong>, escribí el nombre. Por ejemplo: <em>Gustos de helado</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-07-campo-cantidad-minima.png" alt="Casillero Cantidad Mínima con el número 1"></p>
+<ol start="4">
+<li>En <strong>Cantidad Mínima</strong>, poné cuántas opciones <strong>tiene que</strong> elegir el cliente. Por ejemplo: <em>1</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-08-campo-cantidad-maxima.png" alt="Casillero Cantidad Máxima con el número 3"></p>
+<ol start="5">
+<li>En <strong>Cantidad Máxima</strong>, poné cuántas opciones <strong>puede</strong> elegir como mucho. Por ejemplo: <em>3</em>.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-09-campo-variante-privada.png" alt="Casilla Variante Privada sin marcar"></p>
+<ol start="6">
+<li>Marcá <strong>Variante Privada</strong> solo si no querés que se vea en el menú online.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-10-campo-mostrar-cada-opcion-como-product.png" alt="Casilla Mostrar cada opción como producto independiente en KDS sin marcar"></p>
+<ol start="7">
+<li>Marcá <strong>Mostrar cada opción como producto independiente en KDS</strong> si querés que la cocina vea cada opción en un renglón aparte.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🍦 Paso 3: Agregá las opciones
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-agrega-las-opciones"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-agrega-las-opciones"></div>
+
+<p><img src="/images/manual/40-productos/43-11-donde-esta-boton-agregar-opcion.png" alt="Ventana con el botón azul Agregar Opción marcado en rojo"></p>
+<ol>
+<li>Tocá el botón azul <strong>Agregar Opción</strong>. Aparece un renglón nuevo.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-17-campo-sabor.png" alt="Renglón de una opción: nombre Chocolate, precio, impresora, puesto y botón Eliminar"></p>
+<ol start="2">
+<li>En <strong>Nombre de la Opción</strong>, escribí la opción. Por ejemplo: <em>Chocolate</em>.</li>
+<li>En <strong>Precio</strong>, poné cuánto se cobra de más. Si no cuesta extra, dejá <em>0</em>.</li>
+<li>Repetí con cada opción. Por ejemplo: <em>Frutilla</em> y <em>Dulce de leche</em>.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si la opción no existe como producto, el sistema la crea sola al guardar.</p>
+</blockquote>
+<p><img src="/images/manual/40-productos/43-18-donde-esta-boton-eliminar.png" alt="Ventana con el botón rojo Eliminar de una opción marcado en rojo"></p>
+<ol start="5">
+<li>Si te equivocaste en una opción, tocá el botón rojo <strong>Eliminar</strong> de ese renglón.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                💾 Paso 4: Guardá la variante
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-guarda-la-variante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-guarda-la-variante"></div>
+
+<p><img src="/images/manual/40-productos/43-13-donde-esta-boton-agregar-variante.png" alt="Ventana con el botón verde Agregar Variante marcado en rojo"></p>
+<ol>
+<li>Tocá el botón verde <strong>Agregar Variante</strong>. Está abajo de todo.</li>
+<li>La variante aparece en la lista.</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si te arrepentiste, tocá <strong>Volver al Listado</strong>. No se guarda nada.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ✏️ Paso 5: Cambiá una variante
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-cambia-una-variante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-cambia-una-variante"></div>
+
+<p><img src="/images/manual/40-productos/43-28-tarjeta-variante.png" alt="Recuadro de la variante Gustos de helado con sus opciones y los botones Editar y Borrar"></p>
+<p>Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué productos se usa.</p>
+<p><img src="/images/manual/40-productos/43-29-donde-esta-boton-editar.png" alt="Pantalla con el botón Editar de la variante marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Editar</strong>, a la derecha de la variante.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-31-ventana-editar-variante.png" alt="Ventana Editar Gustos de helado con los datos cargados"></p>
+<ol start="2">
+<li>Se abre la ventana con los datos. Cambiá lo que necesites.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-15-donde-esta-boton-actualizar-variante.png" alt="Ventana con el botón verde Actualizar Variante marcado en rojo"></p>
+<ol start="3">
+<li>Tocá el botón verde <strong>Actualizar Variante</strong>.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🗑️ Paso 6: Borrá una variante
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-borra-una-variante"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-borra-una-variante"></div>
+
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> si borrás una variante, los productos que la usan dejan de ofrecer esas opciones.</p>
+</blockquote>
+<p><img src="/images/manual/40-productos/43-04-donde-esta-boton-borrar.png" alt="Pantalla con el botón rojo Borrar de la variante marcado en rojo"></p>
+<ol>
+<li>Tocá el botón rojo <strong>Borrar</strong>, a la derecha de la variante.</li>
+<li>El sistema te pregunta si estás seguro. Tocá <strong>Aceptar</strong> para borrarla.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                📋 Paso 7: Mirá todas las opciones juntas (opcional)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-7-mira-todas-las-opciones-juntas-opcional"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-7-mira-todas-las-opciones-juntas-opcional"></div>
+
+<p><img src="/images/manual/40-productos/43-02-donde-esta-boton-listado-de-opciones.png" alt="Pantalla con el botón Listado de Opciones marcado en rojo"></p>
+<ol>
+<li>Tocá <strong>Listado de Opciones</strong>, arriba a la derecha.</li>
+</ol>
+<p><img src="/images/manual/40-productos/43-32-pantalla-listado-de-opciones.png" alt="Pantalla Listado de Opciones en Variantes con Chocolate, Frutilla y Dulce de leche"></p>
+<ol start="2">
+<li>Ves todas las opciones de todas las variantes en una sola lista, con su precio.</li>
+</ol>
+<hr>
+<h2 class="relative">
+                🔗 Paso 8: Asigná la variante a un producto
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-8-asigna-la-variante-a-un-producto"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-8-asigna-la-variante-a-un-producto"></div>
+
+<p>La variante se asigna cuando cargás el producto en el menú, en la parte <strong>Variantes del Producto</strong>.
+Mirá cómo en <a href="/user-guide/menu">Menú de Productos</a>.</p>
+<blockquote>
+<p>➡️ <strong>Siguiente paso:</strong> si todavía no lo hiciste, creá las <a href="/user-guide/categorias">Categorías</a>. Después <a href="/user-guide/menu">cargá los productos en el menú</a>.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>El mozo no puede elegir más de una opción</strong></td>
+<td>La <strong>Cantidad Máxima</strong> es 1.</td>
+<td>Tocá <strong>Editar</strong> y subí la <strong>Cantidad Máxima</strong>.</td>
+</tr>
+<tr>
+<td><strong>El sistema obliga a elegir una opción</strong></td>
+<td>La <strong>Cantidad Mínima</strong> es mayor a 0.</td>
+<td>Si la opción no es obligatoria, poné <strong>Cantidad Mínima</strong> en 0.</td>
+</tr>
+<tr>
+<td><strong>Al guardar sale una pantalla &quot;Database Error&quot;</strong></td>
+<td>Es una falla del sistema, no un error tuyo.</td>
+<td>Avisale a soporte de PaxaPOS con el nombre de la variante.</td>
+</tr>
+<tr>
+<td><strong>La variante no aparece al cargar el producto</strong></td>
+<td>No se guardó, o no la marcaste en el producto.</td>
+<td>Revisá que esté en esta lista y marcala en <strong>Variantes del Producto</strong>.</td>
+</tr>
+<tr>
+<td><strong>La variante no se ve en el menú online</strong></td>
+<td>Está marcada como <strong>Variante Privada</strong>.</td>
+<td>Tocá <strong>Editar</strong>, desmarcala y tocá <strong>Actualizar Variante</strong>.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/43-variantes-grupo-sabores.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-entra-a-la-pantalla" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Entrá a la pantalla</a></li><li><a href="#paso-2-crea-una-variante" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Creá una variante</a></li><li><a href="#paso-3-agrega-las-opciones" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Agregá las opciones</a></li><li><a href="#paso-4-guarda-la-variante" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Guardá la variante</a></li><li><a href="#paso-5-cambia-una-variante" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Cambiá una variante</a></li><li><a href="#paso-6-borra-una-variante" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Borrá una variante</a></li><li><a href="#paso-7-mira-todas-las-opciones-juntas-opcional" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 7: Mirá todas las opciones juntas (opcional)</a></li><li><a href="#paso-8-asigna-la-variante-a-un-producto" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 8: Asigná la variante a un producto</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores",content:"\u003Cdiv id=\"variantes-y-grupos-de-sabores\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>Productos\u003C/strong> → \u003Cstrong>Variantes\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Encargados del menú y administradores\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nUna variante es un grupo de opciones que el cliente elige al pedir. Por ejemplo: \u003Cem>Gustos de helado\u003C/em> (Chocolate, Frutilla, Dulce de leche).\nTambién sirve para el punto de la carne, la guarnición o el tamaño de un plato.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🧭 \u003Cstrong>Primeros pasos para armar tu menú:\u003C/strong>\u003C/p>\n\u003Col>\n\u003Cli>Creá las \u003Cstrong>variantes\u003C/strong> (esta guía) y las \u003Ca href=\"/user-guide/categorias\">Categorías\u003C/a>. No importa el orden.\u003C/li>\n\u003Cli>Cargá los productos en el \u003Ca href=\"/user-guide/menu\">Menú\u003C/a>. Ahí le asignás a cada producto sus variantes.\u003C/li>\n\u003C/ol>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tu usuario tiene que tener el permiso de \u003Cstrong>Variantes\u003C/strong> en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📍 Paso 1: Entrá a la pantalla\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-entra-a-la-pantalla\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-entra-a-la-pantalla\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-00a-menu-grupo-productos.png\" alt=\"Menú lateral con el grupo Productos marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>En el menú de la izquierda, tocá \u003Cstrong>Productos\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-00b-menu-opcion-grupo-sabores.png\" alt=\"Opción Variantes marcada en rojo en el menú lateral\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Tocá \u003Cstrong>Variantes\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-01-pantalla-index.png\" alt=\"Pantalla Variantes con la variante Gustos de helado\">\u003C/p>\n\u003Cp>Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-22-donde-esta-boton-ayuda.png\" alt=\"Pantalla con el botón de ayuda marcado en rojo\">\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si tocás el botón \u003Cstrong>?\u003C/strong> de arriba, aparece una explicación corta.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-24-ayuda-abierta.png\" alt=\"Explicación ¿Qué es una Variante? abierta debajo del botón de ayuda\">\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ➕ Paso 2: Creá una variante\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-crea-una-variante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-crea-una-variante\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-20-donde-esta-boton-crear-variante.png\" alt=\"Pantalla con el botón azul Crear Variante marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón azul \u003Cstrong>Crear Variante\u003C/strong>. Está arriba a la izquierda.\u003C/li>\n\u003Cli>Se abre una ventana.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-25-ventana-crear-variante.png\" alt=\"Ventana Crear Variante con los datos de Gustos de helado\">\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-06-campo-nombre-de-la-variante.png\" alt=\"Casillero Nombre de la Variante con Gustos de helado escrito\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>En \u003Cstrong>Nombre de la Variante\u003C/strong>, escribí el nombre. Por ejemplo: \u003Cem>Gustos de helado\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-07-campo-cantidad-minima.png\" alt=\"Casillero Cantidad Mínima con el número 1\">\u003C/p>\n\u003Col start=\"4\">\n\u003Cli>En \u003Cstrong>Cantidad Mínima\u003C/strong>, poné cuántas opciones \u003Cstrong>tiene que\u003C/strong> elegir el cliente. Por ejemplo: \u003Cem>1\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-08-campo-cantidad-maxima.png\" alt=\"Casillero Cantidad Máxima con el número 3\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>En \u003Cstrong>Cantidad Máxima\u003C/strong>, poné cuántas opciones \u003Cstrong>puede\u003C/strong> elegir como mucho. Por ejemplo: \u003Cem>3\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-09-campo-variante-privada.png\" alt=\"Casilla Variante Privada sin marcar\">\u003C/p>\n\u003Col start=\"6\">\n\u003Cli>Marcá \u003Cstrong>Variante Privada\u003C/strong> solo si no querés que se vea en el menú online.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-10-campo-mostrar-cada-opcion-como-product.png\" alt=\"Casilla Mostrar cada opción como producto independiente en KDS sin marcar\">\u003C/p>\n\u003Col start=\"7\">\n\u003Cli>Marcá \u003Cstrong>Mostrar cada opción como producto independiente en KDS\u003C/strong> si querés que la cocina vea cada opción en un renglón aparte.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🍦 Paso 3: Agregá las opciones\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-agrega-las-opciones\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-agrega-las-opciones\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-11-donde-esta-boton-agregar-opcion.png\" alt=\"Ventana con el botón azul Agregar Opción marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón azul \u003Cstrong>Agregar Opción\u003C/strong>. Aparece un renglón nuevo.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-17-campo-sabor.png\" alt=\"Renglón de una opción: nombre Chocolate, precio, impresora, puesto y botón Eliminar\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>En \u003Cstrong>Nombre de la Opción\u003C/strong>, escribí la opción. Por ejemplo: \u003Cem>Chocolate\u003C/em>.\u003C/li>\n\u003Cli>En \u003Cstrong>Precio\u003C/strong>, poné cuánto se cobra de más. Si no cuesta extra, dejá \u003Cem>0\u003C/em>.\u003C/li>\n\u003Cli>Repetí con cada opción. Por ejemplo: \u003Cem>Frutilla\u003C/em> y \u003Cem>Dulce de leche\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si la opción no existe como producto, el sistema la crea sola al guardar.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-18-donde-esta-boton-eliminar.png\" alt=\"Ventana con el botón rojo Eliminar de una opción marcado en rojo\">\u003C/p>\n\u003Col start=\"5\">\n\u003Cli>Si te equivocaste en una opción, tocá el botón rojo \u003Cstrong>Eliminar\u003C/strong> de ese renglón.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💾 Paso 4: Guardá la variante\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-guarda-la-variante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-guarda-la-variante\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-13-donde-esta-boton-agregar-variante.png\" alt=\"Ventana con el botón verde Agregar Variante marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón verde \u003Cstrong>Agregar Variante\u003C/strong>. Está abajo de todo.\u003C/li>\n\u003Cli>La variante aparece en la lista.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si te arrepentiste, tocá \u003Cstrong>Volver al Listado\u003C/strong>. No se guarda nada.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✏️ Paso 5: Cambiá una variante\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-cambia-una-variante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-cambia-una-variante\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-28-tarjeta-variante.png\" alt=\"Recuadro de la variante Gustos de helado con sus opciones y los botones Editar y Borrar\">\u003C/p>\n\u003Cp>Cada recuadro muestra el nombre, el mínimo y el máximo, las opciones y en qué productos se usa.\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-29-donde-esta-boton-editar.png\" alt=\"Pantalla con el botón Editar de la variante marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Editar\u003C/strong>, a la derecha de la variante.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-31-ventana-editar-variante.png\" alt=\"Ventana Editar Gustos de helado con los datos cargados\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Se abre la ventana con los datos. Cambiá lo que necesites.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-15-donde-esta-boton-actualizar-variante.png\" alt=\"Ventana con el botón verde Actualizar Variante marcado en rojo\">\u003C/p>\n\u003Col start=\"3\">\n\u003Cli>Tocá el botón verde \u003Cstrong>Actualizar Variante\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🗑️ Paso 6: Borrá una variante\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-borra-una-variante\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-borra-una-variante\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> si borrás una variante, los productos que la usan dejan de ofrecer esas opciones.\u003C/p>\n\u003C/blockquote>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-04-donde-esta-boton-borrar.png\" alt=\"Pantalla con el botón rojo Borrar de la variante marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá el botón rojo \u003Cstrong>Borrar\u003C/strong>, a la derecha de la variante.\u003C/li>\n\u003Cli>El sistema te pregunta si estás seguro. Tocá \u003Cstrong>Aceptar\u003C/strong> para borrarla.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📋 Paso 7: Mirá todas las opciones juntas (opcional)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-7-mira-todas-las-opciones-juntas-opcional\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-7-mira-todas-las-opciones-juntas-opcional\">\u003C/div>\n\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-02-donde-esta-boton-listado-de-opciones.png\" alt=\"Pantalla con el botón Listado de Opciones marcado en rojo\">\u003C/p>\n\u003Col>\n\u003Cli>Tocá \u003Cstrong>Listado de Opciones\u003C/strong>, arriba a la derecha.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/40-productos/43-32-pantalla-listado-de-opciones.png\" alt=\"Pantalla Listado de Opciones en Variantes con Chocolate, Frutilla y Dulce de leche\">\u003C/p>\n\u003Col start=\"2\">\n\u003Cli>Ves todas las opciones de todas las variantes en una sola lista, con su precio.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔗 Paso 8: Asigná la variante a un producto\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-8-asigna-la-variante-a-un-producto\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-8-asigna-la-variante-a-un-producto\">\u003C/div>\n\n\u003Cp>La variante se asigna cuando cargás el producto en el menú, en la parte \u003Cstrong>Variantes del Producto\u003C/strong>.\nMirá cómo en \u003Ca href=\"/user-guide/menu\">Menú de Productos\u003C/a>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>➡️ \u003Cstrong>Siguiente paso:\u003C/strong> si todavía no lo hiciste, creá las \u003Ca href=\"/user-guide/categorias\">Categorías\u003C/a>. Después \u003Ca href=\"/user-guide/menu\">cargá los productos en el menú\u003C/a>.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>El mozo no puede elegir más de una opción\u003C/strong>\u003C/td>\n\u003Ctd>La \u003Cstrong>Cantidad Máxima\u003C/strong> es 1.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Editar\u003C/strong> y subí la \u003Cstrong>Cantidad Máxima\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>El sistema obliga a elegir una opción\u003C/strong>\u003C/td>\n\u003Ctd>La \u003Cstrong>Cantidad Mínima\u003C/strong> es mayor a 0.\u003C/td>\n\u003Ctd>Si la opción no es obligatoria, poné \u003Cstrong>Cantidad Mínima\u003C/strong> en 0.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Al guardar sale una pantalla &quot;Database Error&quot;\u003C/strong>\u003C/td>\n\u003Ctd>Es una falla del sistema, no un error tuyo.\u003C/td>\n\u003Ctd>Avisale a soporte de PaxaPOS con el nombre de la variante.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La variante no aparece al cargar el producto\u003C/strong>\u003C/td>\n\u003Ctd>No se guardó, o no la marcaste en el producto.\u003C/td>\n\u003Ctd>Revisá que esté en esta lista y marcala en \u003Cstrong>Variantes del Producto\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>La variante no se ve en el menú online\u003C/strong>\u003C/td>\n\u003Ctd>Está marcada como \u003Cstrong>Variante Privada\u003C/strong>.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Editar\u003C/strong>, desmarcala y tocá \u003Cstrong>Actualizar Variante\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-entra-a-la-pantalla",title:"Paso 1: Entrá a la pantalla",level:2},{id:"paso-2-crea-una-variante",title:"Paso 2: Creá una variante",level:2},{id:"paso-3-agrega-las-opciones",title:"Paso 3: Agregá las opciones",level:2},{id:"paso-4-guarda-la-variante",title:"Paso 4: Guardá la variante",level:2},{id:"paso-5-cambia-una-variante",title:"Paso 5: Cambiá una variante",level:2},{id:"paso-6-borra-una-variante",title:"Paso 6: Borrá una variante",level:2},{id:"paso-7-mira-todas-las-opciones-juntas-opcional",title:"Paso 7: Mirá todas las opciones juntas (opcional)",level:2},{id:"paso-8-asigna-la-variante-a-un-producto",title:"Paso 8: Asigná la variante a un producto",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Variantes y Grupos de Sabores - Manual",description:"¿Dónde está en el sistema?: Menú principal → Productos → Variantes\n ¿Quién lo usa?: Encargados del menú y administradores",keywords:"variantes grupo sabores, paxapos, variantes y grupos de sabores, tutorial, guía, manual usuario"},llmTxtFile:"43-variantes-grupo-sabores.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

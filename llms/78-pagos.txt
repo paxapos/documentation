@@ -1,0 +1,134 @@
+﻿# Pagos
+
+Pagos
+¿Dónde está en el sistema?: Menú principal → Finanzas → Facturas y Pagos → Pagos
+¿Quién lo usa?: Tesoreros, cajeros y administradores
+🎯 ¿Para qué sirve esto?
+Es la lista de todos los pagos que hiciste a tus proveedores.
+Podés buscar un pago, ver qué facturas pagó y corregirlo si hizo falta.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso de Pagos en Permisos por Rol.
+• Un pago se registra desde una factura. Mirá el Paso 7 de esta página.
+• Los botones Órdenes Pendientes y Compromisos aparecen si tu comercio usa órdenes de pago. El botón Retenciones, si usa retenciones.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Finanzas marcado en rojo
+1. En el menú de la izquierda, tocá Finanzas.
+!Opción Pagos marcada en rojo, debajo del título Facturas y Pagos
+2. Tocá Pagos. Está debajo del título FACTURAS Y PAGOS.
+!Pantalla Listado de Pagos con los botones de arriba, el buscador y la lista de pagos realizados
+Así se ve la pantalla. Arriba están los botones y el buscador. Abajo, la lista con los pagos más nuevos primero.
+---
+🔘 Paso 2: Conocé los botones de arriba
+!Tres botones juntos: Retenciones en rojo, Órdenes Pendientes en naranja y Compromisos en azul
+• Retenciones: abre el libro con las retenciones que se descontaron a tus proveedores.
+• Órdenes Pendientes: abre los pagos que esperan aprobación.
+• Compromisos: abre los cheques y pagos que se cobran más adelante.
+Cada uno se explica en el Paso 6.
+---
+🔎 Paso 3: Buscá un pago
+!Buscador con Importe, Identificador Pago, Tipo de Pago, Proveedor, Estado, Sin Clasificar, Clasificación, cuatro fechas y los botones Descargar Excel y Buscar
+Completá lo que sepas y tocá Buscar. Podés usar uno o varios casilleros:
+• Importe: cuánto se pagó. Escribí el número exacto. Por ejemplo: 33100.
+• Identificador Pago: el número del cheque o de la transferencia.
+• Tipo de Pago: cómo se pagó. Por ejemplo: Cheque.
+• Proveedor: a quién se le pagó.
+• Estado: Pendiente, Aprobado, Rechazado o Pagado.
+• Sin Clasificar: tildalo para ver los pagos de facturas que no tienen clasificación.
+• Clasificación: el tipo de gasto que pagó.
+• Pago desde y Pago hasta: el rango de fechas en que hiciste el pago.
+• Gasto desde y Gasto hasta: el rango de fechas de la factura pagada.
+• Descargar Excel: baja la lista de pagos en una planilla. Respeta los filtros que pusiste.
+• Buscar: muestra solo los pagos que cumplen lo que pediste.
+💡 Consejo útil: para ver todo otra vez, borrá los casilleros y tocá Buscar.
+---
+📋 Paso 4: Leé la lista de pagos
+!Lista de pagos realizados con el primer pago desplegado, que muestra la factura que pagó
+Arriba a la derecha de la lista se lee cuántos pagos hay. Cada renglón es un pago. Las columnas dicen:
+• #ID: el número del pago.
+• Fecha de Pago: cuándo se hizo. Si tiene fecha programada, aparece abajo con un calendario.
+• Tipo de Pago: cómo se pagó. Debajo puede estar el código del cheque o transferencia.
+• Importe Total: cuánto se pagó en total.
+• Observación: la nota que se escribió al pagar.
+• Gastos: a cuántas facturas se aplicó el pago.
+• Arqueo: el arqueo de caja donde salió la plata. Si no salió de la caja, hay un guion. Mirá Arqueos de Caja.
+• Creador: quién cargó el pago y cuándo.
+• Acciones: el botón de los tres puntitos (⋮). Se explica en el Paso 5.
+Si un pago no está confirmado, arriba de su fecha se ve una etiqueta con su estado. Por ejemplo: Pendiente.
+Para ver qué facturas pagó un pago, tocá el triángulo ▶ de su renglón, o cualquier parte del renglón. Se despliega una tarjeta por cada factura, con estos datos:
+• Proveedor: a quién se le pagó.
+• Factura: la letra y el número.
+• Fecha Gasto: la fecha de la factura.
+• Total Gasto: cuánto vale la factura.
+• Pagado: cuánto de esa factura se pagó con este pago.
+• Ver Detalle Completo: abre el pago con todos sus datos.
+Volvé a tocar el renglón para cerrarlo.
+---
+⋮ Paso 5: Abrí el menú de un pago
+!Lista de pagos con el menú del primer pago abierto: Ver Pago Completo, Cambiar Creador, Asignar Arqueo, Editar Pago y Eliminar Pago
+1. En el renglón del pago, tocá el botón de los tres puntitos (⋮), en la columna Acciones.
+2. Se abre una lista. Tocá lo que necesites:
+• Ver Pago Completo: muestra todos los datos del pago y sus facturas.
+• Cambiar Creador: cambia quién figura como creador del pago.
+• Asignar Arqueo: elige en qué arqueo de caja queda el pago.
+• Editar Pago: corrige los datos del pago.
+• Eliminar Pago: borra el pago. Pregunta antes de borrar.
+⚠️ Atención: Eliminar Pago saca el pago y la factura vuelve a figurar como deuda. Usalo solo si lo cargaste por error.
+Solo ves las opciones que están debajo de Ver Pago Completo si el pago es del arqueo de caja actual, o si sos administrador. Los pagos de arqueos ya cerrados solo se pueden mirar.
+Si el pago es una orden pendiente, la lista suma Aprobar Orden y Rechazar Orden. Si ya está aprobada, suma Ejecutar Pago.
+---
+🗂️ Paso 6: Recorré las tres solapas
+Órdenes Pendientes
+Tocá Órdenes Pendientes arriba a la derecha.
+!Pantalla Órdenes de Pago Pendientes con el mensaje No hay órdenes de pago pendientes y los botones Ver Todos los Pagos y Compromisos
+Acá están los pagos que cargó alguien y todavía nadie aprobó. Si no hay ninguno, ves el cartel No hay órdenes de pago pendientes, como en la foto. Cada orden es un renglón con estos datos:
+• #ID, Estado, Tipo de Pago, Importe y Proveedor.
+• Fecha Programada: cuándo hay que pagar. En rojo si ya venció.
+• Creado, Creador y Observación.
+• Acciones: el ojo para ver el detalle. Y, si tu usuario tiene permiso, los botones Aprobar y Rechazar.
+Si hay órdenes que vencen en los próximos 7 días, arriba aparece un aviso amarillo que las lista.
+⚠️ Atención: Aprobar deja la orden lista para pagar. Confirmá el importe y el proveedor antes de tocarlo. Un pago aprobado se cobra con Ejecutar Pago.
+Arriba a la derecha, Ver Todos los Pagos vuelve a la lista y Compromisos abre la solapa siguiente.
+Compromisos
+Tocá Compromisos arriba a la derecha.
+!Pantalla Compromisos de Pago con los botones Todos, Pendiente, Aprobado, Rechazado y Pagado, y el mensaje No hay compromisos de pago
+Acá están los cheques, pagarés y pagos que se cobran más adelante. Si no hay ninguno, ves el cartel No hay compromisos de pago, como en la foto.
+• Arriba hay una tarjeta por cada estado, con el total y la cantidad de compromisos.
+• Los botones Todos, Pendiente, Aprobado, Rechazado y Pagado muestran solo los de ese estado.
+• Cada renglón muestra el Identificador, el Importe, la Fecha Programada y la Fecha Pagado.
+• Si un compromiso no está pagado y venció, la fecha sale en rojo con el aviso Vencido.
+• Los botones Pendientes y Todos los Pagos de arriba te llevan a las otras pantallas.
+Retenciones
+Tocá Retenciones arriba a la derecha.
+!Pantalla Libro de Retenciones con el buscador Desde, Hasta, Proveedor, Régimen y Estado, tres tarjetas con totales y una tabla vacía
+Es el libro de las retenciones que descontaste a tus proveedores al pagarles. Sirve para tu contador.
+• Desde y Hasta: el rango de fechas. Trae el mes actual.
+• Proveedor: solo las retenciones de ese proveedor.
+• Régimen: el tipo de retención. Por ejemplo: Retención de Ganancias o Retención de IIBB.
+• Estado: Estimada, Confirmada o Anulada.
+• Filtrar: aplica los filtros.
+• Las tres tarjetas dicen la Base Imponible Total, el Total Retenido y cuántas Retenciones hay.
+• En la tabla, tocá el # de la columna Pago para ver el pago. Tocá PDF para bajar el certificado.
+• Volver a Pagos te lleva a la lista.
+---
+💸 Paso 7: Cómo se paga una factura
+Los pagos no se crean desde esta pantalla. Se crean desde la factura:
+1. Andá a Resumen de Deuda y tocá el nombre del proveedor.
+2. En la factura, tocá Acciones y después Pagar.
+3. Se abre la ventanita Nuevo Pago. Completá Fecha de Pago, Método e Importe.
+4. Tocá Pagar Ahora.
+El pago aparece acá, en Pagos, y la deuda baja. Si dejás vacía la Fecha de Pago, se crea una orden que aparece en Órdenes Pendientes.
+⚠️ Atención: Pagar Ahora registra un pago de verdad. Revisá el Método y el Importe antes de tocarlo.
+Los pasos con fotos están en Resumen de Deuda.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No veo los botones Órdenes Pendientes y Compromisos | Tu comercio no usa órdenes de pago. | Consultá con un administrador. |
+| No veo el botón Retenciones | El comercio no tiene activado el módulo de retenciones. | Pedile a un administrador que lo active. |
+| El menú ⋮ solo tiene Ver Pago Completo | El pago es de un arqueo de caja ya cerrado. | Pedile a un administrador que lo corrija. |
+| Pagué una factura y no aparece el pago | El filtro de arriba oculta el pago. | Borrá los casilleros y tocá Buscar. |
+| Cargué un pago por error | Se eligió mal la factura o el importe. | Tocá ⋮ → Eliminar Pago y volvé a pagar desde Resumen de Deuda. |
+| No encuentro la orden que creé | La orden espera aprobación. | Buscala en Órdenes Pendientes. |
+| Compromisos aparece vacío | Ningún pago tiene fecha programada. | Los cheques y pagarés diferidos se cargan con Fecha Programada en la ventanita Nuevo Pago. |

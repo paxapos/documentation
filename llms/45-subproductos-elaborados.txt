@@ -1,0 +1,71 @@
+﻿# Subproductos Elaborados
+
+Sub-Productos (Elaborados)
+¿Dónde está en el sistema?: Menú principal → Productos → Gestión Avanzada → Sub-Productos (Elaborados)
+¿Quién lo usa?: Jefes de cocina y encargados de costos
+🎯 ¿Para qué sirve esto?
+Un subproducto es algo que preparás en tu cocina y no vendés solo. Por ejemplo: salsa de tomate, masa de pizza o relleno de empanadas.
+Acá ves todos juntos, con sus recetas, para controlar cuánto te cuesta prepararlos.
+---
+🔑 Antes de empezar
+• Tu usuario tiene que tener el permiso de Maestro de Productos en Permisos por Rol.
+💡 Consejo útil: en esta pantalla no se crean subproductos. Se crean solos cuando armás una Variante, o cuando creás en el Maestro de Productos un producto que no se vende y le cargás una receta.
+---
+📍 Paso 1: Entrá a la pantalla
+!Menú lateral con el grupo Productos marcado en rojo
+1. En el menú de la izquierda, tocá Productos.
+!Opción Sub-Productos (Elaborados) marcada en rojo en el menú lateral
+2. Tocá Sub-Productos (Elaborados). Está debajo del título GESTIÓN AVANZADA.
+!Pantalla Sub-Productos con la lista de preparaciones
+Así se ve la pantalla. Cada renglón es un subproducto.
+!Renglón de BASE SANDWICH con 15 ingredientes y sus cuatro botones
+En cada renglón ves:
+1. Nombre Interno: el nombre del subproducto. Para cambiarlo, hacé clic sobre él.
+2. En Variantes: en qué variantes aparece como opción.
+3. Como Variante: en cuántas variantes está.
+4. Ingredientes: cuántos ingredientes tiene su receta. Por ejemplo: 15.
+!Pantalla con el botón de ayuda marcado en rojo
+💡 Consejo útil: tocá el botón ? de arriba a la derecha para ver una explicación corta.
+!Explicación ¿Qué es un Sub-Producto? abierta
+---
+🔎 Paso 2: Buscá un subproducto
+!Casillero Buscar por nombre interno con la palabra CREMA escrita
+1. En el casillero Buscar por nombre interno..., escribí parte del nombre. Por ejemplo: CREMA.
+!Pantalla con el botón azul Buscar marcado en rojo
+2. Tocá el botón azul Buscar.
+!Lista con los subproductos que tienen CREMA en el nombre
+3. La lista muestra solo los que coinciden.
+!Pantalla No se encontraron sub-productos con el botón Limpiar búsqueda marcado en rojo
+4. Si dice No se encontraron sub-productos, tocá Limpiar búsqueda para ver todos.
+---
+👁️ Paso 3: Mirá la ficha de un subproducto
+!Lista con el ojo de BASE SANDWICH marcado en rojo
+1. Tocá el ojo 👁️ a la derecha del subproducto.
+2. Se abre su ficha en otra pestaña.
+!Ficha del subproducto BASE SANDWICH con la explicación ¿Qué es un subproducto?
+3. En la ficha ves sus ingredientes, su costo y en qué productos se usa. Mirá Maestro de Productos.
+---
+🧪 Paso 4: Cargá o cambiá la receta
+!Lista con el botón de receta de BASE SANDWICH marcado en rojo
+1. Tocá el botón de la hoja con renglones 📋, a la derecha del subproducto.
+2. Se abre el formulario de la receta en otra pestaña.
+3. Cargá los ingredientes y las cantidades. Mirá cómo en Recetas.
+---
+✏️ Paso 5: Cambiá los datos del subproducto
+!Lista con el lápiz de BASE SANDWICH marcado en rojo
+1. Tocá el lápiz ✏️, a la derecha del subproducto.
+2. Se abre el formulario. Cambiá lo que necesites. Por ejemplo: la unidad en que lo contás.
+3. Tocá Actualizar.
+---
+🗑️ Paso 6: Borrá un subproducto
+⚠️ Atención: si lo borrás, las recetas que lo usan quedan sin ese ingrediente.
+!Lista con el tacho de BASE SANDWICH marcado en rojo
+1. Tocá el tacho 🗑️, a la derecha del subproducto.
+2. El sistema te pregunta si estás seguro. Tocá Aceptar para borrarlo.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No encuentro el botón para crear un subproducto | En esta pantalla no se crean. | Crealo en el Maestro de Productos y cargale una receta. |
+| El costo del subproducto da $0 | Sus ingredientes no tienen precio de compra. | Cargá las compras de esos ingredientes, o su costo en la ficha. |
+| Un subproducto aparece acá y yo lo vendo | No está cargado en ningún menú. | Agregalo a un menú desde el Menú. Deja de aparecer acá. |

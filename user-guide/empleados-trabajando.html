@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start.JfEXiKtu.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D2-y5gaF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BVQ6EjBi.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dply2yrn.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.CFwue2YC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6QE8etu.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando
+ ¿Quién lo usa?: Encargados, jefes de turno y recursos humanos."/> <meta name="keywords" content="empleados trabajando, paxapos, empleados trabajando, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="Empleados Trabajando - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando
+ ¿Quién lo usa?: Encargados, jefes de turno y recursos humanos."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="Empleados Trabajando - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Empleados Trabajando - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando
+ ¿Quién lo usa?: Encargados, jefes de turno y recursos humanos."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Empleados Trabajando - Manual",
+  "description": "¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando\n ¿Quién lo usa?: Encargados, jefes de turno y recursos humanos.",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-09-30",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>Empleados Trabajando - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/empleados" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Empleados</a></li><li><a href="../user-guide/empleados-trabajando" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">Empleados Trabajando</a></li><li><a href="../user-guide/registro-diario-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Registro Diario de Fichaje</a></li><li><a href="../user-guide/reporte-mensual-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Reporte Mensual de Fichaje</a></li><li><a href="../user-guide/departamentos" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Departamentos</a></li><li><a href="../user-guide/turnos-y-horarios-fichaje" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Turnos y Horarios de Fichaje</a></li><li><a href="../user-guide/sueldos-y-jornales" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Sueldos y Jornales</a></li><li><a href="../user-guide/datos-de-acceso-app" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Datos de Acceso a la App de Fichaje</a></li><!--]--></ul><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">Empleados Trabajando</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: empleados-trabajando</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><div id="empleados-trabajando"></div>
+
+<blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> Menú principal → <strong>RRHH</strong> → <strong>Empleados Trabajando</strong>
+<strong>¿Quién lo usa?:</strong> Encargados, jefes de turno y recursos humanos.</p>
+</blockquote>
+<blockquote>
+<p>🎯 <strong>¿Para qué sirve esto?</strong>
+Muestra quién está trabajando ahora mismo en tu comercio: todos los que marcaron el ingreso y todavía no marcaron la salida.
+Desde acá también podés fichar un ingreso, marcar una salida o cerrar la jornada de todos juntos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔑 Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="antes-de-empezar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="antes-de-empezar"></div>
+
+<ul>
+<li>Tiene que estar activo el módulo de Fichaje o el de RRHH.</li>
+<li>Para ver la pantalla necesitás el permiso <strong>Fichaje</strong>. Mirá <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</li>
+<li>El botón <strong>Eliminar</strong> de cada tarjeta necesita el permiso de editar fichadas.</li>
+<li>El botón <strong>Egresar todos</strong> necesita el permiso de egresar a todos. Sin él, el sistema no te deja usarlo.</li>
+<li>Los empleados tienen que estar cargados en <a href="/user-guide/empleados">Empleados</a>. Ellos marcan su ingreso con la app de fichaje o lo carga el encargado.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                👀 Paso 1: Mirá quién está presente
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1-mira-quien-esta-presente"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-1-mira-quien-esta-presente"></div>
+
+<p>Arriba a la izquierda ves un título grande. Por ejemplo: <em>8 Presentes</em>. Ese número son las personas con ingreso y sin salida.</p>
+<p>Cada persona aparece en una tarjeta. La tarjeta muestra:</p>
+<ul>
+<li>El <strong>departamento</strong>, arriba.</li>
+<li>La <strong>foto</strong> del empleado. Si al fichar se sacó una foto, aparece chiquita en una esquina de la foto principal.</li>
+<li>El <strong>apellido y nombre</strong>. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.</li>
+<li>El <strong>DNI</strong>.</li>
+<li>El <strong>día y la hora</strong> del ingreso.</li>
+<li>Un espacio para la <strong>observación</strong>.</li>
+<li>El botón <strong>Egreso</strong>.</li>
+</ul>
+<p>Si tenés el permiso de editar fichadas, también ves el botón rojo <strong>Eliminar</strong>.</p>
+<p>Debajo del buscador hay un texto que dice cuántos resultados ves. Por ejemplo: <em>Mostrando 50 de 120 resultados</em>.</p>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> esta pantalla muestra a todos los que tienen un ingreso sin salida, aunque sea de días atrás. Si alguien se olvidó de fichar la salida ayer, sigue apareciendo hasta que alguien la marque.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🔎 Paso 2: Buscá o filtrá
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2-busca-o-filtra"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-2-busca-o-filtra"></div>
+
+<p>Arriba hay dos formas de acotar las tarjetas.</p>
+<ul>
+<li><strong>Buscador</strong>: el casillero que dice <strong>Buscar por nombre o documento...</strong>. Escribí una parte del nombre, del apellido o del DNI. Por ejemplo: <em>Pérez</em>. La lista se actualiza sola mientras escribís.</li>
+<li><strong>Botones de departamento</strong>: una fila de botones al lado del buscador. El primero es <strong>Todos</strong>. Después hay uno por cada departamento que tiene gente presente. Tocá uno para ver solo ese departamento.</li>
+</ul>
+<p>Si hay un lector de DNI conectado, al pasar el documento se completa el buscador solo.</p>
+<p>Si hay muchas personas, la pantalla muestra 50. Abajo aparece el botón azul <strong>Cargar más</strong> con la cantidad que falta. Tocalo para ver las que siguen.</p>
+<hr>
+<h2 class="relative">
+                🟢 Paso 3: Fichá un ingreso
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3-ficha-un-ingreso"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-3-ficha-un-ingreso"></div>
+
+<ol>
+<li>Arriba a la derecha, tocá el botón verde <strong>Fichar Ingreso</strong>.</li>
+<li>Se abre una ventanita <strong>Nuevo Ingreso</strong>.</li>
+<li>Sacá la foto con el botón <strong>Sacar Foto</strong>, o elegí un archivo del equipo. La foto es opcional.</li>
+<li>En <strong>Empleado</strong>, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla.</li>
+<li><strong>Fecha Hora</strong>: solo la ves si tenés permiso de editar fichadas. Viene con la hora de ahora. Cambiala si cargás un ingreso de antes.</li>
+<li><strong>Observación</strong>: si querés, anotá algo. Por ejemplo: <em>Llegó con aviso</em>.</li>
+<li>Tocá el botón azul <strong>Fichar</strong>.</li>
+</ol>
+<p>Volvés a la pantalla y la persona aparece entre los presentes.</p>
+<blockquote>
+<p>💡 <strong>Consejo útil:</strong> si no tenés permiso de editar fichadas, el sistema usa siempre la hora actual.</p>
+</blockquote>
+<p>Al lado está el botón gris <strong>Nuevo Registro</strong>. Abre el formulario para dar de alta a un empleado nuevo. Es el mismo de <a href="/user-guide/empleados">Empleados</a>.</p>
+<hr>
+<h2 class="relative">
+                🔴 Paso 4: Marcá la salida de una persona
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4-marca-la-salida-de-una-persona"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-4-marca-la-salida-de-una-persona"></div>
+
+<ol>
+<li>Buscá la tarjeta de la persona.</li>
+<li>Abajo de la tarjeta, tocá el botón <strong>Egreso</strong>.</li>
+<li>La tarjeta se apaga y desaparece. El número de <strong>Presentes</strong> baja en uno.</li>
+</ol>
+<p>El sistema guarda como hora de salida el momento en que tocás el botón.</p>
+<p>Si te equivocás de persona, corregí la hora en el <a href="/user-guide/registro-diario-fichaje">Registro Diario de Fichaje</a>.</p>
+<hr>
+<h2 class="relative">
+                🚪 Paso 5: Cerrá la jornada de todos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5-cierra-la-jornada-de-todos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-5-cierra-la-jornada-de-todos"></div>
+
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> este botón marca la salida de TODAS las personas presentes, con la hora de ahora. No respeta el buscador ni el departamento elegido. No hay un botón para deshacerlo.</p>
+</blockquote>
+<ol>
+<li>Arriba a la derecha, tocá el botón rojo <strong>Egresar todos</strong>.</li>
+<li>El sistema pregunta <strong>¿Está seguro que desea egresar a todos?</strong>.</li>
+<li>Confirmá. La pantalla vuelve con un mensaje verde: <strong>Se ha egresado a todos los registros.</strong></li>
+</ol>
+<hr>
+<h2 class="relative">
+                📝 Paso 6: Anotá una observación o eliminá un registro
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6-anota-una-observacion-o-elimina-un-registro"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-6-anota-una-observacion-o-elimina-un-registro"></div>
+
+<ul>
+<li><strong>Observación</strong>: en el espacio bajo los datos de la persona, hacé clic para escribir o cambiar el texto. Aparecen dos íconos: tocá ✓ para guardar o ✕ para cancelar. Después queda a la vista con el título <strong>Observación</strong>.</li>
+<li><strong>Eliminar</strong>: borra el registro de fichada de esa persona. El sistema pregunta <strong>Desea eliminar?</strong>. Usalo solo si el ingreso se cargó por error.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Atención:</strong> al eliminar, perdés esa fichada. Las horas de ese día no se cuentan en los reportes.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ Resolución de Inconvenientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="resolucion-de-inconvenientes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="resolucion-de-inconvenientes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa más frecuente</th>
+<th>Solución recomendada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Un empleado trabaja pero no aparece</td>
+<td>No marcó el ingreso.</td>
+<td>Tocá <strong>Fichar Ingreso</strong> y cargalo. O pedile que fiche en la app.</td>
+</tr>
+<tr>
+<td>Aparece alguien que ya se fue</td>
+<td>Se olvidó de fichar la salida.</td>
+<td>Tocá <strong>Egreso</strong> en su tarjeta. Después corregí la hora en el <a href="/user-guide/registro-diario-fichaje">Registro Diario de Fichaje</a>.</td>
+</tr>
+<tr>
+<td>Aparece alguien de días atrás</td>
+<td>Nadie marcó su salida ese día.</td>
+<td>Marcá <strong>Egreso</strong> y corregí la hora de salida real en el registro diario.</td>
+</tr>
+<tr>
+<td>No veo el botón <strong>Egresar todos</strong> o dice que no tengo permiso</td>
+<td>Tu rol no puede egresar a todos.</td>
+<td>Pedí a un administrador el permiso en <a href="/user-guide/permisos-por-rol">Permisos por Rol</a>.</td>
+</tr>
+<tr>
+<td>No veo el botón <strong>Eliminar</strong></td>
+<td>Tu rol no puede editar fichadas.</td>
+<td>Pedí a un administrador el permiso de editar fichadas.</td>
+</tr>
+<tr>
+<td>El nombre no es un enlace</td>
+<td>No tenés el permiso de Recursos Humanos.</td>
+<td>Es normal. Pedí el permiso si necesitás abrir la ficha.</td>
+</tr>
+<tr>
+<td>El buscador no encuentra a nadie</td>
+<td>La persona no está presente o el departamento elegido no es el suyo.</td>
+<td>Tocá <strong>Todos</strong> en los botones de departamento y probá de nuevo.</td>
+</tr>
+</tbody></table></div>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/92-empleados-trabajando.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#antes-de-empezar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-1-mira-quien-esta-presente" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 1: Mirá quién está presente</a></li><li><a href="#paso-2-busca-o-filtra" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 2: Buscá o filtrá</a></li><li><a href="#paso-3-ficha-un-ingreso" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 3: Fichá un ingreso</a></li><li><a href="#paso-4-marca-la-salida-de-una-persona" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 4: Marcá la salida de una persona</a></li><li><a href="#paso-5-cierra-la-jornada-de-todos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 5: Cerrá la jornada de todos</a></li><li><a href="#paso-6-anota-una-observacion-o-elimina-un-registro" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Paso 6: Anotá una observación o eliminá un registro</a></li><li><a href="#resolucion-de-inconvenientes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Resolución de Inconvenientes</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_162grkv = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JfEXiKtu.js"),
+						import("../_app/immutable/entry/app.BVQ6EjBi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"01-faq-solucion-inicial-pantalla-congelada",title:"📖 Manual de Usuario: Solución Inicial si la Pantalla se Congela o no Carga"},{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"05-faq-cajero-emitir-factura-a",title:"📖 Manual de Usuario: Cómo Emitir una Factura A Cargando Datos del Cliente"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"07-faq-cajero-activar-medio-pago",title:"📖 Manual de Usuario: Cómo Activar un Medio de Pago que no Aparece al Cobrar"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"📖 Manual de Usuario: Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"10-faq-supervisor-cierre-caja-diferencias",title:"📖 Manual de Usuario: Cómo Auditar y Solucionar Diferencias en el Cierre de Caja"},{slug:"preguntas-frecuentes",title:"Preguntas Frecuentes y Guías Rápidas por Rol"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"troubleshooting-semantico",title:"📖 Guía Única de Resolución de Problemas y Errores (Troubleshooting)"}]}]},uses:{}},{type:"data",data:{slug:"empleados-trabajando",title:"Empleados Trabajando",content:"\u003Cdiv id=\"empleados-trabajando\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> Menú principal → \u003Cstrong>RRHH\u003C/strong> → \u003Cstrong>Empleados Trabajando\u003C/strong>\n\u003Cstrong>¿Quién lo usa?:\u003C/strong> Encargados, jefes de turno y recursos humanos.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🎯 \u003Cstrong>¿Para qué sirve esto?\u003C/strong>\nMuestra quién está trabajando ahora mismo en tu comercio: todos los que marcaron el ingreso y todavía no marcaron la salida.\nDesde acá también podés fichar un ingreso, marcar una salida o cerrar la jornada de todos juntos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔑 Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"antes-de-empezar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"antes-de-empezar\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Tiene que estar activo el módulo de Fichaje o el de RRHH.\u003C/li>\n\u003Cli>Para ver la pantalla necesitás el permiso \u003Cstrong>Fichaje\u003C/strong>. Mirá \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/li>\n\u003Cli>El botón \u003Cstrong>Eliminar\u003C/strong> de cada tarjeta necesita el permiso de editar fichadas.\u003C/li>\n\u003Cli>El botón \u003Cstrong>Egresar todos\u003C/strong> necesita el permiso de egresar a todos. Sin él, el sistema no te deja usarlo.\u003C/li>\n\u003Cli>Los empleados tienen que estar cargados en \u003Ca href=\"/user-guide/empleados\">Empleados\u003C/a>. Ellos marcan su ingreso con la app de fichaje o lo carga el encargado.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                👀 Paso 1: Mirá quién está presente\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1-mira-quien-esta-presente\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-1-mira-quien-esta-presente\">\u003C/div>\n\n\u003Cp>Arriba a la izquierda ves un título grande. Por ejemplo: \u003Cem>8 Presentes\u003C/em>. Ese número son las personas con ingreso y sin salida.\u003C/p>\n\u003Cp>Cada persona aparece en una tarjeta. La tarjeta muestra:\u003C/p>\n\u003Cul>\n\u003Cli>El \u003Cstrong>departamento\u003C/strong>, arriba.\u003C/li>\n\u003Cli>La \u003Cstrong>foto\u003C/strong> del empleado. Si al fichar se sacó una foto, aparece chiquita en una esquina de la foto principal.\u003C/li>\n\u003Cli>El \u003Cstrong>apellido y nombre\u003C/strong>. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.\u003C/li>\n\u003Cli>El \u003Cstrong>DNI\u003C/strong>.\u003C/li>\n\u003Cli>El \u003Cstrong>día y la hora\u003C/strong> del ingreso.\u003C/li>\n\u003Cli>Un espacio para la \u003Cstrong>observación\u003C/strong>.\u003C/li>\n\u003Cli>El botón \u003Cstrong>Egreso\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Cp>Si tenés el permiso de editar fichadas, también ves el botón rojo \u003Cstrong>Eliminar\u003C/strong>.\u003C/p>\n\u003Cp>Debajo del buscador hay un texto que dice cuántos resultados ves. Por ejemplo: \u003Cem>Mostrando 50 de 120 resultados\u003C/em>.\u003C/p>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> esta pantalla muestra a todos los que tienen un ingreso sin salida, aunque sea de días atrás. Si alguien se olvidó de fichar la salida ayer, sigue apareciendo hasta que alguien la marque.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Paso 2: Buscá o filtrá\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2-busca-o-filtra\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-2-busca-o-filtra\">\u003C/div>\n\n\u003Cp>Arriba hay dos formas de acotar las tarjetas.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Buscador\u003C/strong>: el casillero que dice \u003Cstrong>Buscar por nombre o documento...\u003C/strong>. Escribí una parte del nombre, del apellido o del DNI. Por ejemplo: \u003Cem>Pérez\u003C/em>. La lista se actualiza sola mientras escribís.\u003C/li>\n\u003Cli>\u003Cstrong>Botones de departamento\u003C/strong>: una fila de botones al lado del buscador. El primero es \u003Cstrong>Todos\u003C/strong>. Después hay uno por cada departamento que tiene gente presente. Tocá uno para ver solo ese departamento.\u003C/li>\n\u003C/ul>\n\u003Cp>Si hay un lector de DNI conectado, al pasar el documento se completa el buscador solo.\u003C/p>\n\u003Cp>Si hay muchas personas, la pantalla muestra 50. Abajo aparece el botón azul \u003Cstrong>Cargar más\u003C/strong> con la cantidad que falta. Tocalo para ver las que siguen.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🟢 Paso 3: Fichá un ingreso\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3-ficha-un-ingreso\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-3-ficha-un-ingreso\">\u003C/div>\n\n\u003Col>\n\u003Cli>Arriba a la derecha, tocá el botón verde \u003Cstrong>Fichar Ingreso\u003C/strong>.\u003C/li>\n\u003Cli>Se abre una ventanita \u003Cstrong>Nuevo Ingreso\u003C/strong>.\u003C/li>\n\u003Cli>Sacá la foto con el botón \u003Cstrong>Sacar Foto\u003C/strong>, o elegí un archivo del equipo. La foto es opcional.\u003C/li>\n\u003Cli>En \u003Cstrong>Empleado\u003C/strong>, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla.\u003C/li>\n\u003Cli>\u003Cstrong>Fecha Hora\u003C/strong>: solo la ves si tenés permiso de editar fichadas. Viene con la hora de ahora. Cambiala si cargás un ingreso de antes.\u003C/li>\n\u003Cli>\u003Cstrong>Observación\u003C/strong>: si querés, anotá algo. Por ejemplo: \u003Cem>Llegó con aviso\u003C/em>.\u003C/li>\n\u003Cli>Tocá el botón azul \u003Cstrong>Fichar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>Volvés a la pantalla y la persona aparece entre los presentes.\u003C/p>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Consejo útil:\u003C/strong> si no tenés permiso de editar fichadas, el sistema usa siempre la hora actual.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Al lado está el botón gris \u003Cstrong>Nuevo Registro\u003C/strong>. Abre el formulario para dar de alta a un empleado nuevo. Es el mismo de \u003Ca href=\"/user-guide/empleados\">Empleados\u003C/a>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔴 Paso 4: Marcá la salida de una persona\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4-marca-la-salida-de-una-persona\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-4-marca-la-salida-de-una-persona\">\u003C/div>\n\n\u003Col>\n\u003Cli>Buscá la tarjeta de la persona.\u003C/li>\n\u003Cli>Abajo de la tarjeta, tocá el botón \u003Cstrong>Egreso\u003C/strong>.\u003C/li>\n\u003Cli>La tarjeta se apaga y desaparece. El número de \u003Cstrong>Presentes\u003C/strong> baja en uno.\u003C/li>\n\u003C/ol>\n\u003Cp>El sistema guarda como hora de salida el momento en que tocás el botón.\u003C/p>\n\u003Cp>Si te equivocás de persona, corregí la hora en el \u003Ca href=\"/user-guide/registro-diario-fichaje\">Registro Diario de Fichaje\u003C/a>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🚪 Paso 5: Cerrá la jornada de todos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5-cierra-la-jornada-de-todos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-5-cierra-la-jornada-de-todos\">\u003C/div>\n\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> este botón marca la salida de TODAS las personas presentes, con la hora de ahora. No respeta el buscador ni el departamento elegido. No hay un botón para deshacerlo.\u003C/p>\n\u003C/blockquote>\n\u003Col>\n\u003Cli>Arriba a la derecha, tocá el botón rojo \u003Cstrong>Egresar todos\u003C/strong>.\u003C/li>\n\u003Cli>El sistema pregunta \u003Cstrong>¿Está seguro que desea egresar a todos?\u003C/strong>.\u003C/li>\n\u003Cli>Confirmá. La pantalla vuelve con un mensaje verde: \u003Cstrong>Se ha egresado a todos los registros.\u003C/strong>\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📝 Paso 6: Anotá una observación o eliminá un registro\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6-anota-una-observacion-o-elimina-un-registro\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-6-anota-una-observacion-o-elimina-un-registro\">\u003C/div>\n\n\u003Cul>\n\u003Cli>\u003Cstrong>Observación\u003C/strong>: en el espacio bajo los datos de la persona, hacé clic para escribir o cambiar el texto. Aparecen dos íconos: tocá ✓ para guardar o ✕ para cancelar. Después queda a la vista con el título \u003Cstrong>Observación\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Eliminar\u003C/strong>: borra el registro de fichada de esa persona. El sistema pregunta \u003Cstrong>Desea eliminar?\u003C/strong>. Usalo solo si el ingreso se cargó por error.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Atención:\u003C/strong> al eliminar, perdés esa fichada. Las horas de ese día no se cuentan en los reportes.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ Resolución de Inconvenientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"resolucion-de-inconvenientes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"resolucion-de-inconvenientes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Problema\u003C/th>\n\u003Cth>Causa más frecuente\u003C/th>\n\u003Cth>Solución recomendada\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>Un empleado trabaja pero no aparece\u003C/td>\n\u003Ctd>No marcó el ingreso.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Fichar Ingreso\u003C/strong> y cargalo. O pedile que fiche en la app.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Aparece alguien que ya se fue\u003C/td>\n\u003Ctd>Se olvidó de fichar la salida.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Egreso\u003C/strong> en su tarjeta. Después corregí la hora en el \u003Ca href=\"/user-guide/registro-diario-fichaje\">Registro Diario de Fichaje\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Aparece alguien de días atrás\u003C/td>\n\u003Ctd>Nadie marcó su salida ese día.\u003C/td>\n\u003Ctd>Marcá \u003Cstrong>Egreso\u003C/strong> y corregí la hora de salida real en el registro diario.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo el botón \u003Cstrong>Egresar todos\u003C/strong> o dice que no tengo permiso\u003C/td>\n\u003Ctd>Tu rol no puede egresar a todos.\u003C/td>\n\u003Ctd>Pedí a un administrador el permiso en \u003Ca href=\"/user-guide/permisos-por-rol\">Permisos por Rol\u003C/a>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No veo el botón \u003Cstrong>Eliminar\u003C/strong>\u003C/td>\n\u003Ctd>Tu rol no puede editar fichadas.\u003C/td>\n\u003Ctd>Pedí a un administrador el permiso de editar fichadas.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El nombre no es un enlace\u003C/td>\n\u003Ctd>No tenés el permiso de Recursos Humanos.\u003C/td>\n\u003Ctd>Es normal. Pedí el permiso si necesitás abrir la ficha.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El buscador no encuentra a nadie\u003C/td>\n\u003Ctd>La persona no está presente o el departamento elegido no es el suyo.\u003C/td>\n\u003Ctd>Tocá \u003Cstrong>Todos\u003C/strong> en los botones de departamento y probá de nuevo.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n",tableOfContents:[{id:"antes-de-empezar",title:"Antes de empezar",level:2},{id:"paso-1-mira-quien-esta-presente",title:"Paso 1: Mirá quién está presente",level:2},{id:"paso-2-busca-o-filtra",title:"Paso 2: Buscá o filtrá",level:2},{id:"paso-3-ficha-un-ingreso",title:"Paso 3: Fichá un ingreso",level:2},{id:"paso-4-marca-la-salida-de-una-persona",title:"Paso 4: Marcá la salida de una persona",level:2},{id:"paso-5-cierra-la-jornada-de-todos",title:"Paso 5: Cerrá la jornada de todos",level:2},{id:"paso-6-anota-una-observacion-o-elimina-un-registro",title:"Paso 6: Anotá una observación o eliminá un registro",level:2},{id:"resolucion-de-inconvenientes",title:"Resolución de Inconvenientes",level:2}],seo:{title:"Empleados Trabajando - Manual",description:"¿Dónde está en el sistema?: Menú principal → RRHH → Empleados Trabajando\n ¿Quién lo usa?: Encargados, jefes de turno y recursos humanos.",keywords:"empleados trabajando, paxapos, empleados trabajando, tutorial, guía, manual usuario"},llmTxtFile:"92-empleados-trabajando.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
