@@ -3,7 +3,8 @@
 <div id="ordenes-a-aprobar"></div>
 
 > **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Órdenes a aprobar**
-> **¿Quién lo usa?:** Encargados y responsables que autorizan las compras
+
+> **¿Quién lo usa?: Proveedores que tienen órdenes de compra pendientes de aprobación.**
 
 > 🎯 **¿Para qué sirve esto?**
 > Si tu comercio pide aprobar las compras, cada orden de compra nueva queda esperando acá.

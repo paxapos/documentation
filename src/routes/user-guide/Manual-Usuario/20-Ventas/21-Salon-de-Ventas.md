@@ -134,11 +134,6 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 ![Diálogo para abrir una mesa nueva con cantidad de cubiertos](images/manual/20-ventas/17-salon-dialogo-abrir-mesa.png)
 
-![Casillero Descripción de la mesa](images/manual/20-ventas/21-195-campo-descripcion-mesa.png)
-
-![Casillero Cantidad de cubiertos](images/manual/20-ventas/21-196-campo-cubiertos.png)
-
-![Botón Guardar de la ventana Abrir Mesa](images/manual/20-ventas/17b-salon-boton-guardar-mesa.png)
 
 4. Tocá **Guardar**. Se abre la mesa, vacía.
 
@@ -160,8 +155,6 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 
 ![Catálogo de productos del menú activo](images/manual/20-ventas/20-salon-catalogo-productos.png)
 
-![Casillero para buscar productos por nombre](images/manual/20-ventas/21-187-campo-buscar-por-nombre-abrev-o-codigo.png)
-
 Si no buscás, tocá primero la **categoría** (por ejemplo, **Pizzas**). Vas a ver sus productos.
 
 ![Botón azul de la categoría Pizzas en el catálogo](images/manual/20-ventas/21-211-boton-categoria.png)
@@ -170,9 +163,9 @@ Tocá el producto. Se suma a la comanda de la izquierda.
 
 ![Botón de un producto del catálogo](images/manual/20-ventas/21-197-boton-producto.png)
 
-![Producto agregado a la lista de productos seleccionados](images/manual/20-ventas/21-salon-producto-agregado.png)
 
-3. Si el producto tiene **variantes** (por ejemplo, gustos de helado), elegí las opciones que te pide.
+
+3. Si el producto tiene **variantes** (por ejemplo, gustos de helado), elegí las opciones que te pide
 <!-- FOTO: 21-06-elegir-variantes -->
 ![Catálogo con el botón Comandar marcado en rojo](images/manual/20-ventas/21-198-donde-esta-boton-comandar.png)
 
@@ -265,6 +258,7 @@ Cuando el cliente pide la cuenta:
 ![Casillero Con cuánto paga el cliente](images/manual/20-ventas/21-201-campo-con-cuanto-paga.png)
 
 ![Pantalla de cobro con Efectivo elegido y el vuelto calculado](images/manual/20-ventas/21-202-pantalla-cobro-efectivo.png)
+
 ![Botón verde para confirmar el cobro](images/manual/20-ventas/21-203-boton-confirmar-cobro.png)
 
 4. Tocá el botón verde de abajo para confirmar el pago.

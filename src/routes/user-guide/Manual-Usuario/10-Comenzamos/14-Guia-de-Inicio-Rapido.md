@@ -5,21 +5,6 @@
 > 🎯 **¿Para qué sirve esta guía?**
 > Si acabás de recibir tu cuenta de PaxaPOS, esta es la hoja de ruta con lo **principal** para dejar tu local funcionando y hacer tu primera venta. Cada paso te lleva a la guía completa del tema.
 
----
-
-## ✅ Checklist de los primeros pasos
-
-<div id="checklist-de-los-primeros-pasos"></div>
-
-- [ ] Paso 1: Iniciar sesión
-- [ ] Paso 2: Cargar los datos fiscales del comercio
-- [ ] Paso 3: Cargar tu menú (categorías y productos)
-- [ ] Paso 4: Configurar tus impresoras
-- [ ] Paso 5: Activar tus medios de pago
-- [ ] Paso 6: Crear usuarios para tu equipo
-- [ ] Paso 7: Abrir la caja y hacer tu primera venta
-
----
 
 ## 📍 Paso 1: Iniciar sesión
 
@@ -104,10 +89,4 @@ Dale acceso a mozos, cajeros y encargados creando sus usuarios (o PIN, para un i
 
 > 🔗 Guías completas: [Arqueos de Caja](/user-guide/arqueos-de-caja) · [Salón de Ventas](/user-guide/salon-de-ventas) · [Caja Rápida](/user-guide/caja-rapida)
 
----
 
-## 🆘 ¿Necesitás ayuda?
-
-<div id="necesitas-ayuda"></div>
-
-Si te trabaste en algún paso, mirá la [Guía Única de Resolución de Problemas](/user-guide/troubleshooting-semantico) o escribinos por WhatsApp: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>.

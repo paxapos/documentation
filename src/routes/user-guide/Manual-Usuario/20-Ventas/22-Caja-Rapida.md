@@ -48,11 +48,7 @@ En esta pantalla vas a ver:
 
 ![Ventanita Nuevo Arqueo con la caja y el importe inicial](images/manual/20-ventas/34-registradora-dialogo-abrir-caja.png)
 
-![Casillero Caja para elegir qué caja abrir](images/manual/20-ventas/22-68-campo-caja-id.png)
-
 3. En **Caja**, elegí la caja que vas a usar.
-
-![Casillero Importe inicial](images/manual/20-ventas/22-69-campo-importe-inicial.png)
 
 4. En **Importe inicial**, escribí la plata que hay en el cajón al empezar. Por ejemplo: *$ 20.000*.
 
@@ -133,7 +129,6 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 
 <div id="paso-4-corregi-la-lista-si-te-equivocaste"></div>
 
-![Botón gris con una cruz para quitar el producto](images/manual/20-ventas/22-75-boton-quitar-producto.png)
 
 - Para **quitar un producto**, tocá la **✕** gris a la izquierda (o cualquier parte de la fila, menos el precio).
 - Aparece un aviso con **Deshacer**. Tenés 5 segundos por si lo borraste sin querer.

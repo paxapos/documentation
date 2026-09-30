@@ -13,8 +13,7 @@
 
 1. Ingresá a la pantalla de acceso de tu local en PaxaPOS.
 2. Hacé clic en la pestaña superior **"Usuario y contraseña"**.
-3. En la parte inferior, debajo del botón de ingreso, hacé clic en el enlace azul:  
-   **"¿Olvidaste tu contraseña?"** (o accedé directamente a `/users/users/reset_password`).
+3. En la parte inferior, debajo del botón de ingreso, hacé clic en el enlace azul:  **"¿Olvidaste tu contraseña?"**
 
 ---
 
@@ -26,7 +25,7 @@ Se desplegará la pantalla de recuperación de credenciales:
 
 ![Formulario para solicitar recuperación de contraseña](images/manual/10-comenzamos/04-recuperar-contrasena.png)
 
-1. **Campo "Email":** Escribí la dirección de correo electrónico vinculada a tu cuenta de usuario (ejemplo: `usuario@milocal.com`).
+1. **Campo "Email":** Escribí la dirección de correo electrónico vinculada a tu cuenta de usuario (ejemplo: *usuario@milocal.com*).
 2. Presioná el botón azul **"Enviar"**.
 3. El sistema procesará la solicitud y te confirmará en pantalla que el correo fue enviado si la dirección existe en la base de datos.
 

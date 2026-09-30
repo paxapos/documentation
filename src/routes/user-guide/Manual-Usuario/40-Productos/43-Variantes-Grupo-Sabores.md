@@ -111,8 +111,6 @@ Así se ve la pantalla. Cada variante aparece en un recuadro, con sus opciones.
 1. Tocá el botón verde **Agregar Variante**. Está abajo de todo.
 2. La variante aparece en la lista.
 
-![Ventana con el botón Volver al Listado marcado en rojo](images/manual/40-productos/43-26-donde-esta-boton-volver-al-listado.png)
-
 > 💡 **Consejo útil:** si te arrepentiste, tocá **Volver al Listado**. No se guarda nada.
 
 ---

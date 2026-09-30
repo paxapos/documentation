@@ -111,7 +111,7 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 
 ![Parte Visibilidad por Usuarios con la lista de usuarios](images/manual/20-ventas/24-25-campo-usuarios.png)
 
-12. En **Visibilidad por Usuarios**, tildá los usuarios que pueden usar este mozo. Si no tildás ninguno, lo ven **todos**.
+12. En **Visibilidad por Usuarios**, tildá los usuarios que pueden usar este mozo. Si no tildás ninguno, nadie podrá usarlo.
 
 > 💡 **Consejo útil:** Tildá el usuario con PIN del propio mozo. Así cada mozo ve solo sus mesas.
 

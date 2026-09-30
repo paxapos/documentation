@@ -222,28 +222,8 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 2. Se abre el panel **Filtros avanzados**. Completá solo lo que necesites:
 
-![Casillero Nombre del producto](images/manual/40-productos/41-23-campo-name.png)
-
-![Casillero Nombre en ticket](images/manual/40-productos/41-24-campo-abrev.png)
-
-![Lista Stock](images/manual/40-productos/41-25-campo-sin-stock.png)
-
-   - **Nombre del producto**, **Nombre en ticket** y **Stock** (con stock o sin stock).
-
-![Lista Puesto](images/manual/40-productos/41-26-campo-puesto-id.png)
-
-![Lista Categoría](images/manual/40-productos/41-27-campo-categoria-id.png)
-
-![Lista Impresora](images/manual/40-productos/41-28-campo-printer-id.png)
-
+   - **Nombre del producto**, **Nombre en ticket** y **Stock** (con stock o sin stock)
    - **Puesto**, **Categoría** e **Impresora**. Por ejemplo: todo lo que sale por la *Barra*.
-
-![Lista Impuesto](images/manual/40-productos/41-29-campo-tipo-impuesto-id.png)
-
-![Casillero Precio exacto](images/manual/40-productos/41-30-campo-precio.png)
-
-![Casillero Orden](images/manual/40-productos/41-31-campo-order.png)
-
    - **Impuesto**, **Precio exacto** y **Orden**.
 
 3. Tocá **Buscar**, abajo a la derecha del panel.
@@ -312,16 +292,8 @@ Al editar aparece además **AVANZADO · Modificar Producto Maestro**. Ahí cambi
 
 ![Lista de menús abierta con Catálogo y Nuevo Menú](images/manual/40-productos/41-54-selector-de-menu-abierto.png)
 
-![Pantalla con el botón Importar marcado en rojo](images/manual/40-productos/41-57-donde-esta-boton-importar.png)
-
 - **Importar**: carga muchos productos juntos desde un Excel.
-
-![Pantalla con el botón Exportar marcado en rojo](images/manual/40-productos/41-59-donde-esta-boton-exportar.png)
-
 - **Exportar**: descarga la lista de productos en un Excel.
-
-![Pantalla con el botón Configurar marcado en rojo](images/manual/40-productos/41-61-donde-esta-boton-configurar.png)
-
 - **Configurar**: cambia el nombre, la foto y cómo se ve este menú.
 
 ![Pantalla con el botón de ayuda de precios marcado en rojo](images/manual/40-productos/41-17-donde-esta-boton-ayuda-precios.png)

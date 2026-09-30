@@ -130,26 +130,6 @@ Después de guardar, en la parte de abajo hay una solapa por cada procesador que
 
 ---
 
-## 🔧 Paso 7 (opcional): Direcciones de aviso para el procesador
-
-<div id="paso-7-opcional-direcciones-de-aviso-para-el-procesador"></div>
-
-Normalmente no necesitás tocar esto. Sirve si el soporte del procesador te pide una "URL de Webhook".
-
-![Pantalla con la barra Configuración avanzada y URLs de Webhook marcada en rojo, abajo de todo](images/manual/30-medios-de-pago/31-13-donde-esta-configuracion-avanzada.png)
-
-1. Tocá la barra gris **Configuración avanzada & URLs de Webhook**. Está abajo de todo.
-2. Se despliega una lista con una dirección por procesador.
-
-![Sección avanzada abierta con las direcciones de MacroClick, Mercado Pago y Payway](images/manual/30-medios-de-pago/31-14-configuracion-avanzada-abierta.png)
-
-![Pantalla con el botón de copiar marcado en rojo al lado de la dirección](images/manual/30-medios-de-pago/31-07-donde-esta-boton-copy-btn.png)
-
-3. Tocá el botón del portapapeles 📋 a la derecha de la dirección.
-4. La dirección queda copiada. Pegala donde te pidió el procesador.
-
----
-
 ## ⚠️ Resolución de Inconvenientes
 
 <div id="resolucion-de-inconvenientes"></div>

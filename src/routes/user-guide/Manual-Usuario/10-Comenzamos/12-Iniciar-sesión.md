@@ -12,8 +12,7 @@
 <div id="paso-1-accede-a-la-direccion-del-sistema"></div>
 
 1. Abrí tu navegador web de preferencia (Google Chrome recomendado, Mozilla Firefox, Microsoft Edge o Safari).
-2. En la barra de direcciones superior, escribí la URL exclusiva asignada a tu local:  
-   `https://www.paxapos.com/{nombre-de-tu-local}` o `https://{tudominio}.paxapos.com`.
+2. En la barra de direcciones superior, escribí la URL exclusiva asignada a tu local
 3. Presioná **Enter**.
 
 > 💡 **Consejo útil:** Guardá esta dirección en los **Marcadores o Favoritos** de tu navegador, o creá un acceso directo en el escritorio para abrir el sistema con un solo clic al iniciar tu jornada.
@@ -55,7 +54,7 @@ Para usuarios con perfil de Administrador, Cajero o Encargado, o cuando se requi
 ### **Instrucciones paso a paso:**
 
 1. En la parte superior de la ventana de acceso, hacé clic en la pestaña **"Usuario y contraseña"**.
-2. **Campo "Email":** Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: `gerencia@milocal.com`).
+2. **Campo "Email":** Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: *gerencia@milocal.com*).
 3. **Campo "Contraseña":** Ingresá tu clave de seguridad (los caracteres se ocultarán automáticamente con puntos por protección).
 4. Hacé clic en el botón azul **"Iniciar sesión"**.
 
@@ -80,7 +79,7 @@ Una vez validadas tus credenciales (por PIN o por correo), el sistema abrirá la
 
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| **"PIN o datos incorrectos"** | Se ingresó un número erróneo o el usuario fue deshabilitado. | Borrá los números con `⌫` y reintentá. Si persiste, solicitale al administrador del local que verifique o reasigne tu PIN. |
+| **"PIN o datos incorrectos"** | Se ingresó un número erróneo o el usuario fue deshabilitado. | Borrá los números con *Backspace* y reintentá. Si persiste, solicitale al administrador del local que verifique o reasigne tu PIN. |
 | **Olvidé mi contraseña de administrador** | No recuerdas la clave asignada a tu correo. | Hacé clic en el enlace **"¿Olvidaste tu contraseña?"** debajo del botón de ingreso (ver guía: [Recuperar Contraseña](/user-guide/recuperar-contrasena)). |
 | **La página no carga** | Falta de conexión a internet o error en la URL del local. | Verificá que la terminal tenga conexión a internet activa y que el nombre del local en la barra de direcciones esté bien escrito. |
 

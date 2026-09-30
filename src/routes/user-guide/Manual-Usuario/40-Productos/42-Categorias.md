@@ -52,38 +52,17 @@ Así se ve la pantalla. Arriba están los botones. Abajo, la lista de tus catego
 
 ![Formulario Nueva Categoría completo con la categoría Bebidas](images/manual/40-productos/42-30-pantalla-nueva-categoria.png)
 
-![Casillero Nombre de la Categoría con Bebidas escrito](images/manual/40-productos/42-13-campo-nombre-de-la-categoria.png)
-
 3. En **Nombre de la Categoría**, escribí el nombre. Por ejemplo: *Bebidas*.
-
-![Casillero Descripción con un texto de ejemplo](images/manual/40-productos/42-15-campo-descripcion-opcional.png)
-
 4. En **Descripción (opcional)** podés escribir un texto corto. Se ve en el menú online.
-
-![Casillero Orden de visualización con el número 1](images/manual/40-productos/42-16-campo-orden-de-visualizacion.png)
-
 5. En **Orden de visualización**, poné un número. El número más chico aparece primero.
-
-![Casilla Categoría privada, sin marcar](images/manual/40-productos/42-17-campo-privada.png)
-
 6. Marcá **Categoría privada** solo si no querés que los clientes la vean en el menú online.
-
-![Botón para elegir la imagen de la categoría](images/manual/40-productos/42-18-campo-media-file.png)
-
 7. Si querés, tocá **Choose File** (o **Elegir archivo**) y elegí una foto de la categoría.
-
-![Cuadros de colores con el verde elegido](images/manual/40-productos/42-19-campo-color.png)
-
 8. Tocá un cuadrito de color. Sirve para reconocer la categoría más rápido.
 
 ![Formulario con el botón verde Crear Categoría marcado en rojo](images/manual/40-productos/42-20-donde-esta-boton-crear-categoria.png)
 
 9. Tocá el botón verde **Crear Categoría**.
 10. Volvés a la lista, con la categoría nueva.
-
-> 💡 **Consejo útil:** si te arrepentiste, tocá **Cancelar**. No se guarda nada.
-
-![Formulario con el botón Cancelar marcado en rojo](images/manual/40-productos/42-24-donde-esta-boton-cancelar.png)
 
 ---
 
