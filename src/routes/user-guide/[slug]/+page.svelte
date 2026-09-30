@@ -11,6 +11,7 @@
 	let { data }: { data: PageData } = $props();
 
 	let showCopyMessage = $state(false);
+	let zoomedImage = $state<{ src: string; alt: string } | null>(null);
 	let sidebarOpen = $state(false);
 	let menuButton = $state<HTMLButtonElement>();
 	let moduleCategories = $derived(data.moduleCategories);
@@ -87,11 +88,37 @@
 	function handleSectionLinkClick(event: MouseEvent) {
 		const target = event.target as HTMLElement;
 		const button = target.closest('[data-copy-section]');
-		if (button) copyLinkToSection(button.getAttribute('data-copy-section') || '');
+		if (button) {
+			copyLinkToSection(button.getAttribute('data-copy-section') || '');
+			return;
+		}
+
+		// Las capturas se muestran reducidas: click para verlas en tamaño completo
+		if (target instanceof HTMLImageElement && target.closest('.markdown-paxapos')) {
+			zoomedImage = { src: target.currentSrc || target.src, alt: target.alt };
+		}
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape' && zoomedImage) zoomedImage = null;
 	}
 </script>
 
-<svelte:window onclick={handleSectionLinkClick} />
+<svelte:window onclick={handleSectionLinkClick} onkeydown={handleKeydown} />
+
+{#if zoomedImage}
+	<button
+		type="button"
+		class="image-lightbox"
+		onclick={(event) => {
+			event.stopPropagation();
+			zoomedImage = null;
+		}}
+		aria-label="Cerrar imagen ampliada"
+	>
+		<img src={zoomedImage.src} alt={zoomedImage.alt} />
+	</button>
+{/if}
 
 <!-- SEO dinámico por módulo -->
 <SEOHead
