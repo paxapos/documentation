@@ -115,14 +115,14 @@ aside {
 	scroll-margin-top: 8rem;
 }
 
-/* Capturas de pantalla: más chicas y alineadas a la derecha; click para ampliar */
+/* Capturas de pantalla: más chicas y alineadas a la izquierda; click para ampliar */
 .markdown-paxapos img {
 	display: block;
 	width: auto;
 	max-width: min(100%, 40rem);
 	max-height: 32rem;
 	height: auto;
-	margin: 1.25rem 0 1.5rem auto;
+	margin: 1.25rem 0 1.5rem;
 	border: 1px solid rgb(229 231 235);
 	border-radius: 0.5rem;
 	box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.12);
