@@ -1,58 +1,109 @@
-# Departamentos de Personal
+# Departamentos
 
-<div id="departamentos-de-personal"></div>
+<div id="departamentos"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Departamentos**  
-> **¿Quién lo usa?:** Recursos Humanos y Administradores  
+> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **Departamentos**
+> **¿Quién lo usa?:** Encargados de personal y administradores
 
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Permite clasificar el personal en áreas u organizativas (ejemplo: *Cocina, Salón, Caja, Limpieza, Administración*):
-
-1. **Agrupación del personal:** Facilita la asignación de turnos y la lectura de reportes de horas por sector.
+> 🎯 **¿Para qué sirve esto?**
+> Acá armás la lista de áreas de tu comercio. Por ejemplo: *Cocina*, *Salón*, *Caja* y *Administración*.
+> Después elegís el área de cada persona en su ficha de [Empleados](/user-guide/empleados). Así podés filtrar al personal por área.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 Antes de empezar
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Tener el permiso de **Configuración de Departamentos de Personal** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Si no ves **RRHH** en el menú, el módulo no está activo en tu comercio. Pedíselo a soporte.
+- Tu usuario necesita el permiso de RRHH. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
+- Un departamento solo tiene dos datos: el nombre y una descripción.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 📍 Ver la lista — Paso 1
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="ver-la-lista-paso-1"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+1. En el menú de la izquierda, tocá **RRHH**.
+2. Tocá **Departamentos**.
+3. Se abre la pantalla **Departamentos** con una tabla.
+
+La tabla tiene dos columnas:
+
+- **Departamento**: el nombre del área.
+- **Descripción**: una aclaración. Puede quedar vacía.
+
+Al final de cada renglón hay dos botones grises: **editar** y **eliminar**.
+
+---
+
+## ➕ Crear un departamento — Paso 2
+
+<div id="crear-un-departamento-paso-2"></div>
+
+1. Arriba a la derecha, tocá el botón verde **Crear Departamento**.
+2. Se abre una pantalla con el título **Creando**.
+3. Completá los casilleros:
+   - **Name**: el nombre del área. Es obligatorio. Por ejemplo: *Cocina*.
+   - **Description**: una aclaración para vos. Por ejemplo: *Cocineros y ayudantes*. No hace falta completarla.
+4. Tocá el botón verde **Guardar**.
+
+> ⚠️ **Atención:** después de **Guardar**, la pantalla se queda abierta y no muestra ningún aviso. No toques **Guardar** de nuevo: podés crear el departamento repetido. Para volver a la lista, tocá **RRHH** y después **Departamentos**.
+
+> 💡 **Consejo útil:** si dejás **Name** vacío, el sistema da error y no guarda nada.
+
+---
+
+## ✏️ Cambiar un departamento — Paso 3
+
+<div id="cambiar-un-departamento-paso-3"></div>
+
+1. En la lista, buscá el departamento.
+2. Tocá el botón **editar** de ese renglón.
+3. Se abre la pantalla con el título **Editando** y los datos cargados.
+4. Cambiá **Name** o **Description**.
+5. Tocá el botón verde **Guardar**.
+
+El cambio llega solo a la app de fichaje del celular. Los empleados de ese departamento se vuelven a bajar en la próxima sincronización.
+
+---
+
+## 🗑️ Eliminar un departamento — Paso 4
+
+<div id="eliminar-un-departamento-paso-4"></div>
+
+> ⚠️ **Atención:** eliminar saca el departamento de la lista. Pensalo antes de confirmar.
+
+1. En la lista, tocá el botón **eliminar** del departamento.
+2. El sistema pregunta **Confirma eliminar?**.
+3. Confirmá para borrarlo. Si te arrepentís, cancelá.
+4. Volvés a la pantalla anterior.
+
+---
+
+## 👥 Asignar personas a un departamento — Paso 5
+
+<div id="asignar-personas-a-un-departamento-paso-5"></div>
+
+El departamento se elige en la ficha de cada empleado. Mirá [Empleados](/user-guide/empleados).
+
+1. Abrí la ficha del empleado para crearlo o editarlo.
+2. Buscá la lista para elegir **Departamento**. Al principio dice **-- Seleccione --**.
+3. Elegí el área. Por ejemplo: *Cocina*.
+4. Guardá la ficha.
+
+En la lista de **Empleados** podés filtrar por **Departamento** y ver el área de cada persona en una columna.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Departamento** | Esquina superior | Registra un nuevo sector o área de personal. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Crear un nuevo departamento
-
-<div id="paso-1-crear-un-nuevo-departamento"></div>
-
-1. Tocá el botón **Nuevo Departamento**.
-2. Escribí el nombre (ejemplo: *Delivery / Repartidores*).
-3. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| No podés eliminar un departamento. | Tiene empleados asignados actualmente. | Reubicá a los trabajadores en otro departamento antes de borrarlo. |
+| No aparece **RRHH** en el menú. | El módulo no está activo o tu usuario no tiene permiso. | Pedile a un administrador el permiso. Si el módulo no está activo, consultá con soporte. |
+| **Error al guardar departamento**. | Dejaste **Name** vacío. | Escribí el nombre del área y guardá de nuevo. |
+| El departamento aparece repetido. | Tocaste **Guardar** dos veces. | Tocá **eliminar** en el renglón que sobra y confirmá. |
+| No aparece el departamento al crear un empleado. | Todavía no lo creaste, o lo eliminaste. | Creá el departamento en esta pantalla y volvé a la ficha del empleado. |

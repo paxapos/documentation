@@ -1,62 +1,224 @@
-# Gestión de Empleados
+# Empleados
 
-<div id="gestion-de-empleados"></div>
+<div id="empleados"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Empleados**  
-> **¿Quién lo usa?:** Recursos Humanos, Encargados y Administradores  
+> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **Empleados**
+> **¿Quién lo usa?:** Recursos Humanos, encargados y administradores.
 
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Es la nómina y legajo digital de los empleados del establecimiento:
-
-1. **Legajo de personal:** Nombre, DNI, legajo, fecha de ingreso, departamento, cargo, foto para reconocimiento facial y PIN de fichaje.
-2. **Alta y baja de trabajadores:** Gestión de estado activo o inactivo del personal.
+> 🎯 **¿Para qué sirve esto?**
+> Acá está la lista de todas las personas que trabajan en tu comercio.
+> Podés dar de alta a un empleado nuevo, ver su ficha, corregir sus datos y darlo de baja cuando se va.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 Antes de empezar
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Tener el permiso de **Administración de Legajos de Personal** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tiene que estar activo el módulo de Fichaje o el de RRHH. Si no ves **RRHH** en el menú, pedíselo a soporte.
+- Para ver **Empleados** necesitás el permiso **Recursos Humanos**. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
+- Los datos de sueldo y liquidación (CUIL, CBU, convenio y otros) los ve solo quien tiene ese permiso.
+- Antes de cargar empleados, conviene crear los [Departamentos](/user-guide/departamentos) y los [Turnos y Horarios](/user-guide/turnos-y-horarios-fichaje). Así los podés elegir en el formulario.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 📋 Paso 1: Mirá la lista de empleados
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-1-mira-la-lista-de-empleados"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+Al entrar a **Empleados** ves el título y, debajo, cuántos empleados hay. Por ejemplo: *12 activos · 2 inactivos*.
+
+Arriba a la derecha está el botón verde **Nuevo Empleado**.
+
+Debajo tenés dos pestañas:
+
+- **Activos**: las personas que hoy trabajan con vos. Es la que se abre primero.
+- **Historial (Bajas)**: las personas dadas de baja. A cada pestaña le sigue un número con la cantidad.
+
+### Buscar a alguien
+
+Tocá la barra **Filtros** para abrirla. Se abre sola si ya buscaste algo.
+
+- **Nombre**: escribí una parte del nombre. Por ejemplo: *Juan*.
+- **Apellido**: escribí una parte del apellido. Por ejemplo: *Pérez*.
+- **DNI**: escribí el número completo, sin puntos. Por ejemplo: *30123456*.
+- **Departamento**: elegí uno de la lista. Con **-- Todos --** no se filtra por departamento.
+
+Tocá el botón azul **Buscar**. Para volver a ver todos, tocá **Limpiar filtros**. Ese botón aparece solo cuando hay un filtro puesto.
+
+### Qué muestra cada columna
+
+- **Foto**: la foto de la persona. Si no tiene, ves un dibujito gris.
+- **Nombre**: apellido y nombre. Abajo, el número de legajo si lo cargaste.
+- **DNI**.
+- **Departamento**.
+- **Turno**: los turnos que tiene asignados.
+- **Contacto**: teléfono y e-mail.
+- **Estado**: una etiqueta verde si está activo y una roja si está dado de baja.
+
+Tocá el título **Nombre**, **DNI**, **Departamento** o **Contacto** para ordenar la lista. La lista sale ordenada por nombre.
+
+Si no hay resultados, la pantalla dice **No se encontraron empleados**. En la pestaña de bajas dice **No hay empleados dados de baja**.
+
+### Los botones de cada renglón
+
+A la derecha de cada empleado hay estos botones:
+
+- El ojo, **Ver**: abre la ficha del empleado (Paso 4).
+- La llave amarilla, **Reiniciar Password**: solo aparece si el empleado tiene un usuario del sistema. Le manda una contraseña nueva por e-mail. El sistema te pregunta antes. Necesitás el permiso de cambiar contraseñas.
+- El lápiz azul, **Editar**: abre el formulario para corregir datos (Paso 5).
+- El tacho rojo, **Eliminar**: saca al empleado de la lista (Paso 7).
+
+---
+
+## ➕ Paso 2: Tocá "Nuevo Empleado"
+
+<div id="paso-2-toca-nuevo-empleado"></div>
+
+1. Arriba a la derecha, tocá el botón verde **Nuevo Empleado**.
+2. Se abre la pantalla **Nuevo Empleado**, con varios cuadros para completar.
+
+---
+
+## 📝 Paso 3: Completá el formulario
+
+<div id="paso-3-completa-el-formulario"></div>
+
+Solo son obligatorios el **Nombre** y el **Apellido**. El resto lo podés completar después.
+
+### Cuadro Foto
+
+- **Sacar Foto**: el botón verde saca la foto con la cámara de tu equipo. El navegador te pide permiso la primera vez.
+- **O subir archivo**: elegí una foto que ya tengas guardada.
+
+La foto sirve para reconocer a la persona en la pantalla de [Empleados Trabajando](/user-guide/empleados-trabajando).
+
+### Cuadro Datos Personales
+
+- **Nombre** y **Apellido**: obligatorios. Por ejemplo: *Juan* y *Pérez*.
+- **DNI**: solo números, sin puntos. Por ejemplo: *30123456*. El sistema no deja cargar dos empleados con el mismo DNI.
+- **Departamento**: elegí uno de la lista. Por ejemplo: *Cocina*.
+- **E-Mail** y **Teléfono**: para contactarlo.
+
+### Cuadro Jornada y Turnos
+
+- **Horas Semanales**: cuántas horas trabaja por semana. Por ejemplo: *40*. El [Reporte Mensual](/user-guide/reporte-mensual-fichaje) lo usa para calcular las horas esperadas.
+- **Valor hora (estimación de costo)**: el precio de la hora de trabajo. Solo lo ves si tenés el permiso de Recursos Humanos. Sirve para estimar el costo del personal. No reemplaza la liquidación oficial.
+- **Turnos Asignados**: tildá los turnos que hace. Se usan para saber si llegó tarde.
+
+### Cuadro Usuario del Sistema
+
+- Elegí un usuario si la persona también entra al sistema o usa la app de fichaje. Con **-- Sin usuario asignado --** no se vincula ninguno.
+- Un mismo usuario no puede estar en dos empleados.
+- Solo quien tiene el permiso de Recursos Humanos puede elegir el usuario. Para el resto, el casillero está bloqueado.
+- Para crear usuarios, mirá [Usuarios del Sistema](/user-guide/usuarios-del-sistema).
+
+### Cuadro Observaciones
+
+- Escribí lo que quieras anotar sobre el empleado. Es texto libre.
+
+### Cuadro Datos para RRHH y Liquidación
+
+Lo ves solo con el permiso de Recursos Humanos.
+
+- **CUIL**, **Legajo** y **CBU**.
+- **Fecha de Ingreso**: el día que empezó a trabajar.
+- **Situación**: dejá **Activo (sin especificar)** para un empleado que trabaja. Otras opciones lo dan de baja (Paso 6).
+- **Convenio**, **Obra Social** y **Adicional**: elegí uno de cada lista, si corresponde.
+
+> 💡 **Consejo útil:** si el comercio tiene un lector de DNI conectado, al pasar el documento se completan solos el nombre, el apellido y el DNI.
+
+---
+
+## 💾 Paso 4: Registrá al empleado
+
+<div id="paso-4-registra-al-empleado"></div>
+
+Al final de la pantalla hay tres botones:
+
+- **Cancelar**, a la izquierda: vuelve a la lista sin guardar.
+- **Registrar**, verde, a la derecha: guarda el empleado.
+- **Registrar y Fichar**, rojo, a la derecha: guarda al empleado y abre la pantalla para marcar su ingreso ahora mismo.
+
+Si falta el nombre o el apellido, o el DNI ya existe, el sistema muestra un mensaje rojo y no guarda. Corregí el dato y probá de nuevo.
+
+Cuando se guarda, ves un mensaje verde. Después, entrá a **Empleados** para verlo en la lista.
+
+---
+
+## 👤 Paso 5: Abrí la ficha de un empleado
+
+<div id="paso-5-abri-la-ficha-de-un-empleado"></div>
+
+1. En la lista, tocá el ojo **Ver** del empleado.
+2. Arriba ves su foto, su nombre y etiquetas con su estado, su legajo y su departamento. A la derecha está el botón verde **Editar**.
+3. Si está dado de baja, aparece un aviso rojo que dice **Empleado dado de baja**.
+
+Más abajo la ficha tiene estos cuadros:
+
+- **Datos Personales**: DNI, CUIL, e-mail, teléfono, domicilio, fecha de nacimiento y observación.
+- **Datos Laborales**: legajo, CBU, convenio, obra social, fecha de ingreso y jornada semanal. También cuándo se dio de alta en el sistema y cuándo se modificó por última vez.
+- **Turnos Asignados**: cada turno con su horario, la tolerancia en minutos y los días de la semana.
+- **Resumen de Horas Trabajadas por Mes**: las horas de los últimos 12 meses.
+- **Registros de Fichadas (Ingresos y Egresos)**: cada fichada de la persona, la más nueva primero.
+
+### La tabla de fichadas
+
+- **Fecha**, **Ingreso (fichada)** y **Egreso (fichada)**: el día y la hora de cada marca. Con una foto de cuando fichó, si hay.
+- **Created del Registro**: la hora en que el sistema recibió la marca. Si es muy distinta de la hora de la fichada, alguien la corrigió.
+- **Hs. Trabajadas**: el tiempo entre el ingreso y el egreso.
+- **Turno**: el turno que se le asignó a esa fichada.
+- **Puntualidad**: **En hora** o **TARDE** con los minutos que pasó de la tolerancia del turno.
+- **Hs. Extras**: lo trabajado de más respecto del turno.
+- **Acciones**: los botones para corregir, que se explican en [Registro Diario de Fichaje](/user-guide/registro-diario-fichaje).
+
+Quien tiene el permiso de liquidar sueldos ve además la etiqueta **EDITADO** en las marcas corregidas a mano. También ve un botón rojo con la cantidad de marcas editadas y el enlace **Ver auditoría completa**.
+
+---
+
+## ✏️ Paso 6: Corregí datos o dá de baja a un empleado
+
+<div id="paso-6-corregi-datos-o-da-de-baja-a-un-empleado"></div>
+
+1. En la lista, tocá el lápiz **Editar**. También podés tocar **Editar** dentro de la ficha.
+2. Se abre **Editar Empleado**, con los mismos cuadros que el alta.
+3. Arriba hay un cuadro nuevo, **Estado Laboral**:
+   - **Situación**: elegí cómo está hoy el empleado. **Activo (sin especificar)** lo deja trabajando. Cualquier otra opción de baja lo pasa a la pestaña **Historial (Bajas)**.
+   - **Fecha de Ingreso**.
+4. En el cuadro **Foto** podés cambiar la foto. Si el empleado ya tenía una, ves la foto y el casillero **Cambiar foto**.
+5. Tocá **Guardar Cambios**, abajo a la derecha. Volvés a la lista.
+
+Las situaciones que cuentan como activas son **Activo**, **Reserva de puesto**, **Licencia sin goce** y **Trabajador de temporada**. Las demás cuentan como baja.
+
+Para **reincorporar** a alguien de baja, entrá a **Historial (Bajas)**, tocá **Editar** y cambiá la **Situación** a **Activo (sin especificar)**. El aviso rojo **Este empleado está dado de baja** te lo recuerda.
+
+> 💡 **Consejo útil:** para que alguien deje de trabajar con vos, usá la baja. No lo elimines. Así conservás sus fichadas y su historial.
+
+---
+
+## 🗑️ Paso 7: Eliminá un empleado
+
+<div id="paso-7-elimina-un-empleado"></div>
+
+> ⚠️ **Atención:** el empleado desaparece de las listas y del [Reporte Mensual](/user-guide/reporte-mensual-fichaje). Usalo solo para un alta cargada por error. Si alguien dejó de trabajar, dalo de baja como en el Paso 6.
+
+1. En la lista, tocá el tacho rojo **Eliminar** del empleado.
+2. El sistema pregunta **¿Eliminar a Juan Pérez?**.
+3. Confirmá para eliminarlo. Si no querés, cancelá.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Empleado** | Esquina superior | Abre el formulario para dar de alta un trabajador. |
-| 📸 **Cargar Foto Facial** | Ficha del empleado | Registra la foto para la app de fichaje por reconocimiento facial. |
-| 🔢 **PIN de Fichaje** | Formulario | Código numérico único de ingreso. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Registrar un nuevo empleado
-
-<div id="paso-1-registrar-un-nuevo-empleado"></div>
-
-1. Tocá el botón **Nuevo Empleado**.
-2. Ingresá el **Nombre y Apellido**, **DNI** y **Departamento** (ejemplo: *Cocina*).
-3. Asigná su **PIN de Fichaje**.
-4. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El empleado no puede fichar con su PIN. | El PIN está asignado a otro trabajador o fue tipeado mal. | Verificá el PIN en el legajo del empleado. |
+| **El DNI ya existe en la base de datos** | Ya hay un empleado con ese DNI. Puede estar de baja. | Buscalo por DNI. Miralo también en **Historial (Bajas)**. Si está de baja, reincorporalo en lugar de crear uno nuevo. |
+| **No puedo ingresar el mismo usuario para dos empleados** | Ese usuario ya está vinculado a otro empleado. | Elegí otro usuario, o dejá **-- Sin usuario asignado --**. |
+| No veo el menú **RRHH** | El módulo no está activo o tu rol no tiene el permiso. | Pedile a un administrador que revise [Permisos por Rol](/user-guide/permisos-por-rol). |
+| No veo los cuadros de CUIL, CBU y Situación | Esos datos son solo para quien tiene el permiso de Recursos Humanos. | Pedí el permiso a un administrador. |
+| El casillero **Usuario del Sistema** está bloqueado | Tu rol no tiene el permiso de Recursos Humanos. | Pedile a un administrador que lo vincule. |
+| Falta un empleado en la lista | Está dado de baja, o hay un filtro puesto. | Tocá **Limpiar filtros** y mirá la pestaña **Historial (Bajas)**. |
+| No aparece la llave **Reiniciar Password** | El empleado no tiene un usuario vinculado. | Editá al empleado y elegí su usuario en **Usuario del Sistema**. |
+| El empleado no aparece en [Empleados Trabajando](/user-guide/empleados-trabajando) | Todavía no marcó el ingreso. | Marcá su ingreso desde esa pantalla o desde la app de fichaje. |

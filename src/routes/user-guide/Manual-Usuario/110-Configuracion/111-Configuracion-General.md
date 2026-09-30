@@ -63,7 +63,7 @@ Fijate en dos detalles:
 - Un triángulo amarillo ⚠️ al lado del nombre avisa que falta completar algo. Al abrir la sección, el aviso aparece escrito arriba. Por ejemplo: faltan datos fiscales o un procesador de cobro no está listo.
 - Si una sección dice **(módulo apagado)**, ese módulo no está activo. Podés cargar los datos, pero no tienen efecto hasta activarlo en **Módulos**.
 
-> 💡 **Consejo útil:** la sección **RRHH** tiene su propio artículo en el manual. Acá no se explica.
+> 💡 **Consejo útil:** lo que cargás en la sección **RRHH** se explica [más abajo](#rrhh). Las pantallas de RRHH tienen sus artículos: [Empleados](/user-guide/empleados), [Departamentos](/user-guide/departamentos), [Turnos y Horarios](/user-guide/turnos-y-horarios-fichaje), [Sueldos y Jornales](/user-guide/sueldos-y-jornales) y [Datos de Acceso a la App](/user-guide/datos-de-acceso-app).
 
 ### 💾 El botón Guardar
 
@@ -902,6 +902,38 @@ Con los valores por defecto ya funciona. Cambialos solo si sabés lo que hacés.
 - **Ver modelos de chat / OCR** y **Ver modelos de voz (Live API)**: listan los modelos que ofrece tu cuenta de Google.
 
 Al final de la sección hay un enlace a **Reservas**, para las reglas del asistente en reservas online.
+
+---
+
+### 👤 RRHH
+
+<div id="rrhh"></div>
+
+Los datos que usa la liquidación de sueldos: la firma de los recibos y el tipo de empleador. La sección se muestra si tu comercio tiene activo el módulo de sueldos (RRHH) o el de fichaje. La liquidación en sí se hace en [Sueldos y Jornales](/user-guide/sueldos-y-jornales).
+
+Si falta el tipo de empleador y el módulo de sueldos está activo, aparece el triángulo amarillo ⚠️ al lado del nombre. Al abrir la sección, el aviso dice: **Falta el tipo de empleador del F931: sin él, el TXT de la liquidación sale con un valor por defecto.**
+
+**Recibos de sueldo**
+
+La firma que se imprime al pie de los recibos de sueldo.
+
+- **URL de la firma de quien autoriza los recibos de sueldo (imagen)**: pegá la dirección web (URL) de una imagen con la firma. Es la que sale impresa al pie de cada recibo.
+- **Aclaración que acompaña la firma**: el texto que aparece debajo de la firma. Por ejemplo: *María Gómez, Gerente de Personal*.
+
+**Liquidación de sueldos (AFIP)**
+
+Datos que usa la liquidación al armar el archivo de texto del F931/SICOSS de AFIP.
+
+- **Tipo de empleador (F931)**: elegí en la lista, que empieza con **Seleccioná el tipo de empleador**. Es el código "Tipo de empresa" que se declara en el F931. Cada liquidación nueva lo toma de acá y sale en el archivo que se presenta. Las opciones son:
+  - **Administración Pública**.
+  - **Decreto 814/01, Art2 Inc.B**.
+  - **Servicios Eventuales, Art2 Inc.B**.
+  - **Decreto 814/01, Art2 Inc.A**.
+  - **Servicios Eventuales, Art2 Inc.A**.
+  - **Enseñanza Privada**.
+  - **Decreto 1212/03 - AFA Clubes**.
+
+> 💡 **Consejo útil:** ante la duda con el **Tipo de empleador (F931)**, consultalo con tu contador. Después de cambiarlo, tocá **Guardar**.
 
 ---
 
