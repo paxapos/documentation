@@ -2,57 +2,83 @@
 
 <div id="historial-de-compras"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Catálogo** → **Historial de Compras**  
-> **¿Quién lo usa?:** Compradores, Contadores y Gerentes  
+> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Seguimiento** → **Historial de compras**
+> **¿Quién lo usa?:** Compradores, encargados de costos y administradores
+
+> 🎯 **¿Para qué sirve esto?**
+> Acá ves cada mercadería que pediste, renglón por renglón, con su precio y cuánto recibiste.
+> Te sirve para ver cómo cambió el precio de algo o a quién se lo compraste.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Muestra el registro cronológico y evolutivo de todas las compras de mercadería e insumos realizadas:
-
-1. **Variación de precios:** Auditoría de cómo ha cambiado el costo de adquisición de un insumo a lo largo del tiempo.
-2. **Filtros por fecha e insumo:** Permite consultar compras pasadas efectuadas a distintos proveedores.
+- Tu usuario tiene que tener el permiso de **Compras** en [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 📍 Paso 1: Entrá a la pantalla
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-- Tener el permiso de **Consulta de Histórico de Precios y Compras** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+![Menú lateral con el grupo Compras marcado en rojo](images/manual/50-compras/59-00a-menu-grupo-compras.png)
+
+1. En el menú de la izquierda, tocá **Compras**.
+
+![Opción Historial de compras marcada en rojo, debajo de Seguimiento](images/manual/50-compras/59-00b-menu-opcion-historial.png)
+
+2. Tocá **Historial de compras**. Está debajo del título **SEGUIMIENTO**.
+
+![Pantalla Historial de Órdenes de Compra con los renglones de Distribuidora Ejemplo](images/manual/50-compras/59-01-pantalla-historial.png)
+
+Así se ve la pantalla. Cada renglón es una mercadería de una orden de compra.
 
 ---
 
-## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+## 🔎 Paso 2: Filtrá lo que buscás
 
-<div id="botones-y-filtros-que-es-cada-cosa"></div>
+<div id="paso-2-filtra-lo-que-buscas"></div>
 
-| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Recuadro de filtros: número de orden, mercadería, proveedor y el botón Filtrar](images/manual/50-compras/59-02-panel-filtros.png)
+
+En el recuadro de filtros tenés:
+
+- **Nº Orden de Compra**: el número de una orden.
+- **Seleccionar**: una mercadería. Por ejemplo: *Harina 0000 x 25 kg*.
+- **Todos**: un proveedor. Por ejemplo: *Distribuidora Ejemplo*.
+- **Filtrar**: el botón azul, que aplica los filtros.
+
+1. Elegí lo que necesites y tocá **Filtrar**.
+2. La lista muestra solo lo que coincide.
+
+---
+
+## 📋 Paso 3: Leé cada renglón
+
+<div id="paso-3-lee-cada-renglon"></div>
+
+![Renglón de la orden con Harina 0000 x 25 kg, su precio, el botón editar y el proveedor](images/manual/50-compras/59-07-renglon-compra.png)
+
+De izquierda a derecha:
+
+1. **#Orden**: el número de la orden de compra. Tocalo para abrir la orden completa. Mirá [Órdenes de Compra](/user-guide/todas-las-ordenes-compra).
+2. **Fecha** y **Usuario**: cuándo y quién la hizo.
+3. **Cantidad** y **Precio de Compra**: cuánto pediste y el total del renglón.
+4. **Mercadería**: tocá el nombre para ver su detalle. El botón **editar** corrige ese renglón.
+5. **Costo Unitario**: cuánto te sale cada unidad. Por ejemplo: *$ 480 el kilo*.
+6. **Fecha Recepción** y **Cantidad Recibida**: cuándo y cuánto llegó.
+7. **Proveedor** y **Rubro**.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 🔍 **Buscar Mercadería** | Barra superior | Muestra el histórico de compras de una materia prima particular. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Analizar la variación de costo de un insumo
-
-<div id="paso-1-analizar-la-variacion-de-costo-de-un-insumo"></div>
-
-1. Escribí el nombre del insumo en la casilla de búsqueda (ejemplo: *Queso Mozzarella*).
-2. Verificá los precios unitarios pagados en las distintas fechas y proveedores.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| Un costo aparece desmedidamente elevado. | Error de tipeo durante el ingreso del comprobante. | Corregí el remito o factura cargada en el módulo de Gastos. |
+| **La lista sale vacía** | Hay un filtro que no coincide con nada. | Dejá los filtros en **Seleccionar** y **Todos** y tocá **Filtrar**. |
+| **Cantidad Recibida no coincide con lo pedido** | Se cuenta en la unidad de stock (por ejemplo, kilos y no bolsas). | Revisá la **Equivalencia** en [Mercaderías](/user-guide/mercaderias). |
+| **Falta la Fecha Recepción** | La mercadería todavía no se recibió. | Recibila desde [Órdenes de Compra](/user-guide/todas-las-ordenes-compra). |

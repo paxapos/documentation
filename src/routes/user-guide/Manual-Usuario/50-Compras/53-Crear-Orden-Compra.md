@@ -1,63 +1,125 @@
-# Crear Orden de Compra
+# Crear una Orden de Compra
 
-<div id="crear-orden-de-compra"></div>
+<div id="crear-una-orden-de-compra"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Órdenes de Compra** → **Crear OC**  
-> **¿Quién lo usa?:** Compradores y Encargados de Stock  
+> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Crear orden de compra**
+> **¿Quién lo usa?:** Compradores, encargados y administradores
 
----
-
-## 🎯 ¿Qué es y para me sirve esta pantalla?
-
-<div id="que-es-y-para-me-sirve-esta-pantalla"></div>
-
-Permite confeccionar una nueva solicitud de pedido formal para enviar a un proveedor determinado:
-
-1. **Selección de insumos y cantidades:** Carga de los productos necesarios con los costos unitarios acordados.
-2. **Asignación de depósito de destino:** Define a qué almacén o depósito del local ingresará la mercadería.
+> 🎯 **¿Para qué sirve esto?**
+> Una orden de compra (OC) es el pedido que le hacés a un proveedor: qué mercadería, cuánta y a qué precio.
+> Queda guardada para controlar después si te llegó todo y si la factura coincide.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 Antes de empezar
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Tener registrados los proveedores y las mercaderías en el sistema.
-- Tener el permiso de **Emisión de Órdenes de Compra** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- El proveedor tiene que estar cargado. Mirá [Proveedores](/user-guide/proveedores).
+- Conviene tener cargadas las mercaderías. Mirá [Mercaderías](/user-guide/mercaderias).
+- Tu usuario tiene que tener el permiso de **Compras** en [Permisos por Rol](/user-guide/permisos-por-rol).
+
+> 💡 **Consejo útil:** en la orden de compra va solo mercadería. Un equipo (un horno) o un servicio (un abono) no va acá: se carga como factura cuando llega.
 
 ---
 
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
+## 📍 Paso 1: Entrá a la pantalla
 
-<div id="botones-y-campos-que-es-cada-cosa"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-| Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
+![Menú lateral con el grupo Compras marcado en rojo](images/manual/50-compras/53-00a-menu-grupo-compras.png)
+
+1. En el menú de la izquierda, tocá **Compras**.
+
+![Opción Crear orden de compra marcada en rojo](images/manual/50-compras/53-00b-menu-opcion-form.png)
+
+2. Tocá **Crear orden de compra**. Se abre la pantalla **Generar Orden de Compra**.
+
+---
+
+## 📝 Paso 2: Completá la orden
+
+<div id="paso-2-completa-la-orden"></div>
+
+![Formulario Generar Orden de Compra completo: tipo, fecha, proveedor, observaciones y dos mercaderías](images/manual/50-compras/53-41-formulario-completo.png)
+
+Así se ve la orden completa. De arriba hacia abajo:
+
+### Los datos de la orden
+
+<div id="los-datos-de-la-orden"></div>
+
+- **Tipo**: dejá **Orden de Compra**. Si solo querés pedir precios, elegí **Solicitud Presupuesto**.
+- **Fecha de entrega esperada**: el día en que necesitás la mercadería. El proveedor la ve.
+- **Proveedor**: escribí parte del nombre o el CUIT y tocalo en la lista que aparece. Abajo se ven su teléfono, su mail y su CUIT.
+- **No Enviar Mail**: es un interruptor. Si lo tocás cambia a **Enviar por Mail** y, al guardar, la orden le llega por mail al proveedor. Si queda en **No Enviar Mail**, no se manda.
+- **Subir Remito**: si ya tenés el remito, subí la foto. Es opcional.
+- **Recepcionado**: marcalo solo si la mercadería ya llegó.
+- **Imprimir Orden**: marcalo si querés que salga impresa al guardar.
+- **Observaciones**: lo que tenga que saber el proveedor. Por ejemplo: *Entregar por la mañana, antes de las 11*.
+- El botón con la flechita, arriba de **Detalles de la OC**, sirve para mandar el pedido por WhatsApp o copiarlo.
+
+> ⚠️ **Atención:** elegí siempre el proveedor de la lista. Si escribís un nombre que no está, el sistema crea un proveedor nuevo.
+
+### Las mercaderías (Detalles de la OC)
+
+<div id="las-mercaderias-detalles-de-la-oc"></div>
+
+Cada renglón es una mercadería. De izquierda a derecha:
+
+- **Mercadería**: escribí el nombre y tocala en la lista. Por ejemplo: *Harina 0000 x 25 kg*.
+- **Cantidad**: cuántas pedís. Por ejemplo: *4*.
+- **U.M.**: la unidad en que la pedís. Por ejemplo: *Bolsa*.
+- **Precio Total s/Imp.**: el total de ese renglón, sin impuestos. Por ejemplo: *48000*.
+- **IVA**: elegí el IVA. Por ejemplo: *IVA 21%*.
+- **Precio c/Imp.**: se calcula solo.
+- **Observación**: una aclaración, si hace falta.
+- La **✖** roja saca ese renglón.
+
+Debajo de cada renglón aparece una **Sugerencia**: el stock actual, cuánto consumís por día y la cantidad sugerida. Tocá **Aplicar** para usar esa cantidad, o la **i** para ver cómo se calculó.
+
+Para sumar otra mercadería, tocá **Agregar otro Mercadería**, abajo de todo.
+
+---
+
+## 💾 Paso 3: Guardá la orden
+
+<div id="paso-3-guarda-la-orden"></div>
+
+1. Tocá el botón azul **Guardar Orden de Compra**, arriba de todo.
+2. Si tu comercio pide aprobar las compras, la orden queda **a aprobar**. Mirá [Órdenes a aprobar](/user-guide/ordenes-a-aprobar).
+
+### Si escribiste una mercadería nueva
+
+<div id="si-escribiste-una-mercaderia-nueva"></div>
+
+![Ventana Se van a crear mercaderías nuevas en el catálogo, con los botones Cancelar y Sí, crearlas](images/manual/50-compras/53-40-ventana-mercaderias-nuevas.png)
+
+Si escribiste una mercadería que no existe, antes de guardar aparece esta ventana. Te muestra los nombres nuevos:
+
+- **Sí, crearlas**: si es algo que comprás para el stock o para una receta. Se crea la mercadería y se guarda la orden.
+- **Cancelar**: si te equivocaste de nombre, o si es un equipo o un servicio. Volvés a la orden para corregir el renglón.
+
+---
+
+## 📤 Paso 4: Mandale la orden al proveedor
+
+<div id="paso-4-mandale-la-orden-al-proveedor"></div>
+
+- Desde el formulario, con el botón de WhatsApp (Paso 2).
+- O después, por mail, desde [Órdenes de compra](/user-guide/todas-las-ordenes-compra).
+
+> ⚠️ **Atención:** si la orden está **a aprobar**, esperá a que la aprueben antes de mandarla.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 🏢 **Proveedor** | Formulario superior | Selecciona el proveedor al cual se emitirá el pedido. |
-| ➕ **Agregar Mercadería** | En la grilla del formulario | Agrega un insumo al pedido especificando la cantidad. |
-| 💾 **Guardar y Emitir** | Pie del formulario | Genera la Orden de Compra oficial. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Generar una Orden de Compra
-
-<div id="paso-1-generar-una-orden-de-compra"></div>
-
-1. Seleccioná el **Proveedor** de la lista desplegable.
-2. Elegí el **Depósito** receptor.
-3. En la lista de mercaderías, agregá los ítems a pedir con su **Cantidad** y **Precio Unitario**.
-4. Tocá **Guardar y Emitir**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El insumo no figura en el desplegable. | La mercadería no fue dada de alta en el catálogo de Compras. | Registrá la mercadería en el módulo de **Mercaderías** antes de hacer la OC. |
+| **Se creó un proveedor repetido** | Escribiste el nombre y no lo elegiste de la lista. | Juntalos en [Proveedores](/user-guide/proveedores) con **Unificar**. |
+| **No aparece la mercadería al escribir** | No está cargada, o está con otro nombre. | Buscala en [Mercaderías](/user-guide/mercaderias) o cargala nueva. |
+| **La orden no se puede mandar al proveedor** | Está **a aprobar** o fue **rechazada**. | Revisala en [Órdenes a aprobar](/user-guide/ordenes-a-aprobar). |
+| **El total no coincide con la factura** | El precio del renglón se cargó por unidad y no el total. | En **Precio Total s/Imp.** va el total del renglón, no el precio unitario. |

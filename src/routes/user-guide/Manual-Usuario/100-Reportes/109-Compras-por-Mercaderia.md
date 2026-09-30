@@ -2,56 +2,111 @@
 
 <div id="compras-por-mercaderia"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Reportes** → **Análisis Avanzado** → **Compras x Mercadería**  
-> **¿Quién lo usa?:** Compradores, Chefs y Encargados de Costos  
+> **¿Dónde está en el sistema?:** Menú principal → **Reportes** → **Compras por Mercadería** (debajo del título **GASTOS Y COMPRAS**)
+> **¿Quién lo usa?:** Compradores, chefs y encargados de costos
+
+> 🎯 **¿Para qué sirve esto?**
+> Te muestra cuánto compraste de cada mercadería en un período y cuánto pagaste.
+> Sirve para saber en qué gastás más y cuánto te sale cada kilo o unidad.
+
+> ⚡ **Nota:** el nombre **Mercadería** depende de cómo lo llame tu comercio. Puede decir **Insumo** o **Ítem**. El menú se llama **Compras por** seguido de ese nombre.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Calcula las estadísticas acumuladas de adquisición de cada materia prima o insumo (volumen comprado, gasto total y costo promedio):
-
-1. **Volumen de abastecimiento:** Muestra cuántos kilos, litros o unidades de cada insumo se adquirieron en un período.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Acceso a Estadísticas de Compras por Insumo** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tu usuario tiene que tener el permiso de **Reportes premium** en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tiene que haber órdenes de compra **recepcionadas**. Mirá [Todas las Órdenes de Compra](/user-guide/todas-las-ordenes-compra).
+- Solo se cuentan las compras que tienen precio cargado.
 
 ---
 
-## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+## 📍 **Paso 1: Entrá a la pantalla**
 
-<div id="botones-y-filtros-que-es-cada-cosa"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Menú lateral con el grupo Reportes marcado en rojo](images/manual/100-reportes/109-00a-menu-grupo-reportes.png)
+
+1. En el menú de la izquierda, tocá **Reportes**.
+
+![Opción Compras por Mercadería marcada en rojo debajo de Gastos y Compras](images/manual/100-reportes/109-00b-menu-opcion-compras-por-mercaderia.png)
+
+2. Tocá **Compras por Mercadería**.
+
+![Pantalla con los filtros a la izquierda y la tabla de compras a la derecha](images/manual/100-reportes/109-01-pantalla-compras-por-mercaderia.png)
+
+A la izquierda están los filtros. A la derecha, el total y la tabla.
+
+---
+
+## 🔎 **Paso 2: Elegí qué querés ver**
+
+<div id="paso-2-elegi-que-queres-ver"></div>
+
+![Panel de filtros con Ordenar Precio o Cantidad, Descendente o Ascendente, Seleccione Producto, las fechas y el botón verde Filtrar](images/manual/100-reportes/109-02-filtros.png)
+
+- **Ordenar**: **Precio** pone primero lo que más plata te costó. **Cantidad** pone primero lo que más compraste.
+- **Descendente** / **Ascendente**: de mayor a menor, o de menor a mayor.
+- **Seleccione Producto**: mirá una sola mercadería.
+- **Created From** y **Created To**: el período. En pantalla dicen así, en inglés. Son el "desde" y el "hasta". Debajo dice cuántos días son.
+- **Filtrar**: el botón verde. Aplica todo lo que elegiste.
+
+1. Elegí las fechas.
+2. Tocá **Filtrar**.
+
+Si no tocás nada, te muestra los últimos 7 días.
+
+> 💡 **Consejo útil:** si la tabla sale vacía, ampliá el período.
+
+---
+
+## 📊 **Paso 3: Leé el resultado**
+
+<div id="paso-3-lee-el-resultado"></div>
+
+![Título con el total de compras y tabla con Harina 0000 y Levadura fresca](images/manual/100-reportes/109-03-tabla-resultado-compras.png)
+
+Arriba dice el total: **Total de Compras en 28 días**. Es la suma de todo lo comprado en el período.
+
+Cada renglón es una mercadería. Las columnas dicen:
+
+- **Mercadería**: el nombre.
+- **UM Stock**: la unidad en que la contás en el depósito. Por ejemplo: *Kilo*.
+- **Cantidad Recibida**: cuánto llegó de verdad, según las recepciones.
+- **Costo**: lo que pagaste en total por esa mercadería.
+- **$/Unitario**: lo que te sale cada unidad de stock.
+- **% Desperdicio**: la merma que le cargaste al producto.
+- **$/Unitario c/ Desperdicio**: el precio por unidad ya con la merma. Si no hay merma, es igual al anterior.
+- **Cant x Día**: la cantidad recibida dividida por los días del período.
+- **Costo x Día**: el costo dividido por los días del período.
+
+La tabla sigue el orden que elegiste en **Ordenar** y **Descendente / Ascendente**.
+
+> ⚠️ **Atención:** las filas no tienen colores. El código calcula una regla de Pareto (verde, amarillo y rojo) pero no la muestra. Si querés saber cuáles son las estrellas, ordená por **Precio** descendente y mirá los primeros.
+
+---
+
+## 🔗 **Paso 4: Abrí la ficha de una mercadería**
+
+<div id="paso-4-abri-la-ficha-de-una-mercaderia"></div>
+
+1. En la tabla del Paso 3, tocá el nombre de la mercadería. Está en azul, en la primera columna.
+2. Se abre la ficha del producto.
+
+Es solo para mirar: no cambia nada.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 🔍 **Filtrar por Rubro** | Encabezado | Permite ver compras de un grupo específico (ejemplo: *Carnicería*). |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Consultar volumen de compra de un insumo
-
-<div id="paso-1-consultar-volumen-de-compra-de-un-insumo"></div>
-
-1. Seleccioná el rango de fechas.
-2. Buscá el insumo (ejemplo: *Harina*) para conocer el total de kilos comprados.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| Los datos no coinciden con las facturas. | Hay facturas de proveedores pendientes de cargar. | Completá la carga de comprobantes en el módulo de Gastos. |
+| No veo **Compras por Mercadería** en el menú | Falta el permiso de reportes premium o el módulo de compras | Pedile al dueño que lo active en [Permisos por Rol](/user-guide/permisos-por-rol). |
+| La tabla sale vacía | No hay compras recepcionadas en esas fechas | Ampliá **Created From** y **Created To**. Revisá que las órdenes estén recepcionadas. |
+| Una compra no aparece | Se cargó sin precio | Cargale el precio a la compra. |
+| La columna **UM Stock** está vacía | La mercadería no tiene unidad de stock | Cargala en [Mercaderías](/user-guide/mercaderias). |
+| No encuentro "Filtrar por Rubro" | Ese filtro no existe | Usá **Seleccione Producto** para elegir una mercadería. |

@@ -2,60 +2,125 @@
 
 <div id="turnos-y-horarios-de-fichaje"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Turnos y Horarios**  
-> **¿Quién lo usa?:** Recursos Humanos y Encargados  
+> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **Turnos y Horarios**
+> **¿Quién lo usa?:** Encargados de personal y administradores
+
+> 🎯 **¿Para qué sirve esto?**
+> Acá definís los horarios de trabajo de tu personal. Por ejemplo: *Mañana*, de 08:00 a 16:00, de lunes a viernes.
+> Cada turno lleva una tolerancia en minutos. El sistema la usa para decidir si alguien llegó a horario.
+
+> ⚠️ **No los confundas con los Turnos de salón.** Los de este artículo son horarios de **trabajo del personal**. En **Configuración → Tablas del Sistema → Turnos** están los turnos del local para arqueos y reservas. Ese es otro tema: mirá [Turnos de Mesa](/user-guide/turnos-mesa).
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Permite configurar los esquemas de horarios de trabajo habituales (ejemplo: *Turno Mañana 08:00 a 16:00, Turno Noche 17:00 a 01:00*):
-
-1. **Definición de turnos:** Asignación de tolerancia de ingreso (ejemplo: *10 minutos de margen sin considerar llegada tarde*).
-2. **Cálculo de horas extras:** Determina a partir de qué hora trabajada se computan adicionales.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Configuración de Horarios y Tolerancias de Fichaje** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Si no ves **RRHH** en el menú, el módulo no está activo en tu comercio. Pedíselo a soporte.
+- Tu usuario necesita el permiso de fichaje. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
+- Primero creás los turnos. Después se los asignás a cada persona en su ficha de [Empleados](/user-guide/empleados).
 
 ---
 
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
+## 📍 Ver la lista de turnos — Paso 1
 
-<div id="botones-y-campos-que-es-cada-cosa"></div>
+<div id="ver-la-lista-de-turnos-paso-1"></div>
 
-| Campo / Botón | ¿Dónde está? | ¿Qué hace al completar / tocar? |
+1. En el menú de la izquierda, tocá **RRHH**.
+2. Tocá **Turnos y Horarios**.
+3. Se abre la pantalla **Turnos de Fichaje**.
+
+Cada turno aparece en un bloque, con su nombre arriba. Adentro ves:
+
+- **Ingreso**: la hora en que empieza el turno.
+- **Egreso**: la hora en que termina.
+- **Tolerancia**: los minutos de margen.
+- **Días**: los días de la semana en que rige. Por ejemplo: *Lunes, Martes, Miércoles*.
+
+A la derecha de cada bloque hay dos botones: **editar** (gris) y **eliminar** (rojo).
+
+---
+
+## ➕ Crear un turno — Paso 2
+
+<div id="crear-un-turno-paso-2"></div>
+
+1. Arriba a la derecha, tocá el botón verde **Nuevo turno**.
+2. Completá los casilleros:
+   - **Nombre**: cómo lo vas a reconocer. Por ejemplo: *Mañana*.
+   - **Días de la semana**: tildá los días en que se trabaja este turno. Las opciones van de **Lunes** a **Domingo**. Tildá al menos uno.
+   - **Hora Ingreso**: elegí hora y minutos de entrada. Por ejemplo: *08:00*.
+   - **Hora Egreso**: elegí hora y minutos de salida. Por ejemplo: *16:00*.
+   - **Tolerancia (minutos)**: escribí un número. Por ejemplo: *10*.
+3. Tocá el botón azul **Guardar**.
+4. Volvés a la lista y ves el turno nuevo.
+
+> 💡 **Consejo útil:** para un turno partido, creá dos turnos. Por ejemplo *Mediodía* (11 a 15) y *Noche* (19 a 23). Después asignale los dos a la misma persona.
+
+---
+
+## ⏱️ Qué hace la tolerancia
+
+<div id="que-hace-la-tolerancia"></div>
+
+La tolerancia es el margen de minutos alrededor de la **hora de ingreso**.
+
+- Con turno de ingreso a las 08:00 y tolerancia de 10, entrar hasta las 08:10 cuenta como **a horario**.
+- Pasadas las 08:10, cuenta como **llegada tarde**.
+- Entrar más de 10 minutos antes de las 08:00 cuenta como **llegada temprano**.
+- Con tolerancia vacía o en 0, cualquier minuto de diferencia cuenta.
+
+Esas cuentas aparecen en el [Reporte Mensual](/user-guide/reporte-mensual-fichaje) y en la ficha de cada empleado.
+
+El sistema también usa el turno para saber a cuál corresponde cada fichada. Toma los turnos asignados a la persona que rigen ese día de la semana. Elige el que tiene la hora de ingreso más cercana.
+
+---
+
+## 👤 Asignar turnos a una persona — Paso 3
+
+<div id="asignar-turnos-a-una-persona-paso-3"></div>
+
+Crear el turno no alcanza. Hay que asignárselo a cada persona.
+
+1. Abrí la ficha del empleado en [Empleados](/user-guide/empleados) para crearlo o editarlo.
+2. Buscá el cuadro **Jornada y Turnos**.
+3. En **Turnos Asignados**, tildá los turnos de esa persona.
+4. Guardá la ficha.
+
+---
+
+## ✏️ Cambiar un turno — Paso 4
+
+<div id="cambiar-un-turno-paso-4"></div>
+
+1. En la lista, tocá el botón **editar** del turno.
+2. Cambiá lo que necesites. Los días vienen tildados.
+3. Tocá **Guardar**.
+
+Al guardar, volvés a la lista con un mensaje de que se guardó.
+
+---
+
+## 🗑️ Eliminar un turno — Paso 5
+
+<div id="eliminar-un-turno-paso-5"></div>
+
+> ⚠️ **Atención:** eliminar saca el turno de la lista. Confirmá que ya no lo necesitás.
+
+1. En la lista, tocá el botón rojo **eliminar**.
+2. El sistema pregunta **Desea eliminar?**.
+3. Confirmá para borrarlo.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ⏰ **Hora Entrada / Salida** | Formulario de turno | Establece el horario teórico pactado. |
-| ⏱️ **Tolerancia (Minutos)** | Formulario | Margen de minutos permitidos antes de marcar llegada tarde. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Configurar un turno
-
-<div id="paso-1-configurar-un-turno"></div>
-
-1. Tocá **Nuevo Turno**.
-2. Escribí el nombre y fijá los horarios teóricos.
-3. Fijá la tolerancia (ejemplo: 15 minutos).
-4. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El sistema marca llegada tarde a empleados puntuales. | La tolerancia fijada es de 0 minutos o la hora del servidor está desfasada. | Aumentá el margen de tolerancia o sincronizá la hora del sistema. |
+| El sistema marca llegada tarde a alguien puntual. | La tolerancia está en 0, o la hora de ingreso del turno está mal. | Editá el turno. Revisá **Hora Ingreso** y subí **Tolerancia (minutos)**. |
+| La fichada de una persona no toma su turno. | No le asignaste el turno, o el turno no incluye ese día. | Revisá **Turnos Asignados** en su ficha y los días tildados en el turno. |
+| No encuentro los turnos que uso para los arqueos. | Son otros turnos: los del local. | Están en **Configuración → Tablas del Sistema → Turnos**. Mirá [Turnos de Mesa](/user-guide/turnos-mesa). |
+| El turno no muestra los días que quería. | Al guardar, los días quedan como los tildaste. | Editá el turno y dejá tildados todos los días que correspondan. |

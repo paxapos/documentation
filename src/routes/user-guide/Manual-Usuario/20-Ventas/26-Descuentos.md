@@ -1,61 +1,132 @@
-# Descuentos y Promociones
+# Cómo Configurar Descuentos
 
-<div id="descuentos-y-promociones"></div>
+<div id="descuentos"></div>
 
 > **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Descuentos**  
-> **¿Quién lo usa?:** Encargados de Local y Administradores  
+> **¿Quién lo usa?:** Encargados y administradores
+
+> 🎯 **¿Para qué sirve esto?**
+> Acá creás descuentos listos para usar. Por ejemplo: *10% Empleados* o *Cliente VIP*. Después los aplicás en una mesa o en la Caja Rápida sin hacer cuentas.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 📍 **Paso 1: Entrá al listado de Descuentos**
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="paso-1-entra-al-listado-de-descuentos"></div>
 
-El módulo de **Descuentos** permite configurar promociones, bonificaciones y porcentajes de descuento predefinidos:
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/26-00a-menu-grupo-ventas.png)
 
-1. **Descuentos rápidos en caja:** Permite crear botones con porcentajes fijos (ejemplo: 10% Empleados, 15% Efectivo).
-2. **Control de autorizaciones:** Define qué descuentos requieren clave o autorización del encargado al aplicarse en una mesa.
+1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
+
+![Opción Descuentos dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/26-00b-menu-opcion-descuentos.png)
+
+2. Bajá hasta la parte **Clientes** y tocá **Descuentos**.
+3. Se abre el listado con los descuentos que ya existen.
+
+![Listado de descuentos con el buscador arriba y la tabla abajo](images/manual/20-ventas/12-descuentos-listado.png)
+
+En esta pantalla vas a ver:
+
+- **Arriba a la derecha:** el botón verde **Crear Descuento**.
+- **En el medio:** el buscador por **Nombre del Descuento**.
+- **Abajo:** la tabla con cada descuento, su porcentaje y sus botones **Editar** y **Borrar**.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔍 **Paso 2: Buscá un descuento**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-2-busca-un-descuento"></div>
 
-- Tener el permiso de **Aplicación y Configuración de Descuentos** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+![Casillero Nombre del Descuento](images/manual/20-ventas/26-04-campo-name.png)
+
+1. En **Nombre del Descuento**, escribí una parte del nombre. Por ejemplo: *10*.
+
+![Listado con el botón Buscar marcado en rojo](images/manual/20-ventas/26-05-donde-esta-boton-buscar.png)
+
+2. Tocá el botón azul **Buscar**.
+3. La tabla muestra solo los descuentos que coinciden.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## ➕ **Paso 3: Creá un descuento nuevo**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-3-crea-un-descuento-nuevo"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Listado con el botón Crear Descuento marcado en rojo](images/manual/20-ventas/26-02-donde-esta-boton-crear-descuento.png)
+
+1. Tocá el botón verde **Crear Descuento**, arriba a la derecha.
+2. Se abre la pantalla **Crear Descuento**.
+
+![Pantalla Crear Descuento con Nombre, Descripción y Porcentaje](images/manual/20-ventas/13-descuentos-nuevo-formulario.png)
+
+![Casillero Nombre con el texto Empleados 10%](images/manual/20-ventas/26-11-campo-nombre.png)
+
+3. En **Nombre**, escribí un nombre corto. Por ejemplo: *Empleados 10%*. Es el que vas a ver al aplicarlo.
+
+![Casillero Descripción](images/manual/20-ventas/26-12-campo-description.png)
+
+4. En **Descripción**, podés anotar para qué es. Por ejemplo: *Descuento para el personal*. Es opcional.
+
+![Casillero Porcentaje con el número 10](images/manual/20-ventas/26-13-campo-porcentaje.png)
+
+5. En **Porcentaje**, escribí **solo el número**, sin el signo %. Por ejemplo: *10*.
+
+![Pantalla Crear Descuento con el botón Agregar marcado en rojo](images/manual/20-ventas/26-14-donde-esta-boton-agregar.png)
+
+6. Tocá el botón verde **Agregar**, abajo a la izquierda.
+7. El descuento queda guardado y aparece en el listado.
+
+![Pantalla Crear Descuento con el botón Cancelar marcado en rojo](images/manual/20-ventas/26-16-donde-esta-boton-cancelar.png)
+
+- Si no querés guardarlo, tocá **Cancelar**, abajo a la derecha.
+
+> 💡 **Consejo útil:** El descuento se calcula sobre el total de la cuenta cuando lo aplicás en el [Salón de Ventas](/user-guide/salon-de-ventas).
+
+---
+
+## ✏️ **Paso 4: Cambiá o borrá un descuento**
+
+<div id="paso-4-cambia-o-borra-un-descuento"></div>
+
+A la derecha de cada descuento hay dos botones:
+
+![Botones Editar y Borrar de un descuento](images/manual/20-ventas/40-descuentos-botones-accion.png)
+
+### Cambiar un descuento
+
+![Listado con el botón Editar marcado en rojo](images/manual/20-ventas/26-07-donde-esta-boton-editar.png)
+
+1. Tocá **Editar** en el descuento que querés cambiar.
+2. Cambiá el nombre, la descripción o el porcentaje.
+3. Tocá el botón verde **Actualizar** para guardar.
+
+### Borrar un descuento
+
+> ⚠️ **Atención:** Borrar un descuento no se puede deshacer.
+
+![Listado con el botón rojo Borrar marcado](images/manual/20-ventas/26-09-donde-esta-boton-borrar.png)
+
+1. Tocá el botón rojo **Borrar**.
+2. El sistema te pregunta si estás seguro. Tocá **Aceptar** para borrarlo.
+
+---
+
+## 🔒 **¿Qué descuentos puede usar un mozo?**
+
+<div id="que-descuentos-puede-usar-un-mozo"></div>
+
+- Hay un **tope** para los mozos. Se define en **Configuración** → **Configuración general** → **Ventas y salón**, en *Porcentaje máximo de descuento que puede hacer un mozo*.
+- Los usuarios sin permiso para **agregar descuentos** en el Salón de Ventas solo ven los descuentos que no pasan ese tope.
+- Para usar un descuento más grande, tiene que aplicarlo alguien con ese permiso (por ejemplo, el encargado).
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Descuento** | Esquina superior | Abre el panel para dar de alta una bonificación. |
-| 🏷️ **Porcentaje (%)** | En la grilla | Porcentaje que se descontará sobre el total de la cuenta. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Crear un descuento predefinido
-
-<div id="paso-1-crear-un-descuento-predefinido"></div>
-
-1. Tocá el botón **Nuevo Descuento**.
-2. Escribí el **Nombre** (ejemplo: *Descuento Cliente VIP*).
-3. Ingresá el valor en el campo **Porcentaje** (ejemplo: 15).
-4. Tocá **Guardar**. Quedará disponible en la pantalla de cobro.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por me puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El cajero no puede aplicar el descuento. | El descuento requiere clave de supervisor. | Ingresá la clave de encargado o revisá los permisos de rol. |
+| **No veo el botón Crear Descuento** | Tu usuario no tiene permiso para los clientes y descuentos. | Pedile al administrador que lo revise en [Permisos por Rol](/user-guide/permisos-por-rol). |
+| **El listado muestra solo algunos descuentos** | Tu usuario no tiene permiso para agregar descuentos: solo ve los que no pasan el tope. | Pedile al encargado que aplique el descuento, o que revise el tope. |
+| **El mozo no puede aplicar un descuento** | El descuento es más grande que el tope de los mozos. | Que lo aplique un encargado con permiso para agregar descuentos. |

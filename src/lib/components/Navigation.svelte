@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import {
@@ -75,315 +76,142 @@
 	const handleSearchBlur = () => {
 		setTimeout(() => {
 			showSearchResults = false;
-			// En mobile, si no hay texto de búsqueda, ocultar el campo de búsqueda
-			if (!searchQuery.trim()) {
-				showMobileSearch = false;
-			}
 		}, 200);
 	};
 
+	const handleSearchKeydown = (event: KeyboardEvent) => {
+		if (event.key === 'Escape' && showMobileSearch) toggleMobileSearch();
+	};
+
 	const toggleMobileSearch = () => {
-		try {
-			showMobileSearch = !showMobileSearch;
-			if (showMobileSearch && searchInputMobile) {
-				// Pequeño delay para asegurar que el input esté renderizado
-				setTimeout(() => {
-					searchInputMobile?.focus();
-					// Scroll suave hacia el campo de búsqueda
-					searchInputMobile?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-				}, 100);
-			}
-		} catch (error) {
-			console.error('Error al enfocar el campo de búsqueda:', error);
+		showMobileSearch = !showMobileSearch;
+		if (showMobileSearch) {
+			tick().then(() => searchInputMobile?.focus());
+		} else {
+			searchQuery = '';
+			showSearchResults = false;
+			searchResults = [];
 		}
 	};
 </script>
 
+{#snippet searchIcon()}
+	{#if isSearching}
+		<svg class="h-5 w-5 animate-spin text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+			<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+			<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+		</svg>
+	{:else}
+		<svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+		</svg>
+	{/if}
+{/snippet}
+
+{#snippet results()}
+	{#if showSearchResults && searchQuery.length >= 2}
+		<div
+			class="absolute top-full right-0 left-0 z-50 mt-2 max-h-[70vh] overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-xl md:max-h-96 dark:border-gray-600 dark:bg-gray-800"
+		>
+			{#if isSearching}
+				<div class="px-4 py-4 text-center text-gray-500 dark:text-gray-400">Buscando...</div>
+			{:else if searchResults.length > 0}
+				{#each searchResults as result (result.id ?? result.href)}
+					<button
+						type="button"
+						class="w-full border-b border-gray-100 px-4 py-3 text-left transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
+						onclick={() => selectSearchResult(result)}
+					>
+						<div class="font-semibold text-gray-900 dark:text-white">{result.title}</div>
+						<div class="text-sm text-blue-600 dark:text-blue-400">{result.type}</div>
+						{#if result.preview}
+							<div class="mt-1 line-clamp-2 text-sm text-gray-600 dark:text-gray-300">
+								{result.preview}
+							</div>
+						{/if}
+					</button>
+				{/each}
+			{:else}
+				<div class="px-4 py-4 text-center text-gray-500 dark:text-gray-400">
+					No se encontraron resultados
+				</div>
+			{/if}
+		</div>
+	{/if}
+{/snippet}
+
 <!-- Search Navigation -->
 <nav
-	class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 shadow-sm backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/80"
+	class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"
 >
-	<div class="mx-auto w-full max-w-7xl px-0 sm:px-4 lg:px-8">
-		<div class="flex h-16 w-full items-center justify-between px-4 sm:px-0">
-			<!-- Logo/Title -->
-			<div class="min-w-0 flex-shrink-0">
-				<a
-					href="{base}/user-guide"
-					class="truncate text-lg font-bold text-gray-900 sm:text-xl dark:text-white"
-				>
-					📚 Centro de Documentación
-				</a>
-			</div>
-
-			<!-- Desktop Search -->
-			<div class="mx-8 hidden max-w-lg flex-1 md:block">
-				<div class="relative">
-					<input
-						bind:this={searchInputDesktop}
-						type="text"
-						placeholder="Buscar en el manual..."
-						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
-						bind:value={searchQuery}
-						oninput={handleSearch}
-						onfocus={handleSearchFocus}
-						onblur={handleSearchBlur}
-					/>
-					<div
-						class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
-					>
-						{#if isSearching}
-							<svg
-								class="h-5 w-5 animate-spin text-gray-400 dark:text-gray-500"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-							>
-								<circle
-									class="opacity-25"
-									cx="12"
-									cy="12"
-									r="10"
-									stroke="currentColor"
-									stroke-width="4"
-								></circle>
-								<path
-									class="opacity-75"
-									fill="currentColor"
-									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-								></path>
-							</svg>
-						{:else}
-							<svg
-								class="h-5 w-5 text-gray-400 dark:text-gray-500"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-								/>
-							</svg>
-						{/if}
-					</div>
-
-					<!-- Search Results Dropdown -->
-					{#if showSearchResults}
-						<div
-							class="absolute top-full right-0 left-0 z-50 mt-2 max-h-96 overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-xl dark:border-gray-600 dark:bg-gray-800"
-						>
-							{#if isSearching}
-								<div class="px-4 py-4 text-gray-500 dark:text-gray-400">
-									<div class="flex items-center">
-										<svg
-											class="mr-2 h-4 w-4 animate-spin"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-										>
-											<circle
-												class="opacity-25"
-												cx="12"
-												cy="12"
-												r="10"
-												stroke="currentColor"
-												stroke-width="4"
-											></circle>
-											<path
-												class="opacity-75"
-												fill="currentColor"
-												d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-											></path>
-										</svg>
-										Buscando...
-									</div>
-								</div>
-							{:else if searchResults.length > 0}
-								{#each searchResults as result (result.id ?? result.href)}
-									<button
-										type="button"
-										class="w-full border-b border-gray-100 px-4 py-4 text-left transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-										onclick={() => selectSearchResult(result)}
-									>
-										<div class="font-semibold text-gray-900 dark:text-white">
-											{result.title}
-										</div>
-										<div class="text-sm text-blue-600 dark:text-blue-400">
-											{result.type}
-										</div>
-										{#if result.preview}
-											<div
-												class="mt-2 line-clamp-2 text-sm text-gray-600 dark:text-gray-300"
-											>
-												{result.preview}
-											</div>
-										{/if}
-									</button>
-								{/each}
-							{:else}
-								<div class="px-4 py-4 text-center text-gray-500 dark:text-gray-400">
-									<svg
-										class="mx-auto mb-2 h-8 w-8 text-gray-300 dark:text-gray-600"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-										/>
-									</svg>
-									No se encontraron resultados
-								</div>
-							{/if}
-						</div>
-					{/if}
+	<div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8">
+		{#if showMobileSearch}
+			<!-- Mobile: el buscador ocupa toda la barra -->
+			<div class="relative flex-1 md:hidden">
+				<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+					{@render searchIcon()}
 				</div>
+				<input
+					bind:this={searchInputMobile}
+					type="search"
+					placeholder="Buscar en el manual..."
+					class="h-10 w-full rounded-lg border border-gray-300 bg-white pr-3 pl-10 text-base text-gray-900 placeholder-gray-500 focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+					bind:value={searchQuery}
+					oninput={handleSearch}
+					onfocus={handleSearchFocus}
+					onblur={handleSearchBlur}
+					onkeydown={handleSearchKeydown}
+				/>
+				{@render results()}
 			</div>
+			<button
+				type="button"
+				class="min-h-10 shrink-0 px-1 text-sm font-medium text-blue-700 md:hidden dark:text-blue-300"
+				onclick={toggleMobileSearch}
+			>
+				Cancelar
+			</button>
+		{/if}
 
-			<!-- Mobile Search Button -->
-			<div class="flex items-center md:hidden">
-				<button
-					type="button"
-					class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-gray-400"
-					onclick={toggleMobileSearch}
-				>
-					<span class="sr-only">Buscar</span>
-					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-						/>
-					</svg>
-				</button>
+		<a
+			href="{base}/user-guide"
+			class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white {showMobileSearch
+				? 'hidden md:block'
+				: ''}"
+		>
+			📚 Centro de Documentación
+		</a>
+
+		<!-- Desktop Search -->
+		<div class="relative ml-auto hidden w-full max-w-lg md:block">
+			<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+				{@render searchIcon()}
 			</div>
+			<input
+				bind:this={searchInputDesktop}
+				type="search"
+				placeholder="Buscar en el manual..."
+				class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+				bind:value={searchQuery}
+				oninput={handleSearch}
+				onfocus={handleSearchFocus}
+				onblur={handleSearchBlur}
+			/>
+			{@render results()}
 		</div>
 
-		<!-- Mobile Search (Solo visible cuando se presiona el icono) -->
-		{#if showMobileSearch}
-			<div class="animate-in slide-in-from-top-2 px-0 pb-4 duration-200 md:hidden">
-				<div class="relative w-full">
-					<input
-						bind:this={searchInputMobile}
-						type="text"
-						placeholder="Buscar en el manual..."
-						class="w-full rounded-xl border border-gray-300 bg-white py-3 pr-4 pl-12 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
-						bind:value={searchQuery}
-						oninput={handleSearch}
-						onfocus={handleSearchFocus}
-						onblur={handleSearchBlur}
-					/>
-					<div
-						class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
-					>
-						{#if isSearching}
-							<svg
-								class="h-5 w-5 animate-spin text-gray-400 dark:text-gray-500"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-							>
-								<circle
-									class="opacity-25"
-									cx="12"
-									cy="12"
-									r="10"
-									stroke="currentColor"
-									stroke-width="4"
-								></circle>
-								<path
-									class="opacity-75"
-									fill="currentColor"
-									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-								></path>
-							</svg>
-						{:else}
-							<svg
-								class="h-5 w-5 text-gray-400 dark:text-gray-500"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-								/>
-							</svg>
-						{/if}
-					</div>
-				</div>
-
-				<!-- Mobile Search Results -->
-				{#if showSearchResults && searchQuery.length >= 2}
-					<div
-						class="mt-2 max-h-80 overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800"
-					>
-						{#if isSearching}
-							<div class="px-4 py-3 text-center text-gray-500 dark:text-gray-400">
-								<div class="flex items-center justify-center">
-									<svg
-										class="mr-2 h-4 w-4 animate-spin"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-									>
-										<circle
-											class="opacity-25"
-											cx="12"
-											cy="12"
-											r="10"
-											stroke="currentColor"
-											stroke-width="4"
-										></circle>
-										<path
-											class="opacity-75"
-											fill="currentColor"
-											d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-										></path>
-									</svg>
-									Buscando...
-								</div>
-							</div>
-						{:else if searchResults.length > 0}
-							{#each searchResults as result (result.id ?? result.href)}
-								<button
-									type="button"
-									class="w-full border-b border-gray-100 px-4 py-3 text-left text-sm transition-colors duration-200 last:border-b-0 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700"
-									onclick={() => selectSearchResult(result)}
-								>
-									<div class="font-medium text-gray-900 dark:text-white">
-										{result.title}
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-400">
-										{result.type}
-									</div>
-									{#if result.preview}
-										<div
-											class="mt-1 line-clamp-2 text-xs text-gray-600 dark:text-gray-300"
-										>
-											{result.preview}
-										</div>
-									{/if}
-								</button>
-							{/each}
-						{:else}
-							<div
-								class="px-4 py-3 text-center text-sm text-gray-500 dark:text-gray-400"
-							>
-								No se encontraron resultados
-							</div>
-						{/if}
-					</div>
-				{/if}
-			</div>
+		<!-- Mobile Search Button -->
+		{#if !showMobileSearch}
+			<button
+				type="button"
+				class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+				onclick={toggleMobileSearch}
+				aria-label="Buscar"
+			>
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+				</svg>
+			</button>
 		{/if}
 	</div>
 </nav>

@@ -1,64 +1,132 @@
-# Nueva Reserva
+# Cómo Cargar una Nueva Reserva
 
 <div id="nueva-reserva"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Reservas** → **Nueva Reserva**  
-> **¿Quién lo usa?:** Recepcionistas, Mozos y Encargados  
+> **¿Dónde está en el sistema?:** Menú principal → **Ventas** → **Nueva Reserva**  
+> **¿Quién lo usa?:** Recepción, cajeros y encargados
+
+> 🎯 **¿Para qué sirve esto?**
+> Acá anotás que un cliente va a venir: quién es, cuántos son, qué día y a qué hora. Después la reserva aparece en el [Listado de Reservas](/user-guide/listado-de-reservas).
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 📍 **Paso 1: Entrá a Nueva Reserva**
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="paso-1-entra-a-nueva-reserva"></div>
 
-La pantalla de **Nueva Reserva** sirve para registrar turnos de comensales a futuro:
+![Grupo Ventas del menú lateral, marcado en rojo](images/manual/20-ventas/27-00a-menu-grupo-ventas.png)
 
-1. **Agendado previo:** Permite guardar nombre del cliente, día, horario, cantidad de personas y observaciones especiales (ejemplo: *cumpleaños, silla de bebé*).
-2. **Asignación anticipada de mesa:** Permite reservar una mesa o sector específico.
+1. En el menú de la izquierda, tocá **Ventas**. Se despliegan sus opciones.
 
----
+![Opción Nueva Reserva dentro del grupo Ventas, marcada en rojo](images/manual/20-ventas/27-00b-menu-opcion-reservas-add.png)
 
-## 🔑 Requisitos para empezar a usarlo
+2. Bajá hasta la parte **Reservas** y tocá **Nueva Reserva**.
+3. Se abre la pantalla para cargar la reserva.
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Contar con el permiso de **Gestión de Reservas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+![Pantalla Nueva Reserva vacía](images/manual/20-ventas/14-nueva-reserva-formulario.png)
 
 ---
 
-## 🎨 Botones y Campos: ¿Qué es cada cosa?
+## 👤 **Paso 2: Cargá quién viene**
 
-<div id="botones-y-campos-que-es-cada-cosa"></div>
+<div id="paso-2-carga-quien-viene"></div>
 
-| Campo / Botón | ¿Dónde está? | ¿Qué hace al tocarlo / completarlo? |
+![Casillero Cliente con el nombre Juan Pérez](images/manual/20-ventas/27-02-campo-cliente.png)
+
+1. En **Cliente**, escribí el nombre, el DNI, el mail o el teléfono.
+2. Si el cliente ya existe, aparece en una lista. Tocalo y sus datos se completan solos.
+3. Si es nuevo, dejá el nombre escrito. El cliente se crea al guardar.
+
+![Casillero Teléfono](images/manual/20-ventas/27-03-campo-telefono.png)
+
+4. En **Teléfono**, escribí el celular. Por ejemplo: *1155556666*.
+
+![Casillero Email](images/manual/20-ventas/27-04-campo-email.png)
+
+5. En **Email**, escribí el mail. Por ejemplo: *juan.perez@ejemplo.com*.
+
+![Casillero DNI opcional](images/manual/20-ventas/27-05-campo-dni-opcional.png)
+
+6. **DNI** es opcional.
+
+> 💡 **Consejo útil:** Cargá al menos el **teléfono**, el **mail** o el **DNI**. Así la próxima vez el sistema encuentra al mismo cliente y no lo repite.
+
+---
+
+## 📅 **Paso 3: Cargá cuándo y cuántos vienen**
+
+<div id="paso-3-carga-cuando-y-cuantos-vienen"></div>
+
+![Casillero Cant Comensales con el número 4](images/manual/20-ventas/27-06-campo-cant-comensales.png)
+
+1. En **Cant Comensales**, escribí cuántas personas vienen. Por ejemplo: *4*.
+
+![Casillero Fecha](images/manual/20-ventas/27-07-campo-fecha.png)
+
+2. En **Fecha**, elegí el día. Tocá el calendario 📅 de la derecha para elegirlo.
+
+![Lista Hora con las 21 elegidas](images/manual/20-ventas/27-08-campo-hora.png)
+
+3. En **Hora**, elegí la hora. Por ejemplo: *21*.
+
+![Lista Minuto con 00 elegido](images/manual/20-ventas/27-09-campo-minuto.png)
+
+4. En **Minuto**, elegí los minutos: *00*, *15*, *30* o *45*.
+
+![Casillero Observación con un pedido especial](images/manual/20-ventas/27-10-campo-observacion.png)
+
+5. En **Observación**, anotá cualquier pedido especial. Por ejemplo: *Cumpleaños. Mesa cerca de la ventana.*
+
+### Datos opcionales
+
+![Casillero Número opcional](images/manual/20-ventas/27-12-campo-numero.png)
+
+- **Número (Opcional):** el número de mesa, si ya sabés dónde los vas a sentar.
+
+![Lista para elegir el mozo, opcional](images/manual/20-ventas/27-13-campo-mozo-id.png)
+
+- **Mozo (Opcional):** el mozo que los va a atender.
+
+> ℹ️ Si tu comercio usa el mapa del salón, también vas a ver **Mesa Salón (Opcional)** para elegir la mesa. Si tiene el asistente de IA, vas a ver el botón **Consultar a la IA si conviene**.
+
+---
+
+## 💾 **Paso 4: Guardá la reserva**
+
+<div id="paso-4-guarda-la-reserva"></div>
+
+![Pantalla Nueva Reserva completa](images/manual/20-ventas/27-25-formulario-completo.png)
+
+1. Revisá que todo esté bien.
+
+![Pantalla Nueva Reserva con el botón Guardar marcado en rojo](images/manual/20-ventas/27-16-donde-esta-boton-guardar.png)
+
+2. Tocá el botón verde **Guardar**, abajo a la izquierda.
+3. La reserva queda guardada y aparece en el calendario del [Listado de Reservas](/user-guide/listado-de-reservas).
+
+### Si aparece "Cliente sin datos de contacto"
+
+![Ventanita Cliente sin datos de contacto](images/manual/20-ventas/27-26-aviso-sin-contacto.png)
+
+Aparece si el cliente es nuevo y no cargaste teléfono, mail ni DNI. Todavía no se guardó nada.
+
+![Ventanita con el botón Volver y completar marcado en rojo](images/manual/20-ventas/27-20-donde-esta-boton-volver-y-completar.png)
+
+- Tocá **Volver y completar** para cargar el teléfono, el mail o el DNI. **Es lo recomendado.**
+
+![Botón naranja Guardar igual](images/manual/20-ventas/27-22-boton-guardar-igual.png)
+
+- Tocá **Guardar igual** solo si de verdad no tenés ningún dato de contacto.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 📅 **Fecha y Hora** | Formulario principal | Define la fecha y el horario previsto de llegada. |
-| 👥 **Comensales** | Formulario principal | Indica la cantidad de personas que asistirán. |
-| 👤 **Cliente** | Formulario principal | Permite buscar un cliente existente o registrar uno nuevo. |
-| 💾 **Guardar Reserva** | Botón inferior | Confirma y registra la reserva en el sistema. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Cargar una reserva
-
-<div id="paso-1-cargar-una-reserva"></div>
-
-1. Ingresá la **Fecha** y el **Horario**.
-2. Indicá la cantidad de personas en **Comensales**.
-3. Escribí el nombre y teléfono del cliente en la sección **Cliente**.
-4. En **Observaciones**, anotá cualquier pedido especial.
-5. Tocá **Guardar Reserva**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| No hay mesas disponibles en el horario elegido. | El sector está completo. | Seleccioná otro horario o agregá una mesa adicional al sector. |
+| **"No se pudo procesar la reserva en este momento"** | Dos personas quisieron reservar la misma mesa al mismo tiempo. | Esperá unos segundos y probá de nuevo. |
+| **Aviso de choque con otra reserva** | Ya hay otra reserva para esa misma mesa en un horario muy cercano. | Elegí otro horario u otra mesa. |
+| **No aparece Mesa Salón** | Tu comercio no usa el mapa del salón. | Dejalo así. Si querés, escribí el número de mesa en **Número (Opcional)**. |
+| **Aparece "Cliente sin datos de contacto"** | El cliente es nuevo y no tiene teléfono, mail ni DNI. | Tocá **Volver y completar** y cargá al menos uno. |

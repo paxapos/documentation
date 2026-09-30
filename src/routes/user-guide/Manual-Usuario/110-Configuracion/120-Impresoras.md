@@ -1,80 +1,151 @@
-# Gestión de Impresoras
+# Cómo cargar las impresoras del local
 
-<div id="gestion-de-impresoras"></div>
+<div id="impresoras"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Tablas maestras** → **Impresión y multimedia** → **Impresoras**  
-> **¿Quién lo usa?:** Administradores y Soporte Técnico  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → debajo del título **Impresoras** → **Impresoras**
+> **¿Quién lo usa?:** Dueños, Administradores y Soporte Técnico
 
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Permite registrar y administrar las impresoras térmicas de comanda instaladas en el local:
-
-1. **Configuración de impresoras:** Alta de impresoras de red (IP), USB o Bluetooth para barra, cocina y caja.
+> 🎯 **¿Para qué sirve esto?**
+> Acá le decís a PaxaPOS qué impresoras tiene tu local (Cocina, Barra, Caja) y cómo están conectadas. Con eso, cada comanda o ticket sale por la impresora correcta.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 **Antes de empezar**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Las impresoras deben estar conectadas a la red del local.
-- Tener instalado y corriendo en la PC o Raspberry del local el **Servicio de Impresión** (conocido también como *FiscalBerry*): es el programa que conecta PaxaPOS en la nube con tus impresoras físicas.
-- Tener el permiso de **Administración de Impresoras del Sistema** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- La impresora tiene que estar encendida, con papel y conectada (por USB o por cable de red).
+- **Fiscalberry** tiene que estar instalado y abierto en la computadora del local. Es el programa que manda los trabajos a la impresora. Descargalo en [Configuración general](/user-guide/configuracion-general#impresion), sección **Impresión**.
+- Guías de instalación: [Windows](/user-guide/fiscalberry-windows), [Linux](/user-guide/fiscalberry-linux) y [Android](/user-guide/fiscalberry-android).
+- Si tu impresora es USB y usás Windows, instalá antes el driver. Buscalo en la [Biblioteca de Drivers](/user-guide/biblioteca-de-drivers).
+- Tener el permiso de impresoras en [Permisos por Rol](/user-guide/permisos-por-rol).
 
----
-
-## ⬇️ Descargar el Servicio de Impresión
-
-<div id="descargar-el-servicio-de-impresion"></div>
-
-> 💾 **¿Todavía no lo instalaste?** Descargá la última versión según tu sistema operativo:
-
-| 🖥️ **Sistema Operativo** | ⬇️ **Descarga** |
-|---|---|
-| **Windows (con interfaz)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-windows-gui.zip) |
-| **Windows (línea de comandos)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-windows-cli.zip) |
-| **Linux (con interfaz)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-linux-gui.tar.gz) |
-| **Linux (línea de comandos / Raspberry Pi)** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-linux-cli.tar.gz) |
-| **Android** | [⬇️ Descargar](https://github.com/paxapos/fiscalberry/releases/latest/download/fiscalberry-android-gui.apk) |
-
-> 🔗 Ver todas las versiones disponibles en la [página de descargas del Servicio de Impresión](https://github.com/paxapos/fiscalberry/releases/latest).
+> ⚠️ Una impresora **USB** necesita que Fiscalberry esté en una computadora (Windows o Linux). En **Android** solo funcionan impresoras de red.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 📍 **Paso 1: Entrá a Impresoras**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-1-entra-a-impresoras"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Menú lateral con el grupo Configuración marcado en rojo](images/manual/110-configuracion/120-00a-menu-grupo-configuracion.png)
+
+1. En el menú de la izquierda, tocá **Configuración**. Se despliegan sus opciones.
+
+![Menú lateral con la opción Impresoras marcada en rojo, debajo del título Impresoras](images/manual/110-configuracion/120-00b-menu-opcion-impresoras.png)
+
+2. Debajo del título **Impresoras**, tocá **Impresoras**.
+
+![Pantalla Impresoras Instaladas en Paxapos con una impresora cargada](images/manual/110-configuracion/120-01-pantalla-impresoras.png)
+
+Se abre la lista **Impresoras Instaladas en Paxapos**. Cada impresora es una tarjeta, como la del centro de la foto.
+
+---
+
+## 🖨️ **Paso 2: Conocé la tarjeta de cada impresora**
+
+<div id="paso-2-conoce-la-tarjeta-de-cada-impresora"></div>
+
+En la foto de arriba, la tarjeta muestra:
+
+- **El nombre** de la impresora.
+- **Cuántos productos** salen por ella. Si no tiene ninguno, dice *Sin productos relacionados*.
+- **Paxaprinter**: el Fiscalberry que la maneja. Si dice *(default)*, usa el principal del local.
+- **Creada** y **Modificada**: cuándo se cargó y cuándo se cambió por última vez.
+
+Abajo tiene tres botones (**Test de impresión**, **Editar** y **Borrar**):
+
+- **Test de impresión**: manda un ticket de prueba de verdad. Si no sale papel, revisá la tabla del final.
+- **Editar**: abre la ventanita con los datos para cambiarlos.
+- **Borrar** (rojo): elimina la impresora. Antes te pide confirmación.
+
+> ⚠️ **Atención:** **Test de impresión** gasta papel y **Borrar** saca la impresora. Los productos que salían por ella quedan sin impresora.
+
+---
+
+## ➕ **Paso 3: Tocá "Nueva Impresora"**
+
+<div id="paso-3-toca-nueva-impresora"></div>
+
+![Pantalla Impresoras con el botón verde Nueva Impresora marcado en rojo arriba a la derecha](images/manual/110-configuracion/120-02-donde-esta-boton-nueva-impresora.png)
+
+1. Buscá el botón verde **Nueva Impresora**, arriba a la derecha.
+2. Tocalo una vez.
+3. Se abre la ventanita **Agregar Impresora**.
+
+---
+
+## 📝 **Paso 4: Completá los datos**
+
+<div id="paso-4-completa-los-datos"></div>
+
+![Ventanita Agregar Impresora con nombre Cocina Prueba, driver Impresora instalada en Windows y ancho de papel](images/manual/110-configuracion/120-03-ventana-agregar-impresora.png)
+
+- **Nombre**: un nombre fácil de reconocer. Por ejemplo: *Cocina*, *Barra* o *Caja*.
+- **Alias**: un nombre corto opcional. Solo lo ven Dueños y Administradores.
+- **Driver**: cómo está conectada la impresora. Al elegir uno, cambian los casilleros de abajo.
+- **Ancho de papel**: el tamaño del rollo. **80mm (40 columnas)** es el más común. También hay **80mm fuente chica (48 columnas)** y **58mm (32 columnas)**. Si no elegís, usa 40.
+- **Paxaprinter**: el Fiscalberry que va a imprimir. Los círculos rojos son los que están apagados y el verde el que está conectado. Con **Default** usa el principal.
+- **Agregar** (verde): guarda la impresora.
+- **Cancelar**: cierra sin guardar.
+
+Estas son las opciones de **Driver**:
+
+| Fiscalberry está en… | La impresora se conecta por… | Elegí en **Driver** |
 |---|---|---|
-| ➕ **Nueva Impresora** | Esquina superior | Registra una nueva impresora. |
-| 🖨️ **Imprimir Prueba** | Al lado de la impresora | Envía un ticket de prueba para comprobar la conexión. |
+| Windows | USB, con el driver instalado | **Impresora instalada en Windows** |
+| Windows, Linux o Android | Cable de red | **Impresora de Red** |
+| Linux | USB | **USB** (o **CUPS**) |
+| Android | Bluetooth | **Impresora Bluetooth** |
+
+También existen **Serial**, **Archivo**, **Impresion mediante LP** y **Test Dummy**. Son para casos especiales: pedí ayuda a soporte.
+
+![Ventanita con Driver Impresora de Red, IP 192.168.0.200, puerto 9100 y ancho 80mm](images/manual/110-configuracion/120-04-ventana-impresora-de-red.png)
+
+Con **Impresora de Red** aparecen dos casilleros:
+
+- **IP de la impresora**: el número de la impresora en tu red. Por ejemplo: *192.168.0.200*.
+- **Puerto**: dejá **9100**, salvo que soporte te diga otro.
+
+> 💡 **Consejo útil:** para saber la IP, imprimí la hoja de autotest. En la mayoría de los modelos apagás la impresora, mantenés apretado **FEED** y la prendés. La IP tiene que empezar con los mismos tres números que la de tu computadora.
+
+Con **Impresora instalada en Windows** aparece **Nombre de la impresora**. Escribilo igual que en Windows.
 
 ---
 
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
+## 💾 **Paso 5: Guardá y probá**
 
-<div id="guia-paso-a-paso-como-se-usa"></div>
+<div id="paso-5-guarda-y-proba"></div>
 
-### Paso 1: Dar de alta una impresora de red
+1. Tocá **Agregar**. La ventanita se cierra y la impresora aparece en la lista.
+2. En su tarjeta, tocá **Test de impresión**. Tiene que salir un ticket.
 
-<div id="paso-1-dar-de-alta-una-impresora-de-red"></div>
-
-1. Tocá **Nueva Impresora**.
-2. Escribí el nombre (ejemplo: *Impresora Cocina*) e ingresá su dirección IP (ej: 192.168.1.200).
-3. Tocá **Imprimir Prueba**.
-4. Tocá **Guardar**.
+Para cambiar algo después, tocá **Editar** en la tarjeta. Se abre la misma ventanita con los datos cargados.
 
 ---
 
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+## 🍕 **Paso 6: Elegí la impresora en cada producto**
 
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
+<div id="paso-6-elegi-la-impresora-en-cada-producto"></div>
 
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
+Para que la bebida salga en la barra y la comida en la cocina, al cargar cada producto tildá la impresora en **¿Dónde se imprime la comanda?**.
+
+Ver cómo: [Menú de Productos](/user-guide/menu).
+
+> 💡 **Consejo útil:** en [Configuración general](/user-guide/configuracion-general#impresion), sección **Impresión**, tiene que estar elegido el **Servidor de impresión** de tu local. Si querés armar distintos juegos de impresoras, mirá [Perfiles de Impresión](/user-guide/perfiles-de-impresion).
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| El ticket de prueba no sale. | Dirección IP incorrecta o impresora apagada. | Revisá que la impresora esté encendida y con papel puesto. |
+| No imprime nada, en ninguna impresora. | **Fiscalberry** está cerrado. | Abrilo en la computadora del local y dejalo siempre abierto. |
+| El test no sale en una impresora **USB**. | Falta el driver o el **Nombre de la impresora** no es igual al de Windows. | Instalá el driver de la [Biblioteca de Drivers](/user-guide/biblioteca-de-drivers) y copiá el nombre exacto. |
+| El test no sale en una impresora **de red**. | La IP está mal o no está en la misma red. | Imprimí la hoja de autotest, revisá la IP y comparala con la de la computadora. |
+| El texto sale cortado. | El **Ancho de papel** no coincide con el rollo. | Tocá **Editar** y elegí el ancho correcto. |
+| En **Paxaprinter** aparece el mío con un círculo rojo. | Ese Fiscalberry está apagado o sin internet. | Abrilo en su computadora y esperá unos segundos. |
+| No veo el casillero **Alias**. | Solo lo ven Dueños y Administradores. | Pedile a un Dueño que lo cargue. |
+| La tarjeta dice *Paxaprinter #N no encontrada (eliminada)*. | El Fiscalberry se eliminó. | Tocá **Editar** y elegí otro **Paxaprinter**. |

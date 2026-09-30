@@ -11,6 +11,18 @@
 
 ---
 
+## 🖨️ **Fiscalberry: el programa que imprime**
+
+<div id="fiscalberry-el-programa-que-imprime"></div>
+
+> ⚠️ Además del driver de la impresora, en el local tiene que estar instalado y **siempre abierto** **Fiscalberry**, el programa que conecta PaxaPOS con tus impresoras. Seguí la guía de tu equipo:
+>
+> - 🖥️ [Instalar Fiscalberry en Windows](/user-guide/fiscalberry-windows)
+> - 🐧 [Instalar Fiscalberry en Linux](/user-guide/fiscalberry-linux)
+> - 📱 [Instalar Fiscalberry en Android](/user-guide/fiscalberry-android) (solo impresoras de red)
+
+---
+
 ## 📦 **Drivers Disponibles**
 
 <div id="drivers-disponibles"></div>
@@ -93,7 +105,7 @@
 | **🖨️ Probar**     | Realiza una impresión de prueba   |
 | **⚙️ Configurar** | Ajusta la configuración           |
 
-> 🔗 **Siguiente Paso:** Una vez verificada la instalación del driver, configura tu impresora con nuestra **[📄 Guía del Servicio de Impresión](/user-guide/impresoras)** (conocido también como _FiscalBerry_) para completar la integración con el sistema.
+> 🔗 **Siguiente Paso:** Una vez instalado el driver, dá de alta la impresora en PaxaPOS siguiendo [Gestión de Impresoras](/user-guide/impresoras). Acordate de tener **Fiscalberry** instalado y abierto ([Windows](/user-guide/fiscalberry-windows) · [Linux](/user-guide/fiscalberry-linux)).
 
 ---
 

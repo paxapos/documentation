@@ -1,80 +1,136 @@
-# Permisos por Rol (Matriz de Seguridad)
+# Cómo configurar los Permisos por Rol
 
-<div id="permisos-por-rol-matriz-de-seguridad"></div>
+<div id="permisos-por-rol"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Permisos por Rol**  
-> **¿Quién lo usa?:** Administradores del Sistema  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → debajo del título **Acceso y Seguridad** → **Permisos por Rol**
+> **¿Quién lo usa?:** El dueño del comercio.
 
----
+> 🎯 **¿Para qué sirve esto?**
+> Elegís un rol, por ejemplo Cajero o Mozo, y marcás qué puede hacer en el sistema. Así controlás quién anula, quién cobra y quién ve los reportes.
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-La pantalla de **Permisos por Rol** es la matriz central de control de seguridad del sistema PaxaPOS:
-
-1. **Control de acceso por módulo:** Permite activar o desactivar casilla por casilla qué módulos y pantallas puede ver o usar cada rol (ejemplo: *impedir que un mozo vea el resumen de caja o que un cajero modifique precios del menú*).
-2. **Autorización de acciones críticas:** Define quiénes pueden anular productos, hacer descuentos, cerrar cajas o anular facturas.
-3. **Seguridad del local:** Garantiza la confidencialidad de la información financiera ajustando los niveles de visibilidad para cada puesto de trabajo.
+> ⚠️ **Atención:** esta pantalla cambia el acceso de todas las personas con ese rol. Los cambios recién valen cuando tocás **Guardar**.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 📍 **Paso 1: Entrá a la pantalla**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-- Tener la sesión iniciada con una cuenta que posea perfil **Administrador Principal**.
-- Tener creados los roles de usuario en el módulo de [Roles](/user-guide/roles).
+![Menú lateral con el grupo Configuración marcado en rojo](images/manual/110-configuracion/127-00a-menu-grupo-configuracion.png)
+
+1. En el menú de la izquierda, tocá **Configuración**.
+
+![Opción Permisos por Rol marcada en rojo debajo del título Acceso y Seguridad](images/manual/110-configuracion/127-00b-menu-opcion-permisos-por-rol.png)
+
+2. Debajo del título **Acceso y Seguridad**, tocá **Permisos por Rol**.
+
+![Pantalla Permisos por Rol sin ningún rol elegido](images/manual/110-configuracion/127-01-pantalla-permisos-por-rol.png)
+
+Arriba ves la lista para elegir el rol y los botones **Guardar**, **Defaults**, **Clonar** y el tacho. Están apagados hasta que elegís un rol.
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## ❓ **Paso 2: Conocé qué puede hacer cada rol**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-2-conoce-que-puede-hacer-cada-rol"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo / cambiarlo? |
+Tocá la barra gris **¿Qué puede hacer cada rol?** para desplegarla.
+
+![Ayuda desplegada con la explicación de los roles Dueño, Encargado y Cajero / Mozo / otros](images/manual/110-configuracion/127-02-ayuda-que-puede-hacer-cada-rol.png)
+
+- **Dueño**: acceso total. Es el único que puede asignar el rol Dueño.
+- **Encargado**: gestiona el día a día y el equipo, pero no crea dueños.
+- **Cajero / Mozo / otros**: acceso acotado a su función.
+
+---
+
+## 👥 **Paso 3: Elegí el rol**
+
+<div id="paso-3-elegi-el-rol"></div>
+
+1. Tocá el desplegable que dice **Seleccione un rol...**.
+2. Elegí el rol que querés revisar. Por ejemplo: *dueño*.
+3. Aparecen los permisos de ese rol.
+
+![Pantalla con el rol dueño elegido, la barra de botones activa y los permisos de Ventas](images/manual/110-configuracion/127-05-pantalla-permisos-del-rol.png)
+
+Qué ves en la pantalla:
+
+- **Permisos — dueño** y, a la derecha, cuántas **acciones activas** tiene el rol.
+- Las pestañas **Todos**, **Ventas**, **Finanzas**, **Operaciones**, **Personal**, **Reportes**, **Sistema**, **Organizacion** y **Crm**. Tocá una para ver solo ese grupo.
+- Por cada grupo, los botones **Todo** (activa todos sus permisos) y **Ninguno** (los apaga).
+- Cada tarjeta es una función, como **Salón** o **Cajero**. El interruptor verde la enciende o la apaga.
+- El número verde, como **23/23**, dice cuántas acciones de esa función están activas.
+
+Estos son los botones de la barra de arriba:
+
+- **Guardar**: guarda los cambios de este rol.
+- **Defaults**: carga los permisos que trae el sistema para ese rol. Pide confirmar y recién se guarda con **Guardar**.
+- **Clonar**: copia los permisos de otro rol. Se explica en el Paso 5.
+- **Tacho rojo**: destilda todos los permisos del rol. Pide confirmar y recién se guarda con **Guardar**.
+
+---
+
+## 🔎 **Paso 4: Mirá las acciones de una función**
+
+<div id="paso-4-mira-las-acciones-de-una-funcion"></div>
+
+1. En la tarjeta de una función, tocá la flecha redonda de la derecha.
+2. Se despliegan todas las acciones posibles.
+
+![Tarjeta Salón abierta con sus acciones, como read, crear_mesa, editar_mesa y anular_mesa](images/manual/110-configuracion/127-06-tarjeta-de-permiso-abierta.png)
+
+- Cada botoncito es una acción. Verde y con tilde: el rol la puede hacer.
+- Tocá una acción para tildarla o destildarla. Por ejemplo, destildá **anular_mesa** para que el rol no anule mesas.
+- Las acciones con el muñeco violeta, como **own_...**, alcanzan solo a lo propio de cada persona.
+
+> 💡 **Consejo útil:** para dar o quitar todo de una función, usá su interruptor. Para ajustes finos, abrí la tarjeta.
+
+Después de cambiar algo, tocá **Guardar**. El cambio vale para todos los usuarios de ese rol. Quien ya está conectado debe cerrar sesión y volver a entrar.
+
+---
+
+## 📋 **Paso 5: Copiá los permisos de otro rol**
+
+<div id="paso-5-copia-los-permisos-de-otro-rol"></div>
+
+1. Elegí el rol que querés cambiar.
+2. Tocá **Clonar**.
+3. Se abre esta ventanita.
+
+![Ventanita Clonar Permisos con el desplegable Copiar permisos desde y los botones Cancelar y Clonar](images/manual/110-configuracion/127-07-ventanita-clonar-permisos.png)
+
+- **Copiar permisos desde**: elegí el rol que te sirve de modelo.
+- **Cancelar**: cierra sin hacer nada.
+- **Clonar** (naranja): copia los permisos.
+
+> ⚠️ **Atención:** **Clonar** reemplaza todos los permisos del rol elegido con los del rol modelo. Se aplica al instante, sin tocar **Guardar**.
+
+---
+
+## 🔄 **Paso 6: Volvé a los valores originales de todos los roles**
+
+<div id="paso-6-vuelve-a-los-valores-originales"></div>
+
+![Pantalla con el botón naranja Restablecer permisos por defecto marcado en rojo](images/manual/110-configuracion/127-03-donde-esta-boton-restablecer-permisos.png)
+
+El botón naranja **Restablecer permisos por defecto** está arriba, debajo de la ayuda de roles.
+
+> ⚠️ **Atención:** este botón revierte los permisos de **todos** los roles a los valores del sistema. No se puede deshacer. Usalo solo si queda todo mal configurado.
+
+Al tocarlo, te pide confirmar antes de cambiar nada.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 👥 **Selector de Rol** | Encabezado superior | Selecciona el perfil al que se le ajustarán los permisos (ejemplo: *Cajero, Mozo, Cocinero*). |
-| ☑️ **Casilla de Verificación (Checkbox)** | En la matriz de módulos | Activa (permitido) o desactiva (bloqueado) el acceso a una pantalla específica. |
-| 🟩 **Marcar Todo** | Encabezado de columna | Concede acceso completo a todas las pantallas de una categoría. |
-| 🟥 **Desmarcar Todo** | Encabezado de columna | Quita todos los accesos del rol seleccionado. |
-| 💾 **Guardar Matriz de Permisos** | Botón flotante inferior | Aplica y guarda los cambios de permisos inmediatamente. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Seleccionar el rol a configurar
-
-<div id="paso-1-seleccionar-el-rol-a-configurar"></div>
-
-1. En la parte superior de la pantalla, elegí el **Rol** que querés editar en el listado desplegable (ejemplo: *Mozo*).
-2. La matriz mostrará todas las secciones del sistema (Ventas, Compras, Stock, Finanzas, Reportes, Configuración).
-
-### Paso 2: Activar o desactivar permisos específicos
-
-<div id="paso-2-activar-o-desactivar-permisos-especificos"></div>
-
-1. Navegá por los módulos de la matriz.
-2. Marcá la casilla ☑️ en los módulos donde querés dar acceso.
-3. Desmarcá la casilla ☐ en las funciones restringidas (ejemplo: desmarcar *Anulaciones de Venta* para el mozo).
-
-### Paso 3: Guardar y aplicar los cambios
-
-<div id="paso-3-guardar-y-aplicar-los-cambios"></div>
-
-1. Tocá el botón verde **Guardar Matriz de Permisos** en el pie de la pantalla.
-2. Los cambios se aplicarán de inmediato para todos los usuarios pertenecientes a ese rol.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| Un usuario sigue viendo un módulo desmarcado. | El usuario tiene la sesión abierta en su dispositivo. | Solicitale al usuario que cierre la sesión y vuelva a ingresar para refrescar sus permisos. |
-| Ningún usuario puede ingresar a una pantalla. | Se desmarcó por error la casilla para el rol Administrador. | Ingresá con la cuenta principal y volvé a marcar el permiso en la matriz. |
+| Los botones **Guardar**, **Defaults**, **Clonar** y el tacho están apagados. | Todavía no elegiste un rol. | Elegí un rol en el desplegable. |
+| Cambié un permiso y una persona lo sigue viendo. | Tiene la sesión abierta con los permisos viejos. | Pedile que cierre sesión y vuelva a entrar. |
+| Destildé algo y al volver a entrar está como antes. | No tocaste **Guardar**. | Volvé a hacer el cambio y tocá **Guardar**. |
+| Nadie puede abrir una pantalla. | Se apagó esa función para un rol clave. | Elegí el rol, encendé la función y tocá **Guardar**. También podés usar **Defaults**. |
+| Un rol quedó con permisos de otro. | Se usó **Clonar** por error. | Elegí el rol y tocá **Defaults**, revisá y **Guardar**. |
+| No veo esta pantalla en el menú. | Tu rol no tiene acceso a la configuración. | Pedile al dueño que la abra o que te dé el permiso. |

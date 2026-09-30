@@ -1,60 +1,162 @@
-# Usuarios del Sistema
+# Cómo administrar los Usuarios del Sistema
 
 <div id="usuarios-del-sistema"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → **Usuarios y acceso** → **Usuarios del Sistema**  
-> **¿Quién lo usa?:** Administradores  
+> **¿Dónde está en el sistema?:** Menú principal → **Configuración** → debajo del título **Acceso y Seguridad** → **Usuarios del Sistema**
+> **¿Quién lo usa?:** El dueño y los encargados del comercio.
+
+> 🎯 **¿Para qué sirve esto?**
+> Acá ves quién puede entrar a PaxaPOS en tu comercio y con qué rol. Vas a poder darle acceso a una persona nueva o sumar a alguien que ya usa PaxaPOS en otro comercio.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 📍 **Paso 1: Entrá a la pantalla**
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-Permite crear y administrar las cuentas de usuario con las que el personal inicia sesión en la plataforma PaxaPOS:
+![Menú lateral con el grupo Configuración marcado en rojo](images/manual/110-configuracion/123-00a-menu-grupo-configuracion.png)
 
-1. **Gestión de accesos:** Alta de usuarios con email, nombre, contraseña y asignación de rol (ejemplo: *Cajero, Mozo, Encargado, Contador, Administrador*).
+1. En el menú de la izquierda, tocá **Configuración**.
+
+![Opción Usuarios del Sistema marcada en rojo debajo del título Acceso y Seguridad](images/manual/110-configuracion/123-00b-menu-opcion-usuarios-del-sistema.png)
+
+2. Debajo del título **Acceso y Seguridad**, tocá **Usuarios del Sistema**.
+
+![Pantalla Usuarios de mi comercio con la lista de usuarios](images/manual/110-configuracion/123-01-pantalla-usuarios-de-mi-comercio.png)
+
+Ves la lista **Usuarios de mi comercio**. Cada renglón muestra:
+
+- **Nombre de usuario**: el email o nombre con el que entra la persona.
+- **Roles**: lo que puede hacer en el sistema.
+- **Activo**: si puede entrar (**Yes**) o no (**No**).
+- **en PaxaPos desde** y **Ultima vez conectado**: cuándo se creó la cuenta y cuándo entró por última vez.
+- **Acciones**: los botones para editar al usuario o quitarlo del comercio.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## ❓ **Paso 2: Conocé qué puede hacer cada rol**
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="paso-2-conoce-que-puede-hacer-cada-rol"></div>
 
-- Tener el permiso de **Administración de Usuarios y Cuentas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+1. Tocá la barra gris **¿Qué puede hacer cada rol?**.
+2. Se despliega la explicación.
+
+![Ayuda desplegada con la explicación de los roles Dueño, Encargado y Cajero / Mozo / otros](images/manual/110-configuracion/123-05-ayuda-que-puede-hacer-cada-rol.png)
+
+- **Dueño**: tiene acceso total. Es el único que puede crear o asignar el rol Dueño a otra persona.
+- **Encargado**: gestiona el día a día y el equipo. Puede crear y vincular usuarios, pero no crear dueños.
+- **Cajero / Mozo / otros**: solo ven lo de su tarea. No gestionan usuarios.
+
+Para ver el detalle fino de cada rol, mirá [Permisos por Rol](/user-guide/permisos-por-rol).
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 🔍 **Paso 3: Buscá un usuario**
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-3-busca-un-usuario"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Casillero de búsqueda, lista de roles y botón Filtrar](images/manual/110-configuracion/123-06-filtros-de-la-lista.png)
+
+- **Buscar entre mis usuarios**: escribí parte del nombre o del email.
+- **Todos los roles**: elegí un rol para ver solo a quienes lo tienen.
+- **Filtrar**: tocalo para aplicar la búsqueda.
+
+Después de filtrar aparece el botón **Limpiar**. Tocalo para volver a ver a todos.
+
+---
+
+## ➕ **Paso 4: Elegí entre Crear usuario nuevo y Vincular usuario existente**
+
+<div id="paso-4-elegi-entre-crear-y-vincular"></div>
+
+![Pantalla con los botones Crear usuario nuevo y Vincular usuario existente marcados en rojo](images/manual/110-configuracion/123-02-donde-esta-botones-crear-y-vincular.png)
+
+Arriba a la derecha hay dos botones. Elegí bien para no duplicar cuentas:
+
+- **Crear usuario nuevo** (verde): para alguien que todavía no tiene cuenta en PaxaPOS.
+- **Vincular usuario existente** (azul): para alguien que ya usa PaxaPOS en otro comercio.
+
+> 💡 **Consejo útil:** si dudás, primero probá **Vincular usuario existente** con el email de la persona. Así no se crea una cuenta repetida.
+
+---
+
+## 📝 **Paso 5: Creá un usuario nuevo**
+
+<div id="paso-5-crea-un-usuario-nuevo"></div>
+
+Tocá **Crear usuario nuevo**. Se abre una ventanita con los datos.
+
+![Datos de Acceso y Contraseña con datos de ejemplo de Juan Pérez, contraseñas difuminadas](images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-1.png)
+
+- **Username**: el nombre de usuario. Por ejemplo: *juan.perez*.
+- **Email**: el email de la persona. Por ejemplo: *juan.perez@ejemplo.com*.
+- **Password** y **Password (confirm)**: la contraseña, escrita dos veces igual.
+![Bloque Roles y Permisos con Roles, Cajas y Mozos](images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-2.png)
+
+- **Roles**: tildá el rol que tendrá. Podés abrir **¿Qué puede hacer cada rol?** para elegir mejor.
+- **Cajas**: las cajas que puede usar. **Seleccionar todos** las tilda todas.
+- **Mozos**: a qué mozo corresponde, si trabaja en el salón.
+![Bloques Centros de Costo y Perfil de Impresión, con los botones Cancelar y Registrar nuevo usuario abajo](images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-3.png)
+
+- **Centros de Costo**: a qué áreas pertenece. Define qué compras y ventas ve.
+- **Perfil de Impresión**: a qué impresoras imprime. Si no elegís, usa el del comercio. **Gestionar Perfiles** te lleva a [Perfiles de Impresión](/user-guide/perfiles-de-impresion).
+- **Cancelar**: cierra sin crear nada.
+
+> ⚠️ **Atención:** el botón **Registrar nuevo usuario** crea la cuenta de verdad. Revisá el email y el rol antes de tocarlo.
+
+Al tocar **Registrar nuevo usuario**, la persona ya puede entrar y aparece en la lista.
+
+---
+
+## 🔗 **Paso 6: Vinculá un usuario que ya existe**
+
+<div id="paso-6-vincula-un-usuario-que-ya-existe"></div>
+
+Tocá **Vincular usuario existente**. Se abre otra ventanita.
+
+![Ventanita Vincular usuario existente con un email de ejemplo y los botones Cancelar y Vincular a mi comercio](images/manual/110-configuracion/123-04-ventanita-vincular-usuario-existente.png)
+
+- **Email o nombre de usuario completo**: escribí el dato exacto. No se muestran sugerencias por seguridad.
+- **Rol en el comercio**: elegí qué rol tendrá acá.
+- **Cancelar**: cierra sin hacer nada.
+- **Vincular a mi comercio**: suma a la persona a tu comercio.
+
+> ⚠️ **Atención:** **Vincular a mi comercio** le da acceso real a tu comercio a esa cuenta. Confirmá que es la persona correcta.
+
+Si no existe ninguna cuenta con ese dato, aparece un aviso amarillo con el botón **Crear una cuenta nueva con este email**. Tocalo para seguir por el Paso 5.
+
+---
+
+## ✏️ **Paso 7: Editá o quitá a un usuario**
+
+<div id="paso-7-edita-o-quita-a-un-usuario"></div>
+
+En la lista del Paso 1, la columna **Acciones** de cada renglón tiene dos botones juntos:
+
+- **Lápiz azul (Editar)**: abre la pantalla para cambiar el usuario.
+- **Botón con la X (Quitar de mi comercio)**: le saca el acceso a tu comercio.
+
+> ⚠️ **Atención:** **Quitar de mi comercio** hace que la persona pierda el acceso. Su cuenta de PaxaPOS no se borra. Te pide confirmar antes.
+
+Al tocar el lápiz se abre la pantalla de edición:
+
+![Pantalla Editando a un usuario con el bloque Roles y Permisos](images/manual/110-configuracion/123-08-editar-usuario-parte-1.png)
+
+![Bloques Centros de Costo y Perfil de Impresión con los botones Cancelar y Guardar cambios](images/manual/110-configuracion/123-08-editar-usuario-parte-2.png)
+
+Tiene los mismos bloques que el alta, sin usuario ni contraseña. Tocá **Guardar cambios** para aplicar, o **Cancelar** para salir sin cambiar nada.
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nuevo Usuario** | Esquina superior | Abre el formulario para dar de alta un nuevo usuario. |
-| 🛡️ **Rol** | Formulario | Asigna el perfil de permisos que tendrá el usuario. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Crear un usuario para un empleado
-
-<div id="paso-1-crear-un-usuario-para-un-empleado"></div>
-
-1. Tocá el botón **Nuevo Usuario**.
-2. Ingresá el **Email**, **Nombre** y **Contraseña**.
-3. Seleccioná el **Rol** (ejemplo: *Cajero*).
-4. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| El usuario no puede ingresar. | Contraseña tipeada erróneamente o cuenta inactiva. | Blanqueá la clave o verificá que esté activo. |
+| No veo los botones **Crear usuario nuevo** ni **Vincular usuario existente**. | Tu usuario no tiene permiso para administrar usuarios. | Pedile al dueño que revise tu rol en [Permisos por Rol](/user-guide/permisos-por-rol). |
+| **Vincular usuario existente** no encuentra a la persona. | El email o usuario no está escrito completo y exacto. | Escribilo de nuevo sin espacios. Si no existe, usá **Crear una cuenta nueva con este email**. |
+| No puedo darle el rol Dueño a alguien. | Solo el Dueño puede crear o asignar ese rol. | Pedile al dueño del comercio que lo haga. |
+| La persona no puede entrar. | La contraseña está mal escrita o la cuenta está inactiva. | Revisá la columna **Activo** y editá al usuario. |
+| Quité a alguien por error. | Se tocó **Quitar de mi comercio**. | Volvé a sumarlo con **Vincular usuario existente**. |
+| Un mozo de PIN no aparece acá. | Los accesos por PIN están en otra pantalla. | Mirá [Usuarios con PIN](/user-guide/usuarios-con-pin). |

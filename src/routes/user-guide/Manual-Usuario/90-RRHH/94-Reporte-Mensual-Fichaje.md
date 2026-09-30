@@ -2,59 +2,131 @@
 
 <div id="reporte-mensual-de-fichaje"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **General** → **Reporte Mensual**  
-> **¿Quién lo usa?:** Recursos Humanos, Liquidadores de Sueldos y Gerentes  
+> **¿Dónde está en el sistema?:** Menú principal → **RRHH** → **Reporte Mensual**
+> **¿Quién lo usa?:** Recursos humanos, quien liquida sueldos y gerentes.
+
+> 🎯 **¿Para qué sirve esto?**
+> Resume el mes de cada empleado en un renglón: cuántas horas trabajó, cuántas debía, cuántos días vino y si llegó a horario.
+> Sirve para controlar la asistencia y preparar la liquidación de sueldos.
 
 ---
 
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
+## 🔑 Antes de empezar
 
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
+<div id="antes-de-empezar"></div>
 
-Consolida el total de horas trabajadas, llegadas tarde, ausencias y horas extras del personal durante todo el mes:
-
-1. **Insumo para liquidación de sueldos:** Cálculo automático de horas normales y adicionales acumuladas.
-2. **Exportación de planillas:** Descarga en formato Excel para el área contable o liquidadora.
-
----
-
-## 🔑 Requisitos para empezar a usarlo
-
-<div id="requisitos-para-empezar-a-usarlo"></div>
-
-- Tener el permiso de **Exportación de Reportes Mensuales de Horas** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tiene que estar activo el módulo de Fichaje o el de RRHH.
+- Para abrir el reporte necesitás el permiso **Recursos Humanos**. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
+- El botón **Auditoría Editados** necesita, además, el permiso de liquidar sueldos.
+- El reporte sale de las fichadas. Antes de usarlo, revisá que no falten salidas en el [Registro Diario de Fichaje](/user-guide/registro-diario-fichaje).
+- Cada empleado tiene que tener cargadas sus **Horas Semanales** y sus turnos. Se cargan en [Empleados](/user-guide/empleados). Sin eso, no hay horas esperadas ni puntualidad.
 
 ---
 
-## 🎨 Botones y Filtros: ¿Qué es cada cosa?
+## 📅 Paso 1: Elegí el mes
 
-<div id="botones-y-filtros-que-es-cada-cosa"></div>
+<div id="paso-1-elegi-el-mes"></div>
 
-| Botón / Filtro | ¿Dónde está? | ¿Qué hace al tocarlo? |
+Al entrar, el reporte abre el mes en curso.
+
+- El título grande muestra el mes y los días que tiene. Por ejemplo: *septiembre 2026 (30 días)*.
+- Si el mes todavía no terminó, debajo aparece **Transcurridos 29 de 30 días**. Con ese dato se calculan las horas esperadas hasta hoy.
+- Debajo dice cuántos empleados aparecen. Por ejemplo: **Hay 12 empleados**.
+- A la izquierda hay un botón azul con el nombre del mes anterior. Por ejemplo: **agosto 2026**.
+- A la derecha hay un botón azul con el mes siguiente. Por ejemplo: **octubre 2026 >**.
+
+Tocá esos botones para ir de mes en mes. El reporte siempre toma el mes entero.
+
+---
+
+## 🔎 Paso 2: Filtrá por turno o departamento
+
+<div id="paso-2-filtra-por-turno-o-departamento"></div>
+
+Arriba de la tabla hay dos listas para elegir. Al elegir una opción, la pantalla se actualiza sola.
+
+- **Turnos**: elegí un turno para ver solo las jornadas de ese turno.
+- **Departamentos**: elegí un departamento para ver solo a esa gente.
+
+> 💡 **Consejo útil:** las columnas de puntualidad y turno se calculan con todas las fichadas del mes. Si filtrás por turno, esas columnas pueden mostrar más datos que las horas trabajadas.
+
+---
+
+## 📊 Paso 3: Leé cada columna
+
+<div id="paso-3-lee-cada-columna"></div>
+
+Sale un renglón por empleado, ordenado por apellido. Solo aparecen quienes tienen al menos un ingreso en el mes. Tocá el nombre para abrir la ficha.
+
+- **Empleado**: apellido y nombre.
+- **Departamento**.
+- **Turno**: el nombre del turno de sus fichadas. Si no tiene, ves una raya.
+- **Hs Jornada Semanal**: las horas por semana cargadas en la ficha del empleado.
+- **Hs esperadas**: las horas que debería haber trabajado. Se calcula así: horas semanales, divididas 7, por los días del mes. En un mes en curso solo cuenta los días transcurridos. Por ejemplo: con 40 horas semanales y 30 días, son *171:26*.
+- **Hs Trabajadas**: la suma de todas sus jornadas completas, en horas y minutos. Una jornada sin salida no suma nada.
+- **Días Fich.**: cuántos días distintos fichó ingreso.
+- **Sin Egreso**: cuántas jornadas quedaron sin salida. Si es mayor a cero, sale en rojo. Es una señal de que hay que corregirlas.
+- **Puntual**: cuántas veces llegó dentro de la tolerancia del turno. Sale en verde.
+- **Tarde**: cuántas veces llegó después de la tolerancia. Sale en rojo cuando es mayor a cero.
+- **Temprano**: cuántas veces llegó antes que el turno, pasada la tolerancia. Sale en naranja.
+- **Hs Extras**: hoy esta columna muestra una raya para todos. Para ver extras, mirá la ficha del empleado o el [Registro Diario de Fichaje](/user-guide/registro-diario-fichaje).
+- **Dif.**: las horas esperadas menos las trabajadas. Si es positiva, faltan horas. Si es negativa, trabajó de más. Sale una raya si el empleado no tiene horas semanales.
+- **Editados**: cuántas marcas se corrigieron a mano. Si es mayor a cero, es un enlace a la auditoría.
+
+### Cómo se decide si llegó tarde
+
+El sistema compara la hora de ingreso con la del turno. Se fija solo en la hora del día. Por ejemplo, con un turno de 08:00 y 10 minutos de tolerancia:
+
+- Llegó 07:55: **Puntual**.
+- Llegó 08:10: **Puntual**.
+- Llegó 08:11: **Tarde**.
+- Llegó 07:49: **Temprano**.
+
+Las jornadas sin turno asignado no cuentan en **Puntual**, **Tarde** ni **Temprano**.
+
+---
+
+## 🕵️ Paso 4: Revisá las marcas corregidas
+
+<div id="paso-4-revisa-las-marcas-corregidas"></div>
+
+Una marca cuenta como **editada** cuando su hora difiere más de 5 minutos de la hora en que el sistema la recibió.
+
+1. En la tabla, buscá un número rojo con un triángulo en la columna **Editados**.
+2. Tocalo para abrir el detalle de ese empleado.
+3. O tocá el botón rojo **Auditoría Editados**, arriba a la derecha. Muestra a todos los empleados del mes.
+
+Solo lo ve quien tiene permiso de liquidar sueldos. Sin ese permiso, el sistema no abre la pantalla.
+
+---
+
+## 📥 Paso 5: Descargá el Excel
+
+<div id="paso-5-descarga-el-excel"></div>
+
+1. Arriba a la derecha, tocá el botón **Descargar Excel**.
+2. Se descarga una planilla con la hoja **RRHH Reporte**.
+
+La planilla trae las mismas columnas que la pantalla, con estas diferencias:
+
+- No incluye la columna **Hs Extras**.
+- En **Hs esperadas** siempre usa el mes completo, aunque el mes no haya terminado.
+
+> 💡 **Consejo útil:** descargá el Excel cuando el mes ya cerró. Así **Hs esperadas** y **Dif.** quedan completas.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| 📅 **Mes / Año** | Encabezado | Selecciona el período a consultar. |
-| 📊 **Exportar Excel** | Esquina superior | Descarga la grilla mensual consolidada. |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Generar el informe mensual de horas
-
-<div id="paso-1-generar-el-informe-mensual-de-horas"></div>
-
-1. Seleccioná el mes (ejemplo: *Mayo 2026*).
-2. Revisá la columna **Total Horas Trabajadas**.
-3. Tocá **Exportar Excel**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| Un empleado figura con menos horas de las reales. | Faltan marcaciones de salida en algunos días del mes. | Revisá el **Registro Diario** y completá las marcas faltantes antes de exportar. |
+| Un empleado figura con menos horas de las reales | Tiene jornadas sin salida. Esas horas no se suman. | Mirá **Sin Egreso**. Completá las salidas en el [Registro Diario de Fichaje](/user-guide/registro-diario-fichaje). |
+| **Hs esperadas** figura en cero | El empleado no tiene **Horas Semanales** cargadas. | Editalo en [Empleados](/user-guide/empleados) y completá **Horas Semanales**. |
+| **Dif.** muestra una raya | El empleado no tiene horas semanales, o el mes todavía no empezó. | Cargá **Horas Semanales** en su ficha. |
+| Todas las llegadas figuran en cero | Los empleados no tienen turno o el turno no tiene hora de ingreso. | Asigná turnos en [Empleados](/user-guide/empleados). Armalos en [Turnos y Horarios](/user-guide/turnos-y-horarios-fichaje). |
+| Un empleado no aparece | No fichó ingreso ese mes, o fue eliminado. | Buscá sus fichadas en el [Registro Diario de Fichaje](/user-guide/registro-diario-fichaje). |
+| **Hs Extras** siempre dice una raya | La columna no se calcula en este reporte. | Mirá las extras en la ficha del empleado. |
+| Me dice que no tengo permiso | El reporte requiere el permiso de Recursos Humanos. | Pedí a un administrador que lo active en [Permisos por Rol](/user-guide/permisos-por-rol). |
+| El botón **Auditoría Editados** da error de permiso | Falta el permiso de liquidar sueldos. | Pedí ese permiso a un administrador. |

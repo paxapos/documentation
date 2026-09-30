@@ -1,61 +1,145 @@
-# Catálogo de Mercaderías
+# Mercaderías
 
-<div id="catalogo-de-mercaderias"></div>
+<div id="mercaderias"></div>
 
-> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Catálogo** → **Mercaderías**  
-> **¿Quién lo usa?:** Compradores, Depósito y Administradores  
+> **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Catálogo** → **Mercaderías**
+> **¿Quién lo usa?:** Compradores, encargados de depósito y administradores
 
----
-
-## 🎯 ¿Qué es y para qué sirve esta pantalla?
-
-<div id="que-es-y-para-que-sirve-esta-pantalla"></div>
-
-Es el catálogo maestro de insumos, materias primas y artículos comprados a proveedores (ejemplo: *Harina 0000, Carne Lomo, Aceite de Girasol, Servilletas, Detergente*):
-
-1. **Gestión de insumos:** Alta, modificación y control de costos de compra de materias primas.
-2. **Unidades de compra y stock:** Permite especificar si se compra por bulto/caja y se descuenta por kilo/gramo/litro.
+> 🎯 **¿Para qué sirve esto?**
+> Una mercadería es algo que le comprás a un proveedor, tal como te lo vende. Por ejemplo: *Harina 0000 x 25 kg* o *Coca Cola pack x 6*.
+> Acá cargás cómo lo comprás y cómo lo contás en el depósito, para que el stock y los costos den bien.
 
 ---
 
-## 🔑 Requisitos para empezar a usarlo
+## 🔑 Antes de empezar
 
-<div id="requisitos-para-empezar-a-usarlo"></div>
+<div id="antes-de-empezar"></div>
 
-- Tener el permiso de **Gestión de Catálogo de Mercaderías** configurado en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Tu usuario tiene que tener el permiso de **Mercaderías** en [Permisos por Rol](/user-guide/permisos-por-rol).
+- Conviene tener cargado el proveedor. Mirá [Proveedores](/user-guide/proveedores).
 
 ---
 
-## 🎨 Botones y Pantallas: ¿Qué es cada cosa?
+## 📍 Paso 1: Entrá a la pantalla
 
-<div id="botones-y-pantallas-que-es-cada-cosa"></div>
+<div id="paso-1-entra-a-la-pantalla"></div>
 
-| Botón / Campo | ¿Dónde está? | ¿Qué hace al tocarlo? |
+![Menú lateral con el grupo Compras marcado en rojo](images/manual/50-compras/56-00a-menu-grupo-compras.png)
+
+1. En el menú de la izquierda, tocá **Compras**.
+
+![Opción Mercaderías marcada en rojo, debajo de Catálogo](images/manual/50-compras/56-00b-menu-opcion-mercaderias.png)
+
+2. Tocá **Mercaderías**. Está debajo del título **CATÁLOGO**.
+
+![Pantalla Mercaderías con el buscador y la lista](images/manual/50-compras/56-01-pantalla-index.png)
+
+Así se ve la pantalla. Cada renglón es una mercadería, con su unidad de compra, su costo y su proveedor.
+
+> 💡 **Consejo útil:** hacé clic en una celda de la lista (por ejemplo, el costo) para cambiarla al instante.
+
+![Botones de arriba: Nuevo Mercadería, ayuda y Descargar Excel](images/manual/50-compras/56-43-encabezado.png)
+
+Arriba tenés tres botones:
+
+- **Nuevo Mercadería**: carga una mercadería nueva (Paso 3).
+- **?**: muestra una explicación corta de la pantalla.
+- **Descargar Excel**: baja la lista a una planilla.
+
+![Explicación de la pantalla abierta debajo del botón de ayuda](images/manual/50-compras/56-27-ayuda-abierta.png)
+
+---
+
+## 🔎 Paso 2: Buscá una mercadería
+
+<div id="paso-2-busca-una-mercaderia"></div>
+
+![Recuadro de búsqueda con Harina 0000 escrito, proveedores, rubros y el botón Buscar](images/manual/50-compras/56-04-panel-busqueda.png)
+
+En el recuadro de búsqueda tenés:
+
+- **Buscar por nombre...**: escribí parte del nombre. Por ejemplo: *Harina 0000*.
+- **Todos los proveedores**: mostrá solo lo que le comprás a un proveedor.
+- **Todos los rubros**: mostrá solo un rubro. Por ejemplo: *Almacén*.
+- **Buscar**: el botón azul de la derecha, que aplica la búsqueda.
+
+1. Completá lo que necesites y tocá **Buscar**.
+
+![Lista con la mercadería Harina 0000 x 25 kg](images/manual/50-compras/56-33-resultado-busqueda.png)
+
+2. La lista muestra solo las que coinciden.
+
+---
+
+## ➕ Paso 3: Cargá una mercadería nueva
+
+<div id="paso-3-carga-una-mercaderia-nueva"></div>
+
+1. Tocá el botón azul **Nuevo Mercadería**, arriba a la izquierda.
+2. Se abre el formulario **Crear Nuevo Mercadería**. Tiene cuatro partes.
+
+![Formulario, primera parte: PASO 1 Información Básica y PASO 2 Unidades, completos con Harina 0000 x 25 kg](images/manual/50-compras/56-40-formulario-parte-1.png)
+
+**PASO 1 · Información Básica** (obligatoria):
+
+- **Producto**: el producto que es. Por ejemplo: *Harina 0000*. Si no existe, se crea.
+- **Nombre de Compra**: cómo aparece en la factura del proveedor. Por ejemplo: *Harina 0000 x 25 kg*.
+- **Código de Barras**: es opcional.
+- **Rubro / Categoría**: el grupo. Por ejemplo: *Almacén*.
+
+**PASO 2 · Unidades** (cómo lo comprás y cómo lo contás):
+
+- **Comprás por**: cómo te lo factura el proveedor. Por ejemplo: *Bolsa*.
+- **Contás por**: cómo lo contás en el depósito y en las recetas. Por ejemplo: *Kilo*.
+- **Equivalencia**: cuántas unidades de stock trae cada unidad de compra. Por ejemplo: *25*, porque *1 Bolsa = 25 Kilo*. Abajo el sistema te lo muestra escrito, para que lo revises.
+
+![Formulario, segunda parte: PASO 3 Costos e impuestos, Proveedor habitual y los botones Cancelar y Guardar Mercadería](images/manual/50-compras/56-41-formulario-parte-2.png)
+
+**PASO 3 · Costos e impuestos**:
+
+- **Porcentaje de Desperdicio**: cuánto se pierde al usarlo. Por ejemplo: *2*.
+- **IVA de Compra**: el IVA que te cobra el proveedor. Por ejemplo: *IVA 21%*.
+
+**OPCIONAL · Proveedor habitual**: tocá **Mostrar/Ocultar** y elegí en **Proveedor por Defecto** a quién se lo comprás siempre. Se usa al armar la orden de compra.
+
+El recuadro azul **¿Cuántos mercaderías puedo crear?** explica cuándo conviene una sola mercadería por producto y cuándo varias (por marca, proveedor o presentación).
+
+3. Tocá el botón azul **Guardar Mercadería**, abajo a la derecha. Si te arrepentiste, tocá **Cancelar**: no se guarda nada.
+
+---
+
+## ✏️ Paso 4: Mirá o cambiá una mercadería
+
+<div id="paso-4-mira-o-cambia-una-mercaderia"></div>
+
+![Los cuatro botones de un renglón: ojo, hojita, lápiz y tacho](images/manual/50-compras/56-42-botones-del-renglon.png)
+
+A la derecha de cada renglón hay cuatro botones:
+
+- El ojo 👁️ abre el detalle completo de la mercadería.
+- La hojita 🌿 abre la ficha del producto. Mirá [Maestro de Productos](/user-guide/maestro-de-productos).
+- El lápiz ✏️ abre una ventana para cambiar los datos. Cambiá lo que necesites y tocá **Guardar Mercadería**.
+- El tacho 🗑️ borra la mercadería. El sistema te pregunta si estás seguro.
+
+![Detalle de la mercadería Harina 0000 x 25 kg](images/manual/50-compras/56-37-pantalla-detalle.png)
+
+Así se ve el detalle completo.
+
+![Ventana Editando Mercadería con los datos de Harina 0000](images/manual/50-compras/56-38-ventana-editar.png)
+
+Y así, la ventana del lápiz.
+
+> ⚠️ **Atención:** si borrás una mercadería que ya compraste, desaparece de las próximas órdenes de compra.
+
+---
+
+## ⚠️ Resolución de Inconvenientes
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
-| ➕ **Nueva Mercadería** | Esquina superior | Registra una nueva materia prima o insumo. |
-| 🏷️ **Rubro / Categoría** | Ficha del insumo | Clasifica el insumo (ejemplo: *Carnes, Lácteos, Limpieza*). |
-
----
-
-## 📑 Guía Paso a Paso: ¿Cómo se usa?
-
-<div id="guia-paso-a-paso-como-se-usa"></div>
-
-### Paso 1: Registrar una mercadería
-
-<div id="paso-1-registrar-una-mercaderia"></div>
-
-1. Tocá **Nueva Mercadería**.
-2. Escribí el **Nombre**, asigná un **Rubro** y fijá la **Unidad de Medida** (ejemplo: *Kilogramos*).
-3. Ingresá el **Costo Ultima Compra**.
-4. Tocá **Guardar**.
-
----
-
-## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
-
-<div id="que-hacer-si-algo-no-sale-bien-problemas-comunes"></div>
-
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| La receta usa gramos pero la mercadería se compró en kilos. | Equivocación de unidad de medida base. | Verificá que la unidad de medida coincida con la usada en las recetas. |
+| **El stock sube 25 veces más (o menos) de lo que compré** | La **Equivalencia** está mal. | Tocá el lápiz y revisá **Comprás por**, **Contás por** y **Equivalencia**. |
+| **La receta usa gramos y la mercadería está en kilos** | La unidad de **Contás por** no coincide con la receta. | Usá la misma unidad en la mercadería y en la receta. |
+| **El costo sale en $0** | Todavía no la compraste. | Cargá una orden de compra o hacé clic en el costo y escribilo. |
+| **No aparece Mercaderías en el menú** | La opción del menú está sin nombre en la configuración del comercio. | Pedile a soporte que revise el **título de mercadería** del comercio. |
