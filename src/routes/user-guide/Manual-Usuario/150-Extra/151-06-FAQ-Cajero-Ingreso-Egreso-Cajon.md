@@ -1,4 +1,4 @@
-# 📖 Manual de Usuario: Cómo Registrar Entradas y Salidas de Dinero del Cajón
+# Cómo Registrar Entradas y Salidas de Dinero del Cajón
 
 > **¿Dónde está en el sistema?:** Pantalla de Ventas → Botones **Ingreso** / **Egreso** (o **Finanzas** → **Caja** → **Arqueos de Caja**)  
 > **¿Quién lo usa?:** Cajeros y Encargados de Caja  

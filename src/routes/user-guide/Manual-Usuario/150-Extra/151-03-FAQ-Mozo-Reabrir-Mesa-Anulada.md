@@ -1,4 +1,4 @@
-# 📖 Manual de Usuario: Cómo Reabrir una Mesa Anulada o Cerrada por Error
+# Cómo Reabrir una Mesa Anulada o Cerrada por Error
 
 > **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Caja** → **Arqueos de Caja** (o **Finanzas** → **Facturación AFIP** → **Histórico de Mesas**)  
 > **¿Quién lo usa?:** Mozos y Encargados de Turno  

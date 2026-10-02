@@ -1,4 +1,4 @@
-# 📖 Manual de Usuario: Diferencia entre "Facturado Total Mesas" y "Abiertas Por Usuario" en Caja
+# Diferencia entre "Facturado Total Mesas" y "Abiertas Por Usuario" en Caja
 
 > **¿Dónde está en el sistema?:** Menú principal → **Finanzas** → **Caja** → **Arqueos de Caja** → **Resumen de Ventas**  
 > **¿Quién lo usa?:** Cajeros, Encargados de Turno y Supervisores  
