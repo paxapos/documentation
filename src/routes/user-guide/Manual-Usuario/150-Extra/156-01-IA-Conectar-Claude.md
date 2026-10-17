@@ -147,7 +147,7 @@ La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `co
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
 | No puedo agregar un conector personalizado. | Tu plan de Claude no lo permite o alcanzaste el límite de conectores. | Revisá tu plan en **Settings** → **Billing**. |
-| Claude dice que la URL no es válida. | La dirección está mal escrita o no empieza con `https://`. | Copiá y pegá exactamente `https://api.paxapos.com/mcp`. |
+| Claude dice que la URL no es válida. | La dirección está mal escrita o no empieza con `https://`. | Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo `https://api.paxapos.com/mcp/compras`). |
 | El login de PaxaPos me da error. | Email o contraseña incorrectos. | Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos. |
 | Claude no usa PaxaPos en el chat. | El conector no está conectado o está desactivado en esa conversación. | Verificá en **Settings** → **Connectors** que PaxaPos figure como conectado, y que esté activo en el menú **+** del chat. |
 | Claude no encuentra datos de mi comercio. | Tu usuario no tiene permisos sobre ese comercio o esa sección. | Pedile al administrador del comercio que revise tu rol en PaxaPos. |
