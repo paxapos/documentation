@@ -87,7 +87,8 @@ Si el cliente quiere **Factura A** o una factura a su nombre, le pasa al asisten
 <div id="factura"></div>
 
 - Si tenés **factura electrónica** activa, la factura se emite **sola** cuando se aprueba el pago online, igual que en pedimelo. No tenés que hacer nada.
-- Sin datos fiscales del cliente, sale a **Consumidor Final**. Con el CUIT de un responsable inscripto o de un monotributista, sale **Factura A**.
+- Sin datos fiscales del cliente, sale a **Consumidor Final**.
+- Si tu comercio es **responsable inscripto** y el cliente pasa el CUIT de un responsable inscripto o de un monotributista, sale **Factura A**. Si tu comercio es monotributista, sale **Factura C**, como siempre.
 - Si no tenés factura electrónica, el asistente le dice al cliente que el comercio no la emite automáticamente.
 
 > ⚠️ La factura sale con el **primer pago aprobado**. Si después agregás el envío u otro ítem, ese importe no queda facturado: cobralo y facturalo aparte.
