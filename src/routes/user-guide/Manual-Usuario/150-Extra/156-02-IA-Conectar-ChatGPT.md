@@ -105,27 +105,39 @@ Abrí un chat nuevo y pedile lo que necesites en lenguaje normal. Si ChatGPT no 
 
 PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramientas de esa tarea. Así ChatGPT elige mejor qué hacer y cada conversación carga solo lo que necesita.
 
-| Conector       | URL                                          | Para qué                                                                        |
-| -------------- | -------------------------------------------- | ------------------------------------------------------------------------------- |
-| Salón          | `https://api.paxapos.com/mcp/salon`          | Mesas, comandas, consulta del menú y reservas.                                  |
-| Caja           | `https://api.paxapos.com/mcp/caja`           | Caja, cobros, facturación de ventas y controles.                                |
-| Reportes       | `https://api.paxapos.com/mcp/reportes`       | Estadísticas de ventas, libro IVA, rentabilidad y flujo de fondos.              |
-| Compras        | `https://api.paxapos.com/mcp/compras`        | Solicitudes y órdenes de compra, y recepción de mercadería.                     |
-| Abastecimiento | `https://api.paxapos.com/mcp/abastecimiento` | Mercaderías, proveedores, stock y recetas.                                      |
-| Finanzas       | `https://api.paxapos.com/mcp/finanzas`       | Gastos, pagos a proveedores, cierres y cheques.                                 |
-| Catálogo       | `https://api.paxapos.com/mcp/catalogo`       | Productos, precios (también en lote) y administración del menú.                 |
-| RRHH           | `https://api.paxapos.com/mcp/rrhh`           | Empleados, fichajes y liquidación de sueldos.                                   |
-| Administración | `https://api.paxapos.com/mcp/admin`          | Usuarios y roles (solo lectura), impresoras, módulos, sucursales y auditoría.   |
-| Todo           | `https://api.paxapos.com/mcp`                | Lo de todos los días en un solo conector, y busca el resto cuando lo necesitás. |
+| Conector       | URL                                          | Para qué                                                                                               |
+| -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Salón          | `https://api.paxapos.com/mcp/salon`          | Mesas, comandas, cobro en mesa y consulta del menú.                                                    |
+| Clientes       | `https://api.paxapos.com/mcp/clientes`       | Reservas, pedidos online que entran (delivery y take away) y tus clientes.                             |
+| Caja           | `https://api.paxapos.com/mcp/caja`           | Caja y cobros, facturación (AFIP) de ventas, y corrección o reapertura de mesas ya cobradas.           |
+| Reportes       | `https://api.paxapos.com/mcp/reportes`       | Estadísticas de ventas, libro IVA, rentabilidad y flujo de fondos.                                     |
+| Compras        | `https://api.paxapos.com/mcp/compras`        | Solicitudes y órdenes de compra, y recepción de mercadería.                                            |
+| Abastecimiento | `https://api.paxapos.com/mcp/abastecimiento` | Mercaderías, proveedores, stock y recetas.                                                             |
+| Finanzas       | `https://api.paxapos.com/mcp/finanzas`       | Gastos y facturas de proveedor, deudas, pagos y cierres contables.                                     |
+| Catálogo       | `https://api.paxapos.com/mcp/catalogo`       | Productos, categorías, precios (también en lote), descuentos, cupones, sectores y salones.             |
+| RRHH           | `https://api.paxapos.com/mcp/rrhh`           | Empleados, fichajes, liquidación de sueldos, vacaciones y licencias.                                   |
+| Administración | `https://api.paxapos.com/mcp/admin`          | Datos del comercio, usuarios, roles y permisos, **solo para consultar**.                               |
+| Todo           | `https://api.paxapos.com/mcp`                | Lo de todos los días en un solo conector; busca y usa el resto de las herramientas cuando se lo pedís. |
 
 ### ¿Cuál elijo?
 
-- **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario y, cuando le pedís algo que no está a mano, ChatGPT las busca y las usa por su cuenta.
+- **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, ChatGPT lo busca, mira cómo se usa y lo ejecuta por su cuenta.
 - **Si tu plan de ChatGPT admite un solo conector**, también este: el de **Todo**.
-- **Si vas a trabajar siempre en lo mismo**, el del área (por ejemplo, Compras para quien pide mercadería y recibe) hace que ChatGPT responda más rápido y con menos vueltas.
+- **Si vas a trabajar siempre en lo mismo**, el del área hace que ChatGPT responda más rápido y con menos vueltas. Por ejemplo: **Salón** para el mozo o el encargado de turno, **Clientes** para quien atiende reservas y pedidos online, **Caja** para quien cobra y cierra, **Compras** para quien pide mercadería y recibe, **Finanzas** para quien carga facturas y paga a proveedores.
 - **Podés agregar varios**, cada uno como una app aparte (repetí los pasos 1 a 5 con otra URL). Cada uno inicia sesión con tu mismo usuario.
-- Si le pedís algo que no está en el conector que usás, ChatGPT puede avisarte en cuál está.
-- **Los conectores de siempre siguen funcionando.** Si ya tenías cargado uno, no hace falta que hagas nada.
+- **Cada usuario ve solo las herramientas que su rol permite**, en cualquier conector. Si tu rol no incluye una acción, esa herramienta no aparece.
+- Si le pedís algo que no está en el conector que usás, PaxaPos le avisa a ChatGPT en cuál está y con qué dirección agregarlo.
+
+### Si ya tenías conectores cargados
+
+Las direcciones de siempre (`/mcp`, `/mcp/salon`, `/mcp/caja`, `/mcp/compras`, `/mcp/catalogo` y `/mcp/rrhh`) **siguen funcionando**, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:
+
+- Si usabas **Compras** para cargar facturas de proveedor o pagar, sumá **Finanzas**.
+- Si usabas **Salón** para reservas, pedidos online o clientes, sumá **Clientes**.
+- Si usabas **Salón** para reabrir o corregir una mesa ya cobrada, sumá **Caja**.
+- **Administración** pasó a ser de consulta (datos del comercio, usuarios, roles y permisos). Los clientes están en **Clientes**, y los descuentos, cupones y sectores en **Catálogo**.
+
+---
 
 ---
 
@@ -142,12 +154,16 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 - _"¿Qué proveedores tengo con deuda pendiente?"_
 - _"¿Qué mercaderías me recomendás reponer?"_
 - _"¿Qué mesas están abiertas ahora?"_
+- _"¿Qué reservas tengo para el sábado a la noche?"_ (Clientes)
+- _"¿Qué usuarios tienen rol de cajero?"_ (Administración)
 
 **Acciones** (según el conector y los permisos de tu usuario):
 
 - _"Armá la orden de compra con las solicitudes de verdulería."_ (Compras)
 - _"Llegó la mercadería de la OC 1234: faltaron 2 cajones de tomate."_ (Compras)
 - _"Subí un 10% los precios de la categoría Bebidas."_ (Catálogo)
+- _"La mesa 12 se cobró con el medio de pago equivocado: corregilo."_ (Caja)
+- _"Aceptá el pedido online que acaba de entrar."_ (Clientes)
 
 > 💡 **Tip:** si el pedido es amplio ("mostrame todas las compras del año"), ChatGPT puede traer los datos de a partes. Acotá con una fecha, un proveedor o un producto y la respuesta sale más completa y más rápida.
 
@@ -161,7 +177,7 @@ ChatGPT **puede leer y también modificar** datos de PaxaPos, siempre dentro de 
 
 - **Las consultas no cambian nada.** Ver ventas, stock o compras no modifica datos.
 - **Las acciones que modifican datos se hacen solo cuando vos se lo pedís.**
-- **Las que no se pueden deshacer** (por ejemplo, pagos o cierres) **piden confirmación explícita**: ChatGPT te cuenta qué va a hacer y espera tu "sí" antes de ejecutarlo.
+- **Las que no se pueden deshacer** (por ejemplo, pagos, cierres o reabrir una mesa cobrada) **piden confirmación explícita**: ChatGPT te cuenta qué va a hacer y espera tu "sí" antes de ejecutarlo.
 - **ChatGPT también puede pedirte aprobación** antes de usar una herramienta que modifica datos. Leé lo que te muestra antes de aceptar.
 - **Revisá siempre el resumen antes de confirmar**: importes, proveedor, fecha, cantidades.
 
@@ -174,6 +190,7 @@ ChatGPT **puede leer y también modificar** datos de PaxaPos, siempre dentro de 
 ChatGPT tiene un modo de **investigación profunda** que junta información de varias fuentes y arma un informe con citas. PaxaPos está preparado para eso: ChatGPT puede **buscar** en tu comercio (productos, clientes, proveedores, órdenes de compra, facturas, gastos y mesas) y **abrir** cada registro para citarlo.
 
 - **Solo lee**: la investigación profunda no modifica nada en PaxaPos.
+- **Usá el conector de Todo**: es el que trae la búsqueda completa. Los conectores de área traen solo una parte.
 - Si tu plan lo permite, activá la investigación profunda en ChatGPT y fijate de incluir **PaxaPos** entre las fuentes. Los pasos exactos cambian según la versión de ChatGPT.
 - Ejemplos: _"Investigá cómo evolucionó el costo de las bebidas con mis tres proveedores principales."_ · _"Armá un informe de las órdenes de compra del último trimestre, por proveedor."_
 - Como en cualquier consulta, solo ve lo que permite tu rol.
@@ -201,19 +218,20 @@ Si querés volver a usarla, repetí los pasos de esta guía.
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                                    | ¿Por qué puede ser?                                                                                             | ¿Cómo se soluciona?                                                                                                                                                  |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| No veo la opción **Create MCP app** dentro de **Add**.           | Tu plan o tu cuenta de ChatGPT no tiene habilitadas las apps MCP personalizadas, o falta el modo desarrollador. | Revisá tu plan y los ajustes de ChatGPT, o consultá con el administrador de tu espacio de trabajo.                                                                   |
-| El botón **Create** está deshabilitado.                          | Falta el nombre, la URL o marcar la casilla **I understand and want to continue**.                              | Completá los campos y marcá la casilla.                                                                                                                              |
-| ChatGPT dice que la URL no es válida.                            | La dirección está mal escrita o no empieza con `https://`.                                                      | Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo `https://api.paxapos.com/mcp/compras`).                                                       |
-| El login de PaxaPos me da error.                                 | Email o contraseña incorrectos.                                                                                 | Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos.                                                         |
-| ChatGPT me vuelve a pedir que inicie sesión.                     | La conexión venció o se cortó.                                                                                  | Iniciá sesión de nuevo con tu usuario de PaxaPos. Si insiste, desconectá la app y conectala otra vez.                                                                |
-| ChatGPT no usa PaxaPos en el chat.                               | La app no está activada en esa conversación, o el pedido no deja claro que es de tu comercio.                   | Activá la app en el chat si tu versión de ChatGPT lo pide, y nombrala en el pedido (_"Con PaxaPos, ..."_).                                                           |
-| ChatGPT no encuentra datos de mi comercio.                       | Tu usuario no tiene permisos sobre ese comercio o esa sección.                                                  | Pedile al administrador del comercio que revise tu rol en PaxaPos.                                                                                                   |
-| ChatGPT dice que no tiene una herramienta para lo que le pido.   | Estás usando el conector de otra área, o tu rol no incluye esa acción.                                          | Agregá el conector que corresponde (ver [¿Qué conector elijo?](#que-conector-elijo)), o usá el de **Todo**. Si igual no aparece, revisá tu rol con el administrador. |
-| Cambié de usuario en PaxaPos pero ChatGPT sigue con el anterior. | La app quedó conectada con el primer usuario.                                                                   | Desconectá la app (ver [Cómo revocar el acceso](#revocar)) y conectala de nuevo iniciando sesión con el usuario correcto.                                            |
-| Agregaron herramientas nuevas a PaxaPos y ChatGPT no las ve.     | ChatGPT guarda la lista de herramientas de cuando conectaste.                                                   | Actualizá la app desde Plugins o desconectala y volvela a conectar.                                                                                                  |
-| La respuesta viene cortada o incompleta.                         | Pediste demasiados datos juntos.                                                                                | Acotá el pedido (fecha, proveedor, producto) o pedile que siga con la página siguiente.                                                                              |
+| ¿Qué te pasa?                                                    | ¿Por qué puede ser?                                                                                             | ¿Cómo se soluciona?                                                                                                       |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| No veo la opción **Create MCP app** dentro de **Add**.           | Tu plan o tu cuenta de ChatGPT no tiene habilitadas las apps MCP personalizadas, o falta el modo desarrollador. | Revisá tu plan y los ajustes de ChatGPT, o consultá con el administrador de tu espacio de trabajo.                        |
+| El botón **Create** está deshabilitado.                          | Falta el nombre, la URL o marcar la casilla **I understand and want to continue**.                              | Completá los campos y marcá la casilla.                                                                                   |
+| ChatGPT dice que la URL no es válida.                            | La dirección está mal escrita o no empieza con `https://`.                                                      | Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo `https://api.paxapos.com/mcp/compras`).            |
+| El login de PaxaPos me da error.                                 | Email o contraseña incorrectos.                                                                                 | Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos.              |
+| ChatGPT me vuelve a pedir que inicie sesión.                     | La conexión venció o se cortó.                                                                                  | Iniciá sesión de nuevo con tu usuario de PaxaPos. Si insiste, desconectá la app y conectala otra vez.                     |
+| ChatGPT no usa PaxaPos en el chat.                               | La app no está activada en esa conversación, o el pedido no deja claro que es de tu comercio.                   | Activá la app en el chat si tu versión de ChatGPT lo pide, y nombrala en el pedido (_"Con PaxaPos, ..."_).                |
+| ChatGPT no encuentra datos de mi comercio.                       | Tu usuario no tiene permisos sobre ese comercio o esa sección.                                                  | Pedile al administrador del comercio que revise tu rol en PaxaPos.                                                        |
+| ChatGPT dice que la herramienta está en otro conector.           | Estás usando el conector de otra área: PaxaPos le avisa en cuál está.                                           | Agregá ese conector con la URL que te indica (ver [¿Qué conector elijo?](#que-conector-elijo)), o usá el de **Todo**.     |
+| ChatGPT dice que no tiene una herramienta para lo que le pido.   | Tu rol no incluye esa acción, o la herramienta no existe en PaxaPos.                                            | Revisá tu rol con el administrador del comercio. Si es algo que PaxaPos no hace todavía, escribinos por soporte.          |
+| Cambié de usuario en PaxaPos pero ChatGPT sigue con el anterior. | La app quedó conectada con el primer usuario.                                                                   | Desconectá la app (ver [Cómo revocar el acceso](#revocar)) y conectala de nuevo iniciando sesión con el usuario correcto. |
+| Agregaron herramientas nuevas a PaxaPos y ChatGPT no las ve.     | ChatGPT guarda la lista de herramientas de cuando conectaste.                                                   | Actualizá la app desde Plugins o desconectala y volvela a conectar.                                                       |
+| La respuesta viene cortada o incompleta.                         | Pediste demasiados datos juntos.                                                                                | Acotá el pedido (fecha, proveedor, producto) o pedile que siga con la página siguiente.                                   |
 
 ---
 

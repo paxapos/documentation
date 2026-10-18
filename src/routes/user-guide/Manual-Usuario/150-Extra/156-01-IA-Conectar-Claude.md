@@ -11,9 +11,9 @@
 
 PaxaPos tiene un **servidor MCP**: una "puerta" que permite que asistentes de inteligencia artificial como Claude lean y operen los datos de tu comercio (ventas, stock, compras, caja, etc.).
 
-Una vez conectado, podés pedirle a Claude cosas como *"¿cuánto vendí ayer?"* o *"¿qué mercaderías están por agotarse?"* y te responde con los datos reales de PaxaPos.
+Una vez conectado, podés pedirle a Claude cosas como _"¿cuánto vendí ayer?"_ o _"¿qué mercaderías están por agotarse?"_ y te responde con los datos reales de PaxaPos.
 
-PaxaPos tiene **un conector por área** (compras, caja, salón, catálogo, RRHH) y uno con todo. Elegí el que corresponde en [Conectores por área](#conectores-por-area). El que tiene todo es:
+PaxaPos tiene **un conector por área** (salón, clientes, caja, compras, finanzas, RRHH, etc.) y uno con todo. Elegí el que corresponde en [Conectores por área](#conectores-por-area). El que tiene todo es:
 
 ```
 https://api.paxapos.com/mcp
@@ -47,7 +47,7 @@ En el menú lateral de la configuración, dentro de **Customize**, tocá **Conne
 
 <div id="paso-3"></div>
 
-Arriba a la derecha, tocá el botón **+ Add** (Agregar) y elegí la opción para agregar un **conector personalizado** (*custom connector*).
+Arriba a la derecha, tocá el botón **+ Add** (Agregar) y elegí la opción para agregar un **conector personalizado** (_custom connector_).
 
 ![Pantalla Connectors con el botón Add señalado arriba a la derecha](images/manual/150-extra/ia/156-01-03-claude-connectors-add.png)
 
@@ -91,23 +91,40 @@ Claude te redirige a la pantalla de login de **PaxaPos**:
 
 <div id="conectores-por-area"></div>
 
-PaxaPos no tiene un solo conector: tiene **uno por área**, con las herramientas de esa tarea. Así Claude elige mejor qué hacer y cada conversación carga solo lo que necesita.
+PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramientas de esa tarea. Así Claude elige mejor qué hacer y cada conversación carga solo lo que necesita.
 
-| Conector | URL | Para qué |
-|---|---|---|
-| Compras y pagos | `https://api.paxapos.com/mcp/compras` | Solicitudes y órdenes de compra, recepción de mercadería, facturas de proveedor, stock, proveedores y pagos a proveedores. |
-| Caja y ventas | `https://api.paxapos.com/mcp/caja` | Arqueos, cobros, ventas y estadísticas, y pagos a proveedores. |
-| Salón | `https://api.paxapos.com/mcp/salon` | Mesas, comandas y el menú para cargarlas. |
-| Catálogo | `https://api.paxapos.com/mcp/catalogo` | Menú, productos, precios, descuentos, cupones y sectores del salón. |
-| RRHH | `https://api.paxapos.com/mcp/rrhh` | Empleados, fichajes, liquidaciones, vacaciones y licencias. |
-| Todo | `https://api.paxapos.com/mcp` | Todo PaxaPos en un solo conector. |
+| Conector       | URL                                          | Para qué                                                                                               |
+| -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Salón          | `https://api.paxapos.com/mcp/salon`          | Mesas, comandas, cobro en mesa y consulta del menú.                                                    |
+| Clientes       | `https://api.paxapos.com/mcp/clientes`       | Reservas, pedidos online que entran (delivery y take away) y tus clientes.                             |
+| Caja           | `https://api.paxapos.com/mcp/caja`           | Caja y cobros, facturación (AFIP) de ventas, y corrección o reapertura de mesas ya cobradas.           |
+| Reportes       | `https://api.paxapos.com/mcp/reportes`       | Estadísticas de ventas, libro IVA, rentabilidad y flujo de fondos.                                     |
+| Compras        | `https://api.paxapos.com/mcp/compras`        | Solicitudes y órdenes de compra, y recepción de mercadería.                                            |
+| Abastecimiento | `https://api.paxapos.com/mcp/abastecimiento` | Mercaderías, proveedores, stock y recetas.                                                             |
+| Finanzas       | `https://api.paxapos.com/mcp/finanzas`       | Gastos y facturas de proveedor, deudas, pagos y cierres contables.                                     |
+| Catálogo       | `https://api.paxapos.com/mcp/catalogo`       | Productos, categorías, precios (también en lote), descuentos, cupones, sectores y salones.             |
+| RRHH           | `https://api.paxapos.com/mcp/rrhh`           | Empleados, fichajes, liquidación de sueldos, vacaciones y licencias.                                   |
+| Administración | `https://api.paxapos.com/mcp/admin`          | Datos del comercio, usuarios, roles y permisos, **solo para consultar**.                               |
+| Todo           | `https://api.paxapos.com/mcp`                | Lo de todos los días en un solo conector; busca y usa el resto de las herramientas cuando se lo pedís. |
 
 ### ¿Cuál elijo?
 
-- **El del área en la que trabajás.** Quien compra, recibe mercadería y paga a proveedores usa *Compras y pagos*. Quien cierra la caja usa *Caja y ventas*.
+- **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, Claude lo busca, mira cómo se usa y lo ejecuta por su cuenta.
+- **Plan Free de Claude:** admite **un solo** conector personalizado. Usá el de **Todo**.
+- **Si vas a trabajar siempre en lo mismo**, el del área hace que Claude responda más rápido y con menos vueltas. Por ejemplo: **Salón** para el mozo o el encargado de turno, **Clientes** para quien atiende reservas y pedidos online, **Caja** para quien cobra y cierra, **Compras** para quien pide mercadería y recibe, **Finanzas** para quien carga facturas y paga a proveedores.
 - **Podés agregar varios.** Cada uno es un conector aparte, y en cada chat activás los que necesites desde el menú **+**.
-- **Plan Free de Claude:** admite **un solo** conector personalizado. Usá el de **Todo** (`https://api.paxapos.com/mcp`).
-- Si le pedís a Claude algo que no está en el conector que estás usando, te dice cuál lo tiene y te pasa su URL.
+- **Cada usuario ve solo las herramientas que su rol permite**, en cualquier conector. Si tu rol no incluye una acción, esa herramienta no aparece.
+- Si le pedís a Claude algo que no está en el conector que estás usando, PaxaPos le avisa en cuál está y con qué dirección agregarlo.
+
+### Si ya tenías conectores cargados
+
+Las direcciones de siempre (`/mcp`, `/mcp/salon`, `/mcp/caja`, `/mcp/compras`, `/mcp/catalogo` y `/mcp/rrhh`) **siguen funcionando**, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:
+
+- Si usabas **Compras y pagos** (`/mcp/compras`) para cargar facturas de proveedor, ver stock o pagar, sumá **Finanzas** (facturas y pagos) y **Abastecimiento** (stock y proveedores).
+- Si usabas **Caja y ventas** (`/mcp/caja`) para estadísticas, sumá **Reportes**; para pagos a proveedores, **Finanzas**.
+- Si usabas **Salón** para reservas, pedidos online o clientes, sumá **Clientes**.
+- Si usabas **Salón** para reabrir o corregir una mesa ya cobrada, sumá **Caja**.
+- **Administración** pasó a ser de consulta (datos del comercio, usuarios, roles y permisos). Los clientes están en **Clientes**, y los descuentos, cupones y sectores en **Catálogo**.
 
 ### En equipos (Claude Team o Enterprise)
 
@@ -121,7 +138,7 @@ Después, **cada miembro** entra a **Settings** → **Connectors**, toca **Conne
 claude mcp add --transport http paxapos-compras https://api.paxapos.com/mcp/compras
 ```
 
-La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `compras` por el área que necesites, o usá `https://api.paxapos.com/mcp` para todo.
+La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `compras` por el área que necesites (`salon`, `clientes`, `caja`, `reportes`, `abastecimiento`, `finanzas`, `catalogo`, `rrhh` o `admin`), o usá `https://api.paxapos.com/mcp` para todo.
 
 ---
 
@@ -129,14 +146,18 @@ La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `co
 
 <div id="ejemplos"></div>
 
-- *"Mostrame el resumen de ventas de esta semana."*
-- *"¿Cuáles fueron los productos más vendidos del mes?"*
-- *"¿Qué proveedores tengo con deuda pendiente?"*
-- *"¿Qué mercaderías me recomendás reponer?"*
-- *"Armá la orden de compra con las solicitudes de verdulería y mandásela al proveedor."* (conector Compras y pagos)
-- *"Llegó la mercadería de la OC 1234: faltaron 2 cajones de tomate."* (conector Compras y pagos)
+- _"Mostrame el resumen de ventas de esta semana."_
+- _"¿Cuáles fueron los productos más vendidos del mes?"_
+- _"¿Qué proveedores tengo con deuda pendiente?"_
+- _"¿Qué mercaderías me recomendás reponer?"_
+- _"¿Qué mesas están abiertas ahora?"_
+- _"¿Qué reservas tengo para el sábado a la noche?"_ (conector Clientes)
+- _"Armá la orden de compra con las solicitudes de verdulería y mandásela al proveedor."_ (conector Compras)
+- _"Llegó la mercadería de la OC 1234: faltaron 2 cajones de tomate."_ (conector Compras)
+- _"Subí un 10% los precios de la categoría Bebidas."_ (conector Catálogo)
+- _"La mesa 12 se cobró con el medio de pago equivocado: corregilo."_ (conector Caja)
 
-> ⚠️ Las acciones que **modifican datos** (crear órdenes de compra, cerrar caja, etc.) se hacen solo cuando vos se lo pedís, y las que no se pueden deshacer te piden confirmación antes.
+> ⚠️ Las acciones que **modifican datos** (crear órdenes de compra, cerrar caja, etc.) se hacen solo cuando vos se lo pedís, y las que no se pueden deshacer (por ejemplo, pagos, cierres o reabrir una mesa cobrada) te piden confirmación antes. Leé el resumen (importes, proveedor, fecha, cantidades) antes de confirmar.
 
 ---
 
@@ -144,14 +165,15 @@ La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `co
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
-|---|---|---|
-| No puedo agregar un conector personalizado. | Tu plan de Claude no lo permite o alcanzaste el límite de conectores. | Revisá tu plan en **Settings** → **Billing**. |
-| Claude dice que la URL no es válida. | La dirección está mal escrita o no empieza con `https://`. | Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo `https://api.paxapos.com/mcp/compras`). |
-| El login de PaxaPos me da error. | Email o contraseña incorrectos. | Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos. |
-| Claude no usa PaxaPos en el chat. | El conector no está conectado o está desactivado en esa conversación. | Verificá en **Settings** → **Connectors** que PaxaPos figure como conectado, y que esté activo en el menú **+** del chat. |
-| Claude no encuentra datos de mi comercio. | Tu usuario no tiene permisos sobre ese comercio o esa sección. | Pedile al administrador del comercio que revise tu rol en PaxaPos. |
-| Claude dice que no tiene una herramienta para lo que le pido. | Estás usando el conector de otra área. | Agregá el conector que corresponde (ver [Conectores por área](#conectores-por-area)), o usá el de **Todo**. |
+| ¿Qué te pasa?                                                 | ¿Por qué puede ser?                                                   | ¿Cómo se soluciona?                                                                                                       |
+| ------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| No puedo agregar un conector personalizado.                   | Tu plan de Claude no lo permite o alcanzaste el límite de conectores. | Revisá tu plan en **Settings** → **Billing**.                                                                             |
+| Claude dice que la URL no es válida.                          | La dirección está mal escrita o no empieza con `https://`.            | Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo `https://api.paxapos.com/mcp/compras`).            |
+| El login de PaxaPos me da error.                              | Email o contraseña incorrectos.                                       | Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos.              |
+| Claude no usa PaxaPos en el chat.                             | El conector no está conectado o está desactivado en esa conversación. | Verificá en **Settings** → **Connectors** que PaxaPos figure como conectado, y que esté activo en el menú **+** del chat. |
+| Claude no encuentra datos de mi comercio.                     | Tu usuario no tiene permisos sobre ese comercio o esa sección.        | Pedile al administrador del comercio que revise tu rol en PaxaPos.                                                        |
+| Claude dice que la herramienta está en otro conector.         | Estás usando el conector de otra área: PaxaPos le avisa en cuál está. | Agregá ese conector con la URL que te indica (ver [Conectores por área](#conectores-por-area)), o usá el de **Todo**.     |
+| Claude dice que no tiene una herramienta para lo que le pido. | Tu rol no incluye esa acción, o la herramienta no existe en PaxaPos.  | Revisá tu rol con el administrador del comercio. Si es algo que PaxaPos no hace todavía, escribinos por soporte.          |
 
 ---
 
