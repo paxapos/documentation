@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start._c9JldS6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DU8MmcuH.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.D-c7qesA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.CmoI5UMe.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.DotHWGY5.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DPVoHm3K.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: Configuración → grupo Canales e IA → Inteligencia Artificial → bloque Pedidos desde asistentes de IA  
+ ..."/> <meta name="keywords" content="04 ia pedidos desde asistentes, paxapos, ia: pedidos desde asistentes de ia, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="IA: Pedidos desde asistentes de IA - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: Configuración → grupo Canales e IA → Inteligencia Artificial → bloque Pedidos desde asistentes de IA  
+ ..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="IA: Pedidos desde asistentes de IA - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="IA: Pedidos desde asistentes de IA - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: Configuración → grupo Canales e IA → Inteligencia Artificial → bloque Pedidos desde asistentes de IA  
+ ..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "IA: Pedidos desde asistentes de IA - Manual",
+  "description": "¿Dónde está en el sistema?: Configuración → grupo Canales e IA → Inteligencia Artificial → bloque Pedidos desde asistentes de IA  \n ...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-10-22",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>IA: Pedidos desde asistentes de IA - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/03-faq-mozo-reabrir-mesa-anulada" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Reabrir una Mesa Anulada o Cerrada por Error</a></li><li><a href="../user-guide/06-faq-cajero-ingreso-egreso-cajon" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Registrar Entradas y Salidas de Dinero del Cajón</a></li><li><a href="../user-guide/08-faq-cajero-diferencia-facturado-vs-abiertas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Diferencia entre "Facturado Total Mesas" y "Abiertas Por Usuario" en Caja</a></li><li><a href="../user-guide/buchon-bot" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Buchón Bot</a></li><li><a href="../user-guide/01-ia-conectar-claude" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Conectar PaxaPos con Claude</a></li><li><a href="../user-guide/02-ia-conectar-chatgpt" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Conectar PaxaPos con ChatGPT</a></li><li><a href="../user-guide/03-ia-conectar-gemini" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Conectar PaxaPos con Gemini</a></li><li><a href="../user-guide/04-ia-pedidos-desde-asistentes" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">IA: Pedidos desde asistentes de IA</a></li><!--]--></ul><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">IA: Pedidos desde asistentes de IA</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: 04-ia-pedidos-desde-asistentes</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> <strong>Configuración</strong> → grupo <strong>Canales e IA</strong> → <strong>Inteligencia Artificial</strong> → bloque <strong>Pedidos desde asistentes de IA</strong><br><strong>¿Quién lo usa?:</strong> Propietario / Administrador del Comercio</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🎯 ¿Qué es?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-es"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-es"></div>
+
+<p>Tus clientes te pueden hacer pedidos <strong>desde su asistente de inteligencia artificial</strong> (Claude o ChatGPT). Le escriben, por ejemplo, <em>&quot;quiero 2 muzzas para retirar a las 21&quot;</em>, y el asistente arma el pedido con tu menú real.</p>
+<ul>
+<li>El pedido entra a PaxaPos como cualquier pedido online, con los precios de tu menú.</li>
+<li>El cliente recibe el <strong>total que calcula PaxaPos</strong> y, si cobrás online, el <strong>link de pago o el QR</strong>.</li>
+<li>Cuando paga, la <strong>factura sale sola</strong> (si tenés factura electrónica) y el cliente la ve en la misma conversación.</li>
+</ul>
+<p>Cada comercio tiene <strong>su propia dirección</strong>. El cliente la agrega una sola vez como conector en su asistente, y desde ahí ve solo <strong>tu</strong> comercio.</p>
+<p>No hay que instalar nada ni pedírselo a soporte: se activa con un tilde.</p>
+<hr>
+<h2 class="relative">
+                ✅ Cómo activarlo
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="activar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="activar"></div>
+
+<ol>
+<li>Entrá a <strong>Configuración</strong> y, en el grupo <strong>Canales e IA</strong>, elegí <strong>Inteligencia Artificial</strong>.</li>
+<li>En el bloque <strong>Pedidos desde asistentes de IA</strong>, tildá <strong>Permitir pedidos desde asistentes de IA</strong>.</li>
+<li>Opcional: completá <strong>Localidad</strong> y <strong>Rubro</strong>. Ayudan al asistente a encontrarte.</li>
+<li>Dejá tildado <strong>Aparecer en el buscador de comercios de PaxaPos</strong> si querés que te encuentren clientes que todavía no te conocen. Si lo destildás, te pueden pedir solo quienes tengan tu dirección.</li>
+<li>Tocá <strong>Guardar</strong>.</li>
+</ol>
+<blockquote>
+<p>⏱️ El cambio puede tardar <strong>unos minutos</strong> en verse en los asistentes y en tu página para clientes.</p>
+</blockquote>
+<p>Para dejar de recibir pedidos por IA, destildá <strong>Permitir pedidos desde asistentes de IA</strong> y guardá.</p>
+<hr>
+<h2 class="relative">
+                🔗 Cómo compartirlo con tus clientes
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="compartir"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="compartir"></div>
+
+<p>Con el canal activo, debajo de las opciones aparece <strong>URL para tus clientes</strong>. Por ejemplo:</p>
+<pre><code>https://api.paxapos.com/mcp/publico/tu_comercio
+</code></pre>
+<ul>
+<li><strong>Copiar</strong> la copia para que la mandes por WhatsApp, redes o mail.</li>
+<li><strong>Ver la página &quot;Pedí con tu IA&quot; para compartir</strong> abre la página pública de tu comercio en pedimelo (<code>…/tu_comercio/ia</code>). Tiene:<ul>
+<li>la dirección, con un botón para copiarla;</li>
+<li>los pasos para Claude y para ChatGPT;</li>
+<li>ejemplos de qué pedir;</li>
+<li>un <strong>QR para imprimir</strong> que lleva a esa misma página. Podés pegarlo en el mostrador o en las mesas.</li>
+</ul>
+</li>
+</ul>
+<p>En tu menú de pedimelo también aparece el acceso <strong>Pedí con tu IA</strong> mientras el canal esté activo.</p>
+<hr>
+<h2 class="relative">
+                📱 Qué ve el cliente
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="cliente"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="cliente"></div>
+
+<ol>
+<li>Agrega tu dirección como conector en su asistente, con el nombre <strong>Pedidos a</strong> y el de tu comercio.</li>
+<li>La primera vez verifica su celular con un <strong>código por SMS</strong>. No necesita usuario de PaxaPos.</li>
+<li>Le pide al asistente lo que quiere. El asistente le muestra el <strong>detalle, el total y el envío</strong>.</li>
+<li>Si cobrás online, recibe el <strong>link de pago</strong> (o el QR) y paga desde su celular.</li>
+<li>En Claude, la tarjeta del pedido pasa sola a <strong>Pagado</strong> y después muestra la <strong>factura</strong> con el link al PDF. En otros asistentes alcanza con preguntar <em>&quot;¿ya está mi factura?&quot;</em>.</li>
+</ol>
+<p>Si el cliente quiere <strong>Factura A</strong> o una factura a su nombre, le pasa al asistente su <strong>CUIT</strong> (o su DNI) y su condición frente al IVA cuando hace el pedido. Se guardan en su ficha cuando es un cliente nuevo o cuando ya pidió antes con esa misma cuenta del asistente. Si el cliente ya estaba en tus <strong>Clientes</strong> por otra vía (por ejemplo, lo cargaste vos o pidió por la web con el mismo teléfono), los datos del asistente no pisan su ficha: cargaselos vos en <strong>Clientes</strong>.</p>
+<hr>
+<h2 class="relative">
+                🍳 Cómo te llegan los pedidos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="como-llegan"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="como-llegan"></div>
+
+<ul>
+<li>Entran como <strong>pedido online</strong>, igual que los de pedimelo, y siguen el mismo camino en el salón y en la cocina.</li>
+<li>En el detalle del pedido aparece la etiqueta <strong>Pedido vía asistente de IA</strong>, y la observación dice <em>&quot;Pedido desde asistente de IA (MCP)&quot;</em>.</li>
+<li>El cliente (nombre y celular verificado) queda en <strong>Clientes</strong>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🧾 La factura
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="factura"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="factura"></div>
+
+<ul>
+<li>Si tenés <strong>factura electrónica</strong> activa, la factura se emite <strong>sola</strong> cuando se aprueba el pago online, igual que en pedimelo. No tenés que hacer nada.</li>
+<li>Sin datos fiscales del cliente, sale a <strong>Consumidor Final</strong>.</li>
+<li>Si tu comercio es <strong>responsable inscripto</strong> y el cliente pasa el CUIT de un responsable inscripto o de un monotributista, sale <strong>Factura A</strong>. Si tu comercio es monotributista, sale <strong>Factura C</strong>, como siempre.</li>
+<li>Si no tenés factura electrónica, el asistente le dice al cliente que el comercio no la emite automáticamente.</li>
+</ul>
+<blockquote>
+<p>⚠️ La factura sale con el <strong>primer pago aprobado</strong>. Si después agregás el envío u otro ítem, ese importe no queda facturado: cobralo y facturalo aparte.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🛵 El envío
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="envio"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="envio"></div>
+
+<p>El asistente no calcula el costo del envío. Si el pedido es a domicilio y todavía no cargaste el envío, le dice al cliente <strong>&quot;envío a confirmar por el comercio&quot;</strong>, igual que pedimelo web. Cargalo en el pedido como siempre: el cliente ve el total actualizado cuando consulta su pedido.</p>
+<hr>
+<h2 class="relative">
+                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="problemas-comunes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="problemas-comunes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué te pasa?</th>
+<th>¿Por qué puede ser?</th>
+<th>¿Cómo se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No veo la URL para mis clientes.</td>
+<td>El canal no está activo o no guardaste.</td>
+<td>Tildá <strong>Permitir pedidos desde asistentes de IA</strong> y tocá <strong>Guardar</strong>.</td>
+</tr>
+<tr>
+<td>El cliente dice que la página &quot;Pedí con tu IA&quot; no existe.</td>
+<td>El canal está apagado, o lo activaste hace muy poco.</td>
+<td>Revisá el tilde y esperá unos minutos.</td>
+</tr>
+<tr>
+<td>El cliente no me encuentra en el buscador de su asistente.</td>
+<td>Destildaste <strong>Aparecer en el buscador</strong> o el canal está apagado.</td>
+<td>Pasale tu URL directa: con ella te pide igual.</td>
+</tr>
+<tr>
+<td>El pedido no trae link de pago.</td>
+<td>No tenés cobros online configurados.</td>
+<td>Configurá el cobro online en <strong>Configuración</strong> → <strong>Cobros</strong>. Mientras tanto, el cliente paga al retirar o al recibir.</td>
+</tr>
+<tr>
+<td>Pidió Factura A y salió a Consumidor Final.</td>
+<td>El cliente ya estaba en tus Clientes por otra vía y su ficha no se pisa.</td>
+<td>Cargale el CUIT y la condición de IVA en <strong>Clientes</strong>.</td>
+</tr>
+<tr>
+<td>No salió la factura.</td>
+<td>No tenés factura electrónica activa, o el pago no fue online.</td>
+<td>Revisá la configuración fiscal. Podés emitirla a mano desde el pedido.</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>📞 ¿Necesitás ayuda?</h2>
+<ul>
+<li>📱 <strong>Soporte Directo WhatsApp</strong>: <a href="https://wa.me/542254629000?" target="_blank">+54 2254 62-9000</a></li>
+</ul>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/156-04-ia-pedidos-desde-asistentes.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#que-es" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué es?</a></li><li><a href="#activar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo activarlo</a></li><li><a href="#compartir" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo compartirlo con tus clientes</a></li><li><a href="#cliente" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Qué ve el cliente</a></li><li><a href="#como-llegan" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo te llegan los pedidos</a></li><li><a href="#factura" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">La factura</a></li><li><a href="#envio" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">El envío</a></li><li><a href="#problemas-comunes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué hacer si algo no sale bien? (Problemas Comunes)</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_h1c5hb = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start._c9JldS6.js"),
+						import("../_app/immutable/entry/app.D-c7qesA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"01-ia-conectar-claude",title:"IA: Conectar PaxaPos con Claude"},{slug:"02-ia-conectar-chatgpt",title:"IA: Conectar PaxaPos con ChatGPT"},{slug:"03-ia-conectar-gemini",title:"IA: Conectar PaxaPos con Gemini"},{slug:"04-ia-pedidos-desde-asistentes",title:"IA: Pedidos desde asistentes de IA"}]}]},uses:{}},{type:"data",data:{slug:"04-ia-pedidos-desde-asistentes",title:"IA: Pedidos desde asistentes de IA",content:"\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> \u003Cstrong>Configuración\u003C/strong> → grupo \u003Cstrong>Canales e IA\u003C/strong> → \u003Cstrong>Inteligencia Artificial\u003C/strong> → bloque \u003Cstrong>Pedidos desde asistentes de IA\u003C/strong>\u003Cbr>\u003Cstrong>¿Quién lo usa?:\u003C/strong> Propietario / Administrador del Comercio\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🎯 ¿Qué es?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-es\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-es\">\u003C/div>\n\n\u003Cp>Tus clientes te pueden hacer pedidos \u003Cstrong>desde su asistente de inteligencia artificial\u003C/strong> (Claude o ChatGPT). Le escriben, por ejemplo, \u003Cem>&quot;quiero 2 muzzas para retirar a las 21&quot;\u003C/em>, y el asistente arma el pedido con tu menú real.\u003C/p>\n\u003Cul>\n\u003Cli>El pedido entra a PaxaPos como cualquier pedido online, con los precios de tu menú.\u003C/li>\n\u003Cli>El cliente recibe el \u003Cstrong>total que calcula PaxaPos\u003C/strong> y, si cobrás online, el \u003Cstrong>link de pago o el QR\u003C/strong>.\u003C/li>\n\u003Cli>Cuando paga, la \u003Cstrong>factura sale sola\u003C/strong> (si tenés factura electrónica) y el cliente la ve en la misma conversación.\u003C/li>\n\u003C/ul>\n\u003Cp>Cada comercio tiene \u003Cstrong>su propia dirección\u003C/strong>. El cliente la agrega una sola vez como conector en su asistente, y desde ahí ve solo \u003Cstrong>tu\u003C/strong> comercio.\u003C/p>\n\u003Cp>No hay que instalar nada ni pedírselo a soporte: se activa con un tilde.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✅ Cómo activarlo\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"activar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"activar\">\u003C/div>\n\n\u003Col>\n\u003Cli>Entrá a \u003Cstrong>Configuración\u003C/strong> y, en el grupo \u003Cstrong>Canales e IA\u003C/strong>, elegí \u003Cstrong>Inteligencia Artificial\u003C/strong>.\u003C/li>\n\u003Cli>En el bloque \u003Cstrong>Pedidos desde asistentes de IA\u003C/strong>, tildá \u003Cstrong>Permitir pedidos desde asistentes de IA\u003C/strong>.\u003C/li>\n\u003Cli>Opcional: completá \u003Cstrong>Localidad\u003C/strong> y \u003Cstrong>Rubro\u003C/strong>. Ayudan al asistente a encontrarte.\u003C/li>\n\u003Cli>Dejá tildado \u003Cstrong>Aparecer en el buscador de comercios de PaxaPos\u003C/strong> si querés que te encuentren clientes que todavía no te conocen. Si lo destildás, te pueden pedir solo quienes tengan tu dirección.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cblockquote>\n\u003Cp>⏱️ El cambio puede tardar \u003Cstrong>unos minutos\u003C/strong> en verse en los asistentes y en tu página para clientes.\u003C/p>\n\u003C/blockquote>\n\u003Cp>Para dejar de recibir pedidos por IA, destildá \u003Cstrong>Permitir pedidos desde asistentes de IA\u003C/strong> y guardá.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔗 Cómo compartirlo con tus clientes\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"compartir\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"compartir\">\u003C/div>\n\n\u003Cp>Con el canal activo, debajo de las opciones aparece \u003Cstrong>URL para tus clientes\u003C/strong>. Por ejemplo:\u003C/p>\n\u003Cpre>\u003Ccode>https://api.paxapos.com/mcp/publico/tu_comercio\n\u003C/code>\u003C/pre>\n\u003Cul>\n\u003Cli>\u003Cstrong>Copiar\u003C/strong> la copia para que la mandes por WhatsApp, redes o mail.\u003C/li>\n\u003Cli>\u003Cstrong>Ver la página &quot;Pedí con tu IA&quot; para compartir\u003C/strong> abre la página pública de tu comercio en pedimelo (\u003Ccode>…/tu_comercio/ia\u003C/code>). Tiene:\u003Cul>\n\u003Cli>la dirección, con un botón para copiarla;\u003C/li>\n\u003Cli>los pasos para Claude y para ChatGPT;\u003C/li>\n\u003Cli>ejemplos de qué pedir;\u003C/li>\n\u003Cli>un \u003Cstrong>QR para imprimir\u003C/strong> que lleva a esa misma página. Podés pegarlo en el mostrador o en las mesas.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Cp>En tu menú de pedimelo también aparece el acceso \u003Cstrong>Pedí con tu IA\u003C/strong> mientras el canal esté activo.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📱 Qué ve el cliente\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"cliente\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"cliente\">\u003C/div>\n\n\u003Col>\n\u003Cli>Agrega tu dirección como conector en su asistente, con el nombre \u003Cstrong>Pedidos a\u003C/strong> y el de tu comercio.\u003C/li>\n\u003Cli>La primera vez verifica su celular con un \u003Cstrong>código por SMS\u003C/strong>. No necesita usuario de PaxaPos.\u003C/li>\n\u003Cli>Le pide al asistente lo que quiere. El asistente le muestra el \u003Cstrong>detalle, el total y el envío\u003C/strong>.\u003C/li>\n\u003Cli>Si cobrás online, recibe el \u003Cstrong>link de pago\u003C/strong> (o el QR) y paga desde su celular.\u003C/li>\n\u003Cli>En Claude, la tarjeta del pedido pasa sola a \u003Cstrong>Pagado\u003C/strong> y después muestra la \u003Cstrong>factura\u003C/strong> con el link al PDF. En otros asistentes alcanza con preguntar \u003Cem>&quot;¿ya está mi factura?&quot;\u003C/em>.\u003C/li>\n\u003C/ol>\n\u003Cp>Si el cliente quiere \u003Cstrong>Factura A\u003C/strong> o una factura a su nombre, le pasa al asistente su \u003Cstrong>CUIT\u003C/strong> (o su DNI) y su condición frente al IVA cuando hace el pedido. Se guardan en su ficha cuando es un cliente nuevo o cuando ya pidió antes con esa misma cuenta del asistente. Si el cliente ya estaba en tus \u003Cstrong>Clientes\u003C/strong> por otra vía (por ejemplo, lo cargaste vos o pidió por la web con el mismo teléfono), los datos del asistente no pisan su ficha: cargaselos vos en \u003Cstrong>Clientes\u003C/strong>.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🍳 Cómo te llegan los pedidos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"como-llegan\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"como-llegan\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Entran como \u003Cstrong>pedido online\u003C/strong>, igual que los de pedimelo, y siguen el mismo camino en el salón y en la cocina.\u003C/li>\n\u003Cli>En el detalle del pedido aparece la etiqueta \u003Cstrong>Pedido vía asistente de IA\u003C/strong>, y la observación dice \u003Cem>&quot;Pedido desde asistente de IA (MCP)&quot;\u003C/em>.\u003C/li>\n\u003Cli>El cliente (nombre y celular verificado) queda en \u003Cstrong>Clientes\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧾 La factura\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"factura\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"factura\">\u003C/div>\n\n\u003Cul>\n\u003Cli>Si tenés \u003Cstrong>factura electrónica\u003C/strong> activa, la factura se emite \u003Cstrong>sola\u003C/strong> cuando se aprueba el pago online, igual que en pedimelo. No tenés que hacer nada.\u003C/li>\n\u003Cli>Sin datos fiscales del cliente, sale a \u003Cstrong>Consumidor Final\u003C/strong>.\u003C/li>\n\u003Cli>Si tu comercio es \u003Cstrong>responsable inscripto\u003C/strong> y el cliente pasa el CUIT de un responsable inscripto o de un monotributista, sale \u003Cstrong>Factura A\u003C/strong>. Si tu comercio es monotributista, sale \u003Cstrong>Factura C\u003C/strong>, como siempre.\u003C/li>\n\u003Cli>Si no tenés factura electrónica, el asistente le dice al cliente que el comercio no la emite automáticamente.\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>⚠️ La factura sale con el \u003Cstrong>primer pago aprobado\u003C/strong>. Si después agregás el envío u otro ítem, ese importe no queda facturado: cobralo y facturalo aparte.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🛵 El envío\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"envio\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"envio\">\u003C/div>\n\n\u003Cp>El asistente no calcula el costo del envío. Si el pedido es a domicilio y todavía no cargaste el envío, le dice al cliente \u003Cstrong>&quot;envío a confirmar por el comercio&quot;\u003C/strong>, igual que pedimelo web. Cargalo en el pedido como siempre: el cliente ve el total actualizado cuando consulta su pedido.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"problemas-comunes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"problemas-comunes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>¿Qué te pasa?\u003C/th>\n\u003Cth>¿Por qué puede ser?\u003C/th>\n\u003Cth>¿Cómo se soluciona?\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>No veo la URL para mis clientes.\u003C/td>\n\u003Ctd>El canal no está activo o no guardaste.\u003C/td>\n\u003Ctd>Tildá \u003Cstrong>Permitir pedidos desde asistentes de IA\u003C/strong> y tocá \u003Cstrong>Guardar\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El cliente dice que la página &quot;Pedí con tu IA&quot; no existe.\u003C/td>\n\u003Ctd>El canal está apagado, o lo activaste hace muy poco.\u003C/td>\n\u003Ctd>Revisá el tilde y esperá unos minutos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El cliente no me encuentra en el buscador de su asistente.\u003C/td>\n\u003Ctd>Destildaste \u003Cstrong>Aparecer en el buscador\u003C/strong> o el canal está apagado.\u003C/td>\n\u003Ctd>Pasale tu URL directa: con ella te pide igual.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El pedido no trae link de pago.\u003C/td>\n\u003Ctd>No tenés cobros online configurados.\u003C/td>\n\u003Ctd>Configurá el cobro online en \u003Cstrong>Configuración\u003C/strong> → \u003Cstrong>Cobros\u003C/strong>. Mientras tanto, el cliente paga al retirar o al recibir.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Pidió Factura A y salió a Consumidor Final.\u003C/td>\n\u003Ctd>El cliente ya estaba en tus Clientes por otra vía y su ficha no se pisa.\u003C/td>\n\u003Ctd>Cargale el CUIT y la condición de IVA en \u003Cstrong>Clientes\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>No salió la factura.\u003C/td>\n\u003Ctd>No tenés factura electrónica activa, o el pago no fue online.\u003C/td>\n\u003Ctd>Revisá la configuración fiscal. Podés emitirla a mano desde el pedido.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Chr>\n\u003Ch2>📞 ¿Necesitás ayuda?\u003C/h2>\n\u003Cul>\n\u003Cli>📱 \u003Cstrong>Soporte Directo WhatsApp\u003C/strong>: \u003Ca href=\"https://wa.me/542254629000?\" target=\"_blank\">+54 2254 62-9000\u003C/a>\u003C/li>\n\u003C/ul>\n",tableOfContents:[{id:"que-es",title:"¿Qué es?",level:2},{id:"activar",title:"Cómo activarlo",level:2},{id:"compartir",title:"Cómo compartirlo con tus clientes",level:2},{id:"cliente",title:"Qué ve el cliente",level:2},{id:"como-llegan",title:"Cómo te llegan los pedidos",level:2},{id:"factura",title:"La factura",level:2},{id:"envio",title:"El envío",level:2},{id:"problemas-comunes",title:"¿Qué hacer si algo no sale bien? (Problemas Comunes)",level:2}],seo:{title:"IA: Pedidos desde asistentes de IA - Manual",description:"¿Dónde está en el sistema?: Configuración → grupo Canales e IA → Inteligencia Artificial → bloque Pedidos desde asistentes de IA  \n ...",keywords:"04 ia pedidos desde asistentes, paxapos, ia: pedidos desde asistentes de ia, tutorial, guía, manual usuario"},llmTxtFile:"156-04-ia-pedidos-desde-asistentes.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

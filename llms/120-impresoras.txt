@@ -1,0 +1,86 @@
+﻿# Impresoras
+
+Cómo cargar las impresoras del local
+¿Dónde está en el sistema?: Menú principal → Configuración → debajo del título Impresoras → Impresoras
+¿Quién lo usa?: Dueños, Administradores y Soporte Técnico
+🎯 ¿Para qué sirve esto?
+Acá le decís a PaxaPOS qué impresoras tiene tu local (Cocina, Barra, Caja) y cómo están conectadas. Con eso, cada comanda o ticket sale por la impresora correcta.
+---
+🔑 Antes de empezar
+• La impresora tiene que estar encendida, con papel y conectada (por USB o por cable de red).
+• Fiscalberry tiene que estar instalado y abierto en la computadora del local. Es el programa que manda los trabajos a la impresora. Descargalo en Configuración general, sección Impresión.
+• Guías de instalación: Windows, Linux y Android.
+• Si tu impresora es USB y usás Windows, instalá antes el driver. Buscalo en la Biblioteca de Drivers.
+• Tener el permiso de impresoras en Permisos por Rol.
+⚠️ Una impresora USB necesita que Fiscalberry esté en una computadora (Windows o Linux). En Android solo funcionan impresoras de red.
+---
+📍 Paso 1: Entrá a Impresoras
+!Menú lateral con el grupo Configuración marcado en rojo
+1. En el menú de la izquierda, tocá Configuración. Se despliegan sus opciones.
+!Menú lateral con la opción Impresoras marcada en rojo, debajo del título Impresoras
+2. Debajo del título Impresoras, tocá Impresoras.
+!Pantalla Impresoras Instaladas en Paxapos con una impresora cargada
+Se abre la lista Impresoras Instaladas en Paxapos. Cada impresora es una tarjeta, como la del centro de la foto.
+---
+🖨️ Paso 2: Conocé la tarjeta de cada impresora
+En la foto de arriba, la tarjeta muestra:
+• El nombre de la impresora.
+• Cuántos productos salen por ella. Si no tiene ninguno, dice Sin productos relacionados.
+• Paxaprinter: el Fiscalberry que la maneja. Si dice (default), usa el principal del local.
+• Creada y Modificada: cuándo se cargó y cuándo se cambió por última vez.
+Abajo tiene tres botones (Test de impresión, Editar y Borrar):
+• Test de impresión: manda un ticket de prueba de verdad. Si no sale papel, revisá la tabla del final.
+• Editar: abre la ventanita con los datos para cambiarlos.
+• Borrar (rojo): elimina la impresora. Antes te pide confirmación.
+⚠️ Atención: Test de impresión gasta papel y Borrar saca la impresora. Los productos que salían por ella quedan sin impresora.
+---
+➕ Paso 3: Tocá "Nueva Impresora"
+!Pantalla Impresoras con el botón verde Nueva Impresora marcado en rojo arriba a la derecha
+1. Buscá el botón verde Nueva Impresora, arriba a la derecha.
+2. Tocalo una vez.
+3. Se abre la ventanita Agregar Impresora.
+---
+📝 Paso 4: Completá los datos
+!Ventanita Agregar Impresora con nombre Cocina Prueba, driver Impresora instalada en Windows y ancho de papel
+• Nombre: un nombre fácil de reconocer. Por ejemplo: Cocina, Barra o Caja.
+• Alias: un nombre corto opcional. Solo lo ven Dueños y Administradores.
+• Driver: cómo está conectada la impresora. Al elegir uno, cambian los casilleros de abajo.
+• Ancho de papel: el tamaño del rollo. 80mm (40 columnas) es el más común. También hay 80mm fuente chica (48 columnas) y 58mm (32 columnas). Si no elegís, usa 40.
+• Paxaprinter: el Fiscalberry que va a imprimir. Los círculos rojos son los que están apagados y el verde el que está conectado. Con Default usa el principal.
+• Agregar (verde): guarda la impresora.
+• Cancelar: cierra sin guardar.
+Estas son las opciones de Driver:
+| Fiscalberry está en… | La impresora se conecta por… | Elegí en Driver |
+|---|---|---|
+| Windows | USB, con el driver instalado | Impresora instalada en Windows |
+| Windows, Linux o Android | Cable de red | Impresora de Red |
+| Linux | USB | USB (o CUPS) |
+| Android | Bluetooth | Impresora Bluetooth |
+También existen Serial, Archivo, Impresion mediante LP y Test Dummy. Son para casos especiales: pedí ayuda a soporte.
+!Ventanita con Driver Impresora de Red, IP 192.168.0.200, puerto 9100 y ancho 80mm
+Con Impresora de Red aparecen dos casilleros:
+• IP de la impresora: el número de la impresora en tu red. Por ejemplo: 192.168.0.200.
+• Puerto: dejá 9100, salvo que soporte te diga otro.
+💡 Consejo útil: para saber la IP, imprimí la hoja de autotest. En la mayoría de los modelos apagás la impresora, mantenés apretado FEED y la prendés. La IP tiene que empezar con los mismos tres números que la de tu computadora.
+Con Impresora instalada en Windows aparece Nombre de la impresora. Escribilo igual que en Windows.
+---
+💾 Paso 5: Guardá y probá
+1. Tocá Agregar. La ventanita se cierra y la impresora aparece en la lista.
+2. En su tarjeta, tocá Test de impresión. Tiene que salir un ticket.
+Para cambiar algo después, tocá Editar en la tarjeta. Se abre la misma ventanita con los datos cargados.
+---
+🍕 Paso 6: Elegí la impresora en cada producto
+Para que la bebida salga en la barra y la comida en la cocina, al cargar cada producto tildá la impresora en ¿Dónde se imprime la comanda?.
+Ver cómo: Menú de Productos.
+💡 Consejo útil: en Configuración general, sección Impresión, tiene que estar elegido el Servidor de impresión de tu local. Si querés armar distintos juegos de impresoras, mirá Perfiles de Impresión.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No imprime nada, en ninguna impresora. | Fiscalberry está cerrado. | Abrilo en la computadora del local y dejalo siempre abierto. |
+| El test no sale en una impresora USB. | Falta el driver o el Nombre de la impresora no es igual al de Windows. | Instalá el driver de la Biblioteca de Drivers y copiá el nombre exacto. |
+| El test no sale en una impresora de red. | La IP está mal o no está en la misma red. | Imprimí la hoja de autotest, revisá la IP y comparala con la de la computadora. |
+| El texto sale cortado. | El Ancho de papel no coincide con el rollo. | Tocá Editar y elegí el ancho correcto. |
+| En Paxaprinter aparece el mío con un círculo rojo. | Ese Fiscalberry está apagado o sin internet. | Abrilo en su computadora y esperá unos segundos. |
+| No veo el casillero Alias. | Solo lo ven Dueños y Administradores. | Pedile a un Dueño que lo cargue. |
+| La tarjeta dice Paxaprinter #N no encontrada (eliminada). | El Fiscalberry se eliminó. | Tocá Editar y elegí otro Paxaprinter. |

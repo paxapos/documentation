@@ -1,0 +1,100 @@
+﻿# Caja Rapida
+
+Cómo Usar la Caja Rápida (Registradora)
+¿Dónde está en el sistema?: Menú principal → Ventas → Caja Rápida
+¿Quién lo usa?: Cajeros y personal de mostrador
+🎯 ¿Para qué sirve esto?
+La Caja Rápida funciona como una registradora. Sirve para vender en el mostrador sin abrir una mesa. Es ideal para take-away, kioscos o cafeterías de paso.
+---
+📍 Paso 1: Entrá a la Caja Rápida
+!Grupo Ventas del menú lateral, marcado en rojo
+1. En el menú de la izquierda, tocá Ventas. Se despliegan sus opciones.
+!Opción Caja Rápida dentro del grupo Ventas, marcada en rojo
+2. Tocá Caja Rápida.
+3. Se abre la pantalla de la registradora.
+!Pantalla de la Caja Rápida con los productos a la izquierda y el total a la derecha
+En esta pantalla vas a ver:
+• Arriba: el menú de precios que se usa (por ejemplo, Menú #Catálogo) y el mozo.
+• Arriba a la derecha: los botones de la caja y el botón Ayuda (H).
+• A la izquierda: los productos para vender.
+• A la derecha: el total a pagar y la lista de lo que vas cargando.
+• Abajo: el botón verde COBRAR.
+---
+💰 Paso 2: Abrí la caja antes de vender
+⚠️ Atención: Si la caja está cerrada, la pantalla no muestra ningún producto. Primero abrí la caja.
+!Botón Abrir Caja en la parte de arriba de la registradora
+1. Arriba a la derecha, tocá el botón Abrir Caja.
+2. Se abre una ventanita para abrir la caja.
+!Ventanita Nuevo Arqueo con la caja y el importe inicial
+3. En Caja, elegí la caja que vas a usar.
+4. En Importe inicial, escribí la plata que hay en el cajón al empezar. Por ejemplo: $ 20.000.
+!Pantalla Nuevo Arqueo con el botón Abrir Arqueo marcado en rojo
+5. Tocá el botón azul Abrir Arqueo.
+6. La caja queda abierta y aparecen los productos.
+💡 Consejo útil: La caja queda abierta hasta que la cierres. No hace falta abrirla en cada venta.
+---
+🧰 Botones de la caja (arriba a la derecha)
+Con la caja abierta, arriba a la derecha vas a ver estos botones:
+!Registradora con el botón Cerrar Caja marcado en rojo
+• Cerrar Caja: se usa al terminar el turno, para contar la plata y cerrar la caja.
+⚠️ Atención: Cerrar la caja termina el turno. Después no vas a poder vender hasta abrirla de nuevo.
+!Registradora con el botón Retiro marcado en rojo
+• Retiro: anotá cuando sacás plata del cajón. Por ejemplo, para pagarle a un proveedor.
+!Registradora con el botón Ingreso marcado en rojo
+• Ingreso: anotá cuando ponés plata en el cajón. Por ejemplo, cambio extra.
+!Registradora con el botón Ayuda marcado en rojo
+• Ayuda (H): abre una guía rápida de la pantalla y los atajos de teclado. También se abre con la tecla H.
+---
+🛒 Paso 3: Cargá los productos de la venta
+!Casillero Buscar producto arriba de la lista de productos
+1. Si tenés muchos productos, escribí el nombre en Buscar producto.... La lista se achica mientras escribís.
+!Registradora con el producto Café marcado en rojo
+2. Tocá el producto. Por ejemplo, Café.
+3. En el medio aparece un teclado con números.
+!Teclado numérico con el importe del Café escrito
+!Recuadro Importe con el precio escrito
+4. Escribí el importe con los números del teclado. Por ejemplo: 1, 2, 0, 0 para $ 1.200.
+!Teclado con el botón de la flecha marcado en rojo
+• Si te equivocaste en un número, tocá la flecha ←. Borra el último número.
+!Teclado con el botón C marcado en rojo
+• Para empezar de nuevo, tocá C. Borra todo el importe.
+!Teclado con el botón Agregar marcado en rojo
+5. Tocá el botón verde AGREGAR.
+6. El producto aparece en la lista de la derecha. El Total a pagar se actualiza.
+!Registradora con el Café en la lista y el total a pagar de $1200
+7. Repetí los pasos para cada producto de la venta.
+---
+✏️ Paso 4: Corregí la lista si te equivocaste
+• Para quitar un producto, tocá la ✕ gris a la izquierda (o cualquier parte de la fila, menos el precio).
+• Aparece un aviso con Deshacer. Tenés 5 segundos por si lo borraste sin querer.
+!Precio del producto con el lápiz para corregirlo
+• Para cambiar el precio, tocá el precio (el que tiene el lápiz ✏️). Escribí el importe correcto.
+!Registradora con el botón Vaciar marcado en rojo
+• Para borrar toda la lista, tocá Vaciar. El sistema te pide que confirmes.
+---
+💵 Paso 5: Cobrá la venta
+!Registradora con el botón Cobrar marcado en rojo abajo de todo
+1. Revisá el Total a pagar.
+2. Tocá el botón verde COBRAR, abajo de todo.
+3. Se abre la pantalla de cobro con los medios de pago.
+!Pantalla de cobro con los medios de pago
+⚠️ Atención: Tocar un medio de pago cobra la venta en ese momento. No hay un paso para confirmar. Revisá la lista antes de tocarlo.
+!Botón verde de un medio de pago
+4. Tocá el medio de pago que usa el cliente. Por ejemplo: Efectivo, Tarjeta Débito o Mercado Pago.
+5. La venta queda cobrada. Si hay impresora, sale el ticket.
+6. La lista queda vacía, lista para la próxima venta.
+!Pantalla de cobro con el botón Más medios de pago marcado en rojo
+• Si no ves el medio de pago, tocá Más medios de pago. Aparecen los demás.
+!Pantalla de cobro con todos los medios de pago a la vista
+!Pantalla de cobro con el botón Volver marcado en rojo
+• Si todavía no querés cobrar, tocá ← Volver. Volvés a la lista sin cobrar nada.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| No aparecen productos en la pantalla | La caja está cerrada. | Abrí la caja (ver Paso 2). |
+| Sigue sin haber productos con la caja abierta | El menú no tiene productos sueltos, o están todos dentro de categorías. | Pedile al encargado que revise el menú en Productos → Menú. |
+| El botón Cobrar está gris | No agregaste ningún producto a la lista. | Agregá al menos un producto antes de cobrar. |
+| El ticket no se imprime | La impresora está apagada, desconectada o sin papel. | Revisá la impresora y que Fiscalberry esté abierto (ver Gestión de Impresoras). |
+| Te equivocaste de producto | Tocaste otro producto. | Tocá la ✕ al lado del producto para quitarlo antes de cobrar. Si lo quitaste sin querer, tocá Deshacer. |
+| Cobraste con el medio de pago equivocado | Tocaste otro medio de pago. | Avisale al encargado: se corrige desde Finanzas. |

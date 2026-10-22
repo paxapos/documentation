@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="google-site-verification"
+			content="gv94seneDsRh2KRNqxYpolBSiyiSfrEbDQH68DM9nrM"
+		/>
+		<link rel="icon" href="../favicon.png?v=2025" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			// Detección y aplicación inmediata del tema para evitar flash
+			(function () {
+				function setTheme() {
+					const html = document.documentElement;
+
+					// Detectar preferencia del usuario/sistema
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+					// Aplicar clase dark si prefiere modo oscuro
+					if (prefersDark) {
+						html.classList.add('dark');
+						html.style.colorScheme = 'dark';
+					} else {
+						html.classList.remove('dark');
+						html.style.colorScheme = 'light';
+					}
+				}
+
+				// Aplicar tema inmediatamente
+				setTheme();
+
+				// Escuchar cambios en las preferencias del sistema
+				if (window.matchMedia) {
+					const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+					// Para navegadores modernos
+					if (mediaQuery.addEventListener) {
+						mediaQuery.addEventListener('change', setTheme);
+					}
+					// Para navegadores más antiguos
+					else if (mediaQuery.addListener) {
+						mediaQuery.addListener(setTheme);
+					}
+				}
+			})();
+		</script>
+		<link href="../_app/immutable/entry/start._c9JldS6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DU8MmcuH.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ByrFRQPw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DXFcn5jp.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.D-c7qesA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B_HDxj0k.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJEtEga6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BZkcyU73.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6vfo3pw.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BFG-4_fS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BP90N8UI.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.CmoI5UMe.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/rsi3E5U7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL6LT0BL.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dm2j7OkL.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/2.BaxY_sfs.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.DotHWGY5.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TinfA5MI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BkM3r2b6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DPVoHm3K.js" rel="modulepreload">
+		<!--1qasyfb--><meta name="description" content="¿Dónde está en el sistema?: En ChatGPT (chatgpt.com o la app de escritorio) → Plugins → Add (Agregar)  
+ ¿Quién lo usa?: Propietario /..."/> <meta name="keywords" content="02 ia conectar chatgpt, paxapos, ia: conectar paxapos con chatgpt, tutorial, guía, manual usuario, PaxaPOS, sistema restaurante, punto de venta, gestión gastronómica, software restaurante argentino, facturación AFIP, control stock, kitchen display system, KDS"/> <meta name="author" content="PaxaPOS"/> <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/> <meta name="googlebot" content="index, follow"/> <meta name="language" content="Spanish"/> <meta name="geo.region" content="AR"/> <meta name="geo.country" content="Argentina"/> <link rel="canonical" href="https://doc.paxapos.com"/> <meta property="og:type" content="article"/> <meta property="og:title" content="IA: Conectar PaxaPos con ChatGPT - Manual"/> <meta property="og:description" content="¿Dónde está en el sistema?: En ChatGPT (chatgpt.com o la app de escritorio) → Plugins → Add (Agregar)  
+ ¿Quién lo usa?: Propietario /..."/> <meta property="og:url" content="https://doc.paxapos.com"/> <meta property="og:image" content="https://doc.paxapos.com/favicon.png"/> <meta property="og:image:alt" content="IA: Conectar PaxaPos con ChatGPT - Manual"/> <meta property="og:site_name" content="PaxaPOS Documentation"/> <meta property="og:locale" content="es_AR"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="IA: Conectar PaxaPos con ChatGPT - Manual"/> <meta name="twitter:description" content="¿Dónde está en el sistema?: En ChatGPT (chatgpt.com o la app de escritorio) → Plugins → Add (Agregar)  
+ ¿Quién lo usa?: Propietario /..."/> <meta name="twitter:image" content="https://doc.paxapos.com/favicon.png"/> <meta name="twitter:site" content="@paxapos"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "IA: Conectar PaxaPos con ChatGPT - Manual",
+  "description": "¿Dónde está en el sistema?: En ChatGPT (chatgpt.com o la app de escritorio) → Plugins → Add (Agregar)  \n ¿Quién lo usa?: Propietario /...",
+  "url": "https://doc.paxapos.com",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-10-22",
+  "author": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "url": "https://paxapos.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaxaPOS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://doc.paxapos.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://doc.paxapos.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://doc.paxapos.com/favicon.png"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PaxaPOS Documentation",
+    "@id": "https://doc.paxapos.com"
+  },
+  "articleSection": "Manual de Usuario"
+}</script><!----> <meta name="article:publisher" content="PaxaPOS"/> <!--[0--><meta name="article:section" content="Manual de Usuario"/><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--> <link rel="preload" href="/favicon.png" as="image"/>  <!----><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaxaPOS",
+  "url": "https://paxapos.com",
+  "logo": "https://doc.paxapos.com/favicon.png",
+  "description": "Sistema integral de gestión para restaurantes, bares y comercios gastronómicos en Argentina",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://doc.paxapos.com"
+  ]
+}</script><!----><!----><title>IA: Conectar PaxaPos con ChatGPT - Manual | PaxaPOS Documentation</title>
+		<link href="../_app/immutable/assets/0.CgUJ1Dut.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="min-h-screen bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-white"><nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/90"><div class="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 md:h-16 lg:px-8"><!--[-1--><!--]--> <a href="../user-guide" class="min-w-0 truncate text-base font-bold text-gray-900 sm:text-xl dark:text-white ">📚 Centro de Documentación</a> <div class="relative ml-auto hidden w-full max-w-lg md:block"><div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"><!--[-1--><svg class="h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><!--]--><!----></div> <input type="search" placeholder="Buscar en el manual..." class="h-11 w-full rounded-xl border border-gray-300 bg-white pr-4 pl-12 text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" value=""/> <!--[-1--><!--]--><!----></div> <!--[0--><button type="button" class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200" aria-label="Buscar"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button><!--]--></div></nav><!----> <main class="w-full max-w-full overflow-x-clip bg-white dark:bg-gray-900"><div class="w-full"><!--[0--><!--[--><div class="flex min-h-screen bg-gray-100 dark:bg-gray-900"><div class="flex-1 lg:ml-0"><main class="flex-1 bg-white dark:bg-gray-900"><div class="w-full"><!--[--><!--[-1--><!--]--> <!----> <!--[-1--><!--]--> <div class="relative z-10 min-h-screen w-full overflow-x-clip bg-white dark:bg-gray-900"><!--[0--><!--[-1--><!--]--><!--]--><!----> <div class="grid w-full grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)_15rem]"><div class="hidden border-r border-gray-200 px-5 pt-8 lg:block dark:border-gray-800"><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8"><p class="mb-4 text-sm font-semibold text-gray-950 dark:text-white">Manual de Usuario</p> <nav aria-label="Temario del manual" class="space-y-5"><!--[--><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comenzamos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Ventas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Medios de Pago</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Productos</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Compras</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Stock</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Finanzas</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Comandero</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>RRHH</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Reportes</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Configuracion</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="false"><span>Biblioteca de Drivers</span> <svg class="h-4 w-4 shrink-0 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></section><section><button type="button" class="flex min-h-11 w-full items-center justify-between gap-3 text-left text-xs font-semibold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-expanded="true"><span>Extra</span> <svg class="h-4 w-4 shrink-0 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[0--><ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="../user-guide/03-faq-mozo-reabrir-mesa-anulada" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Reabrir una Mesa Anulada o Cerrada por Error</a></li><li><a href="../user-guide/06-faq-cajero-ingreso-egreso-cajon" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Cómo Registrar Entradas y Salidas de Dinero del Cajón</a></li><li><a href="../user-guide/08-faq-cajero-diferencia-facturado-vs-abiertas" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Diferencia entre "Facturado Total Mesas" y "Abiertas Por Usuario" en Caja</a></li><li><a href="../user-guide/buchon-bot" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">Buchón Bot</a></li><li><a href="../user-guide/01-ia-conectar-claude" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Conectar PaxaPos con Claude</a></li><li><a href="../user-guide/02-ia-conectar-chatgpt" aria-current="page" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors -ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300">IA: Conectar PaxaPos con ChatGPT</a></li><li><a href="../user-guide/03-ia-conectar-gemini" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Conectar PaxaPos con Gemini</a></li><li><a href="../user-guide/04-ia-pedidos-desde-asistentes" class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white">IA: Pedidos desde asistentes de IA</a></li><!--]--></ul><!--]--></section><!--]--></nav><!----></aside><!--]--><!----></div> <main class="min-w-0 px-4 py-5 sm:px-6 lg:px-10 lg:py-8 xl:px-12"><div class="sticky top-14 z-30 -mx-4 -mt-5 mb-2 flex items-center gap-2 border-b border-gray-200 bg-white/95 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 md:top-16 lg:-mx-10 lg:-mt-8 lg:px-10 xl:hidden dark:border-gray-800 dark:bg-gray-900/95"><button type="button" class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 text-sm font-semibold text-gray-900 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 lg:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600" aria-expanded="false"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> Temario</button> <!--[0--><!--[0--><div class="relative min-w-0 flex-1 xl:hidden"><button type="button" aria-expanded="false" class="flex h-9 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-left text-sm text-gray-700 hover:border-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-600"><span class="shrink-0 font-semibold text-gray-900 dark:text-white">En esta página</span> <!--[-1--><!--]--> <svg class="ml-auto h-4 w-4 shrink-0 text-gray-500 transition-transform dark:text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></button> <!--[-1--><!--]--></div><!--]--><!--]--><!----></div> <div class="w-full"><article><header class="border-b border-gray-200 pt-6 pb-6 dark:border-gray-800"><p class="mb-3 text-sm font-medium text-blue-700 dark:text-blue-300">Manual de Usuario</p> <h1 class="text-3xl leading-tight font-bold text-gray-950 sm:text-4xl lg:text-5xl dark:text-white">IA: Conectar PaxaPos con ChatGPT</h1> <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400"><span>ID: 02-ia-conectar-chatgpt</span> <button type="button" class="inline-flex min-h-11 items-center gap-2 font-medium text-gray-700 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300 dark:hover:text-blue-300" title="Compartir esta página"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.5M16.5 3h-9a3 3 0 0 0-3 3v9M12 8l4-4m0 0-4-4m4 4H8"></path></svg> Compartir</button></div></header> <div class="markdown-paxapos"><!----><blockquote>
+<p><strong>¿Dónde está en el sistema?:</strong> En <strong>ChatGPT</strong> (chatgpt.com o la app de escritorio) → <strong>Plugins</strong> → <strong>Add</strong> (Agregar)<br><strong>¿Quién lo usa?:</strong> Propietario / Administrador del Comercio (o cualquier usuario de PaxaPos que quiera consultar su comercio desde ChatGPT)</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🎯 ¿Qué es y para qué sirve esta guía?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-es"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-es"></div>
+
+<p>PaxaPos tiene un <strong>servidor MCP</strong>: una &quot;puerta&quot; que permite que asistentes de inteligencia artificial como ChatGPT lean y operen los datos de tu comercio (ventas, stock, compras, caja, etc.).</p>
+<p>Una vez conectado, podés pedirle a ChatGPT cosas como <em>&quot;¿cuánto vendí ayer?&quot;</em> o <em>&quot;pasame las órdenes de compra pendientes&quot;</em> y te responde con los datos reales de PaxaPos.</p>
+<p>PaxaPos tiene <strong>un conector por área</strong> (salón, caja, compras, finanzas, RRHH, etc.) y uno con todo. Elegí el que corresponde en <a href="#que-conector-elijo">¿Qué conector elijo?</a>. El que tiene todo es:</p>
+<pre><code>https://api.paxapos.com/mcp
+</code></pre>
+<hr>
+<h2 class="relative">
+                ✅ Antes de empezar
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="requisitos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="requisitos"></div>
+
+<ul>
+<li><strong>Un usuario de PaxaPos</strong> con su email y contraseña. ChatGPT trabaja con <strong>tu</strong> usuario: ve solo lo que tu rol permite.</li>
+<li><strong>Una cuenta de ChatGPT que permita agregar apps MCP personalizadas.</strong> Esto depende de tu plan y de cómo esté configurada tu cuenta. En algunos planes hay que activar antes el <strong>modo desarrollador</strong> (<em>Developer mode</em>) en los ajustes de ChatGPT, y en los planes de equipo o empresa lo habilita el <strong>administrador</strong> del espacio de trabajo. Si no ves la opción <strong>Create MCP app</strong> en el <a href="#paso-2">paso 2</a>, consultalo en la ayuda de ChatGPT o con tu administrador.</li>
+<li>La <strong>dirección (URL) del conector</strong> que vas a usar. La tabla está en <a href="#que-conector-elijo">¿Qué conector elijo?</a>.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                📑 Guía Paso a Paso
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-a-paso"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="paso-a-paso"></div>
+
+<h3 class="relative">
+                1. Entrar a Plugins y tocar Add
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-1"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-1"></div>
+
+<ol>
+<li>Entrá a <strong>ChatGPT</strong> con tu cuenta.</li>
+<li>En el menú lateral, tocá <strong>Plugins</strong>.</li>
+<li>Arriba a la derecha, tocá el botón <strong>Add</strong> (Agregar).</li>
+</ol>
+<p><img src="/images/manual/150-extra/ia/156-02-01-chatgpt-plugins-add.png" alt="Pantalla Plugins de ChatGPT con la opción Plugins del menú lateral y el botón Add señalados"></p>
+<h3 class="relative">
+                2. Crear una app MCP
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-2"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-2"></div>
+
+<p>En el menú que se despliega desde <strong>Add</strong>, elegí <strong>Create MCP app</strong> (Crear app MCP).</p>
+<h3 class="relative">
+                3. Cargar el nombre y la URL del MCP
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-3"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-3"></div>
+
+<p>Se abre la ventana <strong>New Plugin</strong>:</p>
+<ol>
+<li>En <strong>Name</strong> (Nombre) escribí un nombre que diga el área, por ejemplo <code>PaxaPos Compras</code>. Si vas a usar el conector con todo, <code>PaxaPos</code>.</li>
+<li>En <strong>Connection</strong>, con la opción <strong>Server URL</strong> seleccionada, pegá la URL del conector que elegiste (ver <a href="#que-conector-elijo">¿Qué conector elijo?</a>), por ejemplo:<br><code>https://api.paxapos.com/mcp/compras</code></li>
+<li>Dejá <strong>Authentication</strong> en <strong>OAuth</strong>.</li>
+<li>Marcá la casilla <strong>I understand and want to continue</strong> (Entiendo y quiero continuar) para aceptar los términos.</li>
+<li>Tocá <strong>Create</strong> (Crear).</li>
+</ol>
+<p><img src="/images/manual/150-extra/ia/156-02-02-chatgpt-new-plugin.png" alt="Ventana New Plugin con los campos Name y Connection resaltados, la casilla I understand and want to continue y el botón Create"></p>
+<h3 class="relative">
+                4. Continuar a PaxaPos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-4"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-4"></div>
+
+<p>Aparece la ventana <strong>Connect paxapos</strong>. Tocá <strong>Continue to paxapos</strong> (Continuar a PaxaPos).</p>
+<p><img src="/images/manual/150-extra/ia/156-02-03-chatgpt-connect-paxapos.png" alt="Ventana Connect paxapos con el botón Continue to paxapos"></p>
+<h3 class="relative">
+                5. Iniciar sesión con tu usuario de PaxaPos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-5"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-5"></div>
+
+<p>ChatGPT te redirige a la pantalla de login de <strong>PaxaPos</strong>:</p>
+<ol>
+<li>Ingresá el <strong>Email</strong> y la <strong>Contraseña</strong> con los que entrás a PaxaPos.</li>
+<li>Tocá <strong>Iniciar sesión y autorizar</strong>.</li>
+</ol>
+<p><img src="/images/manual/150-extra/ia/156-02-04-paxapos-login-autorizar.png" alt="Pantalla de login de PaxaPos pidiendo email y contraseña con el botón Iniciar sesión y autorizar"></p>
+<p>✅ <strong>¡Listo!</strong> PaxaPos queda conectado a ChatGPT. Ya podés abrir un chat nuevo y preguntarle sobre tu comercio.</p>
+<blockquote>
+<p>🔒 <strong>Tranquilo:</strong> ChatGPT solo puede operar sobre los comercios y con los permisos que tu usuario ya tiene en PaxaPos. Si tu usuario no puede ver la caja, ChatGPT tampoco.</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>Tu contraseña de PaxaPos se escribe solo en la pantalla de login de PaxaPos.</strong> Nunca se la pegues a ChatGPT en el chat.</p>
+</blockquote>
+<h3 class="relative">
+                6. Usarlo en un chat
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="paso-6"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h3>
+            <div id="paso-6"></div>
+
+<p>Abrí un chat nuevo y pedile lo que necesites en lenguaje normal. Si ChatGPT no usa PaxaPos por su cuenta, nombralo en el pedido (<em>&quot;Con PaxaPos, ¿cuánto vendí ayer?&quot;</em>) y fijate de que la app esté activada para esa conversación, según te lo muestre tu versión de ChatGPT.</p>
+<hr>
+<h2 class="relative">
+                🧩 ¿Qué conector elijo?
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="que-conector-elijo"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="que-conector-elijo"></div>
+
+<p>PaxaPos no tiene un solo conector: tiene <strong>uno por trabajo</strong>, con las herramientas de esa tarea. Así ChatGPT elige mejor qué hacer y cada conversación carga solo lo que necesita.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Conector</th>
+<th>URL</th>
+<th>Para qué</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Salón</td>
+<td><code>https://api.paxapos.com/mcp/salon</code></td>
+<td>Mesas, comandas, cobro en mesa y consulta del menú.</td>
+</tr>
+<tr>
+<td>Clientes</td>
+<td><code>https://api.paxapos.com/mcp/clientes</code></td>
+<td>Reservas, pedidos online que entran (delivery y take away) y tus clientes.</td>
+</tr>
+<tr>
+<td>Caja</td>
+<td><code>https://api.paxapos.com/mcp/caja</code></td>
+<td>Caja y cobros, facturación (AFIP) de ventas, y corrección o reapertura de mesas ya cobradas.</td>
+</tr>
+<tr>
+<td>Reportes</td>
+<td><code>https://api.paxapos.com/mcp/reportes</code></td>
+<td>Estadísticas de ventas, libro IVA, rentabilidad y flujo de fondos.</td>
+</tr>
+<tr>
+<td>Compras</td>
+<td><code>https://api.paxapos.com/mcp/compras</code></td>
+<td>Solicitudes y órdenes de compra, y recepción de mercadería.</td>
+</tr>
+<tr>
+<td>Abastecimiento</td>
+<td><code>https://api.paxapos.com/mcp/abastecimiento</code></td>
+<td>Mercaderías, proveedores, stock y recetas.</td>
+</tr>
+<tr>
+<td>Finanzas</td>
+<td><code>https://api.paxapos.com/mcp/finanzas</code></td>
+<td>Gastos y facturas de proveedor, deudas, pagos y cierres contables.</td>
+</tr>
+<tr>
+<td>Catálogo</td>
+<td><code>https://api.paxapos.com/mcp/catalogo</code></td>
+<td>Productos, categorías, precios (también en lote), descuentos, cupones, sectores y salones.</td>
+</tr>
+<tr>
+<td>RRHH</td>
+<td><code>https://api.paxapos.com/mcp/rrhh</code></td>
+<td>Empleados, fichajes, liquidación de sueldos, vacaciones y licencias.</td>
+</tr>
+<tr>
+<td>Administración</td>
+<td><code>https://api.paxapos.com/mcp/admin</code></td>
+<td>Datos del comercio, usuarios, roles y permisos, <strong>solo para consultar</strong>.</td>
+</tr>
+<tr>
+<td>Todo</td>
+<td><code>https://api.paxapos.com/mcp</code></td>
+<td>Lo de todos los días en un solo conector; busca y usa el resto de las herramientas cuando se lo pedís.</td>
+</tr>
+</tbody></table></div>
+<h3>¿Cuál elijo?</h3>
+<ul>
+<li><strong>Si no sabés cuál, usá el de Todo</strong> (<code>https://api.paxapos.com/mcp</code>). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, ChatGPT lo busca, mira cómo se usa y lo ejecuta por su cuenta.</li>
+<li><strong>Si tu plan de ChatGPT admite un solo conector</strong>, también este: el de <strong>Todo</strong>.</li>
+<li><strong>Si vas a trabajar siempre en lo mismo</strong>, el del área hace que ChatGPT responda más rápido y con menos vueltas. Por ejemplo: <strong>Salón</strong> para el mozo o el encargado de turno, <strong>Clientes</strong> para quien atiende reservas y pedidos online, <strong>Caja</strong> para quien cobra y cierra, <strong>Compras</strong> para quien pide mercadería y recibe, <strong>Finanzas</strong> para quien carga facturas y paga a proveedores.</li>
+<li><strong>Podés agregar varios</strong>, cada uno como una app aparte (repetí los pasos 1 a 5 con otra URL). Cada uno inicia sesión con tu mismo usuario.</li>
+<li><strong>Cada usuario ve solo las herramientas que su rol permite</strong>, en cualquier conector. Si tu rol no incluye una acción, esa herramienta no aparece.</li>
+<li>Si le pedís algo que no está en el conector que usás, PaxaPos le avisa a ChatGPT en cuál está y con qué dirección agregarlo.</li>
+</ul>
+<h3>Si ya tenías conectores cargados</h3>
+<p>Las direcciones de siempre (<code>/mcp</code>, <code>/mcp/salon</code>, <code>/mcp/caja</code>, <code>/mcp/compras</code>, <code>/mcp/catalogo</code> y <code>/mcp/rrhh</code>) <strong>siguen funcionando</strong>, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:</p>
+<ul>
+<li>Si usabas <strong>Compras</strong> para cargar facturas de proveedor o pagar, sumá <strong>Finanzas</strong>.</li>
+<li>Si usabas <strong>Salón</strong> para reservas, pedidos online o clientes, sumá <strong>Clientes</strong>.</li>
+<li>Si usabas <strong>Salón</strong> para reabrir o corregir una mesa ya cobrada, sumá <strong>Caja</strong>.</li>
+<li><strong>Administración</strong> pasó a ser de consulta (datos del comercio, usuarios, roles y permisos). Los clientes están en <strong>Clientes</strong>, y los descuentos, cupones y sectores en <strong>Catálogo</strong>.</li>
+</ul>
+<hr>
+<hr>
+<h2 class="relative">
+                💬 Ejemplos de qué pedirle
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="ejemplos"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="ejemplos"></div>
+
+<p><strong>Consultas</strong> (con cualquier conector que tenga esos datos):</p>
+<ul>
+<li><em>&quot;¿Cuánto vendí ayer?&quot;</em></li>
+<li><em>&quot;Mostrame el resumen de ventas de esta semana.&quot;</em></li>
+<li><em>&quot;¿Cuáles fueron los productos más vendidos del mes?&quot;</em></li>
+<li><em>&quot;Pasame las órdenes de compra pendientes.&quot;</em></li>
+<li><em>&quot;¿Qué proveedores tengo con deuda pendiente?&quot;</em></li>
+<li><em>&quot;¿Qué mercaderías me recomendás reponer?&quot;</em></li>
+<li><em>&quot;¿Qué mesas están abiertas ahora?&quot;</em></li>
+<li><em>&quot;¿Qué reservas tengo para el sábado a la noche?&quot;</em> (Clientes)</li>
+<li><em>&quot;¿Qué usuarios tienen rol de cajero?&quot;</em> (Administración)</li>
+</ul>
+<p><strong>Acciones</strong> (según el conector y los permisos de tu usuario):</p>
+<ul>
+<li><em>&quot;Armá la orden de compra con las solicitudes de verdulería.&quot;</em> (Compras)</li>
+<li><em>&quot;Llegó la mercadería de la OC 1234: faltaron 2 cajones de tomate.&quot;</em> (Compras)</li>
+<li><em>&quot;Subí un 10% los precios de la categoría Bebidas.&quot;</em> (Catálogo)</li>
+<li><em>&quot;La mesa 12 se cobró con el medio de pago equivocado: corregilo.&quot;</em> (Caja)</li>
+<li><em>&quot;Aceptá el pedido online que acaba de entrar.&quot;</em> (Clientes)</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Tip:</strong> si el pedido es amplio (&quot;mostrame todas las compras del año&quot;), ChatGPT puede traer los datos de a partes. Acotá con una fecha, un proveedor o un producto y la respuesta sale más completa y más rápida.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                🛡️ Acciones que modifican datos
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="confirmaciones"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="confirmaciones"></div>
+
+<p>ChatGPT <strong>puede leer y también modificar</strong> datos de PaxaPos, siempre dentro de los permisos de tu usuario. Para que no haya sorpresas:</p>
+<ul>
+<li><strong>Las consultas no cambian nada.</strong> Ver ventas, stock o compras no modifica datos.</li>
+<li><strong>Las acciones que modifican datos se hacen solo cuando vos se lo pedís.</strong></li>
+<li><strong>Las que no se pueden deshacer</strong> (por ejemplo, pagos, cierres o reabrir una mesa cobrada) <strong>piden confirmación explícita</strong>: ChatGPT te cuenta qué va a hacer y espera tu &quot;sí&quot; antes de ejecutarlo.</li>
+<li><strong>ChatGPT también puede pedirte aprobación</strong> antes de usar una herramienta que modifica datos. Leé lo que te muestra antes de aceptar.</li>
+<li><strong>Revisá siempre el resumen antes de confirmar</strong>: importes, proveedor, fecha, cantidades.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🔎 Investigación profunda (<em>deep research</em>)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="deep-research"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="deep-research"></div>
+
+<p>ChatGPT tiene un modo de <strong>investigación profunda</strong> que junta información de varias fuentes y arma un informe con citas. PaxaPos está preparado para eso: ChatGPT puede <strong>buscar</strong> en tu comercio (productos, clientes, proveedores, órdenes de compra, facturas, gastos y mesas) y <strong>abrir</strong> cada registro para citarlo.</p>
+<ul>
+<li><strong>Solo lee</strong>: la investigación profunda no modifica nada en PaxaPos.</li>
+<li><strong>Usá el conector de Todo</strong>: es el que trae la búsqueda completa. Los conectores de área traen solo una parte.</li>
+<li>Si tu plan lo permite, activá la investigación profunda en ChatGPT y fijate de incluir <strong>PaxaPos</strong> entre las fuentes. Los pasos exactos cambian según la versión de ChatGPT.</li>
+<li>Ejemplos: <em>&quot;Investigá cómo evolucionó el costo de las bebidas con mis tres proveedores principales.&quot;</em> · <em>&quot;Armá un informe de las órdenes de compra del último trimestre, por proveedor.&quot;</em></li>
+<li>Como en cualquier consulta, solo ve lo que permite tu rol.</li>
+</ul>
+<hr>
+<h2 class="relative">
+                🚪 Cómo revocar el acceso
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="revocar"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="revocar"></div>
+
+<p>Podés cortar la conexión cuando quieras. Para dejar de usar un conector:</p>
+<ol>
+<li>En <strong>ChatGPT</strong>, abrí la sección donde administrás tus apps o plugins (la misma desde la que agregaste PaxaPos: <strong>Plugins</strong>).</li>
+<li>Elegí la app de <strong>PaxaPos</strong> y usá la opción para <strong>desconectarla o eliminarla</strong>.</li>
+</ol>
+<p>Si querés volver a usarla, repetí los pasos de esta guía.</p>
+<blockquote>
+<p>🔐 <strong>Si sospechás que alguien más usó tu cuenta</strong> o cambió de manos tu computadora o tu celular, además de desconectar la app <strong>cambiá tu contraseña de PaxaPos</strong> y escribinos por soporte (abajo) para que lo revisemos.</p>
+</blockquote>
+<blockquote>
+<p>🧑‍💼 <strong>Si una persona deja de trabajar en tu comercio</strong>, desactivá o cambiá su usuario en PaxaPos como siempre: ChatGPT trabaja con ese usuario y sus permisos.</p>
+</blockquote>
+<hr>
+<h2 class="relative">
+                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+                <button 
+                    class="ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded"
+                    data-copy-section="problemas-comunes"
+                    title="Copiar enlace a esta sección"
+                    aria-label="Copiar enlace a esta sección"
+                >
+                    🔗
+                </button>
+            </h2>
+            <div id="problemas-comunes"></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>¿Qué te pasa?</th>
+<th>¿Por qué puede ser?</th>
+<th>¿Cómo se soluciona?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No veo la opción <strong>Create MCP app</strong> dentro de <strong>Add</strong>.</td>
+<td>Tu plan o tu cuenta de ChatGPT no tiene habilitadas las apps MCP personalizadas, o falta el modo desarrollador.</td>
+<td>Revisá tu plan y los ajustes de ChatGPT, o consultá con el administrador de tu espacio de trabajo.</td>
+</tr>
+<tr>
+<td>El botón <strong>Create</strong> está deshabilitado.</td>
+<td>Falta el nombre, la URL o marcar la casilla <strong>I understand and want to continue</strong>.</td>
+<td>Completá los campos y marcá la casilla.</td>
+</tr>
+<tr>
+<td>ChatGPT dice que la URL no es válida.</td>
+<td>La dirección está mal escrita o no empieza con <code>https://</code>.</td>
+<td>Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo <code>https://api.paxapos.com/mcp/compras</code>).</td>
+</tr>
+<tr>
+<td>El login de PaxaPos me da error.</td>
+<td>Email o contraseña incorrectos.</td>
+<td>Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos.</td>
+</tr>
+<tr>
+<td>ChatGPT me vuelve a pedir que inicie sesión.</td>
+<td>La conexión venció o se cortó.</td>
+<td>Iniciá sesión de nuevo con tu usuario de PaxaPos. Si insiste, desconectá la app y conectala otra vez.</td>
+</tr>
+<tr>
+<td>ChatGPT no usa PaxaPos en el chat.</td>
+<td>La app no está activada en esa conversación, o el pedido no deja claro que es de tu comercio.</td>
+<td>Activá la app en el chat si tu versión de ChatGPT lo pide, y nombrala en el pedido (<em>&quot;Con PaxaPos, ...&quot;</em>).</td>
+</tr>
+<tr>
+<td>ChatGPT no encuentra datos de mi comercio.</td>
+<td>Tu usuario no tiene permisos sobre ese comercio o esa sección.</td>
+<td>Pedile al administrador del comercio que revise tu rol en PaxaPos.</td>
+</tr>
+<tr>
+<td>ChatGPT dice que la herramienta está en otro conector.</td>
+<td>Estás usando el conector de otra área: PaxaPos le avisa en cuál está.</td>
+<td>Agregá ese conector con la URL que te indica (ver <a href="#que-conector-elijo">¿Qué conector elijo?</a>), o usá el de <strong>Todo</strong>.</td>
+</tr>
+<tr>
+<td>ChatGPT dice que no tiene una herramienta para lo que le pido.</td>
+<td>Tu rol no incluye esa acción, o la herramienta no existe en PaxaPos.</td>
+<td>Revisá tu rol con el administrador del comercio. Si es algo que PaxaPos no hace todavía, escribinos por soporte.</td>
+</tr>
+<tr>
+<td>Cambié de usuario en PaxaPos pero ChatGPT sigue con el anterior.</td>
+<td>La app quedó conectada con el primer usuario.</td>
+<td>Desconectá la app (ver <a href="#revocar">Cómo revocar el acceso</a>) y conectala de nuevo iniciando sesión con el usuario correcto.</td>
+</tr>
+<tr>
+<td>Agregaron herramientas nuevas a PaxaPos y ChatGPT no las ve.</td>
+<td>ChatGPT guarda la lista de herramientas de cuando conectaste.</td>
+<td>Actualizá la app desde Plugins o desconectala y volvela a conectar.</td>
+</tr>
+<tr>
+<td>La respuesta viene cortada o incompleta.</td>
+<td>Pediste demasiados datos juntos.</td>
+<td>Acotá el pedido (fecha, proveedor, producto) o pedile que siga con la página siguiente.</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>📞 ¿Necesitás ayuda?</h2>
+<ul>
+<li>📱 <strong>Soporte Directo WhatsApp</strong>: <a href="https://wa.me/542254629000?" target="_blank">+54 2254 62-9000</a></li>
+</ul>
+<!----></div> <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 py-6 dark:border-gray-800"><a href="../user-guide" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"></path></svg> Volver al índice</a> <!--[0--><a href="../llms/156-02-ia-conectar-chatgpt.txt" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.5L19 9.5V19a2 2 0 0 1-2 2Z"></path></svg> Ver archivo LLMs</a><!--]--></footer></article></div></main> <div class="hidden border-l border-gray-200 px-5 pt-8 xl:block dark:border-gray-800"><!--[0--><!--[-1--><aside class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pb-8"><p class="mb-3 text-sm font-semibold text-gray-950 dark:text-white">En esta página</p> <nav aria-label="En esta página"><ul class="space-y-1 border-l border-gray-200 dark:border-gray-700"><!--[--><li><a href="#que-es" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué es y para qué sirve esta guía?</a></li><li><a href="#requisitos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Antes de empezar</a></li><li><a href="#paso-a-paso" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Guía Paso a Paso</a></li><li><a href="#paso-1" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">1. Entrar a Plugins y tocar Add</a></li><li><a href="#paso-2" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">2. Crear una app MCP</a></li><li><a href="#paso-3" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">3. Cargar el nombre y la URL del MCP</a></li><li><a href="#paso-4" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">4. Continuar a PaxaPos</a></li><li><a href="#paso-5" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">5. Iniciar sesión con tu usuario de PaxaPos</a></li><li><a href="#paso-6" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-6 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">6. Usarlo en un chat</a></li><li><a href="#que-conector-elijo" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué conector elijo?</a></li><li><a href="#ejemplos" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Ejemplos de qué pedirle</a></li><li><a href="#confirmaciones" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Acciones que modifican datos</a></li><li><a href="#deep-research" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Investigación profunda (deep research)</a></li><li><a href="#revocar" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">Cómo revocar el acceso</a></li><li><a href="#problemas-comunes" class="block border-l-2 py-1.5 text-sm leading-5 transition-colors pl-3 border-transparent text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white">¿Qué hacer si algo no sale bien? (Problemas Comunes)</a></li><!--]--></ul></nav><!----></aside><!--]--><!--]--><!----></div></div></div><!--]--><!----></div></main></div></div><!--]--><!--]--><!----></div></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_h1c5hb = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start._c9JldS6.js"),
+						import("../_app/immutable/entry/app.D-c7qesA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data: [null,{type:"data",data:{moduleCategories:[{title:"Comenzamos",modules:[{slug:"introduccion",title:"Bienvenido a tu software gastronómico"},{slug:"iniciar-sesion",title:"Cómo Iniciar Sesión"},{slug:"recuperar-contrasena",title:"Cómo Recuperar tu Contraseña"},{slug:"guia-de-inicio-rapido",title:"Guía de Inicio Rápido"}]},{title:"Ventas",modules:[{slug:"salon-de-ventas",title:"Cómo Usar el Salón de Ventas (Adición)"},{slug:"caja-rapida",title:"Cómo Usar la Caja Rápida (Registradora)"},{slug:"mozos",title:"Cómo Cargar los Mozos"},{slug:"clientes",title:"Cómo Gestionar los Clientes"},{slug:"descuentos",title:"Cómo Configurar Descuentos"},{slug:"nueva-reserva",title:"Cómo Cargar una Nueva Reserva"},{slug:"listado-de-reservas",title:"Cómo Usar el Listado de Reservas"},{slug:"grilla-de-reservas",title:"Cómo Usar la Grilla de Reservas"}]},{title:"Medios de Pago",modules:[{slug:"configuracion-procesadores",title:"Configuración de Procesadores de Pago"},{slug:"transacciones-mercadopago",title:"Transacciones MercadoPago"}]},{title:"Productos",modules:[{slug:"menu",title:"Menú de Productos (Carta)"},{slug:"categorias",title:"Categorías de Productos"},{slug:"variantes-grupo-sabores",title:"Variantes y Grupos de Sabores"},{slug:"maestro-de-productos",title:"Maestro de Productos"},{slug:"subproductos-elaborados",title:"Sub-Productos (Elaborados)"},{slug:"recetas",title:"Recetas"},{slug:"analisis-duplicados",title:"Buscar Duplicados"}]},{title:"Compras",modules:[{slug:"todas-las-ordenes-compra",title:"Órdenes de Compra"},{slug:"crear-orden-compra",title:"Crear una Orden de Compra"},{slug:"ordenes-a-aprobar",title:"Órdenes a aprobar"},{slug:"mercaderias",title:"Mercaderías"},{slug:"proveedores",title:"Proveedores"},{slug:"historial-de-compras",title:"Historial de Compras"}]},{title:"Stock",modules:[{slug:"stock-mercaderias",title:"Stock de Mercaderías"},{slug:"stock-subproductos",title:"Stock de Subproductos"},{slug:"movimientos-de-stock",title:"Movimientos de Stock"}]},{title:"Finanzas",modules:[{slug:"arqueos-de-caja",title:"Arqueos de Caja"},{slug:"listado-de-cajas",title:"Listado de Cajas"},{slug:"transacciones-de-cobro",title:"Transacciones de Cobro"},{slug:"factura-manual",title:"Factura Manual"},{slug:"resumen-de-deuda",title:"Resumen de Deuda"},{slug:"pagos",title:"Pagos"},{slug:"historial-de-facturas",title:"Historial de Facturas"},{slug:"historico-de-mesas",title:"Histórico de Mesas"},{slug:"puntos-de-venta-pdv",title:"Puntos de Venta (PDVs)"}]},{title:"Comandero",modules:[{slug:"comandero",title:"Comandero (pantalla de cocina)"}]},{title:"RRHH",modules:[{slug:"empleados",title:"Empleados"},{slug:"empleados-trabajando",title:"Empleados Trabajando"},{slug:"registro-diario-fichaje",title:"Registro Diario de Fichaje"},{slug:"reporte-mensual-fichaje",title:"Reporte Mensual de Fichaje"},{slug:"departamentos",title:"Departamentos"},{slug:"turnos-y-horarios-fichaje",title:"Turnos y Horarios de Fichaje"},{slug:"sueldos-y-jornales",title:"Sueldos y Jornales"},{slug:"datos-de-acceso-app",title:"Datos de Acceso a la App de Fichaje"}]},{title:"Reportes",modules:[{slug:"tablero-general",title:"Tablero General"},{slug:"productos-mas-vendidos",title:"Productos Más Vendidos"},{slug:"compras-por-mercaderia",title:"Compras por Mercadería"}]},{title:"Configuracion",modules:[{slug:"configuracion-general",title:"Configuración general"},{slug:"impresoras",title:"Cómo cargar las impresoras del local"},{slug:"perfiles-de-impresion",title:"Cómo usar los perfiles de impresión"},{slug:"usuarios-del-sistema",title:"Cómo administrar los Usuarios del Sistema"},{slug:"usuarios-con-pin",title:"Cómo administrar los Usuarios con PIN"},{slug:"punto-de-venta",title:"🏛️ Trámite en ARCA (con clave fiscal)"},{slug:"permisos-por-rol",title:"Cómo configurar los Permisos por Rol"},{slug:"turnos-mesa",title:"Turnos de Mesa"},{slug:"medios-de-cobro",title:"Medios de cobro"},{slug:"clasificacion-de-gastos",title:"Clasificación de Gastos"},{slug:"centros-de-costo",title:"Centros de Costo"}]},{title:"Biblioteca de Drivers",modules:[{slug:"biblioteca-de-drivers",title:"Biblioteca de Drivers"},{slug:"sam4s-giant-100",title:"Sam4S Giant - 100"},{slug:"citizen-ct-s310ii",title:"Citizen CT-S310II"},{slug:"epson-tm-t20",title:"Epson TM-T20"},{slug:"drivers-genericos",title:"Drivers Genéricos POS"},{slug:"epson-tm-t88",title:"Epson TM-T88V"},{slug:"fiscalberry-windows",title:"Instalar Fiscalberry en Windows"},{slug:"fiscalberry-linux",title:"Instalar Fiscalberry en Linux"},{slug:"fiscalberry-android",title:"Instalar Fiscalberry en Android"}]},{title:"Extra",modules:[{slug:"03-faq-mozo-reabrir-mesa-anulada",title:"Cómo Reabrir una Mesa Anulada o Cerrada por Error"},{slug:"06-faq-cajero-ingreso-egreso-cajon",title:"Cómo Registrar Entradas y Salidas de Dinero del Cajón"},{slug:"08-faq-cajero-diferencia-facturado-vs-abiertas",title:"Diferencia entre \"Facturado Total Mesas\" y \"Abiertas Por Usuario\" en Caja"},{slug:"buchon-bot",title:"Buchón Bot"},{slug:"01-ia-conectar-claude",title:"IA: Conectar PaxaPos con Claude"},{slug:"02-ia-conectar-chatgpt",title:"IA: Conectar PaxaPos con ChatGPT"},{slug:"03-ia-conectar-gemini",title:"IA: Conectar PaxaPos con Gemini"},{slug:"04-ia-pedidos-desde-asistentes",title:"IA: Pedidos desde asistentes de IA"}]}]},uses:{}},{type:"data",data:{slug:"02-ia-conectar-chatgpt",title:"IA: Conectar PaxaPos con ChatGPT",content:"\u003Cblockquote>\n\u003Cp>\u003Cstrong>¿Dónde está en el sistema?:\u003C/strong> En \u003Cstrong>ChatGPT\u003C/strong> (chatgpt.com o la app de escritorio) → \u003Cstrong>Plugins\u003C/strong> → \u003Cstrong>Add\u003C/strong> (Agregar)\u003Cbr>\u003Cstrong>¿Quién lo usa?:\u003C/strong> Propietario / Administrador del Comercio (o cualquier usuario de PaxaPos que quiera consultar su comercio desde ChatGPT)\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🎯 ¿Qué es y para qué sirve esta guía?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-es\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-es\">\u003C/div>\n\n\u003Cp>PaxaPos tiene un \u003Cstrong>servidor MCP\u003C/strong>: una &quot;puerta&quot; que permite que asistentes de inteligencia artificial como ChatGPT lean y operen los datos de tu comercio (ventas, stock, compras, caja, etc.).\u003C/p>\n\u003Cp>Una vez conectado, podés pedirle a ChatGPT cosas como \u003Cem>&quot;¿cuánto vendí ayer?&quot;\u003C/em> o \u003Cem>&quot;pasame las órdenes de compra pendientes&quot;\u003C/em> y te responde con los datos reales de PaxaPos.\u003C/p>\n\u003Cp>PaxaPos tiene \u003Cstrong>un conector por área\u003C/strong> (salón, caja, compras, finanzas, RRHH, etc.) y uno con todo. Elegí el que corresponde en \u003Ca href=\"#que-conector-elijo\">¿Qué conector elijo?\u003C/a>. El que tiene todo es:\u003C/p>\n\u003Cpre>\u003Ccode>https://api.paxapos.com/mcp\n\u003C/code>\u003C/pre>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ✅ Antes de empezar\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"requisitos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"requisitos\">\u003C/div>\n\n\u003Cul>\n\u003Cli>\u003Cstrong>Un usuario de PaxaPos\u003C/strong> con su email y contraseña. ChatGPT trabaja con \u003Cstrong>tu\u003C/strong> usuario: ve solo lo que tu rol permite.\u003C/li>\n\u003Cli>\u003Cstrong>Una cuenta de ChatGPT que permita agregar apps MCP personalizadas.\u003C/strong> Esto depende de tu plan y de cómo esté configurada tu cuenta. En algunos planes hay que activar antes el \u003Cstrong>modo desarrollador\u003C/strong> (\u003Cem>Developer mode\u003C/em>) en los ajustes de ChatGPT, y en los planes de equipo o empresa lo habilita el \u003Cstrong>administrador\u003C/strong> del espacio de trabajo. Si no ves la opción \u003Cstrong>Create MCP app\u003C/strong> en el \u003Ca href=\"#paso-2\">paso 2\u003C/a>, consultalo en la ayuda de ChatGPT o con tu administrador.\u003C/li>\n\u003Cli>La \u003Cstrong>dirección (URL) del conector\u003C/strong> que vas a usar. La tabla está en \u003Ca href=\"#que-conector-elijo\">¿Qué conector elijo?\u003C/a>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                📑 Guía Paso a Paso\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-a-paso\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"paso-a-paso\">\u003C/div>\n\n\u003Ch3 class=\"relative\">\n                1. Entrar a Plugins y tocar Add\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-1\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-1\">\u003C/div>\n\n\u003Col>\n\u003Cli>Entrá a \u003Cstrong>ChatGPT\u003C/strong> con tu cuenta.\u003C/li>\n\u003Cli>En el menú lateral, tocá \u003Cstrong>Plugins\u003C/strong>.\u003C/li>\n\u003Cli>Arriba a la derecha, tocá el botón \u003Cstrong>Add\u003C/strong> (Agregar).\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/150-extra/ia/156-02-01-chatgpt-plugins-add.png\" alt=\"Pantalla Plugins de ChatGPT con la opción Plugins del menú lateral y el botón Add señalados\">\u003C/p>\n\u003Ch3 class=\"relative\">\n                2. Crear una app MCP\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-2\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-2\">\u003C/div>\n\n\u003Cp>En el menú que se despliega desde \u003Cstrong>Add\u003C/strong>, elegí \u003Cstrong>Create MCP app\u003C/strong> (Crear app MCP).\u003C/p>\n\u003Ch3 class=\"relative\">\n                3. Cargar el nombre y la URL del MCP\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-3\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-3\">\u003C/div>\n\n\u003Cp>Se abre la ventana \u003Cstrong>New Plugin\u003C/strong>:\u003C/p>\n\u003Col>\n\u003Cli>En \u003Cstrong>Name\u003C/strong> (Nombre) escribí un nombre que diga el área, por ejemplo \u003Ccode>PaxaPos Compras\u003C/code>. Si vas a usar el conector con todo, \u003Ccode>PaxaPos\u003C/code>.\u003C/li>\n\u003Cli>En \u003Cstrong>Connection\u003C/strong>, con la opción \u003Cstrong>Server URL\u003C/strong> seleccionada, pegá la URL del conector que elegiste (ver \u003Ca href=\"#que-conector-elijo\">¿Qué conector elijo?\u003C/a>), por ejemplo:\u003Cbr>\u003Ccode>https://api.paxapos.com/mcp/compras\u003C/code>\u003C/li>\n\u003Cli>Dejá \u003Cstrong>Authentication\u003C/strong> en \u003Cstrong>OAuth\u003C/strong>.\u003C/li>\n\u003Cli>Marcá la casilla \u003Cstrong>I understand and want to continue\u003C/strong> (Entiendo y quiero continuar) para aceptar los términos.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Create\u003C/strong> (Crear).\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/150-extra/ia/156-02-02-chatgpt-new-plugin.png\" alt=\"Ventana New Plugin con los campos Name y Connection resaltados, la casilla I understand and want to continue y el botón Create\">\u003C/p>\n\u003Ch3 class=\"relative\">\n                4. Continuar a PaxaPos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-4\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-4\">\u003C/div>\n\n\u003Cp>Aparece la ventana \u003Cstrong>Connect paxapos\u003C/strong>. Tocá \u003Cstrong>Continue to paxapos\u003C/strong> (Continuar a PaxaPos).\u003C/p>\n\u003Cp>\u003Cimg src=\"/images/manual/150-extra/ia/156-02-03-chatgpt-connect-paxapos.png\" alt=\"Ventana Connect paxapos con el botón Continue to paxapos\">\u003C/p>\n\u003Ch3 class=\"relative\">\n                5. Iniciar sesión con tu usuario de PaxaPos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-5\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-5\">\u003C/div>\n\n\u003Cp>ChatGPT te redirige a la pantalla de login de \u003Cstrong>PaxaPos\u003C/strong>:\u003C/p>\n\u003Col>\n\u003Cli>Ingresá el \u003Cstrong>Email\u003C/strong> y la \u003Cstrong>Contraseña\u003C/strong> con los que entrás a PaxaPos.\u003C/li>\n\u003Cli>Tocá \u003Cstrong>Iniciar sesión y autorizar\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>\u003Cimg src=\"/images/manual/150-extra/ia/156-02-04-paxapos-login-autorizar.png\" alt=\"Pantalla de login de PaxaPos pidiendo email y contraseña con el botón Iniciar sesión y autorizar\">\u003C/p>\n\u003Cp>✅ \u003Cstrong>¡Listo!\u003C/strong> PaxaPos queda conectado a ChatGPT. Ya podés abrir un chat nuevo y preguntarle sobre tu comercio.\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔒 \u003Cstrong>Tranquilo:\u003C/strong> ChatGPT solo puede operar sobre los comercios y con los permisos que tu usuario ya tiene en PaxaPos. Si tu usuario no puede ver la caja, ChatGPT tampoco.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>⚠️ \u003Cstrong>Tu contraseña de PaxaPos se escribe solo en la pantalla de login de PaxaPos.\u003C/strong> Nunca se la pegues a ChatGPT en el chat.\u003C/p>\n\u003C/blockquote>\n\u003Ch3 class=\"relative\">\n                6. Usarlo en un chat\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"paso-6\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h3>\n            \u003Cdiv id=\"paso-6\">\u003C/div>\n\n\u003Cp>Abrí un chat nuevo y pedile lo que necesites en lenguaje normal. Si ChatGPT no usa PaxaPos por su cuenta, nombralo en el pedido (\u003Cem>&quot;Con PaxaPos, ¿cuánto vendí ayer?&quot;\u003C/em>) y fijate de que la app esté activada para esa conversación, según te lo muestre tu versión de ChatGPT.\u003C/p>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🧩 ¿Qué conector elijo?\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"que-conector-elijo\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"que-conector-elijo\">\u003C/div>\n\n\u003Cp>PaxaPos no tiene un solo conector: tiene \u003Cstrong>uno por trabajo\u003C/strong>, con las herramientas de esa tarea. Así ChatGPT elige mejor qué hacer y cada conversación carga solo lo que necesita.\u003C/p>\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Conector\u003C/th>\n\u003Cth>URL\u003C/th>\n\u003Cth>Para qué\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>Salón\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/salon\u003C/code>\u003C/td>\n\u003Ctd>Mesas, comandas, cobro en mesa y consulta del menú.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Clientes\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/clientes\u003C/code>\u003C/td>\n\u003Ctd>Reservas, pedidos online que entran (delivery y take away) y tus clientes.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Caja\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/caja\u003C/code>\u003C/td>\n\u003Ctd>Caja y cobros, facturación (AFIP) de ventas, y corrección o reapertura de mesas ya cobradas.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Reportes\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/reportes\u003C/code>\u003C/td>\n\u003Ctd>Estadísticas de ventas, libro IVA, rentabilidad y flujo de fondos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Compras\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/compras\u003C/code>\u003C/td>\n\u003Ctd>Solicitudes y órdenes de compra, y recepción de mercadería.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Abastecimiento\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/abastecimiento\u003C/code>\u003C/td>\n\u003Ctd>Mercaderías, proveedores, stock y recetas.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Finanzas\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/finanzas\u003C/code>\u003C/td>\n\u003Ctd>Gastos y facturas de proveedor, deudas, pagos y cierres contables.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Catálogo\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/catalogo\u003C/code>\u003C/td>\n\u003Ctd>Productos, categorías, precios (también en lote), descuentos, cupones, sectores y salones.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>RRHH\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/rrhh\u003C/code>\u003C/td>\n\u003Ctd>Empleados, fichajes, liquidación de sueldos, vacaciones y licencias.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Administración\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp/admin\u003C/code>\u003C/td>\n\u003Ctd>Datos del comercio, usuarios, roles y permisos, \u003Cstrong>solo para consultar\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Todo\u003C/td>\n\u003Ctd>\u003Ccode>https://api.paxapos.com/mcp\u003C/code>\u003C/td>\n\u003Ctd>Lo de todos los días en un solo conector; busca y usa el resto de las herramientas cuando se lo pedís.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Ch3>¿Cuál elijo?\u003C/h3>\n\u003Cul>\n\u003Cli>\u003Cstrong>Si no sabés cuál, usá el de Todo\u003C/strong> (\u003Ccode>https://api.paxapos.com/mcp\u003C/code>). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, ChatGPT lo busca, mira cómo se usa y lo ejecuta por su cuenta.\u003C/li>\n\u003Cli>\u003Cstrong>Si tu plan de ChatGPT admite un solo conector\u003C/strong>, también este: el de \u003Cstrong>Todo\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Si vas a trabajar siempre en lo mismo\u003C/strong>, el del área hace que ChatGPT responda más rápido y con menos vueltas. Por ejemplo: \u003Cstrong>Salón\u003C/strong> para el mozo o el encargado de turno, \u003Cstrong>Clientes\u003C/strong> para quien atiende reservas y pedidos online, \u003Cstrong>Caja\u003C/strong> para quien cobra y cierra, \u003Cstrong>Compras\u003C/strong> para quien pide mercadería y recibe, \u003Cstrong>Finanzas\u003C/strong> para quien carga facturas y paga a proveedores.\u003C/li>\n\u003Cli>\u003Cstrong>Podés agregar varios\u003C/strong>, cada uno como una app aparte (repetí los pasos 1 a 5 con otra URL). Cada uno inicia sesión con tu mismo usuario.\u003C/li>\n\u003Cli>\u003Cstrong>Cada usuario ve solo las herramientas que su rol permite\u003C/strong>, en cualquier conector. Si tu rol no incluye una acción, esa herramienta no aparece.\u003C/li>\n\u003Cli>Si le pedís algo que no está en el conector que usás, PaxaPos le avisa a ChatGPT en cuál está y con qué dirección agregarlo.\u003C/li>\n\u003C/ul>\n\u003Ch3>Si ya tenías conectores cargados\u003C/h3>\n\u003Cp>Las direcciones de siempre (\u003Ccode>/mcp\u003C/code>, \u003Ccode>/mcp/salon\u003C/code>, \u003Ccode>/mcp/caja\u003C/code>, \u003Ccode>/mcp/compras\u003C/code>, \u003Ccode>/mcp/catalogo\u003C/code> y \u003Ccode>/mcp/rrhh\u003C/code>) \u003Cstrong>siguen funcionando\u003C/strong>, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:\u003C/p>\n\u003Cul>\n\u003Cli>Si usabas \u003Cstrong>Compras\u003C/strong> para cargar facturas de proveedor o pagar, sumá \u003Cstrong>Finanzas\u003C/strong>.\u003C/li>\n\u003Cli>Si usabas \u003Cstrong>Salón\u003C/strong> para reservas, pedidos online o clientes, sumá \u003Cstrong>Clientes\u003C/strong>.\u003C/li>\n\u003Cli>Si usabas \u003Cstrong>Salón\u003C/strong> para reabrir o corregir una mesa ya cobrada, sumá \u003Cstrong>Caja\u003C/strong>.\u003C/li>\n\u003Cli>\u003Cstrong>Administración\u003C/strong> pasó a ser de consulta (datos del comercio, usuarios, roles y permisos). Los clientes están en \u003Cstrong>Clientes\u003C/strong>, y los descuentos, cupones y sectores en \u003Cstrong>Catálogo\u003C/strong>.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                💬 Ejemplos de qué pedirle\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"ejemplos\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"ejemplos\">\u003C/div>\n\n\u003Cp>\u003Cstrong>Consultas\u003C/strong> (con cualquier conector que tenga esos datos):\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cem>&quot;¿Cuánto vendí ayer?&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;Mostrame el resumen de ventas de esta semana.&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Cuáles fueron los productos más vendidos del mes?&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;Pasame las órdenes de compra pendientes.&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Qué proveedores tengo con deuda pendiente?&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Qué mercaderías me recomendás reponer?&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Qué mesas están abiertas ahora?&quot;\u003C/em>\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Qué reservas tengo para el sábado a la noche?&quot;\u003C/em> (Clientes)\u003C/li>\n\u003Cli>\u003Cem>&quot;¿Qué usuarios tienen rol de cajero?&quot;\u003C/em> (Administración)\u003C/li>\n\u003C/ul>\n\u003Cp>\u003Cstrong>Acciones\u003C/strong> (según el conector y los permisos de tu usuario):\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cem>&quot;Armá la orden de compra con las solicitudes de verdulería.&quot;\u003C/em> (Compras)\u003C/li>\n\u003Cli>\u003Cem>&quot;Llegó la mercadería de la OC 1234: faltaron 2 cajones de tomate.&quot;\u003C/em> (Compras)\u003C/li>\n\u003Cli>\u003Cem>&quot;Subí un 10% los precios de la categoría Bebidas.&quot;\u003C/em> (Catálogo)\u003C/li>\n\u003Cli>\u003Cem>&quot;La mesa 12 se cobró con el medio de pago equivocado: corregilo.&quot;\u003C/em> (Caja)\u003C/li>\n\u003Cli>\u003Cem>&quot;Aceptá el pedido online que acaba de entrar.&quot;\u003C/em> (Clientes)\u003C/li>\n\u003C/ul>\n\u003Cblockquote>\n\u003Cp>💡 \u003Cstrong>Tip:\u003C/strong> si el pedido es amplio (&quot;mostrame todas las compras del año&quot;), ChatGPT puede traer los datos de a partes. Acotá con una fecha, un proveedor o un producto y la respuesta sale más completa y más rápida.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🛡️ Acciones que modifican datos\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"confirmaciones\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"confirmaciones\">\u003C/div>\n\n\u003Cp>ChatGPT \u003Cstrong>puede leer y también modificar\u003C/strong> datos de PaxaPos, siempre dentro de los permisos de tu usuario. Para que no haya sorpresas:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Las consultas no cambian nada.\u003C/strong> Ver ventas, stock o compras no modifica datos.\u003C/li>\n\u003Cli>\u003Cstrong>Las acciones que modifican datos se hacen solo cuando vos se lo pedís.\u003C/strong>\u003C/li>\n\u003Cli>\u003Cstrong>Las que no se pueden deshacer\u003C/strong> (por ejemplo, pagos, cierres o reabrir una mesa cobrada) \u003Cstrong>piden confirmación explícita\u003C/strong>: ChatGPT te cuenta qué va a hacer y espera tu &quot;sí&quot; antes de ejecutarlo.\u003C/li>\n\u003Cli>\u003Cstrong>ChatGPT también puede pedirte aprobación\u003C/strong> antes de usar una herramienta que modifica datos. Leé lo que te muestra antes de aceptar.\u003C/li>\n\u003Cli>\u003Cstrong>Revisá siempre el resumen antes de confirmar\u003C/strong>: importes, proveedor, fecha, cantidades.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🔎 Investigación profunda (\u003Cem>deep research\u003C/em>)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"deep-research\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"deep-research\">\u003C/div>\n\n\u003Cp>ChatGPT tiene un modo de \u003Cstrong>investigación profunda\u003C/strong> que junta información de varias fuentes y arma un informe con citas. PaxaPos está preparado para eso: ChatGPT puede \u003Cstrong>buscar\u003C/strong> en tu comercio (productos, clientes, proveedores, órdenes de compra, facturas, gastos y mesas) y \u003Cstrong>abrir\u003C/strong> cada registro para citarlo.\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Solo lee\u003C/strong>: la investigación profunda no modifica nada en PaxaPos.\u003C/li>\n\u003Cli>\u003Cstrong>Usá el conector de Todo\u003C/strong>: es el que trae la búsqueda completa. Los conectores de área traen solo una parte.\u003C/li>\n\u003Cli>Si tu plan lo permite, activá la investigación profunda en ChatGPT y fijate de incluir \u003Cstrong>PaxaPos\u003C/strong> entre las fuentes. Los pasos exactos cambian según la versión de ChatGPT.\u003C/li>\n\u003Cli>Ejemplos: \u003Cem>&quot;Investigá cómo evolucionó el costo de las bebidas con mis tres proveedores principales.&quot;\u003C/em> · \u003Cem>&quot;Armá un informe de las órdenes de compra del último trimestre, por proveedor.&quot;\u003C/em>\u003C/li>\n\u003Cli>Como en cualquier consulta, solo ve lo que permite tu rol.\u003C/li>\n\u003C/ul>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                🚪 Cómo revocar el acceso\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"revocar\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"revocar\">\u003C/div>\n\n\u003Cp>Podés cortar la conexión cuando quieras. Para dejar de usar un conector:\u003C/p>\n\u003Col>\n\u003Cli>En \u003Cstrong>ChatGPT\u003C/strong>, abrí la sección donde administrás tus apps o plugins (la misma desde la que agregaste PaxaPos: \u003Cstrong>Plugins\u003C/strong>).\u003C/li>\n\u003Cli>Elegí la app de \u003Cstrong>PaxaPos\u003C/strong> y usá la opción para \u003Cstrong>desconectarla o eliminarla\u003C/strong>.\u003C/li>\n\u003C/ol>\n\u003Cp>Si querés volver a usarla, repetí los pasos de esta guía.\u003C/p>\n\u003Cblockquote>\n\u003Cp>🔐 \u003Cstrong>Si sospechás que alguien más usó tu cuenta\u003C/strong> o cambió de manos tu computadora o tu celular, además de desconectar la app \u003Cstrong>cambiá tu contraseña de PaxaPos\u003C/strong> y escribinos por soporte (abajo) para que lo revisemos.\u003C/p>\n\u003C/blockquote>\n\u003Cblockquote>\n\u003Cp>🧑‍💼 \u003Cstrong>Si una persona deja de trabajar en tu comercio\u003C/strong>, desactivá o cambiá su usuario en PaxaPos como siempre: ChatGPT trabaja con ese usuario y sus permisos.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2 class=\"relative\">\n                ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)\n                \u003Cbutton \n                    class=\"ml-1.5 text-gray-400 hover:text-blue-500 hover:bg-gray-100 focus:text-blue-500 focus:bg-gray-100 focus:outline-none transition-all duration-200 text-sm align-middle px-1 py-0.5 rounded\"\n                    data-copy-section=\"problemas-comunes\"\n                    title=\"Copiar enlace a esta sección\"\n                    aria-label=\"Copiar enlace a esta sección\"\n                >\n                    🔗\n                \u003C/button>\n            \u003C/h2>\n            \u003Cdiv id=\"problemas-comunes\">\u003C/div>\n\n\u003Cdiv class=\"table-wrapper\">\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>¿Qué te pasa?\u003C/th>\n\u003Cth>¿Por qué puede ser?\u003C/th>\n\u003Cth>¿Cómo se soluciona?\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>No veo la opción \u003Cstrong>Create MCP app\u003C/strong> dentro de \u003Cstrong>Add\u003C/strong>.\u003C/td>\n\u003Ctd>Tu plan o tu cuenta de ChatGPT no tiene habilitadas las apps MCP personalizadas, o falta el modo desarrollador.\u003C/td>\n\u003Ctd>Revisá tu plan y los ajustes de ChatGPT, o consultá con el administrador de tu espacio de trabajo.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El botón \u003Cstrong>Create\u003C/strong> está deshabilitado.\u003C/td>\n\u003Ctd>Falta el nombre, la URL o marcar la casilla \u003Cstrong>I understand and want to continue\u003C/strong>.\u003C/td>\n\u003Ctd>Completá los campos y marcá la casilla.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT dice que la URL no es válida.\u003C/td>\n\u003Ctd>La dirección está mal escrita o no empieza con \u003Ccode>https://\u003C/code>.\u003C/td>\n\u003Ctd>Copiá y pegá exactamente la URL del conector que elegiste (por ejemplo \u003Ccode>https://api.paxapos.com/mcp/compras\u003C/code>).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>El login de PaxaPos me da error.\u003C/td>\n\u003Ctd>Email o contraseña incorrectos.\u003C/td>\n\u003Ctd>Usá los mismos datos con los que entrás a PaxaPos. Si no los recordás, recuperá la contraseña desde PaxaPos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT me vuelve a pedir que inicie sesión.\u003C/td>\n\u003Ctd>La conexión venció o se cortó.\u003C/td>\n\u003Ctd>Iniciá sesión de nuevo con tu usuario de PaxaPos. Si insiste, desconectá la app y conectala otra vez.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT no usa PaxaPos en el chat.\u003C/td>\n\u003Ctd>La app no está activada en esa conversación, o el pedido no deja claro que es de tu comercio.\u003C/td>\n\u003Ctd>Activá la app en el chat si tu versión de ChatGPT lo pide, y nombrala en el pedido (\u003Cem>&quot;Con PaxaPos, ...&quot;\u003C/em>).\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT no encuentra datos de mi comercio.\u003C/td>\n\u003Ctd>Tu usuario no tiene permisos sobre ese comercio o esa sección.\u003C/td>\n\u003Ctd>Pedile al administrador del comercio que revise tu rol en PaxaPos.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT dice que la herramienta está en otro conector.\u003C/td>\n\u003Ctd>Estás usando el conector de otra área: PaxaPos le avisa en cuál está.\u003C/td>\n\u003Ctd>Agregá ese conector con la URL que te indica (ver \u003Ca href=\"#que-conector-elijo\">¿Qué conector elijo?\u003C/a>), o usá el de \u003Cstrong>Todo\u003C/strong>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>ChatGPT dice que no tiene una herramienta para lo que le pido.\u003C/td>\n\u003Ctd>Tu rol no incluye esa acción, o la herramienta no existe en PaxaPos.\u003C/td>\n\u003Ctd>Revisá tu rol con el administrador del comercio. Si es algo que PaxaPos no hace todavía, escribinos por soporte.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Cambié de usuario en PaxaPos pero ChatGPT sigue con el anterior.\u003C/td>\n\u003Ctd>La app quedó conectada con el primer usuario.\u003C/td>\n\u003Ctd>Desconectá la app (ver \u003Ca href=\"#revocar\">Cómo revocar el acceso\u003C/a>) y conectala de nuevo iniciando sesión con el usuario correcto.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Agregaron herramientas nuevas a PaxaPos y ChatGPT no las ve.\u003C/td>\n\u003Ctd>ChatGPT guarda la lista de herramientas de cuando conectaste.\u003C/td>\n\u003Ctd>Actualizá la app desde Plugins o desconectala y volvela a conectar.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>La respuesta viene cortada o incompleta.\u003C/td>\n\u003Ctd>Pediste demasiados datos juntos.\u003C/td>\n\u003Ctd>Acotá el pedido (fecha, proveedor, producto) o pedile que siga con la página siguiente.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\u003C/div>\n\u003Chr>\n\u003Ch2>📞 ¿Necesitás ayuda?\u003C/h2>\n\u003Cul>\n\u003Cli>📱 \u003Cstrong>Soporte Directo WhatsApp\u003C/strong>: \u003Ca href=\"https://wa.me/542254629000?\" target=\"_blank\">+54 2254 62-9000\u003C/a>\u003C/li>\n\u003C/ul>\n",tableOfContents:[{id:"que-es",title:"¿Qué es y para qué sirve esta guía?",level:2},{id:"requisitos",title:"Antes de empezar",level:2},{id:"paso-a-paso",title:"Guía Paso a Paso",level:2},{id:"paso-1",title:"1. Entrar a Plugins y tocar Add",level:3},{id:"paso-2",title:"2. Crear una app MCP",level:3},{id:"paso-3",title:"3. Cargar el nombre y la URL del MCP",level:3},{id:"paso-4",title:"4. Continuar a PaxaPos",level:3},{id:"paso-5",title:"5. Iniciar sesión con tu usuario de PaxaPos",level:3},{id:"paso-6",title:"6. Usarlo en un chat",level:3},{id:"que-conector-elijo",title:"¿Qué conector elijo?",level:2},{id:"ejemplos",title:"Ejemplos de qué pedirle",level:2},{id:"confirmaciones",title:"Acciones que modifican datos",level:2},{id:"deep-research",title:"Investigación profunda (deep research)",level:2},{id:"revocar",title:"Cómo revocar el acceso",level:2},{id:"problemas-comunes",title:"¿Qué hacer si algo no sale bien? (Problemas Comunes)",level:2}],seo:{title:"IA: Conectar PaxaPos con ChatGPT - Manual",description:"¿Dónde está en el sistema?: En ChatGPT (chatgpt.com o la app de escritorio) → Plugins → Add (Agregar)  \n ¿Quién lo usa?: Propietario /...",keywords:"02 ia conectar chatgpt, paxapos, ia: conectar paxapos con chatgpt, tutorial, guía, manual usuario"},llmTxtFile:"156-02-ia-conectar-chatgpt.txt"},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+﻿# Turnos y Horarios Fichaje
+
+Turnos y Horarios de Fichaje
+¿Dónde está en el sistema?: Menú principal → RRHH → Turnos y Horarios
+¿Quién lo usa?: Encargados de personal y administradores
+🎯 ¿Para qué sirve esto?
+Acá definís los horarios de trabajo de tu personal. Por ejemplo: Mañana, de 08:00 a 16:00, de lunes a viernes.
+Cada turno lleva una tolerancia en minutos. El sistema la usa para decidir si alguien llegó a horario.
+⚠️ No los confundas con los Turnos de salón. Los de este artículo son horarios de trabajo del personal. En Configuración → Tablas del Sistema → Turnos están los turnos del local para arqueos y reservas. Ese es otro tema: mirá Turnos de Mesa.
+---
+🔑 Antes de empezar
+• Si no ves RRHH en el menú, el módulo no está activo en tu comercio. Pedíselo a soporte.
+• Tu usuario necesita el permiso de fichaje. Mirá Permisos por Rol.
+• Primero creás los turnos. Después se los asignás a cada persona en su ficha de Empleados.
+---
+📍 Ver la lista de turnos — Paso 1
+1. En el menú de la izquierda, tocá RRHH.
+2. Tocá Turnos y Horarios.
+3. Se abre la pantalla Turnos de Fichaje.
+Cada turno aparece en un bloque, con su nombre arriba. Adentro ves:
+• Ingreso: la hora en que empieza el turno.
+• Egreso: la hora en que termina.
+• Tolerancia: los minutos de margen.
+• Días: los días de la semana en que rige. Por ejemplo: Lunes, Martes, Miércoles.
+A la derecha de cada bloque hay dos botones: editar (gris) y eliminar (rojo).
+---
+➕ Crear un turno — Paso 2
+1. Arriba a la derecha, tocá el botón verde Nuevo turno.
+2. Completá los casilleros:
+• Nombre: cómo lo vas a reconocer. Por ejemplo: Mañana.
+• Días de la semana: tildá los días en que se trabaja este turno. Las opciones van de Lunes a Domingo. Tildá al menos uno.
+• Hora Ingreso: elegí hora y minutos de entrada. Por ejemplo: 08:00.
+• Hora Egreso: elegí hora y minutos de salida. Por ejemplo: 16:00.
+• Tolerancia (minutos): escribí un número. Por ejemplo: 10.
+3. Tocá el botón azul Guardar.
+4. Volvés a la lista y ves el turno nuevo.
+💡 Consejo útil: para un turno partido, creá dos turnos. Por ejemplo Mediodía (11 a 15) y Noche (19 a 23). Después asignale los dos a la misma persona.
+---
+⏱️ Qué hace la tolerancia
+La tolerancia es el margen de minutos alrededor de la hora de ingreso.
+• Con turno de ingreso a las 08:00 y tolerancia de 10, entrar hasta las 08:10 cuenta como a horario.
+• Pasadas las 08:10, cuenta como llegada tarde.
+• Entrar más de 10 minutos antes de las 08:00 cuenta como llegada temprano.
+• Con tolerancia vacía o en 0, cualquier minuto de diferencia cuenta.
+Esas cuentas aparecen en el Reporte Mensual y en la ficha de cada empleado.
+El sistema también usa el turno para saber a cuál corresponde cada fichada. Toma los turnos asignados a la persona que rigen ese día de la semana. Elige el que tiene la hora de ingreso más cercana.
+---
+👤 Asignar turnos a una persona — Paso 3
+Crear el turno no alcanza. Hay que asignárselo a cada persona.
+1. Abrí la ficha del empleado en Empleados para crearlo o editarlo.
+2. Buscá el cuadro Jornada y Turnos.
+3. En Turnos Asignados, tildá los turnos de esa persona.
+4. Guardá la ficha.
+---
+✏️ Cambiar un turno — Paso 4
+1. En la lista, tocá el botón editar del turno.
+2. Cambiá lo que necesites. Los días vienen tildados.
+3. Tocá Guardar.
+Al guardar, volvés a la lista con un mensaje de que se guardó.
+---
+🗑️ Eliminar un turno — Paso 5
+⚠️ Atención: eliminar saca el turno de la lista. Confirmá que ya no lo necesitás.
+1. En la lista, tocá el botón rojo eliminar.
+2. El sistema pregunta Desea eliminar?.
+3. Confirmá para borrarlo.
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+|---|---|---|
+| El sistema marca llegada tarde a alguien puntual. | La tolerancia está en 0, o la hora de ingreso del turno está mal. | Editá el turno. Revisá Hora Ingreso y subí Tolerancia (minutos). |
+| La fichada de una persona no toma su turno. | No le asignaste el turno, o el turno no incluye ese día. | Revisá Turnos Asignados en su ficha y los días tildados en el turno. |
+| No encuentro los turnos que uso para los arqueos. | Son otros turnos: los del local. | Están en Configuración → Tablas del Sistema → Turnos. Mirá Turnos de Mesa. |
+| El turno no muestra los días que quería. | Al guardar, los días quedan como los tildaste. | Editá el turno y dejá tildados todos los días que correspondan. |
