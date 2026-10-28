@@ -85,7 +85,12 @@ A la derecha de cada proveedor hay dos botones: Ver proveedor abre su ficha (Pas
 !Solapa Pedidos con el nombre de la mercadería Harina 0000 marcado en rojo
 5. En Pedidos, tocá el nombre de una mercadería para ver su detalle.
 !Solapa Cuenta corriente del proveedor
-6. Tocá Cuenta corriente para ver lo que le debés.
+6. Tocá Cuenta corriente para ver lo que le debés. Tenés dos listas para elegir qué ver:
+• Año: la lista arranca en el año actual. Elegí otro año, o Todos.
+• Mostrar: por defecto ves Con saldo pendiente. Elegí Todos los comprobantes (también los pagados) para ver también lo que ya pagaste.
+• Si elegís un año y hay deuda (o saldo a favor) en otros años, aparece un aviso amarillo. Por ejemplo: Hay $ 50.000,00 de otros años. Tocá ver todos para verla.
+• Los cuadros de arriba (Saldo a pagar, Vencido, Próximos 7 días y Saldo a favor) cuentan siempre todos los años.
+• Exportar a Excel baja los comprobantes que estás viendo.
 !Botones Editar Proveedor y Borrar Proveedor
 7. Arriba a la derecha tenés Editar Proveedor, que abre el formulario, y Borrar Proveedor, que lo borra (el sistema te pregunta antes).
 !Ficha con el enlace Volver a Lista de Proveedores marcado en rojo

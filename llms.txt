@@ -1,5 +1,5 @@
 # PaxaPOS LLM Index
-# Updated: 2026-10-22T04:20:04.357Z
+# Updated: 2026-10-28T00:44:30.191Z
 https://doc.paxapos.com/llms/index.txt
 https://doc.paxapos.com/llms/glosario-del-dominio.txt
 https://doc.paxapos.com/llms/11-introduccion.txt

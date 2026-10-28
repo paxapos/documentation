@@ -46,17 +46,24 @@ Completá lo que sepas y tocá Buscar. Los casilleros son:
 • Neto y Total: el importe exacto.
 • N° de OC: el número de la orden de compra.
 • Desde y Hasta: el rango de fechas de la factura.
+• Cargada desde y Cargada hasta: el rango de fechas en que se cargó la factura en el sistema, no la fecha que dice el papel. Cargada hasta incluye todo ese día.
 • Descargar Excel: baja el resultado en una planilla.
 • Buscar: aplica los filtros.
 💡 Consejo útil: para ver todo un mes, poné el primer día en Desde y el último en Hasta.
 !Lista con una sola factura, la número 51 de Distribuidora Ejemplo, tipo B, por 1.500 pesos
 La lista muestra solo lo que coincide. Arriba dice cuántas facturas encontró. Por ejemplo: Se encontraron 1 Facturas en el historial.
+Mirá lo que se cargó hace poco
+Arriba de la lista hay botones con filtros rápidos, como A pagar o Vencidos. Tocá Recién cargadas para ver las facturas que se cargaron en los últimos 7 días, la más nueva primero. Aparecen aunque la fecha de la factura sea vieja.
+En esa vista la lista suma:
+• Cargado el: el día y la hora en que se cargó cada factura.
+• Descargada o Sin descargar: debajo del estado, en las facturas que tienen archivo. Te dice si alguien ya bajó el archivo.
+💡 Consejo útil: si un proveedor sube hoy una factura con fecha del mes pasado, la encontrás en Recién cargadas.
 ---
 📊 Paso 4: Leé el resumen y la lista
 !Resumen de Búsqueda con Total General 1.500, Total Sin IVA 1.239,67 y Saldo o Falta de pagar 1.500
 El Resumen de Búsqueda suma todas las facturas que encontró, no solo las de la pantalla:
 • Total General: lo que suman con impuestos.
-• Total Sin IVA: lo que suman sin impuestos.
+• Total Sin IVA: lo que suman sin impuestos. En las facturas B es el total sin el IVA contenido; en las C, las X y los vales es igual al total.
 • Saldo / Falta de pagar: lo que todavía no pagaste. En rojo si hay deuda, en verde si no.
 Las columnas de la lista dicen:
 • Casilla: para elegir la factura (Paso 7). Si la factura está cerrada, ves un candado.
@@ -66,6 +73,7 @@ Las columnas de la lista dicen:
 • N° Comprobante: punto de venta y número.
 • Total Sin IVA y Total: los importes.
 • Falta pagar: naranja si hay deuda. Una tilde verde si está paga.
+• Vence: la fecha de vencimiento. Si todavía se debe, debajo dice en chico cuánto pasó o cuánto falta: hace 3 días, hoy, mañana o en 4 días. Si ya venció, ese texto va en rojo.
 • Observación y Creado: la nota y cuándo se cargó.
 Abajo de la lista, la línea Resumen cuenta las facturas, el total y lo pendiente.
 ---

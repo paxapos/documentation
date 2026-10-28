@@ -44,6 +44,7 @@ En esta pantalla vas a ver:
 • El botón "+ Abrir Mesa" para crear una mesa nueva.
 • Las mesas abiertas de cada mozo, con su número, importe y hora de apertura.
 • Arriba a la derecha, cuántas Mesas y Cubiertos hay activos.
+⚠️ Atención: Si abajo aparece Sin tiempo real: los cambios de otros puestos se ven al recargar, la pantalla no logra mantener la conexión en vivo con el servidor. No ves en el momento lo que cargan los demás. Recargá la página y, si el aviso vuelve, revisá la conexión a Internet del local. Cuando la conexión se restablece, el aviso se va solo.
 ---
 Paso 2: Abrí la caja
 Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón Abrir Caja.
@@ -60,6 +61,7 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 !Mensaje Caja Abierta con el importe inicial
 7. Vas a ver el mensaje ¡Caja Abierta!. Ahora en el encabezado está el botón para cerrarla.
 💡 Si no ves el botón Abrir Caja, la caja ya está abierta. Seguí con el paso siguiente.
+⚠️ Atención: Si otra persona ya tiene la caja abierta, al abrirla aparece La caja está abierta por otro usuario, con el nombre de quien la tiene y desde cuándo. Para cobrar desde esa caja, esa persona tiene que cerrarla primero. Si no está, pedile a un encargado que la cierre desde Finanzas → Caja → Arqueos de Caja (ver Arqueos de Caja). Si la caja abierta era tuya, el aviso dice Tu caja ya estaba abierta: tocá Seguir.
 ---
 Paso 3: Abrí una mesa
 !Listado de mesas con el botón Abrir Mesa marcado en rojo
@@ -70,6 +72,7 @@ Paso 3: Abrí una mesa
 4. Tocá Guardar. Se abre la mesa, vacía.
 !Mesa recién abierta, sin productos cargados
 💡 Si el mozo tiene activado Mozo Veloz, la mesa se abre directo, sin pedir descripción ni cubiertos.
+💡 También podés abrir una mesa tocándola en el mapa del salón (el plano). Si esa mesa ya tiene una cuenta abierta (por ejemplo, la abrió otro mozo desde otro dispositivo), el sistema no abre otra: aparece el aviso Mesa ya abierta, con un texto como La mesa 12 ya está abierta (mozo Juan). Abrila desde el plano. Tocá Ir a esa mesa para entrar a la cuenta que ya existe. Si el mapa no la muestra, el botón dice Ver esa mesa y abre su ficha en otra pestaña. Con Volver al plano no se abre nada. Si ya habías cargado productos en la mesa nueva, el aviso aclara que no se guardaron.
 ---
 Paso 4: Cargá los productos y comandá
 !Mesa abierta con el botón Nueva Comanda marcado en rojo
@@ -138,9 +141,13 @@ Paso 7: Cobrá la mesa
 Si paga con varios medios
 Por ejemplo, una parte en efectivo y otra con tarjeta:
 1. Cobrá la primera parte: elegí el medio y escribí solo ese monto.
-2. La mesa queda con saldo pendiente y el botón cambia a 💰 Agregar Pago.
-3. Tocá Agregar Pago y cobrá lo que falta con el otro medio.
+2. La mesa queda con saldo pendiente y el botón cambia a 💰 Agregar Cobro.
+3. Tocá Agregar Cobro y cobrá lo que falta con el otro medio.
 4. Repetí hasta que no falte nada.
+Si un cobro todavía está esperando (en la terminal, con QR o a que un encargado lo apruebe), la pantalla de cobro lo tiene en cuenta:
+• Debajo del total aparece Esperando en terminal/QR: $… o Esperando aprobación: $….
+• El monto que se propone cobrar es el saldo menos lo que está esperando.
+• Si todo el saldo ya está esperando, aparece el aviso Cobro en espera. Cuando el pago se acredite, la mesa queda cobrada. Si no se va a pagar, cancelalo en la lista de cobros de la mesa.
 💡 Si varias personas pagan su parte, en la pantalla de cobro podés usar ✂️ Dividir para repartir el total y cargar un pago por cada uno (➕ Agregar Otro Pago).
 ¿No aparece el medio de pago que necesitás?
 Los medios de pago se dan de alta en Configuración → Tablas maestras → Tipos de Pago.
@@ -180,7 +187,9 @@ El botón ⚙️ Opciones (arriba a la derecha de la mesa) tiene más acciones. 
 | El mozo no aparece para abrir la mesa. | El mozo está inactivo, o tu usuario no está en su Visibilidad por Usuarios. | Editá el mozo en Configuración → Tablas maestras → Mozos y revisá esas dos opciones. |
 | No sale impresa la comanda ni el remito. | Fiscalberry está cerrado, o la impresora está apagada o sin papel. | Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver Gestión de Impresoras. |
 | El sistema no me deja cobrar en efectivo. | No hay un arqueo de caja abierto. | Tocá Abrir Caja arriba en el salón (ver Paso 2) y volvé a cobrar. |
+| Aparece Sin tiempo real abajo de la pantalla. | La conexión en vivo con el servidor no se logra establecer. | Recargá la página y revisá la conexión a Internet del local. El aviso se va solo cuando la conexión vuelve. |
+| Al abrir una mesa del mapa aparece Mesa ya abierta. | Esa mesa ya tiene una cuenta abierta. | Tocá Ir a esa mesa (o Ver esa mesa) y seguí con la cuenta que ya existe. |
 | No aparece el botón Cobrar. | La mesa todavía está abierta, o ya está totalmente cobrada. | Primero tocá 🔒 Cerrar. Si ya está cobrada, tocá 👋 Checkout. |
-| No aparece el botón Checkout. | Todavía falta cobrar una parte. | Tocá 💰 Agregar Pago y cobrá lo que falta. |
+| No aparece el botón Checkout. | Todavía falta cobrar una parte. | Tocá 💰 Agregar Cobro y cobrá lo que falta. Si el saldo está esperando en la terminal o con QR, mirá el aviso Cobro en espera. |
 | La factura no salió A y el cliente la quería A. | El cliente no tiene la Condición IVA: Responsable Inscripto, o no estaba asignado a la mesa. | Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa. |
 | La mesa sigue ocupada pero la gente ya se fue. | Faltó cobrar o hacer el Checkout. | Abrí la mesa, cobrá lo que falte y tocá 👋 Checkout. |

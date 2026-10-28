@@ -19,7 +19,7 @@ Arriba a la izquierda ves un título grande. Por ejemplo: 8 Presentes. Ese núme
 Cada persona aparece en una tarjeta. La tarjeta muestra:
 • El departamento, arriba.
 • La foto del empleado. Si al fichar se sacó una foto, aparece chiquita en una esquina de la foto principal.
-• El apellido y nombre. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.
+• El apellido y nombre. Si la persona no tiene apellido cargado, ves solo el nombre. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.
 • El DNI.
 • El día y la hora del ingreso.
 • Un espacio para la observación.
@@ -39,7 +39,7 @@ Si hay muchas personas, la pantalla muestra 50. Abajo aparece el botón azul Car
 1. Arriba a la derecha, tocá el botón verde Fichar Ingreso.
 2. Se abre una ventanita Nuevo Ingreso.
 3. Sacá la foto con el botón Sacar Foto, o elegí un archivo del equipo. La foto es opcional.
-4. En Empleado, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla.
+4. En Empleado, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla. También aparecen los que no tienen apellido cargado.
 5. Fecha Hora: solo la ves si tenés permiso de editar fichadas. Viene con la hora de ahora. Cambiala si cargás un ingreso de antes.
 6. Observación: si querés, anotá algo. Por ejemplo: Llegó con aviso.
 7. Tocá el botón azul Fichar.

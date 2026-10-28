@@ -88,10 +88,11 @@ Este es tu primer paso para operar en PaxaPOS. Aprenderás las dos modalidades d
 💡 Consejo útil: Guardá esta dirección en los Marcadores o Favoritos de tu navegador, o creá un acceso directo en el escritorio para abrir el sistema con un solo clic al iniciar tu jornada.
 ---
 🔢 Método 1: Ingreso rápido con PIN (Recomendado para salón y mozos)
-Al abrir la página de inicio, por defecto se presenta el teclado táctil numérico de acceso rápido:
+ℹ️ Importante: el acceso por PIN se ofrece solo en los comercios que tienen usuarios con PIN. Si el tuyo no tiene ninguno, la pantalla de ingreso muestra solamente usuario y contraseña (ver Método 2).
+Si tu comercio tiene usuarios con PIN, al abrir la página de inicio, por defecto se presenta el teclado táctil numérico de acceso rápido:
 !Pantalla de ingreso rápido por PIN
 Instrucciones paso a paso:
-1. Verificá que la solapa superior activa sea "PIN" (seleccionada por defecto).
+1. Verificá que la solapa superior activa sea "PIN rápido" (seleccionada por defecto).
 2. Ingresá los 4 dígitos de tu PIN personal asignado:
 • Podés hacer clic o pulsar directamente sobre los números del teclado numérico en pantalla (1 al 9, y 0).
 • O bien podés tipear los 4 números desde el teclado físico de tu computadora o terminal POS.
@@ -106,7 +107,7 @@ Instrucciones paso a paso:
 Para usuarios con perfil de Administrador, Cajero o Encargado, o cuando se requiera gestionar configuraciones, reportes y compras:
 !Formulario de inicio de sesión con correo y contraseña
 Instrucciones paso a paso:
-1. En la parte superior de la ventana de acceso, hacé clic en la pestaña "Usuario y contraseña".
+1. En la parte superior de la ventana de acceso, hacé clic en la pestaña "Usuario y contraseña". Si tu comercio no usa PIN, no hay pestañas: el formulario ya aparece solo.
 2. Campo "Email": Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: gerencia@milocal.com).
 3. Campo "Contraseña": Ingresá tu clave de seguridad (los caracteres se ocultarán automáticamente con puntos por protección).
 4. Hacé clic en el botón azul "Iniciar sesión".
@@ -120,6 +121,7 @@ Una vez validadas tus credenciales (por PIN o por correo), el sistema abrirá la
 ❓ Preguntas Frecuentes y Solución de Inconvenientes
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
+| No veo la solapa "PIN rápido" | Tu comercio no tiene usuarios con PIN. | Ingresá con Usuario y contraseña. Si querés usar PIN, el dueño o un encargado puede crearlos (ver Usuarios con PIN). |
 | "PIN o datos incorrectos" | Se ingresó un número erróneo o el usuario fue deshabilitado. | Borrá los números con Backspace y reintentá. Si persiste, solicitale al administrador del local que verifique o reasigne tu PIN. |
 | Olvidé mi contraseña de administrador | No recuerdas la clave asignada a tu correo. | Hacé clic en el enlace "¿Olvidaste tu contraseña?" debajo del botón de ingreso (ver guía: Recuperar Contraseña). |
 | La página no carga | Falta de conexión a internet o error en la URL del local. | Verificá que la terminal tenga conexión a internet activa y que el nombre del local en la barra de direcciones esté bien escrito. |
@@ -1103,7 +1105,7 @@ Tocá Crear usuario nuevo. Se abre una ventanita con los datos.
 • Email: el email de la persona. Por ejemplo: juan.perez@ejemplo.com.
 • Password y Password (confirm): la contraseña, escrita dos veces igual.
 !Bloque Roles y Permisos con Roles, Cajas y Mozos
-• Roles: tildá el rol que tendrá. Podés abrir ¿Qué puede hacer cada rol? para elegir mejor.
+• Roles: tildá el rol que tendrá. Podés abrir ¿Qué puede hacer cada rol? para elegir mejor. Si tildás más de uno, la persona suma los permisos de todos (ver Permisos por Rol).
 • Cajas: las cajas que puede usar. Seleccionar todos las tilda todas.
 • Mozos: a qué mozo corresponde, si trabaja en el salón.
 !Bloques Centros de Costo y Perfil de Impresión, con los botones Cancelar y Registrar nuevo usuario abajo
@@ -1184,6 +1186,7 @@ Si todavía no hay ningún acceso, la pantalla muestra el botón Crear Primer Us
 2. Tocá el botón azul Guardar, abajo a la derecha.
 3. Volvés a la lista y el acceso nuevo aparece con la etiqueta PIN activo.
 Desde ese momento, quien escriba ese PIN en el dispositivo entra con ese rol.
+💡 Consejo útil: la solapa PIN rápido de la pantalla de ingreso aparece solo si el comercio tiene al menos un acceso con PIN. Si todavía no creaste ninguno, al entrar se ve solamente usuario y contraseña (ver Cómo Iniciar Sesión).
 ---
 ✏️ Paso 5: Cambiá o eliminá un acceso
 En cada tarjeta de la lista del Paso 1 hay dos botones juntos, a la derecha:
@@ -1197,6 +1200,7 @@ En cada tarjeta de la lista del Paso 1 hay dos botones juntos, a la derecha:
 | El sistema dice que el PIN ya existe. | Otro acceso usa esos mismos 4 números. | Elegí otra combinación de 4 dígitos. |
 | El PIN no se guarda. | Tiene menos o más de 4 números. | Escribí exactamente 4 dígitos. |
 | El dispositivo no deja entrar con el PIN. | El acceso fue eliminado o el PIN se cambió. | Revisá la lista. Editá el acceso y confirmá el PIN. |
+| En la pantalla de ingreso no aparece la solapa PIN rápido. | El comercio no tiene ningún acceso con PIN. | Creá uno (Paso 2). La solapa aparece desde ese momento. |
 | Un empleado necesita entrar con su email. | Ese acceso es compartido, no personal. | Creale un usuario en Usuarios del Sistema. |
 | No me deja elegir el rol que quiero. | El rol no existe o no tenés permiso. | Revisá los roles en Permisos por Rol. |
 
@@ -1429,11 +1433,19 @@ El botón naranja Restablecer permisos por defecto está arriba, debajo de la ay
 ⚠️ Atención: este botón revierte los permisos de todos los roles a los valores del sistema. No se puede deshacer. Usalo solo si queda todo mal configurado.
 Al tocarlo, te pide confirmar antes de cambiar nada.
 ---
+👤 Qué pasa si una persona tiene más de un rol
+Una persona puede tener varios roles (se tildan en Usuarios del Sistema). En ese caso suma los permisos de todos sus roles: puede hacer todo lo que permita cualquiera de ellos.
+• Un rol que ya guardaste en esta pantalla aporta solo lo que dejaste tildado.
+• Un rol que nunca guardaste aporta los permisos que trae el sistema para ese rol. Son los mismos que ves tildados al elegirlo y los que carga Defaults.
+Por ejemplo, alguien es Mozo (que nunca guardaste) y también Cajero (que sí ajustaste). Puede hacer lo que dejaste tildado en Cajero, más todo lo que el sistema le da a un Mozo.
+⚠️ Atención: si destildás un permiso en un rol, una persona puede seguir teniéndolo porque otro de sus roles lo incluye. Revisá todos sus roles en Usuarios del Sistema.
+---
 ⚠️ Resolución de Inconvenientes
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
 | Los botones Guardar, Defaults, Clonar y el tacho están apagados. | Todavía no elegiste un rol. | Elegí un rol en el desplegable. |
 | Cambié un permiso y una persona lo sigue viendo. | Tiene la sesión abierta con los permisos viejos. | Pedile que cierre sesión y vuelva a entrar. |
+| Le saqué un permiso a un rol y la persona lo sigue teniendo. | Tiene otro rol que también lo incluye. | Los permisos de todos sus roles se suman. Revisá sus roles en Usuarios del Sistema. |
 | Destildé algo y al volver a entrar está como antes. | No tocaste Guardar. | Volvé a hacer el cambio y tocá Guardar. |
 | Nadie puede abrir una pantalla. | Se apagó esa función para un rol clave. | Elegí el rol, encendé la función y tocá Guardar. También podés usar Defaults. |
 | Un rol quedó con permisos de otro. | Se usó Clonar por error. | Elegí el rol y tocá Defaults, revisá y Guardar. |
@@ -2752,6 +2764,7 @@ En esta pantalla vas a ver:
 • El botón "+ Abrir Mesa" para crear una mesa nueva.
 • Las mesas abiertas de cada mozo, con su número, importe y hora de apertura.
 • Arriba a la derecha, cuántas Mesas y Cubiertos hay activos.
+⚠️ Atención: Si abajo aparece Sin tiempo real: los cambios de otros puestos se ven al recargar, la pantalla no logra mantener la conexión en vivo con el servidor. No ves en el momento lo que cargan los demás. Recargá la página y, si el aviso vuelve, revisá la conexión a Internet del local. Cuando la conexión se restablece, el aviso se va solo.
 ---
 Paso 2: Abrí la caja
 Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba aparece el botón Abrir Caja.
@@ -2768,6 +2781,7 @@ Para cobrar en efectivo necesitás la caja abierta. Si está cerrada, arriba apa
 !Mensaje Caja Abierta con el importe inicial
 7. Vas a ver el mensaje ¡Caja Abierta!. Ahora en el encabezado está el botón para cerrarla.
 💡 Si no ves el botón Abrir Caja, la caja ya está abierta. Seguí con el paso siguiente.
+⚠️ Atención: Si otra persona ya tiene la caja abierta, al abrirla aparece La caja está abierta por otro usuario, con el nombre de quien la tiene y desde cuándo. Para cobrar desde esa caja, esa persona tiene que cerrarla primero. Si no está, pedile a un encargado que la cierre desde Finanzas → Caja → Arqueos de Caja (ver Arqueos de Caja). Si la caja abierta era tuya, el aviso dice Tu caja ya estaba abierta: tocá Seguir.
 ---
 Paso 3: Abrí una mesa
 !Listado de mesas con el botón Abrir Mesa marcado en rojo
@@ -2778,6 +2792,7 @@ Paso 3: Abrí una mesa
 4. Tocá Guardar. Se abre la mesa, vacía.
 !Mesa recién abierta, sin productos cargados
 💡 Si el mozo tiene activado Mozo Veloz, la mesa se abre directo, sin pedir descripción ni cubiertos.
+💡 También podés abrir una mesa tocándola en el mapa del salón (el plano). Si esa mesa ya tiene una cuenta abierta (por ejemplo, la abrió otro mozo desde otro dispositivo), el sistema no abre otra: aparece el aviso Mesa ya abierta, con un texto como La mesa 12 ya está abierta (mozo Juan). Abrila desde el plano. Tocá Ir a esa mesa para entrar a la cuenta que ya existe. Si el mapa no la muestra, el botón dice Ver esa mesa y abre su ficha en otra pestaña. Con Volver al plano no se abre nada. Si ya habías cargado productos en la mesa nueva, el aviso aclara que no se guardaron.
 ---
 Paso 4: Cargá los productos y comandá
 !Mesa abierta con el botón Nueva Comanda marcado en rojo
@@ -2846,9 +2861,13 @@ Paso 7: Cobrá la mesa
 Si paga con varios medios
 Por ejemplo, una parte en efectivo y otra con tarjeta:
 1. Cobrá la primera parte: elegí el medio y escribí solo ese monto.
-2. La mesa queda con saldo pendiente y el botón cambia a 💰 Agregar Pago.
-3. Tocá Agregar Pago y cobrá lo que falta con el otro medio.
+2. La mesa queda con saldo pendiente y el botón cambia a 💰 Agregar Cobro.
+3. Tocá Agregar Cobro y cobrá lo que falta con el otro medio.
 4. Repetí hasta que no falte nada.
+Si un cobro todavía está esperando (en la terminal, con QR o a que un encargado lo apruebe), la pantalla de cobro lo tiene en cuenta:
+• Debajo del total aparece Esperando en terminal/QR: $… o Esperando aprobación: $….
+• El monto que se propone cobrar es el saldo menos lo que está esperando.
+• Si todo el saldo ya está esperando, aparece el aviso Cobro en espera. Cuando el pago se acredite, la mesa queda cobrada. Si no se va a pagar, cancelalo en la lista de cobros de la mesa.
 💡 Si varias personas pagan su parte, en la pantalla de cobro podés usar ✂️ Dividir para repartir el total y cargar un pago por cada uno (➕ Agregar Otro Pago).
 ¿No aparece el medio de pago que necesitás?
 Los medios de pago se dan de alta en Configuración → Tablas maestras → Tipos de Pago.
@@ -2888,8 +2907,10 @@ El botón ⚙️ Opciones (arriba a la derecha de la mesa) tiene más acciones. 
 | El mozo no aparece para abrir la mesa. | El mozo está inactivo, o tu usuario no está en su Visibilidad por Usuarios. | Editá el mozo en Configuración → Tablas maestras → Mozos y revisá esas dos opciones. |
 | No sale impresa la comanda ni el remito. | Fiscalberry está cerrado, o la impresora está apagada o sin papel. | Abrí Fiscalberry en la computadora del local y revisá la impresora. Ver Gestión de Impresoras. |
 | El sistema no me deja cobrar en efectivo. | No hay un arqueo de caja abierto. | Tocá Abrir Caja arriba en el salón (ver Paso 2) y volvé a cobrar. |
+| Aparece Sin tiempo real abajo de la pantalla. | La conexión en vivo con el servidor no se logra establecer. | Recargá la página y revisá la conexión a Internet del local. El aviso se va solo cuando la conexión vuelve. |
+| Al abrir una mesa del mapa aparece Mesa ya abierta. | Esa mesa ya tiene una cuenta abierta. | Tocá Ir a esa mesa (o Ver esa mesa) y seguí con la cuenta que ya existe. |
 | No aparece el botón Cobrar. | La mesa todavía está abierta, o ya está totalmente cobrada. | Primero tocá 🔒 Cerrar. Si ya está cobrada, tocá 👋 Checkout. |
-| No aparece el botón Checkout. | Todavía falta cobrar una parte. | Tocá 💰 Agregar Pago y cobrá lo que falta. |
+| No aparece el botón Checkout. | Todavía falta cobrar una parte. | Tocá 💰 Agregar Cobro y cobrá lo que falta. Si el saldo está esperando en la terminal o con QR, mirá el aviso Cobro en espera. |
 | La factura no salió A y el cliente la quería A. | El cliente no tiene la Condición IVA: Responsable Inscripto, o no estaba asignado a la mesa. | Hay que anular esa factura con una Nota de Crédito. Antes de volver a facturar, corregí el cliente y asignalo a la mesa. |
 | La mesa sigue ocupada pero la gente ya se fue. | Faltó cobrar o hacer el Checkout. | Abrí la mesa, cobrá lo que falte y tocá 👋 Checkout. |
 
@@ -2910,15 +2931,15 @@ La Caja Rápida funciona como una registradora. Sirve para vender en el mostrado
 !Pantalla de la Caja Rápida con los productos a la izquierda y el total a la derecha
 En esta pantalla vas a ver:
 • Arriba: el menú de precios que se usa (por ejemplo, Menú #Catálogo) y el mozo.
-• Arriba a la derecha: los botones de la caja y el botón Ayuda (H).
-• A la izquierda: los productos para vender.
-• A la derecha: el total a pagar y la lista de lo que vas cargando.
-• Abajo: el botón verde COBRAR.
+• Arriba a la derecha: el botón con el nombre de tu caja (abre el menú de la caja) y el botón Ayuda H.
+• A la izquierda: los productos para vender, en una grilla de botones grandes.
+• A la derecha: la Venta actual: la lista de lo que vas cargando y, al pie, el Total.
+• Abajo: el botón azul Cobrar, con el total de la venta.
 ---
 💰 Paso 2: Abrí la caja antes de vender
 ⚠️ Atención: Si la caja está cerrada, la pantalla no muestra ningún producto. Primero abrí la caja.
 !Botón Abrir Caja en la parte de arriba de la registradora
-1. Arriba a la derecha, tocá el botón Abrir Caja.
+1. En el centro de la pantalla, debajo de Abrí la caja para empezar a vender, tocá el botón Abrir caja.
 2. Se abre una ventanita para abrir la caja.
 !Ventanita Nuevo Arqueo con la caja y el importe inicial
 3. En Caja, elegí la caja que vas a usar.
@@ -2927,22 +2948,23 @@ En esta pantalla vas a ver:
 5. Tocá el botón azul Abrir Arqueo.
 6. La caja queda abierta y aparecen los productos.
 💡 Consejo útil: La caja queda abierta hasta que la cierres. No hace falta abrirla en cada venta.
+💡 Si la caja ya está abierta, el aviso te dice quién la tiene y desde cuándo. Para abrirla de nuevo, primero hay que cerrar ese turno: quien la abrió, o un encargado, desde Arqueos de Caja.
 ---
 🧰 Botones de la caja (arriba a la derecha)
-Con la caja abierta, arriba a la derecha vas a ver estos botones:
+Con la caja abierta, arriba a la derecha vas a ver un botón con el nombre de tu caja. Tocalo y se abre un menú, Caja abierta, con estas opciones:
 !Registradora con el botón Cerrar Caja marcado en rojo
-• Cerrar Caja: se usa al terminar el turno, para contar la plata y cerrar la caja.
+• Cerrar caja: se usa al terminar el turno, para contar la plata y cerrar la caja.
 ⚠️ Atención: Cerrar la caja termina el turno. Después no vas a poder vender hasta abrirla de nuevo.
 !Registradora con el botón Retiro marcado en rojo
-• Retiro: anotá cuando sacás plata del cajón. Por ejemplo, para pagarle a un proveedor.
+• Retirar dinero: anotá cuando sacás plata del cajón. Por ejemplo, para pagarle a un proveedor.
 !Registradora con el botón Ingreso marcado en rojo
-• Ingreso: anotá cuando ponés plata en el cajón. Por ejemplo, cambio extra.
+• Ingresar dinero: anotá cuando ponés plata en el cajón. Por ejemplo, cambio extra.
 !Registradora con el botón Ayuda marcado en rojo
-• Ayuda (H): abre una guía rápida de la pantalla y los atajos de teclado. También se abre con la tecla H.
+• Ayuda H (al lado del botón de la caja): abre una guía rápida de la pantalla y los atajos de teclado. También se abre con la tecla H.
 ---
 🛒 Paso 3: Cargá los productos de la venta
 !Casillero Buscar producto arriba de la lista de productos
-1. Si tenés muchos productos, escribí el nombre en Buscar producto.... La lista se achica mientras escribís.
+1. Si tenés muchos productos, escribí el nombre en Buscar producto. La lista se achica mientras escribís. Si tenés pocos productos, el buscador no aparece.
 !Registradora con el producto Café marcado en rojo
 2. Tocá el producto. Por ejemplo, Café.
 3. En el medio aparece un teclado con números.
@@ -2954,8 +2976,8 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 !Teclado con el botón C marcado en rojo
 • Para empezar de nuevo, tocá C. Borra todo el importe.
 !Teclado con el botón Agregar marcado en rojo
-5. Tocá el botón verde AGREGAR.
-6. El producto aparece en la lista de la derecha. El Total a pagar se actualiza.
+5. Tocá el botón azul Agregar.
+6. El producto aparece en la lista de la derecha. El Total se actualiza.
 !Registradora con el Café en la lista y el total a pagar de $1200
 7. Repetí los pasos para cada producto de la venta.
 ---
@@ -2969,20 +2991,37 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 ---
 💵 Paso 5: Cobrá la venta
 !Registradora con el botón Cobrar marcado en rojo abajo de todo
-1. Revisá el Total a pagar.
-2. Tocá el botón verde COBRAR, abajo de todo.
-3. Se abre la pantalla de cobro con los medios de pago.
+1. Revisá el Total de la lista.
+2. Tocá el botón azul Cobrar, abajo de todo. Muestra el total de la venta, por ejemplo Cobrar $ 1200.00.
+3. Se abre la pantalla ¿Cómo paga? con los medios de pago.
 !Pantalla de cobro con los medios de pago
-⚠️ Atención: Tocar un medio de pago cobra la venta en ese momento. No hay un paso para confirmar. Revisá la lista antes de tocarlo.
+⚠️ Atención: Tocar un medio de pago cobra la venta en ese momento. No hay un paso para confirmar. Revisá la lista antes de tocarlo. Con QR y SmartPOS es distinto: la venta queda esperando que el cliente pague (ver Cobrar con QR o con la terminal de pagos).
 !Botón verde de un medio de pago
 4. Tocá el medio de pago que usa el cliente. Por ejemplo: Efectivo, Tarjeta Débito o Mercado Pago.
-5. La venta queda cobrada. Si hay impresora, sale el ticket.
-6. La lista queda vacía, lista para la próxima venta.
+5. La venta queda cobrada y aparece el aviso Venta cobrada, con el importe.
+6. Si hay impresora, sale sola la misma impresión que al cerrar una mesa: el remito, el ticket fiscal o nada, según lo que tenga elegido tu comercio. En el aviso podés pedir el otro comprobante.
+7. Al cerrar el aviso, la lista queda vacía, lista para la próxima venta.
 !Pantalla de cobro con el botón Más medios de pago marcado en rojo
 • Si no ves el medio de pago, tocá Más medios de pago. Aparecen los demás.
 !Pantalla de cobro con todos los medios de pago a la vista
 !Pantalla de cobro con el botón Volver marcado en rojo
 • Si todavía no querés cobrar, tocá ← Volver. Volvés a la lista sin cobrar nada.
+🧾 El aviso Venta cobrada
+Lo que dice el aviso depende de lo que tengas elegido en Al cerrar o facturar mesa de tu Perfil de Impresión (si no usás perfiles, en Configuración General):
+• Imprimir Remito: el remito sale solo y el aviso dice Imprimiendo el remito…. Si el cliente pide factura, tocá Imprimir Ticket Fiscal.
+• Directo a la Fiscal: el ticket fiscal sale solo y el aviso dice Emitiendo el ticket fiscal…. Si el cliente pide el remito, tocá Imprimir Remito.
+• No hacer nada: el aviso pregunta ¿Querés un comprobante? y ofrece Imprimir Remito, Imprimir Ticket Fiscal o Listo, sin imprimir.
+Tocá Listo (o Listo, sin imprimir) para seguir con la próxima venta. Con el teclado, R imprime el remito y F el ticket fiscal.
+📲 Cobrar con QR o con la terminal de pagos
+Si tu comercio tiene activo el cobro con QR o con terminal de pagos, en ¿Cómo paga? vas a ver también los botones QR y SmartPOS. Si hay más de una terminal, hay un botón por cada una, por ejemplo SmartPOS · Barra.
+⚠️ Atención: estos medios necesitan Internet. Sin conexión aparecen apagados y dicen Necesita conexión.
+A diferencia de los otros medios, tocarlos no cierra la venta: la venta queda esperando que el cliente pague.
+1. Tocá QR o SmartPOS.
+2. Con QR aparece Esperando el pago… y el código en pantalla. Pedile al cliente que lo escanee con la app de su banco o billetera. Si hay impresora, también sale el remito con el QR.
+3. Con SmartPOS aparece Cobrando en la terminal y el nombre de la terminal. El cliente paga con tarjeta o con QR en la terminal.
+4. Cuando el pago se acredita, la venta se cierra sola y aparece el aviso Venta cobrada.
+• Si el cliente no va a pagar, tocá Cancelar. Se cancela ese cobro y podés elegir otro medio.
+• Si el pago se rechaza, aparece El pago fue rechazado con los botones Otro medio y Reintentar.
 ---
 ⚠️ Resolución de Inconvenientes
 | Problema | Causa más frecuente | Solución recomendada |
@@ -2990,7 +3029,10 @@ Con la caja abierta, arriba a la derecha vas a ver estos botones:
 | No aparecen productos en la pantalla | La caja está cerrada. | Abrí la caja (ver Paso 2). |
 | Sigue sin haber productos con la caja abierta | El menú no tiene productos sueltos, o están todos dentro de categorías. | Pedile al encargado que revise el menú en Productos → Menú. |
 | El botón Cobrar está gris | No agregaste ningún producto a la lista. | Agregá al menos un producto antes de cobrar. |
-| El ticket no se imprime | La impresora está apagada, desconectada o sin papel. | Revisá la impresora y que Fiscalberry esté abierto (ver Gestión de Impresoras). |
+| El ticket no se imprime | La impresora está apagada, desconectada o sin papel. | Revisá la impresora y que Fiscalberry esté abierto (ver Gestión de Impresoras). Después pedí el comprobante desde el aviso Venta cobrada. |
+| No sale ningún comprobante al cobrar | Tu comercio tiene No hacer nada en Al cerrar o facturar mesa. | Tocá Imprimir Remito o Imprimir Ticket Fiscal en el aviso Venta cobrada. Para que salga solo, pedile al encargado que lo cambie en Perfiles de Impresión. |
+| No veo los botones QR ni SmartPOS | Tu comercio no tiene activo el cobro por QR o por terminal, o no hay una terminal cargada. | Pedile al encargado que lo revise en Configuración de Procesadores de Pago. |
+| QR y SmartPOS aparecen apagados | No hay conexión a Internet. | Esperá a que vuelva la conexión, o cobrá con otro medio. |
 | Te equivocaste de producto | Tocaste otro producto. | Tocá la ✕ al lado del producto para quitarlo antes de cobrar. Si lo quitaste sin querer, tocá Deshacer. |
 | Cobraste con el medio de pago equivocado | Tocaste otro medio de pago. | Avisale al encargado: se corrige desde Finanzas. |
 
@@ -4437,6 +4479,12 @@ Arriba tenés:
 • Pedir Ítem: para pedir una mercadería que falta.
 • Nueva OC: abre Crear una Orden de Compra.
 • Aprobaciones: abre Órdenes a aprobar.
+¿Cómo venimos?
+Arriba de la lista están los números de ¿Cómo venimos?. Cada uno cuenta las órdenes según lo que falta hacer. Tocá un número y la lista de abajo muestra solo esas órdenes.
+Por ejemplo:
+• Falta pagar: las órdenes que tienen una factura con plata sin pagar.
+• Pagadas (últimos 30 días): las órdenes que terminaste de pagar en el último mes. Cuenta también las que cerraste a mano y después pagaste. Al tocarlo, la lista muestra primero la que pagaste más recién.
+💡 Consejo útil: los números que ves dependen de cómo trabaja tu comercio. Por ejemplo, Falta recibir aparece si recibís la mercadería a mano.
 ---
 🔎 Paso 2: Buscá una orden
 !Recuadro de filtros: proveedor, número de OC, número de factura, fechas, centro de costo y el botón Buscar
@@ -4448,6 +4496,7 @@ En el recuadro de filtros podés completar:
 • Centro de Costo: si separás las compras por sector.
 • Buscar: el botón azul de la derecha, que aplica los filtros.
 1. Completá lo que necesites y tocá Buscar.
+💡 Consejo útil: si tu comercio trabaja con RAFAM, el número principal de la orden es el N° de RAFAM. Lo ves así en el detalle, en la lista, en el portal del proveedor y en los mails. El número de PaxaPos queda al lado, como referencia.
 ---
 🚦 Paso 3: Entendé el estado de cada orden
 !Lista de órdenes: una rechazada, una aprobada y enviada, y una pendiente
@@ -4456,6 +4505,7 @@ En la columna Estado, cada orden muestra una fila de círculos. El primero dice 
 • ✔ verde: aprobada (o no necesitaba aprobación).
 • 🕓 naranja: esperando aprobación.
 Los círculos que siguen se pintan a medida que avanza: Enviado, Recibido, Facturado y Pagado.
+Si la mercadería ya llegó y falta la factura, el círculo de Facturado se resalta y al lado dice Falta la factura. Cuando se carga la factura, vuelve a decir Facturado.
 A la derecha, en Acciones, cada orden tiene un botón con el paso que sigue y una flechita ▾ con más opciones:
 • Enviar (por mail): la orden todavía no se le mandó al proveedor (Paso 4).
 • Recepcionar (verde): ya se mandó y falta recibir la mercadería (Paso 5).
@@ -4488,14 +4538,24 @@ A la derecha, en Acciones, cada orden tiene un botón con el paso que sigue y un
 • Reenviar a proveedor: la vuelve a mandar por mail.
 • Unificar con otra OC: junta dos órdenes del mismo proveedor en una.
 • Marcar observación: avisa que hubo un problema (ver abajo).
-• Finalizar OC: la cierra, aunque falte algo.
+• Cerrar orden: la cierra, aunque falte algo (ver abajo).
 • Eliminar OC: la borra.
-⚠️ Atención: Finalizar OC y Eliminar OC no se pueden deshacer fácil. Usalos solo si estás seguro.
+⚠️ Atención: Eliminar OC no se puede deshacer fácil. Usalo solo si estás seguro.
 Marcar una observación
 !Ventana Observar OC con el motivo escrito y los botones Cancelar y Marcar Observación
 3. Si llegó algo mal (por ejemplo, bolsas rotas), tocá Marcar observación.
 4. En Motivo de la observación, escribí qué pasó y tocá Marcar Observación.
 5. La orden queda marcada hasta que alguien la resuelva. Si te arrepentiste, tocá Cancelar.
+Cerrar una orden
+Cerrá una orden cuando ya no esperás nada más de ella, aunque falte recibir o facturar algo.
+1. Tocá la flechita ▾ de la orden y después Cerrar orden.
+2. Se abre una ventana que explica qué pasa. Si todavía hay plata sin pagar, también te dice cuánto.
+3. Tocá Cerrar orden para confirmar. Si te arrepentís, tocá Cancelar.
+Al cerrarla:
+• El proveedor ya no puede subir facturas nuevas por su link. Las notas de crédito sí las puede subir.
+• Lo que ya se debe no desaparece. La orden sigue en Falta pagar y podés pagarla igual.
+• Si hace falta, la podés abrir de nuevo: en el detalle de la orden, tocá Más ▾ y después Reabrir la orden.
+💡 Consejo útil: si la orden ya está recibida, facturada y pagada, el sistema la cierra solo. No hace falta cerrarla a mano.
 ---
 📄 Paso 7: Mirá la orden completa
 !Orden de Compra con su estado, botones, totales y link para el proveedor
@@ -4506,13 +4566,16 @@ Los botones de la orden:
 • Editar: cambiás la orden.
 • Imprimir: la imprimís.
 • Observación: marcás un problema, igual que en el Paso 6.
-• Finalizar: cerrás la orden, aunque falte algo.
+• Cerrar orden: cerrás la orden, aunque falte algo. Está en el botón Más ▾, arriba a la derecha (ver Paso 6).
 • El tacho 🗑️ borra la orden.
 Link para el proveedor
 !Link público de la orden, con el botón Copiar
 • El proveedor puede ver la orden con este link. Tocá Copiar para pegarlo en un mensaje.
+• Arriba a la derecha, al lado de Más ▾, está el botón Copiar link para el proveedor. Copia el link de un toque y avisa Link copiado. No aparece si la orden todavía no se autorizó o si el link es solo de consulta.
+• Cuando la mercadería ya llegó y falta la factura, el proveedor ve en su pantalla Recibida · falta tu factura, con el botón Subir factura.
 !Botones Reenviar por mail, Enviar por WhatsApp y Guía para proveedor
 • Reenviar por mail y Enviar por WhatsApp le mandan el link. Guía para proveedor explica cómo lo usa el proveedor.
+• Cuando el proveedor sube una factura por su link, te llega un aviso en la campanita 🔔 del encabezado. Dice quién la subió y de qué orden. Tocalo para abrir la orden y ver la factura. El aviso les llega a las personas que pueden cargar facturas.
 Facturas, pagos e ítems
 !Solapas Facturas, Pagos e Ítems, con los botones Cargar Factura y Digitalizar factura
 • Las solapas muestran las Facturas, los Pagos y los Ítems de la orden.
@@ -4816,7 +4879,12 @@ A la derecha de cada proveedor hay dos botones: Ver proveedor abre su ficha (Pas
 !Solapa Pedidos con el nombre de la mercadería Harina 0000 marcado en rojo
 5. En Pedidos, tocá el nombre de una mercadería para ver su detalle.
 !Solapa Cuenta corriente del proveedor
-6. Tocá Cuenta corriente para ver lo que le debés.
+6. Tocá Cuenta corriente para ver lo que le debés. Tenés dos listas para elegir qué ver:
+• Año: la lista arranca en el año actual. Elegí otro año, o Todos.
+• Mostrar: por defecto ves Con saldo pendiente. Elegí Todos los comprobantes (también los pagados) para ver también lo que ya pagaste.
+• Si elegís un año y hay deuda (o saldo a favor) en otros años, aparece un aviso amarillo. Por ejemplo: Hay $ 50.000,00 de otros años. Tocá ver todos para verla.
+• Los cuadros de arriba (Saldo a pagar, Vencido, Próximos 7 días y Saldo a favor) cuentan siempre todos los años.
+• Exportar a Excel baja los comprobantes que estás viendo.
 !Botones Editar Proveedor y Borrar Proveedor
 7. Arriba a la derecha tenés Editar Proveedor, que abre el formulario, y Borrar Proveedor, que lo borra (el sistema te pregunta antes).
 !Ficha con el enlace Volver a Lista de Proveedores marcado en rojo
@@ -5249,6 +5317,7 @@ Al final de cada renglón hay cuatro botones:
 • Abrir Arqueo: el botón azul de abajo. Abre el turno.
 3. Tocá Abrir Arqueo.
 4. El turno aparece en Arqueos Abiertos - Pendientes de Cierre.
+⚠️ Atención: si la caja ya tiene un turno abierto, el sistema no la abre de nuevo. El aviso dice quién la tiene y desde cuándo. Por ejemplo: La caja Ventas ya está abierta por Juan desde las 18:05 (arqueo #222). Ese turno lo tiene que cerrar quien lo abrió o un encargado (Paso 8). Si dice por vos, es tu propio turno: seguí con ese.
 💡 Consejo útil: desde el momento en que abrís, los cobros en efectivo de tu turno se suman a esta caja.
 ---
 👁️ Paso 6: Mirá el detalle de un arqueo
@@ -5326,7 +5395,7 @@ En un turno ya cerrado, en vez de Cerrar aparece Reabrir.
 |---|---|---|
 | Dice No hay cajas configuradas y la caja existe. | Todas las cajas ya tienen un turno abierto. | Cerrá el turno que ya no uses (Paso 8). La tarjeta vuelve a aparecer. |
 | No veo mi caja para abrir un turno. | Tu usuario no está tildado en la caja. | Pedile a un administrador que lo tilde en Listado de Cajas. |
-| Al abrir dice que la caja ya se encuentra abierta. | Otra persona la abrió antes. | Buscá el turno en Arqueos Abiertos y cerralo, o usá ese mismo turno. |
+| Al abrir dice que la caja ya está abierta, con el nombre de quien la tiene y desde cuándo. | Esa caja ya tiene un turno abierto. | Buscá el turno en Arqueos Abiertos y cerralo (Paso 8), o pedile a quien lo abrió que lo cierre. Si el aviso dice por vos, usá ese mismo turno. |
 | Faltan botones Ingreso y Retiro. | El turno ya está cerrado o no tenés permiso. | Solo se usan en turnos abiertos. Consultá tus permisos. |
 | Hay un faltante al cerrar. | Salió plata de la caja y no se anotó. | Anotá los retiros con Retiro y mirá ¿Por qué no cierra?. |
 | El resumen muestra un importe en rojo entre Facturado Total Mesas y Abiertas Por Usuario. | Cobraste mesas de otros compañeros o quedaron mesas sin cobrar. | Es normal. Leé el FAQ de Diferencias en Arqueo. |
@@ -5431,7 +5500,7 @@ También podés abrir un cobro para ver el detalle, o corregir con qué pagó el
 !Opción Transacciones de Cobro marcada en rojo, debajo del título Ingresos y Cobros
 2. Tocá Transacciones de Cobro. Está debajo del título INGRESOS Y COBROS.
 !Pantalla Listado de Cobros con el panel de filtros arriba y la lista de cobros abajo
-Se abre el Listado de Cobros. Arriba tenés los filtros. Abajo, un renglón por cada cobro. Las columnas dicen:
+Se abre el Listado de Cobros con los cobros de los Últimos 7 días. Arriba tenés los filtros. Abajo, un renglón por cada cobro. Las columnas dicen:
 • Fecha: cuándo se cobró.
 • Arqueo: en qué caja quedó. Tocá el número para abrirla.
 • Mesa: de qué mesa es. Tocá el número para verla.
@@ -5444,9 +5513,10 @@ Se abre el Listado de Cobros. Arriba tenés los filtros. Abajo, un renglón por 
 💡 Consejo útil: tocá el título de una columna para ordenar la lista por esa columna.
 ---
 🔎 Paso 2: Buscá un cobro
+Arriba de los filtros hay cuatro botones de período: Hoy, Ayer, Últimos 7 días y Este mes. Al entrar está marcado Últimos 7 días. Tocá otro para cambiar el período. Los demás filtros que hayas puesto se mantienen.
 !Panel de filtros completo con fechas, estado Aprobado, montos y los botones Filtrar y Limpiar
 En el panel de arriba tenés estos casilleros:
-• Desde y Hasta (las dos primeras fechas): elegí el período que querés ver.
+• Desde y Hasta (las dos primeras fechas): elegí el período que querés ver. Si las completás, mandan estas fechas y no los botones de período.
 • Todos los estados: mostrá solo los cobros Aprobado, Rechazado, Pendiente, etc.
 • ID Mesa: escribí el número interno de la mesa.
 • Todos los instrumentos: tarjeta, alias, efectivo, etc.
@@ -5455,7 +5525,7 @@ En el panel de arriba tenés estos casilleros:
 • Todos los tipos de pago: por ejemplo Tarjeta Visa o Transferencia bancaria.
 • Monto desde y Monto hasta: buscá cobros entre dos importes. Por ejemplo, de 100 a 5000.
 • Filtrar: el botón azul. Aplica lo que completaste.
-• Limpiar: borra todos los filtros y muestra todo otra vez.
+• Limpiar: borra todos los filtros y vuelve a mostrar los Últimos 7 días.
 1. Completá solo lo que necesites. Lo que dejás sin tocar no filtra.
 2. Tocá Filtrar.
 3. La lista muestra solo los cobros que coinciden.
@@ -5470,6 +5540,7 @@ A la derecha de cada cobro, en Acciones, hay dos botones:
 Se abre la pantalla Transacción de Pago. Arriba a la derecha tiene dos botones:
 • Corregir el medio: el naranja. Corrige con qué pagó el cliente (Paso 5).
 • Volver al listado: vuelve a la lista de cobros.
+Debajo del título hay una línea de resumen con el monto, la mesa, el estado, el medio de pago y la fecha. En la línea siguiente dice Cobró: y el nombre de quien cobró (si lo hizo el sistema, dice Automático). Si el cobro se anuló o se canceló, se suma Anulado por o Cancelado por, con el nombre y el motivo.
 Y abajo, estos recuadros:
 • Información General: el número del cobro, el estado, la fecha y la referencia.
 • Detalles de Monto: el monto base, la comisión si hay y el monto total.
@@ -5507,7 +5578,7 @@ Si el cobro no se puede corregir, ves un aviso amarillo y solo el botón Volver.
 |---|---|---|
 | No veo el lápiz en un cobro. | El cobro es electrónico o su caja ya está cerrada. | Solo se corrigen cobros manuales con la caja abierta. |
 | La pantalla dice que no se puede cambiar el medio. | El cobro lo procesó Mercado Pago, un QR o un link de pago. | Pedile ayuda a soporte si el dato está mal. |
-| La lista sale vacía. | Los filtros no coinciden con ningún cobro. | Tocá Limpiar y probá con menos filtros. |
+| La lista sale vacía. | Los filtros no coinciden con ningún cobro, o no hubo cobros en el período elegido. | Tocá Limpiar y probá con menos filtros, o elegí otro período: Ayer, Este mes o fechas en Desde y Hasta. |
 | Busco el botón Reimprimir y no está. | Esta pantalla no imprime. | Reimprimí el ticket desde Histórico de Mesas. |
 | No encuentro un cobro por mesa. | En ID Mesa hay que escribir el número interno. | Buscá por fecha y monto, y fijate en la columna Mesa. |
 
@@ -5569,7 +5640,7 @@ Ejemplo con IVA 21%:
 ---
 💵 Paso 5: Escribí el total y guardá
 !Importes: Neto Gravado, Total de la Factura con 1500, Moneda ARS, y los botones Guardar borrador y Guardar y Pagar
-• Neto Gravado: no se escribe. Se calcula solo con los impuestos que tildaste. Por ejemplo: 1239,67.
+• Neto Gravado: en las facturas A no se escribe. Se calcula solo con los impuestos que tildaste. Por ejemplo: 1239,67. En las facturas B es distinto: mirá "Si la factura es B", más abajo.
 • Total de la Factura: escribí el total del papel. Por ejemplo: 1500.
 • Moneda: dejá ARS (pesos). Si elegís otra, aparece el casillero Cotización.
 • Guardar borrador: guarda la factura sin pagar. Queda la deuda.
@@ -5579,6 +5650,17 @@ Ejemplo con IVA 21%:
 2. El sistema guarda la factura y vuelve a la pantalla desde donde entraste.
 3. Buscala en Historial de Facturas. Vas a verla con el monto en Falta pagar.
 💡 Consejo útil: el botón Guardar solo aparece al editar una factura que ya está toda pagada.
+Si la factura es B
+En una factura B el total ya trae el IVA adentro. Por eso, cuando elegís el tipo B (también las notas de crédito y de débito B y los tiques B), el sistema separa el neto:
+• El casillero pasa a llamarse Neto sin IVA y se completa solo. Es el total sin el IVA. Por ejemplo, con un total de 1500 el neto es 1239,67.
+• Aparece la lista IVA contenido, con 21 %, 10,5 %, 27 % y Exento (0 %). Viene en 21 %.
+• Si cambiás el Total de la Factura o el IVA contenido, el neto se calcula de nuevo.
+Cuándo cambiar IVA contenido:
+• Si lo que compraste lleva IVA de 10,5 % o de 27 %, elegí esa opción. Por ejemplo, con un producto al 10,5 % y un total de 1105, el neto es 1000.
+• Si la compra es exenta de IVA, elegí Exento (0 %). El neto queda igual al total.
+También podés corregir el neto a mano. Te sirve, por ejemplo, si la factura mezcla productos con distinto IVA. Si lo escribís vos, el sistema ya no lo recalcula. Para volver al cálculo automático, borrá el número.
+💡 Consejo útil: el sistema usa el neto sin IVA para calcular la base de la retención de Ganancias y para controlar la factura contra la orden de compra. Por eso conviene que quede bien.
+En las facturas C, las X, los vales y otros comprobantes sin IVA no ves el casillero del neto. El neto es igual al total.
 ---
 📦 Paso 6: Cargá los ítems (opcional)
 !Panel Ítems de la factura con un renglón Harina 0000 x 25 kg, cantidad 1 e importe 1500, y el botón Agregar ítem
@@ -5803,6 +5885,14 @@ Volvé a tocar el renglón para cerrarlo.
 ⚠️ Atención: Eliminar Pago saca el pago y la factura vuelve a figurar como deuda. Usalo solo si lo cargaste por error.
 Solo ves las opciones que están debajo de Ver Pago Completo si el pago es del arqueo de caja actual, o si sos administrador. Los pagos de arqueos ya cerrados solo se pueden mirar.
 Si el pago es una orden pendiente, la lista suma Aprobar Orden y Rechazar Orden. Si ya está aprobada, suma Ejecutar Pago.
+Avisale al proveedor por WhatsApp
+Cuando le pagás a un proveedor, podés avisarle por WhatsApp con el mensaje ya escrito.
+1. Abrí el pago completo (Paso 5).
+2. Arriba a la derecha, al lado de Más ▾, tocá el botón verde Avisar por WhatsApp.
+3. Se abre WhatsApp con el mensaje listo. Revisalo y mandalo vos.
+El mensaje dice cuánto se pagó, cómo y cuándo, y por qué factura u orden de compra. Si hubo retenciones, también dice cuánto se retuvo y cuánto se transfirió. Si el pago es de una orden de compra, trae el link para que el proveedor vea el detalle y los certificados.
+💡 Consejo útil: si el proveedor no tiene teléfono cargado, WhatsApp te deja elegir a quién mandárselo.
+⚠️ Atención: el botón aparece solo en pagos ya hechos, que sean a un solo proveedor, y solo si tu usuario puede cargar pagos. En una orden de pago pendiente o aprobada no aparece.
 ---
 🗂️ Paso 6: Recorré las tres solapas
 Órdenes Pendientes
@@ -5907,17 +5997,24 @@ Completá lo que sepas y tocá Buscar. Los casilleros son:
 • Neto y Total: el importe exacto.
 • N° de OC: el número de la orden de compra.
 • Desde y Hasta: el rango de fechas de la factura.
+• Cargada desde y Cargada hasta: el rango de fechas en que se cargó la factura en el sistema, no la fecha que dice el papel. Cargada hasta incluye todo ese día.
 • Descargar Excel: baja el resultado en una planilla.
 • Buscar: aplica los filtros.
 💡 Consejo útil: para ver todo un mes, poné el primer día en Desde y el último en Hasta.
 !Lista con una sola factura, la número 51 de Distribuidora Ejemplo, tipo B, por 1.500 pesos
 La lista muestra solo lo que coincide. Arriba dice cuántas facturas encontró. Por ejemplo: Se encontraron 1 Facturas en el historial.
+Mirá lo que se cargó hace poco
+Arriba de la lista hay botones con filtros rápidos, como A pagar o Vencidos. Tocá Recién cargadas para ver las facturas que se cargaron en los últimos 7 días, la más nueva primero. Aparecen aunque la fecha de la factura sea vieja.
+En esa vista la lista suma:
+• Cargado el: el día y la hora en que se cargó cada factura.
+• Descargada o Sin descargar: debajo del estado, en las facturas que tienen archivo. Te dice si alguien ya bajó el archivo.
+💡 Consejo útil: si un proveedor sube hoy una factura con fecha del mes pasado, la encontrás en Recién cargadas.
 ---
 📊 Paso 4: Leé el resumen y la lista
 !Resumen de Búsqueda con Total General 1.500, Total Sin IVA 1.239,67 y Saldo o Falta de pagar 1.500
 El Resumen de Búsqueda suma todas las facturas que encontró, no solo las de la pantalla:
 • Total General: lo que suman con impuestos.
-• Total Sin IVA: lo que suman sin impuestos.
+• Total Sin IVA: lo que suman sin impuestos. En las facturas B es el total sin el IVA contenido; en las C, las X y los vales es igual al total.
 • Saldo / Falta de pagar: lo que todavía no pagaste. En rojo si hay deuda, en verde si no.
 Las columnas de la lista dicen:
 • Casilla: para elegir la factura (Paso 7). Si la factura está cerrada, ves un candado.
@@ -5927,6 +6024,7 @@ Las columnas de la lista dicen:
 • N° Comprobante: punto de venta y número.
 • Total Sin IVA y Total: los importes.
 • Falta pagar: naranja si hay deuda. Una tilde verde si está paga.
+• Vence: la fecha de vencimiento. Si todavía se debe, debajo dice en chico cuánto pasó o cuánto falta: hace 3 días, hoy, mañana o en 4 días. Si ya venció, ese texto va en rojo.
 • Observación y Creado: la nota y cuándo se cargó.
 Abajo de la lista, la línea Resumen cuenta las facturas, el total y lo pendiente.
 ---
@@ -6408,7 +6506,7 @@ Tocá la barra Filtros para abrirla. Se abre sola si ya buscaste algo.
 Tocá el botón azul Buscar. Para volver a ver todos, tocá Limpiar filtros. Ese botón aparece solo cuando hay un filtro puesto.
 Qué muestra cada columna
 • Foto: la foto de la persona. Si no tiene, ves un dibujito gris.
-• Nombre: apellido y nombre. Abajo, el número de legajo si lo cargaste.
+• Nombre: apellido y nombre. Abajo, el número de legajo si lo cargaste. Si la persona no tiene apellido cargado, ves solo el nombre. Pasa igual en las demás listas y en los reportes.
 • DNI.
 • Departamento.
 • Turno: los turnos que tiene asignados.
@@ -6536,7 +6634,7 @@ Arriba a la izquierda ves un título grande. Por ejemplo: 8 Presentes. Ese núme
 Cada persona aparece en una tarjeta. La tarjeta muestra:
 • El departamento, arriba.
 • La foto del empleado. Si al fichar se sacó una foto, aparece chiquita en una esquina de la foto principal.
-• El apellido y nombre. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.
+• El apellido y nombre. Si la persona no tiene apellido cargado, ves solo el nombre. Si tenés el permiso de Recursos Humanos, es un enlace a la ficha del empleado.
 • El DNI.
 • El día y la hora del ingreso.
 • Un espacio para la observación.
@@ -6556,7 +6654,7 @@ Si hay muchas personas, la pantalla muestra 50. Abajo aparece el botón azul Car
 1. Arriba a la derecha, tocá el botón verde Fichar Ingreso.
 2. Se abre una ventanita Nuevo Ingreso.
 3. Sacá la foto con el botón Sacar Foto, o elegí un archivo del equipo. La foto es opcional.
-4. En Empleado, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla.
+4. En Empleado, elegí a la persona. Podés escribir el nombre o el DNI para encontrarla. También aparecen los que no tienen apellido cargado.
 5. Fecha Hora: solo la ves si tenés permiso de editar fichadas. Viene con la hora de ahora. Cambiala si cargás un ingreso de antes.
 6. Observación: si querés, anotá algo. Por ejemplo: Llegó con aviso.
 7. Tocá el botón azul Fichar.
@@ -6970,6 +7068,7 @@ Datos de Acceso a la App de Fichaje
 🎯 ¿Para qué sirve esto?
 La app de Fichaje es la que usa tu personal en un celular o tablet para marcar entrada y salida.
 Para conectarla a tu comercio necesita un PIN de acceso. Esta pantalla te lo muestra.
+Una vez conectada, el Paso 3 explica cómo configurar cada dispositivo: lector de DNI, foto y voz.
 ---
 🔑 Antes de empezar
 • Si no ves RRHH en el menú, el módulo no está activo en tu comercio. Pedíselo a soporte.
@@ -7003,6 +7102,66 @@ Cuando tu cuenta tiene más de una sucursal, la pantalla agrega una aclaración:
 • Puede aparecer un PIN de cuenta más chico. Sigue funcionando en los dispositivos que ya lo tenían cargado. Pero la app pide elegir sucursal al ingresar.
 💡 Consejo útil: para un dispositivo nuevo, usá siempre el PIN de la sucursal donde va a estar.
 ---
+⚙️ Configurar el dispositivo — Paso 3
+¿Dónde está en el sistema?: App Fichaje → botón del engranaje, arriba a la derecha → pestaña Configuración
+¿Quién lo usa?: Encargados que dejan el celular o la tablet listos para fichar
+Cada dispositivo se configura por separado. Los cambios quedan guardados en ese aparato, no en tu cuenta. Si usás dos tablets, configurá las dos.
+Cómo entrar
+1. Abrí la app Fichaje en el dispositivo que ya conectaste (Paso 2). Se abre la pantalla de fichar.
+2. Arriba a la derecha, al lado de Salir, tocá el botón del engranaje.
+3. Se abre la pantalla Administración, en la pestaña Configuración.
+Arriba tenés las pestañas Configuración, Empleados y Reconocimiento Facial. Si tu cuenta tiene varias sucursales, arriba a la derecha también ves el botón Cambiar sucursal.
+Registrar sin confirmar
+Sirve para las filas largas: cada persona escanea su DNI y queda registrada, sin que nadie toque la pantalla. Funciona con el lector de código de barras. También funciona cuando alguien escribe el DNI completo en el buscador y da Enter.
+• Activado: el fichaje se registra apenas se escanea, sin tocar Confirmar. Si llegan varias personas seguidas, los escaneos esperan en una cola y no se pierde ninguno.
+• Desactivado: al escanear aparece el empleado y hay que tocar Confirmar INGRESO o Confirmar EGRESO. Así viene de fábrica.
+Con la opción activada, el fichaje funciona así:
+• En la pantalla se ve el nombre de la persona en grande, con Ingreso registrado o Egreso registrado y la hora. El cuadro es verde si fue un ingreso y rojo si fue un egreso.
+• Arriba aparece la etiqueta violeta EVENTO. Si hay escaneos esperando, suma cuántos están en cola.
+• El dispositivo decide solo si es ingreso o egreso, según si la persona ya estaba adentro. Si el Modo de fichaje está en Bloqueado, usa la acción fija que elegiste.
+• No saca foto y no habla, aunque la foto esté en Obligatoria o el Texto a voz automático esté prendido. El sonido de confirmación sí suena.
+• Si el documento no es de ningún empleado cargado, aparece una franja roja grande. Por ejemplo: Documento 30123456 no está en la lista. Tiene el botón Cerrar y se cierra sola a los 6 segundos. El lector sigue activo.
+• Si la misma persona escanea dos veces en menos de 5 segundos, la segunda lectura se ignora. Esto pasa con la opción activada o no.
+💡 Consejo útil: buscar por nombre o elegir a alguien de las sugerencias siempre pide confirmar. Lo mismo pasa con el reconocimiento facial.
+Texto a voz automático
+• Activado: después de cada fichaje, el dispositivo lo anuncia en voz alta. Por ejemplo: Ingreso registrado para Juan Pérez. Así viene de fábrica.
+• Apagado: no habla. El aviso en pantalla y el sonido siguen igual.
+Los fichajes que entran por escaneo con Registrar sin confirmar activado no se anuncian por voz, aunque esta opción esté prendida: así la fila no espera.
+Probar el lector
+Si el lector no responde como esperás, mirá qué está leyendo. Está justo debajo de Registrar sin confirmar.
+1. Prendé el interruptor Probar lector.
+2. Escaneá un documento.
+3. La pantalla muestra lo que leyó el lector.
+Mientras probás no se registra ningún fichaje. Esto es lo que ves:
+• Detectado: el tipo de lectura. Puede ser DNI, Licencia de conducir, Número de documento o No reconocido. Si es No reconocido, la etiqueta sale en rojo.
+• Documento: el número, y a qué empleado de la lista corresponde. Si no hay ninguno, dice sin empleado en el padrón.
+• Nombre en el documento y Nacimiento: aparecen cuando el código del documento los trae.
+• Trama: el texto tal cual lo mandó el lector.
+Las demás opciones
+Están en el cuadro Configuración General, de arriba hacia abajo.
+• Nombre del dispositivo: cómo se identifica este aparato en los registros. Por ejemplo: Tablet Recepción. Si lo dejás vacío, se guarda con la IP pública.
+• Foto al fichar: Obligatoria saca la foto sola y no deja confirmar sin ella. Opcional saca la foto solo si tocás Capturar. Deshabilitada no saca foto.
+• Cámara preferida: elegí Frontal (selfie) o Trasera. El botón Detectar vuelve a buscar las cámaras del aparato. Si encuentra más de una, aparece Cámara específica (opcional) para elegir una. Con Auto usa la frontal o la trasera, según lo que elegiste. El navegador te pide permiso para usar la cámara.
+• Mostrar previsualización de cámara: muestra la cámara en vivo mientras esperás a la próxima persona. Apagada, la pantalla dice Previsualización desactivada.
+• Reconocimiento facial: elegí Automático (según dispositivo), Siempre activado o Siempre desactivado. En Automático se activa solo si el aparato lo soporta y hay pocos rostros. En tablets lentas o con muchos empleados queda apagado y se ficha por DNI o con el buscador.
+• Lector de código de barras (USB): permite fichar escaneando el código del DNI o de la licencia de conducir. El lector tiene que estar configurado para mandar Enter al final de cada lectura. Viene activado.
+• Modo de fichaje: con Automático o Manual, el dispositivo propone Ingreso o Egreso según si la persona ya está adentro, y podés cambiarlo antes de confirmar. Con Bloqueado, todos los fichajes llevan la misma acción.
+• Acción bloqueada: solo aparece con Bloqueado. Elegí Siempre Ingreso o Siempre Egreso.
+Al terminar, tocá el botón Guardar Configuración, abajo. Aparece el aviso Configuración guardada. Los cambios no se aplican hasta que lo tocás.
+Modo Evento
+Arriba de todo hay un cuadro Control de acceso a evento, pensado para filas largas. Por ejemplo, controlar la entrada a una charla. Tocá Activar modo Evento y el dispositivo queda así:
+• Registrar sin confirmar: activado.
+• Lector de código de barras (USB): activado.
+• Modo de fichaje: Bloqueado, con Siempre Ingreso.
+• Foto al fichar: Deshabilitada.
+• Texto a voz automático: apagado.
+• Reconocimiento facial: Siempre desactivado.
+El botón guarda en el momento: no hace falta tocar Guardar Configuración. Después podés ajustar cualquier opción de abajo. Mientras Registrar sin confirmar esté activado, el cuadro muestra la etiqueta Modo Evento activo.
+No hay un botón para apagarlo. Para volver al fichaje de siempre, desactivá Registrar sin confirmar. Después elegí de nuevo el Modo de fichaje, la Foto al fichar, el Texto a voz automático y el Reconocimiento facial que usabas, y tocá Guardar Configuración.
+Las otras pestañas
+• Empleados: la lista de las personas cargadas en el dispositivo. Podés buscar por nombre, apellido o DNI, y filtrar por sector. El botón Actualizar vuelve a bajar la lista del sistema. Usalo cuando cargaste un empleado nuevo y todavía no aparece.
+• Reconocimiento Facial: el botón Analizar y entrenar revisa la foto de cada empleado y entrena el reconocimiento con las que se ven bien. Podés entrenar solo un sector. Forzar reentrenamiento borra todo lo entrenado y empieza de cero, y antes te pregunta. Limpiar eliminados saca los rostros de empleados que ya no están.
+---
 ⚠️ Resolución de Inconvenientes
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
@@ -7011,3 +7170,8 @@ Cuando tu cuenta tiene más de una sucursal, la pantalla agrega una aclaración:
 | No aparece el empleado en la app. | Todavía no está cargado en el sistema. | Cargalo en Empleados y volvé a abrir la app. |
 | No veo Datos de Acceso a la App en el menú. | Tu usuario no tiene permiso de fichaje. | Pedile a un administrador el permiso. |
 | Perdí el PIN. | Nadie lo anotó. | Entrá a esta pantalla: el PIN se muestra siempre igual. |
+| Escaneo el DNI y no pasa nada. | Lector de código de barras (USB) está apagado, o el lector no manda Enter al final. | Activá la opción y usá Probar lector para ver qué lee (Paso 3). |
+| Al escanear sale Documento ... no está en la lista. | Esa persona no está cargada en el dispositivo, o su DNI está mal cargado. | Revisá el DNI en Empleados. Después tocá Actualizar en la pestaña Empleados de la app. |
+| Al escanear pide Confirmar cada vez. | Registrar sin confirmar está desactivado. | Activalo en Configuración y tocá Guardar Configuración. |
+| El dispositivo no dice nada por voz. | Texto a voz automático está apagado, o el fichaje entró por escaneo con Registrar sin confirmar activado. | Prendé Texto a voz automático y tocá Guardar Configuración. Los escaneos sin confirmar no se anuncian por voz. |
+| Cambié la configuración y otra tablet sigue igual. | Cada dispositivo guarda la suya. | Repetí los cambios en cada aparato. |
