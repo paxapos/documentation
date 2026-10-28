@@ -161,7 +161,12 @@ A la derecha de cada proveedor hay dos botones: **Ver proveedor** abre su ficha 
 
 ![Solapa Cuenta corriente del proveedor](images/manual/50-compras/58-66-pantalla-cuenta-corriente.png)
 
-6. Tocá **Cuenta corriente** para ver lo que le debés.
+6. Tocá **Cuenta corriente** para ver lo que le debés. Tenés dos listas para elegir qué ver:
+   - **Año**: la lista arranca en el año actual. Elegí otro año, o **Todos**.
+   - **Mostrar**: por defecto ves **Con saldo pendiente**. Elegí **Todos los comprobantes (también los pagados)** para ver también lo que ya pagaste.
+   - Si elegís un año y hay deuda (o saldo a favor) en otros años, aparece un aviso amarillo. Por ejemplo: **Hay $ 50.000,00 de otros años**. Tocá **ver todos** para verla.
+   - Los cuadros de arriba (**Saldo a pagar**, **Vencido**, **Próximos 7 días** y **Saldo a favor**) cuentan siempre todos los años.
+   - **Exportar a Excel** baja los comprobantes que estás viendo.
 
 ![Botones Editar Proveedor y Borrar Proveedor](images/manual/50-compras/58-71-botones-ficha.png)
 

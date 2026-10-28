@@ -139,6 +139,8 @@ Al final de cada renglón hay cuatro botones:
 3. Tocá **Abrir Arqueo**.
 4. El turno aparece en **Arqueos Abiertos - Pendientes de Cierre**.
 
+> ⚠️ **Atención:** si la caja ya tiene un turno abierto, el sistema no la abre de nuevo. El aviso dice quién la tiene y desde cuándo. Por ejemplo: *La caja Ventas ya está abierta por Juan desde las 18:05 (arqueo #222).* Ese turno lo tiene que cerrar quien lo abrió o un encargado (Paso 8). Si dice *por vos*, es tu propio turno: seguí con ese.
+
 > 💡 **Consejo útil:** desde el momento en que abrís, los cobros en efectivo de tu turno se suman a esta caja.
 
 ---
@@ -272,7 +274,7 @@ En un turno ya cerrado, en vez de **Cerrar** aparece **Reabrir**.
 |---|---|---|
 | Dice **No hay cajas configuradas** y la caja existe. | Todas las cajas ya tienen un turno abierto. | Cerrá el turno que ya no uses (Paso 8). La tarjeta vuelve a aparecer. |
 | No veo mi caja para abrir un turno. | Tu usuario no está tildado en la caja. | Pedile a un administrador que lo tilde en [Listado de Cajas](/user-guide/listado-de-cajas). |
-| Al abrir dice que la caja ya se encuentra abierta. | Otra persona la abrió antes. | Buscá el turno en **Arqueos Abiertos** y cerralo, o usá ese mismo turno. |
+| Al abrir dice que la caja ya está abierta, con el nombre de quien la tiene y desde cuándo. | Esa caja ya tiene un turno abierto. | Buscá el turno en **Arqueos Abiertos** y cerralo (Paso 8), o pedile a quien lo abrió que lo cierre. Si el aviso dice *por vos*, usá ese mismo turno. |
 | Faltan botones **Ingreso** y **Retiro**. | El turno ya está cerrado o no tenés permiso. | Solo se usan en turnos abiertos. Consultá tus permisos. |
 | Hay un faltante al cerrar. | Salió plata de la caja y no se anotó. | Anotá los retiros con **Retiro** y mirá **¿Por qué no cierra?**. |
 | El resumen muestra un importe en rojo entre **Facturado Total Mesas** y **Abiertas Por Usuario**. | Cobraste mesas de otros compañeros o quedaron mesas sin cobrar. | Es normal. Leé el [FAQ de Diferencias en Arqueo](/user-guide/08-faq-cajero-diferencia-facturado-vs-abiertas). |

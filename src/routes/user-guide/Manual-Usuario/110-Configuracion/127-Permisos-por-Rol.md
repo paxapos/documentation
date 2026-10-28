@@ -122,6 +122,21 @@ Al tocarlo, te pide confirmar antes de cambiar nada.
 
 ---
 
+## 👤 **Qué pasa si una persona tiene más de un rol**
+
+<div id="que-pasa-si-una-persona-tiene-mas-de-un-rol"></div>
+
+Una persona puede tener varios roles (se tildan en [Usuarios del Sistema](/user-guide/usuarios-del-sistema)). En ese caso **suma los permisos de todos sus roles**: puede hacer todo lo que permita cualquiera de ellos.
+
+- Un rol que ya guardaste en esta pantalla aporta **solo lo que dejaste tildado**.
+- Un rol que nunca guardaste aporta los permisos que trae el sistema para ese rol. Son los mismos que ves tildados al elegirlo y los que carga **Defaults**.
+
+Por ejemplo, alguien es **Mozo** (que nunca guardaste) y también **Cajero** (que sí ajustaste). Puede hacer lo que dejaste tildado en Cajero, más todo lo que el sistema le da a un Mozo.
+
+> ⚠️ **Atención:** si destildás un permiso en un rol, una persona puede seguir teniéndolo porque otro de sus roles lo incluye. Revisá todos sus roles en [Usuarios del Sistema](/user-guide/usuarios-del-sistema).
+
+---
+
 ## ⚠️ **Resolución de Inconvenientes**
 
 <div id="resolucion-de-inconvenientes"></div>
@@ -130,6 +145,7 @@ Al tocarlo, te pide confirmar antes de cambiar nada.
 |---|---|---|
 | Los botones **Guardar**, **Defaults**, **Clonar** y el tacho están apagados. | Todavía no elegiste un rol. | Elegí un rol en el desplegable. |
 | Cambié un permiso y una persona lo sigue viendo. | Tiene la sesión abierta con los permisos viejos. | Pedile que cierre sesión y vuelva a entrar. |
+| Le saqué un permiso a un rol y la persona lo sigue teniendo. | Tiene otro rol que también lo incluye. | Los permisos de todos sus roles se suman. Revisá sus roles en [Usuarios del Sistema](/user-guide/usuarios-del-sistema). |
 | Destildé algo y al volver a entrar está como antes. | No tocaste **Guardar**. | Volvé a hacer el cambio y tocá **Guardar**. |
 | Nadie puede abrir una pantalla. | Se apagó esa función para un rol clave. | Elegí el rol, encendé la función y tocá **Guardar**. También podés usar **Defaults**. |
 | Un rol quedó con permisos de otro. | Se usó **Clonar** por error. | Elegí el rol y tocá **Defaults**, revisá y **Guardar**. |

@@ -73,6 +73,8 @@ Si todavía no hay ningún acceso, la pantalla muestra el botón **Crear Primer 
 
 Desde ese momento, quien escriba ese PIN en el dispositivo entra con ese rol.
 
+> 💡 **Consejo útil:** la solapa **PIN rápido** de la pantalla de ingreso aparece solo si el comercio tiene al menos un acceso con PIN. Si todavía no creaste ninguno, al entrar se ve solamente usuario y contraseña (ver [Cómo Iniciar Sesión](/user-guide/iniciar-sesion)).
+
 ---
 
 ## ✏️ **Paso 5: Cambiá o eliminá un acceso**
@@ -97,5 +99,6 @@ En cada tarjeta de la lista del Paso 1 hay dos botones juntos, a la derecha:
 | El sistema dice que el PIN ya existe. | Otro acceso usa esos mismos 4 números. | Elegí otra combinación de 4 dígitos. |
 | El PIN no se guarda. | Tiene menos o más de 4 números. | Escribí exactamente 4 dígitos. |
 | El dispositivo no deja entrar con el PIN. | El acceso fue eliminado o el PIN se cambió. | Revisá la lista. Editá el acceso y confirmá el PIN. |
+| En la pantalla de ingreso no aparece la solapa **PIN rápido**. | El comercio no tiene ningún acceso con PIN. | Creá uno (Paso 2). La solapa aparece desde ese momento. |
 | Un empleado necesita entrar con su email. | Ese acceso es compartido, no personal. | Creale un usuario en [Usuarios del Sistema](/user-guide/usuarios-del-sistema). |
 | No me deja elegir el rol que quiero. | El rol no existe o no tenés permiso. | Revisá los roles en [Permisos por Rol](/user-guide/permisos-por-rol). |

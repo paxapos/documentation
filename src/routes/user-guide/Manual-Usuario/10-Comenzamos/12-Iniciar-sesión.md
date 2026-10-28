@@ -23,13 +23,15 @@
 
 <div id="metodo-1-ingreso-rapido-con-pin"></div>
 
-Al abrir la página de inicio, por defecto se presenta el teclado táctil numérico de acceso rápido:
+> ℹ️ **Importante:** el acceso por PIN se ofrece solo en los comercios que tienen usuarios con PIN. Si el tuyo no tiene ninguno, la pantalla de ingreso muestra solamente usuario y contraseña (ver [Método 2](#metodo-2-ingreso-con-correo-y-contrasena)).
+
+Si tu comercio tiene usuarios con PIN, al abrir la página de inicio, por defecto se presenta el teclado táctil numérico de acceso rápido:
 
 ![Pantalla de ingreso rápido por PIN](images/manual/10-comenzamos/02-login-pin.png)
 
 ### **Instrucciones paso a paso:**
 
-1. Verificá que la solapa superior activa sea **"PIN"** (seleccionada por defecto).
+1. Verificá que la solapa superior activa sea **"PIN rápido"** (seleccionada por defecto).
 2. Ingresá los **4 dígitos de tu PIN personal** asignado:
    - Podés hacer clic o pulsar directamente sobre los números del **teclado numérico en pantalla** (1 al 9, y 0).
    - O bien podés tipear los 4 números desde el teclado físico de tu computadora o terminal POS.
@@ -53,7 +55,7 @@ Para usuarios con perfil de Administrador, Cajero o Encargado, o cuando se requi
 
 ### **Instrucciones paso a paso:**
 
-1. En la parte superior de la ventana de acceso, hacé clic en la pestaña **"Usuario y contraseña"**.
+1. En la parte superior de la ventana de acceso, hacé clic en la pestaña **"Usuario y contraseña"**. Si tu comercio no usa PIN, no hay pestañas: el formulario ya aparece solo.
 2. **Campo "Email":** Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: *gerencia@milocal.com*).
 3. **Campo "Contraseña":** Ingresá tu clave de seguridad (los caracteres se ocultarán automáticamente con puntos por protección).
 4. Hacé clic en el botón azul **"Iniciar sesión"**.
@@ -79,6 +81,7 @@ Una vez validadas tus credenciales (por PIN o por correo), el sistema abrirá la
 
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
+| **No veo la solapa "PIN rápido"** | Tu comercio no tiene usuarios con PIN. | Ingresá con **Usuario y contraseña**. Si querés usar PIN, el dueño o un encargado puede crearlos (ver [Usuarios con PIN](/user-guide/usuarios-con-pin)). |
 | **"PIN o datos incorrectos"** | Se ingresó un número erróneo o el usuario fue deshabilitado. | Borrá los números con *Backspace* y reintentá. Si persiste, solicitale al administrador del local que verifique o reasigne tu PIN. |
 | **Olvidé mi contraseña de administrador** | No recuerdas la clave asignada a tu correo. | Hacé clic en el enlace **"¿Olvidaste tu contraseña?"** debajo del botón de ingreso (ver guía: [Recuperar Contraseña](/user-guide/recuperar-contrasena)). |
 | **La página no carga** | Falta de conexión a internet o error en la URL del local. | Verificá que la terminal tenga conexión a internet activa y que el nombre del local en la barra de direcciones esté bien escrito. |
