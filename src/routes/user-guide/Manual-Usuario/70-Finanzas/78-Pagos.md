@@ -131,6 +131,22 @@ Solo ves las opciones que están debajo de **Ver Pago Completo** si el pago es d
 
 Si el pago es una orden pendiente, la lista suma **Aprobar Orden** y **Rechazar Orden**. Si ya está aprobada, suma **Ejecutar Pago**.
 
+### Avisale al proveedor por WhatsApp
+
+<div id="avisale-al-proveedor-por-whatsapp"></div>
+
+Cuando le pagás a un proveedor, podés avisarle por WhatsApp con el mensaje ya escrito.
+
+1. Abrí el pago completo (Paso 5).
+2. Arriba a la derecha, al lado de **Más ▾**, tocá el botón verde **Avisar por WhatsApp**.
+3. Se abre WhatsApp con el mensaje listo. Revisalo y mandalo vos.
+
+El mensaje dice cuánto se pagó, cómo y cuándo, y por qué factura u orden de compra. Si hubo retenciones, también dice cuánto se retuvo y cuánto se transfirió. Si el pago es de una orden de compra, trae el link para que el proveedor vea el detalle y los certificados.
+
+> 💡 **Consejo útil:** si el proveedor no tiene teléfono cargado, WhatsApp te deja elegir a quién mandárselo.
+
+> ⚠️ **Atención:** el botón aparece solo en pagos ya hechos, que sean a un solo proveedor, y solo si tu usuario puede cargar pagos. En una orden de pago pendiente o aprobada no aparece.
+
 ---
 
 ## 🗂️ Paso 6: Recorré las tres solapas

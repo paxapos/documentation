@@ -93,7 +93,7 @@ Tocá **Crear usuario nuevo**. Se abre una ventanita con los datos.
 - **Password** y **Password (confirm)**: la contraseña, escrita dos veces igual.
 ![Bloque Roles y Permisos con Roles, Cajas y Mozos](images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-2.png)
 
-- **Roles**: tildá el rol que tendrá. Podés abrir **¿Qué puede hacer cada rol?** para elegir mejor.
+- **Roles**: tildá el rol que tendrá. Podés abrir **¿Qué puede hacer cada rol?** para elegir mejor. Si tildás más de uno, la persona suma los permisos de todos (ver [Permisos por Rol](/user-guide/permisos-por-rol#que-pasa-si-una-persona-tiene-mas-de-un-rol)).
 - **Cajas**: las cajas que puede usar. **Seleccionar todos** las tilda todas.
 - **Mozos**: a qué mozo corresponde, si trabaja en el salón.
 ![Bloques Centros de Costo y Perfil de Impresión, con los botones Cancelar y Registrar nuevo usuario abajo](images/manual/110-configuracion/123-03-formulario-crear-usuario-nuevo-parte-3.png)

@@ -35,7 +35,7 @@
 
 ![Pantalla Listado de Cobros con el panel de filtros arriba y la lista de cobros abajo](images/manual/70-finanzas/74-01-pantalla-lista-de-cobros.png)
 
-Se abre el **Listado de Cobros**. Arriba tenés los filtros. Abajo, un renglón por cada cobro. Las columnas dicen:
+Se abre el **Listado de Cobros** con los cobros de los **Últimos 7 días**. Arriba tenés los filtros. Abajo, un renglón por cada cobro. Las columnas dicen:
 
 - **Fecha**: cuándo se cobró.
 - **Arqueo**: en qué caja quedó. Tocá el número para abrirla.
@@ -55,11 +55,13 @@ Se abre el **Listado de Cobros**. Arriba tenés los filtros. Abajo, un renglón 
 
 <div id="paso-2-busca-un-cobro"></div>
 
+Arriba de los filtros hay cuatro botones de período: **Hoy**, **Ayer**, **Últimos 7 días** y **Este mes**. Al entrar está marcado **Últimos 7 días**. Tocá otro para cambiar el período. Los demás filtros que hayas puesto se mantienen.
+
 ![Panel de filtros completo con fechas, estado Aprobado, montos y los botones Filtrar y Limpiar](images/manual/70-finanzas/74-02-panel-de-filtros.png)
 
 En el panel de arriba tenés estos casilleros:
 
-- **Desde** y **Hasta** (las dos primeras fechas): elegí el período que querés ver.
+- **Desde** y **Hasta** (las dos primeras fechas): elegí el período que querés ver. Si las completás, mandan estas fechas y no los botones de período.
 - **Todos los estados**: mostrá solo los cobros **Aprobado**, **Rechazado**, **Pendiente**, etc.
 - **ID Mesa**: escribí el número interno de la mesa.
 - **Todos los instrumentos**: tarjeta, alias, efectivo, etc.
@@ -68,7 +70,7 @@ En el panel de arriba tenés estos casilleros:
 - **Todos los tipos de pago**: por ejemplo *Tarjeta Visa* o *Transferencia bancaria*.
 - **Monto desde** y **Monto hasta**: buscá cobros entre dos importes. Por ejemplo, de *100* a *5000*.
 - **Filtrar**: el botón azul. Aplica lo que completaste.
-- **Limpiar**: borra todos los filtros y muestra todo otra vez.
+- **Limpiar**: borra todos los filtros y vuelve a mostrar los **Últimos 7 días**.
 
 1. Completá solo lo que necesites. Lo que dejás sin tocar no filtra.
 2. Tocá **Filtrar**.
@@ -95,6 +97,8 @@ Se abre la pantalla **Transacción de Pago**. Arriba a la derecha tiene dos boto
 
 - **Corregir el medio**: el naranja. Corrige con qué pagó el cliente (Paso 5).
 - **Volver al listado**: vuelve a la lista de cobros.
+
+Debajo del título hay una línea de resumen con el monto, la mesa, el estado, el medio de pago y la fecha. En la línea siguiente dice **Cobró:** y el nombre de quien cobró (si lo hizo el sistema, dice *Automático*). Si el cobro se anuló o se canceló, se suma **Anulado por** o **Cancelado por**, con el nombre y el motivo.
 
 Y abajo, estos recuadros:
 
@@ -160,6 +164,6 @@ Si el cobro no se puede corregir, ves un aviso amarillo y solo el botón **Volve
 |---|---|---|
 | No veo el lápiz en un cobro. | El cobro es electrónico o su caja ya está cerrada. | Solo se corrigen cobros manuales con la caja abierta. |
 | La pantalla dice que no se puede cambiar el medio. | El cobro lo procesó Mercado Pago, un QR o un link de pago. | Pedile ayuda a soporte si el dato está mal. |
-| La lista sale vacía. | Los filtros no coinciden con ningún cobro. | Tocá **Limpiar** y probá con menos filtros. |
+| La lista sale vacía. | Los filtros no coinciden con ningún cobro, o no hubo cobros en el período elegido. | Tocá **Limpiar** y probá con menos filtros, o elegí otro período: **Ayer**, **Este mes** o fechas en **Desde** y **Hasta**. |
 | Busco el botón **Reimprimir** y no está. | Esta pantalla no imprime. | Reimprimí el ticket desde [Histórico de Mesas](/user-guide/historico-de-mesas). |
 | No encuentro un cobro por mesa. | En **ID Mesa** hay que escribir el número interno. | Buscá por fecha y monto, y fijate en la columna **Mesa**. |

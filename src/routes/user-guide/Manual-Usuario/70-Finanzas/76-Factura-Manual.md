@@ -104,7 +104,7 @@ Ejemplo con **IVA 21%**:
 
 ![Importes: Neto Gravado, Total de la Factura con 1500, Moneda ARS, y los botones Guardar borrador y Guardar y Pagar](images/manual/70-finanzas/76-06-importes-y-botones.png)
 
-- **Neto Gravado**: no se escribe. Se calcula solo con los impuestos que tildaste. Por ejemplo: *1239,67*.
+- **Neto Gravado**: en las facturas A no se escribe. Se calcula solo con los impuestos que tildaste. Por ejemplo: *1239,67*. En las facturas B es distinto: mirá "Si la factura es B", más abajo.
 - **Total de la Factura**: escribí el total del papel. Por ejemplo: *1500*.
 - **Moneda**: dejá **ARS** (pesos). Si elegís otra, aparece el casillero **Cotización**.
 - **Guardar borrador**: guarda la factura **sin pagar**. Queda la deuda.
@@ -117,6 +117,27 @@ Ejemplo con **IVA 21%**:
 3. Buscala en [Historial de Facturas](/user-guide/historial-de-facturas). Vas a verla con el monto en **Falta pagar**.
 
 > 💡 **Consejo útil:** el botón **Guardar** solo aparece al editar una factura que ya está toda pagada.
+
+### Si la factura es B
+
+<div id="si-la-factura-es-b"></div>
+
+En una factura B el total ya trae el IVA adentro. Por eso, cuando elegís el tipo **B** (también las notas de crédito y de débito B y los tiques B), el sistema separa el neto:
+
+- El casillero pasa a llamarse **Neto sin IVA** y se completa solo. Es el total sin el IVA. Por ejemplo, con un total de *1500* el neto es *1239,67*.
+- Aparece la lista **IVA contenido**, con **21 %**, **10,5 %**, **27 %** y **Exento (0 %)**. Viene en **21 %**.
+- Si cambiás el **Total de la Factura** o el **IVA contenido**, el neto se calcula de nuevo.
+
+Cuándo cambiar **IVA contenido**:
+
+- Si lo que compraste lleva IVA de 10,5 % o de 27 %, elegí esa opción. Por ejemplo, con un producto al 10,5 % y un total de *1105*, el neto es *1000*.
+- Si la compra es exenta de IVA, elegí **Exento (0 %)**. El neto queda igual al total.
+
+También podés corregir el neto a mano. Te sirve, por ejemplo, si la factura mezcla productos con distinto IVA. Si lo escribís vos, el sistema ya no lo recalcula. Para volver al cálculo automático, borrá el número.
+
+> 💡 **Consejo útil:** el sistema usa el neto sin IVA para calcular la base de la retención de Ganancias y para controlar la factura contra la orden de compra. Por eso conviene que quede bien.
+
+En las facturas C, las X, los vales y otros comprobantes sin IVA no ves el casillero del neto. El neto es igual al total.
 
 ---
 

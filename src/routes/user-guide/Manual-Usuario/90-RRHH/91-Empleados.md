@@ -49,7 +49,7 @@ Tocá el botón azul **Buscar**. Para volver a ver todos, tocá **Limpiar filtro
 ### Qué muestra cada columna
 
 - **Foto**: la foto de la persona. Si no tiene, ves un dibujito gris.
-- **Nombre**: apellido y nombre. Abajo, el número de legajo si lo cargaste.
+- **Nombre**: apellido y nombre. Abajo, el número de legajo si lo cargaste. Si la persona no tiene apellido cargado, ves solo el nombre. Pasa igual en las demás listas y en los reportes.
 - **DNI**.
 - **Departamento**.
 - **Turno**: los turnos que tiene asignados.

@@ -45,6 +45,19 @@ Arriba tenés:
 - **Nueva OC**: abre [Crear una Orden de Compra](/user-guide/crear-orden-compra).
 - **Aprobaciones**: abre [Órdenes a aprobar](/user-guide/ordenes-a-aprobar).
 
+### ¿Cómo venimos?
+
+<div id="como-venimos"></div>
+
+Arriba de la lista están los números de **¿Cómo venimos?**. Cada uno cuenta las órdenes según lo que falta hacer. Tocá un número y la lista de abajo muestra solo esas órdenes.
+
+Por ejemplo:
+
+- **Falta pagar**: las órdenes que tienen una factura con plata sin pagar.
+- **Pagadas (últimos 30 días)**: las órdenes que terminaste de pagar en el último mes. Cuenta también las que cerraste a mano y después pagaste. Al tocarlo, la lista muestra primero la que pagaste más recién.
+
+> 💡 **Consejo útil:** los números que ves dependen de cómo trabaja tu comercio. Por ejemplo, **Falta recibir** aparece si recibís la mercadería a mano.
+
 ---
 
 ## 🔎 Paso 2: Buscá una orden
@@ -64,6 +77,8 @@ En el recuadro de filtros podés completar:
 
 1. Completá lo que necesites y tocá **Buscar**.
 
+> 💡 **Consejo útil:** si tu comercio trabaja con RAFAM, el número principal de la orden es el **N° de RAFAM**. Lo ves así en el detalle, en la lista, en el portal del proveedor y en los mails. El número de PaxaPos queda al lado, como referencia.
+
 ---
 
 ## 🚦 Paso 3: Entendé el estado de cada orden
@@ -79,6 +94,8 @@ En la columna **Estado**, cada orden muestra una fila de círculos. El primero d
 - 🕓 naranja: **esperando aprobación**.
 
 Los círculos que siguen se pintan a medida que avanza: **Enviado**, **Recibido**, **Facturado** y **Pagado**.
+
+Si la mercadería ya llegó y falta la factura, el círculo de **Facturado** se resalta y al lado dice **Falta la factura**. Cuando se carga la factura, vuelve a decir **Facturado**.
 
 A la derecha, en **Acciones**, cada orden tiene un botón con el paso que sigue y una flechita **▾** con más opciones:
 
@@ -134,10 +151,10 @@ A la derecha, en **Acciones**, cada orden tiene un botón con el paso que sigue 
    - **Reenviar a proveedor**: la vuelve a mandar por mail.
    - **Unificar con otra OC**: junta dos órdenes del mismo proveedor en una.
    - **Marcar observación**: avisa que hubo un problema (ver abajo).
-   - **Finalizar OC**: la cierra, aunque falte algo.
+   - **Cerrar orden**: la cierra, aunque falte algo (ver abajo).
    - **Eliminar OC**: la borra.
 
-> ⚠️ **Atención:** **Finalizar OC** y **Eliminar OC** no se pueden deshacer fácil. Usalos solo si estás seguro.
+> ⚠️ **Atención:** **Eliminar OC** no se puede deshacer fácil. Usalo solo si estás seguro.
 
 ### Marcar una observación
 
@@ -148,6 +165,24 @@ A la derecha, en **Acciones**, cada orden tiene un botón con el paso que sigue 
 3. Si llegó algo mal (por ejemplo, bolsas rotas), tocá **Marcar observación**.
 4. En **Motivo de la observación**, escribí qué pasó y tocá **Marcar Observación**.
 5. La orden queda marcada hasta que alguien la resuelva. Si te arrepentiste, tocá **Cancelar**.
+
+### Cerrar una orden
+
+<div id="cerrar-una-orden"></div>
+
+Cerrá una orden cuando ya no esperás nada más de ella, aunque falte recibir o facturar algo.
+
+1. Tocá la flechita **▾** de la orden y después **Cerrar orden**.
+2. Se abre una ventana que explica qué pasa. Si todavía hay plata sin pagar, también te dice cuánto.
+3. Tocá **Cerrar orden** para confirmar. Si te arrepentís, tocá **Cancelar**.
+
+Al cerrarla:
+
+- El proveedor ya no puede subir facturas nuevas por su link. Las notas de crédito sí las puede subir.
+- Lo que ya se debe no desaparece. La orden sigue en **Falta pagar** y podés pagarla igual.
+- Si hace falta, la podés abrir de nuevo: en el detalle de la orden, tocá **Más ▾** y después **Reabrir la orden**.
+
+> 💡 **Consejo útil:** si la orden ya está recibida, facturada y pagada, el sistema la cierra solo. No hace falta cerrarla a mano.
 
 ---
 
@@ -167,7 +202,7 @@ Los botones de la orden:
 - **Editar**: cambiás la orden.
 - **Imprimir**: la imprimís.
 - **Observación**: marcás un problema, igual que en el Paso 6.
-- **Finalizar**: cerrás la orden, aunque falte algo.
+- **Cerrar orden**: cerrás la orden, aunque falte algo. Está en el botón **Más ▾**, arriba a la derecha (ver Paso 6).
 - El tacho 🗑️ borra la orden.
 
 ### Link para el proveedor
@@ -177,10 +212,13 @@ Los botones de la orden:
 ![Link público de la orden, con el botón Copiar](images/manual/50-compras/52-78-campo-publicurlinput.png)
 
 - El proveedor puede ver la orden con este link. Tocá **Copiar** para pegarlo en un mensaje.
+- Arriba a la derecha, al lado de **Más ▾**, está el botón **Copiar link para el proveedor**. Copia el link de un toque y avisa **Link copiado**. No aparece si la orden todavía no se autorizó o si el link es solo de consulta.
+- Cuando la mercadería ya llegó y falta la factura, el proveedor ve en su pantalla **Recibida · falta tu factura**, con el botón **Subir factura**.
 
 ![Botones Reenviar por mail, Enviar por WhatsApp y Guía para proveedor](images/manual/50-compras/52-121-botones-envio.png)
 
 - **Reenviar por mail** y **Enviar por WhatsApp** le mandan el link. **Guía para proveedor** explica cómo lo usa el proveedor.
+- Cuando el proveedor sube una factura por su link, te llega un aviso en la campanita 🔔 del encabezado. Dice quién la subió y de qué orden. Tocalo para abrir la orden y ver la factura. El aviso les llega a las personas que pueden cargar facturas.
 
 ### Facturas, pagos e ítems
 
