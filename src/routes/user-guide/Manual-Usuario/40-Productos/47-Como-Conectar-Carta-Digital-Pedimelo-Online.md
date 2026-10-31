@@ -14,7 +14,9 @@ Hay dos formas de usarla. Elegí una antes de empezar:
 - **Carta digital (solo para ver)**: el cliente mira la carta y los precios. No hay botón para comprar.
 - **Carta con pedidos**: el cliente arma el pedido, elige delivery, take away o salón, y lo paga.
 
-Esta guía tiene tres partes: qué tocar en la **Configuración general**, qué tocar en el **Menú** y de dónde sacar el **QR**.
+Esta guía tiene tres partes: qué tocar en la **Configuración general**, qué tocar en el **Menú** y de dónde sacar el **link** y el **QR**.
+
+> ✅ **¿Ya lo tengo disponible?:** sí, si tu comercio tiene el módulo **Delivery**. Tu link ya existe y no hay que escribirlo en ningún lado: es `https://pedimelo.online/tu-comercio`. Lo copiás desde la configuración ([Paso 3](#paso-3-copia-tu-link)) o desde el menú ([Parte 3](#parte-3-el-link-y-el-codigo-qr)).
 
 ---
 
@@ -22,7 +24,7 @@ Esta guía tiene tres partes: qué tocar en la **Configuración general**, qué 
 
 <div id="antes-de-empezar"></div>
 
-- Tu comercio tiene que tener activo el módulo **Delivery**. Si no lo tenés, pedilo al soporte de PaxaPOS por [WhatsApp]({{WHATSAPP_URL}}).
+- Tu comercio tiene que tener activo el módulo **Delivery**. Con el módulo activo, el link de tu carta ya está listo. Si no lo tenés, pedilo al soporte de PaxaPOS por [WhatsApp]({{WHATSAPP_URL}}).
 - Tu usuario tiene que tener permiso para configurar **Delivery** y para editar el **Menú**. Mirá [Permisos por Rol](/user-guide/permisos-por-rol).
 - Tu menú tiene que tener productos cargados con precio. Mirá [Menú de Productos](/user-guide/menu).
 - Para cobrar online, tener configurado MercadoPago. Mirá [Configuración de Procesadores](/user-guide/configuracion-procesadores). Para la carta solo para ver no hace falta.
@@ -58,18 +60,28 @@ Esta guía tiene tres partes: qué tocar en la **Configuración general**, qué 
 
 ---
 
-### 🔗 Paso 3: Revisá la URL del pedimelo online
+### 🔗 Paso 3: Copiá tu link
 
-<div id="paso-3-revisa-la-url"></div>
+<div id="paso-3-copia-tu-link"></div>
 
-![Cuadro Pedidos online con el campo URL del pedimelo online marcado en rojo](images/manual/40-productos/47-04-campo-url-pedimelo-online.png)
+No hay nada para completar: el sistema arma solo la dirección de tu carta.
 
-Es la dirección de tu carta en internet. El QR y el botón **Ver menú público** se arman con esta dirección.
+![Cuadro Tu carta online con el link de la carta y los botones Copiar, Abrir y Ver QR marcados en rojo](images/manual/40-productos/47-04-bloque-tu-carta-online.png)
 
-1. Fijate que el campo **URL del pedimelo online** tenga la dirección de tu comercio. Por ejemplo: `https://pedimelo.online/tu-comercio`.
-2. Tiene que ir **sin** la barra "/" al final.
+1. Arriba de todo está el cuadro **Tu carta online**, con el link de tu comercio. Por ejemplo: `https://pedimelo.online/tu-comercio`.
+2. Tocá **Copiar**. Aparece **Copiado** por un momento. Ahora pegalo donde quieras: WhatsApp, Instagram, tu web o Google.
+3. Tocá **Abrir** para ver tu carta como la ve tu cliente.
 
-> ⚠️ **Atención:** si este campo está vacío o mal escrito, el QR lleva a una página equivocada. Si no sabés qué dirección poner, pedila al soporte.
+![Cuadro Tu carta online con el botón Ver QR y el código QR que aparece debajo, marcados en rojo](images/manual/40-productos/47-04b-qr-tu-carta-online.png)
+
+4. Tocá **Ver QR**. Debajo aparece el código QR de tu carta. Volvé a tocar **Ver QR** para esconderlo.
+5. Para guardarlo: hacé clic derecho sobre el QR y elegí **Guardar imagen como…**. En el celular, dejá el dedo apretado sobre el QR.
+
+Este link y este QR abren la carta que elijas en el [Paso 6](#paso-6-elegi-el-menu-por-default). Para el link o el QR de un menú puntual, mirá la [Parte 3](#parte-3-el-link-y-el-codigo-qr).
+
+> 💡 **Consejo útil:** también abrís tu carta desde el menú de la izquierda: **Delivery** → **Delivery App**.
+
+> ℹ️ **¿Tu comercio usa una dirección propia?** (por ejemplo `pedidos.tucomercio.com`). Esa dirección la configura el soporte de PaxaPOS. Si la tenés, el cuadro muestra esa dirección y avisa que tu comercio usa un dominio propio. Para cambiarla, escribinos por [WhatsApp]({{WHATSAPP_URL}}).
 
 ---
 
@@ -204,7 +216,11 @@ Saltealo si solo querés la carta para ver.
 
 ---
 
-## 📱 Parte 3: El código QR
+## 📱 Parte 3: El link y el código QR
+
+<div id="parte-3-el-link-y-el-codigo-qr"></div>
+
+Desde el menú sacás el link y el QR de **ese menú puntual**. Sirve si tenés varias cartas (por ejemplo, almuerzo y cena) y querés compartir una sola. Si tenés una sola carta, alcanza con el link y el QR del [Paso 3](#paso-3-copia-tu-link).
 
 ### ⋯ Paso 13: Abrí los tres puntitos
 
@@ -238,6 +254,18 @@ Imprimilo y ponelo en las mesas, en la vidriera o en el mostrador. Compartí la 
 
 ---
 
+### 🔗 Paso 14b: Copiá el link de ese menú
+
+<div id="paso-14b-copia-el-link-del-menu"></div>
+
+1. En los tres puntitos, tocá **Ver menú público**. Tu carta se abre en una pestaña nueva.
+2. Copiá la dirección de arriba del navegador. Tiene esta forma: `https://pedimelo.online/tu-comercio/menu/alias-del-menu`.
+3. Pegala donde quieras.
+
+> 💡 **Consejo útil:** en **Configurar** (pantalla **Editando Menú**), debajo de **ID / Alias**, también aparece esa dirección: *El menú público en Pedimelo.online será: …*
+
+---
+
 ### 🪑 Paso 15 (opcional): QR de cada mesa
 
 <div id="paso-15-qr-de-cada-mesa"></div>
@@ -266,7 +294,9 @@ Necesita **Con Carrito de Compras** y el tipo de servicio **Salón** tildados (P
 <div id="problemas-frecuentes"></div>
 
 - **No aparece "Código QR del menú" en los tres puntitos.** El menú no está publicado. Hacé el [Paso 10](#paso-10-publica-el-menu).
-- **El QR abre una página que no es la mía.** Revisá la URL del [Paso 3](#paso-3-revisa-la-url). Después de corregirla, volvé a sacar el QR.
+- **El QR abre una página que no es la mía.** Si lo imprimiste hace tiempo, puede tener una dirección vieja. Sacalo de nuevo desde el [Paso 3](#paso-3-copia-tu-link) o el [Paso 14](#paso-14-saca-el-qr-del-menu) y reemplazalo.
+- **No encuentro dónde escribir la dirección de mi carta.** No hace falta: el sistema la arma sola. Copiala desde el [Paso 3](#paso-3-copia-tu-link).
+- **No veo el cuadro Tu carta online.** Tu comercio no tiene el módulo **Delivery** o tu usuario no tiene permiso para configurarlo. Mirá [Antes de empezar](#antes-de-empezar).
 - **pedimelo.online dice que no se aceptan pedidos.** Tildá **Delivery abierto** ([Paso 4](#paso-4-deja-el-delivery-abierto)).
 - **El cliente no ve el botón para comprar.** Tildá **Con Carrito de Compras** ([Paso 11](#paso-11-activa-el-carrito)).
 - **Cambié un precio y no se ve.** Esperá hasta 5 minutos y recargá la página.

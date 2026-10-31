@@ -357,12 +357,23 @@ Muestra cómo cobrás con tarjeta y QR. Acá se mira el estado. Para cambiar alg
 
 Cómo recibís pedidos por internet en *pedimelo.online*. Es la primera sección del grupo **Canales e IA**. Necesita el módulo **Delivery** activo.
 
+![Cuadro Tu carta online con el link de la carta y los botones Copiar, Abrir y Ver QR](images/manual/40-productos/47-04-bloque-tu-carta-online.png)
+
+**Tu carta online**
+
+El link de tu carta, armado solo: `https://pedimelo.online/tu-comercio`. No hay que escribirlo en ningún lado.
+
+- **Copiar**: copia el link para pegarlo en WhatsApp, redes o tu web.
+- **Abrir**: abre tu carta como la ve tu cliente.
+- **Ver QR**: muestra el código QR de tu carta, para guardarlo o imprimirlo.
+
+Si tu comercio usa una dirección propia (por ejemplo `pedidos.tucomercio.com`), la configura el soporte de PaxaPOS y aparece acá en lugar del link de pedimelo.online. Paso a paso: [Cómo conectar la Carta Digital](/user-guide/como-conectar-carta-digital-pedimelo-online#paso-3-copia-tu-link).
+
 ![Cuadro Pedidos online con delivery abierto, URL, horario, estado inicial, modo del catálogo y teléfono de WhatsApp](images/manual/110-configuracion/111-26-delivery-pedidos-online.png)
 
 **Pedidos online**
 
 - **Delivery abierto**: tildado, se aceptan pedidos. Destildado, pedimelo.online avisa a tus clientes que no se aceptan.
-- **URL del pedimelo online**: la dirección de tu página de pedidos, sin "/" al final.
 - **ID Media del catálogo online**: el número de la imagen del catálogo.
 - **Horario y fechas de atención**: texto libre con cuándo abrís y cerrás los pedidos.
 - **Estado inicial de un nuevo pedido**: cómo entra un pedido nuevo (ej. **Pendiente**).
