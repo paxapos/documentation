@@ -53,6 +53,7 @@ export const moduleIcons: Record<string, string> = {
 
 	// 40-Productos
 	menu: 'lucide:book-open-check',
+	'como-conectar-carta-digital-pedimelo-online': 'lucide:qr-code',
 	categorias: 'lucide:tags',
 	'variantes-grupo-sabores': 'lucide:layers',
 	'maestro-de-productos': 'lucide:package-open',
