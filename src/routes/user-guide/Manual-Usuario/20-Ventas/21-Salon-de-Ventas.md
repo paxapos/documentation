@@ -183,6 +183,8 @@ Tocá el producto. Se suma a la comanda de la izquierda.
 
 > 💡 Si el cliente pide algo más, repetí este paso: cada vez que tocás **Comandar** sale una comanda nueva.
 
+> 💡 Si tu comercio tiene el [Comandero](/user-guide/comandero), cada comanda muestra en qué estado está: **Confirmada**, **Lista** o **Entregada**. Cuando una pasa a **Lista**, la mesa titila y suena un aviso.
+
 ---
 
 ### Paso 5: Asigná un cliente (o creá uno nuevo)
