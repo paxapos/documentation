@@ -120,12 +120,11 @@ Sirve para que el sistema hable como tu rubro. Por ejemplo, en un hotel "Mesa" p
 • Catálogo: ej. "Carta" o "Menú".
 • Comanda: cómo se llama cada pedido o consumo.
 • Subtotal de la comanda: el texto del subtotal.
-!Cuadro Adición / salón con las opciones de apertura de mesa, estado de comandas, remito y descuento máximo
+!Cuadro Adición / salón con las opciones de apertura de mesa, transiciones, remito, mozo por defecto y descuento máximo
 Adición / salón
 Los nombres de estos campos cambian según la terminología que elegiste arriba.
 • Indicar la cantidad de Cubiertos al abrir Mesa: elegís No, Si y que sea obligatorio o Si, pero que sea opcional.
 • Qué ventana mostrar al abrir una Mesa rápidamente: la pantalla que se abre primero. Puede ser la administración de la mesa, "Agregar Producto" o "Agregar Cliente".
-• Ver el estado de las comandas en el salón: con Si, se ve el estado de cada comanda. Cuando está "lista", la mesa cambia de color.
 • Efectos de transición en el salón: prende o apaga las animaciones entre pantallas.
 • Imprimir remito al hacer checkout en efectivo: con Si, al cobrar en efectivo se imprime el remito.
 • Mozo por defecto al crear Mesa: quién queda asignado si no elegís a nadie.
@@ -195,10 +194,16 @@ Muestra cómo cobrás con tarjeta y QR. Acá se mira el estado. Para cambiar alg
 ---
 🛵 Delivery y pedidos online
 Cómo recibís pedidos por internet en pedimelo.online. Es la primera sección del grupo Canales e IA. Necesita el módulo Delivery activo.
+!Cuadro Tu carta online con el link de la carta y los botones Copiar, Abrir y Ver QR
+Tu carta online
+El link de tu carta, armado solo: https://pedimelo.online/tu-comercio. No hay que escribirlo en ningún lado.
+• Copiar: copia el link para pegarlo en WhatsApp, redes o tu web.
+• Abrir: abre tu carta como la ve tu cliente.
+• Ver QR: muestra el código QR de tu carta, para guardarlo o imprimirlo.
+Si tu comercio usa una dirección propia (por ejemplo pedidos.tucomercio.com), la configura el soporte de PaxaPOS y aparece acá en lugar del link de pedimelo.online. Paso a paso: Cómo conectar la Carta Digital.
 !Cuadro Pedidos online con delivery abierto, URL, horario, estado inicial, modo del catálogo y teléfono de WhatsApp
 Pedidos online
 • Delivery abierto: tildado, se aceptan pedidos. Destildado, pedimelo.online avisa a tus clientes que no se aceptan.
-• URL del pedimelo online: la dirección de tu página de pedidos, sin "/" al final.
 • ID Media del catálogo online: el número de la imagen del catálogo.
 • Horario y fechas de atención: texto libre con cuándo abrís y cerrás los pedidos.
 • Estado inicial de un nuevo pedido: cómo entra un pedido nuevo (ej. Pendiente).

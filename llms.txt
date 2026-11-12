@@ -1,5 +1,5 @@
 # PaxaPOS LLM Index
-# Updated: 2026-10-28T12:18:42.700Z
+# Updated: 2026-11-12T18:38:45.088Z
 https://doc.paxapos.com/llms/index.txt
 https://doc.paxapos.com/llms/glosario-del-dominio.txt
 https://doc.paxapos.com/llms/11-introduccion.txt
@@ -53,6 +53,7 @@ https://doc.paxapos.com/llms/43-variantes-grupo-sabores.txt
 https://doc.paxapos.com/llms/44-maestro-de-productos.txt
 https://doc.paxapos.com/llms/45-subproductos-elaborados.txt
 https://doc.paxapos.com/llms/46-recetas.txt
+https://doc.paxapos.com/llms/47-como-conectar-carta-digital-pedimelo-online.txt
 https://doc.paxapos.com/llms/48-analisis-duplicados.txt
 https://doc.paxapos.com/llms/52-todas-las-ordenes-compra.txt
 https://doc.paxapos.com/llms/53-crear-orden-compra.txt

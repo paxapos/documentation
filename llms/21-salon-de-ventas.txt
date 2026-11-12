@@ -89,6 +89,7 @@ Tocá el producto. Se suma a la comanda de la izquierda.
 5. La mesa vuelve a su vista principal, con la comanda cargada.
 !Mesa con la comanda cargada tras comandar
 💡 Si el cliente pide algo más, repetí este paso: cada vez que tocás Comandar sale una comanda nueva.
+💡 Si tu comercio tiene el Comandero, cada comanda muestra en qué estado está: Confirmada, Lista o Entregada. Cuando una pasa a Lista, la mesa titila y suena un aviso.
 ---
 Paso 5: Asigná un cliente (o creá uno nuevo)
 Asignar un cliente es opcional, pero es obligatorio para hacer una Factura A. Lo podés hacer en cualquier momento, mientras la mesa esté abierta o después de cerrarla.

@@ -51,6 +51,7 @@ https://doc.paxapos.com/user-guide/variantes-grupo-sabores
 https://doc.paxapos.com/user-guide/maestro-de-productos
 https://doc.paxapos.com/user-guide/subproductos-elaborados
 https://doc.paxapos.com/user-guide/recetas
+https://doc.paxapos.com/user-guide/como-conectar-carta-digital-pedimelo-online
 https://doc.paxapos.com/user-guide/analisis-duplicados
 https://doc.paxapos.com/user-guide/todas-las-ordenes-compra
 https://doc.paxapos.com/user-guide/crear-orden-compra
@@ -131,6 +132,7 @@ https://doc.paxapos.com/llms/43-variantes-grupo-sabores.txt
 https://doc.paxapos.com/llms/44-maestro-de-productos.txt
 https://doc.paxapos.com/llms/45-subproductos-elaborados.txt
 https://doc.paxapos.com/llms/46-recetas.txt
+https://doc.paxapos.com/llms/47-como-conectar-carta-digital-pedimelo-online.txt
 https://doc.paxapos.com/llms/48-analisis-duplicados.txt
 https://doc.paxapos.com/llms/52-todas-las-ordenes-compra.txt
 https://doc.paxapos.com/llms/53-crear-orden-compra.txt
