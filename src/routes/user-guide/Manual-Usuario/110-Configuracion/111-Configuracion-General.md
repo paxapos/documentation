@@ -219,7 +219,7 @@ Sirve para que el sistema hable como tu rubro. Por ejemplo, en un hotel "Mesa" p
 - **Comanda**: cómo se llama cada pedido o consumo.
 - **Subtotal de la comanda**: el texto del subtotal.
 
-![Cuadro Adición / salón con las opciones de apertura de mesa, estado de comandas, remito y descuento máximo](images/manual/110-configuracion/111-15-ventas-adicion-salon.png)
+![Cuadro Adición / salón con las opciones de apertura de mesa, transiciones, remito, mozo por defecto y descuento máximo](images/manual/110-configuracion/111-15-ventas-adicion-salon.png)
 
 **Adición / salón**
 
@@ -227,7 +227,6 @@ Los nombres de estos campos cambian según la terminología que elegiste arriba.
 
 - **Indicar la cantidad de Cubiertos al abrir Mesa**: elegís **No**, **Si y que sea obligatorio** o **Si, pero que sea opcional**.
 - **Qué ventana mostrar al abrir una Mesa rápidamente**: la pantalla que se abre primero. Puede ser la administración de la mesa, "Agregar Producto" o "Agregar Cliente".
-- **Ver el estado de las comandas en el salón**: con **Si**, se ve el estado de cada comanda. Cuando está "lista", la mesa cambia de color.
 - **Efectos de transición en el salón**: prende o apaga las animaciones entre pantallas.
 - **Imprimir remito al hacer checkout en efectivo**: con **Si**, al cobrar en efectivo se imprime el remito.
 - **Mozo por defecto al crear Mesa**: quién queda asignado si no elegís a nadie.

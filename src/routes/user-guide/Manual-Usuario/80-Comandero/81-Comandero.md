@@ -232,6 +232,14 @@ Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se 
 
 Algunos usuarios ven **⋮** arriba a la derecha de la tarjeta. Abre la lista de estados. Tocá uno para pasar la comanda directo a ese estado. Si elegís **Borrador** o **Entregada**, sale de la pantalla.
 
+### Lo que ve el mozo en el salón
+
+Con el Comandero activo, el [Salón de Ventas](/user-guide/salon-de-ventas) muestra el estado de cada comanda. El mozo ve si está **Confirmada**, **Lista** o **Entregada** sin ir a la cocina. No hay que configurar nada más.
+
+- Cuando una comanda pasa a **Lista**, la mesa titila y suena un aviso. Así el mozo sabe que tiene que retirarla.
+- Si el usuario del mozo tiene permiso para cambiar comandas, también puede avanzar el estado desde la mesa.
+- Sin el Comandero, el salón no muestra los estados de cocina.
+
 ---
 
 ## 🧮 Paso 9: Mirá los platos juntos
@@ -300,6 +308,7 @@ Si una comanda se entregó por error, tocá **‹ Atrás** en su tarjeta. Vuelve
 | **Un plato no aparece en mi puesto** | El producto no tiene **Puesto (KDS)**, o tiene otro. | Editá el producto y elegí el puesto correcto (Paso 3). |
 | **Veo platos de otros puestos** | La pantalla está en **Todos los sectores** o **Todos los puestos**. | Elegí tu sector y tu puesto arriba (Paso 6). |
 | **Las bebidas salen impresas en la cocina** | El producto tiene tildada la impresora de la cocina. | En el producto, revisá **¿Dónde se imprime la comanda?** (Paso 3). |
+| **El mozo no ve en el salón el estado de las comandas** | El módulo Comandero no está activo. | Pedile a soporte que lo active. Con el Comandero activo, el estado se ve solo (Paso 8). |
 | **No suena nada cuando llega un pedido** | El sonido está apagado, o el navegador bloqueó el audio. | Tocá el engranaje y prendé **Sonido**. Tocá la pantalla una vez para habilitar el audio. |
 | **Dice Sin conexión** | La pantalla perdió internet. | Revisá la conexión. Cuando vuelva, los pedidos se actualizan solos. |
 | **Toqué un plato por error** | Desde la pantalla los platos no vuelven para atrás. | Avisale a un encargado. Seguí con el paso que corresponde. |
