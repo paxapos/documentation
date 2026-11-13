@@ -11,13 +11,13 @@ Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace
 
 ---
 
-##### ⚠️ **REQUISITO OBLIGATORIO**
+## ⚠️ **REQUISITO OBLIGATORIO**
 
 <div id="requisito-obligatorio"></div>
 
 > **Recordá que para realizar este trámite debés poseer clave fiscal de nivel 3 en ARCA.**
 
-##### 🗺️ **Hoja de ruta: el trámite tiene 2 partes**
+## 🗺️ **Hoja de ruta: el trámite tiene 2 partes**
 
 <div id="hoja-de-ruta"></div>
 
@@ -33,14 +33,14 @@ Para facturar, primero tenés que hacer un trámite en el sitio de ARCA. Se hace
 
 ---
 
-##### 🟦 **PARTE 1 de 2 — Habilitar el servicio de factura electrónica por web service**
+## 🟦 **PARTE 1 de 2 — Habilitar el servicio de factura electrónica por web service**
 
 <div id="habilitar-servicio"></div>
 
 > **🎯 Qué vas a lograr:** autorizar a PaxaPOS a emitir facturas electrónicas en tu nombre.  
 > **📋 Subpasos:** 1.1 Ingreso a ARCA · 1.2 Nueva relación · 1.3 Elegir servicio · 1.4 Asignar representante · 1.5 Confirmar
 
-###### **🌐 1.1 Ingreso a ARCA y acceso a Administrador**
+### **🌐 1.1 Ingreso a ARCA y acceso a Administrador**
 
 <div id="ingreso-arca"></div>
 
@@ -58,7 +58,7 @@ _Menú principal con opción de Administrador de Relaciones_
 
 **🔹 1.1.4** **En el caso que tengas más de un CUIT** asociado a tu cuenta de ARCA, aparecerá una pantalla donde tendrás que seleccionar el CUIT con el que deseas emitir facturas electrónicas
 
-###### **🔗 1.2 Crear nueva relación y seleccionar servicio**
+### **🔗 1.2 Crear nueva relación y seleccionar servicio**
 
 <div id="crear-relacion"></div>
 
@@ -79,7 +79,7 @@ _Campo de búsqueda de servicios_
 ![WebServices ARCA](images/afip/5-Web-service.webp)
 _Menú desplegable de ARCA mostrando WebServices_
 
-###### **📑 1.3 Elegir servicio según tipo de factura**
+### **📑 1.3 Elegir servicio según tipo de factura**
 
 <div id="elegir-servicio"></div>
 
@@ -91,7 +91,7 @@ _Menú desplegable de ARCA mostrando WebServices_
 
 > ⚠️ **Importante:** si necesitás realizar distintos tipos de facturas (por ej. A y E), repetí los subpasos **1.2 a 1.5** seleccionando en cada caso el servicio que corresponda al tipo de factura.
 
-###### **👤 1.4 Buscar y asignar representante**
+### **👤 1.4 Buscar y asignar representante**
 
 <div id="asignar-representante"></div>
 
@@ -109,7 +109,7 @@ _Ingreso del CUIT del representante autorizado_
 
 > ⚠️ **Nota importante:** ignorá el mensaje de ARCA en rojo sobre el computador fiscal y la "Advertencia del Sistema" que aparece debajo sobre la delegación del servicio.
 
-###### **✅ 1.5 Confirmar la relación**
+### **✅ 1.5 Confirmar la relación**
 
 <div id="confirmar-relacion"></div>
 
@@ -125,14 +125,14 @@ _Botón de confirmación final de la relación_
 
 ---
 
-##### 🟩 **PARTE 2 de 2 — Crear un nuevo punto de venta electrónico**
+## 🟩 **PARTE 2 de 2 — Crear un nuevo punto de venta electrónico**
 
 <div id="crear-punto-venta"></div>
 
 > **🎯 Qué vas a lograr:** crear el punto de venta desde el que PaxaPOS va a emitir tus facturas.  
 > **📋 Subpasos:** 2.1 Adherir servicio · 2.2 Reingresar a ARCA · 2.3 Crear punto de venta · 2.4 Confirmar
 
-###### **⚙️ 2.1 Adherir el servicio desde administrador**
+### **⚙️ 2.1 Adherir el servicio desde administrador**
 
 <div id="adherir-servicio"></div>
 
@@ -159,7 +159,7 @@ _Servicio de administración de puntos de venta_
 ![Confirmar Adherir](images/afip/8-Confirmar-representante.webp)
 _Confirmación de adhesión al servicio_
 
-###### **🔄 2.2 Reingresar y acceder a administración**
+### **🔄 2.2 Reingresar y acceder a administración**
 
 <div id="reingresar-arca"></div>
 
@@ -177,7 +177,7 @@ _Lista de servicios habilitados mostrando la nueva opción_
 
 **🔹 2.2.4** **Si se presenta un mensaje**, presionar "Cerrar"
 
-###### **➕ 2.3 Crear nuevo punto de venta**
+### **➕ 2.3 Crear nuevo punto de venta**
 
 <div id="crear-pvd"></div>
 
@@ -205,7 +205,7 @@ _Formulario completo para crear punto de venta_
 
 > ⚠️ **Revisá bien esta opción:** si elegís un "Sistema" incorrecto, no vas a poder facturar desde PaxaPOS.
 
-###### **✅ 2.4 Confirmar punto de venta**
+### **✅ 2.4 Confirmar punto de venta**
 
 <div id="confirmar-pvd"></div>
 
@@ -218,19 +218,19 @@ _Formulario completo para crear punto de venta_
 
 ---
 
-##### 📞 **PASO FINAL — Avisarnos para configurar tu punto de venta**
+## 📞 **PASO FINAL — Avisarnos para configurar tu punto de venta**
 
 <div id="notificar-soporte"></div>
 
 **🔹 IMPORTANTE:** **Una vez completadas la Parte 1 y la Parte 2**, deberás **notificarnos inmediatamente** para que podamos configurar el PVD (Punto de Venta) en tu comercio.
 
-###### **📧 ¿Cómo notificar?**
+### **📧 ¿Cómo notificar?**
 
 <div id="como-notificar"></div>
 
 - **WhatsApp:** <a href="{{WHATSAPP_URL}}?text=Hola!%20Ya%20complet%C3%A9%20la%20configuraci%C3%B3n%20en%20ARCA%20y%20necesito%20que%20configuren%20mi%20PVD%20para%20facturaci%C3%B3n%20electr%C3%B3nica.%20Mi%20CUIT%20es:%20__%20y%20el%20punto%20de%20venta%20creado%20es:%20__" target="_blank">{{WHATSAPP_DISPLAY}}</a> _¡Click para chatear directamente en nueva pestaña!_
 
-###### **📋 Información que debés proporcionar:**
+### **📋 Información que debés proporcionar:**
 
 <div id="informacion-que-debes-proporcionar"></div>
 
@@ -239,13 +239,13 @@ _Formulario completo para crear punto de venta_
 - ✅ **Nombre fantasía asignado** (ej: "Factura Electrónica")
 - ✅ **Tipo de sistema seleccionado** (Monotributo/Responsable Inscripto/Exportación)
 
-###### **⏱️ Tiempo de configuración:**
+### **⏱️ Tiempo de configuración:**
 
 <div id="tiempo-de-configuracion"></div>
 
 Una vez recibida la notificación, nuestro equipo técnico configurará tu PVD en **24-48 horas hábiles**.
 
-###### **⚠️ Recordá:**
+### **⚠️ Recordá:**
 
 <div id="recorda"></div>
 
@@ -253,7 +253,7 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, au
 
 ---
 
-##### 🚨 **¿Problemas comunes?**
+## 🚨 **¿Problemas comunes?**
 
 <div id="problemas-comunes"></div>
 
@@ -261,7 +261,7 @@ Sin esta notificación, **no podrás comenzar a facturar electrónicamente**, au
 - **"No aparece el servicio"** → Verificá que estés en la sección correcta de WebServices
 - **"Error al asignar representante"** → Verificá que el CUIT `20303683268` esté bien escrito
 
-###### **📞 ¿Necesitás ayuda?**
+### **📞 ¿Necesitás ayuda?**
 
 <div id="necesitas-ayuda"></div>
 
