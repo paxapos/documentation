@@ -1,0 +1,196 @@
+# Consumos del mes y tope de inteligencia artificial
+
+<div id="facturacion-del-servicio"></div>
+
+> **¿Dónde está en el sistema?:** Tu nombre de usuario (arriba a la derecha) → **Cuenta de facturación**.
+> **¿Quién lo usa?:** Dueños y gestores de la cuenta. Quien tiene rol de consulta puede ver los consumos, pero no cambiar el tope.
+
+> 🎯 **¿Para qué sirve esto?**
+> Para saber, en cualquier momento, cuánto llevás consumido del servicio en el mes y cuánto te queda por pagar. Además, podés ponerle un límite mensual en pesos a la inteligencia artificial para que nunca te sorprenda una cifra al cierre.
+
+---
+
+## 📍 **Paso 1: Abrí tu cuenta de facturación**
+
+<div id="paso-1-abri-tu-cuenta-de-facturacion"></div>
+
+1. Hacé clic en tu nombre de usuario, arriba a la derecha.
+2. Elegí **Cuenta de facturación**. La pantalla se titula "Mis Cuentas Comerciales — facturación del servicio PaxaPos".
+3. Buscá el cuadro de tu cuenta. Si manejás más de una, cada una tiene su propio cuadro, con sus propios consumos y su propio tope.
+
+> 💡 **Consejo útil:** el tope y los consumos son **por cuenta**, no por sucursal. Si tu cuenta tiene varias sucursales, se suman todas.
+
+---
+
+## 📊 **Paso 2: Leé los consumos del mes en curso**
+
+<div id="paso-2-lee-los-consumos-del-mes-en-curso"></div>
+
+Arriba de todo, en cada cuenta, está el cuadro **Mes en curso** con lo que va del mes, en pesos.
+
+![Cuadro Mes en curso: Noviembre 2026 con los conceptos Comisión por cobros con MercadoPago, Inteligencia artificial y Abono mensual, cada uno con su importe, y al pie los totales Ya pagaste y Te queda por pagar](images/manual/110-configuracion/138-01-consumos-del-mes.png)
+
+Cada fila es un concepto. Solo aparecen los que tu cuenta realmente tiene: si no tenés abono, no hay fila de abono.
+
+| Concepto                                | Qué significa                                                                                                                                       |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Abono mensual**                       | El plan que contrataste. Figura con el nombre del plan.                                                                                             |
+| **Comisión por cobros con MercadoPago** | Un porcentaje de lo que cobraste con QR y link de pago. El cuadro dice cuál es el porcentaje y sobre qué monto. Se actualiza hasta el día anterior. |
+| **Inteligencia artificial**             | Cuántos usos llevás y para qué (por ejemplo, lectura de facturas por foto), con un importe estimado.                                                |
+| **Empleados en fichaje y sueldos**      | Cantidad de empleados por el precio de cada uno. Aparece solo si tu cuenta paga el fichaje por empleado.                                            |
+
+### Abono mensual
+
+![Fila Abono mensual: Plan Pro, 25.000 pesos, etiqueta A pagar](images/manual/110-configuracion/138-02-concepto-abono-mensual.png)
+
+Es el valor del plan. Queda **A pagar** hasta que se cierra el mes.
+
+### Comisión por cobros con MercadoPago
+
+![Fila Comisión por cobros con MercadoPago: 0,8 % de 255.000 pesos, con la aclaración Ya pagaste 1.640 pesos de esta comisión](images/manual/110-configuracion/138-03-concepto-comision-mercadopago.png)
+
+Esta comisión **se descuenta en cada cobro**, así que gran parte de ella ya la pagaste sin darte cuenta. Si todavía queda una parte sin descontar, la fila lo aclara: **"Ya pagaste $ 1.640,00 de esta comisión"**. Cuando la comisión del mes está completa y descontada, la fila muestra la etiqueta **Ya pagado**.
+
+### Inteligencia artificial
+
+![Fila Inteligencia artificial: 2 usos de lectura de facturas por foto, 2.009,15 pesos, con la aclaración Estimado; el importe final se confirma al cerrar el mes](images/manual/110-configuracion/138-04-concepto-inteligencia-artificial.png)
+
+Cuenta los usos del asistente, la lectura de facturas por foto, las respuestas por WhatsApp y el resto de las funciones de inteligencia artificial que te provee PaxaPOS. El importe es una **estimación**: el valor final se confirma al cerrar el mes y puede diferir un poco.
+
+> 💡 **Consejo útil:** las sucursales que usan **su propia clave** de inteligencia artificial no le pagan ese consumo a PaxaPOS, así que no se cuentan acá.
+
+### Cuánto pagaste y cuánto te queda
+
+<div id="cuanto-pagaste-y-cuanto-te-queda"></div>
+
+![Línea Ya pagaste 1.640 pesos, Te queda por pagar 27.409,15 pesos, con la aclaración Se factura al cerrar el mes](images/manual/110-configuracion/138-05-ya-pagaste-te-queda-por-pagar.png)
+
+Debajo de la tabla está el resumen:
+
+- **Ya pagaste:** lo que ya se descontó, como la comisión de MercadoPago en cada cobro.
+- **Te queda por pagar:** lo que todavía no se pagó. Es una estimación de lo que vas a recibir al cierre.
+- **"Se factura al cerrar el mes."** Estos números son una foto del mes en curso. El cierre y la factura los hace PaxaPOS a fin de mes, como siempre.
+
+> ⚠️ **Atención:** esta pantalla **no cobra nada** ni genera un débito. Solo te muestra el consumo para que lo sigas de cerca.
+
+Si todavía no hubo consumos, el cuadro dice **"Todavía no hay consumos este mes."**
+
+---
+
+## ⚙️ **Paso 3: Poné un tope mensual a la inteligencia artificial**
+
+<div id="paso-3-pone-un-tope-mensual-a-la-inteligencia-artificial"></div>
+
+Justo debajo de los consumos está el cuadro **Tu tope mensual de inteligencia artificial**. Nadie tiene un tope por defecto: si lo dejás vacío, la inteligencia artificial funciona como siempre.
+
+![Formulario con el campo No quiero gastar más de, las dos opciones Apagar la inteligencia artificial hasta fin de mes y Solo avisarme y seguir, y el botón Guardar tope](images/manual/110-configuracion/138-06-tope-formulario.png)
+
+1. En **"No quiero gastar más de"**, escribí el importe en pesos que querés como máximo por mes. Por ejemplo: `250000`.
+2. En **"Al llegar al tope"**, elegí qué querés que pase (ver el paso siguiente).
+3. Tocá **Guardar tope**.
+4. Vas a ver el mensaje **"Guardamos tu tope mensual de inteligencia artificial."** y, arriba del formulario, una barra con cuánto llevás.
+
+![Tope de 250.000 pesos guardado, con la barra casi vacía y el texto Llevás 2.009,15 pesos de 250.000 pesos (menos del 1 %)](images/manual/110-configuracion/138-07-tope-guardado-holgado.png)
+
+> 💡 **Consejo útil:** escribí solo números, sin símbolos. Si ponés algo que no es un importe, el sistema te avisa **"Ingresá un importe válido en pesos, por ejemplo 250000."** y no guarda nada.
+
+---
+
+## 🔀 **Paso 4: Elegí qué pasa al llegar al tope**
+
+<div id="paso-4-elegi-que-pasa-al-llegar-al-tope"></div>
+
+Son dos opciones y podés cambiar de una a otra cuando quieras:
+
+| Opción                                                 | Qué hace                                                                                                                        |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Apagar la inteligencia artificial hasta fin de mes** | Cuando el consumo llega al tope, la inteligencia artificial se apaga sola. El día 1 del mes siguiente vuelve a encenderse sola. |
+| **Solo avisarme y seguir**                             | La inteligencia artificial nunca se apaga. Solo te avisamos cuando te acercás y cuando llegás al tope.                          |
+
+> ⚠️ **Atención:** el corte apaga **únicamente la inteligencia artificial**. Tus cobros con MercadoPago, el fichaje y todo el resto del sistema siguen funcionando igual.
+
+Quien intenta usar la inteligencia artificial mientras está apagada ve el mensaje **"Llegaste al tope mensual de inteligencia artificial que configuró el dueño"**, nunca un error.
+
+> 💡 **Consejo útil:** el corte puede demorar unos minutos desde que se cruza el tope, porque el sistema lo revisa cada cierto tiempo.
+
+---
+
+## 🔔 **Paso 5: Qué pasa al llegar al 80 % y al 100 %**
+
+<div id="paso-5-que-pasa-al-llegar-al-80-y-al-100"></div>
+
+La barra del cuadro cambia de color según cuánto llevás:
+
+- **Verde:** menos del 80 % del tope.
+- **Amarilla:** el 80 % o más.
+- **Roja:** llegaste al 100 %.
+
+![Barra amarilla con el texto Llevás 2.009,15 pesos de 2.500 pesos (80 %)](images/manual/110-configuracion/138-08-tope-cerca-del-limite.png)
+
+Al llegar al **80 %** y al **100 %** te avisamos de dos formas:
+
+- Con una notificación en la **campanita** de la aplicación, a todos los dueños y gestores de la cuenta.
+- Con un **mail** a la dirección de facturación de la cuenta.
+
+Cada aviso se manda una sola vez por mes. Si elegiste **Solo avisarme y seguir**, esos son los dos avisos del mes y nada más.
+
+### Si ponés un tope más bajo de lo que ya gastaste
+
+<div id="si-pones-un-tope-mas-bajo-de-lo-que-ya-gastaste"></div>
+
+Si el tope que escribís es menor a lo que ya llevás gastado y elegiste apagar la inteligencia artificial, el sistema **no guarda de inmediato**. Te muestra cuánto llevás y te pide una confirmación.
+
+![Formulario con el tope de 1.000 pesos, la opción de apagar elegida y la casilla Sí, apagar la inteligencia artificial ahora](images/manual/110-configuracion/138-09-tope-pide-confirmar.png)
+
+1. Leé el aviso con lo que ya llevás gastado.
+2. Si querés apagarla, tildá **"Sí, apagar la inteligencia artificial ahora"** y tocá **Guardar tope**.
+3. Si no, cambiá el importe o elegí **Solo avisarme y seguir**.
+
+### Cuando se alcanza el tope
+
+<div id="cuando-se-alcanza-el-tope"></div>
+
+![Barra roja completa (el gasto supera el tope, 200 %) y cartel rojo que dice que la inteligencia artificial está apagada hasta fin de mes porque llegaste a tu tope](images/manual/110-configuracion/138-10-tope-alcanzado-ia-apagada.png)
+
+Si elegiste apagar, aparece un cartel rojo: **"La inteligencia artificial que te provee PaxaPOS está apagada hasta fin de mes porque llegaste a tu tope."** Siempre recibís el aviso en el momento, aunque no hayas recibido antes el del 80 %.
+
+Las sucursales que usan **su propia clave** de inteligencia artificial **no se ven afectadas**.
+
+---
+
+## 🔄 **Paso 6: Volvé a prender la inteligencia artificial**
+
+<div id="paso-6-volve-a-prender-la-inteligencia-artificial"></div>
+
+Tenés tres caminos:
+
+1. **Esperar al día 1:** si elegiste apagar, vuelve sola al empezar el mes.
+2. **Subir el tope:** escribí un importe mayor a lo que llevás y tocá **Guardar tope**.
+3. **Quitar el tope:** dejá el campo vacío y tocá **Guardar tope**. Verás **"Quitamos el tope mensual de inteligencia artificial."**
+
+![Tope subido a 250.000 pesos: la barra vuelve a ser casi vacía y desapareció el cartel rojo](images/manual/110-configuracion/138-11-tope-subido-ia-vuelve.png)
+
+La inteligencia artificial vuelve a funcionar **en un par de minutos**.
+
+![Cuadro del tope sin importe cargado y con la opción Solo avisarme y seguir elegida](images/manual/110-configuracion/138-12-sin-tope.png)
+
+---
+
+## ⚠️ **Resolución de Inconvenientes**
+
+<div id="resolucion-de-inconvenientes"></div>
+
+| Problema                                                                        | Causa más frecuente                                                                                     | Solución recomendada                                                                                                 |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **No veo "Cuenta de facturación" en el menú de mi usuario**                     | Tu usuario no tiene ninguna cuenta de facturación a su cargo.                                           | Pedile al dueño de la cuenta que te agregue como gestor, o escribile a soporte de PaxaPOS.                           |
+| **Veo los consumos pero no el formulario del tope**                             | Tu rol en la cuenta es de consulta.                                                                     | Solo los dueños y gestores pueden cambiar el tope. Pedile a uno de ellos que lo ponga.                               |
+| **"No pudimos calcular lo que llevás gastado."**                                | El importe en pesos no se pudo calcular en este momento.                                                | Esperá unos minutos y volvé a entrar. Si sigue igual, avisale a soporte.                                             |
+| **"No pudimos calcular el mes en curso."**                                      | Hubo un inconveniente al armar el cuadro.                                                               | Recargá la página en unos minutos.                                                                                   |
+| **"Todavía no hay consumos este mes."**                                         | Es principio de mes o todavía no usaste nada.                                                           | No hay nada que hacer: los consumos aparecen a medida que se generan.                                                |
+| **El importe de inteligencia artificial figura como "Estimado"**                | Es el valor calculado hasta hoy.                                                                        | Es normal: el importe final se confirma al cerrar el mes y puede diferir un poco.                                    |
+| **"Ingresá un importe válido en pesos, por ejemplo 250000."**                   | Dejaste texto o un valor en cero en el campo.                                                           | Escribí solo números mayores a cero, o dejalo vacío si no querés tope.                                               |
+| **La inteligencia artificial está apagada y no sé por qué**                     | Se llegó al tope mensual y elegiste apagar.                                                             | Subí el tope o quitalo, y esperá un par de minutos. También vuelve sola el día 1.                                    |
+| **Subí el tope pero sigue apagada**                                             | Pasaron pocos minutos.                                                                                  | Esperá un par de minutos y volvé a intentar.                                                                         |
+| **Una sucursal sigue usando inteligencia artificial aunque se alcanzó el tope** | Esa sucursal usa su propia clave de inteligencia artificial.                                            | Es lo esperado: el tope solo aplica a la inteligencia artificial que te provee PaxaPOS.                              |
+| **No me llegó el mail de aviso**                                                | El mail va a la dirección de facturación de la cuenta y puede estar sin cargar o en la carpeta de spam. | Revisá el correo no deseado y pedí a soporte que verifique la dirección de facturación. La campanita te avisa igual. |
+| **Los cobros con MercadoPago o el fichaje se cortaron**                         | El tope no los toca: nunca se cortan.                                                                   | Si pasa algo en esas áreas, no es por el tope. Escribile a soporte.                                                  |
