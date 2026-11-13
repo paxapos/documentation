@@ -1,5 +1,5 @@
 # PaxaPOS LLM Index
-# Updated: 2026-11-12T18:38:45.088Z
+# Updated: 2026-11-13T19:44:21.280Z
 https://doc.paxapos.com/llms/index.txt
 https://doc.paxapos.com/llms/glosario-del-dominio.txt
 https://doc.paxapos.com/llms/11-introduccion.txt
@@ -20,6 +20,7 @@ https://doc.paxapos.com/llms/130-turnos-mesa.txt
 https://doc.paxapos.com/llms/132-medios-de-cobro.txt
 https://doc.paxapos.com/llms/134-clasificacion-de-gastos.txt
 https://doc.paxapos.com/llms/136-centros-de-costo.txt
+https://doc.paxapos.com/llms/138-facturacion-del-servicio.txt
 https://doc.paxapos.com/llms/141-biblioteca-de-drivers.txt
 https://doc.paxapos.com/llms/142-sam4s-giant-100.txt
 https://doc.paxapos.com/llms/143-citizen-ct-s310ii.txt

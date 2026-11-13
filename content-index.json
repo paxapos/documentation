@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-12T18:38:45.088Z",
+  "generated_at": "2026-11-13T19:44:21.280Z",
   "version": "2025.1",
-  "total_files": 161,
+  "total_files": 163,
   "sections": {
     "user_guide": {
       "title": "Manual de Usuario",
@@ -26,7 +26,7 @@
             "tutorial",
             "introduccion"
           ],
-          "last_modified": "2026-11-12T18:37:02.490Z"
+          "last_modified": "2026-11-13T19:44:20.311Z"
         },
         {
           "id": "12-Iniciar-sesión",
@@ -47,7 +47,7 @@
             "iniciar",
             "sesión"
           ],
-          "last_modified": "2026-11-12T18:37:02.490Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "13-Recuperar-contrasena",
@@ -68,7 +68,7 @@
             "recuperar",
             "contrasena"
           ],
-          "last_modified": "2026-11-12T18:37:02.490Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "14-Guia-de-Inicio-Rapido",
@@ -90,7 +90,7 @@
             "inicio",
             "rapido"
           ],
-          "last_modified": "2026-11-12T18:37:02.490Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "101-Tablero-General",
@@ -111,7 +111,7 @@
             "tablero",
             "general"
           ],
-          "last_modified": "2026-11-12T18:37:02.490Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "106-Productos-Mas-Vendidos",
@@ -133,7 +133,7 @@
             "mas",
             "vendidos"
           ],
-          "last_modified": "2026-11-12T18:37:02.491Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "109-Compras-por-Mercaderia",
@@ -155,7 +155,7 @@
             "por",
             "mercaderia"
           ],
-          "last_modified": "2026-11-12T18:37:02.491Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "111-Configuracion-General",
@@ -176,7 +176,7 @@
             "configuracion",
             "general"
           ],
-          "last_modified": "2026-11-12T18:37:02.492Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "120-Impresoras",
@@ -196,7 +196,7 @@
             "tutorial",
             "impresoras"
           ],
-          "last_modified": "2026-11-12T18:37:02.492Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "122-Perfiles-de-Impresion",
@@ -217,7 +217,7 @@
             "perfiles",
             "impresion"
           ],
-          "last_modified": "2026-11-12T18:37:02.492Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "123-Usuarios-del-Sistema",
@@ -239,7 +239,7 @@
             "del",
             "sistema"
           ],
-          "last_modified": "2026-11-12T18:37:02.493Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "124-Usuarios-con-PIN",
@@ -261,7 +261,7 @@
             "con",
             "pin"
           ],
-          "last_modified": "2026-11-12T18:37:02.493Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "125-Punto-de-venta",
@@ -282,7 +282,7 @@
             "punto",
             "venta"
           ],
-          "last_modified": "2026-11-12T18:37:02.494Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "127-Permisos-por-Rol",
@@ -304,7 +304,7 @@
             "por",
             "rol"
           ],
-          "last_modified": "2026-11-12T18:37:02.494Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "130-Turnos-Mesa",
@@ -325,7 +325,7 @@
             "turnos",
             "mesa"
           ],
-          "last_modified": "2026-11-12T18:37:02.494Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "132-Medios-de-Cobro",
@@ -346,7 +346,7 @@
             "medios",
             "cobro"
           ],
-          "last_modified": "2026-11-12T18:37:02.494Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "134-Clasificacion-de-Gastos",
@@ -367,7 +367,7 @@
             "clasificacion",
             "gastos"
           ],
-          "last_modified": "2026-11-12T18:37:02.495Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "136-Centros-de-Costo",
@@ -388,7 +388,29 @@
             "centros",
             "costo"
           ],
-          "last_modified": "2026-11-12T18:37:02.495Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
+        },
+        {
+          "id": "138-Facturacion-del-Servicio",
+          "slug": "facturacion-del-servicio",
+          "title": "Facturacion del Servicio",
+          "filename": "138-Facturacion-del-Servicio.md",
+          "section": "110-Configuracion",
+          "url": "/user-guide/facturacion-del-servicio",
+          "seo_keywords": [
+            "paxapos",
+            "restaurante",
+            "sistema",
+            "gestión",
+            "manual",
+            "usuario",
+            "guía",
+            "tutorial",
+            "facturacion",
+            "del",
+            "servicio"
+          ],
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "141-Biblioteca-de-Drivers",
@@ -409,7 +431,7 @@
             "biblioteca",
             "drivers"
           ],
-          "last_modified": "2026-11-12T18:37:02.495Z"
+          "last_modified": "2026-11-13T19:44:20.312Z"
         },
         {
           "id": "142-Sam4s-Giant-100",
@@ -431,7 +453,7 @@
             "giant",
             "100"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "143-citizen-ct-s310II",
@@ -452,7 +474,7 @@
             "citizen",
             "s310ii"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "144-Epson-TM-T20",
@@ -473,7 +495,7 @@
             "epson",
             "t20"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "145-Drivers-Genericos",
@@ -494,7 +516,7 @@
             "drivers",
             "genericos"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "146-Epson-TM-T88",
@@ -515,7 +537,7 @@
             "epson",
             "t88"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "147-Fiscalberry-Windows",
@@ -536,7 +558,7 @@
             "fiscalberry",
             "windows"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "148-Fiscalberry-Linux",
@@ -557,7 +579,7 @@
             "fiscalberry",
             "linux"
           ],
-          "last_modified": "2026-11-12T18:37:02.496Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "149-Fiscalberry-Android",
@@ -578,7 +600,7 @@
             "fiscalberry",
             "android"
           ],
-          "last_modified": "2026-11-12T18:37:02.497Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "151-03-FAQ-Mozo-Reabrir-Mesa-Anulada",
@@ -602,7 +624,7 @@
             "mesa",
             "anulada"
           ],
-          "last_modified": "2026-11-12T18:37:02.497Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "151-06-FAQ-Cajero-Ingreso-Egreso-Cajon",
@@ -626,7 +648,7 @@
             "egreso",
             "cajon"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "151-08-FAQ-Cajero-Diferencia-Facturado-vs-Abiertas",
@@ -650,7 +672,7 @@
             "facturado",
             "abiertas"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "152-Buchón-Bot",
@@ -671,7 +693,7 @@
             "buchón",
             "bot"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "156-01-IA-Conectar-Claude",
@@ -692,7 +714,7 @@
             "conectar",
             "claude"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "156-02-IA-Conectar-ChatGPT",
@@ -713,7 +735,7 @@
             "conectar",
             "chatgpt"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "156-03-IA-Conectar-Gemini",
@@ -734,7 +756,7 @@
             "conectar",
             "gemini"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "156-04-IA-Pedidos-desde-Asistentes",
@@ -756,7 +778,7 @@
             "desde",
             "asistentes"
           ],
-          "last_modified": "2026-11-12T18:37:02.498Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "21-Salon-de-Ventas",
@@ -777,7 +799,7 @@
             "salon",
             "ventas"
           ],
-          "last_modified": "2026-11-12T18:37:02.499Z"
+          "last_modified": "2026-11-13T19:44:20.313Z"
         },
         {
           "id": "22-Caja-Rapida",
@@ -798,7 +820,7 @@
             "caja",
             "rapida"
           ],
-          "last_modified": "2026-11-12T18:37:02.500Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "24-Mozos",
@@ -818,7 +840,7 @@
             "tutorial",
             "mozos"
           ],
-          "last_modified": "2026-11-12T18:37:02.500Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "25-Clientes",
@@ -838,7 +860,7 @@
             "tutorial",
             "clientes"
           ],
-          "last_modified": "2026-11-12T18:37:02.500Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "26-Descuentos",
@@ -858,7 +880,7 @@
             "tutorial",
             "descuentos"
           ],
-          "last_modified": "2026-11-12T18:37:02.500Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "27-Nueva-Reserva",
@@ -879,7 +901,7 @@
             "nueva",
             "reserva"
           ],
-          "last_modified": "2026-11-12T18:37:02.501Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "28-Listado-de-Reservas",
@@ -900,7 +922,7 @@
             "listado",
             "reservas"
           ],
-          "last_modified": "2026-11-12T18:37:02.501Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "29-Grilla-de-Reservas",
@@ -921,7 +943,7 @@
             "grilla",
             "reservas"
           ],
-          "last_modified": "2026-11-12T18:37:02.501Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "31-Configuracion-Procesadores",
@@ -942,7 +964,7 @@
             "configuracion",
             "procesadores"
           ],
-          "last_modified": "2026-11-12T18:37:02.501Z"
+          "last_modified": "2026-11-13T19:44:20.314Z"
         },
         {
           "id": "32-Transacciones-MercadoPago",
@@ -963,7 +985,7 @@
             "transacciones",
             "mercadopago"
           ],
-          "last_modified": "2026-11-12T18:37:02.502Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "41-Menu",
@@ -983,7 +1005,7 @@
             "tutorial",
             "menu"
           ],
-          "last_modified": "2026-11-12T18:37:02.502Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "42-Categorias",
@@ -1003,7 +1025,7 @@
             "tutorial",
             "categorias"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "43-Variantes-Grupo-Sabores",
@@ -1025,7 +1047,7 @@
             "grupo",
             "sabores"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "44-Maestro-de-Productos",
@@ -1046,7 +1068,7 @@
             "maestro",
             "productos"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "45-Subproductos-Elaborados",
@@ -1067,7 +1089,7 @@
             "subproductos",
             "elaborados"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "46-Recetas",
@@ -1087,7 +1109,7 @@
             "tutorial",
             "recetas"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "47-Como-Conectar-Carta-Digital-Pedimelo-Online",
@@ -1112,7 +1134,7 @@
             "pedimelo",
             "online"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "48-Analisis-Duplicados",
@@ -1133,7 +1155,7 @@
             "analisis",
             "duplicados"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "52-Todas-las-Ordenes-Compra",
@@ -1156,7 +1178,7 @@
             "ordenes",
             "compra"
           ],
-          "last_modified": "2026-11-12T18:37:02.503Z"
+          "last_modified": "2026-11-13T19:44:20.315Z"
         },
         {
           "id": "53-Crear-Orden-Compra",
@@ -1178,7 +1200,7 @@
             "orden",
             "compra"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "54-Ordenes-a-Aprobar",
@@ -1199,7 +1221,7 @@
             "ordenes",
             "aprobar"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "56-Mercaderias",
@@ -1219,7 +1241,7 @@
             "tutorial",
             "mercaderias"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "58-Proveedores",
@@ -1239,7 +1261,7 @@
             "tutorial",
             "proveedores"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "59-Historial-de-Compras",
@@ -1260,7 +1282,7 @@
             "historial",
             "compras"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "62-Stock-Mercaderias",
@@ -1281,7 +1303,7 @@
             "stock",
             "mercaderias"
           ],
-          "last_modified": "2026-11-12T18:37:02.504Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "63-Stock-Subproductos",
@@ -1302,7 +1324,7 @@
             "stock",
             "subproductos"
           ],
-          "last_modified": "2026-11-12T18:37:02.505Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "64-Movimientos-de-Stock",
@@ -1323,7 +1345,7 @@
             "movimientos",
             "stock"
           ],
-          "last_modified": "2026-11-12T18:37:02.505Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "71-Arqueos-de-Caja",
@@ -1344,7 +1366,7 @@
             "arqueos",
             "caja"
           ],
-          "last_modified": "2026-11-12T18:37:02.505Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "73-Listado-de-Cajas",
@@ -1365,7 +1387,7 @@
             "listado",
             "cajas"
           ],
-          "last_modified": "2026-11-12T18:37:02.506Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "74-Transacciones-de-Cobro",
@@ -1386,7 +1408,7 @@
             "transacciones",
             "cobro"
           ],
-          "last_modified": "2026-11-12T18:37:02.506Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "76-Factura-Manual",
@@ -1407,7 +1429,7 @@
             "factura",
             "manual"
           ],
-          "last_modified": "2026-11-12T18:37:02.506Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "77-Resumen-de-Deuda",
@@ -1428,7 +1450,7 @@
             "resumen",
             "deuda"
           ],
-          "last_modified": "2026-11-12T18:37:02.506Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "78-Pagos",
@@ -1448,7 +1470,7 @@
             "tutorial",
             "pagos"
           ],
-          "last_modified": "2026-11-12T18:37:02.506Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "79-Historial-de-Facturas",
@@ -1469,7 +1491,7 @@
             "historial",
             "facturas"
           ],
-          "last_modified": "2026-11-12T18:37:02.507Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "81-Historico-de-Mesas",
@@ -1490,7 +1512,7 @@
             "historico",
             "mesas"
           ],
-          "last_modified": "2026-11-12T18:37:02.507Z"
+          "last_modified": "2026-11-13T19:44:20.316Z"
         },
         {
           "id": "83-Puntos-de-Venta-PDV",
@@ -1512,7 +1534,7 @@
             "venta",
             "pdv"
           ],
-          "last_modified": "2026-11-12T18:37:02.507Z"
+          "last_modified": "2026-11-13T19:44:20.317Z"
         },
         {
           "id": "81-Comandero",
@@ -1532,7 +1554,7 @@
             "tutorial",
             "comandero"
           ],
-          "last_modified": "2026-11-12T18:37:02.508Z"
+          "last_modified": "2026-11-13T19:44:20.317Z"
         },
         {
           "id": "91-Empleados",
@@ -1552,7 +1574,7 @@
             "tutorial",
             "empleados"
           ],
-          "last_modified": "2026-11-12T18:37:02.509Z"
+          "last_modified": "2026-11-13T19:44:20.317Z"
         },
         {
           "id": "92-Empleados-Trabajando",
@@ -1573,7 +1595,7 @@
             "empleados",
             "trabajando"
           ],
-          "last_modified": "2026-11-12T18:37:02.509Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "93-Registro-Diario-Fichaje",
@@ -1595,7 +1617,7 @@
             "diario",
             "fichaje"
           ],
-          "last_modified": "2026-11-12T18:37:02.509Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "94-Reporte-Mensual-Fichaje",
@@ -1617,7 +1639,7 @@
             "mensual",
             "fichaje"
           ],
-          "last_modified": "2026-11-12T18:37:02.509Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "95-Departamentos",
@@ -1637,7 +1659,7 @@
             "tutorial",
             "departamentos"
           ],
-          "last_modified": "2026-11-12T18:37:02.510Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "96-Turnos-y-Horarios-Fichaje",
@@ -1659,7 +1681,7 @@
             "horarios",
             "fichaje"
           ],
-          "last_modified": "2026-11-12T18:37:02.510Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "97-Sueldos-y-Jornales",
@@ -1680,7 +1702,7 @@
             "sueldos",
             "jornales"
           ],
-          "last_modified": "2026-11-12T18:37:02.510Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         },
         {
           "id": "98-Datos-de-Acceso-App",
@@ -1702,7 +1724,7 @@
             "acceso",
             "app"
           ],
-          "last_modified": "2026-11-12T18:37:02.511Z"
+          "last_modified": "2026-11-13T19:44:20.318Z"
         }
       ]
     },
@@ -1730,7 +1752,7 @@
             "del",
             "dominio.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/scripts/ai-domain-glossary.json"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/scripts/ai-domain-glossary.json"
         },
         {
           "id": "11-introduccion",
@@ -1749,7 +1771,7 @@
             "búsqueda",
             "introduccion.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/10-Comenzamos/11-Introduccion.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/10-Comenzamos/11-Introduccion.md"
         },
         {
           "id": "12-iniciar-sesion",
@@ -1769,7 +1791,7 @@
             "iniciar",
             "sesion.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/10-Comenzamos/12-Iniciar-sesión.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/10-Comenzamos/12-Iniciar-sesión.md"
         },
         {
           "id": "13-recuperar-contrasena",
@@ -1789,7 +1811,7 @@
             "recuperar",
             "contrasena.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/10-Comenzamos/13-Recuperar-contrasena.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/10-Comenzamos/13-Recuperar-contrasena.md"
         },
         {
           "id": "14-guia-de-inicio-rapido",
@@ -1810,7 +1832,7 @@
             "inicio",
             "rapido.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/10-Comenzamos/14-Guia-de-Inicio-Rapido.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/10-Comenzamos/14-Guia-de-Inicio-Rapido.md"
         },
         {
           "id": "101-tablero-general",
@@ -1830,7 +1852,7 @@
             "tablero",
             "general.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/100-Reportes/101-Tablero-General.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/100-Reportes/101-Tablero-General.md"
         },
         {
           "id": "106-productos-mas-vendidos",
@@ -1851,7 +1873,7 @@
             "mas",
             "vendidos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/100-Reportes/106-Productos-Mas-Vendidos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/100-Reportes/106-Productos-Mas-Vendidos.md"
         },
         {
           "id": "109-compras-por-mercaderia",
@@ -1872,7 +1894,7 @@
             "por",
             "mercaderia.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/100-Reportes/109-Compras-por-Mercaderia.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/100-Reportes/109-Compras-por-Mercaderia.md"
         },
         {
           "id": "111-configuracion-general",
@@ -1892,7 +1914,7 @@
             "configuracion",
             "general.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/111-Configuracion-General.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/111-Configuracion-General.md"
         },
         {
           "id": "120-impresoras",
@@ -1911,7 +1933,7 @@
             "búsqueda",
             "impresoras.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/120-Impresoras.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/120-Impresoras.md"
         },
         {
           "id": "122-perfiles-de-impresion",
@@ -1931,7 +1953,7 @@
             "perfiles",
             "impresion.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/122-Perfiles-de-Impresion.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/122-Perfiles-de-Impresion.md"
         },
         {
           "id": "123-usuarios-del-sistema",
@@ -1952,7 +1974,7 @@
             "del",
             "sistema.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/123-Usuarios-del-Sistema.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/123-Usuarios-del-Sistema.md"
         },
         {
           "id": "124-usuarios-con-pin",
@@ -1973,7 +1995,7 @@
             "con",
             "pin.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/124-Usuarios-con-PIN.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/124-Usuarios-con-PIN.md"
         },
         {
           "id": "125-punto-de-venta",
@@ -1993,7 +2015,7 @@
             "punto",
             "venta.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/125-Punto-de-venta.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/125-Punto-de-venta.md"
         },
         {
           "id": "127-permisos-por-rol",
@@ -2014,7 +2036,7 @@
             "por",
             "rol.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/127-Permisos-por-Rol.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/127-Permisos-por-Rol.md"
         },
         {
           "id": "130-turnos-mesa",
@@ -2034,7 +2056,7 @@
             "turnos",
             "mesa.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/130-Turnos-Mesa.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/130-Turnos-Mesa.md"
         },
         {
           "id": "132-medios-de-cobro",
@@ -2054,7 +2076,7 @@
             "medios",
             "cobro.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/132-Medios-de-Cobro.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/132-Medios-de-Cobro.md"
         },
         {
           "id": "134-clasificacion-de-gastos",
@@ -2074,7 +2096,7 @@
             "clasificacion",
             "gastos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/134-Clasificacion-de-Gastos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/134-Clasificacion-de-Gastos.md"
         },
         {
           "id": "136-centros-de-costo",
@@ -2094,7 +2116,28 @@
             "centros",
             "costo.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/110-Configuracion/136-Centros-de-Costo.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/136-Centros-de-Costo.md"
+        },
+        {
+          "id": "138-facturacion-del-servicio",
+          "title": "Facturacion del Servicio",
+          "filename": "138-facturacion-del-servicio.txt",
+          "original_md": "138-Facturacion-del-Servicio",
+          "url": "/llms/138-facturacion-del-servicio.txt",
+          "seo_keywords": [
+            "paxapos",
+            "restaurante",
+            "sistema",
+            "gestión",
+            "indexación",
+            "IA",
+            "texto plano",
+            "búsqueda",
+            "facturacion",
+            "del",
+            "servicio.txt"
+          ],
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/110-Configuracion/138-Facturacion-del-Servicio.md"
         },
         {
           "id": "141-biblioteca-de-drivers",
@@ -2114,7 +2157,7 @@
             "biblioteca",
             "drivers.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/141-Biblioteca-de-Drivers.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/141-Biblioteca-de-Drivers.md"
         },
         {
           "id": "142-sam4s-giant-100",
@@ -2135,7 +2178,7 @@
             "giant",
             "100.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/142-Sam4s-Giant-100.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/142-Sam4s-Giant-100.md"
         },
         {
           "id": "143-citizen-ct-s310ii",
@@ -2155,7 +2198,7 @@
             "citizen",
             "s310ii.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/143-citizen-ct-s310II.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/143-citizen-ct-s310II.md"
         },
         {
           "id": "144-epson-tm-t20",
@@ -2175,7 +2218,7 @@
             "epson",
             "t20.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/144-Epson-TM-T20.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/144-Epson-TM-T20.md"
         },
         {
           "id": "145-drivers-genericos",
@@ -2195,7 +2238,7 @@
             "drivers",
             "genericos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/145-Drivers-Genericos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/145-Drivers-Genericos.md"
         },
         {
           "id": "146-epson-tm-t88",
@@ -2215,7 +2258,7 @@
             "epson",
             "t88.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/146-Epson-TM-T88.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/146-Epson-TM-T88.md"
         },
         {
           "id": "147-fiscalberry-windows",
@@ -2235,7 +2278,7 @@
             "fiscalberry",
             "windows.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/147-Fiscalberry-Windows.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/147-Fiscalberry-Windows.md"
         },
         {
           "id": "148-fiscalberry-linux",
@@ -2255,7 +2298,7 @@
             "fiscalberry",
             "linux.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/148-Fiscalberry-Linux.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/148-Fiscalberry-Linux.md"
         },
         {
           "id": "149-fiscalberry-android",
@@ -2275,7 +2318,7 @@
             "fiscalberry",
             "android.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/149-Fiscalberry-Android.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/140-Biblioteca-de-Drivers/149-Fiscalberry-Android.md"
         },
         {
           "id": "151-03-faq-mozo-reabrir-mesa-anulada",
@@ -2298,7 +2341,7 @@
             "mesa",
             "anulada.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/151-03-FAQ-Mozo-Reabrir-Mesa-Anulada.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/151-03-FAQ-Mozo-Reabrir-Mesa-Anulada.md"
         },
         {
           "id": "151-06-faq-cajero-ingreso-egreso-cajon",
@@ -2321,7 +2364,7 @@
             "egreso",
             "cajon.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/151-06-FAQ-Cajero-Ingreso-Egreso-Cajon.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/151-06-FAQ-Cajero-Ingreso-Egreso-Cajon.md"
         },
         {
           "id": "151-08-faq-cajero-diferencia-facturado-vs-abiertas",
@@ -2344,7 +2387,7 @@
             "facturado",
             "abiertas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/151-08-FAQ-Cajero-Diferencia-Facturado-vs-Abiertas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/151-08-FAQ-Cajero-Diferencia-Facturado-vs-Abiertas.md"
         },
         {
           "id": "152-buchon-bot",
@@ -2364,7 +2407,7 @@
             "buchon",
             "bot.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/152-Buchón-Bot.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/152-Buchón-Bot.md"
         },
         {
           "id": "156-01-ia-conectar-claude",
@@ -2384,7 +2427,7 @@
             "conectar",
             "claude.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/156-01-IA-Conectar-Claude.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/156-01-IA-Conectar-Claude.md"
         },
         {
           "id": "156-02-ia-conectar-chatgpt",
@@ -2404,7 +2447,7 @@
             "conectar",
             "chatgpt.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/156-02-IA-Conectar-ChatGPT.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/156-02-IA-Conectar-ChatGPT.md"
         },
         {
           "id": "156-03-ia-conectar-gemini",
@@ -2424,7 +2467,7 @@
             "conectar",
             "gemini.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/156-03-IA-Conectar-Gemini.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/156-03-IA-Conectar-Gemini.md"
         },
         {
           "id": "156-04-ia-pedidos-desde-asistentes",
@@ -2445,7 +2488,7 @@
             "desde",
             "asistentes.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/150-Extra/156-04-IA-Pedidos-desde-Asistentes.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/150-Extra/156-04-IA-Pedidos-desde-Asistentes.md"
         },
         {
           "id": "21-salon-de-ventas",
@@ -2465,7 +2508,7 @@
             "salon",
             "ventas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/21-Salon-de-Ventas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/21-Salon-de-Ventas.md"
         },
         {
           "id": "22-caja-rapida",
@@ -2485,7 +2528,7 @@
             "caja",
             "rapida.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/22-Caja-Rapida.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/22-Caja-Rapida.md"
         },
         {
           "id": "24-mozos",
@@ -2504,7 +2547,7 @@
             "búsqueda",
             "mozos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/24-Mozos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/24-Mozos.md"
         },
         {
           "id": "25-clientes",
@@ -2523,7 +2566,7 @@
             "búsqueda",
             "clientes.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/25-Clientes.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/25-Clientes.md"
         },
         {
           "id": "26-descuentos",
@@ -2542,7 +2585,7 @@
             "búsqueda",
             "descuentos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/26-Descuentos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/26-Descuentos.md"
         },
         {
           "id": "27-nueva-reserva",
@@ -2562,7 +2605,7 @@
             "nueva",
             "reserva.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/27-Nueva-Reserva.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/27-Nueva-Reserva.md"
         },
         {
           "id": "28-listado-de-reservas",
@@ -2582,7 +2625,7 @@
             "listado",
             "reservas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/28-Listado-de-Reservas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/28-Listado-de-Reservas.md"
         },
         {
           "id": "29-grilla-de-reservas",
@@ -2602,7 +2645,7 @@
             "grilla",
             "reservas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/20-Ventas/29-Grilla-de-Reservas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/20-Ventas/29-Grilla-de-Reservas.md"
         },
         {
           "id": "31-configuracion-procesadores",
@@ -2622,7 +2665,7 @@
             "configuracion",
             "procesadores.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/30-Medios-de-Pago/31-Configuracion-Procesadores.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/30-Medios-de-Pago/31-Configuracion-Procesadores.md"
         },
         {
           "id": "32-transacciones-mercadopago",
@@ -2642,7 +2685,7 @@
             "transacciones",
             "mercadopago.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/30-Medios-de-Pago/32-Transacciones-MercadoPago.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/30-Medios-de-Pago/32-Transacciones-MercadoPago.md"
         },
         {
           "id": "41-menu",
@@ -2661,7 +2704,7 @@
             "búsqueda",
             "menu.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/41-Menu.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/41-Menu.md"
         },
         {
           "id": "42-categorias",
@@ -2680,7 +2723,7 @@
             "búsqueda",
             "categorias.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/42-Categorias.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/42-Categorias.md"
         },
         {
           "id": "43-variantes-grupo-sabores",
@@ -2701,7 +2744,7 @@
             "grupo",
             "sabores.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/43-Variantes-Grupo-Sabores.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/43-Variantes-Grupo-Sabores.md"
         },
         {
           "id": "44-maestro-de-productos",
@@ -2721,7 +2764,7 @@
             "maestro",
             "productos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/44-Maestro-de-Productos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/44-Maestro-de-Productos.md"
         },
         {
           "id": "45-subproductos-elaborados",
@@ -2741,7 +2784,7 @@
             "subproductos",
             "elaborados.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/45-Subproductos-Elaborados.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/45-Subproductos-Elaborados.md"
         },
         {
           "id": "46-recetas",
@@ -2760,7 +2803,7 @@
             "búsqueda",
             "recetas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/46-Recetas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/46-Recetas.md"
         },
         {
           "id": "47-como-conectar-carta-digital-pedimelo-online",
@@ -2784,7 +2827,7 @@
             "pedimelo",
             "online.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/47-Como-Conectar-Carta-Digital-Pedimelo-Online.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/47-Como-Conectar-Carta-Digital-Pedimelo-Online.md"
         },
         {
           "id": "48-analisis-duplicados",
@@ -2804,7 +2847,7 @@
             "analisis",
             "duplicados.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/40-Productos/48-Analisis-Duplicados.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/40-Productos/48-Analisis-Duplicados.md"
         },
         {
           "id": "52-todas-las-ordenes-compra",
@@ -2826,7 +2869,7 @@
             "ordenes",
             "compra.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/52-Todas-las-Ordenes-Compra.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/52-Todas-las-Ordenes-Compra.md"
         },
         {
           "id": "53-crear-orden-compra",
@@ -2847,7 +2890,7 @@
             "orden",
             "compra.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/53-Crear-Orden-Compra.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/53-Crear-Orden-Compra.md"
         },
         {
           "id": "54-ordenes-a-aprobar",
@@ -2867,7 +2910,7 @@
             "ordenes",
             "aprobar.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/54-Ordenes-a-Aprobar.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/54-Ordenes-a-Aprobar.md"
         },
         {
           "id": "56-mercaderias",
@@ -2886,7 +2929,7 @@
             "búsqueda",
             "mercaderias.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/56-Mercaderias.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/56-Mercaderias.md"
         },
         {
           "id": "58-proveedores",
@@ -2905,7 +2948,7 @@
             "búsqueda",
             "proveedores.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/58-Proveedores.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/58-Proveedores.md"
         },
         {
           "id": "59-historial-de-compras",
@@ -2925,7 +2968,7 @@
             "historial",
             "compras.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/50-Compras/59-Historial-de-Compras.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/50-Compras/59-Historial-de-Compras.md"
         },
         {
           "id": "62-stock-mercaderias",
@@ -2945,7 +2988,7 @@
             "stock",
             "mercaderias.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/60-Stock/62-Stock-Mercaderias.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/60-Stock/62-Stock-Mercaderias.md"
         },
         {
           "id": "63-stock-subproductos",
@@ -2965,7 +3008,7 @@
             "stock",
             "subproductos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/60-Stock/63-Stock-Subproductos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/60-Stock/63-Stock-Subproductos.md"
         },
         {
           "id": "64-movimientos-de-stock",
@@ -2985,7 +3028,7 @@
             "movimientos",
             "stock.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/60-Stock/64-Movimientos-de-Stock.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/60-Stock/64-Movimientos-de-Stock.md"
         },
         {
           "id": "71-arqueos-de-caja",
@@ -3005,7 +3048,7 @@
             "arqueos",
             "caja.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/71-Arqueos-de-Caja.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/71-Arqueos-de-Caja.md"
         },
         {
           "id": "73-listado-de-cajas",
@@ -3025,7 +3068,7 @@
             "listado",
             "cajas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/73-Listado-de-Cajas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/73-Listado-de-Cajas.md"
         },
         {
           "id": "74-transacciones-de-cobro",
@@ -3045,7 +3088,7 @@
             "transacciones",
             "cobro.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/74-Transacciones-de-Cobro.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/74-Transacciones-de-Cobro.md"
         },
         {
           "id": "76-factura-manual",
@@ -3065,7 +3108,7 @@
             "factura",
             "manual.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/76-Factura-Manual.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/76-Factura-Manual.md"
         },
         {
           "id": "77-resumen-de-deuda",
@@ -3085,7 +3128,7 @@
             "resumen",
             "deuda.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/77-Resumen-de-Deuda.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/77-Resumen-de-Deuda.md"
         },
         {
           "id": "78-pagos",
@@ -3104,7 +3147,7 @@
             "búsqueda",
             "pagos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/78-Pagos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/78-Pagos.md"
         },
         {
           "id": "79-historial-de-facturas",
@@ -3124,7 +3167,7 @@
             "historial",
             "facturas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/79-Historial-de-Facturas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/79-Historial-de-Facturas.md"
         },
         {
           "id": "81-historico-de-mesas",
@@ -3144,7 +3187,7 @@
             "historico",
             "mesas.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/81-Historico-de-Mesas.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/81-Historico-de-Mesas.md"
         },
         {
           "id": "83-puntos-de-venta-pdv",
@@ -3165,7 +3208,7 @@
             "venta",
             "pdv.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/70-Finanzas/83-Puntos-de-Venta-PDV.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/70-Finanzas/83-Puntos-de-Venta-PDV.md"
         },
         {
           "id": "81-comandero",
@@ -3184,7 +3227,7 @@
             "búsqueda",
             "comandero.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/80-Comandero/81-Comandero.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/80-Comandero/81-Comandero.md"
         },
         {
           "id": "91-empleados",
@@ -3203,7 +3246,7 @@
             "búsqueda",
             "empleados.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/91-Empleados.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/91-Empleados.md"
         },
         {
           "id": "92-empleados-trabajando",
@@ -3223,7 +3266,7 @@
             "empleados",
             "trabajando.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/92-Empleados-Trabajando.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/92-Empleados-Trabajando.md"
         },
         {
           "id": "93-registro-diario-fichaje",
@@ -3244,7 +3287,7 @@
             "diario",
             "fichaje.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/93-Registro-Diario-Fichaje.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/93-Registro-Diario-Fichaje.md"
         },
         {
           "id": "94-reporte-mensual-fichaje",
@@ -3265,7 +3308,7 @@
             "mensual",
             "fichaje.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/94-Reporte-Mensual-Fichaje.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/94-Reporte-Mensual-Fichaje.md"
         },
         {
           "id": "95-departamentos",
@@ -3284,7 +3327,7 @@
             "búsqueda",
             "departamentos.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/95-Departamentos.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/95-Departamentos.md"
         },
         {
           "id": "96-turnos-y-horarios-fichaje",
@@ -3305,7 +3348,7 @@
             "horarios",
             "fichaje.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/96-Turnos-y-Horarios-Fichaje.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/96-Turnos-y-Horarios-Fichaje.md"
         },
         {
           "id": "97-sueldos-y-jornales",
@@ -3325,7 +3368,7 @@
             "sueldos",
             "jornales.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/97-Sueldos-y-Jornales.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/97-Sueldos-y-Jornales.md"
         },
         {
           "id": "98-datos-de-acceso-app",
@@ -3346,7 +3389,7 @@
             "acceso",
             "app.txt"
           ],
-          "generated_from": "/home/alevilar/Works/_wt/doc-rel-231/src/routes/user-guide/Manual-Usuario/90-RRHH/98-Datos-de-Acceso-App.md"
+          "generated_from": "/home/alevilar/Works/_wt/doc-rel-v3261/src/routes/user-guide/Manual-Usuario/90-RRHH/98-Datos-de-Acceso-App.md"
         }
       ]
     }

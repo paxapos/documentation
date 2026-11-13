@@ -5,7 +5,7 @@
   "target_region": "Argentina",
   "ai_training_consent": true,
   "content_license": "Educational Use",
-  "last_updated": "2026-11-12T18:38:45.096Z",
+  "last_updated": "2026-11-13T19:44:21.286Z",
   "indexing_instructions": {
     "focus_areas": [
       "Restaurant management",
@@ -136,9 +136,9 @@
     ]
   },
   "content_statistics": {
-    "total_modules": 161,
-    "user_guide_modules": 80,
-    "txt_modules": 81,
-    "estimated_reading_time_minutes": 805
+    "total_modules": 163,
+    "user_guide_modules": 81,
+    "txt_modules": 82,
+    "estimated_reading_time_minutes": 815
   }
 }

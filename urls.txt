@@ -18,6 +18,7 @@ https://doc.paxapos.com/user-guide/turnos-mesa
 https://doc.paxapos.com/user-guide/medios-de-cobro
 https://doc.paxapos.com/user-guide/clasificacion-de-gastos
 https://doc.paxapos.com/user-guide/centros-de-costo
+https://doc.paxapos.com/user-guide/facturacion-del-servicio
 https://doc.paxapos.com/user-guide/biblioteca-de-drivers
 https://doc.paxapos.com/user-guide/sam4s-giant-100
 https://doc.paxapos.com/user-guide/citizen-ct-s310ii
@@ -99,6 +100,7 @@ https://doc.paxapos.com/llms/130-turnos-mesa.txt
 https://doc.paxapos.com/llms/132-medios-de-cobro.txt
 https://doc.paxapos.com/llms/134-clasificacion-de-gastos.txt
 https://doc.paxapos.com/llms/136-centros-de-costo.txt
+https://doc.paxapos.com/llms/138-facturacion-del-servicio.txt
 https://doc.paxapos.com/llms/141-biblioteca-de-drivers.txt
 https://doc.paxapos.com/llms/142-sam4s-giant-100.txt
 https://doc.paxapos.com/llms/143-citizen-ct-s310ii.txt

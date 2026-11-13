@@ -1638,6 +1638,62 @@ Cambiar de pestaña solo filtra lo que ves. No guarda nada.
 • Si el medio ya se usó, la papelera queda apagada. Al apoyar el mouse te dice cuántos cobros tiene. Destildá Activo en su lugar.
 • Para borrar, tocá la papelera una vez. Cambia a ¿Seguro?. Tocala de nuevo dentro de 4 segundos.
 ---
+💙 MercadoPago: se conecta una vez, en la cuenta de facturación
+⚡ ¿Para quién está pensado? Para el Dueño del comercio. Solo el Dueño conecta, desconecta y confirma cuentas de MercadoPago. Los demás usuarios solo eligen, en cada sucursal, con cuál cobrar.
+La plata de los cobros por QR, link de pago y terminal Point va a una cuenta de MercadoPago. Para que nadie cambie a dónde va el dinero sin que te enteres, esa cuenta se conecta una sola vez, en la cuenta de facturación, y no desde cada sucursal. Después, cada sucursal elige con cuál cobrar.
+📍 Conectá una cuenta de MercadoPago
+!Cuenta de facturación con el cuadro MercadoPago para cobrar, todavía sin cuentas, y el botón Conectar MercadoPago
+1. En el menú, tocá Cuenta de facturación.
+2. Buscá el cuadro MercadoPago para cobrar. Si todavía no conectaste ninguna cuenta, dice _Todavía no conectaste ninguna cuenta de MercadoPago a esta cuenta_.
+3. Tocá Conectar MercadoPago. Si no ves el botón, tu usuario no es Dueño (mirá No veo el botón Conectar MercadoPago en "Resolución de Inconvenientes").
+!Pantalla Conectar MercadoPago con la pregunta Qué sucursales van a cobrar con esta cuenta y tres sucursales tildadas
+4. En ¿Qué sucursales van a cobrar con esta cuenta? dejá tildadas las sucursales que van a cobrar con ella y destildá las demás. Viene todo tildado.
+5. Tocá Seguir a MercadoPago. Te llevamos a MercadoPago a autorizar. Iniciá sesión con la cuenta que va a recibir la plata: la del titular de tu comercio.
+6. Al volver, la cuenta queda conectada y las sucursales que elegiste ya cobran con ella.
+⚠️ Atención: la plata de las ventas de esas sucursales va a ir a la cuenta de MercadoPago que autorices. Verificá con qué usuario entraste a MercadoPago antes de aceptar.
+❓ ¿Y si el titular no coincide con mi comercio?
+Al volver de MercadoPago, comparamos el CUIT del titular de esa cuenta con el CUIT de tu comercio.
+• Si coincide: la cuenta se conecta sola y queda Verificada.
+• Si no coincide, o MercadoPago no informó el CUIT: no te bloqueamos, pero te pedimos que confirmes. Se abre la pantalla Confirmá la cuenta de MercadoPago. Dice, por ejemplo: _Esta cuenta de MercadoPago está a nombre de Julio Ferrari, CUIT 20-12345678-6, y no coincide con el CUIT de tu comercio. La plata de tus ventas va a ir a esa cuenta._ Si MercadoPago no informó el CUIT, dice en cambio: _MercadoPago no nos informó el CUIT del titular de esta cuenta (…). La plata de tus ventas va a ir a esa cuenta._ Abajo muestra las sucursales que van a cobrar con ella.
+1. Leé el nombre y el CUIT. Fijate que sea la cuenta que querías conectar.
+2. Si es correcta, tildá Entiendo y quiero cobrar con esta cuenta y tocá Conectar esta cuenta. Queda Confirmada por el dueño.
+3. Si no la reconocés, tocá Cancelar. No se conecta nada y no se guarda ningún dato de esa cuenta.
+💡 Consejo útil: es normal que no coincida si cobrás con la cuenta personal del dueño en vez de la de la sociedad. Si es tu caso y es lo que querés, confirmala.
+🏷️ Qué significa cada estado
+!Cuadro MercadoPago para cobrar con dos cuentas, una Verificada y otra Confirmada por el dueño, y el historial de cambios abierto
+Cada cuenta conectada es un renglón con Titular, CUIT / DNI, Usuario de MercadoPago, Estado, Conectada por (quién y cuándo) y Se usa en (qué sucursales cobran con ella). El Estado puede ser:
+| Estado | Qué significa |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verificada | El CUIT del titular de MercadoPago coincide con el de tu comercio. |
+| Confirmada por el dueño | El CUIT no coincidía y el Dueño confirmó a mano que quiere cobrar con esa cuenta. |
+| Sin verificar | Es una cuenta que ya cobraba antes de este sistema y todavía nadie confirmó que es del titular. Sigue cobrando igual en la sucursal donde ya estaba, pero no aparece como opción para otras sucursales hasta que un Dueño la confirme. Arriba aparece un aviso amarillo con el botón Confirmar. |
+| Cargada por PaxaPOS | La cargó el equipo de PaxaPOS. No pasó por la autorización de MercadoPago. |
+Para confirmar una cuenta Sin verificar, el Dueño toca Confirmar en el aviso amarillo (_La cuenta de MercadoPago de … todavía no está verificada_). Se abre la pantalla Confirmá la cuenta de MercadoPago, que muestra el titular y el CUIT o DNI (o avisa que _MercadoPago no nos informó el CUIT del titular de esta cuenta_) y recuerda que _la plata de tus ventas va a ir a esa cuenta_. Si es la tuya, tildá Entiendo y quiero cobrar con esta cuenta y tocá Confirmar. Con Volver no se cambia nada.
+Debajo de la tabla, tocá Historial de cambios para ver todo lo que pasó: quién conectó, asignó o quitó una cuenta, y cuándo.
+🏪 Elegí la cuenta en cada sucursal
+!Pantalla MercadoPago de la sucursal con la lista Cuenta de MercadoPago para cobrar en esta sucursal y el botón Guardar elección
+Desde la sucursal no se conecta ni se carga ninguna cuenta: solo se elige entre las que el Dueño ya aprobó para tu cuenta de facturación. Hace falta el permiso de configurar Cobros.
+1. Entrá a Configuración → Cobros. En la pantalla Procesador por canal, tocá Mercado Pago.
+2. En Cuenta de MercadoPago para cobrar en esta sucursal, abrí la lista y elegí la cuenta. Arriba ves con cuál cobrás hoy: _Cobrás con MercadoPago de: …_.
+3. Tocá Guardar elección.
+A veces, en lugar de _Cobrás con MercadoPago de: …_ ves un aviso amarillo:
+• _Esta sucursal no tiene credenciales activas de esa cuenta. Elegila de nuevo o pedile al dueño que la reconecte._ Elegí la cuenta otra vez y tocá Guardar elección. Si el aviso sigue, el Dueño tiene que reconectarla en Cuenta de facturación.
+• _Las credenciales guardadas en esta sucursal son de otra cuenta de MercadoPago. Avisale al dueño._ Avisale al Dueño para que revise y reconecte la cuenta correcta.
+Para dejar de cobrar con MercadoPago en esa sucursal, elegí No cobrar con MercadoPago y tocá Guardar elección. La cuenta sigue conectada: solo esa sucursal deja de usarla.
+Si la cuenta que necesitás no está en la lista, tocá Conectar otra cuenta. Te lleva a la cuenta de facturación, donde el Dueño la conecta.
+🔔 Por qué te llega un aviso
+!Aviso en la campanita: Don Julio Recoleta ahora cobra con el MercadoPago de Julio Ferrari
+Cada vez que se conecta o desconecta una cuenta, o una sucursal pasa a cobrar con ella o deja de hacerlo, avisamos:
+• En la campanita de cada sucursal de la cuenta, a todos los Dueños y a los responsables de la cuenta de facturación.
+• Por mail a la dirección de facturación de la cuenta.
+Es a propósito: si alguien cambia a dónde va la plata, todos los dueños lo ven. El aviso dice quién hizo el cambio y, si el CUIT no coincide con el de tu comercio, lo marca con _No coincide con el CUIT de tu comercio_.
+🚫 Desconectá una cuenta que no reconocés
+1. En Cuenta de facturación, en el cuadro MercadoPago para cobrar, tocá Desconectar en el renglón de esa cuenta.
+2. Se abre Desconectar MercadoPago. Revisá la lista _Estas sucursales dejan de cobrar con MercadoPago_.
+3. Tildá Entiendo y quiero desconectar esta cuenta y tocá Desconectar. Con Volver no se cambia nada.
+Las sucursales de la lista dejan de cobrar con MercadoPago hasta que el Dueño conecte otra cuenta y las asigne.
+⚠️ Atención: si te llegó un aviso por una cuenta que no conocés, o por un cambio que nadie de tu equipo hizo, desconectala enseguida y cambiá la contraseña de tu MercadoPago. En Historial de cambios ves quién la conectó.
+---
 ⚠️ Resolución de Inconvenientes
 | Problema | Causa más frecuente | Solución recomendada |
 |---|---|---|
@@ -1647,6 +1703,9 @@ Cambiar de pestaña solo filtra lo que ves. No guarda nada.
 | La papelera está apagada. | El medio ya tiene cobros, o es Efectivo. | Destildá Activo para que no se use más. |
 | Aparece un mensaje rojo y el renglón se pinta de rojo. | No se pudo guardar el cambio. | Revisá el nombre y la conexión, y probá de nuevo. |
 | No veo Medios de cobro en el menú. | Tu usuario no tiene permiso. | Pedile a un administrador el permiso en Permisos por Rol. |
+| No me deja conectar MercadoPago desde la sucursal. | Desde la sucursal solo se elige una cuenta ya conectada. Conectar y desconectar es del Dueño, en Cuenta de facturación. | Pedile al Dueño que toque Conectar MercadoPago en Cuenta de facturación. Después elegí la cuenta en la sucursal con Guardar elección. |
+| Mi cuenta figura _Sin verificar_. | Es una cuenta que ya cobraba antes y todavía no se confirmó que es del titular. Sigue cobrando en su sucursal, pero no aparece como opción para otras sucursales hasta que un Dueño la confirme. | El Dueño entra a Cuenta de facturación, toca Confirmar en el aviso amarillo, revisa el titular y el CUIT, tilda Entiendo y quiero cobrar con esta cuenta y toca Confirmar. Si no la reconocés, tocá Desconectar. |
+| No veo el botón Conectar MercadoPago en Cuenta de facturación. | Solo el Dueño ve el botón. | Pedile al Dueño que conecte la cuenta, o pedí que te asignen el rol de Dueño. |
 
 === Clasificacion de Gastos ===
 
@@ -1774,6 +1833,115 @@ En la columna Acciones de cada renglón de la tabla del Paso 1:
 | No podés elegir un centro al cargar una factura. | No hay centros creados. | Creá al menos uno en esta pantalla. |
 | Un usuario no ve las compras de otra área. | Está asignado a un solo centro. | Tocá Usuarios en el otro centro y asignalo también. |
 | No ves Centros de Costo en el menú. | Tu usuario no tiene permiso. | Pedile a un administrador que revise Permisos por Rol. |
+
+=== Facturacion del Servicio ===
+
+Consumos del mes y tope de inteligencia artificial
+¿Dónde está en el sistema?: Tu nombre de usuario (arriba a la derecha) → Cuenta de facturación.
+¿Quién lo usa?: Dueños y gestores de la cuenta. Quien tiene rol de consulta puede ver los consumos, pero no cambiar el tope.
+🎯 ¿Para qué sirve esto?
+Para saber, en cualquier momento, cuánto llevás consumido del servicio en el mes y cuánto te queda por pagar. Además, podés ponerle un límite mensual en pesos a la inteligencia artificial para que nunca te sorprenda una cifra al cierre.
+---
+📍 Paso 1: Abrí tu cuenta de facturación
+1. Hacé clic en tu nombre de usuario, arriba a la derecha.
+2. Elegí Cuenta de facturación. La pantalla se titula "Mis Cuentas Comerciales — facturación del servicio PaxaPos".
+3. Buscá el cuadro de tu cuenta. Si manejás más de una, cada una tiene su propio cuadro, con sus propios consumos y su propio tope.
+💡 Consejo útil: el tope y los consumos son por cuenta, no por sucursal. Si tu cuenta tiene varias sucursales, se suman todas.
+---
+📊 Paso 2: Leé los consumos del mes en curso
+Arriba de todo, en cada cuenta, está el cuadro Mes en curso con lo que va del mes, en pesos.
+!Cuadro Mes en curso: Noviembre 2026 con los conceptos Comisión por cobros con MercadoPago, Inteligencia artificial y Abono mensual, cada uno con su importe, y al pie los totales Ya pagaste y Te queda por pagar
+Cada fila es un concepto. Solo aparecen los que tu cuenta realmente tiene: si no tenés abono, no hay fila de abono.
+| Concepto | Qué significa |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Abono mensual | El plan que contrataste. Figura con el nombre del plan. |
+| Comisión por cobros con MercadoPago | Un porcentaje de lo que cobraste con QR y link de pago. El cuadro dice cuál es el porcentaje y sobre qué monto. Se actualiza hasta el día anterior. |
+| Inteligencia artificial | Cuántos usos llevás y para qué (por ejemplo, lectura de facturas por foto), con un importe estimado. |
+| Empleados en fichaje y sueldos | Cantidad de empleados por el precio de cada uno. Aparece solo si tu cuenta paga el fichaje por empleado. |
+Abono mensual
+!Fila Abono mensual: Plan Pro, 25.000 pesos, etiqueta A pagar
+Es el valor del plan. Queda A pagar hasta que se cierra el mes.
+Comisión por cobros con MercadoPago
+!Fila Comisión por cobros con MercadoPago: 0,8 % de 255.000 pesos, con la aclaración Ya pagaste 1.640 pesos de esta comisión
+Esta comisión se descuenta en cada cobro, así que gran parte de ella ya la pagaste sin darte cuenta. Si todavía queda una parte sin descontar, la fila lo aclara: "Ya pagaste $ 1.640,00 de esta comisión". Cuando la comisión del mes está completa y descontada, la fila muestra la etiqueta Ya pagado.
+Inteligencia artificial
+!Fila Inteligencia artificial: 2 usos de lectura de facturas por foto, 2.009,15 pesos, con la aclaración Estimado; el importe final se confirma al cerrar el mes
+Cuenta los usos del asistente, la lectura de facturas por foto, las respuestas por WhatsApp y el resto de las funciones de inteligencia artificial que te provee PaxaPOS. El importe es una estimación: el valor final se confirma al cerrar el mes y puede diferir un poco.
+💡 Consejo útil: las sucursales que usan su propia clave de inteligencia artificial no le pagan ese consumo a PaxaPOS, así que no se cuentan acá.
+Cuánto pagaste y cuánto te queda
+!Línea Ya pagaste 1.640 pesos, Te queda por pagar 27.409,15 pesos, con la aclaración Se factura al cerrar el mes
+Debajo de la tabla está el resumen:
+• Ya pagaste: lo que ya se descontó, como la comisión de MercadoPago en cada cobro.
+• Te queda por pagar: lo que todavía no se pagó. Es una estimación de lo que vas a recibir al cierre.
+• "Se factura al cerrar el mes." Estos números son una foto del mes en curso. El cierre y la factura los hace PaxaPOS a fin de mes, como siempre.
+⚠️ Atención: esta pantalla no cobra nada ni genera un débito. Solo te muestra el consumo para que lo sigas de cerca.
+Si todavía no hubo consumos, el cuadro dice "Todavía no hay consumos este mes."
+---
+⚙️ Paso 3: Poné un tope mensual a la inteligencia artificial
+Justo debajo de los consumos está el cuadro Tu tope mensual de inteligencia artificial. Nadie tiene un tope por defecto: si lo dejás vacío, la inteligencia artificial funciona como siempre.
+!Formulario con el campo No quiero gastar más de, las dos opciones Apagar la inteligencia artificial hasta fin de mes y Solo avisarme y seguir, y el botón Guardar tope
+1. En "No quiero gastar más de", escribí el importe en pesos que querés como máximo por mes. Por ejemplo: 250000.
+2. En "Al llegar al tope", elegí qué querés que pase (ver el paso siguiente).
+3. Tocá Guardar tope.
+4. Vas a ver el mensaje "Guardamos tu tope mensual de inteligencia artificial." y, arriba del formulario, una barra con cuánto llevás.
+!Tope de 250.000 pesos guardado, con la barra casi vacía y el texto Llevás 2.009,15 pesos de 250.000 pesos (menos del 1 %)
+💡 Consejo útil: escribí solo números, sin símbolos. Si ponés algo que no es un importe, el sistema te avisa "Ingresá un importe válido en pesos, por ejemplo 250000." y no guarda nada.
+---
+🔀 Paso 4: Elegí qué pasa al llegar al tope
+Son dos opciones y podés cambiar de una a otra cuando quieras:
+| Opción | Qué hace |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Apagar la inteligencia artificial hasta fin de mes | Cuando el consumo llega al tope, la inteligencia artificial se apaga sola. El día 1 del mes siguiente vuelve a encenderse sola. |
+| Solo avisarme y seguir | La inteligencia artificial nunca se apaga. Solo te avisamos cuando te acercás y cuando llegás al tope. |
+⚠️ Atención: el corte apaga únicamente la inteligencia artificial. Tus cobros con MercadoPago, el fichaje y todo el resto del sistema siguen funcionando igual.
+Quien intenta usar la inteligencia artificial mientras está apagada ve el mensaje "Llegaste al tope mensual de inteligencia artificial que configuró el dueño", nunca un error.
+💡 Consejo útil: el corte puede demorar unos minutos desde que se cruza el tope, porque el sistema lo revisa cada cierto tiempo.
+---
+🔔 Paso 5: Qué pasa al llegar al 80 % y al 100 %
+La barra del cuadro cambia de color según cuánto llevás:
+• Verde: menos del 80 % del tope.
+• Amarilla: el 80 % o más.
+• Roja: llegaste al 100 %.
+!Barra amarilla con el texto Llevás 2.009,15 pesos de 2.500 pesos (80 %)
+Al llegar al 80 % y al 100 % te avisamos de dos formas:
+• Con una notificación en la campanita de la aplicación, a todos los dueños y gestores de la cuenta.
+• Con un mail a la dirección de facturación de la cuenta.
+Cada aviso se manda una sola vez por mes. Si elegiste Solo avisarme y seguir, esos son los dos avisos del mes y nada más.
+Si ponés un tope más bajo de lo que ya gastaste
+Si el tope que escribís es menor a lo que ya llevás gastado y elegiste apagar la inteligencia artificial, el sistema no guarda de inmediato. Te muestra cuánto llevás y te pide una confirmación.
+!Formulario con el tope de 1.000 pesos, la opción de apagar elegida y la casilla Sí, apagar la inteligencia artificial ahora
+1. Leé el aviso con lo que ya llevás gastado.
+2. Si querés apagarla, tildá "Sí, apagar la inteligencia artificial ahora" y tocá Guardar tope.
+3. Si no, cambiá el importe o elegí Solo avisarme y seguir.
+Cuando se alcanza el tope
+!Barra roja completa (el gasto supera el tope, 200 %) y cartel rojo que dice que la inteligencia artificial está apagada hasta fin de mes porque llegaste a tu tope
+Si elegiste apagar, aparece un cartel rojo: "La inteligencia artificial que te provee PaxaPOS está apagada hasta fin de mes porque llegaste a tu tope." Siempre recibís el aviso en el momento, aunque no hayas recibido antes el del 80 %.
+Las sucursales que usan su propia clave de inteligencia artificial no se ven afectadas.
+---
+🔄 Paso 6: Volvé a prender la inteligencia artificial
+Tenés tres caminos:
+1. Esperar al día 1: si elegiste apagar, vuelve sola al empezar el mes.
+2. Subir el tope: escribí un importe mayor a lo que llevás y tocá Guardar tope.
+3. Quitar el tope: dejá el campo vacío y tocá Guardar tope. Verás "Quitamos el tope mensual de inteligencia artificial."
+!Tope subido a 250.000 pesos: la barra vuelve a ser casi vacía y desapareció el cartel rojo
+La inteligencia artificial vuelve a funcionar en un par de minutos.
+!Cuadro del tope sin importe cargado y con la opción Solo avisarme y seguir elegida
+---
+⚠️ Resolución de Inconvenientes
+| Problema | Causa más frecuente | Solución recomendada |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| No veo "Cuenta de facturación" en el menú de mi usuario | Tu usuario no tiene ninguna cuenta de facturación a su cargo. | Pedile al dueño de la cuenta que te agregue como gestor, o escribile a soporte de PaxaPOS. |
+| Veo los consumos pero no el formulario del tope | Tu rol en la cuenta es de consulta. | Solo los dueños y gestores pueden cambiar el tope. Pedile a uno de ellos que lo ponga. |
+| "No pudimos calcular lo que llevás gastado." | El importe en pesos no se pudo calcular en este momento. | Esperá unos minutos y volvé a entrar. Si sigue igual, avisale a soporte. |
+| "No pudimos calcular el mes en curso." | Hubo un inconveniente al armar el cuadro. | Recargá la página en unos minutos. |
+| "Todavía no hay consumos este mes." | Es principio de mes o todavía no usaste nada. | No hay nada que hacer: los consumos aparecen a medida que se generan. |
+| El importe de inteligencia artificial figura como "Estimado" | Es el valor calculado hasta hoy. | Es normal: el importe final se confirma al cerrar el mes y puede diferir un poco. |
+| "Ingresá un importe válido en pesos, por ejemplo 250000." | Dejaste texto o un valor en cero en el campo. | Escribí solo números mayores a cero, o dejalo vacío si no querés tope. |
+| La inteligencia artificial está apagada y no sé por qué | Se llegó al tope mensual y elegiste apagar. | Subí el tope o quitalo, y esperá un par de minutos. También vuelve sola el día 1. |
+| Subí el tope pero sigue apagada | Pasaron pocos minutos. | Esperá un par de minutos y volvé a intentar. |
+| Una sucursal sigue usando inteligencia artificial aunque se alcanzó el tope | Esa sucursal usa su propia clave de inteligencia artificial. | Es lo esperado: el tope solo aplica a la inteligencia artificial que te provee PaxaPOS. |
+| No me llegó el mail de aviso | El mail va a la dirección de facturación de la cuenta y puede estar sin cargar o en la carpeta de spam. | Revisá el correo no deseado y pedí a soporte que verifique la dirección de facturación. La campanita te avisa igual. |
+| Los cobros con MercadoPago o el fichaje se cortaron | El tope no los toca: nunca se cortan. | Si pasa algo en esas áreas, no es por el tope. Escribile a soporte. |
 
 === Biblioteca de Drivers ===
 
