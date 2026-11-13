@@ -146,7 +146,7 @@ La plata de los cobros por QR, link de pago y terminal Point va a **una cuenta d
 
 1. En el menú, tocá **Cuenta de facturación**.
 2. Buscá el cuadro **MercadoPago para cobrar**. Si todavía no conectaste ninguna cuenta, dice _Todavía no conectaste ninguna cuenta de MercadoPago a esta cuenta_.
-3. Tocá **Conectar MercadoPago**. Si no ves el botón, tu usuario no es Dueño (mirá "Resolución de Inconvenientes").
+3. Tocá **Conectar MercadoPago**. Si no ves el botón, tu usuario no es Dueño (mirá **No veo el botón Conectar MercadoPago** en "Resolución de Inconvenientes").
 
 ![Pantalla Conectar MercadoPago con la pregunta Qué sucursales van a cobrar con esta cuenta y tres sucursales tildadas](images/manual/110-configuracion/132-11-elegir-sucursales.png)
 
@@ -163,7 +163,7 @@ La plata de los cobros por QR, link de pago y terminal Point va a **una cuenta d
 Al volver de MercadoPago, comparamos el CUIT del titular de esa cuenta con el CUIT de tu comercio.
 
 - **Si coincide:** la cuenta se conecta sola y queda **Verificada**.
-- **Si no coincide, o MercadoPago no informó el CUIT:** no te bloqueamos, pero te pedimos que confirmes. Se abre la pantalla **Confirmá la cuenta de MercadoPago**. Dice, por ejemplo: _Esta cuenta de MercadoPago está a nombre de Julio Ferrari, CUIT 20-12345678-6, y no coincide con el CUIT de tu comercio. La plata de tus ventas va a ir a esa cuenta._ Abajo muestra las sucursales que van a cobrar con ella.
+- **Si no coincide, o MercadoPago no informó el CUIT:** no te bloqueamos, pero te pedimos que confirmes. Se abre la pantalla **Confirmá la cuenta de MercadoPago**. Dice, por ejemplo: _Esta cuenta de MercadoPago está a nombre de Julio Ferrari, CUIT 20-12345678-6, y no coincide con el CUIT de tu comercio. La plata de tus ventas va a ir a esa cuenta._ Si MercadoPago no informó el CUIT, dice en cambio: _MercadoPago no nos informó el CUIT del titular de esta cuenta (…). La plata de tus ventas va a ir a esa cuenta._ Abajo muestra las sucursales que van a cobrar con ella.
 
 1. Leé el nombre y el CUIT. Fijate que sea la cuenta que querías conectar.
 2. Si es correcta, tildá **Entiendo y quiero cobrar con esta cuenta** y tocá **Conectar esta cuenta**. Queda **Confirmada por el dueño**.
@@ -179,14 +179,14 @@ Al volver de MercadoPago, comparamos el CUIT del titular de esa cuenta con el CU
 
 Cada cuenta conectada es un renglón con **Titular**, **CUIT / DNI**, **Usuario de MercadoPago**, **Estado**, **Conectada por** (quién y cuándo) y **Se usa en** (qué sucursales cobran con ella). El **Estado** puede ser:
 
-| Estado                      | Qué significa                                                                                                                                                                      |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Verificada**              | El CUIT del titular de MercadoPago coincide con el de tu comercio.                                                                                                                 |
-| **Confirmada por el dueño** | El CUIT no coincidía y el Dueño confirmó a mano que quiere cobrar con esa cuenta.                                                                                                  |
-| **Sin verificar**           | Es una cuenta que ya cobraba antes de este sistema y todavía nadie confirmó que es del titular. Sigue cobrando igual. Arriba aparece un aviso amarillo con el botón **Confirmar**. |
-| **Cargada por PaxaPOS**     | La cargó el equipo de PaxaPOS a pedido tuyo, copiando sus datos a mano. No pasó por la autorización de MercadoPago.                                                                |
+| Estado                      | Qué significa                                                                                                                                                                                                                                                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Verificada**              | El CUIT del titular de MercadoPago coincide con el de tu comercio.                                                                                                                                                                                                                                      |
+| **Confirmada por el dueño** | El CUIT no coincidía y el Dueño confirmó a mano que quiere cobrar con esa cuenta.                                                                                                                                                                                                                       |
+| **Sin verificar**           | Es una cuenta que ya cobraba antes de este sistema y todavía nadie confirmó que es del titular. Sigue cobrando igual en la sucursal donde ya estaba, pero **no aparece como opción para otras sucursales** hasta que un Dueño la confirme. Arriba aparece un aviso amarillo con el botón **Confirmar**. |
+| **Cargada por PaxaPOS**     | La cargó el equipo de PaxaPOS. No pasó por la autorización de MercadoPago.                                                                                                                                                                                                                              |
 
-Para confirmar una cuenta **Sin verificar**: leé el aviso _La cuenta de MercadoPago de … todavía no está verificada_, y si es la tuya tocá **Confirmar**.
+Para confirmar una cuenta **Sin verificar**, el Dueño toca **Confirmar** en el aviso amarillo (_La cuenta de MercadoPago de … todavía no está verificada_). Se abre la pantalla **Confirmá la cuenta de MercadoPago**, que muestra el titular y el CUIT o DNI (o avisa que _MercadoPago no nos informó el CUIT del titular de esta cuenta_) y recuerda que _la plata de tus ventas va a ir a esa cuenta_. Si es la tuya, tildá **Entiendo y quiero cobrar con esta cuenta** y tocá **Confirmar**. Con **Volver** no se cambia nada.
 
 Debajo de la tabla, tocá **Historial de cambios** para ver todo lo que pasó: quién conectó, asignó o quitó una cuenta, y cuándo.
 
@@ -201,6 +201,11 @@ Desde la sucursal **no se conecta ni se carga ninguna cuenta**: solo se elige en
 1. Entrá a **Configuración** → **Cobros**. En la pantalla **Procesador por canal**, tocá **Mercado Pago**.
 2. En **Cuenta de MercadoPago para cobrar en esta sucursal**, abrí la lista y elegí la cuenta. Arriba ves con cuál cobrás hoy: _Cobrás con MercadoPago de: …_.
 3. Tocá **Guardar elección**.
+
+A veces, en lugar de _Cobrás con MercadoPago de: …_ ves un aviso amarillo:
+
+- _Esta sucursal no tiene credenciales activas de esa cuenta. Elegila de nuevo o pedile al dueño que la reconecte._ Elegí la cuenta otra vez y tocá **Guardar elección**. Si el aviso sigue, el Dueño tiene que reconectarla en **Cuenta de facturación**.
+- _Las credenciales guardadas en esta sucursal son de otra cuenta de MercadoPago. Avisale al dueño._ Avisale al Dueño para que revise y reconecte la cuenta correcta.
 
 **Para dejar de cobrar con MercadoPago en esa sucursal**, elegí **No cobrar con MercadoPago** y tocá **Guardar elección**. La cuenta sigue conectada: solo esa sucursal deja de usarla.
 
@@ -246,4 +251,5 @@ Las sucursales de la lista dejan de cobrar con MercadoPago hasta que el Dueño c
 | Aparece un mensaje rojo y el renglón se pinta de rojo. | No se pudo guardar el cambio. | Revisá el nombre y la conexión, y probá de nuevo. |
 | No veo **Medios de cobro** en el menú. | Tu usuario no tiene permiso. | Pedile a un administrador el permiso en [Permisos por Rol](/user-guide/permisos-por-rol). |
 | **No me deja conectar MercadoPago desde la sucursal.** | Desde la sucursal solo se elige una cuenta ya conectada. Conectar y desconectar es del **Dueño**, en **Cuenta de facturación**. | Pedile al Dueño que toque **Conectar MercadoPago** en **Cuenta de facturación**. Después elegí la cuenta en la sucursal con **Guardar elección**. |
-| **Mi cuenta figura *Sin verificar*.** | Es una cuenta que ya cobraba antes y todavía no se confirmó que es del titular. Sigue cobrando igual. | El Dueño entra a **Cuenta de facturación** y toca **Confirmar** en el aviso amarillo. Si no la reconocés, tocá **Desconectar**. |
+| **Mi cuenta figura _Sin verificar_.** | Es una cuenta que ya cobraba antes y todavía no se confirmó que es del titular. Sigue cobrando en su sucursal, pero no aparece como opción para otras sucursales hasta que un Dueño la confirme. | El Dueño entra a **Cuenta de facturación**, toca **Confirmar** en el aviso amarillo, revisa el titular y el CUIT, tilda **Entiendo y quiero cobrar con esta cuenta** y toca **Confirmar**. Si no la reconocés, tocá **Desconectar**. |
+| **No veo el botón Conectar MercadoPago en Cuenta de facturación.** | Solo el Dueño ve el botón. | Pedile al Dueño que conecte la cuenta, o pedí que te asignen el rol de Dueño. |
