@@ -21,6 +21,8 @@ Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más bil
 4. Tocá el botón **Confirmar Movimiento**.
 5. **Resultado:** El sistema actualizará el saldo esperado de la caja para que el arqueo cierre perfecto.
 
+> 💡 **En el Salón (nuevo) el cajón se abre solo.** Pasa al tocar **Abrir caja** y al confirmar un **Retiro** o un **Ingreso**: el cajón de dinero se abre después de que el movimiento queda guardado. Usa la impresora de cajón de tu [perfil de impresión](/user-guide/perfiles-de-impresion). En las demás pantallas el cajón no se abre solo.
+
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
@@ -28,3 +30,4 @@ Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más bil
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|
 | El saldo de caja al cerrar muestra un faltante. | Se sacó dinero en efectivo sin registrar el Egreso. | Revisá el detalle de movimientos de la caja y cargá el Egreso correspondiente con su comprobante. |
+| En el Salón (nuevo), el cajón no se abre al hacer un retiro o un ingreso. | El perfil de impresión no tiene impresora de cajón, o la impresora no está conectada. | Elegí la impresora en **Cajón de dinero** de tu [perfil de impresión](/user-guide/perfiles-de-impresion). El movimiento queda guardado igual. |
