@@ -47,6 +47,8 @@ Son cuatro pasos. Los tres primeros se hacen una sola vez.
 2. En la pantalla de inicio, en **Aplicaciones del Comercio**, hacé clic en la tarjeta **Omnibot (WhatsApp)**.
 3. Se abre Omnibot en una pestaña nueva, **ya con tu usuario**: no tenés que crear otra cuenta ni recordar otra contraseña.
 
+![Cuadro Aplicaciones del Comercio de PaxaPOS con las tarjetas Salón, Fichaje de Personal, Delivery App y Omnibot (WhatsApp)](images/manual/120-omnibot/121-02-tarjeta-omnibot.png)
+
 > 💡 **Consejo útil:** la primera vez tiene que entrar el **dueño** o un **administrador** del comercio. Con ese primer ingreso el comercio queda dado de alta en Omnibot. Después, el resto del equipo entra de la misma manera y queda como operador de la bandeja.
 
 Si trabajás en más de un comercio, Omnibot te pregunta con cuál querés entrar.
@@ -65,6 +67,8 @@ El bot piensa con inteligencia artificial, y esa inteligencia artificial tiene q
 2. Leé los **términos y condiciones**.
 3. Tildá **"Leí y acepto los términos, y entiendo que se me va a facturar el consumo de IA según lo descripto arriba."**
 4. Hacé clic en **Encender Omnibot**.
+
+![Pantalla Encendé Omnibot con los cuadros Qué hace por vos y Cómo se cobra, los términos de ejemplo, la casilla de aceptación y el botón Encender Omnibot](images/manual/120-omnibot/121-03-encende-omnibot.png)
 
 Listo: quedó encendida la inteligencia artificial de tu comercio y entrás a Omnibot.
 
