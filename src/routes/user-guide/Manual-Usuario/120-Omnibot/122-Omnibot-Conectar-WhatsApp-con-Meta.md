@@ -35,10 +35,9 @@ Con el botón **Conectar con Facebook**, Omnibot crea (o reutiliza) las tres cos
 - **Un número de teléfono** que pueda recibir un **SMS o una llamada** en el momento. Puede ser celular o fijo.
 - **El nombre visible** con el que querés aparecer en WhatsApp. Tiene que parecerse al nombre real de tu comercio: Meta lo revisa.
 
-> ⚠️ **Importante sobre el número:** un número no puede estar al mismo tiempo en la app de WhatsApp del celular y en un bot. Si el número que querés usar ya tiene WhatsApp o WhatsApp Business, tenés dos caminos:
->
-> - **Usar un número nuevo** para el bot (lo más simple y lo que recomendamos), o
-> - **Eliminar la cuenta** de ese número en la app (WhatsApp → Ajustes → Cuenta → Eliminar cuenta) y recién después conectarlo. Vas a perder el historial de chats de ese celular.
+> 💡 **¿El número ya lo usás en la app WhatsApp Business del celular?** Podés conectarlo igual y **seguir usando la app**. El bot contesta por el mismo número, y lo que vos respondas desde el celular también queda en la Bandeja. Está explicado en [Conectar el número que ya usás en el celular](#numero-del-celular).
+
+> ⚠️ **Importante:** esto vale para la app **WhatsApp Business**. Si el número está en el WhatsApp común (el personal), primero pasalo a WhatsApp Business desde el celular, o usá un número nuevo para el bot.
 
 ---
 
@@ -76,6 +75,43 @@ En la pestaña **WhatsApp** del bot vas a ver el cuadro **Conectar un número de
 La ventana se cierra sola y Omnibot hace el resto: guarda el número, lo registra en la API de WhatsApp y lo deja escuchando mensajes.
 
 > 💡 **Consejo útil:** si al tocar el botón no aparece nada, tu navegador bloqueó la ventana emergente. Permití las ventanas emergentes para bot.paxapos.com y volvé a tocar el botón.
+
+---
+
+## 📱 Conectar el número que ya usás en el celular
+
+<div id="numero-del-celular"></div>
+
+Si tu comercio ya atiende por la app **WhatsApp Business**, no hace falta cambiar de número ni perder los chats. El número queda en los dos lados a la vez: el bot responde solo, y vos seguís viendo y contestando todo desde el celular.
+
+**Qué necesitás:** el celular con la app WhatsApp Business **actualizada** y a mano, porque parte del trámite se hace desde el teléfono.
+
+1. En Omnibot, tocá **Conectar con Facebook** como en el paso anterior.
+2. En la ventana de Facebook, cuando te pida el número, escribí **el número que usás en la app**. Meta detecta que ya está en WhatsApp Business y te ofrece **conectar tu cuenta existente**.
+3. Meta te muestra un **código**. Copialo.
+4. En el celular te llega un mensaje de la cuenta oficial de Facebook Business. Tocá **Conectar** y seguí los pasos en la app; ahí pegás el código.
+5. La app te pregunta si querés **compartir el historial de chats**. Es opcional.
+6. Volvé a la ventana de Facebook, terminá los pasos y tocá **Finalizar**.
+7. Dejá la app WhatsApp Business **abierta unos minutos** mientras Omnibot termina de sincronizar.
+
+**Cómo conviven el bot y el celular**
+
+- Cuando un cliente escribe, **responde el bot**.
+- Si **vos contestás desde el celular**, ese mensaje aparece en la Bandeja de Omnibot y el bot **se frena en esa conversación**, para no pisarte. Después de un rato sin actividad vuelve a atender solo.
+- Lo que el bot responde también lo ves en la app del celular.
+
+**Qué cambia en la app del celular**
+
+| En la app                                    | Qué pasa después de conectar                                    |
+| -------------------------------------------- | --------------------------------------------------------------- |
+| Chats individuales                           | Siguen igual. Se ven en la app y en Omnibot.                    |
+| Grupos                                       | Siguen funcionando en la app. El bot no los ve ni responde ahí. |
+| Listas de difusión                           | Quedan solo para leer; no se pueden crear nuevas.               |
+| Mensajes temporales y de "ver una sola vez"  | Se desactivan en los chats individuales.                        |
+| WhatsApp Web y otros dispositivos vinculados | Se desvinculan al conectar. Después los volvés a vincular.      |
+| Catálogo, respuestas rápidas, etiquetas      | Siguen igual en la app.                                         |
+
+> ⚠️ **Importante:** abrí la app del celular seguido. Si pasan unas dos semanas sin que el teléfono se conecte, Meta desconecta el número del bot y hay que volver a conectarlo.
 
 ---
 
@@ -156,6 +192,7 @@ Después de guardar, entrá a **Diagnóstico** y, si aparecen, tocá **Re-suscri
 
 - **Cambiar o reconectar número**: repite la ventana de Facebook. Sirve para pasar el bot a otro número o para renovar el permiso.
 - **Liberar número**: desconecta el número del bot y de la API de WhatsApp. El bot deja de recibir y enviar mensajes hasta que conectes otro. Las conversaciones se conservan.
+- **Si el número también está en la app del celular**, se desconecta desde el teléfono: WhatsApp Business → **Ajustes** → **Cuenta** → **Plataforma para empresas** → **Desconectar cuenta**. El número sigue funcionando en la app como siempre.
 
 ---
 
@@ -163,12 +200,12 @@ Después de guardar, entrá a **Diagnóstico** y, si aparecen, tocá **Re-suscri
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                                                    | ¿Por qué puede ser?                                                       | ¿Cómo se soluciona?                                                                                    |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Toco **Conectar con Facebook** y no pasa nada.                                   | El navegador bloqueó la ventana emergente.                                | Permití las ventanas emergentes para el sitio y reintentá.                                             |
-| Meta dice que **el número ya está registrado en WhatsApp**.                      | El número tiene una cuenta activa en la app del celular.                  | Usá otro número, o eliminá la cuenta de ese número en la app y volvé a intentar.                       |
-| **No me llega el código** de verificación.                                       | El número no recibe SMS (por ejemplo, es un fijo) o hubo muchos intentos. | Elegí **llamada** en lugar de SMS. Si hiciste varios intentos, esperá unas horas.                      |
-| Dice **"La conexión con Facebook todavía no está habilitada en la plataforma"**. | Falta la configuración general de Meta en esa instalación de Omnibot.     | En bot.paxapos.com no debería pasar: escribinos por [WhatsApp]({{WHATSAPP_URL}}).                      |
-| El número figura conectado pero **no entran mensajes** a la Bandeja.             | La cuenta (WABA) no quedó suscripta.                                      | Pestaña **Diagnóstico** → **Re-suscribir**.                                                            |
-| Los mensajes entran pero **el bot no responde**.                                 | La inteligencia artificial no está encendida, o llegaste al tope mensual. | Mirá **Configuración → Facturación e IA**.                                                             |
-| Meta **rechazó el nombre visible**.                                              | El nombre no coincide con el del negocio o usa palabras genéricas.        | Cambialo en el Administrador de WhatsApp por uno que coincida con tu marca y esperá la nueva revisión. |
+| ¿Qué te pasa?                                                                    | ¿Por qué puede ser?                                                                  | ¿Cómo se soluciona?                                                                                                                                              |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Toco **Conectar con Facebook** y no pasa nada.                                   | El navegador bloqueó la ventana emergente.                                           | Permití las ventanas emergentes para el sitio y reintentá.                                                                                                       |
+| Meta dice que **el número ya está registrado en WhatsApp**.                      | El número está en el WhatsApp común, o la app WhatsApp Business está desactualizada. | Actualizá WhatsApp Business y seguí [Conectar el número que ya usás en el celular](#numero-del-celular). Si es WhatsApp común, pasalo antes a WhatsApp Business. |
+| **No me llega el código** de verificación.                                       | El número no recibe SMS (por ejemplo, es un fijo) o hubo muchos intentos.            | Elegí **llamada** en lugar de SMS. Si hiciste varios intentos, esperá unas horas.                                                                                |
+| Dice **"La conexión con Facebook todavía no está habilitada en la plataforma"**. | Falta la configuración general de Meta en esa instalación de Omnibot.                | En bot.paxapos.com no debería pasar: escribinos por [WhatsApp]({{WHATSAPP_URL}}).                                                                                |
+| El número figura conectado pero **no entran mensajes** a la Bandeja.             | La cuenta (WABA) no quedó suscripta.                                                 | Pestaña **Diagnóstico** → **Re-suscribir**.                                                                                                                      |
+| Los mensajes entran pero **el bot no responde**.                                 | La inteligencia artificial no está encendida, o llegaste al tope mensual.            | Mirá **Configuración → Facturación e IA**.                                                                                                                       |
+| Meta **rechazó el nombre visible**.                                              | El nombre no coincide con el del negocio o usa palabras genéricas.                   | Cambialo en el Administrador de WhatsApp por uno que coincida con tu marca y esperá la nueva revisión.                                                           |
