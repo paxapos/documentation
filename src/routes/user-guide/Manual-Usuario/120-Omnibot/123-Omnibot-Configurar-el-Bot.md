@@ -14,9 +14,9 @@
 
 <div id="la-ficha-del-bot"></div>
 
-Cada bot tiene una ficha con seis pestañas. Arriba, el cuadro **Puesta en marcha** te marca qué pasos te faltan y te lleva a cada uno.
+Cada bot tiene una ficha con seis pestañas. Arriba, mientras falte algo, el cuadro **Puesta en marcha** te marca qué pasos te faltan y te lleva a cada uno.
 
-![Ficha de un bot con el cuadro Puesta en marcha y las pestañas Instrucciones, Conocimiento, Herramientas, Probar, WhatsApp y Diagnóstico](images/manual/120-omnibot/123-01-ficha-del-bot.png)
+![Ficha de un bot, pestaña Instrucciones: cuadro Puesta en marcha con 3 de 4 pasos y las pestañas Instrucciones, Conocimiento, Herramientas, Probar, WhatsApp y Diagnóstico](images/manual/120-omnibot/123-01-ficha-del-bot.png)
 
 | Pestaña           | Qué se configura                                             |
 | ----------------- | ------------------------------------------------------------ |
@@ -108,10 +108,10 @@ En **Configuración → Respuestas rápidas** podés guardar textos de uso frecu
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                         | ¿Por qué puede ser?                                              | ¿Cómo se soluciona?                                                                              |
-| ----------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| El bot **inventa** datos (precios, horarios).         | Esa información no está en Conocimiento.                         | Cargala en **Conocimiento** y agregá en Instrucciones "si no lo sabés, derivá a una persona".    |
-| El bot responde **muy largo** o muy formal.           | Las instrucciones no dicen el tono.                              | Agregá "respondé en mensajes cortos, tuteando".                                                  |
-| En **Probar** funciona pero por WhatsApp no responde. | El número no está bien conectado, o la IA no está encendida.     | Revisá la pestaña **Diagnóstico** y **Configuración → Facturación e IA**.                        |
-| El bot **no deriva** nunca a una persona.             | No se lo indicaste.                                              | Decile en Instrucciones en qué casos tiene que pasar la conversación.                            |
-| Un operador **no ve** una conversación.               | Pertenece a otra área.                                           | Revisá las áreas en **Configuración → Equipo**.                                                  |
+| ¿Qué te pasa?                                         | ¿Por qué puede ser?                                          | ¿Cómo se soluciona?                                                                           |
+| ----------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| El bot **inventa** datos (precios, horarios).         | Esa información no está en Conocimiento.                     | Cargala en **Conocimiento** y agregá en Instrucciones "si no lo sabés, derivá a una persona". |
+| El bot responde **muy largo** o muy formal.           | Las instrucciones no dicen el tono.                          | Agregá "respondé en mensajes cortos, tuteando".                                               |
+| En **Probar** funciona pero por WhatsApp no responde. | El número no está bien conectado, o la IA no está encendida. | Revisá la pestaña **Diagnóstico** y **Configuración → Facturación e IA**.                     |
+| El bot **no deriva** nunca a una persona.             | No se lo indicaste.                                          | Decile en Instrucciones en qué casos tiene que pasar la conversación.                         |
+| Un operador **no ve** una conversación.               | Pertenece a otra área.                                       | Revisá las áreas en **Configuración → Equipo y áreas**.                                       |

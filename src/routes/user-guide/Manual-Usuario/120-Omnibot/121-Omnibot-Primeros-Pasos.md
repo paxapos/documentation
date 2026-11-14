@@ -30,12 +30,12 @@ Con Omnibot podés:
 
 Son cuatro pasos. Los tres primeros se hacen una sola vez.
 
-| Paso | Qué hacés                                               | Dónde se explica                                                                         |
-| ---- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| 1    | Entrás a Omnibot desde PaxaPOS y **encendés la IA**     | En esta página, más abajo                                                                |
-| 2    | **Conectás tu número de WhatsApp** con Meta             | [Conectar tu WhatsApp con Meta](/user-guide/omnibot-conectar-whatsapp-con-meta)          |
-| 3    | Le enseñás al bot **cómo atender** y qué sabe del local | [Configurar el bot](/user-guide/omnibot-configurar-el-bot)                               |
-| 4    | Atendés desde la **Bandeja** y mirás el consumo         | [Facturación e inteligencia artificial](/user-guide/omnibot-facturacion-e-ia)            |
+| Paso | Qué hacés                                               | Dónde se explica                                                                |
+| ---- | ------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| 1    | Entrás a Omnibot desde PaxaPOS y **encendés la IA**     | En esta página, más abajo                                                       |
+| 2    | **Conectás tu número de WhatsApp** con Meta             | [Conectar tu WhatsApp con Meta](/user-guide/omnibot-conectar-whatsapp-con-meta) |
+| 3    | Le enseñás al bot **cómo atender** y qué sabe del local | [Configurar el bot](/user-guide/omnibot-configurar-el-bot)                      |
+| 4    | Atendés desde la **Bandeja** y mirás el consumo         | [Facturación e inteligencia artificial](/user-guide/omnibot-facturacion-e-ia)   |
 
 ---
 
@@ -84,15 +84,16 @@ En el menú de la izquierda tenés:
 - **Bandeja**: todas las conversaciones de WhatsApp. Acá tu equipo lee, responde y toma las que el bot derivó.
 - **Configuración**: todo lo demás.
 
-![Portada de Configuración de Omnibot con las tarjetas Bots, Facturación e IA, Equipo, Integraciones y las demás secciones](images/manual/120-omnibot/121-01-configuracion.png)
+![Portada de Configuración de Omnibot con las tarjetas Facturación e IA, Bots, Datos del tenant y Gemini, Respuestas rápidas, Equipo y áreas e Integraciones](images/manual/120-omnibot/121-01-configuracion.png)
 
-| Tarjeta de Configuración | Para qué sirve                                                                     |
-| ------------------------ | ---------------------------------------------------------------------------------- |
-| **Bots**                 | Crear el bot, conectarle el número de WhatsApp y enseñarle a atender.              |
-| **Facturación e IA**     | Ver si la inteligencia artificial está encendida, cómo se cobra y dónde se paga.   |
-| **Equipo**               | Quiénes atienden la bandeja y en qué área.                                         |
-| **Respuestas rápidas**   | Textos guardados para que tu equipo responda con un clic.                          |
-| **Integraciones**        | La clave que usa PaxaPOS para enviar avisos por WhatsApp. La carga el soporte.     |
+| Tarjeta de Configuración      | Para qué sirve                                                                   |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| **Facturación e IA**          | Ver si la inteligencia artificial está encendida, cómo se cobra y dónde se paga. |
+| **Bots**                      | Crear el bot, conectarle el número de WhatsApp y enseñarle a atender.            |
+| **Datos del tenant y Gemini** | El nombre del comercio y la clave de Gemini que usan los bots para responder.    |
+| **Respuestas rápidas**        | Textos guardados para que tu equipo responda con un clic.                        |
+| **Equipo y áreas**            | Quiénes atienden la bandeja y a qué áreas se derivan las conversaciones.         |
+| **Integraciones**             | La clave para que PaxaPOS u otro sistema envíe avisos por WhatsApp.              |
 
 Si todavía no tenés ningún bot, arriba aparece el aviso **"Para empezar: creá tu primer bot conectando un número de WhatsApp"**. Ese es el paso siguiente: [Conectar tu WhatsApp con Meta](/user-guide/omnibot-conectar-whatsapp-con-meta).
 
@@ -102,10 +103,10 @@ Si todavía no tenés ningún bot, arriba aparece el aviso **"Para empezar: cre�
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                                         | ¿Por qué puede ser?                                                        | ¿Cómo se soluciona?                                                                                         |
-| --------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| No veo la tarjeta **Omnibot (WhatsApp)**.                             | Tu usuario no tiene ninguno de los permisos que la muestran.               | Pedile al dueño el permiso de Bot, Campañas o Configuración del sistema.                                    |
-| Dice **"Tu comercio todavía no abrió Omnibot"**.                      | Nadie con rol de dueño o administrador entró todavía.                      | Que entre primero el dueño o un administrador desde la tarjeta de PaxaPOS.                                  |
-| No aparece la pantalla **Encendé Omnibot** y el bot no responde.      | Tu usuario no puede editar la configuración, así que entró sin encenderla. | Que el dueño entre a Omnibot desde PaxaPOS, o que la encienda en **Configuración → Inteligencia artificial**. |
-| Dice **"No hay términos de IA publicados todavía"**.                  | Falta publicar el documento de términos en la plataforma.                  | Escribinos por [WhatsApp]({{WHATSAPP_URL}}) y lo resolvemos.                                                |
-| Entré a bot.paxapos.com directo y me pide usuario y contraseña.       | Entraste sin pasar por PaxaPOS.                                            | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS: te lleva ya con tu sesión.                        |
+| ¿Qué te pasa?                                                    | ¿Por qué puede ser?                                                        | ¿Cómo se soluciona?                                                                                           |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| No veo la tarjeta **Omnibot (WhatsApp)**.                        | Tu usuario no tiene ninguno de los permisos que la muestran.               | Pedile al dueño el permiso de Bot, Campañas o Configuración del sistema.                                      |
+| Dice **"Tu comercio todavía no abrió Omnibot"**.                 | Nadie con rol de dueño o administrador entró todavía.                      | Que entre primero el dueño o un administrador desde la tarjeta de PaxaPOS.                                    |
+| No aparece la pantalla **Encendé Omnibot** y el bot no responde. | Tu usuario no puede editar la configuración, así que entró sin encenderla. | Que el dueño entre a Omnibot desde PaxaPOS, o que la encienda en **Configuración → Inteligencia artificial**. |
+| Dice **"No hay términos de IA publicados todavía"**.             | Falta publicar el documento de términos en la plataforma.                  | Escribinos por [WhatsApp]({{WHATSAPP_URL}}) y lo resolvemos.                                                  |
+| Entré a bot.paxapos.com directo y me pide usuario y contraseña.  | Entraste sin pasar por PaxaPOS.                                            | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS: te lleva ya con tu sesión.                          |

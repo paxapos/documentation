@@ -84,10 +84,10 @@ El paso a paso completo está en [Consumos del mes y tope de inteligencia artifi
 
 MercadoPago aparece en dos lugares distintos. Conviene no confundirlos:
 
-| Para qué                                | Dónde se hace                                                                                             |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Pagarle a PaxaPOS** tu liquidación    | Con el link de pago que llega por mail, o desde **Ver liquidaciones y pagar**. No hace falta configurar nada. |
-| **Cobrarles a tus clientes** con tu cuenta | En PaxaPOS → **Cuenta de facturación** → **Conectar MercadoPago**. Es tu cuenta, y la plata entra a vos.  |
+| Para qué                                   | Dónde se hace                                                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| **Pagarle a PaxaPOS** tu liquidación       | Con el link de pago que llega por mail, o desde **Ver liquidaciones y pagar**. No hace falta configurar nada. |
+| **Cobrarles a tus clientes** con tu cuenta | En PaxaPOS → **Cuenta de facturación** → **Conectar MercadoPago**. Es tu cuenta, y la plata entra a vos.      |
 
 ---
 
@@ -105,10 +105,10 @@ En PaxaPOS → **Configuración** → **Inteligencia artificial** → **Apagar**
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                               | ¿Por qué puede ser?                                               | ¿Cómo se soluciona?                                                                               |
-| ----------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Encendí la IA y la pantalla sigue diciendo que está apagada. | La pantalla todavía no volvió a consultar.                        | Tocá **Ya la encendí, actualizar**.                                                               |
-| Dice **"No pudimos consultar a PaxaPOS"**.                  | Un corte momentáneo entre los dos sistemas.                       | Tocá **Reintentar** en un minuto. El bot sigue respondiendo mientras tanto.                       |
-| No me deja encender la IA.                                  | Tu usuario no puede editar la configuración del comercio.         | Pedile al dueño que lo haga, o que te dé el permiso de Configuración del sistema.                 |
-| El bot dejó de responder a mitad de mes.                    | Llegaste al tope mensual de inteligencia artificial.              | Subí o quitá el tope en **Cuenta de facturación**, o esperá al día 1.                             |
-| No veo el botón de encender, solo opciones de clave.        | Entraste a Omnibot sin pasar por PaxaPOS y el comercio no quedó vinculado. | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS.                                  |
+| ¿Qué te pasa?                                                                            | ¿Por qué puede ser?                                                        | ¿Cómo se soluciona?                                                               |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Encendí la IA y la pantalla sigue diciendo que está apagada.                             | La pantalla todavía no volvió a consultar.                                 | Tocá **Ya la encendí, actualizar**.                                               |
+| Dice **"No pudimos consultar a PaxaPOS"**.                                               | Un corte momentáneo entre los dos sistemas.                                | Tocá **Reintentar** en un minuto. El bot sigue respondiendo mientras tanto.       |
+| No me deja encender la IA.                                                               | Tu usuario no puede editar la configuración del comercio.                  | Pedile al dueño que lo haga, o que te dé el permiso de Configuración del sistema. |
+| El bot dejó de responder a mitad de mes.                                                 | Llegaste al tope mensual de inteligencia artificial.                       | Subí o quitá el tope en **Cuenta de facturación**, o esperá al día 1.             |
+| No veo el botón de encender, solo **Usar PaxaPOS** y **Usar tu propia clave de Gemini**. | Entraste a Omnibot sin pasar por PaxaPOS y el comercio no quedó vinculado. | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS.                         |

@@ -16,11 +16,11 @@
 
 Para que un bot pueda usar WhatsApp, Meta exige tres cosas, una dentro de la otra:
 
-| Qué es                                     | Para qué sirve                                                                                          | Cómo se identifica      |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- | ----------------------- |
-| **Portfolio comercial** (Business Manager) | Es tu empresa en Meta. Agrupa tus páginas, cuentas publicitarias y cuentas de WhatsApp.                 | Identificador del negocio |
-| **Cuenta de WhatsApp Business (WABA)**     | Es el "contenedor" de tus números de WhatsApp para bots. Ahí viven los números, las plantillas y el medio de pago de Meta. | **WABA ID**             |
-| **Número de teléfono**                     | El número por el que te escriben tus clientes, con su nombre visible.                                   | **Phone Number ID**     |
+| Qué es                                     | Para qué sirve                                                                                                             | Cómo se identifica        |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| **Portfolio comercial** (Business Manager) | Es tu empresa en Meta. Agrupa tus páginas, cuentas publicitarias y cuentas de WhatsApp.                                    | Identificador del negocio |
+| **Cuenta de WhatsApp Business (WABA)**     | Es el "contenedor" de tus números de WhatsApp para bots. Ahí viven los números, las plantillas y el medio de pago de Meta. | **WABA ID**               |
+| **Número de teléfono**                     | El número por el que te escriben tus clientes, con su nombre visible.                                                      | **Phone Number ID**       |
 
 Con el botón **Conectar con Facebook**, Omnibot crea (o reutiliza) las tres cosas y guarda solo el **WABA ID**, el **Phone Number ID** y el permiso de acceso. Si ya tenías un portfolio comercial o una WABA, los elegís de la lista en lugar de crearlos de nuevo.
 
@@ -47,11 +47,11 @@ Con el botón **Conectar con Facebook**, Omnibot crea (o reutiliza) las tres cos
 <div id="paso-1-crea-el-bot"></div>
 
 1. En Omnibot, entrá a **Configuración** → **Bots**.
-2. Hacé clic en **Conectar un número nuevo**. Con esto se crea el bot y se abre directamente la ventana de Facebook del paso siguiente.
+2. En la tarjeta **Conectar un número de WhatsApp**, hacé clic en **Conectar con Facebook**. Se abre la ventana de Facebook del paso siguiente y, cuando terminás, el bot se crea solo, ya conectado.
 
-Si preferís crear primero el bot y conectar el número después, creá el bot con su nombre y entrá a la pestaña **WhatsApp** de su ficha.
+Si preferís crear primero el bot y conectar el número después, tocá **Crear bot** (en la tarjeta **Crear un bot sin número**), escribí el nombre y hacé clic en **Crear y configurar**. Después entrás a la pestaña **WhatsApp** de su ficha.
 
-![Pantalla Bots de Omnibot con la lista de bots y el botón para conectar un número nuevo](images/manual/120-omnibot/122-01-bots.png)
+![Pantalla Bots de Omnibot con la tarjeta Crear un bot (Conectar con Facebook y Crear bot) y la lista con el bot Asistente de La Parrilla](images/manual/120-omnibot/122-01-bots.png)
 
 ---
 
@@ -61,7 +61,7 @@ Si preferís crear primero el bot y conectar el número después, creá el bot c
 
 En la pestaña **WhatsApp** del bot vas a ver el cuadro **Conectar un número de WhatsApp**, con los tres pasos resumidos.
 
-![Pestaña WhatsApp de un bot sin número: cuadro Conectar un número de WhatsApp con los tres pasos y el botón Conectar con Facebook](images/manual/120-omnibot/122-02-conectar-whatsapp.png)
+![Ficha de un bot sin número, pestaña WhatsApp: cuadro Conectar un número de WhatsApp con los tres pasos y el botón Conectar con Facebook](images/manual/120-omnibot/122-02-conectar-whatsapp.png)
 
 1. Hacé clic en **Conectar con Facebook**. Se abre una ventana emergente de Facebook.
 2. **Iniciá sesión** con tu cuenta de Facebook y tocá **Continuar**.
@@ -84,10 +84,10 @@ La ventana se cierra sola y Omnibot hace el resto: guarda el número, lo registr
 
 La pestaña **WhatsApp** pasa a mostrar el cuadro **Número conectado**, con el número, el nombre con el que te ven los clientes y una etiqueta de estado.
 
-![Cuadro Número conectado con el número de WhatsApp, el nombre visible y el mensaje Todo en orden](images/manual/120-omnibot/122-03-numero-conectado.png)
+![Pestaña WhatsApp de un bot con número: cuadro Número conectado con el número +54 9 223 555-0100, el nombre visible, la etiqueta Funcionando y el mensaje Todo en orden](images/manual/120-omnibot/122-03-numero-conectado.png)
 
-- **Todo en orden**: Meta confirma que el número está conectado y listo para atender.
-- **Hay puntos para revisar**: Omnibot te dice cuáles y te lleva a **Diagnóstico** con el botón **Resolver en Diagnóstico**.
+- **Funcionando** y el mensaje **Todo en orden**: Meta confirma que el número está conectado y listo para atender.
+- **Con avisos** o **Con problemas**: aparece el cuadro **Hay un punto para revisar** (o **Hay N puntos para revisar**), con cada control afectado, y el botón **Resolver en Diagnóstico**.
 
 Para probarlo, mandá un WhatsApp a tu número desde otro teléfono. El mensaje tiene que aparecer en la **Bandeja** y el bot tiene que responder.
 
@@ -97,17 +97,25 @@ Para probarlo, mandá un WhatsApp a tu número desde otro teléfono. El mensaje 
 
 <div id="paso-4-diagnostico"></div>
 
-La pestaña **Diagnóstico** revisa la conexión punto por punto contra Meta y, cuando puede, la arregla con un botón:
+La pestaña **Diagnóstico** revisa la conexión punto por punto contra Meta. Cada control aparece como **Bien**, **Revisar**, **Falla** o **No aplica** y, cuando se puede arreglar desde Omnibot, trae su botón. Con **Volver a verificar** repetís la revisión:
 
-![Pestaña Diagnóstico de un bot con la lista de comprobaciones y sus botones de corrección](images/manual/120-omnibot/122-04-diagnostico.png)
+![Pestaña Diagnóstico de un bot con el estado de la conexión Funcionando y la lista de controles en Bien](images/manual/120-omnibot/122-04-diagnostico.png)
 
-| Comprobación                         | Qué significa si falla                                           | Qué hacer                                                                 |
-| ------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Permiso de acceso**                | Venció o se revocó el permiso que diste en Facebook.             | En la pestaña WhatsApp, tocá **Cambiar o reconectar número**.             |
-| **Suscripción de la cuenta (WABA)**  | Meta no le está avisando a Omnibot de los mensajes entrantes.    | Tocá **Suscribir app al WABA**.                                           |
-| **Registro del número**              | El número está en Meta pero no quedó activo en la API.           | Tocá **Registrar número**.                                                |
-| **Estado y calidad del número**      | Meta marcó el número o el nombre visible para revisión.          | Entrá al Administrador de WhatsApp de Meta y seguí lo que indica.         |
-| **Mensaje de prueba**                | Envía un WhatsApp real a un número tuyo para probar la salida.   | Escribí tu celular y tocá **Enviar mensaje de prueba**.                   |
+| Control                        | Qué significa si falla                                         | Qué hacer                                                                       |
+| ------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Token válido**               | Venció o se revocó el permiso que diste en Facebook.           | Tocá **Reconectar** (o **Cambiar o reconectar número** en la pestaña WhatsApp). |
+| **Permisos de la app omnibot** | El permiso no incluye mensajería y administración de WhatsApp. | Tocá **Reconectar** y aceptá todos los permisos.                                |
+| **Número activo en Cloud API** | El número no figura como conectado en la API de WhatsApp.      | Seguí lo que indica el control en Meta.                                         |
+| **Número registrado**          | El número está en Meta pero no quedó activo en la API.         | Tocá **Registrar número** e ingresá el PIN de 6 dígitos.                        |
+| **Nombre y calidad**           | Meta marcó el número o el nombre visible para revisión.        | Entrá al Administrador de WhatsApp de Meta y seguí lo que indica.               |
+| **Número pertenece al WABA**   | El Phone Number ID y el WABA ID no son del mismo negocio.      | Revisalos en **Carga manual (avanzado)**.                                       |
+| **App suscripta al WABA**      | Meta no le está avisando a Omnibot de los mensajes entrantes.  | Tocá **Re-suscribir**.                                                          |
+| **WABA habilitado**            | La cuenta de WhatsApp Business está en revisión o bloqueada.   | Resolvelo en Meta Business.                                                     |
+| **Webhook recibiendo**         | Todavía nunca entró un mensaje a este bot.                     | Mandá un WhatsApp al número y tocá **Volver a verificar**.                      |
+| **Envío funcionando**          | El último mensaje que mandó el bot no se entregó.              | Tocá **Enviar prueba**.                                                         |
+| **Responde (IA)**              | No hay clave de Gemini, así que el bot no contesta solo.       | Tocá **Configurar Gemini**.                                                     |
+
+Abajo del todo está el botón **Enviar mensaje de prueba**: manda un WhatsApp real a un número tuyo (con código de país) para confirmar que el envío funciona.
 
 ---
 
@@ -135,7 +143,7 @@ Si ya tenés una WABA creada por otro medio, o estás usando el número de prueb
 - **WhatsApp WABA ID**: el identificador de la cuenta de WhatsApp Business.
 - **WhatsApp Access Token**: un token permanente de un **usuario del sistema** de tu portfolio comercial, con los permisos `whatsapp_business_management` y `whatsapp_business_messaging`.
 
-Después de guardar, entrá a **Diagnóstico** y tocá **Suscribir app al WABA** y **Registrar número**.
+Después de guardar, entrá a **Diagnóstico** y, si aparecen, tocá **Re-suscribir** y **Registrar número**.
 
 > ⚠️ **Importante:** este camino es para quien ya conoce Meta for Developers. Si no es tu caso, usá **Conectar con Facebook**: hace lo mismo sin copiar nada.
 
@@ -154,12 +162,12 @@ Después de guardar, entrá a **Diagnóstico** y tocá **Suscribir app al WABA**
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                                              | ¿Por qué puede ser?                                                        | ¿Cómo se soluciona?                                                                                   |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Toco **Conectar con Facebook** y no pasa nada.                             | El navegador bloqueó la ventana emergente.                                 | Permití las ventanas emergentes para el sitio y reintentá.                                            |
-| Meta dice que **el número ya está registrado en WhatsApp**.                | El número tiene una cuenta activa en la app del celular.                   | Usá otro número, o eliminá la cuenta de ese número en la app y volvé a intentar.                      |
-| **No me llega el código** de verificación.                                 | El número no recibe SMS (por ejemplo, es un fijo) o hubo muchos intentos.  | Elegí **llamada** en lugar de SMS. Si hiciste varios intentos, esperá unas horas.                     |
-| Dice **"La conexión con Facebook todavía no está habilitada en la plataforma"**. | Falta la configuración general de Meta en esa instalación de Omnibot.   | En bot.paxapos.com no debería pasar: escribinos por [WhatsApp]({{WHATSAPP_URL}}).                     |
-| El número figura conectado pero **no entran mensajes** a la Bandeja.       | La cuenta (WABA) no quedó suscripta.                                       | Pestaña **Diagnóstico** → **Suscribir app al WABA**.                                                  |
-| Los mensajes entran pero **el bot no responde**.                           | La inteligencia artificial no está encendida, o llegaste al tope mensual.  | Mirá **Configuración → Facturación e IA**.                                                            |
-| Meta **rechazó el nombre visible**.                                        | El nombre no coincide con el del negocio o usa palabras genéricas.         | Cambialo en el Administrador de WhatsApp por uno que coincida con tu marca y esperá la nueva revisión. |
+| ¿Qué te pasa?                                                                    | ¿Por qué puede ser?                                                       | ¿Cómo se soluciona?                                                                                    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Toco **Conectar con Facebook** y no pasa nada.                                   | El navegador bloqueó la ventana emergente.                                | Permití las ventanas emergentes para el sitio y reintentá.                                             |
+| Meta dice que **el número ya está registrado en WhatsApp**.                      | El número tiene una cuenta activa en la app del celular.                  | Usá otro número, o eliminá la cuenta de ese número en la app y volvé a intentar.                       |
+| **No me llega el código** de verificación.                                       | El número no recibe SMS (por ejemplo, es un fijo) o hubo muchos intentos. | Elegí **llamada** en lugar de SMS. Si hiciste varios intentos, esperá unas horas.                      |
+| Dice **"La conexión con Facebook todavía no está habilitada en la plataforma"**. | Falta la configuración general de Meta en esa instalación de Omnibot.     | En bot.paxapos.com no debería pasar: escribinos por [WhatsApp]({{WHATSAPP_URL}}).                      |
+| El número figura conectado pero **no entran mensajes** a la Bandeja.             | La cuenta (WABA) no quedó suscripta.                                      | Pestaña **Diagnóstico** → **Re-suscribir**.                                                            |
+| Los mensajes entran pero **el bot no responde**.                                 | La inteligencia artificial no está encendida, o llegaste al tope mensual. | Mirá **Configuración → Facturación e IA**.                                                             |
+| Meta **rechazó el nombre visible**.                                              | El nombre no coincide con el del negocio o usa palabras genéricas.        | Cambialo en el Administrador de WhatsApp por uno que coincida con tu marca y esperá la nueva revisión. |
