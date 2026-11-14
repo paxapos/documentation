@@ -64,13 +64,14 @@ En la pestaña **WhatsApp** del bot vas a ver el cuadro **Conectar un número de
 ![Ficha de un bot sin número, pestaña WhatsApp: cuadro Conectar un número de WhatsApp con los tres pasos y el botón Conectar con Facebook](images/manual/120-omnibot/122-02-conectar-whatsapp.png)
 
 1. Hacé clic en **Conectar con Facebook**. Se abre una ventana emergente de Facebook.
-2. **Iniciá sesión** con tu cuenta de Facebook y tocá **Continuar**.
-3. **Portfolio comercial**: elegí el de tu negocio. Si no tenés, elegí **Crear un portfolio comercial** y completá nombre, sitio web y país.
-4. **Cuenta de WhatsApp Business**: elegí **Crear una cuenta de WhatsApp Business** (o seleccioná una que ya tengas). En este momento Meta crea tu **WABA** y le asigna el **WABA ID**.
-5. **Perfil de WhatsApp Business**: escribí el **nombre visible**, elegí la categoría del negocio y, si querés, una descripción.
-6. **Número de teléfono**: escribí el número y elegí si querés recibir el código por **SMS** o por **llamada**.
-7. Ingresá el **código de 6 dígitos** que te llega.
-8. Revisá el resumen de permisos y tocá **Finalizar**.
+2. **Iniciá sesión** con tu cuenta de Facebook y aceptá los datos a los que Omnibot va a poder acceder.
+3. **Número de teléfono**: es lo primero que pide Meta. Escribí el número y elegí si querés recibir el código por **SMS** o por **llamada**.
+4. Ingresá el **código** que te llega para verificar que el número es tuyo.
+5. **Tu negocio y tu cuenta de WhatsApp**: elegí el portfolio comercial y la cuenta de WhatsApp que ya tengas, o creá los nuevos. Si los creás, Meta te pide el nombre del negocio, un email, el sitio web y el país. En este momento Meta crea tu **WABA** y le asigna el **WABA ID**.
+6. Revisá el resumen de permisos.
+7. En la pantalla final, tocá **Finalizar**.
+
+> ⚠️ **Importante:** terminá siempre con el botón **Finalizar**. Si cerrás la ventana con la X en la última pantalla, Meta crea tu cuenta pero no le avisa a Omnibot, y vas a tener que tocar **Conectar con Facebook** otra vez.
 
 La ventana se cierra sola y Omnibot hace el resto: guarda el número, lo registra en la API de WhatsApp y lo deja escuchando mensajes.
 
