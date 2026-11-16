@@ -19,6 +19,8 @@ pnpm lint
 
 1. Crear el archivo en la carpeta de su categoría: `Manual-Usuario/<NN>-<Categoria>/<NN>-<Nombre-Del-Modulo>.md`.
    El número ordena; el nombre (sin número) define la URL: `21-Salon-de-Ventas.md` → `/user-guide/salon-de-ventas`.
+   Se quitan todos los prefijos numéricos: `151-06-FAQ-Cajero.md` → `/user-guide/faq-cajero`. Dos archivos con el mismo slug cortan el build.
+   **Renombrar un archivo cambia su URL**: agregar el 301 desde la URL vieja en el `map` de `nginx-runtime.conf`.
 2. Empezar con un `# Título` (es el título de la página).
 3. Para anclas compartibles, poner `<div id="mi-ancla"></div>` debajo del header.
 4. Imágenes en `static/images/...` y referenciarlas como `images/...`.

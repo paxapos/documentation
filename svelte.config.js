@@ -8,7 +8,9 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined, // sitio 100% prerendereado
+			// Sitio 100% prerendereado; 404.html es solo la página que nginx sirve
+			// con status 404 para URLs que no existen (ver nginx-runtime.conf).
+			fallback: '404.html',
 			precompress: false,
 			strict: true,
 		}),

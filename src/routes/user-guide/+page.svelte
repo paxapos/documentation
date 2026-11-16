@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import SEOHead from '$lib/components/SEOHead.svelte';
 	import type { ModuleCard } from '$lib/types';
 	import type { PageData } from './$types';
@@ -17,10 +16,6 @@
 			{} as Record<string, ModuleCard[]>,
 		);
 	});
-
-	function navigateToModule(slug: string) {
-		goto(`${base}/user-guide/${slug}`);
-	}
 </script>
 
 <SEOHead
@@ -30,6 +25,7 @@
 	url="/user-guide"
 	type="article"
 	section="Manual de Usuario"
+	modified={data.modified ?? ''}
 />
 
 <div
@@ -74,8 +70,8 @@
 									class="grid grid-cols-1 gap-3 overflow-x-hidden sm:grid-cols-2 sm:gap-4 xl:grid-cols-3"
 								>
 									{#each categoryModules as module (module.slug)}
-										<button
-											onclick={() => navigateToModule(module.slug)}
+										<a
+											href={resolve('/user-guide/[slug]', { slug: module.slug })}
 											class="group flex min-h-[120px] w-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-4 text-left transition-all duration-200 hover:border-blue-300 hover:shadow-lg sm:p-6 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-600"
 										>
 											<div class="mb-3 flex items-start">
@@ -120,7 +116,7 @@
 													</svg>
 												</div>
 											</div>
-										</button>
+										</a>
 									{/each}
 								</div>
 							</section>

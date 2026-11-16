@@ -145,7 +145,8 @@ function generateGlossaryTxt() {
 
 		const txtName = 'glosario-del-dominio.txt';
 		const txtPath = join(LLM_DIR, txtName);
-		safeWriteFile(txtPath, content, true);
+		if (!existsSync(LLM_DIR)) mkdirSync(LLM_DIR, { recursive: true });
+		if (!safeWriteFile(txtPath, content, true)) return null;
 		console.log(`📖 Glosario de IA generado: ${txtPath}`);
 
 		return {

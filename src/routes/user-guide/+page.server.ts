@@ -1,4 +1,4 @@
-import { getModuleCategories } from '$lib/server/markdown';
+import { getModuleCategories, getLatestModified } from '$lib/server/markdown';
 import { categoryIcons, iconForModule, resolveIconSvg } from '$lib/server/icons';
 import type { ModuleCard } from '$lib/types';
 import type { PageServerLoad } from './$types';
@@ -21,12 +21,12 @@ export const load: PageServerLoad = async () => {
 			modulesList.push({
 				slug: module.slug,
 				title: module.title,
-				description: `Guía completa sobre ${module.title.toLowerCase()}`,
+				description: module.description,
 				category: category.title,
 				iconSvg: resolveIconSvg(iconForModule(module.slug, category.title), ICON_CLASS),
 			});
 		}
 	}
 
-	return { modulesList, categoryIconSvg };
+	return { modulesList, categoryIconSvg, modified: await getLatestModified() };
 };
