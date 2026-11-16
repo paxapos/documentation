@@ -45,6 +45,8 @@ export const load: PageServerLoad = async ({ params }) => {
 		content: articleContent.content,
 		tableOfContents: articleContent.tableOfContents,
 		seo: markdownData.seo,
+		modified: markdownData.modified,
+		published: markdownData.published,
 		llmTxtFile: getLlmTxtFile(slug),
 	};
 };

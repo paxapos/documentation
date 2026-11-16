@@ -22,6 +22,13 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # historial completo: fechas reales de cada artículo
+
+            # La imagen no copia .git: las fechas de cada .md (sitemap <lastmod> y
+            # dateModified) se calculan acá y entran al build en .content-dates.json.
+            - name: Fechas de contenido desde git
+              run: node scripts/generate-content-dates.mjs
 
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3

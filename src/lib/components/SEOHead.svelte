@@ -44,8 +44,9 @@
 			headline: title,
 			description: description,
 			url: fullUrl,
-			datePublished: published || '2025-01-01',
-			dateModified: modified || new Date().toISOString().split('T')[0],
+			// Solo fechas reales (git). Antes: '2025-01-01' fijo y la fecha del build.
+			...(published && { datePublished: published }),
+			...(modified && { dateModified: modified }),
 			author: {
 				'@type': 'Organization',
 				name: 'PaxaPOS',

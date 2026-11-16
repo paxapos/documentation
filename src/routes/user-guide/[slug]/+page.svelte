@@ -127,6 +127,8 @@
 	keywords={data.seo.keywords}
 	url="/user-guide/{data.slug}"
 	section="Manual de Usuario"
+	published={data.published ?? ''}
+	modified={data.modified ?? ''}
 />
 
 <!-- Mensaje de confirmación de copia -->

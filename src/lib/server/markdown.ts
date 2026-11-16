@@ -1,9 +1,21 @@
 import { dev } from '$app/environment';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileNameToSlug, extractMarkdownTitle } from '$lib/utils/contentUtils';
+import { fileNameToSlug, extractMarkdownTitle, extractDescription } from '$lib/utils/contentUtils';
 import { applyContactPlaceholders } from '$lib/config/contact';
 import type { ModuleCategory, ModuleSeo } from '$lib/types';
+
+interface ContentDates {
+	modified: string;
+	published: string;
+}
+
+/** Fechas de git por archivo, generadas por scripts/generate-content-dates.mjs. */
+function loadContentDates(): Record<string, ContentDates> {
+	const datesPath = join(process.cwd(), '.content-dates.json');
+	if (!existsSync(datesPath)) return {};
+	return JSON.parse(readFileSync(datesPath, 'utf-8'));
+}
 
 interface MarkdownFileData {
 	fileName: string;
@@ -13,6 +25,9 @@ interface MarkdownFileData {
 	category: string;
 	categoryOrder: number;
 	seo: ModuleSeo;
+	/** Fecha ISO del último / primer commit; null si no se conoce. */
+	modified: string | null;
+	published: string | null;
 }
 
 interface MarkdownIndex {
@@ -31,20 +46,11 @@ function categorizeByFolder(path: string): { category: string; order: number } {
 }
 
 function generateSEO(title: string, content: string, slug: string): ModuleSeo {
-	const cleanContent = content
-		.replace(/<div\s+id="[^"]*">\s*<\/div>/g, '')
-		.replace(/^#.+$/m, '')
-		.trim();
-
-	const firstParagraph = cleanContent.split('\n\n')[0] || '';
-	const description =
-		firstParagraph.length > 160
-			? firstParagraph.substring(0, 157) + '...'
-			: firstParagraph || `Guía completa sobre ${title}.`;
+	const description = extractDescription(content) || `Guía de PaxaPOS: ${title}.`;
 
 	return {
 		title: `${title} - Manual`,
-		description: description.replace(/[#*<>]/g, '').trim(),
+		description,
 		keywords: [
 			slug.replace(/-/g, ' '),
 			'paxapos',
@@ -62,6 +68,7 @@ async function buildIndex(): Promise<MarkdownIndex> {
 		import: 'default',
 	});
 
+	const contentDates = loadContentDates();
 	const markdownFiles: Record<string, MarkdownFileData> = {};
 	const categories: Record<string, ModuleCategory> = {};
 
@@ -80,6 +87,7 @@ async function buildIndex(): Promise<MarkdownIndex> {
 		const title = extractMarkdownTitle(content);
 		const { category, order } = categorizeByFolder(path);
 
+		const seo = generateSEO(title, content, slug);
 		markdownFiles[slug] = {
 			fileName,
 			path,
@@ -87,11 +95,13 @@ async function buildIndex(): Promise<MarkdownIndex> {
 			content: content.replace(/^#\s+.+(\r?\n)?/, '').trim(),
 			category,
 			categoryOrder: order,
-			seo: generateSEO(title, content, slug),
+			seo,
+			modified: contentDates[path.replace(/^\//, '')]?.modified ?? null,
+			published: contentDates[path.replace(/^\//, '')]?.published ?? null,
 		};
 
 		categories[category] ??= { title: category, order, modules: [] };
-		categories[category].modules.push({ slug, title, fileName });
+		categories[category].modules.push({ slug, title, fileName, description: seo.description });
 	}
 
 	for (const cat of Object.values(categories)) {
@@ -142,4 +152,14 @@ export function getLlmTxtFile(slug: string): string | null {
 		}
 	}
 	return llmMappingCache[slug] ?? null;
+}
+
+/** Fecha del cambio más reciente en todo el manual (para el índice). */
+export async function getLatestModified(): Promise<string | null> {
+	const { markdownFiles } = await getIndex();
+	const dates = Object.values(markdownFiles)
+		.map((f) => f.modified)
+		.filter((d): d is string => Boolean(d))
+		.sort();
+	return dates.at(-1) ?? null;
 }

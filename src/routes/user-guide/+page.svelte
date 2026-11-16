@@ -25,6 +25,7 @@
 	url="/user-guide"
 	type="article"
 	section="Manual de Usuario"
+	modified={data.modified ?? ''}
 />
 
 <div

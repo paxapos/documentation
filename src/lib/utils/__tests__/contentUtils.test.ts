@@ -3,6 +3,7 @@ import {
 	addLinkIconsToHeaders,
 	fileNameToSlug,
 	extractMarkdownTitle,
+	extractDescription,
 	highlightTextInHtml,
 	prepareArticleContent,
 	stripEmojis,
@@ -160,5 +161,69 @@ describe('prepareArticleContent', () => {
 		const html = '<h2>Sección</h2><div id="seccion"></div>';
 
 		expect(addLinkIconsToHeaders(html)).toBe(prepareArticleContent(html).content);
+	});
+});
+
+describe('extractDescription', () => {
+	it('usa el bloque "¿Para qué sirve esto?" y saltea "¿Dónde está en el sistema?"', () => {
+		const md = [
+			'# Factura Manual',
+			'',
+			'<div id="factura-manual"></div>',
+			'',
+			'> **¿Dónde está en el sistema?:** Menú principal → **Finanzas**',
+			'> **¿Quién lo usa?:** Contadores',
+			'',
+			'> 🎯 **¿Para qué sirve esto?**',
+			'> Sirve para cargar a mano una factura que te hizo un proveedor: luz, alquiler, mercadería.',
+			'> Al guardarla, queda la deuda con ese proveedor.',
+		].join('\n');
+		expect(extractDescription(md)).toBe(
+			'Sirve para cargar a mano una factura que te hizo un proveedor: luz, alquiler, mercadería. Al guardarla, queda la deuda con ese proveedor.',
+		);
+	});
+
+	it('usa los párrafos bajo "## 🎯 ¿Qué es…?" cuando no hay bloque', () => {
+		const md = [
+			'# Salón',
+			'',
+			'> **¿Dónde está en el sistema?:** Menú → Ventas',
+			'',
+			'## 🎯 ¿Qué es y para qué sirve esta pantalla?',
+			'',
+			'<div id="que-es"></div>',
+			'',
+			'El **Salón de Ventas** es la pantalla donde se atiende cada mesa.',
+			'',
+			'1. Abrir la mesa.',
+		].join('\n');
+		expect(extractDescription(md)).toBe('El Salón de Ventas es la pantalla donde se atiende cada mesa.');
+	});
+
+	it('limpia links, imágenes y emojis, y cierra con punto', () => {
+		const md = [
+			'# Driver',
+			'',
+			'![Captura](images/a.png)',
+			'',
+			'📋 En el [siguiente enlace](https://example.com) podrás descargar el driver:',
+		].join('\n');
+		expect(extractDescription(md)).toBe('En el siguiente enlace podrás descargar el driver.');
+	});
+
+	it('corta en una palabra y no supera el máximo', () => {
+		const md = `# T\n\n${'palabra '.repeat(60)}`;
+		const desc = extractDescription(md, 155);
+		expect(desc.length).toBeLessThanOrEqual(155);
+		expect(desc.endsWith('palabra…')).toBe(true);
+	});
+
+	it('si se pasa del máximo, prefiere cortar en el fin de una oración', () => {
+		const md = `# T\n\n${'a'.repeat(100)}. ${'b '.repeat(60)}`;
+		expect(extractDescription(md, 155)).toBe(`${'a'.repeat(100)}.`);
+	});
+
+	it('devuelve vacío si no hay texto', () => {
+		expect(extractDescription('# Solo título\n\n![img](images/x.png)')).toBe('');
 	});
 });

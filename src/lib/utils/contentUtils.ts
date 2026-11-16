@@ -168,3 +168,75 @@ export function extractMarkdownTitle(content: string): string {
 
 	return 'Sin título';
 }
+
+/** Markdown inline → texto plano de una línea (para meta description). */
+function markdownInlineToText(text: string): string {
+	return stripEmojis(
+		text
+			.replace(/!\[[^\]]*\]\([^)]*\)/g, '') // imágenes
+			.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1') // links → texto
+			.replace(/<[^>]+>/g, '') // HTML
+			.replace(/&nbsp;/g, ' ')
+			.replace(/&amp;/g, '&')
+			.replace(/(\*\*|__|\*|_|`)/g, '') // negrita, cursiva, código
+			.replace(/\s+/g, ' '),
+	)
+		.replace(/:$/, '.')
+		.trim();
+}
+
+function truncateAtWord(text: string, max: number): string {
+	if (text.length <= max) return text;
+	// Mejor terminar en una oración completa si queda al menos la mitad del largo.
+	const sentenceEnd = text.slice(0, max).search(/[.!?](?=\s)[^.!?]*$/);
+	if (sentenceEnd >= max * 0.5) return text.slice(0, sentenceEnd + 1);
+	const cut = text.slice(0, max - 1);
+	const lastSpace = cut.lastIndexOf(' ');
+	return `${(lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[\s,.;:—-]+$/, '')}…`;
+}
+
+const SKIP_BLOCK = /^(#|<div|!\[|---|```|\||>\s*\*\*¿(Dónde|Quién))/;
+const PURPOSE_HEADING = /^#{2,3}\s.*¿(Qué es|Para qué sirve)/;
+
+/**
+ * Arma la meta description de un artículo, en este orden:
+ * 1. El bloque `> 🎯 **¿Para qué sirve esto?**` (lo tienen casi todos los artículos).
+ * 2. Los párrafos bajo un encabezado `## 🎯 ¿Qué es…?` / `¿Para qué sirve…?`.
+ * 3. Los primeros párrafos de texto, salteando el bloque `¿Dónde está en el sistema?`,
+ *    imágenes, anclas, tablas y listas.
+ * Devuelve '' si no encuentra texto; quien llama decide el fallback.
+ */
+export function extractDescription(markdown: string, maxLength = 155): string {
+	const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+
+	// 1. Bloque "¿Para qué sirve…?" en cita
+	const purposeIdx = lines.findIndex((l) => /^>\s*.*\*\*¿Para qué sirve[^*]*\*\*/.test(l));
+	if (purposeIdx !== -1) {
+		const body: string[] = [];
+		for (let i = purposeIdx + 1; i < lines.length && /^>/.test(lines[i]); i++) {
+			body.push(lines[i].replace(/^>\s?/, ''));
+		}
+		const text = markdownInlineToText(body.join(' '));
+		if (text.length >= 40) return truncateAtWord(text, maxLength);
+	}
+
+	// 2 y 3. Párrafos de prosa (bajo el encabezado de propósito si existe)
+	const headingIdx = lines.findIndex((l) => PURPOSE_HEADING.test(l));
+	const blocks = lines
+		.slice(headingIdx + 1)
+		.join('\n')
+		.split(/\n\s*\n/)
+		.map((b) => b.trim())
+		.filter(Boolean);
+
+	const paragraphs: string[] = [];
+	for (const block of blocks) {
+		if (headingIdx !== -1 && paragraphs.length && /^#/.test(block)) break; // fin de la sección
+		if (SKIP_BLOCK.test(block) || /^([-*+]|\d+\.)\s/.test(block) || /^>/.test(block)) continue;
+		const text = markdownInlineToText(block);
+		paragraphs.push(/[.!?…]$/.test(text) ? text : `${text}.`);
+		if (paragraphs.join(' ').length >= 100) break;
+	}
+
+	return truncateAtWord(paragraphs.join(' ').trim(), maxLength);
+}
