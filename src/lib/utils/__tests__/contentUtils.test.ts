@@ -81,6 +81,9 @@ describe('fileNameToSlug', () => {
 			['42-Sam4s-Giant-100.md', 'sam4s-giant-100'],
 			['51-Preguntas-Frecuentes.md', 'preguntas-frecuentes'],
 			['52-Buchón-Bot.md', 'buchon-bot'],
+			['151-06-FAQ-Cajero-Ingreso-Egreso-Cajon.md', 'faq-cajero-ingreso-egreso-cajon'],
+			['156-01-IA-Conectar-Claude.md', 'ia-conectar-claude'],
+			['143-citizen-ct-s310II.md', 'citizen-ct-s310ii'],
 		];
 		for (const [input, expected] of cases) {
 			expect(fileNameToSlug(input)).toBe(expected);

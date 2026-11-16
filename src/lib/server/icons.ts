@@ -173,10 +173,10 @@ export const moduleIcons: Record<string, string> = {
 	'preguntas-frecuentes': 'lucide:help-circle',
 	'troubleshooting-semantico': 'lucide:wrench',
 	'buchon-bot': 'lucide:bot',
-	'01-ia-conectar-claude': 'lucide:plug',
-	'02-ia-conectar-chatgpt': 'lucide:plug',
-	'03-ia-conectar-gemini': 'lucide:plug',
-	'04-ia-pedidos-desde-asistentes': 'lucide:shopping-bag',
+	'ia-conectar-claude': 'lucide:plug',
+	'ia-conectar-chatgpt': 'lucide:plug',
+	'ia-conectar-gemini': 'lucide:plug',
+	'ia-pedidos-desde-asistentes': 'lucide:shopping-bag',
 };
 
 const svgCache = new Map<string, string>();

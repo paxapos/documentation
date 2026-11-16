@@ -71,6 +71,12 @@ async function buildIndex(): Promise<MarkdownIndex> {
 
 		const content = applyContactPlaceholders(String(await loader()));
 		const slug = fileNameToSlug(fileName);
+		if (markdownFiles[slug]) {
+			// Dos .md con el mismo slug: uno pisaría al otro y una URL desaparecería sin aviso.
+			throw new Error(
+				`Slug duplicado "${slug}": ${markdownFiles[slug].path} y ${path}. Renombrá uno de los dos.`,
+			);
+		}
 		const title = extractMarkdownTitle(content);
 		const { category, order } = categorizeByFolder(path);
 

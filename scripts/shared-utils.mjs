@@ -39,7 +39,7 @@ export const BASE_SITE_URL =
 export function fileNameToSlug(fileName) {
 	return fileName
 		.replace(/\.\w+$/, '')        // Remover extensión (.md, .txt)
-		.replace(/^\d+-/, '')          // Remover prefijo numérico
+		.replace(/^(\d+-)+/, '')          // Remover prefijos numéricos (151-06-FAQ → FAQ)
 		.toLowerCase()
 		.replace(/\s+/g, '-')         // Espacios a guiones
 		.normalize('NFD')

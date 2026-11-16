@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/state';
+
 	let {
 		title = '',
 		description = '',
@@ -24,7 +26,10 @@
 	} = $props();
 
 	const baseUrl = 'https://doc.paxapos.com';
-	let fullUrl = $derived(url ? `${baseUrl}${url}` : baseUrl);
+	// Sin `url` explícita se usa la ruta de la página: el canonical nunca debe
+	// caer en la home (paxapos/documentation#240). Sin barra final, igual que nginx.
+	let path = $derived((url || page.url.pathname).replace(/(.)\/+$/, '$1'));
+	let fullUrl = $derived(path === '/' ? baseUrl : `${baseUrl}${path}`);
 	const defaultImage = `${baseUrl}/favicon.png`;
 	let finalImage = $derived(image || defaultImage);
 
