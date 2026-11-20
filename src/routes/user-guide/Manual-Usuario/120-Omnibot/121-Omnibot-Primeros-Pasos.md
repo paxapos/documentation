@@ -2,7 +2,7 @@
 
 <div id="omnibot-primeros-pasos"></div>
 
-> **¿Dónde está en el sistema?:** Pantalla de inicio de PaxaPOS → tarjeta **Omnibot (WhatsApp)**. También podés entrar directo a **https://bot.paxapos.com**.
+> **¿Dónde está en el sistema?:** Primero se instala desde el **App Store** de PaxaPOS (Configuración → App Store). Una vez instalada, aparece la tarjeta **Omnibot (WhatsApp)** en la pantalla de inicio.
 > **¿Quién lo usa?:** Dueños y administradores para configurarlo; el equipo de atención para responder desde la bandeja.
 
 ---
@@ -28,49 +28,71 @@ Con Omnibot podés:
 
 <div id="el-camino-completo"></div>
 
-Son cuatro pasos. Los tres primeros se hacen una sola vez.
+Omnibot **viene apagado**: ningún comercio lo ve hasta que se instala. Son seis pasos y los cinco primeros se hacen una sola vez.
 
 | Paso | Qué hacés                                               | Dónde se explica                                                                |
 | ---- | ------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| 1    | Entrás a Omnibot desde PaxaPOS y **encendés la IA**     | En esta página, más abajo                                                       |
-| 2    | **Conectás tu número de WhatsApp** con Meta             | [Conectar tu WhatsApp con Meta](/user-guide/omnibot-conectar-whatsapp-con-meta) |
-| 3    | Le enseñás al bot **cómo atender** y qué sabe del local | [Configurar el bot](/user-guide/omnibot-configurar-el-bot)                      |
-| 4    | Atendés desde la **Bandeja** y mirás el consumo         | [Facturación e inteligencia artificial](/user-guide/omnibot-facturacion-e-ia)   |
+| 1    | **Instalás la app** Omnibot desde el App Store          | En esta página, más abajo                                                       |
+| 2    | Entrás desde la **tarjeta** de la pantalla de inicio    | En esta página, más abajo                                                       |
+| 3    | **Encendés la IA** aceptando los términos               | En esta página, más abajo                                                       |
+| 4    | **Conectás tu número de WhatsApp** con Meta             | [Conectar tu WhatsApp con Meta](/user-guide/omnibot-conectar-whatsapp-con-meta) |
+| 5    | Le enseñás al bot **cómo atender** y qué sabe del local | [Configurar el bot](/user-guide/omnibot-configurar-el-bot)                      |
+| 6    | Atendés desde la **Bandeja** y mirás el consumo         | [Facturación e inteligencia artificial](/user-guide/omnibot-facturacion-e-ia)   |
 
 ---
 
-## 📍 Paso 1: Entrá a Omnibot desde PaxaPOS
+## 🛒 Paso 1: Instalá la app Omnibot
 
-<div id="paso-1-entra-a-omnibot"></div>
+<div id="paso-1-instala-la-app"></div>
+
+Omnibot es una **app instalable** de PaxaPOS, igual que Fichaje, el Comandero o Reservas: está en el **App Store** del sistema, en el grupo **Módulos Adicionales e Integraciones**, y por defecto aparece sin instalar.
+
+1. Entrá a **Configuración → App Store**.
+2. Buscá la app **Omnibot (WhatsApp)**. Es **¡GRATIS!**: instalarla no tiene costo.
+3. Hacé clic en **Instalar**. La página se actualiza sola y el botón pasa a decir **Desinstalar**.
+
+![App Store de PaxaPOS con la app Omnibot (WhatsApp) y su botón Instalar, entre las apps Week y Reservas](images/manual/120-omnibot/121-04-app-store-instalar-omnibot.png)
+
+> ⚠️ **Importante:** el App Store lo ven y lo usan solo los administradores de la plataforma PaxaPOS. Si en tu usuario no aparece, o si preferís que lo hagamos nosotros, escribinos por [WhatsApp]({{WHATSAPP_URL}}) y te instalamos Omnibot en tu comercio.
+
+> 💡 **Consejo útil:** instalar la app no enciende la inteligencia artificial ni te genera ningún cargo. Eso se decide después, en el paso 3.
+
+---
+
+## 📍 Paso 2: Entrá desde la tarjeta de PaxaPOS
+
+<div id="paso-2-entra-desde-la-tarjeta"></div>
+
+Apenas Omnibot está instalada, en la pantalla de inicio de PaxaPOS aparece la tarjeta **Omnibot (WhatsApp)**.
 
 1. Iniciá sesión en PaxaPOS como siempre.
-2. En la pantalla de inicio, en **Aplicaciones del Comercio**, hacé clic en la tarjeta **Omnibot (WhatsApp)**.
+2. En la pantalla de inicio, en **Aplicaciones del Comercio**, hacé clic en la tarjeta **Omnibot (WhatsApp)** (lleva la etiqueta **Externa**, porque se abre en otra pestaña).
 3. Se abre Omnibot en una pestaña nueva, **ya con tu usuario**: no tenés que crear otra cuenta ni recordar otra contraseña.
 
-![Cuadro Aplicaciones del Comercio de PaxaPOS con las tarjetas Salón, Fichaje de Personal, Delivery App y Omnibot (WhatsApp)](images/manual/120-omnibot/121-02-tarjeta-omnibot.png)
+![Cuadro Aplicaciones del Comercio de PaxaPOS con las tarjetas Compras, Recomendaciones IA, Delivery App y Omnibot (WhatsApp)](images/manual/120-omnibot/121-02-tarjeta-omnibot.png)
 
 > 💡 **Consejo útil:** la primera vez tiene que entrar el **dueño** o un **administrador** del comercio. Con ese primer ingreso el comercio queda dado de alta en Omnibot. Después, el resto del equipo entra de la misma manera y queda como operador de la bandeja.
 
 Si trabajás en más de un comercio, Omnibot te pregunta con cuál querés entrar.
 
-**¿No ves la tarjeta?** La ven los usuarios con permiso de **Configuración del sistema**, de **Bot** o de **Campañas**. Pedile al dueño que te lo habilite en **Configuración → Usuarios y Roles**.
+**¿No ves la tarjeta?** Hay dos motivos posibles: la app todavía **no está instalada** en tu comercio (paso 1), o tu usuario no tiene permiso. La ven los usuarios con permiso de **Configuración del sistema**, de **Bot** o de **Campañas**; pedile al dueño que te lo habilite en **Configuración → Usuarios y Roles**.
 
 ---
 
-## ⚡ Paso 2: Encendé Omnibot
+## ⚡ Paso 3: Encendé Omnibot
 
-<div id="paso-2-encende-omnibot"></div>
+<div id="paso-3-encende-omnibot"></div>
 
-El bot piensa con inteligencia artificial, y esa inteligencia artificial tiene que estar encendida en tu comercio. Si todavía no lo está, la primera vez que entrás PaxaPOS te muestra la pantalla **Encendé Omnibot**:
+El bot piensa con inteligencia artificial, y esa inteligencia artificial tiene que estar encendida en tu comercio. Si todavía no lo está, la primera vez que hacés clic en la tarjeta, PaxaPOS te muestra la pantalla **Encendé Omnibot**, que explica **Qué hace por vos** y **Cómo se cobra**:
 
-1. Leé el cuadro **Cómo se cobra**. Omnibot **no tiene abono**: solo se cobra lo que el bot usa de inteligencia artificial, y ese importe se suma a tu liquidación mensual de PaxaPOS.
-2. Leé los **términos y condiciones**.
+1. Leé el cuadro **Cómo se cobra**. Omnibot **no tiene abono**: solo se cobra lo que el bot usa de inteligencia artificial, y ese importe se suma a tu liquidación mensual de PaxaPOS (la que se paga con el link de MercadoPago). El mes en que la encendés se cobra prorrateado.
+2. Leé los **términos de uso y facturación de la Inteligencia Artificial**: se muestran en un recuadro que se desplaza hacia abajo.
 3. Tildá **"Leí y acepto los términos, y entiendo que se me va a facturar el consumo de IA según lo descripto arriba."**
 4. Hacé clic en **Encender Omnibot**.
 
-![Pantalla Encendé Omnibot con los cuadros Qué hace por vos y Cómo se cobra, los términos de ejemplo, la casilla de aceptación y el botón Encender Omnibot](images/manual/120-omnibot/121-03-encende-omnibot.png)
+![Pantalla Encendé Omnibot con los cuadros Qué hace por vos y Cómo se cobra, los términos de uso y facturación de la Inteligencia Artificial, la casilla de aceptación y los botones Ahora no, entrar igual y Encender Omnibot](images/manual/120-omnibot/121-03-encende-omnibot.png)
 
-Listo: quedó encendida la inteligencia artificial de tu comercio y entrás a Omnibot.
+Listo: quedó encendida la inteligencia artificial de tu comercio y entrás a Omnibot. Si todavía no querés encenderla, tocá **Ahora no, entrar igual**: entrás a Omnibot sin encender nada, pero el bot no va a poder responder hasta que la enciendas.
 
 > 💡 **Consejo útil:** es el mismo interruptor que está en **Configuración → Inteligencia artificial**. Si ya lo habías encendido para otra función de PaxaPOS (por ejemplo, leer facturas por foto), esta pantalla no aparece y entrás directo.
 
@@ -78,9 +100,9 @@ Listo: quedó encendida la inteligencia artificial de tu comercio y entrás a Om
 
 ---
 
-## 🧭 Paso 3: Conocé la pantalla de Omnibot
+## 🧭 Paso 4: Conocé la pantalla de Omnibot
 
-<div id="paso-3-conoce-la-pantalla"></div>
+<div id="paso-4-conoce-la-pantalla"></div>
 
 En el menú de la izquierda tenés:
 
@@ -107,10 +129,11 @@ Si todavía no tenés ningún bot, arriba aparece el aviso **"Para empezar: cre�
 
 <div id="problemas-comunes"></div>
 
-| ¿Qué te pasa?                                                    | ¿Por qué puede ser?                                                        | ¿Cómo se soluciona?                                                                                           |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| No veo la tarjeta **Omnibot (WhatsApp)**.                        | Tu usuario no tiene ninguno de los permisos que la muestran.               | Pedile al dueño el permiso de Bot, Campañas o Configuración del sistema.                                      |
-| Dice **"Tu comercio todavía no abrió Omnibot"**.                 | Nadie con rol de dueño o administrador entró todavía.                      | Que entre primero el dueño o un administrador desde la tarjeta de PaxaPOS.                                    |
-| No aparece la pantalla **Encendé Omnibot** y el bot no responde. | Tu usuario no puede editar la configuración, así que entró sin encenderla. | Que el dueño entre a Omnibot desde PaxaPOS, o que la encienda en **Configuración → Inteligencia artificial**. |
-| Dice **"No hay términos de IA publicados todavía"**.             | Falta publicar el documento de términos en la plataforma.                  | Escribinos por [WhatsApp]({{WHATSAPP_URL}}) y lo resolvemos.                                                  |
-| Entré a bot.paxapos.com directo y me pide usuario y contraseña.  | Entraste sin pasar por PaxaPOS.                                            | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS: te lleva ya con tu sesión.                          |
+| ¿Qué te pasa?                                                    | ¿Por qué puede ser?                                                                                     | ¿Cómo se soluciona?                                                                                                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| No veo la tarjeta **Omnibot (WhatsApp)**.                        | La app no está instalada en tu comercio, o tu usuario no tiene ninguno de los permisos que la muestran. | Pedí que instalen Omnibot desde el **App Store** (paso 1) y, si ya está instalada, pedile al dueño el permiso de Bot, Campañas o Configuración del sistema. |
+| Dice **"Omnibot no está instalado en este comercio."**           | Entraste por un link guardado, pero la app no está instalada.                                           | Instalala desde el **App Store** (paso 1).                                                                                                                  |
+| Dice **"Tu comercio todavía no abrió Omnibot"**.                 | Nadie con rol de dueño o administrador entró todavía.                                                   | Que entre primero el dueño o un administrador desde la tarjeta de PaxaPOS.                                                                                  |
+| No aparece la pantalla **Encendé Omnibot** y el bot no responde. | Tu usuario no puede editar la configuración, así que entró sin encenderla.                              | Que el dueño entre a Omnibot desde PaxaPOS, o que la encienda en **Configuración → Inteligencia artificial**.                                               |
+| Dice **"No hay términos de IA publicados."**                     | Falta publicar el documento de términos en la plataforma.                                               | Escribinos por [WhatsApp]({{WHATSAPP_URL}}) y lo resolvemos.                                                                                                |
+| Entré a bot.paxapos.com directo y me pide usuario y contraseña.  | Entraste sin pasar por PaxaPOS.                                                                         | Entrá desde la tarjeta **Omnibot (WhatsApp)** de PaxaPOS: te lleva ya con tu sesión.                                                                        |
