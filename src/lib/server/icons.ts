@@ -17,6 +17,7 @@ export const categoryIcons: Record<string, string> = {
 	Reportes: 'lucide:bar-chart-3',
 	Configuracion: 'lucide:settings',
 	Configuración: 'lucide:settings',
+	Omnibot: 'lucide:message-circle',
 	'Biblioteca de Drivers': 'lucide:printer',
 	Extra: 'lucide:sparkles',
 	Otros: 'lucide:folder-open',
@@ -168,6 +169,12 @@ export const moduleIcons: Record<string, string> = {
 	'epson-tm-t20': 'lucide:receipt-text',
 	'epson-tm-t88': 'lucide:file-text',
 	'drivers-genericos': 'lucide:cog',
+
+	// 120-Omnibot
+	'omnibot-primeros-pasos': 'lucide:bot',
+	'omnibot-conectar-whatsapp-con-meta': 'lucide:link',
+	'omnibot-configurar-el-bot': 'lucide:sliders-horizontal',
+	'omnibot-facturacion-e-ia': 'lucide:receipt',
 
 	// 150-Extra
 	'preguntas-frecuentes': 'lucide:help-circle',
