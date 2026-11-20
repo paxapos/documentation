@@ -50,15 +50,41 @@ Cada renglón tiene estas columnas:
 - **Ícono**: el dibujito que se ve en la caja. Lo elige el sistema según **¿Qué es?**.
 - **Nombre**: cómo lo ve el cajero. Podés cambiarlo. Por ejemplo: *Tarjeta Visa*.
 - **¿Qué es?**: qué tipo de medio es. Por ejemplo: *Visa crédito* o *Transferencia*. Sirve para los informes.
-- **Abre cajón**: si está tildada, el cajón de dinero se abre al cobrar con este medio.
+- **Abre cajón**: si está tildada, el cajón de dinero se abre al cobrar con este medio. También decide si el medio va a la caja (mirá la columna siguiente).
+- **Va a la caja**: si el cobro entra al arqueo y pide caja abierta. Viene en **Como el cajón**: va a la caja si el medio abre el cajón. Mirá [Qué medios van a la caja](#que-medios-van-a-la-caja).
 - **Fiscal**: si está tildada, la factura sale directo al cobrar con este medio.
 - **Proveedores**: si está tildada, también lo podés usar para pagar a proveedores.
 - **Engranaje**: abre **Más opciones** (Paso 5).
 - **Papelera**: borra el medio. Se ve gris apagada cuando no se puede borrar.
 
-> ⚠️ **Atención:** cada casilla y cada lista se guardan al instante. Cambiar **Abre cajón** o **Fiscal** cambia cómo se cobra de verdad.
+> ⚠️ **Atención:** cada casilla y cada lista se guardan al instante. Cambiar **Abre cajón**, **Va a la caja** o **Fiscal** cambia cómo se cobra de verdad.
 
 > 💡 **Consejo útil:** si un renglón dice *Sin clasificar: elegí qué es*, abrí la lista **¿Qué es?** y elegí una opción.
+
+---
+
+## 💰 Qué medios van a la caja
+
+<div id="que-medios-van-a-la-caja"></div>
+
+![Columnas Abre cajón y Va a la caja con la explicación arriba: Efectivo en Sí, Tarjeta Amex en Como el cajón (sí) y Tarjeta Visa en No](images/manual/110-configuracion/132-01c-columnas-abre-cajon-y-va-a-la-caja.png)
+
+Un medio que **va a la caja** entra al arqueo, y para cobrar con él el cajero necesita la caja abierta. Un medio que no va se cobra igual, aunque la caja esté cerrada, y en el cierre aparece aparte.
+
+La lista **Va a la caja** tiene tres opciones:
+
+- **Como el cajón (sí)** o **Como el cajón (no)**: es la opción de siempre. Si el medio abre el cajón, va a la caja; si no, no. Lo que dice entre paréntesis cambia solo cuando tildás o destildás **Abre cajón**.
+- **Sí**: va a la caja aunque no abra el cajón.
+- **No**: no va a la caja aunque abra el cajón.
+
+Elegí **Sí** o **No** solo cuando ese medio es una excepción. Por ejemplo, una transferencia no va a la caja: con dejar **Abre cajón** destildado alcanza.
+
+Hay dos medios que no se pueden cambiar, y por eso la lista se ve gris:
+
+- **Efectivo** siempre va a la caja.
+- Los cobros por **QR, link o SmartPOS** nunca van, porque el cajero no toca la plata.
+
+> 💡 **Consejo útil:** si una tarjeta o una transferencia te pide la caja abierta, fijate si tiene tildado **Abre cajón**. Destildalo: deja de abrir el cajón y de ir a la caja.
 
 ---
 
@@ -70,7 +96,7 @@ Cada renglón tiene estas columnas:
 
 1. Tocá la pestaña **Para pagar proveedores**.
 2. Ves solo los medios con la casilla **Proveedores** tildada.
-3. Las columnas **Abre cajón** y **Fiscal** no aparecen: acá no se usan.
+3. Las columnas **Abre cajón**, **Va a la caja** y **Fiscal** no aparecen: acá no se usan.
 4. Para volver, tocá **Para cobrar**.
 
 Cambiar de pestaña solo filtra lo que ves. No guarda nada.
@@ -90,7 +116,7 @@ Cambiar de pestaña solo filtra lo que ves. No guarda nada.
 
 3. Escribí el **Nombre**. Por ejemplo: *Voucher Empresa X*.
 4. Elegí **¿Qué es?**. Por ejemplo: *Voucher / Vale*.
-5. Tildá las casillas que necesites: **Abre cajón**, **Fiscal**, **Proveedores**.
+5. Tildá las casillas que necesites: **Abre cajón**, **Fiscal**, **Proveedores**. Dejá **Va a la caja** en **Como el cajón**, salvo que el medio sea una excepción.
 6. Tocá **Guardar** para crearlo. Se recarga la pantalla y el medio queda en su grupo.
 7. Si te arrepentís, tocá **Cancelar**. El renglón desaparece y no se crea nada.
 
@@ -248,6 +274,8 @@ Las sucursales de la lista dejan de cobrar con MercadoPago hasta que el Dueño c
 | El medio no aparece en **Para pagar proveedores**. | La casilla **Proveedores** está destildada. | Tildá **Proveedores** en la pestaña **Para cobrar**. |
 | Un renglón dice *Sin clasificar: elegí qué es*. | Al medio le falta el tipo. | Elegí una opción en **¿Qué es?**. |
 | La papelera está apagada. | El medio ya tiene cobros, o es Efectivo. | Destildá **Activo** para que no se use más. |
+| Una tarjeta o una transferencia pide la caja abierta, o aparece en el arqueo. | El medio tiene tildado **Abre cajón** y **Va a la caja** está en **Como el cajón (sí)**. | Destildá **Abre cajón**. Si el medio tiene que abrir el cajón igual, elegí **No** en **Va a la caja**. |
+| Un medio no va a la caja aunque tiene tildado **Abre cajón**. | Alguien eligió **No** en **Va a la caja**. | Volvé a elegir **Como el cajón** en **Va a la caja**. |
 | Aparece un mensaje rojo y el renglón se pinta de rojo. | No se pudo guardar el cambio. | Revisá el nombre y la conexión, y probá de nuevo. |
 | No veo **Medios de cobro** en el menú. | Tu usuario no tiene permiso. | Pedile a un administrador el permiso en [Permisos por Rol](/user-guide/permisos-por-rol). |
 | **No me deja conectar MercadoPago desde la sucursal.** | Desde la sucursal solo se elige una cuenta ya conectada. Conectar y desconectar es del **Dueño**, en **Cuenta de facturación**. | Pedile al Dueño que toque **Conectar MercadoPago** en **Cuenta de facturación**. Después elegí la cuenta en la sucursal con **Guardar elección**. |

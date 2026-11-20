@@ -78,24 +78,26 @@
 					</svg>
 				</button>
 
-				{#if categoryOpen}
-					<ul class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700">
-						{#each category.modules as module (module.slug)}
-							<li>
-								<a
-									href="{base}/user-guide/{module.slug}"
-									onclick={mobile ? onClose : undefined}
-									aria-current={currentSlug === module.slug ? 'page' : undefined}
-									class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors {currentSlug === module.slug
-										? '-ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300'
-										: 'border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white'}"
-								>
-									{stripEmojis(module.title)}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				{/if}
+				<!-- Siempre en el HTML (solo se oculta) para que los buscadores sigan los links a todos los artículos. -->
+				<ul
+					class="mt-1 space-y-0.5 border-l border-gray-200 dark:border-gray-700"
+					hidden={!categoryOpen}
+				>
+					{#each category.modules as module (module.slug)}
+						<li>
+							<a
+								href="{base}/user-guide/{module.slug}"
+								onclick={mobile ? onClose : undefined}
+								aria-current={currentSlug === module.slug ? 'page' : undefined}
+								class="block border-l-2 px-3 py-2 text-sm leading-5 transition-colors {currentSlug === module.slug
+									? '-ml-px border-blue-600 font-medium text-blue-700 dark:border-blue-400 dark:text-blue-300'
+									: 'border-transparent text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white'}"
+							>
+								{stripEmojis(module.title)}
+							</a>
+						</li>
+					{/each}
+				</ul>
 			</section>
 		{/each}
 	</nav>

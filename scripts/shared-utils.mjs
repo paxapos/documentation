@@ -9,8 +9,9 @@
  * Si se modifica la lógica de slug aquí, DEBE replicarse allá (y viceversa).
  */
 
-import { readdirSync, statSync } from 'fs';
-import { join, extname } from 'path';
+import { readdirSync, statSync, readFileSync, writeFileSync, existsSync } from 'fs';
+import { execFileSync } from 'child_process';
+import { join, extname, relative } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -23,6 +24,59 @@ export const STATIC_DIR = join(__dirname, '..', 'static');
 export const LLM_DIR = join(STATIC_DIR, 'llms');
 export const BASE_SITE_URL =
 	process.env.DOCUMENTATION_BASE_URL?.trim() || 'https://doc.paxapos.com';
+
+export const PROJECT_DIR = join(__dirname, '..');
+/** Fechas de cada .md según git. Lo lee también src/lib/server/markdown.ts. */
+export const CONTENT_DATES_FILE = join(PROJECT_DIR, '.content-dates.json');
+
+// ─── Fechas de contenido (git) ───────────────────────────────
+/**
+ * { 'src/routes/…/archivo.md': { modified, published } } con fechas ISO del
+ * último y del primer commit que tocó cada archivo. Devuelve null si no hay git
+ * o si el clone es shallow: ahí todas las fechas serían la del último commit y
+ * es mejor no informar ninguna que informar una falsa.
+ */
+export function computeGitContentDates() {
+	try {
+		const git = (args) =>
+			execFileSync('git', args, { cwd: PROJECT_DIR, maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] })
+				.toString()
+				.trim();
+		if (git(['rev-parse', '--is-shallow-repository']) === 'true') return null;
+		const repoRoot = git(['rev-parse', '--show-toplevel']);
+		const log = git(['-c', 'core.quotepath=off', 'log', '--format=%x00%cI', '--name-only', '--', MANUAL_DIR]);
+
+		const dates = {};
+		for (const chunk of log.split('\0').filter(Boolean)) {
+			const [date, ...files] = chunk.split('\n').map((l) => l.trim()).filter(Boolean);
+			for (const file of files) {
+				if (!file.endsWith('.md')) continue;
+				const key = relative(PROJECT_DIR, join(repoRoot, file)).split('\\').join('/');
+				dates[key] ??= { modified: date, published: date }; // el log viene del más nuevo al más viejo
+				dates[key].published = date;
+			}
+		}
+		return dates;
+	} catch {
+		return null;
+	}
+}
+
+/**
+ * Calcula las fechas con git y las guarda en CONTENT_DATES_FILE. Sin git (por
+ * ejemplo dentro del build de Docker) usa el archivo que dejó un paso anterior.
+ */
+export function loadContentDates() {
+	const fresh = computeGitContentDates();
+	if (fresh) {
+		writeFileSync(CONTENT_DATES_FILE, JSON.stringify(fresh, null, 2));
+		return fresh;
+	}
+	if (existsSync(CONTENT_DATES_FILE)) {
+		return JSON.parse(readFileSync(CONTENT_DATES_FILE, 'utf-8'));
+	}
+	return {};
+}
 
 // ─── Slug (Familia B — NFD normalize, estándar Unicode) ─────
 /**
@@ -39,7 +93,7 @@ export const BASE_SITE_URL =
 export function fileNameToSlug(fileName) {
 	return fileName
 		.replace(/\.\w+$/, '')        // Remover extensión (.md, .txt)
-		.replace(/^\d+-/, '')          // Remover prefijo numérico
+		.replace(/^(\d+-)+/, '')          // Remover prefijos numéricos (151-06-FAQ → FAQ)
 		.toLowerCase()
 		.replace(/\s+/g, '-')         // Espacios a guiones
 		.normalize('NFD')

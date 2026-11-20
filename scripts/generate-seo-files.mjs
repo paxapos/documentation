@@ -15,6 +15,8 @@ import {
 	STATIC_DIR,
 	LLM_DIR,
 	BASE_SITE_URL,
+	PROJECT_DIR,
+	loadContentDates,
 } from './shared-utils.mjs';
 
 console.log('Generando archivos optimizados para SEO e IA...');
@@ -22,6 +24,8 @@ console.log('Generando archivos optimizados para SEO e IA...');
 if (!fs.existsSync(STATIC_DIR)) {
 	fs.mkdirSync(STATIC_DIR, { recursive: true });
 }
+
+const contentDates = loadContentDates();
 
 /** Obtiene archivos MD con metadata del filesystem */
 function getAllMdFilesWithMeta() {
@@ -35,6 +39,11 @@ function getAllMdFilesWithMeta() {
 			relativePath,
 			id: name.replace('.md', ''),
 			section: path.dirname(relativePath) || 'root',
+			// Fecha del último commit; null si no se conoce (no se inventa con mtime,
+			// que en un clone o en Docker es la fecha del build).
+			lastModified:
+				contentDates[path.relative(PROJECT_DIR, fullPath).split(path.sep).join('/')]?.modified ??
+				null,
 		};
 	});
 }
@@ -79,7 +88,7 @@ function generateContentIndex() {
 					section: file.section,
 					url: `/user-guide/${fileNameToSlug(file.name)}`,
 					seo_keywords: generateSEOKeywords(file.name, 'user'),
-					last_modified: fs.statSync(file.path).mtime.toISOString(),
+					last_modified: file.lastModified,
 				})),
 			},
 			txt_files: {
@@ -159,45 +168,39 @@ function generateURLList(contentIndex) {
 }
 
 /**
- * Generar sitemap.xml estático con rutas canónicas indexables
+ * Generar sitemap.xml: solo páginas HTML canónicas (200, sin redirect).
+ * No va `/` (redirige a /user-guide) ni los .txt de /llms (llevan noindex).
+ * <lastmod> sale de git; si no se conoce, se omite: Google deja de confiar en
+ * lastmod cuando cambia en cada deploy. changefreq y priority Google los ignora.
  */
 function generateSitemap(contentIndex) {
 	console.log(' Generando sitemap.xml...');
 
 	const baseURL = BASE_SITE_URL;
-	const generatedDate = contentIndex.generated_at.split('T')[0];
-	const entries = [
-		{ url: `${baseURL}/`, lastmod: generatedDate, changefreq: 'weekly', priority: '1.0' },
-		{ url: `${baseURL}/user-guide`, lastmod: generatedDate, changefreq: 'weekly', priority: '0.9' },
-		{ url: `${baseURL}/llms/index.txt`, lastmod: generatedDate, changefreq: 'daily', priority: '0.8' },
-	];
+	const articles = contentIndex.sections.user_guide.files;
+	const dates = articles.map((f) => f.last_modified).filter(Boolean).sort();
+	const entries = [{ url: `${baseURL}/user-guide`, lastmod: dates.at(-1) ?? null }];
 
-	for (const file of contentIndex.sections.user_guide.files) {
-		entries.push({
-			url: `${baseURL}${file.url}`,
-			lastmod: file.last_modified.split('T')[0],
-			changefreq: 'weekly',
-			priority: '0.8',
-		});
+	for (const file of articles) {
+		entries.push({ url: `${baseURL}${file.url}`, lastmod: file.last_modified });
 	}
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries
-	.map(
-		(entry) => `  <url>
-    <loc>${entry.url}</loc>
-    <lastmod>${entry.lastmod}</lastmod>
-    <changefreq>${entry.changefreq}</changefreq>
-    <priority>${entry.priority}</priority>
-  </url>`,
+	.map((entry) =>
+		entry.lastmod
+			? `  <url>\n    <loc>${entry.url}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n  </url>`
+			: `  <url>\n    <loc>${entry.url}</loc>\n  </url>`,
 	)
 	.join('\n')}
-</urlset>`;
+</urlset>
+`;
 
 	const sitemapPath = path.join(STATIC_DIR, 'sitemap.xml');
 	fs.writeFileSync(sitemapPath, sitemap);
-	console.log(` Sitemap generado: ${sitemapPath} (${entries.length} URLs)`);
+	const withDate = entries.filter((e) => e.lastmod).length;
+	console.log(` Sitemap generado: ${sitemapPath} (${entries.length} URLs, ${withDate} con lastmod)`);
 }
 
 /**

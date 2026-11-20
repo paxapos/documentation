@@ -2,6 +2,7 @@ export interface ModuleEntry {
 	slug: string;
 	title: string;
 	fileName: string;
+	description: string;
 }
 
 export interface ModuleCategory {

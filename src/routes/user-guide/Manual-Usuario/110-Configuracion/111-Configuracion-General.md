@@ -629,4 +629,4 @@ Solo tiene enlaces a las listas de datos que usa el sistema. No tiene botón **G
 | **La sección dice "(módulo apagado)"** | El módulo no está activo, así que lo que cargues no tiene efecto. | Activá el módulo desde **Módulos** con ayuda del soporte. |
 | **El correo de prueba no llega** | Datos de SMTP incorrectos o contraseña normal en vez de contraseña de aplicación. | Revisá host, puerto y contraseña. En Gmail usá una contraseña de aplicación. |
 | **Los clientes no pueden pedir online** | **Delivery abierto** está destildado o el **Modo del catálogo online** es solo Menú. | Tildá **Delivery abierto** y elegí **Activar Pedidos Online**. Guardá. |
-| **No puedo facturar** | Falta el trámite en ARCA o no hay punto de venta habilitado. | Hacé el [trámite en ARCA](#tramite-en-arca) y avisá al soporte. |
+| **No puedo facturar** | Falta el trámite en ARCA o no hay punto de venta habilitado. | Hacé el [trámite en ARCA](/user-guide/punto-de-venta#tramite-en-arca) y avisá al soporte. |

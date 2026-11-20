@@ -35,3 +35,6 @@ vite.config.ts.timestamp-*
 # pnpm cache
 .pnpm-cache/
 .pnpm-state/
+
+# Fechas de contenido generadas desde git (scripts/generate-content-dates.mjs)
+.content-dates.json
