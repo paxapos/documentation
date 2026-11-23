@@ -7,7 +7,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-# build/               # Comentado para permitir uso del build generado
+build/               # la imagen siempre buildea de cero
 dist/
 .output/
 .svelte-kit/

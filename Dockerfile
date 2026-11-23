@@ -9,23 +9,45 @@ RUN corepack enable && corepack prepare pnpm@9 --activate
 COPY package.json ./
 RUN pnpm install --no-frozen-lockfile
 
+# La imagen no copia .git: las fechas de los .md llegan en .content-dates.json (paso de CI).
 COPY . .
 RUN pnpm run build
 
-# Etapa final con nginx
-FROM nginx:1.27-alpine3.20
+# Solo dependencias de producción, con las mismas versiones que resolvió el build.
+FROM node:22-alpine AS deps
+
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@9 --activate
+
+COPY package.json ./
+COPY --from=builder /app/pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
+
+# Etapa final: un solo proceso Node (server.js + handler de SvelteKit)
+FROM node:22-alpine
 
 LABEL maintainer="PaxaPOS Team"
-LABEL version="3.0.0"
-LABEL description="Manual de usuario PaxaPOS (sitio estático prerendereado)"
+LABEL version="4.0.0"
+LABEL description="Manual de usuario PaxaPOS (SvelteKit prerendereado servido por Node)"
 
-ENV TZ=America/Argentina/Buenos_Aires
+# TZ sin el paquete tzdata: Node trae las zonas horarias en su ICU.
+ENV TZ=America/Argentina/Buenos_Aires \
+    NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=8080 \
+    ORIGIN=https://doc.paxapos.com
 
-RUN apk update && apk upgrade && apk add --no-cache tzdata
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
 
-COPY --from=builder /app/build /usr/share/nginx/html
-COPY nginx-runtime.conf /etc/nginx/conf.d/default.conf
+COPY package.json server.js ./
+COPY server/http-rules.mjs ./server/
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=builder /app/build ./build
+
+USER node
 
 EXPOSE 8080
-HEALTHCHECK --interval=30s --timeout=10s CMD wget --quiet --tries=1 --spider http://localhost:8080/health || exit 1
+HEALTHCHECK --interval=30s --timeout=10s CMD wget --quiet --tries=1 --spider "http://127.0.0.1:${PORT}/health" || exit 1
+
+CMD ["node", "server.js"]

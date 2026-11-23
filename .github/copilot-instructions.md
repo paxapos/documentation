@@ -1,6 +1,6 @@
 # PaxaPOS Documentation — guía para agentes
 
-Sitio SvelteKit 2 + Svelte 5 + Tailwind v4, **100 % prerendereado** con `@sveltejs/adapter-static` y servido por nginx desde `build/`. El contenido son archivos Markdown descubiertos en build time; agregar un `.md` crea automáticamente ruta, entrada de navegación, SEO, índice de búsqueda y archivo TXT para LLMs. No hay servidor Node en runtime.
+Sitio SvelteKit 2 + Svelte 5 + Tailwind v4 con `@sveltejs/adapter-node`. Todas las páginas se **prerenderean en build** (`build/prerendered`) y las sirve un solo proceso Node (`server.js`); SvelteKit solo renderiza en runtime la página de error (404 real). El contenido son archivos Markdown descubiertos en build time; agregar un `.md` crea automáticamente ruta, entrada de navegación, SEO, índice de búsqueda y archivo TXT para LLMs.
 
 ## Pipeline de contenido
 
@@ -12,7 +12,7 @@ Sitio SvelteKit 2 + Svelte 5 + Tailwind v4, **100 % prerendereado** con `@svelte
     - `generate:ai` → `static/llms/*.txt`, `index.txt`, `files-register.json` (manifiesto slug → txt)
     - `generate:seo` → `sitemap.xml`, `robots.txt`, `llms.txt`, `urls.txt`, `content-index.json`, `ai-metadata.json` (lee el manifiesto anterior)
     - `generate:search` → `static/search-index.json` (búsqueda client-side, fetch lazy)
-    Todo lo generado está en `.gitignore`. Lógica compartida en `scripts/shared-utils.mjs`; su equivalente TS es `src/lib/utils/contentUtils.ts` (mismo algoritmo de slug — si cambia uno, cambia el otro).
+      Todo lo generado está en `.gitignore`. Lógica compartida en `scripts/shared-utils.mjs`; su equivalente TS es `src/lib/utils/contentUtils.ts` (mismo algoritmo de slug — si cambia uno, cambia el otro).
 
 ## Reglas
 
@@ -29,8 +29,9 @@ Sitio SvelteKit 2 + Svelte 5 + Tailwind v4, **100 % prerendereado** con `@svelte
 pnpm dev          # generate + vite dev
 pnpm dev:clean    # vite dev sin regenerar
 pnpm build        # generate + vite build → build/
+pnpm start        # node server.js (después de pnpm build)
 pnpm check        # svelte-check
-pnpm test         # vitest (src/lib/utils/__tests__)
+pnpm test         # vitest (src/lib/utils/__tests__ + tests/, integración contra build/)
 pnpm lint
 ```
 
@@ -38,19 +39,21 @@ Instalar dependencias **siempre desde la raíz del monorepo** con `pnpm install`
 
 ## Deploy
 
-`Dockerfile` multi-stage (node:22 + pnpm → nginx). `nginx-runtime.conf`: `/` → 301 `/user-guide`, fallback `$uri.html`, cache 1 año para assets con hash y 1 h para índices generados, headers de seguridad y CSP `connect-src 'self'`. `docker-compose.yml` publica 3000 → 8080 detrás de Traefik. No requiere variables de entorno.
+`Dockerfile` multi-stage (node:22 + pnpm → `node:22-alpine` sin root, `node server.js`). `server.js` aplica las reglas de `server/http-rules.mjs` (funciones puras, testeadas en `tests/`) y delega el resto en el handler de SvelteKit: 301 de URLs viejas (`MANUAL_REDIRECTS`: agregar ahí el 301 al renombrar un `.md`), `/` → 301 `/user-guide`, `/x/` y `/x.html` → 301 `/x`, headers de seguridad y CSP `connect-src 'self'` en todas las respuestas, `X-Robots-Tag: noindex` para `/llms*`, `*.json` y `/urls.txt`, cache 1 año para assets y 1 h para índices generados, `/health`, y 404 para cualquier dotfile (incluido `/.well-known/*`, salvo `OPENAI_APPS_CHALLENGE`). Las reglas van en el custom server y no en `hooks.server.ts` porque adapter-node sirve estáticos y prerendereados antes de los hooks. `docker-compose.yml` publica 3000 → 8080 detrás de Traefik (`doc.paxapos.com`). Variables opcionales: `PORT`, `HOST`, `ORIGIN`, `OPENAI_APPS_CHALLENGE`.
 
 ## Archivos clave
 
-| Archivo | Rol |
-| --- | --- |
-| `src/lib/server/markdown.ts` | Descubrimiento de `.md`, slugs, categorías, SEO, mapeo a TXT LLM |
-| `src/lib/server/icons.ts` | Mapa slug/categoría → ícono y resolución a SVG inline |
-| `src/lib/utils/contentUtils.ts` | Utilidades puras (slug, título, highlight, copiar) — testeadas |
-| `src/lib/types.ts` | Tipos compartidos server ↔ componentes |
-| `src/routes/user-guide/+layout.server.ts` | Categorías para el sidebar |
-| `src/routes/user-guide/+page.server.ts` | Índice del manual (tarjetas + íconos) |
-| `src/routes/user-guide/[slug]/+page.server.ts` | Render de cada módulo + `entries()` |
-| `src/lib/components/Navigation.svelte` | Barra superior con búsqueda (`search-index.json`) |
-| `src/lib/components/SEOHead.svelte` | Meta tags, Open Graph, JSON-LD |
-| `scripts/*.mjs` | Generadores de TXT/SEO/búsqueda |
+| Archivo                                        | Rol                                                              |
+| ---------------------------------------------- | ---------------------------------------------------------------- |
+| `src/lib/server/markdown.ts`                   | Descubrimiento de `.md`, slugs, categorías, SEO, mapeo a TXT LLM |
+| `src/lib/server/icons.ts`                      | Mapa slug/categoría → ícono y resolución a SVG inline            |
+| `src/lib/utils/contentUtils.ts`                | Utilidades puras (slug, título, highlight, copiar) — testeadas   |
+| `src/lib/types.ts`                             | Tipos compartidos server ↔ componentes                           |
+| `src/routes/user-guide/+layout.server.ts`      | Categorías para el sidebar                                       |
+| `src/routes/user-guide/+page.server.ts`        | Índice del manual (tarjetas + íconos)                            |
+| `src/routes/user-guide/[slug]/+page.server.ts` | Render de cada módulo + `entries()`                              |
+| `src/lib/components/Navigation.svelte`         | Barra superior con búsqueda (`search-index.json`)                |
+| `src/lib/components/SEOHead.svelte`            | Meta tags, Open Graph, JSON-LD                                   |
+| `scripts/*.mjs`                                | Generadores de TXT/SEO/búsqueda                                  |
+| `server.js`                                    | Server de producción: reglas HTTP + handler de SvelteKit         |
+| `server/http-rules.mjs`                        | Reglas HTTP puras (redirects, headers, cache, dotfiles)          |
