@@ -32,6 +32,9 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Lockfile: el paquete se instala desde la raíz del monorepo (o sin lockfile en Docker)
+pnpm-lock.yaml
+
 # pnpm cache
 .pnpm-cache/
 .pnpm-state/

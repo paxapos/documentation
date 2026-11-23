@@ -1,21 +1,24 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			// Sitio 100% prerendereado; 404.html es solo la página que nginx sirve
-			// con status 404 para URLs que no existen (ver nginx-runtime.conf).
-			fallback: '404.html',
-			precompress: false,
-			strict: true,
-		}),
+		// Todas las páginas se prerenderean en build (build/prerendered) y el server de Node
+		// (server.js) las sirve tal cual. SvelteKit solo renderiza en runtime lo que no
+		// existe: la página de error con status 404 real (+error.svelte).
+		adapter: adapter({ out: 'build', precompress: true }),
 		prerender: {
-			handleHttpError: 'warn',
+			// Un enlace roto en un .md avisa; cualquier otro error (un 500 en un load, una
+			// entrada de entries() que no renderiza) corta el build.
+			handleHttpError: ({ status, referrer, referenceType, message }) => {
+				if (status === 404 && referrer && referenceType === 'linked') {
+					console.warn(message);
+					return;
+				}
+				throw new Error(message);
+			},
 			handleMissingId: 'warn', // anclas rotas en contenido md = warning, no abortar el build
 			// /user-guide/[slug] se genera via entries() en su +page.server.ts
 			entries: ['*'],
