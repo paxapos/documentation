@@ -63,6 +63,10 @@ docker-compose*.yml
 Dockerfile*
 .dockerignore
 
+# Manifiestos para directorios de MCP (Gemini CLI, MCP Registry): no van en la imagen
+gemini-extension.json
+server.json
+
 # Testing
 test/
 tests/

@@ -111,3 +111,6 @@ El `id` es `manual:<slug>` o `manual:<slug>#<ancla>`; `fetch` acepta también el
   (o sin `--cli` para la UI, con transporte "Streamable HTTP").
 - CORS abierto (`*`) y sin validar `Origin`: el contenido es público y no hay credenciales. El rate
   limit queda para el proxy.
+- **Directorios**: `server.json` (MCP Registry, `com.paxapos/manual`) y `gemini-extension.json`
+  (galería de Gemini CLI) van en la raíz, con la misma `version` que `package.json` (un test lo
+  verifica). No entran a la imagen. Guía para el usuario: `/user-guide/ia-manual-por-mcp`.

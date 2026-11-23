@@ -1,0 +1,11 @@
+{
+	"name": "paxapos-manual",
+	"version": "0.0.1",
+	"description": "Manual de usuario de PaxaPOS: buscá y leé cómo se usa el sistema, con el link a cada artículo.",
+	"mcpServers": {
+		"paxapos-manual": {
+			"type": "http",
+			"url": "https://doc.paxapos.com/mcp"
+		}
+	}
+}
