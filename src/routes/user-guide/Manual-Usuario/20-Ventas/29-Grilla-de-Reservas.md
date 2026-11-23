@@ -90,6 +90,8 @@ En esta pantalla vas a ver:
 
 ### Cambiar los datos
 
+<div id="cambiar-los-datos"></div>
+
 ![Casillero para buscar y asignar un cliente](images/manual/20-ventas/29-24-campo-buscar-y-asignar-cliente.png)
 
 - **Cliente:** escribí el nombre, el DNI o el teléfono y elegilo de la lista.
@@ -118,17 +120,23 @@ En esta pantalla vas a ver:
 
 ### Recibir al huésped
 
+<div id="recibir-al-huesped"></div>
+
 ![Panel con el botón Recepcionar marcado en rojo](images/manual/20-ventas/29-29-donde-esta-boton-recepcionar.png)
 
 - Cuando llegan, tocá el botón verde **Recepcionar**. La reserva pasa a estar ocupada.
 
 ### Ver la reserva completa
 
+<div id="ver-la-reserva-completa"></div>
+
 ![Panel con el botón Ver marcado en rojo](images/manual/20-ventas/29-38-donde-esta-boton-ver.png)
 
 - Tocá **Ver** para abrir la reserva en la pantalla clásica, con todos sus datos.
 
 ### Cerrar el panel
+
+<div id="cerrar-el-panel"></div>
 
 ![Panel con la cruz de cerrar marcada en rojo](images/manual/20-ventas/29-42-donde-esta-boton-cerrar-panel.png)
 

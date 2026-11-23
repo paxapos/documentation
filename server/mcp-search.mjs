@@ -24,7 +24,13 @@ export const MAX_RESPONSE_CHARS = 60_000;
 const SNIPPET_CHARS = 240;
 
 /** Pesos por dónde aparece el término. El cuerpo aporta como mucho `BM25.k1 + 1` (≈ 2,2). */
-const WEIGHT = { articleTitle: 8, sectionArticleTitle: 4, heading: 5, subheading: 3 };
+const WEIGHT = {
+	articleTitle: 8,
+	sectionArticleTitle: 4,
+	heading: 5,
+	subheading: 3,
+	parentHeading: 2,
+};
 
 /** Multiplicador si los términos aparecen seguidos y en orden (sin contar stopwords). */
 const PHRASE_BOOST = 2;
@@ -276,10 +282,12 @@ function count(f, term) {
  *   slug: string,
  *   isIntro: boolean,
  *   isTrouble: boolean,
+ *   parentId: string | null,
  *   title: string,
  *   url: string,
  *   article: Field,
  *   heading: Field,
+ *   parentHeading: Field,
  *   subheadings: Field,
  *   body: Field,
  *   phrase: string,
@@ -288,7 +296,9 @@ function count(f, term) {
  */
 
 /**
- * Prepara las unidades de búsqueda (una vez, al arrancar).
+ * Prepara las unidades de búsqueda (una vez, al arrancar): la intro de cada artículo, cada
+ * sección `##` (su heading y lo que hay antes del primer `###`) y cada subsección `###`. Las
+ * unidades no se pisan: el texto de un `###` está solo en su subsección.
  * @param {McpIndex} index
  * @returns {SearchUnit[]}
  */
@@ -297,38 +307,83 @@ export function buildSearchUnits(index) {
 	const units = [];
 	for (const a of index.articulos) {
 		const article = field(a.titulo);
-		/** @param {string} id @param {string} title @param {string} url @param {string} heading @param {string} md */
-		const add = (id, title, url, heading, md) => {
+		/**
+		 * @param {{ id: string, title: string, url: string, heading: string, parent?: { id: string, heading: string }, md: string }} u
+		 */
+		const add = ({ id, title, url, heading, parent, md }) => {
 			const plain = plainText(md);
 			const subheadings = [...md.matchAll(/^#{3,6}\s+(.+)$/gm)].map((m) => m[1]).join(' ');
 			units.push({
 				id,
 				slug: a.slug,
 				isIntro: !id.includes('#'),
-				isTrouble: TROUBLE_HEADING.test(normalize(heading)),
+				isTrouble: TROUBLE_HEADING.test(normalize(`${parent?.heading ?? ''} ${heading}`)),
+				parentId: parent?.id ?? null,
 				title,
 				url,
 				article,
 				heading: field(heading),
+				parentHeading: field(parent?.heading ?? ''),
 				subheadings: field(subheadings),
 				body: field(plain),
 				phrase: ` ${contentPhrase(`${title} ${subheadings} ${plain}`)} `,
 				plain,
 			});
 		};
-		add(`manual:${a.slug}`, a.titulo, a.url, '', `${a.descripcion}\n\n${a.intro}`);
+		add({
+			id: `manual:${a.slug}`,
+			title: a.titulo,
+			url: a.url,
+			heading: '',
+			md: `${a.descripcion}\n\n${a.intro}`,
+		});
 		for (const s of a.secciones) {
-			const body = s.texto.replace(/^##\s+.*\n?/, '');
-			add(
-				`manual:${a.slug}#${s.ancla}`,
-				`${a.titulo} › ${s.titulo}`,
-				`${a.url}#${s.ancla}`,
-				s.titulo,
-				body,
-			);
+			const id = `manual:${a.slug}#${s.ancla}`;
+			add({
+				id,
+				title: `${a.titulo} › ${s.titulo}`,
+				url: `${a.url}#${s.ancla}`,
+				heading: s.titulo,
+				md: s.intro.replace(/^##\s+.*\n?/, ''),
+			});
+			for (const sub of s.subsecciones) {
+				add({
+					id: `manual:${a.slug}#${sub.ancla}`,
+					title: `${a.titulo} › ${s.titulo} › ${sub.titulo}`,
+					url: `${a.url}#${sub.ancla}`,
+					heading: sub.titulo,
+					parent: { id, heading: s.titulo },
+					md: sub.texto.replace(/^###\s+.*\n?/, ''),
+				});
+			}
 		}
 	}
 	return units;
+}
+
+/**
+ * Une dos palabras seguidas de la consulta si juntas forman una palabra del manual ("mercado
+ * pago" → "mercadopago"): si no, la unidad que dice "MercadoPago" calzaría con un solo término.
+ * @param {SearchUnit[]} units
+ * @param {string[]} terms
+ * @returns {string[]}
+ */
+function joinCompounds(units, terms) {
+	/** @type {string[]} */
+	const out = [];
+	for (let i = 0; i < terms.length; i++) {
+		const joined = terms[i] + (terms[i + 1] ?? '');
+		if (
+			i + 1 < terms.length &&
+			units.some((u) => u.body.words.has(joined) || u.heading.words.has(joined))
+		) {
+			out.push(joined);
+			i++;
+		} else {
+			out.push(terms[i]);
+		}
+	}
+	return out;
 }
 
 /**
@@ -339,7 +394,7 @@ export function buildSearchUnits(index) {
  * Busca en las unidades. Devuelve como máximo `limit` resultados, de mayor a menor puntaje.
  *
  * Puntaje por término: `idf × (título del artículo [8 en la intro, 4 en las secciones] +
- * 5·heading + 3·subheading + BM25 del cuerpo)`, multiplicado por (términos encontrados /
+ * 5·heading + 3·subheading [####] + 2·heading de la sección madre de un ### + BM25 del cuerpo)`, multiplicado por (términos encontrados /
  * términos)² y ×2 si los términos aparecen seguidos. Si la consulta cuenta un problema, ver
  * `TROUBLE_QUERY`. Después se elige de a uno, penalizando
  * repetir artículo (`SAME_ARTICLE_DECAY`).
@@ -351,7 +406,7 @@ export function buildSearchUnits(index) {
 export function search(units, query, { limit = MAX_RESULTS } = {}) {
 	/** @type {Map<string, Term>} */
 	const byStem = new Map();
-	for (const w of queryTerms(query)) {
+	for (const w of joinCompounds(units, queryTerms(query))) {
 		const term = toTerm(w);
 		const same = byStem.get(term.stem);
 		if (same) same.words.push(w);
@@ -368,11 +423,12 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 			title: count(u.article, term) > 0,
 			heading: count(u.heading, term) > 0,
 			subheading: count(u.subheadings, term) > 0,
+			parent: count(u.parentHeading, term) > 0,
 			body: term.words.reduce((n, w) => n + (u.body.words.get(w) ?? 0), count(u.body, term)),
 		})),
 	);
 	const idf = hits.map((list) => {
-		const df = list.filter((h) => h.title || h.heading || h.body).length;
+		const df = list.filter((h) => h.title || h.heading || h.parent || h.body).length;
 		return Math.log(1 + units.length / (1 + df));
 	});
 
@@ -384,7 +440,7 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 		let matched = 0;
 		terms.forEach((_, t) => {
 			const h = hits[t][i];
-			if (!h.title && !h.heading && !h.body) return;
+			if (!h.title && !h.heading && !h.parent && !h.body) return;
 			matched++;
 			const body = h.body ? (h.body * (BM25.k1 + 1)) / (h.body + norm) : 0;
 			const titleWeight = unit.isIntro ? WEIGHT.articleTitle : WEIGHT.sectionArticleTitle;
@@ -397,6 +453,7 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 							? WEIGHT.subheading
 							: 0) +
 					(h.subheading ? WEIGHT.subheading : 0) +
+					(h.parent ? WEIGHT.parentHeading : 0) +
 					body);
 		});
 		if (!matched) return;
@@ -407,18 +464,22 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 	});
 	scored.sort((a, b) => b.score - a.score || a.order - b.order);
 
-	// Elegir de a uno el mejor puntaje ya penalizado por cuántos resultados lleva su artículo.
+	// Elegir de a uno el mejor puntaje ya penalizado por cuántos resultados lleva su artículo, sin
+	// traer una sección y una de sus subsecciones a la vez (la sección ya contiene el ###).
 	/** @type {SearchResult[]} */
 	const results = [];
 	/** @type {Map<string, number>} */
 	const perArticle = new Map();
+	/** @type {Set<string>} ids elegidos y secciones madre de los ### elegidos */
+	const taken = new Set();
 	const pool = scored.slice(0, Math.max(limit * MAX_PER_ARTICLE * 4, 50));
 	while (results.length < limit && pool.length) {
 		let best = -1;
 		let bestScore = -Infinity;
 		pool.forEach(({ unit, score }, k) => {
 			const n = perArticle.get(unit.slug) ?? 0;
-			if (n >= MAX_PER_ARTICLE) return;
+			if (n >= MAX_PER_ARTICLE || taken.has(unit.id)) return;
+			if (unit.parentId && taken.has(unit.parentId)) return;
 			const adjusted = score * SAME_ARTICLE_DECAY ** n;
 			if (adjusted > bestScore) {
 				bestScore = adjusted;
@@ -428,6 +489,8 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 		if (best === -1) break;
 		const [{ unit }] = pool.splice(best, 1);
 		perArticle.set(unit.slug, (perArticle.get(unit.slug) ?? 0) + 1);
+		taken.add(unit.id);
+		if (unit.parentId) taken.add(unit.parentId);
 		results.push({
 			id: unit.id,
 			title: unit.title,
@@ -588,6 +651,21 @@ export function fetchDocument(index, id, { maxChars = MAX_RESPONSE_CHARS } = {})
 
 	if (parsed.ancla) {
 		const section = article.secciones.find((s) => s.ancla === parsed.ancla);
+		const parent = section
+			? null
+			: article.secciones.find((s) => s.subsecciones.some((x) => x.ancla === parsed.ancla));
+		const sub = parent?.subsecciones.find((x) => x.ancla === parsed.ancla);
+		if (parent && sub) {
+			/** @type {FetchDocument} */
+			const document = {
+				id: `manual:${article.slug}#${sub.ancla}`,
+				title: `${article.titulo} › ${parent.titulo} › ${sub.titulo}`,
+				text: sub.texto,
+				url: `${article.url}#${sub.ancla}`,
+				metadata,
+			};
+			return { ok: true, document: fitSingle(document, maxChars) };
+		}
 		if (!section) {
 			const list = article.secciones.map((s) => `#${s.ancla}`).join(', ');
 			return {

@@ -67,6 +67,8 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 
 ### Información básica
 
+<div id="informacion-basica"></div>
+
 ![Casillero Alias o Identificador con el texto Mozo Prueba](images/manual/20-ventas/24-13-campo-numero.png)
 
 3. En **Alias / Identificador**, escribí cómo se va a ver el mozo en el salón y en los tickets. Por ejemplo: *Juan* o *1*. **Hay que completarlo.**
@@ -82,6 +84,8 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 5. En **Foto de Perfil** podés subir una foto del mozo (JPG o PNG). Es opcional.
 
 ### Configuración
+
+<div id="configuracion"></div>
 
 ![Lista Punto de Venta](images/manual/20-ventas/24-17-campo-punto-de-venta.png)
 
@@ -109,6 +113,8 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 
 ### Quién lo puede usar
 
+<div id="quien-lo-puede-usar"></div>
+
 ![Parte Visibilidad por Usuarios con la lista de usuarios](images/manual/20-ventas/24-25-campo-usuarios.png)
 
 12. En **Visibilidad por Usuarios**, tildá los usuarios que pueden usar este mozo. Si no tildás ninguno, nadie podrá usarlo.
@@ -116,6 +122,8 @@ En la lista vas a ver, para cada mozo: si está **Activo**, su **Punto de Venta*
 > 💡 **Consejo útil:** Tildá el usuario con PIN del propio mozo. Así cada mozo ve solo sus mesas.
 
 ### Guardá
+
+<div id="guarda"></div>
 
 ![Ventanita con el botón Crear Mozo marcado en rojo abajo a la derecha](images/manual/20-ventas/24-28-donde-esta-boton-guardar.png)
 
@@ -138,6 +146,8 @@ A la derecha de cada mozo hay tres botones.
 
 ### Cambiar sus datos
 
+<div id="cambiar-sus-datos"></div>
+
 ![Lista con el botón del lápiz marcado en rojo](images/manual/20-ventas/24-07-donde-esta-boton-editar.png)
 
 1. Tocá el **lápiz** ✏️. Se abre la misma ventanita con sus datos.
@@ -145,12 +155,16 @@ A la derecha de cada mozo hay tres botones.
 
 ### Activar o desactivar
 
+<div id="activar-o-desactivar"></div>
+
 ![Lista con el botón del ojo marcado en rojo](images/manual/20-ventas/24-09-donde-esta-boton-activar-desactivar.png)
 
 - Tocá el **ojo** 👁️ para desactivar a un mozo que ya no trabaja. Tocalo de nuevo para activarlo.
 - El mozo desactivado no aparece para abrir mesas, pero no se pierde nada.
 
 ### Borrar
+
+<div id="borrar"></div>
 
 > ⚠️ **Atención:** Borrar un mozo **borra todo su historial**. Si el mozo dejó de trabajar, mejor **desactivalo** con el ojo.
 

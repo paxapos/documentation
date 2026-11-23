@@ -70,6 +70,32 @@ describe('relevancia: tabla de regresión (top 3)', () => {
 	});
 });
 
+describe('relevancia: subsecciones ### (paso exacto)', () => {
+	it.each([
+		['cómo facturar', 'manual:salon-de-ventas#paso-8-emiti-la-factura'],
+		['como hago una factura', 'manual:salon-de-ventas#paso-8-emiti-la-factura'],
+		['agregar un producto nuevo', 'manual:maestro-de-productos#paso-3-crea-un-producto'],
+		['cerrar la mesa', 'manual:salon-de-ventas#paso-6-'],
+		['factura responsable inscripto', 'manual:salon-de-ventas#paso-8-emiti-la-factura'],
+	])('"%s" → %s en el top 3', (query, prefix) => {
+		const ids = top3(query);
+		expect(
+			ids.some((id) => id.startsWith(prefix)),
+			ids.join(', '),
+		).toBe(true);
+	});
+
+	it('no repite el mismo contenido como sección y como subsección en el top 10', () => {
+		for (const [query] of CASES) {
+			const ids = search(units, query).map((r) => r.id);
+			for (const id of ids) {
+				const unit = units.find((u) => u.id === id);
+				if (unit?.parentId) expect(ids, `${query}: ${id}`).not.toContain(unit.parentId);
+			}
+		}
+	});
+});
+
 describe('relevancia: consultas que cuentan un problema', () => {
 	it.each([
 		['impresora no imprime', 'manual:impresoras#resolucion-de-inconvenientes'],

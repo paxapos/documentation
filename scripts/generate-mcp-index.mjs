@@ -170,7 +170,14 @@ export function splitSections(markdown, ctx) {
 			warnings.push(`ancla repetida #${base}: la sección "${titulo}" queda como #${ancla}`);
 		}
 		used.add(ancla);
-		return { ancla, titulo, texto: cleanMarkdown(body.join('\n'), ctx) };
+		const { intro: lead, subsecciones } = splitSubsections(body, titulo, ctx, used, warnings);
+		return {
+			ancla,
+			titulo,
+			texto: cleanMarkdown(body.join('\n'), ctx),
+			intro: lead,
+			subsecciones,
+		};
 	});
 
 	const intro = cleanMarkdown(
@@ -178,6 +185,66 @@ export function splitSections(markdown, ctx) {
 		ctx,
 	);
 	return { intro, secciones, warnings };
+}
+
+/**
+ * Parte una sección `##` en su intro (el heading y lo que hay antes del primer `###` con ancla) y
+ * sus subsecciones `###`, cada una hasta el próximo `###`. Un `###` sin `<div id>` no se separa
+ * (su link no tendría a dónde caer): queda dentro del bloque anterior y se avisa.
+ * @param {string[]} lines líneas de la sección, desde su `##`
+ * @param {string} seccion título de la sección (para los avisos)
+ * @param {{ baseUrl: string, slug: string }} ctx
+ * @param {Set<string>} used anclas ya usadas en el artículo
+ * @param {string[]} warnings
+ * @returns {{ intro: string, subsecciones: import('../server/mcp-index.mjs').McpSubseccion[] }}
+ */
+function splitSubsections(lines, seccion, ctx, used, warnings) {
+	/** @type {{ ancla: string, titulo: string, start: number }[]} */
+	const heads = [];
+	let inFence = false;
+	lines.forEach((line, i) => {
+		if (FENCE_RE.test(line)) inFence = !inFence;
+		if (inFence || !/^###\s+\S/.test(line)) return;
+		const titulo = headingText(line.replace(/^###\s+/, ''), ctx);
+		/** @type {string | undefined} */
+		let ancla;
+		for (const next of lines.slice(i + 1)) {
+			const match = DIV_ID_RE.exec(next);
+			if (match) {
+				ancla = match[1];
+				break;
+			}
+			if (next.trim()) break;
+		}
+		if (!ancla) {
+			warnings.push(
+				`la subsección "${titulo}" no tiene <div id>: queda dentro del bloque anterior de "${seccion}"`,
+			);
+			return;
+		}
+		if (used.has(ancla)) {
+			warnings.push(
+				`ancla repetida #${ancla}: la subsección "${titulo}" queda dentro del bloque anterior`,
+			);
+			return;
+		}
+		used.add(ancla);
+		heads.push({ ancla, titulo, start: i });
+	});
+	const subsecciones = heads.map((head, n) => ({
+		ancla: head.ancla,
+		titulo: head.titulo,
+		texto: cleanMarkdown(
+			lines
+				.slice(head.start, n + 1 < heads.length ? heads[n + 1].start : lines.length)
+				.join('\n'),
+			ctx,
+		),
+	}));
+	return {
+		intro: cleanMarkdown(lines.slice(0, heads[0]?.start ?? lines.length).join('\n'), ctx),
+		subsecciones,
+	};
 }
 
 /**

@@ -31,6 +31,8 @@ Si tu comercio tiene usuarios con PIN, al abrir la página de inicio, por defect
 
 ### **Instrucciones paso a paso:**
 
+<div id="pasos-ingreso-con-pin"></div>
+
 1. Verificá que la solapa superior activa sea **"PIN rápido"** (seleccionada por defecto).
 2. Ingresá los **4 dígitos de tu PIN personal** asignado:
    - Podés hacer clic o pulsar directamente sobre los números del **teclado numérico en pantalla** (1 al 9, y 0).
@@ -54,6 +56,8 @@ Para usuarios con perfil de Administrador, Cajero o Encargado, o cuando se requi
 ![Formulario de inicio de sesión con correo y contraseña](images/manual/10-comenzamos/01-login-formulario.png)
 
 ### **Instrucciones paso a paso:**
+
+<div id="pasos-ingreso-con-correo"></div>
 
 1. En la parte superior de la ventana de acceso, hacé clic en la pestaña **"Usuario y contraseña"**. Si tu comercio no usa PIN, no hay pestañas: el formulario ya aparece solo.
 2. **Campo "Email":** Escribí tu dirección de correo electrónico registrada en el comercio (ejemplo: *gerencia@milocal.com*).

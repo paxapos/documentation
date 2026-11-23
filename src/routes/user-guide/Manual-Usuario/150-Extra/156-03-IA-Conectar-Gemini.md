@@ -99,6 +99,8 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 
 ### ¿Cuál elijo?
 
+<div id="cual-elijo"></div>
+
 - **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, Gemini lo busca, mira cómo se usa y lo ejecuta por su cuenta.
 - **Si vas a trabajar siempre en lo mismo**, el del área hace que Gemini responda más rápido y con menos vueltas. Por ejemplo: **Salón** para el mozo o el encargado de turno, **Clientes** para quien atiende reservas y pedidos online, **Caja** para quien cobra y cierra, **Compras** para quien pide mercadería y recibe, **Finanzas** para quien carga facturas y paga a proveedores.
 - **Si querés usar más de uno**, repetí los pasos 2 a 4 con otra URL, siempre que tu versión de Gemini te deje cargar más de una aplicación personalizada. Cada uno inicia sesión con tu mismo usuario.

@@ -174,6 +174,8 @@ Estos botones aparecen solo mientras el turno está abierto.
 
 ### Ingreso
 
+<div id="ingreso"></div>
+
 ![Ventanita Ingreso de Dinero con Monto 1500, una aclaración, la observación y los botones Registrar Ingreso y Cancelar](images/manual/70-finanzas/71-12-ventana-ingreso.png)
 
 1. Tocá el botón verde **Ingreso**.
@@ -187,6 +189,8 @@ Estos botones aparecen solo mientras el turno está abierto.
 > ⚠️ **Atención:** si la plata viene de otra caja, no la anotes acá. Esa caja tiene que hacer un **Retiro** hacia esta.
 
 ### Retiro
+
+<div id="retiro"></div>
 
 ![Ventanita Retiro de Dinero con Monto 2000, A Caja opcional, la observación y los botones Registrar Retiro y Cancelar](images/manual/70-finanzas/71-13-ventana-retiro.png)
 
@@ -202,6 +206,8 @@ Estos botones aparecen solo mientras el turno está abierto.
 > ⚠️ **Atención:** **Registrar Ingreso** y **Registrar Retiro** cambian la plata de la caja. Tocalos solo con movimientos reales.
 
 ### Acciones
+
+<div id="acciones"></div>
 
 ![Lista Acciones abierta con Editar, Cambiar creador, Cerrar, Imprimir y Borrar](images/manual/70-finanzas/71-11-menu-acciones.png)
 

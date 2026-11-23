@@ -1,5 +1,5 @@
 /** Generador del índice del MCP (`scripts/generate-mcp-index.mjs`), contra el manual real. */
-import { readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
@@ -9,7 +9,7 @@ import {
 	splitSections,
 } from '../scripts/generate-mcp-index.mjs';
 import { MCP_INDEX_SCHEMA_VERSION, validateMcpIndex } from '../server/mcp-index.mjs';
-import { ROOT } from './fixtures/start-server';
+import { BUILD, ROOT, hasBuild } from './fixtures/start-server';
 
 const MANUAL = join(ROOT, 'src/routes/user-guide/Manual-Usuario');
 
@@ -84,7 +84,31 @@ describe('buildMcpIndex (manual real)', () => {
 		expect(claude?.texto).toContain('https://wa.me/');
 	});
 
-	it('todas las secciones ## tienen su <div id>: el generador no avisa nada', () => {
+	it('cada sección guarda sus ### con ancla, título y texto', () => {
+		const all = index.articulos.flatMap((a) =>
+			a.secciones.flatMap((s) => s.subsecciones.map((sub) => ({ a, s, sub }))),
+		);
+		expect(all.length).toBeGreaterThan(200);
+		for (const { a, s, sub } of all) {
+			expect(sub.ancla, `${a.slug}#${s.ancla}`).toMatch(/^[a-z0-9][a-z0-9-]*$/);
+			expect(sub.texto.startsWith(`### ${sub.titulo}`), `${a.slug}#${sub.ancla}`).toBe(true);
+			expect(s.texto, `${a.slug}#${sub.ancla}`).toContain(sub.texto);
+		}
+		for (const a of index.articulos) {
+			const anclas = a.secciones.flatMap((s) => [
+				s.ancla,
+				...s.subsecciones.map((x) => x.ancla),
+			]);
+			expect(new Set(anclas).size, a.slug).toBe(anclas.length);
+		}
+		const salon = index.articulos.find((a) => a.slug === 'salon-de-ventas');
+		const guia = salon?.secciones.find((s) => s.ancla === 'guia-paso-a-paso-como-se-usa');
+		expect(guia?.subsecciones.map((x) => x.ancla)).toContain('paso-8-emiti-la-factura');
+		expect(guia?.intro.startsWith('## ')).toBe(true);
+		expect(guia?.intro).not.toContain('### ');
+	});
+
+	it('todas las secciones ## y ### tienen su <div id>: el generador no avisa nada', () => {
 		expect(warnings).toEqual([]);
 		const pedimelo = index.articulos.find(
 			(a) => a.slug === 'como-conectar-carta-digital-pedimelo-online',
@@ -116,6 +140,14 @@ describe('splitSections / cleanMarkdown', () => {
 		'',
 		'### Sub',
 		'',
+		'Texto sub.',
+		'',
+		'### Con ancla',
+		'',
+		'<div id="con-ancla"></div>',
+		'',
+		'Texto con ancla.',
+		'',
 		'## Sin ancla',
 		'',
 		'Cuerpo.',
@@ -135,10 +167,21 @@ describe('splitSections / cleanMarkdown', () => {
 		expect(secciones[0].texto).toContain('<b>código</b>');
 	});
 
-	it('avisa la sección sin ancla y el ancla repetida', () => {
-		expect(w).toHaveLength(2);
-		expect(w[0]).toMatch(/Sin ancla.*#sin-ancla/);
-		expect(w[1]).toMatch(/repetida #primera/);
+	it('avisa la sección sin ancla, el ### sin ancla y el ancla repetida', () => {
+		expect(w).toHaveLength(3);
+		expect(w[0]).toMatch(/subsección "Sub" no tiene <div id>/);
+		expect(w[1]).toMatch(/Sin ancla.*#sin-ancla/);
+		expect(w[2]).toMatch(/repetida #primera/);
+	});
+
+	it('guarda los ### con <div id> como subsecciones; uno sin ancla queda en el bloque anterior', () => {
+		expect(secciones[0].subsecciones).toEqual([
+			{ ancla: 'con-ancla', titulo: 'Con ancla', texto: '### Con ancla\n\nTexto con ancla.' },
+		]);
+		expect(secciones[0].intro).toContain('### Sub\n\nTexto sub.');
+		expect(secciones[0].intro).not.toContain('Con ancla');
+		expect(secciones[1].subsecciones).toEqual([]);
+		expect(secciones[1].intro).toBe(secciones[1].texto);
 	});
 
 	it('limpia imágenes, HTML, separadores y hace absolutos los links', () => {
@@ -159,10 +202,26 @@ describe('splitSections / cleanMarkdown', () => {
 
 describe('validateMcpIndex', () => {
 	it('rechaza otra schema_version, sin artículos o basura', () => {
-		expect(() => validateMcpIndex({ ...index, schema_version: 2 }, 'x')).toThrow(
+		expect(() => validateMcpIndex({ ...index, schema_version: 1 }, 'x')).toThrow(
 			/schema_version/,
 		);
 		expect(() => validateMcpIndex({ ...index, articulos: [] }, 'x')).toThrow(/artículos/);
 		expect(() => validateMcpIndex(null, 'x')).toThrow(/schema_version/);
 	});
+});
+
+describe.skipIf(!hasBuild)('anclas del índice en las páginas servidas (build/)', () => {
+	it.each(index.articulos.map((a) => [a.slug, a] as const))(
+		'%s: cada ancla ## y ### existe en el HTML prerendereado',
+		(slug, articulo) => {
+			const file = join(BUILD, 'prerendered/user-guide', `${slug}.html`);
+			expect(existsSync(file), file).toBe(true);
+			const html = readFileSync(file, 'utf-8');
+			const anclas = articulo.secciones.flatMap((s) => [
+				s.ancla,
+				...s.subsecciones.map((x) => x.ancla),
+			]);
+			for (const ancla of anclas) expect(html, `#${ancla}`).toContain(`id="${ancla}"`);
+		},
+	);
 });

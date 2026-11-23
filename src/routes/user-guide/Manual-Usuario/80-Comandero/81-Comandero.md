@@ -206,6 +206,8 @@ Cuando llega un pedido nuevo, suena un aviso y una voz lee la mesa y los platos.
 
 ### Cada plato
 
+<div id="cada-plato"></div>
+
 1. Tocá el plato para pasarlo al paso siguiente. Por ejemplo: de **PENDIENTE** a **ELABORANDO**.
 2. Volvé a tocarlo cuando avance otra vez. Por ejemplo: a **LISTO**.
 3. En el último paso ya no cambia más.
@@ -216,10 +218,14 @@ Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se 
 
 ### La comanda entera
 
+<div id="la-comanda-entera"></div>
+
 - Abajo de la tarjeta está la barra **CAMBIAR A** con el paso siguiente. Por ejemplo: **CAMBIAR A LISTA ▸**. Tocala para avanzar la comanda.
 - Cuando todos los platos terminan, aparece la barra verde **TODOS LISTOS — MARCAR COMO** y el paso. Tocala para pasar la comanda a ese paso.
 
 ### Cuando el mozo retira
+
+<div id="cuando-el-mozo-retira"></div>
 
 1. Con la comanda en **Lista**, tocá la barra de abajo.
 2. Se abre la ventanita **Mesa** y el número: **¿Confirma que el mozo retiró esta comanda?**
@@ -230,9 +236,13 @@ Si elegiste un puesto, solo podés tocar los platos de tu puesto. Los demás se 
 
 ### Los tres puntitos ⋮
 
+<div id="los-tres-puntitos"></div>
+
 Algunos usuarios ven **⋮** arriba a la derecha de la tarjeta. Abre la lista de estados. Tocá uno para pasar la comanda directo a ese estado. Si elegís **Borrador** o **Entregada**, sale de la pantalla.
 
 ### Lo que ve el mozo en el salón
+
+<div id="lo-que-ve-el-mozo-en-el-salon"></div>
 
 Con el Comandero activo, el [Salón de Ventas](/user-guide/salon-de-ventas) muestra el estado de cada comanda. El mozo ve si está **Confirmada**, **Lista** o **Entregada** sin ir a la cocina. No hay que configurar nada más.
 

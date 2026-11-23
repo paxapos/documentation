@@ -155,6 +155,8 @@ El mensaje dice cuánto se pagó, cómo y cuándo, y por qué factura u orden de
 
 ### Órdenes Pendientes
 
+<div id="ordenes-pendientes"></div>
+
 Tocá **Órdenes Pendientes** arriba a la derecha.
 
 ![Pantalla Órdenes de Pago Pendientes con el mensaje No hay órdenes de pago pendientes y los botones Ver Todos los Pagos y Compromisos](images/manual/70-finanzas/78-06-solapa-ordenes-pendientes.png)
@@ -174,6 +176,8 @@ Arriba a la derecha, **Ver Todos los Pagos** vuelve a la lista y **Compromisos**
 
 ### Compromisos
 
+<div id="compromisos"></div>
+
 Tocá **Compromisos** arriba a la derecha.
 
 ![Pantalla Compromisos de Pago con los botones Todos, Pendiente, Aprobado, Rechazado y Pagado, y el mensaje No hay compromisos de pago](images/manual/70-finanzas/78-07-solapa-compromisos.png)
@@ -187,6 +191,8 @@ Acá están los cheques, pagarés y pagos que se cobran más adelante. Si no hay
 - Los botones **Pendientes** y **Todos los Pagos** de arriba te llevan a las otras pantallas.
 
 ### Retenciones
+
+<div id="retenciones"></div>
 
 Tocá **Retenciones** arriba a la derecha.
 

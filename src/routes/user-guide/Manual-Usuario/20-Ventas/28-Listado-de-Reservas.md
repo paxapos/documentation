@@ -33,6 +33,8 @@
 
 ### Botones de arriba a la derecha
 
+<div id="botones-de-arriba-a-la-derecha"></div>
+
 ![Pantalla de reservas con el botón Crear Reserva marcado en rojo](images/manual/20-ventas/28-02-donde-esta-boton-crear-reserva.png)
 
 - **Crear Reserva:** abre la pantalla para cargar una reserva nueva (ver [Nueva Reserva](/user-guide/nueva-reserva)).
@@ -46,6 +48,8 @@
 - **Configuración:** para cambiar las reglas de las reservas. Lo usa el encargado.
 
 ### Los colores
+
+<div id="los-colores"></div>
 
 ![Referencia de colores Reservada, Recepcionada y Cancelada](images/manual/20-ventas/28-32-referencia-colores.png)
 
@@ -61,6 +65,8 @@ Cada reserva tiene un color según cómo está:
 
 ### Moverte por el calendario
 
+<div id="moverte-por-el-calendario"></div>
+
 ![Botones para ir al mes anterior, al siguiente y a hoy](images/manual/20-ventas/28-33-botones-mes-anterior-siguiente-hoy.png)
 
 - Tocá **<** o **>** para ir al mes anterior o al siguiente. Tocá **Hoy** para volver al día de hoy.
@@ -70,6 +76,8 @@ Cada reserva tiene un color según cómo está:
 - Tocá **Mes**, **Semana**, **Día** o **Lista** para cambiar cómo se ve el calendario.
 
 ### La ocupación del día
+
+<div id="la-ocupacion-del-dia"></div>
 
 ![Día del calendario con la ocupación 4/60 en verde y una reserva](images/manual/20-ventas/28-35-ocupacion-del-dia.png)
 

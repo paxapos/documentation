@@ -79,6 +79,8 @@
 
 ### Datos opcionales
 
+<div id="datos-opcionales"></div>
+
 ![Casillero Número opcional](images/manual/20-ventas/27-12-campo-numero.png)
 
 - **Número (Opcional):** el número de mesa, si ya sabés dónde los vas a sentar.
@@ -105,6 +107,8 @@
 3. La reserva queda guardada y aparece en el calendario del [Listado de Reservas](/user-guide/listado-de-reservas).
 
 ### Si aparece "Cliente sin datos de contacto"
+
+<div id="si-aparece-cliente-sin-datos-de-contacto"></div>
 
 ![Ventanita Cliente sin datos de contacto](images/manual/20-ventas/27-26-aviso-sin-contacto.png)
 

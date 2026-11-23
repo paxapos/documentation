@@ -190,6 +190,8 @@ Tenés dos botones:
 
 ### Aplicar un cierre
 
+<div id="aplicar-un-cierre"></div>
+
 ![Ventanita con Crear Nuevo Cierre, Asignar a uno de los últimos cierres, y los botones Cancelar y Guardar](images/manual/70-finanzas/79-10-ventanita-aplicar-cierre.png)
 
 Al tocar **Aplicar Cierre** se abre esta ventanita:

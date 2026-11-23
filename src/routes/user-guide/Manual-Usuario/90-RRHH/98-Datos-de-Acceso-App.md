@@ -83,6 +83,8 @@ Cada dispositivo se configura por separado. Los cambios quedan guardados en ese 
 
 ### Cómo entrar
 
+<div id="como-entrar"></div>
+
 1. Abrí la app **Fichaje** en el dispositivo que ya conectaste (Paso 2). Se abre la pantalla de fichar.
 2. Arriba a la derecha, al lado de **Salir**, tocá el botón del engranaje.
 3. Se abre la pantalla **Administración**, en la pestaña **Configuración**.
@@ -90,6 +92,8 @@ Cada dispositivo se configura por separado. Los cambios quedan guardados en ese 
 Arriba tenés las pestañas **Configuración**, **Empleados** y **Reconocimiento Facial**. Si tu cuenta tiene varias sucursales, arriba a la derecha también ves el botón **Cambiar sucursal**.
 
 ### Registrar sin confirmar
+
+<div id="registrar-sin-confirmar"></div>
 
 Sirve para las filas largas: cada persona escanea su DNI y queda registrada, sin que nadie toque la pantalla. Funciona con el lector de código de barras. También funciona cuando alguien escribe el DNI completo en el buscador y da Enter.
 
@@ -109,12 +113,16 @@ Con la opción activada, el fichaje funciona así:
 
 ### Texto a voz automático
 
+<div id="texto-a-voz-automatico"></div>
+
 - **Activado**: después de cada fichaje, el dispositivo lo anuncia en voz alta. Por ejemplo: *Ingreso registrado para Juan Pérez*. Así viene de fábrica.
 - **Apagado**: no habla. El aviso en pantalla y el sonido siguen igual.
 
 Los fichajes que entran por escaneo con **Registrar sin confirmar** activado no se anuncian por voz, aunque esta opción esté prendida: así la fila no espera.
 
 ### Probar el lector
+
+<div id="probar-el-lector"></div>
 
 Si el lector no responde como esperás, mirá qué está leyendo. Está justo debajo de **Registrar sin confirmar**.
 
@@ -131,6 +139,8 @@ Mientras probás no se registra ningún fichaje. Esto es lo que ves:
 
 ### Las demás opciones
 
+<div id="las-demas-opciones"></div>
+
 Están en el cuadro **Configuración General**, de arriba hacia abajo.
 
 - **Nombre del dispositivo**: cómo se identifica este aparato en los registros. Por ejemplo: *Tablet Recepción*. Si lo dejás vacío, se guarda con la IP pública.
@@ -146,6 +156,8 @@ Al terminar, tocá el botón **Guardar Configuración**, abajo. Aparece el aviso
 
 ### Modo Evento
 
+<div id="modo-evento"></div>
+
 Arriba de todo hay un cuadro **Control de acceso a evento**, pensado para filas largas. Por ejemplo, controlar la entrada a una charla. Tocá **Activar modo Evento** y el dispositivo queda así:
 
 - **Registrar sin confirmar**: activado.
@@ -160,6 +172,8 @@ El botón guarda en el momento: no hace falta tocar **Guardar Configuración**. 
 No hay un botón para apagarlo. Para volver al fichaje de siempre, desactivá **Registrar sin confirmar**. Después elegí de nuevo el **Modo de fichaje**, la **Foto al fichar**, el **Texto a voz automático** y el **Reconocimiento facial** que usabas, y tocá **Guardar Configuración**.
 
 ### Las otras pestañas
+
+<div id="las-otras-pestanas"></div>
 
 - **Empleados**: la lista de las personas cargadas en el dispositivo. Podés buscar por nombre, apellido o DNI, y filtrar por sector. El botón **Actualizar** vuelve a bajar la lista del sistema. Usalo cuando cargaste un empleado nuevo y todavía no aparece.
 - **Reconocimiento Facial**: el botón **Analizar y entrenar** revisa la foto de cada empleado y entrena el reconocimiento con las que se ven bien. Podés entrenar solo un sector. **Forzar reentrenamiento** borra todo lo entrenado y empieza de cero, y antes te pregunta. **Limpiar eliminados** saca los rostros de empleados que ya no están.

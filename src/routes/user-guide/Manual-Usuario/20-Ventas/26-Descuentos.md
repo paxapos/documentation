@@ -94,6 +94,8 @@ A la derecha de cada descuento hay dos botones:
 
 ### Cambiar un descuento
 
+<div id="cambiar-un-descuento"></div>
+
 ![Listado con el botón Editar marcado en rojo](images/manual/20-ventas/26-07-donde-esta-boton-editar.png)
 
 1. Tocá **Editar** en el descuento que querés cambiar.
@@ -101,6 +103,8 @@ A la derecha de cada descuento hay dos botones:
 3. Tocá el botón verde **Actualizar** para guardar.
 
 ### Borrar un descuento
+
+<div id="borrar-un-descuento"></div>
 
 > ⚠️ **Atención:** Borrar un descuento no se puede deshacer.
 

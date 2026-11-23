@@ -301,11 +301,16 @@ describe.skipIf(!hasBuild)('MCP con un índice de prueba', () => {
 
 	it('H6: un artículo de más de 60.000 caracteres se corta en una sección y avisa', async () => {
 		const real = JSON.parse(readFileSync(MCP_INDEX_PATH, 'utf-8')) as McpIndex;
-		const secciones = Array.from({ length: 25 }, (_, i) => ({
-			ancla: `parte-${i + 1}`,
-			titulo: `Parte ${i + 1}`,
-			texto: `## Parte ${i + 1}\n\n${'Texto de relleno. '.repeat(300)}`,
-		}));
+		const secciones = Array.from({ length: 25 }, (_, i) => {
+			const texto = `## Parte ${i + 1}\n\n${'Texto de relleno. '.repeat(300)}`;
+			return {
+				ancla: `parte-${i + 1}`,
+				titulo: `Parte ${i + 1}`,
+				texto,
+				intro: texto,
+				subsecciones: [],
+			};
+		});
 		const gigante = {
 			...real.articulos[0],
 			slug: 'gigante',
@@ -353,10 +358,10 @@ describe.skipIf(!hasBuild)('MCP con un índice de prueba', () => {
 		expect(missing.code).toBe(1);
 		expect(missing.stderr).toMatch(/No se pudo leer el índice del MCP/);
 
-		const path = join(dir, 'v2.json');
-		writeFileSync(path, JSON.stringify({ schema_version: 2, articulos: [] }));
+		const path = join(dir, 'v1.json');
+		writeFileSync(path, JSON.stringify({ schema_version: 1, articulos: [] }));
 		const wrong = await runServerExpectingExit({ MCP_INDEX_PATH: path });
 		expect(wrong.code).toBe(1);
-		expect(wrong.stderr).toMatch(/schema_version 2 .*espera 1/);
+		expect(wrong.stderr).toMatch(/schema_version 1 .*espera 2/);
 	}, 20_000);
 });

@@ -28,6 +28,8 @@ function article(
 		ancla,
 		titulo: ancla,
 		texto: `## ${ancla}\n\n${texto}`,
+		intro: `## ${ancla}\n\n${texto}`,
+		subsecciones: [],
 	}));
 	return {
 		slug,
@@ -44,7 +46,7 @@ function article(
 
 function tinyIndex(articulos: McpArticulo[]): McpIndex {
 	return {
-		schema_version: 1,
+		schema_version: 2,
 		version: 'test',
 		generado: '2026-01-01T00:00:00.000Z',
 		base_url: 'https://doc.paxapos.com',
@@ -208,6 +210,32 @@ describe('fetch', () => {
 		expect(out.document.text.startsWith('## Paso 2')).toBe(true);
 		expect(out.document.text).not.toContain('## Paso 3');
 		expect(out.document.url).toMatch(/#paso-2-busca-un-arqueo$/);
+	});
+
+	it('con #ancla de un ### devuelve solo esa subsección', () => {
+		const out = fetchDocument(index, 'manual:salon-de-ventas#paso-8-emiti-la-factura');
+		if (!out.ok) throw new Error(out.error);
+		expect(out.document.id).toBe('manual:salon-de-ventas#paso-8-emiti-la-factura');
+		expect(out.document.text.startsWith('### Paso 8: Emití la factura')).toBe(true);
+		expect(out.document.text).toContain('#### Cómo hacer una Factura A');
+		expect(out.document.text).not.toContain('### Paso 9');
+		expect(out.document.text).not.toContain('### Paso 7');
+		expect(out.document.title).toMatch(/^Cómo Usar el Salón de Ventas.* › .* › Paso 8/);
+		expect(out.document.url).toBe(
+			'https://doc.paxapos.com/user-guide/salon-de-ventas#paso-8-emiti-la-factura',
+		);
+		// metadata.secciones sigue listando solo las ##
+		const secciones = out.document.metadata.secciones.map((x) => x.ancla);
+		expect(secciones).toContain('guia-paso-a-paso-como-se-usa');
+		expect(secciones).not.toContain('paso-8-emiti-la-factura');
+	});
+
+	it('con #ancla de un ## sigue devolviendo la sección entera, con sus ###', () => {
+		const out = fetchDocument(index, 'manual:salon-de-ventas#guia-paso-a-paso-como-se-usa');
+		if (!out.ok) throw new Error(out.error);
+		expect(out.document.text.startsWith('## ')).toBe(true);
+		expect(out.document.text).toContain('### Paso 8: Emití la factura');
+		expect(out.document.text).toContain('### Paso 9');
 	});
 
 	it('errores accionables: id vacío, artículo o sección inexistente', () => {

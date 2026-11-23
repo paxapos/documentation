@@ -9,13 +9,23 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 /** Versión del formato. Si el generador cambia la forma del JSON, se sube acá y en el server. */
-export const MCP_INDEX_SCHEMA_VERSION = 1;
+export const MCP_INDEX_SCHEMA_VERSION = 2;
 
 /** Ubicación por defecto (la pisa la variable `MCP_INDEX_PATH`). */
 export const MCP_INDEX_PATH = fileURLToPath(new URL('./mcp-index.json', import.meta.url));
 
 /**
- * @typedef {{ ancla: string, titulo: string, texto: string }} McpSeccion
+ * @typedef {{ ancla: string, titulo: string, texto: string }} McpSubseccion
+ *   Un `###` con su `<div id>`, desde su heading hasta el próximo `###` (o el fin de la sección).
+ * @typedef {{
+ *   ancla: string,
+ *   titulo: string,
+ *   texto: string,
+ *   intro: string,
+ *   subsecciones: McpSubseccion[],
+ * }} McpSeccion
+ *   `texto` es la sección entera (con sus `###`); `intro`, el heading y lo que hay antes del
+ *   primer `###` (igual a `texto` si no tiene subsecciones). Versión 2 del formato.
  * @typedef {{
  *   slug: string,
  *   titulo: string,
