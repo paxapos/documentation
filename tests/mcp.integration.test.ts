@@ -153,7 +153,8 @@ describe.skipIf(!hasBuild)('MCP en /mcp (server.js contra build/)', () => {
 		expect(check2.errorMessage).toBeUndefined();
 		expect(doc.id).toBe(results[0].id);
 		expect(doc.url).toBe(results[0].url);
-		expect(String(doc.text)).toMatch(/^## /);
+		// Resultado de sección → solo esa sección; resultado de artículo (intro) → el artículo.
+		expect(String(doc.text)).toMatch(results[0].id.includes('#') ? /^## / : /^# /);
 
 		const whole = await client.callTool({
 			name: 'fetch',

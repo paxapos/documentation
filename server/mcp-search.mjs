@@ -23,15 +23,90 @@ export const MAX_RESPONSE_CHARS = 60_000;
 /** Largo aproximado del fragmento (`text`) de cada resultado. */
 const SNIPPET_CHARS = 240;
 
-const WEIGHT = { articleTitle: 8, heading: 5 };
+/** Pesos por dónde aparece el término. El cuerpo aporta como mucho `BM25.k1 + 1` (≈ 2,2). */
+const WEIGHT = { articleTitle: 8, sectionArticleTitle: 4, heading: 5, subheading: 3 };
 
-/** Palabras que no aportan a la búsqueda (ya normalizadas). */
+/** Multiplicador si los términos aparecen seguidos y en orden (sin contar stopwords). */
+const PHRASE_BOOST = 2;
+
+/**
+ * Consultas que cuentan un problema ("no imprime", "no puedo cerrar", "error") y secciones de
+ * problemas comunes: "no" es stopword, pero la intención se conserva. En esas consultas el
+ * heading de una sección de problemas cuenta como subheading para los términos de su cuerpo, y
+ * la sección vale ×1,25.
+ */
+const TROUBLE_QUERY = /(^|[^a-z])(no|error|errores|falla|fallas|problema|problemas)([^a-z]|$)/;
+const TROUBLE_HEADING = /problema|inconveniente|no sale bien|error|falla/;
+const TROUBLE_TIEBREAK = 1.25;
+
+/**
+ * Penalidad por repetir artículo en los resultados: el 2º resultado de un mismo artículo vale
+ * ×0,6 y el 3º ×0,36, para que una consulta que calza con el título de un artículo no tape a
+ * secciones de otros artículos que responden mejor.
+ */
+const SAME_ARTICLE_DECAY = 0.6;
+
+/** BM25 para el cuerpo: satura la frecuencia y normaliza por el largo de la sección. */
+const BM25 = { k1: 1.2, b: 0.75 };
+
+/** Palabras que no aportan a la búsqueda (ya normalizadas), incluidas las conversacionales. */
 const STOPWORDS = new Set(
 	(
 		'a al como con de del el en es la las lo los mi mis o para por que se si su sus un una unos ' +
-		'unas y e ni le les me te tu tus yo mas muy hay cual cuales donde cuando esta este esto'
+		'unas y e ni le les me te tu tus yo mas muy hay cual cuales donde cuando esta este esto ' +
+		'eso ese esa estas estos estoy estan ser era fue no sí ya tambien sobre aca aqui ahi ' +
+		'puedo puede pueden podes podemos poder podria hago hace hacen haces hacemos hacer ' +
+		'quiero queres quiere quisiera necesito necesita necesitas tengo tiene tenes tienen ' +
+		'debo debe deberia hay algo alguien favor hola saber dar porque'
 	).split(' '),
 );
+
+/**
+ * Raíces que la regla de sufijos no une (verbos irregulares, derivados), por raíz ya recortada.
+ * @type {Readonly<Record<string, string>>}
+ */
+const STEM_ALIASES = Object.freeze({
+	cierr: 'cerr', // cierre, cierra ↔ cerrar
+	abiert: 'abr', // abierto ↔ abrir
+	apertur: 'abr', // apertura ↔ abrir
+	impres: 'imprim', // impresión, impreso ↔ imprimir
+	impresor: 'imprim', // impresora ↔ imprimir
+});
+
+/**
+ * Sufijos que se recortan (uno solo, el más largo que calce) y el largo mínimo de lo que queda.
+ * Las terminaciones de verbo cortas (-ar, -er, -ir) dejan raíces de 3 letras ("abr"); las
+ * derivadas, de 4, para no juntar "estado" con "estación".
+ * @type {ReadonlyArray<readonly [string, number]>}
+ */
+const SUFFIXES = [
+	['amiento', 4],
+	['imiento', 4],
+	['acion', 4],
+	['icion', 4],
+	['iendo', 4],
+	['ando', 4],
+	['arlo', 4],
+	['arla', 4],
+	['erlo', 4],
+	['irlo', 4],
+	['aste', 4],
+	['iste', 4],
+	['aria', 4],
+	['eria', 4],
+	['iria', 4],
+	['ion', 4],
+	['ado', 4],
+	['ada', 4],
+	['ido', 4],
+	['ida', 4],
+	['alo', 4],
+	['an', 4],
+	['en', 4],
+	['ar', 3],
+	['er', 3],
+	['ir', 3],
+];
 
 /**
  * Minúsculas y sin diacríticos (NFD).
@@ -64,24 +139,74 @@ export function queryTerms(query) {
 }
 
 /**
- * Raíz para comparar por prefijo: sin el plural ("impresoras" → "impresora"). Los términos de
- * hasta 3 letras se comparan enteros.
- * @param {string} term
+ * Sin el plural ("facturas" → "factura", "impresoras" → "impresora", "meses" → "mes").
+ * @param {string} word normalizada
  * @returns {string}
  */
-function stem(term) {
-	if (term.length > 4 && term.endsWith('es')) return term.slice(0, -2);
-	if (term.length > 3 && term.endsWith('s')) return term.slice(0, -1);
-	return term;
+function singular(word) {
+	if (/\d/.test(word) || word.length <= 3) return word;
+	if (word.length > 4 && word.endsWith('es')) return word.slice(0, -2);
+	if (word.endsWith('s')) return word.slice(0, -1);
+	return word;
 }
 
 /**
- * @param {string} word palabra del texto
- * @param {string} term término de la consulta
+ * Stemming liviano para español, sobre una palabra ya normalizada (sin acentos): saca el plural,
+ * después un sufijo de verbo o derivado ("facturación", "cerrado", "abrir") o la vocal final
+ * ("factura", "cerrá" → "cerra"), y aplica `STEM_ALIASES`. Las palabras de 4 letras no pierden
+ * la "a" final ("mesa" ≠ "mes", "caja" ≠ "cajero"); los números quedan enteros.
+ * @param {string} word
+ * @returns {string}
  */
-function matches(word, term) {
-	if (term.length <= 3) return word === term || (/^\d+$/.test(term) && word.startsWith(term));
-	return word.startsWith(stem(term));
+export function stem(word) {
+	if (/\d/.test(word) || word.length <= 3) return word;
+	let w = singular(word);
+
+	let cut = false;
+	for (const [suffix, min] of SUFFIXES) {
+		if (w.endsWith(suffix) && w.length - suffix.length >= min) {
+			w = w.slice(0, -suffix.length);
+			cut = true;
+			break;
+		}
+	}
+	if (!cut && /[aeio]$/.test(w) && w.length >= 4 && !(w.length === 4 && w.endsWith('a'))) {
+		w = w.slice(0, -1);
+	}
+	return STEM_ALIASES[w] ?? w;
+}
+
+/**
+ * Término de búsqueda: su raíz y, para los largos, la palabra entera para matchear por prefijo
+ * ("mercado" → "mercadopago").
+ * `words` son las palabras de la consulta con esa raíz, tal cual (sin acentos): si aparecen
+ * exactas, cuentan doble en el cuerpo ("facturar" pesa más donde dice "facturar" que donde dice
+ * "facturas"; "impresora no imprime" es una raíz con dos palabras).
+ * @typedef {{ stem: string, words: string[], prefix: string | null }} Term
+ */
+
+/**
+ * @param {string} word
+ * @returns {Term}
+ */
+function toTerm(word) {
+	return {
+		stem: stem(word),
+		words: [word],
+		prefix: word.length >= 5 && !/\d/.test(word) ? word : null,
+	};
+}
+
+/**
+ * Raíces de las palabras con contenido, en orden, separadas por espacios (para la frase).
+ * @param {string} text
+ * @returns {string}
+ */
+function contentPhrase(text) {
+	return words(text)
+		.filter((w) => !STOPWORDS.has(w))
+		.map(stem)
+		.join(' ');
 }
 
 /**
@@ -101,13 +226,62 @@ function plainText(markdown) {
 }
 
 /**
+ * Palabras de un campo: raíces (para comparar) y palabras enteras (para el prefijo).
+ * @typedef {{ stems: Map<string, number>, words: Map<string, number>, length: number }} Field
+ */
+
+/**
+ * @param {string} text
+ * @returns {Field}
+ */
+function field(text) {
+	/** @type {Map<string, number>} */
+	const stems = new Map();
+	/** @type {Map<string, number>} */
+	const raw = new Map();
+	const list = words(text);
+	for (const w of list) {
+		raw.set(w, (raw.get(w) ?? 0) + 1);
+		const s = stem(w);
+		stems.set(s, (stems.get(s) ?? 0) + 1);
+	}
+	return { stems, words: raw, length: list.length };
+}
+
+/**
+ * Cuántas veces aparece el término en el campo (por raíz, o por prefijo si es largo).
+ * @param {Field} f
+ * @param {Term} term
+ * @returns {number}
+ */
+function count(f, term) {
+	let n = f.stems.get(term.stem) ?? 0;
+	if (term.prefix) {
+		for (const [w, c] of f.words) {
+			if (
+				w.length > term.prefix.length &&
+				w.startsWith(term.prefix) &&
+				stem(w) !== term.stem
+			) {
+				n += c;
+			}
+		}
+	}
+	return n;
+}
+
+/**
  * @typedef {{
  *   id: string,
+ *   slug: string,
+ *   isIntro: boolean,
+ *   isTrouble: boolean,
  *   title: string,
  *   url: string,
- *   articleWords: string[],
- *   headingWords: string[],
- *   body: Map<string, number>,
+ *   article: Field,
+ *   heading: Field,
+ *   subheadings: Field,
+ *   body: Field,
  *   phrase: string,
  *   plain: string,
  * }} SearchUnit
@@ -122,32 +296,34 @@ export function buildSearchUnits(index) {
 	/** @type {SearchUnit[]} */
 	const units = [];
 	for (const a of index.articulos) {
-		const articleWords = words(a.titulo);
-		/** @param {string} id @param {string} title @param {string} url @param {string[]} headingWords @param {string} md */
-		const add = (id, title, url, headingWords, md) => {
+		const article = field(a.titulo);
+		/** @param {string} id @param {string} title @param {string} url @param {string} heading @param {string} md */
+		const add = (id, title, url, heading, md) => {
 			const plain = plainText(md);
-			/** @type {Map<string, number>} */
-			const body = new Map();
-			for (const w of words(plain)) body.set(w, (body.get(w) ?? 0) + 1);
+			const subheadings = [...md.matchAll(/^#{3,6}\s+(.+)$/gm)].map((m) => m[1]).join(' ');
 			units.push({
 				id,
+				slug: a.slug,
+				isIntro: !id.includes('#'),
+				isTrouble: TROUBLE_HEADING.test(normalize(heading)),
 				title,
 				url,
-				articleWords,
-				headingWords,
-				body,
-				phrase: ` ${words(`${title} ${plain}`).join(' ')} `,
+				article,
+				heading: field(heading),
+				subheadings: field(subheadings),
+				body: field(plain),
+				phrase: ` ${contentPhrase(`${title} ${subheadings} ${plain}`)} `,
 				plain,
 			});
 		};
-		add(`manual:${a.slug}`, a.titulo, a.url, [], `${a.descripcion}\n\n${a.intro}`);
+		add(`manual:${a.slug}`, a.titulo, a.url, '', `${a.descripcion}\n\n${a.intro}`);
 		for (const s of a.secciones) {
 			const body = s.texto.replace(/^##\s+.*\n?/, '');
 			add(
 				`manual:${a.slug}#${s.ancla}`,
 				`${a.titulo} › ${s.titulo}`,
 				`${a.url}#${s.ancla}`,
-				words(s.titulo),
+				s.titulo,
 				body,
 			);
 		}
@@ -161,30 +337,38 @@ export function buildSearchUnits(index) {
 
 /**
  * Busca en las unidades. Devuelve como máximo `limit` resultados, de mayor a menor puntaje.
+ *
+ * Puntaje por término: `idf × (título del artículo [8 en la intro, 4 en las secciones] +
+ * 5·heading + 3·subheading + BM25 del cuerpo)`, multiplicado por (términos encontrados /
+ * términos)² y ×2 si los términos aparecen seguidos. Si la consulta cuenta un problema, ver
+ * `TROUBLE_QUERY`. Después se elige de a uno, penalizando
+ * repetir artículo (`SAME_ARTICLE_DECAY`).
  * @param {SearchUnit[]} units
  * @param {string} query
  * @param {{ limit?: number }} [options]
  * @returns {SearchResult[]}
  */
 export function search(units, query, { limit = MAX_RESULTS } = {}) {
-	const terms = queryTerms(query);
+	/** @type {Map<string, Term>} */
+	const byStem = new Map();
+	for (const w of queryTerms(query)) {
+		const term = toTerm(w);
+		const same = byStem.get(term.stem);
+		if (same) same.words.push(w);
+		else byStem.set(term.stem, term);
+	}
+	const terms = [...byStem.values()];
+	const trouble = TROUBLE_QUERY.test(normalize(query));
 	if (!terms.length) return [];
-	const phrase = words(query).join(' ');
-
-	/** @param {string[]} list @param {string} term */
-	const hasTerm = (list, term) => list.some((w) => matches(w, term));
-	/** @param {Map<string, number>} body @param {string} term */
-	const bodyCount = (body, term) => {
-		let n = 0;
-		for (const [w, c] of body) if (matches(w, term)) n += c;
-		return n;
-	};
+	const phrase = terms.length > 1 ? contentPhrase(query) : '';
+	const avgLength = units.reduce((n, u) => n + u.body.length, 0) / units.length || 1;
 
 	const hits = terms.map((term) =>
 		units.map((u) => ({
-			title: hasTerm(u.articleWords, term),
-			heading: hasTerm(u.headingWords, term),
-			body: bodyCount(u.body, term),
+			title: count(u.article, term) > 0,
+			heading: count(u.heading, term) > 0,
+			subheading: count(u.subheadings, term) > 0,
+			body: term.words.reduce((n, w) => n + (u.body.words.get(w) ?? 0), count(u.body, term)),
 		})),
 	);
 	const idf = hits.map((list) => {
@@ -195,53 +379,78 @@ export function search(units, query, { limit = MAX_RESULTS } = {}) {
 	/** @type {{ unit: SearchUnit, score: number, order: number }[]} */
 	const scored = [];
 	units.forEach((unit, i) => {
+		const norm = BM25.k1 * (1 - BM25.b + (BM25.b * unit.body.length) / avgLength);
 		let score = 0;
 		let matched = 0;
 		terms.forEach((_, t) => {
 			const h = hits[t][i];
 			if (!h.title && !h.heading && !h.body) return;
 			matched++;
+			const body = h.body ? (h.body * (BM25.k1 + 1)) / (h.body + norm) : 0;
+			const titleWeight = unit.isIntro ? WEIGHT.articleTitle : WEIGHT.sectionArticleTitle;
 			score +=
 				idf[t] *
-				((h.title ? WEIGHT.articleTitle : 0) +
-					(h.heading ? WEIGHT.heading : 0) +
-					Math.log2(1 + h.body));
+				((h.title ? titleWeight : 0) +
+					(h.heading
+						? WEIGHT.heading
+						: trouble && unit.isTrouble
+							? WEIGHT.subheading
+							: 0) +
+					(h.subheading ? WEIGHT.subheading : 0) +
+					body);
 		});
 		if (!matched) return;
 		score *= (matched / terms.length) ** 2;
-		if (phrase.includes(' ') && unit.phrase.includes(` ${phrase} `)) score *= 1.5;
+		if (phrase && unit.phrase.includes(` ${phrase} `)) score *= PHRASE_BOOST;
+		if (trouble && unit.isTrouble) score *= TROUBLE_TIEBREAK;
 		scored.push({ unit, score, order: i });
 	});
 	scored.sort((a, b) => b.score - a.score || a.order - b.order);
 
+	// Elegir de a uno el mejor puntaje ya penalizado por cuántos resultados lleva su artículo.
 	/** @type {SearchResult[]} */
 	const results = [];
 	/** @type {Map<string, number>} */
 	const perArticle = new Map();
-	for (const { unit } of scored) {
-		if (results.length >= limit) break;
-		const slug = unit.id.replace(/^manual:/, '').replace(/#.*$/, '');
-		const n = perArticle.get(slug) ?? 0;
-		if (n >= MAX_PER_ARTICLE) continue;
-		perArticle.set(slug, n + 1);
+	const pool = scored.slice(0, Math.max(limit * MAX_PER_ARTICLE * 4, 50));
+	while (results.length < limit && pool.length) {
+		let best = -1;
+		let bestScore = -Infinity;
+		pool.forEach(({ unit, score }, k) => {
+			const n = perArticle.get(unit.slug) ?? 0;
+			if (n >= MAX_PER_ARTICLE) return;
+			const adjusted = score * SAME_ARTICLE_DECAY ** n;
+			if (adjusted > bestScore) {
+				bestScore = adjusted;
+				best = k;
+			}
+		});
+		if (best === -1) break;
+		const [{ unit }] = pool.splice(best, 1);
+		perArticle.set(unit.slug, (perArticle.get(unit.slug) ?? 0) + 1);
 		results.push({
 			id: unit.id,
 			title: unit.title,
 			url: unit.url,
-			text: snippet(unit.plain, terms),
+			text: snippet(
+				unit.plain,
+				terms.map((t) => t.stem),
+			),
 		});
 	}
 	return results;
 }
 
 /**
- * Fragmento de ~SNIPPET_CHARS alrededor de la primera coincidencia (o el principio del texto).
+ * Fragmento de ~SNIPPET_CHARS alrededor de la primera palabra cuya raíz está en `stems` (o el
+ * principio del texto).
  * @param {string} plain
- * @param {string[]} terms
+ * @param {string[]} stems raíces (de `stem`) o palabras de la consulta
  * @returns {string}
  */
-export function snippet(plain, terms) {
+export function snippet(plain, stems) {
 	if (plain.length <= SNIPPET_CHARS) return plain;
+	const wanted = new Set([...stems, ...stems.map(stem)]);
 	// Normalizado carácter por carácter para poder volver a la posición en el original.
 	let norm = '';
 	/** @type {number[]} */
@@ -252,12 +461,10 @@ export function snippet(plain, terms) {
 		for (let k = 0; k < n.length; k++) pos.push(i);
 	}
 	let first = -1;
-	for (const term of terms) {
-		const re = new RegExp(`(^|[^a-z0-9])${escapeRegExp(term.length <= 3 ? term : stem(term))}`);
-		const m = re.exec(norm);
-		if (m) {
-			const at = pos[m.index + m[1].length];
-			if (first === -1 || at < first) first = at;
+	for (const m of norm.matchAll(/[a-z0-9]+/g)) {
+		if (wanted.has(stem(m[0]))) {
+			first = pos[m.index ?? 0];
+			break;
 		}
 	}
 	let start = first <= 0 ? 0 : Math.max(0, first - Math.floor(SNIPPET_CHARS / 3));
@@ -271,14 +478,6 @@ export function snippet(plain, terms) {
 		if (space > start) end = space;
 	}
 	return `${start > 0 ? '…' : ''}${plain.slice(start, end).trim()}${end < plain.length ? '…' : ''}`;
-}
-
-/**
- * @param {string} text
- * @returns {string}
- */
-function escapeRegExp(text) {
-	return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 /**
