@@ -14,11 +14,12 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"generate": "pnpm run generate:dates && pnpm run generate:ai && pnpm run generate:seo && pnpm run generate:search",
+		"generate": "pnpm run generate:dates && pnpm run generate:ai && pnpm run generate:seo && pnpm run generate:search && pnpm run generate:mcp",
 		"generate:dates": "node scripts/generate-content-dates.mjs",
 		"generate:ai": "node scripts/generate-ai-files.mjs",
 		"generate:seo": "node scripts/generate-seo-files.mjs",
 		"generate:search": "node scripts/generate-search-index.mjs",
+		"generate:mcp": "node scripts/generate-mcp-index.mjs",
 		"content:normalize": "node scripts/standardize-headers.mjs",
 		"test": "vitest run"
 	},
@@ -48,6 +49,8 @@
 		"vitest": "^4.1.0"
 	},
 	"dependencies": {
-		"marked": "^15.0.12"
+		"@modelcontextprotocol/sdk": "1.32.1",
+		"marked": "^15.0.12",
+		"zod": "^4.6.7"
 	}
 }

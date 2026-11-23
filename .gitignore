@@ -17,6 +17,7 @@ node_modules
 /static/sitemap.xml
 /static/search-index.json
 /static/llms/
+/server/mcp-index.json
 
 # Archivos temporales y backups
 **/*.bak

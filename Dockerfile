@@ -41,7 +41,8 @@ ENV TZ=America/Argentina/Buenos_Aires \
 WORKDIR /app
 
 COPY package.json server.js ./
-COPY server/http-rules.mjs ./server/
+# server/: reglas HTTP, MCP y el índice del MCP (mcp-index.json) que generó `pnpm build`.
+COPY --from=builder /app/server ./server
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=builder /app/build ./build
 

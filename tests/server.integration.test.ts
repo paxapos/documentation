@@ -2,58 +2,17 @@
  * Levanta `node server.js` contra el `build/` real y verifica la tabla de comportamiento HTTP
  * que antes daba nginx. Necesita `pnpm build` antes; sin build se saltea.
  */
-import { spawn, type ChildProcess } from 'node:child_process';
+import { type ChildProcess } from 'node:child_process';
 import { get as httpGet, type IncomingHttpHeaders } from 'node:http';
-import { existsSync, readdirSync } from 'node:fs';
-import { createServer } from 'node:net';
+import { readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { brotliDecompressSync, gunzipSync } from 'node:zlib';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { EXPECTED_SECURITY_HEADERS, MANUAL_REDIRECT_CASES } from './fixtures/http-expectations';
-
-const ROOT = join(import.meta.dirname, '..');
-const BUILD = join(ROOT, 'build');
-const hasBuild = existsSync(join(BUILD, 'handler.js'));
+import { BUILD, ROOT, hasBuild, startServer, stop } from './fixtures/start-server';
 
 if (!hasBuild) {
 	console.warn('[server.integration] No hay build/: se saltea. Corré `pnpm build` primero.');
-}
-
-function freePort(): Promise<number> {
-	return new Promise((resolve, reject) => {
-		const srv = createServer();
-		srv.on('error', reject);
-		srv.listen(0, '127.0.0.1', () => {
-			const address = srv.address();
-			srv.close(() => resolve(typeof address === 'object' && address ? address.port : 0));
-		});
-	});
-}
-
-async function startServer(env: Record<string, string> = {}) {
-	const port = await freePort();
-	const child = spawn(process.execPath, ['server.js'], {
-		cwd: ROOT,
-		env: { ...process.env, PORT: String(port), HOST: '127.0.0.1', ...env },
-		stdio: ['ignore', 'pipe', 'pipe'],
-	});
-	const base = `http://127.0.0.1:${port}`;
-	for (let i = 0; i < 100; i++) {
-		if (child.exitCode !== null) throw new Error(`server.js terminó (${child.exitCode})`);
-		try {
-			const res = await fetch(`${base}/health`);
-			if (res.ok) return { child, base };
-		} catch {
-			// todavía no escucha
-		}
-		await new Promise((r) => setTimeout(r, 100));
-	}
-	child.kill();
-	throw new Error('server.js no respondió /health');
-}
-
-function stop(child?: ChildProcess) {
-	child?.kill('SIGTERM');
 }
 
 function expectSecurityHeaders(res: Response) {
@@ -250,8 +209,11 @@ describe.skipIf(!hasBuild)('server.js contra build/', () => {
 		expect(res.headers.get('cache-control')).toBeNull();
 	});
 
-	it('/mcp → 404 (lo agrega la Fase 2)', async () => {
-		expect((await get('/mcp')).status).toBe(404);
+	it('GET /mcp → 405 con Allow: POST (el MCP se prueba en mcp.integration.test.ts)', async () => {
+		const res = await get('/mcp');
+		expect(res.status).toBe(405);
+		expect(res.headers.get('allow')).toBe('POST');
+		expectSecurityHeaders(res);
 	});
 
 	it('gzip y brotli precomprimidos cuando se piden', async () => {

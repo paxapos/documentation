@@ -6,15 +6,37 @@
  * `build/client` (estáticos), `build/prerendered` (páginas) y, para lo que no existe, la
  * página de error con 404.
  *
- * Variables: PORT (3000), HOST (0.0.0.0), ORIGIN (la lee adapter-node) y, opcional,
- * OPENAI_APPS_CHALLENGE.
+ * `POST /mcp` es el servidor MCP público del manual (`server/mcp.mjs`), con el índice que genera
+ * `pnpm generate`. Si el índice falta o es de otro formato, el proceso no arranca.
+ *
+ * Variables: PORT (3000), HOST (0.0.0.0), ORIGIN (la lee adapter-node) y, opcionales,
+ * OPENAI_APPS_CHALLENGE y MCP_INDEX_PATH (default `server/mcp-index.json`).
  */
+import { readFileSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { handler } from './build/handler.js';
 import { finalHeaders, resolveRequest } from './server/http-rules.mjs';
+import { createMcpHandler, MCP_PATH } from './server/mcp.mjs';
+import { loadMcpIndex, MCP_INDEX_PATH } from './server/mcp-index.mjs';
 
 const port = Number(process.env.PORT ?? 3000);
 const host = process.env.HOST ?? '0.0.0.0';
+
+/** @type {(req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse) => Promise<void>} */
+let mcpHandler;
+try {
+	const index = loadMcpIndex(process.env.MCP_INDEX_PATH || MCP_INDEX_PATH);
+	const { version } = JSON.parse(
+		readFileSync(new URL('./package.json', import.meta.url), 'utf-8'),
+	);
+	mcpHandler = createMcpHandler({ index, version });
+	console.log(
+		`MCP: ${index.articulos.length} artículos (índice ${index.version}) en ${MCP_PATH}`,
+	);
+} catch (error) {
+	console.error(`No arranca el server: ${error instanceof Error ? error.message : error}`);
+	process.exit(1);
+}
 
 /**
  * Llama a `apply(status)` justo antes de enviar los headers, cuando ya se conoce el status
@@ -71,7 +93,14 @@ const server = createServer((req, res) => {
 	);
 	req.url = action.url;
 
-	// Fase 2 (paxapos/documentation#243): acá se monta el MCP en /mcp, antes de SvelteKit.
+	if (new URL(action.url, 'http://localhost').pathname === MCP_PATH) {
+		mcpHandler(req, res).catch((/** @type {unknown} */ error) => {
+			console.error(error);
+			if (!res.headersSent) res.writeHead(500, { 'Content-Type': 'text/plain' });
+			res.end();
+		});
+		return;
+	}
 
 	Promise.resolve(handler(req, res, () => {})).catch((/** @type {unknown} */ error) => {
 		console.error(error);

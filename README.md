@@ -48,11 +48,13 @@ scripts/
 ├── generate-ai-files.mjs     # static/llms/*.txt + files-register.json
 ├── generate-seo-files.mjs    # sitemap.xml, robots.txt, llms.txt, content-index.json…
 ├── generate-search-index.mjs # static/search-index.json
+├── generate-mcp-index.mjs    # server/mcp-index.json (índice del MCP, no se sirve como estático)
 ├── standardize-headers.mjs   # pnpm content:normalize (limpia BOM/espacios en .md)
 └── shared-utils.mjs
 static/                       # favicon, images/, drivers/ + generados (gitignored)
 server.js                     # server de producción (node server.js)
 server/http-rules.mjs         # reglas HTTP: redirects, headers, cache, /health, dotfiles
+server/mcp*.mjs               # MCP en /mcp: handler + tools (mcp.mjs), búsqueda (mcp-search), índice
 tests/                        # tests de las reglas y de integración de server.js
 ```
 
@@ -85,3 +87,27 @@ Variables de entorno (todas opcionales):
 | `PORT` / `HOST`         | `8080` / `0.0.0.0`        | Dónde escucha `server.js`                                          |
 | `ORIGIN`                | `https://doc.paxapos.com` | Origen público para SvelteKit (adapter-node)                       |
 | `OPENAI_APPS_CHALLENGE` | —                         | Si existe, `/.well-known/openai-apps-challenge` responde ese valor |
+| `MCP_INDEX_PATH`        | `server/mcp-index.json`   | Índice que lee el MCP al arrancar                                  |
+
+## MCP
+
+`https://doc.paxapos.com/mcp` es un servidor [MCP](https://modelcontextprotocol.io) público, sin login
+y de solo lectura, para que un asistente de IA (Claude, ChatGPT, Gemini CLI, Claude Code) busque y
+lea el manual. Streamable HTTP sin sesiones, respuestas JSON: solo `POST /mcp` (`GET`/`DELETE` → 405).
+
+| Tool     | Input       | Devuelve                                                                              |
+| -------- | ----------- | ------------------------------------------------------------------------------------- |
+| `search` | `{ query }` | `{ results: [{ id, title, url, text }] }`: hasta 10 secciones con un fragmento        |
+| `fetch`  | `{ id }`    | `{ id, title, text, url, metadata }`: el artículo (o la sección `#ancla`) en markdown |
+
+El `id` es `manual:<slug>` o `manual:<slug>#<ancla>`; `fetch` acepta también el slug o la URL.
+
+- **Índice**: `pnpm generate` (y por lo tanto `pnpm build`) corre `scripts/generate-mcp-index.mjs`,
+  que escribe `server/mcp-index.json` (gitignored). Cada sección `##` toma el ancla de su
+  `<div id>`; si falta, avisa y deriva una. `server.js` lo lee al arrancar y **no arranca** si falta
+  o es de otro formato (`schema_version`). Para regenerarlo solo: `pnpm generate:mcp`.
+- **Probar local**: `pnpm build && pnpm start` y, en otra terminal,
+  `npx @modelcontextprotocol/inspector --cli http://localhost:3000/mcp --transport http --method tools/list`
+  (o sin `--cli` para la UI, con transporte "Streamable HTTP").
+- CORS abierto (`*`) y sin validar `Origin`: el contenido es público y no hay credenciales. El rate
+  limit queda para el proxy.
