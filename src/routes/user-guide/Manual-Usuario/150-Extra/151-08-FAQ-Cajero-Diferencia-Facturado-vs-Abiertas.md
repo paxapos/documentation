@@ -7,6 +7,8 @@
 
 ## 🎯 ¿Qué es y para qué sirve este indicador?
 
+<div id="que-es"></div>
+
 En la pantalla del arqueo de caja, dentro de la sección **Resumen de Ventas**, vas a encontrar dos totales principales:
 
 1. **Facturado Total Mesas:** Es la suma total del dinero de **todas las mesas que cobraste en tu caja** durante tu turno. No importa quién atendió o abrió la mesa; si la cobraste en tu caja, suma en este casillero.
@@ -15,6 +17,8 @@ En la pantalla del arqueo de caja, dentro de la sección **Resumen de Ventas**, 
 ---
 
 ## ❓ ¿Por qué pueden dar números distintos (y mostrarse en rojo)?
+
+<div id="por-que-difieren"></div>
 
 Es totalmente normal que estos números no coincidan en las siguientes situaciones operativas:
 
@@ -26,12 +30,16 @@ Es totalmente normal que estos números no coincidan en las siguientes situacion
 
 ## 💡 Significado de los colores visuales
 
+<div id="colores"></div>
+
 - 🟢 **Verde:** Las mesas que abriste coinciden exactamente con lo que cobraste en la caja.
 - 🔴 **Rojo:** Existe una diferencia entre las mesas que abriste y las que cobraste. No significa necesariamente que falte dinero, sino que hubo intercambio de mesas entre turnos o compañeros.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

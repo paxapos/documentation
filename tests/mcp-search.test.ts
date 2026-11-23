@@ -81,6 +81,17 @@ describe('search (manual real)', () => {
 		expect(slugOf(results[0].id)).toBe('ia-conectar-claude');
 	});
 
+	it.each(['manual desde asistente', 'mcp del manual'])(
+		'"%s" → primero el artículo de consultar el manual desde el asistente',
+		(query) => {
+			expect(slugOf(search(units, query)[0].id)).toBe('ia-manual-por-mcp');
+		},
+	);
+
+	it('"mcp" → el artículo del manual por MCP está entre los resultados', () => {
+		expect(search(units, 'mcp').map((r) => slugOf(r.id))).toContain('ia-manual-por-mcp');
+	});
+
 	it('acentos: "facturacion electronica" y "Facturación Electrónica" dan lo mismo', () => {
 		expect(search(units, 'facturacion electronica')).toEqual(
 			search(units, 'Facturación Electrónica'),

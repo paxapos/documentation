@@ -139,4 +139,6 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 
 ## 📞 ¿Necesitás ayuda?
 
+<div id="ayuda"></div>
+
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

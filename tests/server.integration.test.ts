@@ -184,6 +184,14 @@ describe.skipIf(!hasBuild)('server.js contra build/', () => {
 		expect(res.headers.get('content-type')).toBe('text/plain; charset=utf-8');
 	});
 
+	it('/llms.txt anuncia el MCP en una línea de comentario', async () => {
+		const lines = (await (await get('/llms.txt')).text()).split('\n');
+		expect(lines).toContain('# MCP: https://doc.paxapos.com/mcp');
+		for (const line of lines.filter((l) => l && !l.startsWith('#'))) {
+			expect(line).toMatch(/^https:\/\/doc\.paxapos\.com\/llms\/.+\.txt$/);
+		}
+	});
+
 	it('/urls.txt y los __data.json → noindex', async () => {
 		for (const path of ['/urls.txt', '/user-guide/salon-de-ventas/__data.json']) {
 			const res = await get(path);

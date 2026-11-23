@@ -27,9 +27,9 @@ const { index, warnings } = buildMcpIndex({ contentDates: {}, now: fixedDate });
 const ctx = { baseUrl: 'https://doc.paxapos.com', slug: 'demo' };
 
 describe('buildMcpIndex (manual real)', () => {
-	it('un artículo por cada .md (85)', () => {
+	it('un artículo por cada .md (86)', () => {
 		expect(index.articulos).toHaveLength(countMarkdown(MANUAL));
-		expect(index.articulos).toHaveLength(85);
+		expect(index.articulos).toHaveLength(86);
 	});
 
 	it('formato: schema_version, version (hash), base_url y lo que valida el server', () => {
@@ -84,8 +84,8 @@ describe('buildMcpIndex (manual real)', () => {
 		expect(claude?.texto).toContain('https://wa.me/');
 	});
 
-	it('las secciones sin <div id> se avisan (warning) con un ancla derivada', () => {
-		for (const w of warnings) expect(w).toMatch(/\.md: /);
+	it('todas las secciones ## tienen su <div id>: el generador no avisa nada', () => {
+		expect(warnings).toEqual([]);
 		const pedimelo = index.articulos.find(
 			(a) => a.slug === 'como-conectar-carta-digital-pedimelo-online',
 		);

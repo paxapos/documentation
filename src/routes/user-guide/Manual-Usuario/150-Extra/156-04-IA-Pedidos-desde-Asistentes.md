@@ -120,4 +120,6 @@ El asistente no calcula el costo del envío. Si el pedido es a domicilio y todav
 
 ## 📞 ¿Necesitás ayuda?
 
+<div id="ayuda"></div>
+
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

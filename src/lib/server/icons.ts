@@ -184,6 +184,7 @@ export const moduleIcons: Record<string, string> = {
 	'ia-conectar-chatgpt': 'lucide:plug',
 	'ia-conectar-gemini': 'lucide:plug',
 	'ia-pedidos-desde-asistentes': 'lucide:shopping-bag',
+	'ia-manual-por-mcp': 'lucide:book-open',
 };
 
 const svgCache = new Map<string, string>();

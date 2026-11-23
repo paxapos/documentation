@@ -7,11 +7,15 @@
 
 ## 🎯 ¿Qué es y para qué sirve esta guía?
 
+<div id="que-es"></div>
+
 Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más billetes para cambio*) o cuando sacás dinero del cajón (ejemplo: *pago urgente a un proveedor o delivery*), para que no tengas diferencias al cerrar el turno.
 
 ---
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+<div id="paso-a-paso"></div>
 
 1. En la barra superior del salón/caja o en la pantalla del arqueo activo, tocá:
    - 📥 **Ingresos:** Si estás poniendo dinero en el cajón.
@@ -26,6 +30,8 @@ Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más bil
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

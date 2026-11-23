@@ -179,4 +179,6 @@ La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `co
 
 ## 📞 ¿Necesitás ayuda?
 
+<div id="ayuda"></div>
+
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>
