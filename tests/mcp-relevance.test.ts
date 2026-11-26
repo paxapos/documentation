@@ -16,7 +16,7 @@ const CONFIG_GIGANTE = 'manual:configuracion-general#como-se-usa-la-pantalla';
 /** consulta → prefijos de id aceptables (sin `manual:`) dentro del top 3. */
 const CASES: ReadonlyArray<readonly [string, readonly string[]]> = [
 	// Facturar a un cliente: se emite desde la mesa (Paso 8 del Salón) y requiere el trámite en
-	// ARCA y el punto de venta. Factura Manual es para facturas de proveedores: no es la respuesta.
+	// ARCA y el punto de venta. Cargar gasto es para facturas de proveedores: no es la respuesta.
 	['cómo facturar', ['salon-de-ventas', 'punto-de-venta', 'puntos-de-venta-pdv']],
 	['como hago una factura', ['salon-de-ventas', 'punto-de-venta', 'puntos-de-venta-pdv']],
 	['propinas', ['medios-de-cobro']],
@@ -29,11 +29,11 @@ const CASES: ReadonlyArray<readonly [string, readonly string[]]> = [
 	['impresora no imprime', ['impresoras']],
 	['manual desde asistente', ['ia-manual-por-mcp']],
 	['dar de alta un empleado', ['empleados']],
-	['cargar una compra', ['crear-orden-compra', 'factura-manual', 'historial-de-compras']],
+	['cargar una compra', ['crear-orden-compra', 'cargar-gasto', 'historial-de-compras']],
 	['stock', ['stock-mercaderias', 'stock-subproductos', 'movimientos-de-stock']],
 	['cambiar el precio de un producto', ['menu#paso-3', 'maestro-de-productos']],
 	['abrir turno', ['arqueos-de-caja']],
-	['nota de crédito', ['salon-de-ventas', 'tablero-general', 'factura-manual']],
+	['nota de crédito', ['salon-de-ventas', 'tablero-general', 'cargar-gasto']],
 	[
 		'mercado pago',
 		['transacciones-mercadopago', 'medios-de-cobro', 'configuracion-procesadores'],

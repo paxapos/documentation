@@ -25,8 +25,8 @@
 
 <div id="para-que-se-usan-las-clasificaciones"></div>
 
-- **Cargar una factura**: en [Factura Manual](/user-guide/factura-manual) elegís la **Clasificación (opcional)** del gasto. Si no elegís, queda como *Sin clasificar*.
-- **Ver y filtrar gastos**: en [Historial de Facturas](/user-guide/historial-de-facturas) y en los reportes de gastos, el total se reparte por clasificación.
+- **Cargar una factura de un proveedor**: en [Cargar gasto](/user-guide/cargar-gasto), dentro de **Más datos**, elegís la **Clasificación** del gasto. Si no elegís, queda como *Sin clasificar*.
+- **Ver y filtrar gastos**: en [Gastos](/user-guide/gastos) filtrás por **Clasificación** (en **Más filtros**). En los reportes de gastos, el total se reparte por clasificación.
 - **Tablero General**: el gráfico de gastos y la *Contribución Marginal* usan la clasificación. Mirá [Tablero General](/user-guide/tablero-general).
 - **Mercadería**: las facturas clasificadas como *MERCADERIAS* tratan sus renglones como mercadería.
 

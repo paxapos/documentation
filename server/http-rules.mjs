@@ -46,6 +46,13 @@ export const MANUAL_REDIRECTS = Object.freeze([
 	[/^\/user-guide\/crear-usuarios\/?$/, '/user-guide/usuarios-del-sistema'],
 	[/^\/user-guide\/agregar-personal\/?$/, '/user-guide/empleados'],
 
+	// "Compras y pagos" de PaxaPOS 3.18: los artículos de proveedores llevan el nombre de la pantalla
+	// actual (paxapos/documentation#247).
+	[/^\/user-guide\/factura-manual\/?$/, '/user-guide/cargar-gasto'],
+	[/^\/user-guide\/historial-de-facturas\/?$/, '/user-guide/gastos'],
+	[/^\/user-guide\/pagos\/?$/, '/user-guide/pagos-hechos'],
+	[/^\/user-guide\/resumen-de-deuda\/?$/, '/user-guide/deuda-con-proveedores'],
+
 	// FAQ e IA: antes el slug conservaba el sub-número (06-faq-…, 01-ia-…) y Google además
 	// rastreó la forma con el prefijo de carpeta (151-06-faq-…). `$1` = el slug actual.
 	[/^\/user-guide\/(?:151-)?\d+-(faq-[a-z0-9-]+?)\/?$/, '/user-guide/$1'],

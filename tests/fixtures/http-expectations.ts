@@ -10,6 +10,10 @@ export const MANUAL_REDIRECT_CASES: ReadonlyArray<readonly [string, string]> = [
 	['/user-guide/config-del-comercio', '/user-guide/configuracion-general'],
 	['/user-guide/crear-usuarios', '/user-guide/usuarios-del-sistema'],
 	['/user-guide/agregar-personal', '/user-guide/empleados'],
+	['/user-guide/factura-manual', '/user-guide/cargar-gasto'],
+	['/user-guide/historial-de-facturas', '/user-guide/gastos'],
+	['/user-guide/pagos', '/user-guide/pagos-hechos'],
+	['/user-guide/resumen-de-deuda', '/user-guide/deuda-con-proveedores'],
 	[
 		'/user-guide/06-faq-cajero-ingreso-egreso-cajon',
 		'/user-guide/faq-cajero-ingreso-egreso-cajon',

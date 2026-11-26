@@ -33,6 +33,11 @@ describe('manualRedirect', () => {
 		expect(manualRedirect('/user-guide/Roles')).toBeNull(); // nginx: `~` distingue mayúsculas
 		expect(manualRedirect('/user-guide/06-FAQ-cajero')).toBeNull();
 		expect(manualRedirect('/roles')).toBeNull();
+		// Los slugs nuevos de "Compras y pagos" no se redirigen (`pagos` no atrapa a `pagos-hechos`).
+		expect(manualRedirect('/user-guide/cargar-gasto')).toBeNull();
+		expect(manualRedirect('/user-guide/gastos')).toBeNull();
+		expect(manualRedirect('/user-guide/pagos-hechos')).toBeNull();
+		expect(manualRedirect('/user-guide/deuda-con-proveedores')).toBeNull();
 	});
 });
 
