@@ -41,17 +41,23 @@ Cada fila es un concepto. Solo aparecen los que tu cuenta realmente tiene: si no
 
 ### Abono mensual
 
+<div id="abono-mensual"></div>
+
 ![Fila Abono mensual: Plan Pro, 25.000 pesos, etiqueta A pagar](images/manual/110-configuracion/138-02-concepto-abono-mensual.png)
 
 Es el valor del plan. Queda **A pagar** hasta que se cierra el mes.
 
 ### Comisión por cobros con MercadoPago
 
+<div id="comision-por-cobros-con-mercadopago"></div>
+
 ![Fila Comisión por cobros con MercadoPago: 0,8 % de 255.000 pesos, con la aclaración Ya pagaste 1.640 pesos de esta comisión](images/manual/110-configuracion/138-03-concepto-comision-mercadopago.png)
 
 Esta comisión **se descuenta en cada cobro**, así que gran parte de ella ya la pagaste sin darte cuenta. Si todavía queda una parte sin descontar, la fila lo aclara: **"Ya pagaste $ 1.640,00 de esta comisión"**. Cuando la comisión del mes está completa y descontada, la fila muestra la etiqueta **Ya pagado**.
 
 ### Inteligencia artificial
+
+<div id="inteligencia-artificial"></div>
 
 ![Fila Inteligencia artificial: 2 usos de lectura de facturas por foto, 2.009,15 pesos, con la aclaración Estimado; el importe final se confirma al cerrar el mes](images/manual/110-configuracion/138-04-concepto-inteligencia-artificial.png)
 
@@ -68,7 +74,7 @@ Cuenta los usos del asistente, la lectura de facturas por foto, las respuestas p
 Debajo de la tabla está el resumen:
 
 - **Ya pagaste:** lo que ya se descontó, como la comisión de MercadoPago en cada cobro.
-- **Te queda por pagar:** lo que todavía no se pagó. Es una estimación de lo que vas a recibir al cierre.
+- **Te queda por pagar:** lo que todavía no se pagó. Es una estimación de la factura que PaxaPOS te va a hacer al cierre del mes.
 - **"Se factura al cerrar el mes."** Estos números son una foto del mes en curso. El cierre y la factura los hace PaxaPOS a fin de mes, como siempre.
 
 > ⚠️ **Atención:** esta pantalla **no cobra nada** ni genera un débito. Solo te muestra el consumo para que lo sigas de cerca.

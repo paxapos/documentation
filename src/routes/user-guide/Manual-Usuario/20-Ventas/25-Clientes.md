@@ -46,6 +46,8 @@ En esta pantalla vas a ver:
 
 ### Datos personales
 
+<div id="datos-personales"></div>
+
 ![Casillero Nombre con el nombre Juan Pérez](images/manual/20-ventas/25-70-campo-nombre-alta.png)
 
 3. En **Nombre**, escribí el nombre del cliente. Por ejemplo: *Juan Pérez*.
@@ -64,6 +66,8 @@ En esta pantalla vas a ver:
 
 ### Contacto
 
+<div id="contacto"></div>
+
 ![Casillero Correo Electrónico](images/manual/20-ventas/25-06-campo-mail.png)
 
 7. En **Correo Electrónico**, escribí el mail. Por ejemplo: *juan.perez@ejemplo.com*.
@@ -78,6 +82,8 @@ En esta pantalla vas a ver:
 
 ### Comercial
 
+<div id="comercial"></div>
+
 ![Lista Descuento con Sin Descuento elegido](images/manual/20-ventas/25-12-campo-descuento-id.png)
 
 10. En **Descuento**, elegí un descuento si el cliente siempre lo tiene. Si no, dejá **Sin Descuento**.
@@ -87,6 +93,8 @@ En esta pantalla vas a ver:
 11. **Codigo** es opcional. Sirve si usás un número propio para cada cliente.
 
 ### Guardá
+
+<div id="guarda"></div>
 
 ![Pantalla Agregar Cliente con el botón Agregar marcado en rojo abajo a la derecha](images/manual/20-ventas/25-31-donde-esta-boton-actualizar-agregar.png)
 
@@ -148,6 +156,8 @@ A la derecha de cada cliente hay tres botones:
 
 ### Ver la ficha
 
+<div id="ver-la-ficha"></div>
+
 ![Tabla de clientes con el botón del ojo marcado en rojo](images/manual/20-ventas/25-21-donde-esta-boton-ver.png)
 
 1. Tocá el botón del **ojo** 👁️.
@@ -173,6 +183,8 @@ En la ficha vas a ver:
 
 ### Corregir los datos
 
+<div id="corregir-los-datos"></div>
+
 ![Tabla de clientes con el botón del lápiz marcado en rojo](images/manual/20-ventas/25-23-donde-esta-boton-editar.png)
 
 1. Tocá el botón del **lápiz** ✏️.
@@ -180,6 +192,8 @@ En la ficha vas a ver:
 3. Tocá **Actualizar** para guardar los cambios.
 
 ### Borrar
+
+<div id="borrar"></div>
 
 > ⚠️ **Atención:** Borrar un cliente no se puede deshacer. Revisá bien que sea el cliente correcto.
 

@@ -1,6 +1,6 @@
 # PaxaPOS — Manual de Usuario
 
-Sitio de documentación de PaxaPOS (`doc.paxapos.com`). SvelteKit 2 + Svelte 5 + Tailwind v4, prerendereado a HTML estático y servido por nginx.
+Sitio de documentación de PaxaPOS (`doc.paxapos.com`). SvelteKit 2 + Svelte 5 + Tailwind v4, prerendereado a HTML en build y servido por un server Node (`adapter-node` + `server.js`).
 
 El contenido son archivos Markdown: agregar un `.md` en `src/routes/user-guide/Manual-Usuario/` crea automáticamente la página, la entrada en el índice y el sidebar, el SEO, el índice de búsqueda y el archivo TXT para LLMs.
 
@@ -20,7 +20,7 @@ pnpm lint
 1. Crear el archivo en la carpeta de su categoría: `Manual-Usuario/<NN>-<Categoria>/<NN>-<Nombre-Del-Modulo>.md`.
    El número ordena; el nombre (sin número) define la URL: `21-Salon-de-Ventas.md` → `/user-guide/salon-de-ventas`.
    Se quitan todos los prefijos numéricos: `151-06-FAQ-Cajero.md` → `/user-guide/faq-cajero`. Dos archivos con el mismo slug cortan el build.
-   **Renombrar un archivo cambia su URL**: agregar el 301 desde la URL vieja en el `map` de `nginx-runtime.conf`.
+   **Renombrar un archivo cambia su URL**: agregar el 301 desde la URL vieja en `MANUAL_REDIRECTS` de `server/http-rules.mjs` (y el caso en `tests/fixtures/http-expectations.ts`).
 2. Empezar con un `# Título` (es el título de la página).
 3. Para anclas compartibles, poner `<div id="mi-ancla"></div>` debajo del header.
 4. Imágenes en `static/images/...` y referenciarlas como `images/...`.
@@ -48,23 +48,69 @@ scripts/
 ├── generate-ai-files.mjs     # static/llms/*.txt + files-register.json
 ├── generate-seo-files.mjs    # sitemap.xml, robots.txt, llms.txt, content-index.json…
 ├── generate-search-index.mjs # static/search-index.json
+├── generate-mcp-index.mjs    # server/mcp-index.json (índice del MCP, no se sirve como estático)
 ├── standardize-headers.mjs   # pnpm content:normalize (limpia BOM/espacios en .md)
 └── shared-utils.mjs
 static/                       # favicon, images/, drivers/ + generados (gitignored)
+server.js                     # server de producción (node server.js)
+server/http-rules.mjs         # reglas HTTP: redirects, headers, cache, /health, dotfiles
+server/mcp*.mjs               # MCP en /mcp: handler + tools (mcp.mjs), búsqueda (mcp-search), índice
+tests/                        # tests de las reglas y de integración de server.js
 ```
 
 ## Build y deploy
 
 ```bash
-pnpm build          # generate + vite build → build/
-pnpm preview
+pnpm build          # generate + vite build → build/ (client/, prerendered/, handler.js)
+pnpm start          # node server.js en http://localhost:3000 (PORT, HOST, ORIGIN)
+pnpm test           # incluye tests/server.integration.test.ts, que levanta server.js contra build/
 ```
 
-Docker (imagen nginx, puerto 8080):
+`server.js` aplica las reglas HTTP de `server/http-rules.mjs` (301 de URLs viejas, `/` → `/user-guide`,
+`/x/` y `/x.html` → `/x`, headers de seguridad y CSP, `X-Robots-Tag`, cache, `/health`, 404 para
+dotfiles) y delega el resto en el handler de SvelteKit: estáticos, páginas prerendereadas y la
+página de error con 404 real.
+
+Docker (imagen `node:22-alpine`, usuario no root, puerto 8080):
 
 ```bash
 docker build -t paxapos-docs .
 docker run -p 8080:8080 paxapos-docs
 ```
 
-`docker-compose.yml` publica el servicio detrás de Traefik. La imagen se construye en CI con `.github/workflows/docker-build.yml`. No requiere variables de entorno.
+`docker-compose.yml` publica el servicio detrás de Traefik (`doc.paxapos.com`). La imagen se construye en CI con `.github/workflows/docker-build.yml`.
+
+Variables de entorno (todas opcionales):
+
+| Variable                | Default en la imagen      | Uso                                                                |
+| ----------------------- | ------------------------- | ------------------------------------------------------------------ |
+| `PORT` / `HOST`         | `8080` / `0.0.0.0`        | Dónde escucha `server.js`                                          |
+| `ORIGIN`                | `https://doc.paxapos.com` | Origen público para SvelteKit (adapter-node)                       |
+| `OPENAI_APPS_CHALLENGE` | —                         | Si existe, `/.well-known/openai-apps-challenge` responde ese valor |
+| `MCP_INDEX_PATH`        | `server/mcp-index.json`   | Índice que lee el MCP al arrancar                                  |
+
+## MCP
+
+`https://doc.paxapos.com/mcp` es un servidor [MCP](https://modelcontextprotocol.io) público, sin login
+y de solo lectura, para que un asistente de IA (Claude, ChatGPT, Gemini CLI, Claude Code) busque y
+lea el manual. Streamable HTTP sin sesiones, respuestas JSON: solo `POST /mcp` (`GET`/`DELETE` → 405).
+
+| Tool     | Input       | Devuelve                                                                              |
+| -------- | ----------- | ------------------------------------------------------------------------------------- |
+| `search` | `{ query }` | `{ results: [{ id, title, url, text }] }`: hasta 10 secciones con un fragmento        |
+| `fetch`  | `{ id }`    | `{ id, title, text, url, metadata }`: el artículo (o la sección `#ancla`) en markdown |
+
+El `id` es `manual:<slug>` o `manual:<slug>#<ancla>`; `fetch` acepta también el slug o la URL.
+
+- **Índice**: `pnpm generate` (y por lo tanto `pnpm build`) corre `scripts/generate-mcp-index.mjs`,
+  que escribe `server/mcp-index.json` (gitignored). Cada sección `##` toma el ancla de su
+  `<div id>`; si falta, avisa y deriva una. `server.js` lo lee al arrancar y **no arranca** si falta
+  o es de otro formato (`schema_version`). Para regenerarlo solo: `pnpm generate:mcp`.
+- **Probar local**: `pnpm build && pnpm start` y, en otra terminal,
+  `npx @modelcontextprotocol/inspector --cli http://localhost:3000/mcp --transport http --method tools/list`
+  (o sin `--cli` para la UI, con transporte "Streamable HTTP").
+- CORS abierto (`*`) y sin validar `Origin`: el contenido es público y no hay credenciales. El rate
+  limit queda para el proxy.
+- **Directorios**: `server.json` (MCP Registry, `com.paxapos/manual`) y `gemini-extension.json`
+  (galería de Gemini CLI) van en la raíz, con la misma `version` que `package.json` (un test lo
+  verifica). No entran a la imagen. Guía para el usuario: `/user-guide/ia-manual-por-mcp`.

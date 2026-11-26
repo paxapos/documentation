@@ -7,11 +7,15 @@
 
 ## 🎯 ¿Qué es y para qué sirve esta guía?
 
-Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más billetes para cambio*) o cuando sacás dinero del cajón (ejemplo: *pago urgente a un proveedor o delivery*), para que no tengas diferencias al cerrar el turno.
+<div id="que-es"></div>
+
+Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más billetes para cambio*) o cuando sacás dinero del cajón (ejemplo: *el pago al repartidor*), para que no tengas diferencias al cerrar el turno.
 
 ---
 
 ## 📑 Guía Paso a Paso: ¿Cómo se usa?
+
+<div id="paso-a-paso"></div>
 
 1. En la barra superior del salón/caja o en la pantalla del arqueo activo, tocá:
    - 📥 **Ingresos:** Si estás poniendo dinero en el cajón.
@@ -21,11 +25,15 @@ Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más bil
 4. Tocá el botón **Confirmar Movimiento**.
 5. **Resultado:** El sistema actualizará el saldo esperado de la caja para que el arqueo cierre perfecto.
 
+> ⚠️ **Si la plata es para pagarle a un proveedor, no la anotes como Egreso.** El egreso del cajón no baja la deuda con el proveedor. Registrá el pago desde su factura, en [Pagar](/user-guide/pagar), con la caja abierta: si es en efectivo, ya resta de la caja. Si hacés las dos cosas, la caja descuenta la plata dos veces. Mirá [Cuál de las tres formas usar](/user-guide/pagar#cual-de-las-tres-formas-usar).
+
 > 💡 **En el Salón (nuevo) el cajón se abre solo.** Pasa al tocar **Abrir caja** y al confirmar un **Retiro** o un **Ingreso**: el cajón de dinero se abre después de que el movimiento queda guardado. Usa la impresora de cajón de tu [perfil de impresión](/user-guide/perfiles-de-impresion). En las demás pantallas el cajón no se abre solo.
 
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

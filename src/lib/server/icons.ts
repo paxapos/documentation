@@ -29,6 +29,7 @@ export const moduleIcons: Record<string, string> = {
 	'iniciar-sesion': 'lucide:log-in',
 	'recuperar-contrasena': 'lucide:key-round',
 	'guia-de-inicio-rapido': 'lucide:rocket',
+	glosario: 'lucide:book-a',
 
 	// 20-Ventas
 	'salon-de-ventas': 'lucide:utensils-crossed',
@@ -95,10 +96,11 @@ export const moduleIcons: Record<string, string> = {
 	'listado-de-cajas': 'lucide:layout-list',
 	'transacciones-de-cobro': 'lucide:receipt',
 	'digitalizar-factura-gasto': 'lucide:scan-line',
-	'factura-manual': 'lucide:receipt-text',
-	'resumen-de-deuda': 'lucide:scale',
-	pagos: 'lucide:circle-minus',
-	'historial-de-facturas': 'lucide:file-clock',
+	'cargar-gasto': 'lucide:receipt-text',
+	gastos: 'lucide:file-clock',
+	pagar: 'lucide:calendar-clock',
+	'pagos-hechos': 'lucide:circle-minus',
+	'deuda-con-proveedores': 'lucide:scale',
 	'digitalizacion-ocr': 'lucide:file-scan',
 	'historico-de-mesas': 'lucide:clock-4',
 	'tickets-fiscales': 'lucide:ticket-check',
@@ -184,6 +186,7 @@ export const moduleIcons: Record<string, string> = {
 	'ia-conectar-chatgpt': 'lucide:plug',
 	'ia-conectar-gemini': 'lucide:plug',
 	'ia-pedidos-desde-asistentes': 'lucide:shopping-bag',
+	'ia-manual-por-mcp': 'lucide:book-open',
 };
 
 const svgCache = new Map<string, string>();

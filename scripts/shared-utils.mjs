@@ -38,6 +38,7 @@ export const CONTENT_DATES_FILE = join(PROJECT_DIR, '.content-dates.json');
  */
 export function computeGitContentDates() {
 	try {
+		/** @param {string[]} args */
 		const git = (args) =>
 			execFileSync('git', args, { cwd: PROJECT_DIR, maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] })
 				.toString()
@@ -46,6 +47,7 @@ export function computeGitContentDates() {
 		const repoRoot = git(['rev-parse', '--show-toplevel']);
 		const log = git(['-c', 'core.quotepath=off', 'log', '--format=%x00%cI', '--name-only', '--', MANUAL_DIR]);
 
+		/** @type {Record<string, { modified: string, published: string }>} */
 		const dates = {};
 		for (const chunk of log.split('\0').filter(Boolean)) {
 			const [date, ...files] = chunk.split('\n').map((l) => l.trim()).filter(Boolean);
@@ -90,6 +92,7 @@ export function loadContentDates() {
  *          "37-ARCA-y-Facturación.md" → "arca-y-facturacion"
  *          "52-Buchón-Bot.md" → "buchon-bot"
  */
+/** @param {string} fileName @returns {string} */
 export function fileNameToSlug(fileName) {
 	return fileName
 		.replace(/\.\w+$/, '')        // Remover extensión (.md, .txt)
@@ -108,6 +111,7 @@ export function fileNameToSlug(fileName) {
  * Extrae el título (primer H1 o H2) de un contenido markdown.
  * Limpia emojis unicode comunes de títulos de documentación.
  */
+/** @param {string} content @returns {string} */
 export function extractTitle(content) {
 	const h1Match = content.match(/^#\s+(.+)$/m);
 	if (h1Match) {
@@ -125,9 +129,12 @@ export function extractTitle(content) {
 
 
 // ─── Búsqueda recursiva de archivos MD ───────────────────────
+/** @param {string} dir @returns {string[]} */
 export function findAllMarkdownFiles(dir) {
+	/** @type {string[]} */
 	const files = [];
 
+	/** @param {string} currentDir */
 	function searchDir(currentDir) {
 		try {
 			const items = readdirSync(currentDir);
@@ -141,7 +148,7 @@ export function findAllMarkdownFiles(dir) {
 				}
 			}
 		} catch (error) {
-			console.warn(`Error leyendo directorio ${currentDir}:`, error.message);
+			console.warn(`Error leyendo directorio ${currentDir}:`, /** @type {Error} */ (error).message);
 		}
 	}
 
@@ -151,7 +158,7 @@ export function findAllMarkdownFiles(dir) {
 
 // ─── Limpieza de contenido ───────────────────────────────────
 
-/** Elimina etiquetas HTML preservando saltos de línea semánticos */
+/** Elimina etiquetas HTML preservando saltos de línea semánticos @param {string} text */
 export function stripHtml(text) {
 	return text
 		.replace(/<div[^>]*>/g, '\n')
@@ -162,7 +169,7 @@ export function stripHtml(text) {
 		.replace(/<[^>]*>/g, '');
 }
 
-/** Elimina sintaxis Markdown preservando el texto plano */
+/** Elimina sintaxis Markdown preservando el texto plano @param {string} text */
 export function stripMarkdown(text) {
 	return text
 		.replace(/^#{1,6}\s+(.+)$/gm, '$1')
@@ -175,7 +182,7 @@ export function stripMarkdown(text) {
 		.replace(/^\s*(\d+)\.\s+/gm, '$1. ');
 }
 
-/** Normaliza whitespace excesivo */
+/** Normaliza whitespace excesivo @param {string} text */
 export function normalizeWhitespace(text) {
 	return text
 		.replace(/\n{3,}/g, '\n\n')
@@ -186,7 +193,7 @@ export function normalizeWhitespace(text) {
 		.trim();
 }
 
-/** Decodifica entidades HTML comunes */
+/** Decodifica entidades HTML comunes @param {string} text @returns {string} */
 export function decodeHtmlEntities(text) {
 	return text
 		.replace(/&nbsp;/g, ' ')
@@ -195,14 +202,19 @@ export function decodeHtmlEntities(text) {
 		.replace(/&gt;/g, '>')
 		.replace(/&quot;/g, '"')
 		.replace(/&apos;/g, "'")
-		.replace(/&#(\d+);/g, (_match, dec) => String.fromCharCode(dec))
-		.replace(/&#x([0-9a-f]+);/gi, (_match, hex) => String.fromCharCode(parseInt(hex, 16)));
+		.replace(/&#(\d+);/g, (/** @type {string} */ _match, /** @type {string} */ dec) =>
+			String.fromCharCode(Number(dec)),
+		)
+		.replace(/&#x([0-9a-f]+);/gi, (/** @type {string} */ _match, /** @type {string} */ hex) =>
+			String.fromCharCode(parseInt(hex, 16)),
+		);
 }
 
 /**
  * Pipeline completo de limpieza: HTML → entidades → Markdown → whitespace.
  * Equivalente a la antigua normalizeAndCleanContent pero descompuesta.
  */
+/** @param {string} rawMarkdown @returns {string} */
 export function cleanContentForTxt(rawMarkdown) {
 	let text = rawMarkdown.normalize('NFC');
 	text = decodeHtmlEntities(text);

@@ -26,8 +26,8 @@
 <div id="para-que-se-usan-los-centros-de-costo"></div>
 
 - **Tablero General**: cuando hay centros, arriba aparece una pestaña por cada uno. Así ves los números de cada área por separado. Mirá [Tablero General](/user-guide/tablero-general).
-- **Cargar una factura**: en [Factura Manual](/user-guide/factura-manual) podés elegir el **PDV / Centro de costo (opcional)** del gasto.
-- **Historial de Facturas y deuda**: la pantalla de gastos muestra la deuda de cada centro y deja filtrar por uno. Mirá [Historial de Facturas](/user-guide/historial-de-facturas).
+- **Cargar una factura de un proveedor**: en [Cargar gasto](/user-guide/cargar-gasto), dentro de **Más datos**, podés elegir el **PDV / Centro de costo** del gasto.
+- **Deuda con proveedores**: muestra la deuda de cada centro y deja filtrar por uno. Mirá [Deuda con proveedores](/user-guide/deuda-con-proveedores#deuda-por-local-o-sector).
 - **Usuarios**: cada centro tiene sus usuarios. Quien está asignado a un centro ve solo las compras y ventas de su área. Los usuarios con el permiso de ver todo siguen viendo todo.
 
 ---

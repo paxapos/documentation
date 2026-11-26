@@ -33,6 +33,8 @@ Esta guía tiene tres partes: qué tocar en la **Configuración general**, qué 
 
 ## ⚙️ Parte 1: Configuración general
 
+<div id="parte-1-configuracion-general"></div>
+
 ### 📍 Paso 1: Entrá a la Configuración general
 
 <div id="paso-1-entra-a-la-configuracion-general"></div>
@@ -141,6 +143,8 @@ Es la carta que ve el cliente cuando entra a la dirección de tu comercio. Si te
 ---
 
 ## 📋 Parte 2: El menú
+
+<div id="parte-2-el-menu"></div>
 
 ### 📍 Paso 8: Entrá al Menú
 

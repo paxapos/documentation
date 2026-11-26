@@ -5,7 +5,7 @@
 Cómo descargar e instalar el controlador para impresoras térmicas genéricas (POS 80mm y POS 58mm)
 
 En esta guía aprenderás cómo descargar e instalar el controlador (driver) para impresoras térmicas genéricas de 80 mm o 58 mm.
-Este proceso es necesario para que puedas imprimir tickets en tu restaurante, cafetería o bar desde Fudo, utilizando impresoras POS.
+Este proceso es necesario para que puedas imprimir tickets en tu restaurante, cafetería o bar desde PaxaPOS, utilizando impresoras POS.
 
 Si nunca realizaste este tipo de instalación, no te preocupes: aquí te explicamos el paso a paso, de forma sencilla y sin tecnicismos, además, te brindamos el siguiente video explicativo.
 

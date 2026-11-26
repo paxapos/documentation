@@ -75,6 +75,8 @@ Sale un renglón por empleado, ordenado por apellido. Solo aparecen quienes tien
 
 ### Cómo se decide si llegó tarde
 
+<div id="como-se-decide-si-llego-tarde"></div>
+
 El sistema compara la hora de ingreso con la del turno. Se fija solo en la hora del día. Por ejemplo, con un turno de 08:00 y 10 minutos de tolerancia:
 
 - Llegó 07:55: **Puntual**.

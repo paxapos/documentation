@@ -13,7 +13,7 @@ Tus clientes te pueden hacer pedidos **desde su asistente de inteligencia artifi
 
 - El pedido entra a PaxaPos como cualquier pedido online, con los precios de tu menú.
 - El cliente recibe el **total que calcula PaxaPos** y, si cobrás online, el **link de pago o el QR**.
-- Cuando paga, la **factura sale sola** (si tenés factura electrónica) y el cliente la ve en la misma conversación.
+- Cuando paga, la **factura a tu cliente sale sola** (si tenés factura electrónica) y él la ve en la misma conversación.
 
 Cada comercio tiene **su propia dirección**. El cliente la agrega una sola vez como conector en su asistente, y desde ahí ve solo **tu** comercio.
 
@@ -82,11 +82,11 @@ Si el cliente quiere **Factura A** o una factura a su nombre, le pasa al asisten
 
 ---
 
-## 🧾 La factura
+## 🧾 La factura a tu cliente
 
 <div id="factura"></div>
 
-- Si tenés **factura electrónica** activa, la factura se emite **sola** cuando se aprueba el pago online, igual que en pedimelo. No tenés que hacer nada.
+- Si tenés **factura electrónica** activa, la factura a tu cliente se emite **sola** cuando se aprueba el pago online, igual que en pedimelo. No tenés que hacer nada.
 - Sin datos fiscales del cliente, sale a **Consumidor Final**.
 - Si tu comercio es **responsable inscripto** y el cliente pasa el CUIT de un responsable inscripto o de un monotributista, sale **Factura A**. Si tu comercio es monotributista, sale **Factura C**, como siempre.
 - Si no tenés factura electrónica, el asistente le dice al cliente que el comercio no la emite automáticamente.
@@ -119,5 +119,7 @@ El asistente no calcula el costo del envío. Si el pedido es a domicilio y todav
 ---
 
 ## 📞 ¿Necesitás ayuda?
+
+<div id="ayuda"></div>
 
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

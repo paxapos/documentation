@@ -37,6 +37,8 @@ Debajo tenés dos pestañas:
 
 ### Buscar a alguien
 
+<div id="buscar-a-alguien"></div>
+
 Tocá la barra **Filtros** para abrirla. Se abre sola si ya buscaste algo.
 
 - **Nombre**: escribí una parte del nombre. Por ejemplo: *Juan*.
@@ -47,6 +49,8 @@ Tocá la barra **Filtros** para abrirla. Se abre sola si ya buscaste algo.
 Tocá el botón azul **Buscar**. Para volver a ver todos, tocá **Limpiar filtros**. Ese botón aparece solo cuando hay un filtro puesto.
 
 ### Qué muestra cada columna
+
+<div id="que-muestra-cada-columna"></div>
 
 - **Foto**: la foto de la persona. Si no tiene, ves un dibujito gris.
 - **Nombre**: apellido y nombre. Abajo, el número de legajo si lo cargaste. Si la persona no tiene apellido cargado, ves solo el nombre. Pasa igual en las demás listas y en los reportes.
@@ -61,6 +65,8 @@ Tocá el título **Nombre**, **DNI**, **Departamento** o **Contacto** para orden
 Si no hay resultados, la pantalla dice **No se encontraron empleados**. En la pestaña de bajas dice **No hay empleados dados de baja**.
 
 ### Los botones de cada renglón
+
+<div id="los-botones-de-cada-renglon"></div>
 
 A la derecha de cada empleado hay estos botones:
 
@@ -88,12 +94,16 @@ Solo son obligatorios el **Nombre** y el **Apellido**. El resto lo podés comple
 
 ### Cuadro Foto
 
+<div id="cuadro-foto"></div>
+
 - **Sacar Foto**: el botón verde saca la foto con la cámara de tu equipo. El navegador te pide permiso la primera vez.
 - **O subir archivo**: elegí una foto que ya tengas guardada.
 
 La foto sirve para reconocer a la persona en la pantalla de [Empleados Trabajando](/user-guide/empleados-trabajando).
 
 ### Cuadro Datos Personales
+
+<div id="cuadro-datos-personales"></div>
 
 - **Nombre** y **Apellido**: obligatorios. Por ejemplo: *Juan* y *Pérez*.
 - **DNI**: solo números, sin puntos. Por ejemplo: *30123456*. El sistema no deja cargar dos empleados con el mismo DNI.
@@ -102,11 +112,15 @@ La foto sirve para reconocer a la persona en la pantalla de [Empleados Trabajand
 
 ### Cuadro Jornada y Turnos
 
+<div id="cuadro-jornada-y-turnos"></div>
+
 - **Horas Semanales**: cuántas horas trabaja por semana. Por ejemplo: *40*. El [Reporte Mensual](/user-guide/reporte-mensual-fichaje) lo usa para calcular las horas esperadas.
 - **Valor hora (estimación de costo)**: el precio de la hora de trabajo. Solo lo ves si tenés el permiso de Recursos Humanos. Sirve para estimar el costo del personal. No reemplaza la liquidación oficial.
 - **Turnos Asignados**: tildá los turnos que hace. Se usan para saber si llegó tarde.
 
 ### Cuadro Usuario del Sistema
+
+<div id="cuadro-usuario-del-sistema"></div>
 
 - Elegí un usuario si la persona también entra al sistema o usa la app de fichaje. Con **-- Sin usuario asignado --** no se vincula ninguno.
 - Un mismo usuario no puede estar en dos empleados.
@@ -115,9 +129,13 @@ La foto sirve para reconocer a la persona en la pantalla de [Empleados Trabajand
 
 ### Cuadro Observaciones
 
+<div id="cuadro-observaciones"></div>
+
 - Escribí lo que quieras anotar sobre el empleado. Es texto libre.
 
 ### Cuadro Datos para RRHH y Liquidación
+
+<div id="cuadro-datos-para-rrhh-y-liquidacion"></div>
 
 Lo ves solo con el permiso de Recursos Humanos.
 
@@ -163,6 +181,8 @@ Más abajo la ficha tiene estos cuadros:
 - **Registros de Fichadas (Ingresos y Egresos)**: cada fichada de la persona, la más nueva primero.
 
 ### La tabla de fichadas
+
+<div id="la-tabla-de-fichadas"></div>
 
 - **Fecha**, **Ingreso (fichada)** y **Egreso (fichada)**: el día y la hora de cada marca. Con una foto de cuando fichó, si hay.
 - **Created del Registro**: la hora en que el sistema recibió la marca. Si es muy distinta de la hora de la fichada, alguien la corrigió.

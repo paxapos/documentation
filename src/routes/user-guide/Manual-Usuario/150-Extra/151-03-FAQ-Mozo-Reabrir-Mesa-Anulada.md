@@ -7,11 +7,15 @@
 
 ## 🎯 ¿Qué es y para qué sirve esta guía?
 
+<div id="que-es"></div>
+
 Te permite recuperar una mesa que fue cerrada o anulada por equivocación, volviendo a colocarla activa en el mapa del salón con todos los productos que ya se habían comandado.
 
 ---
 
 ## 📑 Guía Paso a Paso: ¿Cómo se soluciona?
+
+<div id="paso-a-paso"></div>
 
 1. Ingresá a **Menú principal** → **Finanzas** → **Caja** → **Arqueos de Caja** (o a **Finanzas** → **Facturación AFIP** → **Histórico de Mesas**).
 2. En la lista de movimientos del turno o historial, buscá la mesa que se cerró o anuló.
@@ -22,6 +26,8 @@ Te permite recuperar una mesa que fue cerrada o anulada por equivocación, volvi
 ---
 
 ## ⚠️ ¿Qué hacer si algo no sale bien? (Problemas Comunes)
+
+<div id="problemas-comunes"></div>
 
 | ¿Qué te pasa? | ¿Por qué puede ser? | ¿Cómo se soluciona? |
 |---|---|---|

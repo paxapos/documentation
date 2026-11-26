@@ -241,6 +241,7 @@ function generateLlmsTxt(contentIndex) {
 	const lines = [
 		'# PaxaPOS LLM Index',
 		`# Updated: ${contentIndex.generated_at}`,
+		`# MCP: ${BASE_SITE_URL}/mcp`,
 		`${BASE_SITE_URL}/llms/index.txt`,
 	];
 

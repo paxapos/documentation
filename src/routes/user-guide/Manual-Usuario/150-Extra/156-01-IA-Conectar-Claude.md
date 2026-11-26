@@ -109,6 +109,8 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 
 ### ¿Cuál elijo?
 
+<div id="cual-elijo"></div>
+
 - **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, Claude lo busca, mira cómo se usa y lo ejecuta por su cuenta.
 - **Plan Free de Claude:** admite **un solo** conector personalizado. Usá el de **Todo**.
 - **Si vas a trabajar siempre en lo mismo**, el del área hace que Claude responda más rápido y con menos vueltas. Por ejemplo: **Salón** para el mozo o el encargado de turno, **Clientes** para quien atiende reservas y pedidos online, **Caja** para quien cobra y cierra, **Compras** para quien pide mercadería y recibe, **Finanzas** para quien carga facturas y paga a proveedores.
@@ -117,6 +119,8 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 - Si le pedís a Claude algo que no está en el conector que estás usando, PaxaPos le avisa en cuál está y con qué dirección agregarlo.
 
 ### Si ya tenías conectores cargados
+
+<div id="si-ya-tenias-conectores-cargados"></div>
 
 Las direcciones de siempre (`/mcp`, `/mcp/salon`, `/mcp/caja`, `/mcp/compras`, `/mcp/catalogo` y `/mcp/rrhh`) **siguen funcionando**, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:
 
@@ -128,11 +132,15 @@ Las direcciones de siempre (`/mcp`, `/mcp/salon`, `/mcp/caja`, `/mcp/compras`, `
 
 ### En equipos (Claude Team o Enterprise)
 
+<div id="en-equipos-claude-team-o-enterprise"></div>
+
 En un plan de equipo, los conectores personalizados **los agrega un Owner** de la organización, una sola vez, en **Organization settings** → **Connectors** (**Add** → **Custom** → **Web**, con la URL del conector).
 
 Después, **cada miembro** entra a **Settings** → **Connectors**, toca **Connect** al lado del conector de PaxaPos e inicia sesión con **su** usuario de PaxaPos. Claude trabaja con los permisos de cada uno.
 
 ### Claude Code
+
+<div id="claude-code"></div>
 
 ```bash
 claude mcp add --transport http paxapos-compras https://api.paxapos.com/mcp/compras
@@ -178,5 +186,7 @@ La primera vez se abre el navegador para iniciar sesión en PaxaPos. Cambiá `co
 ---
 
 ## 📞 ¿Necesitás ayuda?
+
+<div id="ayuda"></div>
 
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

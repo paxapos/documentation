@@ -178,7 +178,7 @@ Cerrá una orden cuando ya no esperás nada más de ella, aunque falte recibir o
 
 Al cerrarla:
 
-- El proveedor ya no puede subir facturas nuevas por su link. Las notas de crédito sí las puede subir.
+- El proveedor ya no puede subir facturas nuevas por su link. Las notas de crédito que te hace el proveedor sí las puede subir.
 - Lo que ya se debe no desaparece. La orden sigue en **Falta pagar** y podés pagarla igual.
 - Si hace falta, la podés abrir de nuevo: en el detalle de la orden, tocá **Más ▾** y después **Reabrir la orden**.
 

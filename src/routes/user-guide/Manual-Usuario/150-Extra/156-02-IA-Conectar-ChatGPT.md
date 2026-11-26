@@ -121,6 +121,8 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 
 ### ¿Cuál elijo?
 
+<div id="cual-elijo"></div>
+
 - **Si no sabés cuál, usá el de Todo** (`https://api.paxapos.com/mcp`). Trae las herramientas de uso diario (ventas del día, mesas abiertas, caja, compras, gastos, proveedores, stock, menú, clientes y quién está trabajando) y, cuando le pedís algo que no está a mano, ChatGPT lo busca, mira cómo se usa y lo ejecuta por su cuenta.
 - **Si tu plan de ChatGPT admite un solo conector**, también este: el de **Todo**.
 - **Si vas a trabajar siempre en lo mismo**, el del área hace que ChatGPT responda más rápido y con menos vueltas. Por ejemplo: **Salón** para el mozo o el encargado de turno, **Clientes** para quien atiende reservas y pedidos online, **Caja** para quien cobra y cierra, **Compras** para quien pide mercadería y recibe, **Finanzas** para quien carga facturas y paga a proveedores.
@@ -129,6 +131,8 @@ PaxaPos no tiene un solo conector: tiene **uno por trabajo**, con las herramient
 - Si le pedís algo que no está en el conector que usás, PaxaPos le avisa a ChatGPT en cuál está y con qué dirección agregarlo.
 
 ### Si ya tenías conectores cargados
+
+<div id="si-ya-tenias-conectores-cargados"></div>
 
 Las direcciones de siempre (`/mcp`, `/mcp/salon`, `/mcp/caja`, `/mcp/compras`, `/mcp/catalogo` y `/mcp/rrhh`) **siguen funcionando**, pero ahora cada una trae las herramientas de su trabajo. Algunas se mudaron:
 
@@ -236,5 +240,7 @@ Si querés volver a usarla, repetí los pasos de esta guía.
 ---
 
 ## 📞 ¿Necesitás ayuda?
+
+<div id="ayuda"></div>
 
 - 📱 **Soporte Directo WhatsApp**: <a href="{{WHATSAPP_URL}}?" target="_blank">{{WHATSAPP_DISPLAY}}</a>

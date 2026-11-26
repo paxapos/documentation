@@ -182,8 +182,8 @@ Con la caja abierta, arriba a la derecha vas a ver un botón con el **nombre de 
 
 Lo que dice el aviso depende de lo que tengas elegido en **Al cerrar o facturar mesa** de tu [Perfil de Impresión](/user-guide/perfiles-de-impresion) (si no usás perfiles, en [Configuración General](/user-guide/configuracion-general#impresion)):
 
-- **Imprimir Remito:** el remito sale solo y el aviso dice *Imprimiendo el remito…*. Si el cliente pide factura, tocá **Imprimir Ticket Fiscal**.
-- **Directo a la Fiscal:** el ticket fiscal sale solo y el aviso dice *Emitiendo el ticket fiscal…*. Si el cliente pide el remito, tocá **Imprimir Remito**.
+- **Imprimir Remito:** el remito sale solo y el aviso dice *Imprimiendo el remito…*. Si tu cliente pide factura, tocá **Imprimir Ticket Fiscal** para emitírsela.
+- **Directo a la Fiscal:** el ticket fiscal (la factura a tu cliente) sale solo y el aviso dice *Emitiendo el ticket fiscal…*. Si el cliente pide el remito, tocá **Imprimir Remito**.
 - **No hacer nada:** el aviso pregunta *¿Querés un comprobante?* y ofrece **Imprimir Remito**, **Imprimir Ticket Fiscal** o **Listo, sin imprimir**.
 
 Tocá **Listo** (o **Listo, sin imprimir**) para seguir con la próxima venta. Con el teclado, **R** imprime el remito y **F** el ticket fiscal.

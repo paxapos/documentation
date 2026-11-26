@@ -19,6 +19,7 @@
 - Tu usuario necesita el permiso de configurar **Cobros**. Fijate en [Permisos por Rol](/user-guide/permisos-por-rol).
 - Esta pantalla **guarda sola**. Apenas tildás una casilla o cambiás un dato de un renglón, queda guardado.
 - Por eso, tocá con cuidado: el cambio vale en la caja desde ese momento.
+- Aunque se llama **Medios de cobro**, también es la lista de medios con los que le pagás a un proveedor. Son los que aparecen en **¿Cómo se paga?** de [Pagar](/user-guide/pagar) y en **¿Cómo lo pagaste?** de [Cargar gasto](/user-guide/cargar-gasto).
 
 ---
 
