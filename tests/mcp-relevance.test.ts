@@ -45,6 +45,19 @@ const CASES: ReadonlyArray<readonly [string, readonly string[]]> = [
 	['proveedores', ['proveedores']],
 	['hacer un descuento', ['descuentos']],
 	['reabrir una mesa cerrada', ['faq-mozo-reabrir-mesa-anulada']],
+	// "Compras y pagos" (paxapos/documentation#247): la factura de un proveedor es un gasto.
+	['cómo cargar una factura de un proveedor', ['cargar-gasto']],
+	['subir factura de proveedor', ['cargar-gasto']],
+	['cargar gasto', ['cargar-gasto']],
+	['pagar a un proveedor', ['pagar', 'pagos-hechos']],
+	['cuánto le debo a los proveedores', ['deuda-con-proveedores']],
+];
+
+/** Consultas cuya respuesta tiene que ser el primer resultado, no solo estar en el top 3. */
+const FIRST: ReadonlyArray<readonly [string, string]> = [
+	['cómo cargar una factura de un proveedor', 'manual:cargar-gasto'],
+	['subir factura de proveedor', 'manual:cargar-gasto'],
+	['cargar gasto', 'manual:cargar-gasto'],
 ];
 
 /** Consultas de configuración: ahí la sección grande de Configuración general sí puede salir. */
@@ -63,6 +76,11 @@ describe('relevancia: tabla de regresión (top 3)', () => {
 
 	it.each(CASES.map(([q]) => q))('"%s" no trae la sección gigante de configuración', (query) => {
 		expect(top3(query)).not.toContain(CONFIG_GIGANTE);
+	});
+
+	it.each(FIRST)('"%s" → %s primero', (query, prefix) => {
+		const ids = top3(query);
+		expect(ids[0]?.startsWith(prefix), ids.join(', ')).toBe(true);
 	});
 
 	it.each(CONFIG_QUERIES)('"%s" (de configuración) → configuracion-general', (query) => {
