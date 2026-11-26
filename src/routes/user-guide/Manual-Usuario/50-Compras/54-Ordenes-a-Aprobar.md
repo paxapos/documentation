@@ -4,7 +4,7 @@
 
 > **¿Dónde está en el sistema?:** Menú principal → **Compras** → **Órdenes a aprobar**
 
-> **¿Quién lo usa?: Proveedores que tienen órdenes de compra pendientes de aprobación.**
+> **¿Quién lo usa?:** Dueños, encargados y quien autoriza las compras en el comercio (por ejemplo, el rol **Compras: autoriza órdenes y pagos**). Los proveedores no entran a esta pantalla.
 
 > 🎯 **¿Para qué sirve esto?**
 > Si tu comercio pide aprobar las compras, cada orden de compra nueva queda esperando acá.

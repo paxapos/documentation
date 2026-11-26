@@ -169,7 +169,7 @@ Se abre la pantalla **Agregar Mesa**. Completala así:
 - **Es Reserva**: tildalo si es una reserva.
 - **Checkin** y **Checkout**: la fecha y hora de entrada y de salida.
 - **Cliente**: elegí uno si querés. Puede quedar sin elegir.
-- **Fecha de Facturación**: cuándo se cerró la cuenta.
+- **Fecha de Facturación**: cuándo se cerró la cuenta. No quiere decir que se haya emitido una factura de ARCA.
 - **Importe Total**: cuánto se cobró. Por ejemplo: *1500*.
 - **Salon Mesa**: la mesa del salón donde estuvo.
 - **Estado**: por ejemplo **Cobrada**. Al elegir **Cobrada** aparecen dos casilleros más.

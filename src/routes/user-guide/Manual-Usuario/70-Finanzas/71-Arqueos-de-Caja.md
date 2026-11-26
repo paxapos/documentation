@@ -83,7 +83,7 @@ Cada renglón es un turno terminado. Las columnas dicen:
 - **Saldo con Arqueo Ant.**: diferencia entre lo que quedó al cerrar el turno anterior y lo que se puso al abrir este.
 - **Saldo de caja**: diferencia entre lo que debía haber y lo que se contó. Verde es sin diferencia y rojo es diferencia grande.
 - **Cobros**, **Pagos**, **Ingresos** y **Egresos**: el movimiento de efectivo del turno.
-- **Cobrado**, **Facturado** y **Anulado**: los totales de ventas del turno.
+- **Cobrado**, **Facturado** y **Anulado**: los totales de ventas del turno. **Facturado** no quiere decir factura de ARCA: son totales de mesas, tengan factura o no.
 - **Creador**: quién abrió el turno.
 - **Acciones**: el botón de tres puntitos.
 
@@ -158,7 +158,7 @@ Arriba a la izquierda dice **Arqueo Abierto** o **Arqueo Cerrado**. Después ves
 - **Movimientos de Efectivo**: el **Importe Inicial**, más los cobros y los ingresos, menos los pagos y los retiros.
 - **SALDO Faltante**: cuánto falta para llegar al importe final que cargues al cerrar.
 - **Información del Turno**: quién lo abrió y cuándo.
-- **Resumen de Ventas**: lo facturado, las mesas abiertas y las anulaciones.
+- **Resumen de Ventas**: **Facturado Total Mesas**, las mesas abiertas y las anulaciones. **Facturado** acá es lo **cobrado** en esta caja, con o sin factura de ARCA. Mirá [la diferencia con Abiertas Por Usuario](/user-guide/faq-cajero-diferencia-facturado-vs-abiertas).
 - **Detalle de Movimientos**: cada ingreso, egreso y retiro del turno.
 - **¿Por qué no cierra?**: te ayuda a encontrar diferencias.
 
@@ -199,11 +199,13 @@ Estos botones aparecen solo mientras el turno está abierto.
 
 - **Monto**: cuánta plata sale. Por ejemplo: *2000*.
 - **A Caja (opcional)**: si la plata va a otra caja, elegila. Esa caja recibe el ingreso sola. Si no, dejá **Sin especificar**.
-- **Observación**: el motivo. Por ejemplo: *Pago a un proveedor*.
+- **Observación**: el motivo. Por ejemplo: *Depósito en el banco*.
 - **Registrar Retiro**: anota el retiro de verdad.
 - **Cancelar**: cierra la ventanita sin anotar nada.
 
 > ⚠️ **Atención:** **Registrar Ingreso** y **Registrar Retiro** cambian la plata de la caja. Tocalos solo con movimientos reales.
+
+> ⚠️ **Atención:** para pagarle a un proveedor **no uses Retiro**. El retiro no baja la deuda con el proveedor. Registrá el pago desde su factura, en [Pagar](/user-guide/pagar), con tu caja abierta: si es en efectivo, ya resta de esta caja. Mirá [Cuál de las tres formas usar](/user-guide/pagar#cual-de-las-tres-formas-usar).
 
 ### Acciones
 

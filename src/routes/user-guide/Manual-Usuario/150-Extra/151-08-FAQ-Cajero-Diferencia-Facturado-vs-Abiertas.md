@@ -12,6 +12,7 @@
 En la pantalla del arqueo de caja, dentro de la sección **Resumen de Ventas**, vas a encontrar dos totales principales:
 
 1. **Facturado Total Mesas:** Es la suma total del dinero de **todas las mesas que cobraste en tu caja** durante tu turno. No importa quién atendió o abrió la mesa; si la cobraste en tu caja, suma en este casillero.
+   **Ojo:** acá **Facturado** quiere decir **cobrado**. No es lo que facturaste ante ARCA: suma las mesas cobradas, tengan factura electrónica o no.
 2. **[X] Abiertas Por Usuario:** Es el monto total y la cantidad de mesas que **abriste vos con tu usuario** dentro del horario de tu turno de caja.
 
 ---

@@ -74,7 +74,7 @@ Cuenta los usos del asistente, la lectura de facturas por foto, las respuestas p
 Debajo de la tabla está el resumen:
 
 - **Ya pagaste:** lo que ya se descontó, como la comisión de MercadoPago en cada cobro.
-- **Te queda por pagar:** lo que todavía no se pagó. Es una estimación de lo que vas a recibir al cierre.
+- **Te queda por pagar:** lo que todavía no se pagó. Es una estimación de la factura que PaxaPOS te va a hacer al cierre del mes.
 - **"Se factura al cerrar el mes."** Estos números son una foto del mes en curso. El cierre y la factura los hace PaxaPOS a fin de mes, como siempre.
 
 > ⚠️ **Atención:** esta pantalla **no cobra nada** ni genera un débito. Solo te muestra el consumo para que lo sigas de cerca.

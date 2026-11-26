@@ -17,11 +17,11 @@ El **Salón de Ventas** (también llamado **Adición**) es la pantalla donde se 
 2. **Cargar los productos** que pide el cliente y **comandar** (mandar el pedido a cocina o barra).
 3. **Cerrar la mesa** cuando piden la cuenta e imprimir el **remito** (la cuenta).
 4. **Cobrar** con uno o varios medios de pago.
-5. **Emitir la factura** con CAE cuando el cliente la necesita (por ejemplo, una **Factura A**).
+5. **Emitir la factura a tu cliente**, con CAE, cuando la necesita (por ejemplo, una **Factura A**).
 6. Hacer el **Checkout** para **liberar la mesa**.
 
 > 🧭 **El recorrido completo de una mesa es:**
-> Abrir mesa → Cargar productos → **Comandar** → **Cerrar** → Imprimir remito → **Cobrar** → **Emitir** factura (solo si hace falta) → **Checkout**
+> Abrir mesa → Cargar productos → **Comandar** → **Cerrar** → Imprimir remito → **Cobrar** → **Emitir** la factura a tu cliente (solo si hace falta) → **Checkout**
 
 ---
 
@@ -34,6 +34,7 @@ El **Salón de Ventas** (también llamado **Adición**) es la pantalla donde se 
 - Para cobrar en efectivo o con tarjeta cargada a mano, tener la **caja abierta** (ver [Paso 2: Abrí la caja](#paso-2-abri-la-caja)).
 - Para imprimir comandas, remitos y facturas, tener **Fiscalberry** abierto en la computadora del local (ver [Gestión de Impresoras](/user-guide/impresoras)).
 - Para facturar electrónicamente, tener el **punto de venta** cargado (ver [Puntos de Venta](/user-guide/puntos-de-venta-pdv)).
+- ¿Buscás cargar una factura que te hizo un proveedor? Mirá [Cargar gasto](/user-guide/cargar-gasto).
 
 ---
 
@@ -305,11 +306,11 @@ Los medios de pago se dan de alta en **Configuración** → **Tablas maestras** 
 
 ---
 
-### Paso 8: Emití la factura (solo si hace falta)
+### Paso 8: Emití la factura a tu cliente (solo si hace falta)
 
 <div id="paso-8-emiti-la-factura"></div>
 
-Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** de la vista **Remito**:
+Si tu cliente te pide factura, emitísela desde la sección **🧾 Factura Fiscal** de la vista **Remito**:
 
 - **Emitir:** hace la factura electrónica en ARCA (con **CAE**).
 - **Imprimir:** hace la factura y además la imprime por **Fiscalberry**.
@@ -324,7 +325,7 @@ Si el cliente te pide factura, hacela desde la sección **🧾 Factura Fiscal** 
 2. En **🧾 Factura Fiscal**, tocá **Imprimir** o **Emitir**.
 3. Como el cliente es **Responsable Inscripto**, la factura sale **A**. Si la mesa no tiene cliente, o el cliente no es Responsable Inscripto, la factura **no** sale A.
 
-> ⚠️ **Atención:** Revisá bien el cliente antes de facturar. Una factura mal hecha no se borra: hay que anularla con una **Nota de Crédito**.
+> ⚠️ **Atención:** Revisá bien el cliente antes de facturar. Una factura mal hecha no se borra: hay que anularla con una **Nota de Crédito** que emitís vos a tu cliente. No es la nota de crédito que te hace un proveedor (esa se carga en [Cargar gasto](/user-guide/cargar-gasto#si-es-una-nota-de-credito-del-proveedor)).
 
 ---
 

@@ -9,7 +9,7 @@
 
 <div id="que-es"></div>
 
-Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más billetes para cambio*) o cuando sacás dinero del cajón (ejemplo: *pago urgente a un proveedor o delivery*), para que no tengas diferencias al cerrar el turno.
+Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más billetes para cambio*) o cuando sacás dinero del cajón (ejemplo: *el pago al repartidor*), para que no tengas diferencias al cerrar el turno.
 
 ---
 
@@ -24,6 +24,8 @@ Te enseña a registrar cuando ponés dinero extra en la caja (ejemplo: *más bil
 3. En la casilla **Motivo o Concepto**, explicá brevemente la causa (ejemplo: *"Fondo para cambio inicial"* o *"Pago a repartidor"*).
 4. Tocá el botón **Confirmar Movimiento**.
 5. **Resultado:** El sistema actualizará el saldo esperado de la caja para que el arqueo cierre perfecto.
+
+> ⚠️ **Si la plata es para pagarle a un proveedor, no la anotes como Egreso.** El egreso del cajón no baja la deuda con el proveedor. Registrá el pago desde su factura, en [Pagar](/user-guide/pagar), con la caja abierta: si es en efectivo, ya resta de la caja. Si hacés las dos cosas, la caja descuenta la plata dos veces. Mirá [Cuál de las tres formas usar](/user-guide/pagar#cual-de-las-tres-formas-usar).
 
 > 💡 **En el Salón (nuevo) el cajón se abre solo.** Pasa al tocar **Abrir caja** y al confirmar un **Retiro** o un **Ingreso**: el cajón de dinero se abre después de que el movimiento queda guardado. Usa la impresora de cajón de tu [perfil de impresión](/user-guide/perfiles-de-impresion). En las demás pantallas el cajón no se abre solo.
 
