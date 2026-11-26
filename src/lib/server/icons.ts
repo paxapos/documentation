@@ -29,6 +29,7 @@ export const moduleIcons: Record<string, string> = {
 	'iniciar-sesion': 'lucide:log-in',
 	'recuperar-contrasena': 'lucide:key-round',
 	'guia-de-inicio-rapido': 'lucide:rocket',
+	glosario: 'lucide:book-a',
 
 	// 20-Ventas
 	'salon-de-ventas': 'lucide:utensils-crossed',

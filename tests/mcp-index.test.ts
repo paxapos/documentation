@@ -27,9 +27,9 @@ const { index, warnings } = buildMcpIndex({ contentDates: {}, now: fixedDate });
 const ctx = { baseUrl: 'https://doc.paxapos.com', slug: 'demo' };
 
 describe('buildMcpIndex (manual real)', () => {
-	it('un artículo por cada .md (87)', () => {
+	it('un artículo por cada .md (88)', () => {
 		expect(index.articulos).toHaveLength(countMarkdown(MANUAL));
-		expect(index.articulos).toHaveLength(87);
+		expect(index.articulos).toHaveLength(88);
 	});
 
 	it('formato: schema_version, version (hash), base_url y lo que valida el server', () => {
