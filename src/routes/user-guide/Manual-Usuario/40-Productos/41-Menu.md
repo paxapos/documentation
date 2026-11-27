@@ -13,6 +13,8 @@
 > 1. Creá las [Categorías](/user-guide/categorias) y las [Variantes](/user-guide/variantes-grupo-sabores). No importa el orden.
 > 2. Cargá los productos en el menú (esta guía).
 
+> 💡 **Atajo con IA:** si ya tenés tu carta en PDF, Excel o foto, un asistente de IA (Claude o ChatGPT) puede cargarla por vos y también reordenar tu menú. Mirá [Cargar y reorganizar tu menú con un asistente](/user-guide/ia-cargar-y-reorganizar-el-menu).
+
 ---
 
 ## 🔑 Antes de empezar
