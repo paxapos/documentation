@@ -5,6 +5,8 @@
 > **¿Dónde está en el sistema?:** Menú principal → **Stock** → **Inventario** → **Stock Mercaderías**
 > **¿Quién lo usa?:** Depósito y encargados de compras
 
+> **¿Tenés Inventario nuevo prendido?** Esta pantalla es la de siempre. Para la nueva, mirá [Stock nuevo](/user-guide/stock-nuevo).
+
 > 🎯 **¿Para qué sirve esto?**
 > Acá ves cuánto te queda de cada cosa que le comprás a un proveedor. Por ejemplo: cuántos kilos de *Harina 0000* hay en el depósito.
 > También cargás qué mercaderías querés controlar, el mínimo que no querés perforar y los conteos del depósito.
