@@ -5,6 +5,8 @@
 > **¿Dónde está en el sistema?:** Menú principal → **Stock** → **Movimientos** → **Movimientos**
 > **¿Quién lo usa?:** Depósito, encargados y administradores
 
+> **¿Tenés Inventario nuevo prendido?** Esta pantalla es la de siempre. Para la nueva, mirá [Stock nuevo](/user-guide/stock-nuevo).
+
 > 🎯 **¿Para qué sirve esto?**
 > Es la lista de todo lo que entró y salió del stock: compras recibidas, ventas, roturas y conteos.
 > Te sirve para entender por qué el stock de algo subió o bajó.
